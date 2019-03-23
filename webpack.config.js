@@ -37,7 +37,7 @@ module.exports = {
 				loader: 'html-loader',
 			},
 			{
-				test: /\.(png|jpg|gif)$/,
+				test: /\.(png|jpg|gif|woff|woff2|ttf|svg)$/,
 				loader: 'url-loader?limit=8192',
 			},
 			{
@@ -65,6 +65,7 @@ module.exports = {
 			components: path.join(__dirname, 'src/components'),
 			static: path.join(__dirname, 'src/static'),
 			pages: path.join(__dirname, 'src/pages'),
+			styles: path.join(__dirname, 'src/styles'),
 			// constants: path.join(__dirname, 'src/constants'),
 		},
 	},

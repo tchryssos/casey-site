@@ -1,11 +1,33 @@
-import React, { PureComponent } from 'react'
-import { ReactComponent as Logo } from 'static/svg/logo.svg'
+import React, { useState } from 'react'
+import Logo from 'static/svg/logo.svg'
+import HandsUp from 'static/svg/handsup.svg'
+import HandsDown from 'static/svg/handsdown.svg'
+import './styles.scss'
 
-class NavBar extends PureComponent {
-	render = () => (
-		<div>
-			<Logo />
-		</div>
+const NavBar = () => {
+	const [isMenuDisplayed, toggleMenu] = useState(false)
+
+	return (
+		<>
+			<div className={`menu displayMenu-${isMenuDisplayed}`}>
+				blah blah blah
+			</div>
+			<div className="navWrapper">
+				<div className="navContainer">
+					<button
+						onClick={() => toggleMenu(!isMenuDisplayed)}
+						className={`menuButton menuButtonOn-${isMenuDisplayed}`}
+					>
+						<img
+							className="openMenuIcon"
+							src={isMenuDisplayed ? HandsDown : HandsUp}
+							alt="Menu toggle icon"
+						/>
+					</button>
+					<img className="logo" src={Logo} alt="Casey B Logo" />
+				</div>
+			</div>
+		</>
 	)
 }
 

@@ -1,0 +1,14 @@
+@import "~styles/colors";
+@import "~styles/fonts";
+
+body, html {
+    margin: 0;
+    height: 100%;
+    font-size: 1.2em;
+    font-family: "Anonymous Pro";
+}
+
+#app {
+    height: 100%;
+    width: 100%;
+}
