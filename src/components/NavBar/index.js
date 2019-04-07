@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import Logo from 'static/svg/logo.svg'
 import HandsUp from 'static/svg/handsup.svg'
 import HandsDown from 'static/svg/handsdown.svg'
+import MenuRoutes from './components/MenuRoutes'
 import './styles.scss'
 
 const NavBar = () => {
@@ -10,7 +11,7 @@ const NavBar = () => {
 	return (
 		<>
 			<div className={`menu displayMenu-${isMenuDisplayed}`}>
-				blah blah blah
+				<MenuRoutes />
 			</div>
 			<div className="navWrapper">
 				<div className="navContainer">

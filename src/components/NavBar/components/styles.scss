@@ -1,0 +1,12 @@
+@import "~styles/colors";
+
+.menuRouteChunk {
+    display: flex;
+    flex-direction: column;
+    margin: 48px 60px;
+}
+
+.menuLink {
+    color: $black;
+    margin-top: 32px;
+}

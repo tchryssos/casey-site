@@ -4,10 +4,13 @@
     height: 100%;
     width: 100%;
     background-color: $orange;
+    flex-direction: column;
+    justify-content: center;
     display: none;
 }
 .displayMenu-true {
-    display: block;
+    display: flex;
+    transition: all ease-in-out 1s;
 }
 
 .menuButton {
@@ -24,11 +27,11 @@
     bottom: 0;
     left: 0;
     right: 0;
-    padding: 0.5rem;
+    padding: 48px 0;
     display: flex;
     align-content: center;
     justify-content: center;
-    border-top: solid 1px $lightgray;
+    border-top: solid 1px $gray;
     background-color: $white;
 }
 
@@ -36,15 +39,14 @@
     display: flex;
     justify-content: space-between;
     align-content: center;
-    width: 75%;
+    width: 85%;
 }
 
 .navContentHeight {
-    max-height: 1.5rem;
+    height: 64px;
 }
 
 .logo {
-    width: 3.5rem;
     @extend .navContentHeight;
 }
 
