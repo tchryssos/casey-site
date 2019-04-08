@@ -66,7 +66,7 @@ module.exports = {
 			static: path.join(__dirname, 'src/static'),
 			pages: path.join(__dirname, 'src/pages'),
 			styles: path.join(__dirname, 'src/styles'),
-			// constants: path.join(__dirname, 'src/constants'),
+			constants: path.join(__dirname, 'src/constants'),
 		},
 	},
 }

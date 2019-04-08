@@ -4,10 +4,14 @@ import { BrowserRouter } from 'react-router-dom'
 import NavBar from 'components/NavBar'
 import Home from 'pages/Home'
 
+import './styles/theme.scss'
+
 render(
 	<BrowserRouter>
 		<>
-			<Home />
+			<div className="nonNavWrapper">
+				<Home />
+			</div>
 			<NavBar />
 		</>
 	</BrowserRouter>,

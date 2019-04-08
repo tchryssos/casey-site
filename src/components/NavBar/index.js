@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
-import Logo from 'static/svg/logo.svg'
-import HandsUp from 'static/svg/handsup.svg'
-import HandsDown from 'static/svg/handsdown.svg'
+import Logo from 'static/svg/menu/logo.svg'
+import HandsUp from 'static/svg/menu/handsup.svg'
+import HandsDown from 'static/svg/menu/handsdown.svg'
 import MenuRoutes from './components/MenuRoutes'
 import './styles.scss'
 
