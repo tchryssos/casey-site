@@ -44,7 +44,7 @@ const blobLinkData = {
 		link: '/uprising',
 		altText: 'Uprising Creative',
 		sizeClass: 'size50',
-		zClass: '',
+		zClass: 'z4',
 	},
 	SeatGeekScholarship: {
 		src: SeatGeekScholarship,
