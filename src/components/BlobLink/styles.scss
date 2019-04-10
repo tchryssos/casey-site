@@ -1,13 +1,18 @@
 .linkWrapper {
     display: inline-block;
+    position: relative;
 }
 
-.size33 {
-    width: 33%;
+.size40 {
+    width: 40%;
 }
 
 .size50 {
     width: 50%;
+}
+
+.size75 {
+    width: 75%;
 }
 
 .size100 {
@@ -27,6 +32,49 @@
 }
 
 // Custom CSS for blob placement
+// This is ugly because of the "arbitrary" placement of the links
+.FISMarketing {
+    left: 13%;
+}
+
 .UXUICourse {
-    margin-left: -10%;
+    top: 140px;
+}
+
+.MusicalRug {
+    top: 50px;
+    left: 6%;
+}
+
+.HowToTampons {
+    left: 6%;
+    bottom: 12px;
+}
+
+.TheUprisingCreative {
+    bottom: 102px;
+    right: 29%;
+}
+
+.SeatGeekScholarship {
+    bottom: 333px;
+}
+
+.ChaseSapphire {
+    bottom: 555px;
+}
+
+.FlatironSchoolStyleGuide {
+    bottom: 530px;
+    left: 5%;
+}
+
+.How {
+    right: 3%;
+    bottom: 600px;
+}
+
+.ChangeThingsVideo {
+    right: 13%;
+    bottom: 570px;
 }

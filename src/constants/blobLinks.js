@@ -29,17 +29,17 @@ const blobLinkData = {
 		src: HowToTampon,
 		link: 'tampons',
 		altText: 'How to put in a tampon',
-		sizeClass: 'size33',
+		sizeClass: 'size40',
 		zClass: 'z3',
 	},
 	MusicalRug: {
 		src: MusicalRug,
 		link: '/musical-rug',
 		altText: 'Musical Rug',
-		sizeClass: 'size33',
+		sizeClass: 'size40',
 		zClass: 'z2',
 	},
-	TheUprisingCreaive: {
+	TheUprisingCreative: {
 		src: TheUprisingCreative,
 		link: '/uprising',
 		altText: 'Uprising Creative',
@@ -78,7 +78,7 @@ const blobLinkData = {
 		src: ChangeThingsVideo,
 		link: 'change-things',
 		altText: 'Change Things Video',
-		sizeClass: 'size100',
+		sizeClass: 'size75',
 		zClass: '',
 	},
 }

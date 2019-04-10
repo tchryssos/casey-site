@@ -3,16 +3,23 @@
 
 body, html {
     margin: 0;
-    height: 100%;
     font-size: 40px;
     font-family: "Anonymous Pro";
 }
 
-#app {
+html {
     height: 100%;
-    width: 100%;
+}
+
+body {
+    min-height: 100%;
+}
+
+#app {
+    min-height: 100%;
 }
 
 .nonNavWrapper {
     margin-bottom: 200px;
+    min-height: 100%;
 }
