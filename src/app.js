@@ -1,6 +1,6 @@
 import React from 'react'
 import { render } from 'react-dom'
-import { BrowserRouter } from 'react-router-dom'
+import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import NavBar from 'components/NavBar'
 import Home from 'pages/Home'
 
@@ -10,7 +10,9 @@ render(
 	<BrowserRouter>
 		<>
 			<div className="nonNavWrapper">
-				<Home />
+				<Switch>
+					<Route path="/" exact component={Home} />
+				</Switch>
 			</div>
 			<NavBar />
 		</>

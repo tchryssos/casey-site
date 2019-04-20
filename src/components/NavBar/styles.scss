@@ -1,16 +1,19 @@
 @import "~styles/colors";
 
 .menu {
-    height: 100%;
+    height: 91vh;
     width: 100%;
     background-color: $orange;
     flex-direction: column;
     justify-content: center;
     display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000,
 }
 .displayMenu-true {
     display: flex;
-    transition: all ease-in-out 1s;
 }
 
 .menuButton {
