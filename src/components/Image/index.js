@@ -19,4 +19,8 @@ Image.propTypes = {
 	size: PropTypes.oneOf(['full', 'half']),
 }
 
+Image.defaultProps = {
+	size: 'half',
+}
+
 export default Image

@@ -8,3 +8,30 @@
     justify-content: center;
     align-items: center;
 }
+
+// Flatiron School Marketing
+.fismDescription {
+	margin-top: 32px;
+}
+
+.fismVimeoWrapper {
+	margin-top: 32px;
+	position: relative;
+	width: 100%;
+	padding-bottom: 56.25%;
+}
+
+.vimeoVideo {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.itemGridWrapper {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+

@@ -4,11 +4,7 @@ import PropTypes from 'prop-types'
 const Heading = (props) => {
 	const { children } = props
 	return (
-		<div>
-			<h2>
-				{children}
-			</h2>
-		</div>
+		<h1>{children}</h1>
 	)
 }
 
