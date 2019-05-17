@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { NavLink } from 'react-router-dom'
 import Logo from 'static/svg/menu/logo.svg'
 import HandsUp from 'static/svg/menu/handsup.svg'
 import HandsDown from 'static/svg/menu/handsdown.svg'
@@ -25,7 +26,9 @@ const NavBar = () => {
 							alt="Menu toggle icon"
 						/>
 					</button>
-					<img className="logo" src={Logo} alt="Casey B Logo" />
+					<NavLink to="/" exact>
+						<img className="logo" src={Logo} alt="Casey B Logo" />
+					</NavLink>
 				</div>
 			</div>
 		</>

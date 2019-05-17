@@ -5,28 +5,33 @@ import Heading from 'components/Typography/Heading'
 import Image from 'components/Image'
 import Spacer from 'components/Spacer'
 
-import BusGif from 'static/images/flatiron-marketing/bus-boom.gif'
-import PaulGif from 'static/images/flatiron-marketing/paul-ryan.gif'
-import IG1 from 'static/images/flatiron-marketing/ig-1.gif'
-import IG2 from 'static/images/flatiron-marketing/ig-2.png'
+import BusGif from 'static/images/FISMarketing/bus-boom.gif'
+import PaulGif from 'static/images/FISMarketing/paul-ryan.gif'
+import IG1 from 'static/images/FISMarketing/ig-1.gif'
+import IG2 from 'static/images/FISMarketing/ig-2.png'
+import IG3 from 'static/images/FISMarketing/ig-3.png'
+import IG4 from 'static/images/FISMarketing/ig-4.png'
+import IG5 from 'static/images/FISMarketing/ig-5.png'
+import IG6 from 'static/images/FISMarketing/ig-6.gif'
+import IG7 from 'static/images/FISMarketing/ig-7.png'
+import IG8 from 'static/images/FISMarketing/ig-8.png'
 
 
-import './styles.scss'
+import './styles/flatironMarketing.scss'
 
 const FlatironMarketing = () => (
 	<PageWrapper>
 		<Spacer height={96} />
 		<ContentBlock>
 			<Heading>Flatiron School</Heading>
-			<div className="fismDescription">
-				<p>
-					As the first Graphic Design hire at Flatiron School, I handled the creation of all marketing assets including, out of home, web, organic and paid social.
-				</p>
-				<br />
-				<p>
-					Role: Creative Direction and Design
-				</p>
-			</div>
+			<Spacer height={32} />
+			<p>
+				As the first Graphic Design hire at Flatiron School, I handled the creation of all marketing assets including, out of home, web, organic and paid social.
+			</p>
+			<br />
+			<p>
+				Role: Creative Direction and Design
+			</p>
 		</ContentBlock>
 		<Spacer height={96} />
 		<Image src={BusGif} alt="Bus boomerang" size="full" />
@@ -60,6 +65,15 @@ const FlatironMarketing = () => (
 			<div className="itemGridWrapper">
 				<Image src={IG1} alt="Job slideshow" />
 				<Image src={IG2} alt="Web language cards" />
+				<Image src={IG3} alt="Laptop and plant" />
+				<Image src={IG4} alt="Students coding in Dallas" />
+				<Image src={IG5} alt="Young woman coding" />
+				<Image src={IG6} alt="Sign advertising front end courses" />
+				<Image src={IG7} alt="Data science bootcamp graphic" />
+				<Image
+					src={IG8}
+					alt="Students comparing code in ad for '2020 skills'"
+				/>
 			</div>
 		</ContentBlock>
 	</PageWrapper>

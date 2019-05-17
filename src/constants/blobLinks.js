@@ -13,7 +13,7 @@ import UXUICourse from 'static/svg/home/UXUICourse.svg'
 const blobLinkData = {
 	FISMarketing: {
 		src: FISMarketing,
-		link: 'flatiron-marketing',
+		link: '/flatiron-marketing',
 		altText: 'Flatiron School Marketing',
 		sizeClass: 'size50',
 		zClass: 'z3',
@@ -27,7 +27,7 @@ const blobLinkData = {
 	},
 	HowToTampons: {
 		src: HowToTampon,
-		link: 'tampons',
+		link: '/tampons',
 		altText: 'How to put in a tampon',
 		sizeClass: 'size40',
 		zClass: 'z3',
@@ -55,28 +55,28 @@ const blobLinkData = {
 	},
 	ChaseSapphire: {
 		src: ChaseSapphire,
-		link: 'chase-sapphire',
+		link: '/chase-sapphire',
 		altText: 'Chase Sapphire',
 		sizeClass: 'size100',
 		zClass: '',
 	},
 	FlatironSchoolStyleGuide: {
 		src: FlatironSchoolStyleGuide,
-		link: 'flatiron-style-guide',
+		link: '/flatiron-style-guide',
 		altText: 'Flatiron Style Guide',
 		sizeClass: 'size50',
 		zClass: 'z3',
 	},
 	How: {
 		src: How,
-		link: 'how',
+		link: '/how',
 		altText: 'How',
 		sizeClass: 'size50',
 		zClass: '',
 	},
 	ChangeThingsVideo: {
 		src: ChangeThingsVideo,
-		link: 'change-things',
+		link: '/change-things',
 		altText: 'Change Things Video',
 		sizeClass: 'size75',
 		zClass: '',

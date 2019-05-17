@@ -2,7 +2,7 @@ import React from 'react'
 import BlobLink from 'components/BlobLink'
 import blobLinkData from 'constants/blobLinks'
 
-import './styles.scss'
+import './styles/home.scss'
 
 const Home = () => {
 	const blobLinks = Object.keys(blobLinkData).map(key => (
