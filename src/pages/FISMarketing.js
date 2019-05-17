@@ -3,6 +3,7 @@ import PageWrapper from 'components/PageWrapper'
 import ContentBlock from 'components/ContentBlock'
 import Heading from 'components/Typography/Heading'
 import Image from 'components/Image'
+import VideoPlayer from 'components/VideoPlayer'
 import Spacer from 'components/Spacer'
 
 import BusGif from 'static/images/FISMarketing/bus-boom.gif'
@@ -36,30 +37,14 @@ const FlatironMarketing = () => (
 		<Spacer height={96} />
 		<Image src={BusGif} alt="Bus boomerang" size="full" />
 		<Image src={PaulGif} alt="Bus boomerang" size="full" />
-		<div className="fismVimeoWrapper">
-			<iframe
-				title="Landing page demo"
-				src="https://player.vimeo.com/video/324643084"
-				width="640"
-				height="640"
-				frameBorder="0"
-				allow="autoplay; fullscreen"
-				allowFullScreen
-				className="vimeoVideo"
-			/>
-		</div>
-		<div className="fismVimeoWrapper">
-			<iframe
-				title="Stop motion video"
-				src="https://player.vimeo.com/video/324643304"
-				width="640"
-				height="360"
-				frameBorder="0"
-				allow="autoplay;fullscreen"
-				allowFullScreen
-				className="vimeoVideo"
-			/>
-		</div>
+		<VideoPlayer
+			src="https://player.vimeo.com/video/324643084"
+			title="Landing page demo"
+		/>
+		<VideoPlayer
+			src="https://player.vimeo.com/video/324643304"
+			title="Stop motion video"
+		/>
 		<Spacer />
 		<ContentBlock>
 			<div className="itemGridWrapper">

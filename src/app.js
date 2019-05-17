@@ -6,6 +6,7 @@ import NavBar from 'components/NavBar'
 import Home from 'pages/Home'
 import FISMarketing from 'pages/FISMarketing'
 import UXUICourse from 'pages/UXUICourse'
+import HowToTampons from 'pages/HowToTampons'
 
 import './styles/theme.scss'
 
@@ -22,6 +23,10 @@ render(
 					<Route
 						path={blobLinkData.UXUICourse.link}
 						component={UXUICourse}
+					/>
+					<Route
+						path={blobLinkData.HowToTampons.link}
+						component={HowToTampons}
 					/>
 				</Switch>
 			</div>
