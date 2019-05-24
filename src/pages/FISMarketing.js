@@ -18,7 +18,7 @@ import IG7 from 'static/images/FISMarketing/ig-7.png'
 import IG8 from 'static/images/FISMarketing/ig-8.png'
 
 
-import './styles/flatironMarketing.scss'
+import './styles/FISMarketing.scss'
 
 const FlatironMarketing = () => (
 	<PageWrapper>

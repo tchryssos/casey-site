@@ -13,7 +13,7 @@ import Nametag from 'static/images/UXUICourse/nametag.png'
 import Swag from 'static/images/UXUICourse/swag.jpg'
 import Tote from 'static/images/UXUICourse/tote.png'
 
-import './styles/uxuiCourse.scss'
+import './styles/UXUICourse.scss'
 
 const UXUICourse = () => (
 	<PageWrapper>

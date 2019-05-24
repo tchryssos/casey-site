@@ -9,6 +9,7 @@ import UXUICourse from 'pages/UXUICourse'
 import HowToTampons from 'pages/HowToTampons'
 import MusicalRug from 'pages/MusicalRug'
 import TheUprisingCreative from 'pages/TheUprisingCreative'
+import SeatGeekScholarship from 'pages/SeatGeekScholarship'
 
 import './styles/theme.scss'
 
@@ -37,6 +38,10 @@ render(
 					<Route
 						path={blobLinkData.TheUprisingCreative.link}
 						component={TheUprisingCreative}
+					/>
+					<Route
+						path={blobLinkData.SeatGeekScholarship.link}
+						component={SeatGeekScholarship}
 					/>
 				</Switch>
 			</div>
