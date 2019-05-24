@@ -4,6 +4,7 @@ import ContentBlock from 'components/ContentBlock'
 import Heading from 'components/Typography/Heading'
 import Image from 'components/Image'
 import Spacer from 'components/Spacer'
+import VideoPlayer from 'components/VideoPlayer'
 
 import TamponOne from 'static/images/HowToTampons/Tampon-1.jpg'
 import TamponTwo from 'static/images/HowToTampons/Tampon-2.jpg'
@@ -28,6 +29,17 @@ const HowToTampons = () => (
 			</p>
 		</ContentBlock>
 		<Spacer height={96} />
+		<VideoPlayer
+			src="https://player.vimeo.com/video/331255354"
+			title="Tampon insertion animation"
+		/>
+		<Image src={TamponOne} alt="TV with tampon project" size="full" />
+		<Image src={TamponTwo} alt="Laptop with tampon project" size="full" />
+		<Image src={TamponThree} alt="Tampon opening animation" size="full" />
+		<Image src={TamponFour} alt="Flying tampon animation" size="full" />
+		<Image src={TamponFive} alt="Razor animation" size="full" />
+		<Image src={TamponSix} alt="Texting animation" size="full" />
+		<Image src={TamponSeven} alt="Heart flying out from between legs" size="full" />
 	</PageWrapper>
 )
 
