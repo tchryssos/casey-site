@@ -7,6 +7,8 @@ import Home from 'pages/Home'
 import FISMarketing from 'pages/FISMarketing'
 import UXUICourse from 'pages/UXUICourse'
 import HowToTampons from 'pages/HowToTampons'
+import MusicalRug from 'pages/MusicalRug'
+import TheUprisingCreative from 'pages/TheUprisingCreative'
 
 import './styles/theme.scss'
 
@@ -27,6 +29,14 @@ render(
 					<Route
 						path={blobLinkData.HowToTampons.link}
 						component={HowToTampons}
+					/>
+					<Route
+						path={blobLinkData.MusicalRug.link}
+						component={MusicalRug}
+					/>
+					<Route
+						path={blobLinkData.TheUprisingCreative.link}
+						component={TheUprisingCreative}
 					/>
 				</Switch>
 			</div>
