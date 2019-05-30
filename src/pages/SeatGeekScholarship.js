@@ -33,7 +33,7 @@ const HowToTampons = () => (
 			</p>
 		</ContentBlock>
 		<ContentBlock>
-			<Spacer height={96} />
+			<Spacer height={32} />
 			<Image src={FiftyFifty} alt="Scholarship advertisement" size="full" />
 			<Image src={Timeline} alt="Women in computing timeline" size="full" />
 			<Image src={CarolAnimation} alt="Animation of Carol Shaw" size="full" />

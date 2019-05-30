@@ -16,7 +16,7 @@ import TamponSeven from 'static/images/HowToTampons/Tampon-7.png'
 
 const HowToTampons = () => (
 	<PageWrapper>
-		<Spacer height={96} />
+		<Spacer height={32} />
 		<ContentBlock>
 			<Heading>How to put in a tampon</Heading>
 			<Spacer height={32} />
@@ -28,7 +28,7 @@ const HowToTampons = () => (
 				Role: Creative Direction, Design, Computer Programming
 			</p>
 		</ContentBlock>
-		<Spacer height={96} />
+		<Spacer height={32} />
 		<VideoPlayer
 			src="https://player.vimeo.com/video/331255354"
 			title="Tampon insertion animation"

@@ -12,7 +12,7 @@ import MusicalRugThree from 'static/images/MusicalRug/MusicalRug-3.jpg'
 
 const UXUICourse = () => (
 	<PageWrapper>
-		<Spacer height={96} />
+		<Spacer height={32} />
 		<ContentBlock>
 			<Heading>Musical Rug</Heading>
 			<Spacer height={32} />
@@ -24,7 +24,7 @@ const UXUICourse = () => (
 				Role: Creative Direction, Design, Production
 			</p>
 		</ContentBlock>
-		<Spacer height={96} />
+		<Spacer height={32} />
 		<VideoPlayer
 			src="https://player.vimeo.com/video/331255265"
 			title="Musical rug demo"

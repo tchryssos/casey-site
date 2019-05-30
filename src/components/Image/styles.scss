@@ -15,3 +15,7 @@
 .imageWrapper {
 	margin-top: 4%;
 }
+
+.imageWrapper:first-of-type {
+	margin-top: 0;
+}

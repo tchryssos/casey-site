@@ -22,7 +22,7 @@ import './styles/FISMarketing.scss'
 
 const FlatironMarketing = () => (
 	<PageWrapper>
-		<Spacer height={96} />
+		<Spacer height={32} />
 		<ContentBlock>
 			<Heading>Flatiron School</Heading>
 			<Spacer height={32} />
@@ -34,7 +34,7 @@ const FlatironMarketing = () => (
 				Role: Creative Direction and Design
 			</p>
 		</ContentBlock>
-		<Spacer height={96} />
+		<Spacer height={32} />
 		<Image src={BusGif} alt="Bus boomerang" size="full" />
 		<Image src={PaulGif} alt="Bus boomerang" size="full" />
 		<VideoPlayer

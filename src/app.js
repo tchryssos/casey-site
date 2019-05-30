@@ -10,6 +10,7 @@ import HowToTampons from 'pages/HowToTampons'
 import MusicalRug from 'pages/MusicalRug'
 import TheUprisingCreative from 'pages/TheUprisingCreative'
 import SeatGeekScholarship from 'pages/SeatGeekScholarship'
+import ChaseSapphire from 'pages/ChaseSapphire'
 
 import './styles/theme.scss'
 
@@ -42,6 +43,10 @@ render(
 					<Route
 						path={blobLinkData.SeatGeekScholarship.link}
 						component={SeatGeekScholarship}
+					/>
+					<Route
+						path={blobLinkData.ChaseSapphire.link}
+						component={ChaseSapphire}
 					/>
 				</Switch>
 			</div>

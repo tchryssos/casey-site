@@ -17,7 +17,7 @@ import './styles/UXUICourse.scss'
 
 const UXUICourse = () => (
 	<PageWrapper>
-		<Spacer height={96} />
+		<Spacer height={32} />
 		<ContentBlock>
 			<Heading>Flatiron School</Heading>
 			<Spacer height={32} />
@@ -33,7 +33,7 @@ const UXUICourse = () => (
 				Junior Designer: Emily Brown
 			</p>
 		</ContentBlock>
-		<Spacer height={96} />
+		<Spacer height={32} />
 		<Image src={PhoneOne} alt="Instagram demo" size="full" />
 		<ContentBlock>
 			<Image

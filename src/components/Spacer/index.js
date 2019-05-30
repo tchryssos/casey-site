@@ -9,9 +9,9 @@ const Spacer = (props) => {
 		<div
 			className={
 				classnames(
+					{ spacerSixteen: height === 16 },
 					{ spacerThirtyTwo: height === 32 },
 					{ spacerSixtyFour: height === 64 },
-					{ spacerNinetySix: height === 96 },
 				)
 			}
 		/>
@@ -19,7 +19,7 @@ const Spacer = (props) => {
 }
 
 Spacer.propTypes = {
-	height: PropTypes.oneOf([32, 64, 96]),
+	height: PropTypes.oneOf([16, 32, 64]),
 }
 
 Spacer.defaultProps = {
