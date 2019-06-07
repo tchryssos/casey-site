@@ -22,7 +22,6 @@ import './styles/FISMarketing.scss'
 
 const FlatironMarketing = () => (
 	<PageWrapper>
-		<Spacer height={32} />
 		<ContentBlock>
 			<Heading>Flatiron School</Heading>
 			<Spacer height={32} />

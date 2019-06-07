@@ -1,6 +1,5 @@
-.linkWrapper {
-    display: inline-block;
-    position: relative;
+.linkWrapper:last-of-type {
+  padding-bottom: 84px;
 }
 
 .size40 {
@@ -38,47 +37,41 @@
 // Custom CSS for blob placement
 // This is ugly because of the "arbitrary" placement of the links
 .FISMarketing {
-    left: 13%;
+  transform: translateX(13vw);
 }
 
 .UXUICourse {
-    top: 140px;
+  transform: translateY(13vw)
 }
 
 .MusicalRug {
-    top: 50px;
-    left: 6%;
+  transform: translate(6vw, 3vw);
 }
 
 .HowToTampons {
-    left: 6%;
-    bottom: 12px;
+  transform: translate(6vw, -2vw);
 }
 
 .TheUprisingCreative {
-    bottom: 102px;
-    right: 29%;
+  transform: translate(-25vw, -11vw);
 }
 
 .SeatGeekScholarship {
-    bottom: 333px;
-}
+  transform: translateY(-34vw);
+;}
 
 .ChaseSapphire {
-    bottom: 555px;
-}
+  transform: translateY(-52vw);
+;}
 
 .FlatironSchoolStyleGuide {
-    bottom: 530px;
-    left: 5%;
+  transform: translate(5vw, -55vw);
 }
 
 .How {
-    right: 3%;
-    bottom: 600px;
-}
+  transform: translate(-3vw, -59vw);
+;}
 
 .ChangeThingsVideo {
-    right: 13%;
-    bottom: 570px;
+  transform: translate(-13vw, -60vw);
 }
