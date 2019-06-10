@@ -12,10 +12,10 @@ import MusicalRugThree from 'static/images/MusicalRug/MusicalRug-3.jpg'
 
 const UXUICourse = () => (
 	<PageWrapper>
-		<Spacer height={32} />
+		<Spacer />
 		<ContentBlock>
 			<Heading>Musical Rug</Heading>
-			<Spacer height={32} />
+			<Spacer />
 			<p>
 				Built using Arduino and Processing during UCLA|DMA&apos;s Winter 2016 Special Topics class with Instructor Casey Reas. The project combines hardware and software skills to create a rug that plays sounds upon touch. All sounds are also generated using code.
 			</p>
@@ -24,7 +24,7 @@ const UXUICourse = () => (
 				Role: Creative Direction, Design, Production
 			</p>
 		</ContentBlock>
-		<Spacer height={32} />
+		<Spacer />
 		<VideoPlayer
 			src="https://player.vimeo.com/video/331255265"
 			title="Musical rug demo"

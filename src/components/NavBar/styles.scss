@@ -1,4 +1,5 @@
 @import "~styles/colors";
+@import "~styles/breakpoints";
 
 .menu {
     width: 100%;
@@ -9,15 +10,27 @@
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 1000,
+    z-index: 1000;
+
+    @include md {
+      background-color: $white;
+      width: 40%;
+      height: 100%;
+      justify-content: flex-start;
+    }
 }
 .displayMenu-true {
     display: flex;
 }
 
 .menuButton {
-    border: none;
-    background-color: transparent;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  @include md {
+    padding: 0;
+    margin: 0;
+  }
 }
 
 .menuButton:focus {
@@ -36,13 +49,26 @@
     border-top: solid 1px $gray;
     background-color: $white;
     z-index: 1000;
+    
+    @include md {
+      background-color: transparent;
+      top: 0;
+      bottom: initial;
+      padding: 1rem 0 0 0;
+      align-items: flex-start;
+    }
 }
 
 .navContainer {
     display: flex;
     justify-content: space-between;
     align-content: center;
-    width: 84%;
+    width: 100%;
+    padding: 0 3rem;
+
+    @include md {
+      padding: 0 2rem;
+    }
 }
 
 .navContentHeight {
@@ -54,5 +80,17 @@
 }
 
 .openMenuIcon {
-    @extend .navContentHeight;
+  @extend .navContentHeight;
+  @include md {
+    display: none;
+  }
+}
+
+.openMenuText {
+  width: 172px;
+  text-align: left;
+  display: none;
+  @include md {
+    display: block;
+  }
 }

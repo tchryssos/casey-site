@@ -3,11 +3,14 @@ import { NavLink } from 'react-router-dom'
 import Logo from 'static/svg/menu/logo.svg'
 import HandsUp from 'static/svg/menu/handsup.svg'
 import HandsDown from 'static/svg/menu/handsdown.svg'
+import Heading from 'components/Typography/Heading'
 import MenuRoutes from './components/MenuRoutes'
 import './styles.scss'
 
 const NavBar = () => {
 	const [isMenuDisplayed, toggleMenu] = useState(false)
+
+	const openMenuText = () => (isMenuDisplayed ? 'menu open' : 'menu')
 
 	return (
 		<>
@@ -25,6 +28,9 @@ const NavBar = () => {
 							src={isMenuDisplayed ? HandsDown : HandsUp}
 							alt="Menu toggle icon"
 						/>
+						<div className="openMenuText">
+							<Heading>{openMenuText()}</Heading>
+						</div>
 					</button>
 					<NavLink to="/" exact>
 						<img className="logo" src={Logo} alt="Casey B Logo" />

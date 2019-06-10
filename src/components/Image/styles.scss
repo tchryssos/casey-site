@@ -3,9 +3,7 @@
 }
 
 .imagehalf {
-	// Content block padding for mobile is 8%
-	// This allows for a central 8% margin.
-	width: 48%;
+	width: calc(50% - 0.5rem);
 }
 
 .imagefull {
@@ -13,9 +11,9 @@
 }
 
 .imageWrapper {
-	margin-top: 4%;
+	margin-top: 1rem;
 }
 
-.imageWrapper:first-of-type {
+.firstNoWrapper:first-of-type {
 	margin-top: 0;
 }

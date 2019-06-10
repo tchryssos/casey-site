@@ -23,15 +23,15 @@ import RedBullOne from 'static/images/TheUprisingCreative/RedBullRecords/redbull
 
 const UXUICourse = () => (
 	<PageWrapper>
-		<Spacer height={32} />
+		<Spacer />
 		<ContentBlock>
 			<Heading>The Uprising Creative Design Internship</Heading>
-			<Spacer height={32} />
+			<Spacer />
 			<p>
 				During my internship I worked on designs for web, merchandise, print ads, logos, letterheads and magazine layouts. Also created pitch decks for upcoming film projects, documented inventory, and sat in on meetings with clients.
 			</p>
 		</ContentBlock>
-		<Spacer height={32} />
+		<Spacer />
 		<ContentBlock>
 			<Heading>Layouts for Animals Magazine</Heading>
 			<Image src={AnimalsOne} alt="Magazine layout" size="full" />

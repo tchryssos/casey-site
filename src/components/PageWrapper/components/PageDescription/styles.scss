@@ -1,0 +1,15 @@
+@import "~styles/breakpoints";
+
+.pageDescriptionWrapper {
+	@include md {
+		width: 50%;
+		margin-left: 1rem;
+	}
+}
+
+.descriptionSpacer {
+	display: none;
+	@include md {
+		display: block;
+	}
+}

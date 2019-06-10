@@ -7,7 +7,13 @@ const Image = (props) => {
 	const { src, size, alt } = props
 
 	return (
-		<div className={`imageWrapper image${size}`}>
+		<div
+			className={`
+				imageWrapper
+				image${size}
+				${size !== 'half' ? 'firstNoMargin' : ''}
+			`}
+		>
 			<img src={src} alt={alt} className="imageImg" />
 		</div>
 	)

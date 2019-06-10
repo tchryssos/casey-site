@@ -17,10 +17,10 @@ import './styles/UXUICourse.scss'
 
 const UXUICourse = () => (
 	<PageWrapper>
-		<Spacer height={32} />
+		<Spacer />
 		<ContentBlock>
 			<Heading>Flatiron School</Heading>
-			<Spacer height={32} />
+			<Spacer />
 			<p>
 				Assets to promote the launch of Flatiron School’s UX/UI Design bootcamp and acquisition of fellow bootcamp, Designation.
 			</p>
@@ -33,7 +33,7 @@ const UXUICourse = () => (
 				Junior Designer: Emily Brown
 			</p>
 		</ContentBlock>
-		<Spacer height={32} />
+		<Spacer />
 		<Image src={PhoneOne} alt="Instagram demo" size="full" />
 		<ContentBlock>
 			<Image

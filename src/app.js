@@ -16,7 +16,7 @@ import './styles/theme.scss'
 
 render(
 	<BrowserRouter>
-		<>
+		<div className="appContent">
 			<div className="nonNavWrapper">
 				<Switch>
 					<Route path="/" exact component={Home} />
@@ -51,7 +51,7 @@ render(
 				</Switch>
 			</div>
 			<NavBar />
-		</>
+		</div>
 	</BrowserRouter>,
 	document.getElementById('app'),
 )

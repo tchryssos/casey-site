@@ -1,0 +1,9 @@
+@import "~styles/breakpoints";
+
+.pageContentWrapper {
+	@include md {
+		width: 50%;
+		overflow: scroll;
+		max-height: 100vh;
+	}
+}

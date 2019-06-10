@@ -9,9 +9,10 @@ const Spacer = (props) => {
 		<div
 			className={
 				classnames(
-					{ spacerSixteen: height === 16 },
-					{ spacerThirtyTwo: height === 32 },
-					{ spacerSixtyFour: height === 64 },
+					{ spacerSingle: height === 1 },
+					{ spacerDouble: height === 2 },
+					{ spacerTriple: height === 3 },
+					{ spacerQuad: height === 4 },
 				)
 			}
 		/>
@@ -19,11 +20,11 @@ const Spacer = (props) => {
 }
 
 Spacer.propTypes = {
-	height: PropTypes.oneOf([16, 32, 64]),
+	height: PropTypes.oneOf([1, 2, 3, 4]),
 }
 
 Spacer.defaultProps = {
-	height: 32,
+	height: 1,
 }
 
 export default Spacer

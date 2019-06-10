@@ -19,7 +19,7 @@ const HowToTampons = () => (
 		<ContentBlock>
 			<Image src={Stickers} alt="Stickers" size="full" />
 			<Heading>Flatiron School x SeatGeek 50/50 Scholarship</Heading>
-			<Spacer height={32} />
+			<Spacer />
 			<p>
 				Assets to promote Flatiron School x SeatGeek 50/50 Scholarship for women in tech. 665 people applied for this scholarship over the 3 week period that it was live for and 60 of those applicants enrolled, mostly on first conversion.
 			</p>
@@ -33,7 +33,7 @@ const HowToTampons = () => (
 			</p>
 		</ContentBlock>
 		<ContentBlock>
-			<Spacer height={32} />
+			<Spacer />
 			<Image src={FiftyFifty} alt="Scholarship advertisement" size="full" />
 			<Image src={Timeline} alt="Women in computing timeline" size="full" />
 			<Image src={CarolAnimation} alt="Animation of Carol Shaw" size="full" />
