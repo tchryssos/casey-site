@@ -1,5 +1,7 @@
 import React from 'react'
 import PageWrapper from 'components/PageWrapper'
+import PageContent from 'components/PageWrapper/components/PageContent'
+import PageDescription from 'components/PageWrapper/components/PageDescription'
 import ContentBlock from 'components/ContentBlock'
 import Heading from 'components/Typography/Heading'
 import Image from 'components/Image'
@@ -25,25 +27,28 @@ import bbqFour from 'static/images/ChaseSapphire/WhatsNext/bbq_4.png'
 
 const UXUICourse = () => (
 	<PageWrapper>
-		<Spacer />
-		<ContentBlock>
-			<Heading>Chase Sapphire</Heading>
-			<Spacer />
-			<p>
-				As an Art Director at VaynerMedia, I worked primarily on the Chase Sapphire Reserve line of business, creating original work and repurposing existing assets for their social channels.
-			</p>
-			<br />
-			<Heading>Summer at the Seaport</Heading>
-			<Spacer />
-			<p>
-				Chase Sapphire was the primary launch partner for the 2017 reopening of the South Street Seaport in New York City. Their sponsorship provided cardmembers with access to an exclusive lounge and bar as well as VIP musical and dining experiences. We created original social content driving members to take advantage of these perks.
-			</p>
-			<br />
-			<p>Role: Art Direction</p>
-			<br />
-			<p>Photography: Rav Carlotti </p>
-		</ContentBlock>
-		<Spacer />
+		<PageDescription>
+			<ContentBlock>
+				<Heading>Chase Sapphire</Heading>
+				<Spacer />
+				<p>
+					As an Art Director at VaynerMedia, I worked primarily on the Chase Sapphire Reserve line of business, creating original work and repurposing existing assets for their social channels.
+				</p>
+				<br />
+				<Heading>Summer at the Seaport</Heading>
+				<Spacer />
+				<p>
+					Chase Sapphire was the primary launch partner for the 2017 reopening of the South Street Seaport in New York City. Their sponsorship provided cardmembers with access to an exclusive lounge and bar as well as VIP musical and dining experiences. We created original social content driving members to take advantage of these perks.
+				</p>
+				<br />
+				<p>Role: Art Direction</p>
+				<br />
+				<p>Photography: Rav Carlotti </p>
+			</ContentBlock>
+		</PageDescription>
+		<PageContent>
+			Chase shit
+		</PageContent>
 	</PageWrapper>
 )
 
