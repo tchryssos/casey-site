@@ -1,5 +1,7 @@
 import React from 'react'
 import PageWrapper from 'components/PageWrapper'
+import PageContent from 'components/PageWrapper/components/PageContent'
+import PageDescription from 'components/PageWrapper/components/PageDescription'
 import ContentBlock from 'components/ContentBlock'
 import Heading from 'components/Typography/Heading'
 import Image from 'components/Image'
@@ -17,38 +19,40 @@ import './styles/UXUICourse.scss'
 
 const UXUICourse = () => (
 	<PageWrapper>
-		<Spacer />
-		<ContentBlock>
-			<Heading>Flatiron School</Heading>
-			<Spacer />
-			<p>
-				Assets to promote the launch of Flatiron School’s UX/UI Design bootcamp and acquisition of fellow bootcamp, Designation.
-			</p>
-			<br />
-			<p>
-				Role: Creative Direction and Design
-			</p>
-			<br />
-			<p>
-				Junior Designer: Emily Brown
-			</p>
-		</ContentBlock>
-		<Spacer />
-		<Image src={PhoneOne} alt="Instagram demo" size="full" />
-		<ContentBlock>
-			<Image
-				src={Future}
-				alt="Design your future launch party gif"
-				size="full"
-			/>
-		</ContentBlock>
-		<Image src={PhoneTwo} alt="Instagram swiper demo" size="full" />
-		<div className="partyDesignGraphics">
-			<Image src={Cocktail} alt="Design cocktail graphic" size="half" />
-			<Image src={Nametag} alt="Design nametag graphic" size="half" />
-		</div>
-		<Image src={Swag} alt="Swag bag poster" size="full" />
-		<Image src={Tote} alt="Flatiron tote bag" size="full" />
+		<PageDescription>
+			<ContentBlock>
+				<Heading>Flatiron School</Heading>
+				<Spacer />
+				<p>
+					Assets to promote the launch of Flatiron School’s UX/UI Design bootcamp and acquisition of fellow bootcamp, Designation.
+				</p>
+				<br />
+				<p>
+					Role: Creative Direction and Design
+				</p>
+				<br />
+				<p>
+					Junior Designer: Emily Brown
+				</p>
+			</ContentBlock>
+		</PageDescription>
+		<PageContent>
+			<Image src={PhoneOne} alt="Instagram demo" size="full" />
+			<ContentBlock>
+				<Image
+					src={Future}
+					alt="Design your future launch party gif"
+					size="full"
+				/>
+			</ContentBlock>
+			<Image src={PhoneTwo} alt="Instagram swiper demo" size="full" />
+			<div className="partyDesignGraphics">
+				<Image src={Cocktail} alt="Design cocktail graphic" size="half" />
+				<Image src={Nametag} alt="Design nametag graphic" size="half" />
+			</div>
+			<Image src={Swag} alt="Swag bag poster" size="full" />
+			<Image src={Tote} alt="Flatiron tote bag" size="full" />
+		</PageContent>
 	</PageWrapper>
 )
 
