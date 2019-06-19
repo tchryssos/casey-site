@@ -67,7 +67,7 @@
     padding: 0 3rem;
 
     @include md {
-      padding: 0 2rem;
+      padding: 0 1rem;
     }
 }
 
@@ -91,6 +91,11 @@
   text-align: left;
   display: none;
   @include md {
-    display: block;
+		display: block;
+		letter-spacing: 1;
   }
+}
+
+.navTextSpace {
+	width: 0.5rem;
 }
