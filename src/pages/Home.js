@@ -1,4 +1,7 @@
 import React from 'react'
+import PageWrapper from 'components/PageWrapper'
+import PageContent from 'components/PageWrapper/components/PageContent'
+import PageDescription from 'components/PageWrapper/components/PageDescription'
 import BlobLink from 'components/BlobLink'
 import blobLinkData from 'constants/blobLinks'
 
@@ -10,8 +13,10 @@ const Home = () => {
 	))
 
 	return (
-		<div className="homeWrapper">
-			{blobLinks}
+		<div className="homeContainer">
+			<div className="homeWrapper">
+				{blobLinks}
+			</div>
 		</div>
 	)
 }
