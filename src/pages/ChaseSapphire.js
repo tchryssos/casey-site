@@ -7,6 +7,7 @@ import Heading from 'components/Typography/Heading'
 import Image from 'components/Image'
 import Spacer from 'components/Spacer'
 import VideoPlayer from 'components/VideoPlayer'
+import ItemGrid from 'components/ItemGrid'
 
 import SeaportOne from 'static/images/ChaseSapphire/Seaport/Seaport_01.png'
 import SeaportTwo from 'static/images/ChaseSapphire/Seaport/Seaport_02.png'
@@ -47,7 +48,16 @@ const UXUICourse = () => (
 			</ContentBlock>
 		</PageDescription>
 		<PageContent>
-			Chase shit
+			<ContentBlock>
+				<ItemGrid>
+					<Image size="full" src={SeaportOne} />
+					<Image src={SeaportTwo} />
+					<Image src={SeaportThree} />
+					<Image src={SeaportFour} />
+					<Image src={SeaportFive} />
+					<Image size="full" src={SeaportSix} />
+				</ItemGrid>
+			</ContentBlock>
 		</PageContent>
 	</PageWrapper>
 )

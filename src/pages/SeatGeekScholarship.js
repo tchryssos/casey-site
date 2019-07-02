@@ -6,6 +6,7 @@ import ContentBlock from 'components/ContentBlock'
 import Heading from 'components/Typography/Heading'
 import Image from 'components/Image'
 import Spacer from 'components/Spacer'
+import ItemGrid from 'components/ItemGrid'
 
 import Stickers from 'static/images/SeatGeekScholarship/stickers.png'
 import FiftyFifty from 'static/images/SeatGeekScholarship/50-50-graphic.png'
@@ -13,8 +14,6 @@ import Timeline from 'static/images/SeatGeekScholarship/womens-month-timeline.pn
 import CarolAnimation from 'static/images/SeatGeekScholarship/carol-animation.gif'
 import Perlman from 'static/images/SeatGeekScholarship/perlman.png'
 import Coalition from 'static/images/SeatGeekScholarship/coalition.png'
-
-import './styles/SeatGeekScholarship.scss'
 
 const HowToTampons = () => (
 	<PageWrapper>
@@ -41,10 +40,10 @@ const HowToTampons = () => (
 				<Image src={FiftyFifty} alt="Scholarship advertisement" size="full" />
 				<Image src={Timeline} alt="Women in computing timeline" size="full" />
 				<Image src={CarolAnimation} alt="Animation of Carol Shaw" size="full" />
-				<div className="itemGridWrapper">
+				<ItemGrid>
 					<Image src={Perlman} alt="Drawing of Radia Perlman" />
 					<Image src={Coalition} alt="50/50 gender coalition flyer" />
-				</div>
+				</ItemGrid>
 			</ContentBlock>
 		</PageContent>
 	</PageWrapper>

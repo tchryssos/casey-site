@@ -7,6 +7,7 @@ import Heading from 'components/Typography/Heading'
 import Image from 'components/Image'
 import VideoPlayer from 'components/VideoPlayer'
 import Spacer from 'components/Spacer'
+import ItemGrid from 'components/ItemGrid'
 
 import BusGif from 'static/images/FISMarketing/bus-boom.gif'
 import PaulGif from 'static/images/FISMarketing/paul-ryan.gif'
@@ -18,9 +19,6 @@ import IG5 from 'static/images/FISMarketing/ig-5.png'
 import IG6 from 'static/images/FISMarketing/ig-6.gif'
 import IG7 from 'static/images/FISMarketing/ig-7.png'
 import IG8 from 'static/images/FISMarketing/ig-8.png'
-
-
-import './styles/FISMarketing.scss'
 
 const FlatironMarketing = () => (
 	<PageWrapper>
@@ -50,7 +48,7 @@ const FlatironMarketing = () => (
 			/>
 			<Spacer />
 			<ContentBlock>
-				<div className="itemGridWrapper">
+				<ItemGrid>
 					<Image src={IG1} alt="Job slideshow" />
 					<Image src={IG2} alt="Web language cards" />
 					<Image src={IG3} alt="Laptop and plant" />
@@ -62,7 +60,7 @@ const FlatironMarketing = () => (
 						src={IG8}
 						alt="Students comparing code in ad for '2020 skills'"
 					/>
-				</div>
+				</ItemGrid>
 			</ContentBlock>
 		</PageContent>
 	</PageWrapper>
