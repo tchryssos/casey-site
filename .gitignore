@@ -3,6 +3,9 @@
 # dependencies
 /node_modules
 
+# unset assets
+ProjectPages
+
 # misc
 .DS_Store
 .env.local
