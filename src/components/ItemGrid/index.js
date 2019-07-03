@@ -1,19 +1,23 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import injectSheet from 'react-jss'
 
-import './styles.scss'
-
-const ItemGrid = (props) => {
-	const { children } = props
-	return (
-		<div className="itemGridWrapper">
-			{children}
-		</div>
-	)
+const styles = {
+	itemGridWrapper: {
+		display: 'flex',
+		justifyContent: 'space-between',
+		flexWrap: 'wrap',
+	},
 }
+
+const ItemGrid = ({ children, classes }) => (
+	<div className={classes.itemGridWrapper}>
+		{children}
+	</div>
+)
 
 ItemGrid.propTypes = {
 	children: PropTypes.node,
 }
 
-export default ItemGrid
+export default injectSheet(styles)(ItemGrid)
