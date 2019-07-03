@@ -40,21 +40,6 @@ module.exports = {
 				test: /\.(png|jpg|gif|woff|woff2|ttf|svg)$/,
 				loader: 'url-loader?limit=8192',
 			},
-			{
-				test: /(\.scss|\.css)$/,
-				use: [{
-					loader: 'style-loader',
-				}, {
-					loader: 'css-loader',
-				}, {
-					loader: 'postcss-loader',
-					options: {
-						plugins: [autoprefixer],
-					},
-				}, {
-					loader: 'sass-loader',
-				}],
-			},
 		],
 	},
 	resolve: {
