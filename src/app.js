@@ -12,8 +12,6 @@ import TheUprisingCreative from 'pages/TheUprisingCreative'
 import SeatGeekScholarship from 'pages/SeatGeekScholarship'
 import ChaseSapphire from 'pages/ChaseSapphire'
 
-import './styles/theme.scss'
-
 render(
 	<BrowserRouter>
 		<div className="appContent">

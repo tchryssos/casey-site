@@ -9,3 +9,29 @@
     font-family: "Nova Mono", monospace;
     src: url("https://fonts.googleapis.com/css?family=Nova+Mono'");
 }
+
+body, html {
+	margin: 0;
+	font-size: 14px;
+	font-family: "Anonymous Pro";
+}
+
+body {
+	position: relative;
+}
+
+h1, h2, h3, p {
+padding: 0;
+margin: 0;
+}
+
+h1 {
+font-size: 2.5rem;
+font-family: "Anonymous Pro";
+}
+
+iframe {
+width: 100%;
+}
+
+

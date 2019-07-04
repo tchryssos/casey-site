@@ -1,22 +1,35 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import injectSheet from 'react-jss'
+import { MD_MIN_STRING } from 'constants/styles/breakpoints'
 import Spacer from 'components/Spacer'
-import './styles.scss'
 
-const PageDescription = (props) => {
-	const { children } = props
-	return (
-		<div className="pageDescriptionWrapper">
-			<div className="descriptionSpacer">
-				<Spacer height={4} />
-			</div>
-			{children}
-		</div>
-	)
+const styles = {
+	descriptionSpacer: {
+		display: 'none',
+	},
+	[MD_MIN_STRING]: {
+		pageDescriptionWrapper: {
+			width: '50%',
+			marginLeft: '1rem',
+		},
+		descriptionSpacer: {
+			display: 'block',
+		},
+	},
 }
+
+const PageDescription = ({ children, classes }) => (
+	<div className={classes.pageDescriptionWrapper}>
+		<div className={classes.descriptionSpacer}>
+			<Spacer height={4} />
+		</div>
+		{children}
+	</div>
+)
 
 PageDescription.propTypes = {
 	children: PropTypes.node,
 }
 
-export default PageDescription
+export default injectSheet(styles)(PageDescription)

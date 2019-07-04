@@ -1,28 +1,39 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import injectSheet from 'react-jss'
 
-import './styles.scss'
-
-const VideoPlayer = (props) => {
-	const { src, title } = props
-
-	return (
-		<div className="videoWrapper">
-			<iframe
-				title={title}
-				src={src}
-				frameBorder="0"
-				allow="autoplay; fullscreen"
-				allowFullScreen
-				className="video"
-			/>
-		</div>
-	)
+const styles = {
+	videoWrapper: {
+		marginTop: '1rem',
+		position: 'relative',
+		width: '100%',
+		paddingBottom: '56.25%',
+	},
+	video: {
+		position: 'absolute',
+		top: 0,
+		left: 0,
+		width: '100%',
+		height: '100%',
+	},
 }
+
+const VideoPlayer = ({ src, title, classes }) => (
+	<div className={classes.videoWrapper}>
+		<iframe
+			title={title}
+			src={src}
+			frameBorder="0"
+			allow="autoplay; fullscreen"
+			allowFullScreen
+			className={classes.video}
+		/>
+	</div>
+)
 
 VideoPlayer.propTypes = {
 	src: PropTypes.string,
 	title: PropTypes.string,
 }
 
-export default VideoPlayer
+export default injectSheet(styles)(VideoPlayer)

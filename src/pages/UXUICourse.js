@@ -1,4 +1,6 @@
 import React from 'react'
+import injectSheet from 'react-jss'
+
 import PageWrapper from 'components/PageWrapper'
 import PageContent from 'components/PageWrapper/components/PageContent'
 import PageDescription from 'components/PageWrapper/components/PageDescription'
@@ -15,9 +17,17 @@ import Nametag from 'static/images/UXUICourse/nametag.png'
 import Swag from 'static/images/UXUICourse/swag.jpg'
 import Tote from 'static/images/UXUICourse/tote.png'
 
-import './styles/UXUICourse.scss'
+const styles = {
+	partyDesignGraphics: {
+		display: 'flex',
+		justifyContent: 'space-between',
+		alignItems: 'center',
+		padding: '0 4% 32px 4%',
+		backgroundColor: '#f4f4f4',
+	},
+}
 
-const UXUICourse = () => (
+const UXUICourse = ({ classes }) => (
 	<PageWrapper>
 		<PageDescription>
 			<ContentBlock>
@@ -46,7 +56,7 @@ const UXUICourse = () => (
 				/>
 			</ContentBlock>
 			<Image src={PhoneTwo} alt="Instagram swiper demo" size="full" />
-			<div className="partyDesignGraphics">
+			<div className={classes.partyDesignGraphics}>
 				<Image src={Cocktail} alt="Design cocktail graphic" size="half" />
 				<Image src={Nametag} alt="Design nametag graphic" size="half" />
 			</div>
@@ -56,4 +66,4 @@ const UXUICourse = () => (
 	</PageWrapper>
 )
 
-export default UXUICourse
+export default injectSheet(styles)(UXUICourse)
