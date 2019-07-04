@@ -115,6 +115,7 @@ const UXUICourse = () => (
 					src="https://player.vimeo.com/video/338773155"
 					title="Six Cities: San Francisco"
 				/>
+				<Image scrollable src={CitiesCarousel} size="full" />
 			</ContentBlock>
 		</PageContent>
 	</PageWrapper>
