@@ -1,13 +1,13 @@
 import { orange, white, gray } from 'constants/styles/colors'
 import { MD_MIN_STRING } from 'constants/styles/breakpoints'
 
-const navContentHeight = {
-	height: '32px',
-}
+export const navContentHeight = 32
+export const navPaddingHeight = 24
 
 export default {
 	menu: {
 		width: '100%',
+		height: `calc(100vh - (${navContentHeight + (navPaddingHeight * 2)}))`,
 		backgroundColor: orange,
 		flexDirection: 'column',
 		justifyContent: 'center',
@@ -33,7 +33,7 @@ export default {
 		bottom: 0,
 		left: 0,
 		right: 0,
-		padding: '24px 0',
+		padding: `${navPaddingHeight}px 0`,
 		display: 'flex',
 		alignContent: 'center',
 		justifyContent: 'center',
@@ -49,13 +49,12 @@ export default {
 		padding: '0 3rem',
 	},
 	logo: {
-		extend: navContentHeight,
+		height: navContentHeight,
 	},
 	openMenuIcon: {
-		extend: navContentHeight,
+		height: navContentHeight,
 	},
 	openMenuText: {
-		width: '172px',
 		textAlign: 'left',
 		display: 'none',
 	},

@@ -2,6 +2,7 @@ import React from 'react'
 import PageWrapper from 'components/PageWrapper'
 import ContentBlock from 'components/ContentBlock'
 import Heading from 'components/Typography/Heading'
+import Body from 'components/Typography/Body'
 import Image from 'components/Image'
 import Spacer from 'components/Spacer'
 
@@ -27,9 +28,9 @@ const UXUICourse = () => (
 		<ContentBlock>
 			<Heading>The Uprising Creative Design Internship</Heading>
 			<Spacer />
-			<p>
+			<Body>
 				During my internship I worked on designs for web, merchandise, print ads, logos, letterheads and magazine layouts. Also created pitch decks for upcoming film projects, documented inventory, and sat in on meetings with clients.
-			</p>
+			</Body>
 		</ContentBlock>
 		<Spacer />
 		<ContentBlock>

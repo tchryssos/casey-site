@@ -4,6 +4,7 @@ import PageContent from 'components/PageWrapper/components/PageContent'
 import PageDescription from 'components/PageWrapper/components/PageDescription'
 import ContentBlock from 'components/ContentBlock'
 import Heading from 'components/Typography/Heading'
+import Body from 'components/Typography/Body'
 import Image from 'components/Image'
 import Spacer from 'components/Spacer'
 import ItemGrid from 'components/ItemGrid'
@@ -22,17 +23,17 @@ const HowToTampons = () => (
 				<Image src={Stickers} alt="Stickers" size="full" />
 				<Heading>Flatiron School x SeatGeek 50/50 Scholarship</Heading>
 				<Spacer />
-				<p>
+				<Body>
 					Assets to promote Flatiron School x SeatGeek 50/50 Scholarship for women in tech. 665 people applied for this scholarship over the 3 week period that it was live for and 60 of those applicants enrolled, mostly on first conversion.
-				</p>
-				<br />
-				<p>
+				</Body>
+				<Spacer />
+				<Body>
 					Role: Creative Direction and Design
-				</p>
-				<br />
-				<p>
+				</Body>
+				<Spacer />
+				<Body>
 					Junior Designer: Emily Brown
-				</p>
+				</Body>
 			</ContentBlock>
 		</PageDescription>
 		<PageContent>

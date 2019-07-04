@@ -6,6 +6,7 @@ import PageContent from 'components/PageWrapper/components/PageContent'
 import PageDescription from 'components/PageWrapper/components/PageDescription'
 import ContentBlock from 'components/ContentBlock'
 import Heading from 'components/Typography/Heading'
+import Body from 'components/Typography/Body'
 import Image from 'components/Image'
 import Spacer from 'components/Spacer'
 
@@ -35,17 +36,17 @@ const UXUICourse = ({ classes }) => (
 			<ContentBlock>
 				<Heading>Flatiron School</Heading>
 				<Spacer />
-				<p>
+				<Body>
 					Assets to promote the launch of Flatiron School’s UX/UI Design bootcamp and acquisition of fellow bootcamp, Designation.
-				</p>
-				<br />
-				<p>
+				</Body>
+				<Spacer />
+				<Body>
 					Role: Creative Direction and Design
-				</p>
-				<br />
-				<p>
+				</Body>
+				<Spacer />
+				<Body>
 					Junior Designer: Emily Brown
-				</p>
+				</Body>
 			</ContentBlock>
 		</PageDescription>
 		<PageContent>
