@@ -29,9 +29,12 @@ const styles = {
 }
 
 const Home = ({ classes }) => {
-	const blobLinks = Object.keys(blobLinkData).map(key => (
-		<BlobLink svgFileName={key} key={key} />
-	))
+	const blobLinks = Object.keys(blobLinkData).map((key) => {
+		const props = blobLinkData[key]
+		return (
+			<BlobLink {...props} key={key} />
+		)
+	})
 
 	return (
 		<div className={classes.homeContainer}>

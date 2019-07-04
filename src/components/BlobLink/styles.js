@@ -5,30 +5,8 @@ export default {
 		'&:last-of-type': {
 			paddingBottom: '84px',
 		},
-	},
-	size40: {
-		width: '40%',
-	},
-	size50: {
-		width: '50%',
-	},
-	size75: {
-		width: '75%',
-	},
-	size100: {
-		width: '100%',
-	},
-	z1: {
-		zIndex: 1,
-	},
-	z2: {
-		zIndex: 2,
-	},
-	z3: {
-		zIndex: 3,
-	},
-	z4: {
-		zIndex: 4,
+		width: ({ width }) => `${width}%`,
+		zIndex: ({ zIndex }) => zIndex || 1,
 	},
 	// Custom CSS for blob placement
 	// This is ugly because of the "arbitrary" placement of the links
