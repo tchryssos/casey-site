@@ -18,7 +18,7 @@ export default {
 		zIndex: 1000,
 	},
 	menuVisible: {
-		dispay: 'flex',
+		display: 'flex',
 	},
 	menuButton: {
 		cursor: 'pointer',
