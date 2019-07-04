@@ -1,5 +1,4 @@
 const path = require('path')
-const autoprefixer = require('autoprefixer')
 
 module.exports = {
 	context: path.join(__dirname, 'src'),
