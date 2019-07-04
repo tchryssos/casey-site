@@ -17,7 +17,7 @@ export default {
 		left: 0,
 		zIndex: 1000,
 	},
-	'displayMenu-true': {
+	menuVisible: {
 		dispay: 'flex',
 	},
 	menuButton: {

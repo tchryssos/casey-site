@@ -14,42 +14,40 @@ import ChaseSapphire from 'pages/ChaseSapphire'
 
 render(
 	<BrowserRouter>
-		<div className="appContent">
-			<div className="nonNavWrapper">
-				<Switch>
-					<Route path="/" exact component={Home} />
-					<Route
-						path={blobLinkData.FISMarketing.link}
-						component={FISMarketing}
-					/>
-					<Route
-						path={blobLinkData.UXUICourse.link}
-						component={UXUICourse}
-					/>
-					<Route
-						path={blobLinkData.HowToTampons.link}
-						component={HowToTampons}
-					/>
-					<Route
-						path={blobLinkData.MusicalRug.link}
-						component={MusicalRug}
-					/>
-					<Route
-						path={blobLinkData.TheUprisingCreative.link}
-						component={TheUprisingCreative}
-					/>
-					<Route
-						path={blobLinkData.SeatGeekScholarship.link}
-						component={SeatGeekScholarship}
-					/>
-					<Route
-						path={blobLinkData.ChaseSapphire.link}
-						component={ChaseSapphire}
-					/>
-				</Switch>
-			</div>
+		<>
+			<Switch>
+				<Route path="/" exact component={Home} />
+				<Route
+					path={blobLinkData.FISMarketing.link}
+					component={FISMarketing}
+				/>
+				<Route
+					path={blobLinkData.UXUICourse.link}
+					component={UXUICourse}
+				/>
+				<Route
+					path={blobLinkData.HowToTampons.link}
+					component={HowToTampons}
+				/>
+				<Route
+					path={blobLinkData.MusicalRug.link}
+					component={MusicalRug}
+				/>
+				<Route
+					path={blobLinkData.TheUprisingCreative.link}
+					component={TheUprisingCreative}
+				/>
+				<Route
+					path={blobLinkData.SeatGeekScholarship.link}
+					component={SeatGeekScholarship}
+				/>
+				<Route
+					path={blobLinkData.ChaseSapphire.link}
+					component={ChaseSapphire}
+				/>
+			</Switch>
 			<NavBar />
-		</div>
+		</>
 	</BrowserRouter>,
 	document.getElementById('app'),
 )

@@ -19,7 +19,7 @@ const NavBar = ({ classes }) => {
 				className={
 					classNames(
 						classes.menu,
-						classes[`displayMenu-${isMenuDisplayed}`],
+						isMenuDisplayed ? classes.menuVisible : '',
 					)
 				}
 			>
@@ -29,12 +29,7 @@ const NavBar = ({ classes }) => {
 				<div className={classes.navContainer}>
 					<button
 						onClick={() => toggleMenu(!isMenuDisplayed)}
-						className={
-							classNames(
-								classes.menuButton,
-								classes[`menuButtonOn-${isMenuDisplayed}`],
-							)
-						}
+						className={classes.menuButton}
 					>
 						<img
 							className={classes.openMenuIcon}

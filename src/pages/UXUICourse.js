@@ -17,13 +17,15 @@ import Nametag from 'static/images/UXUICourse/nametag.png'
 import Swag from 'static/images/UXUICourse/swag.jpg'
 import Tote from 'static/images/UXUICourse/tote.png'
 
+import { offWhite } from 'constants/styles/colors'
+
 const styles = {
 	partyDesignGraphics: {
 		display: 'flex',
 		justifyContent: 'space-between',
 		alignItems: 'center',
 		padding: '0 4% 32px 4%',
-		backgroundColor: '#f4f4f4',
+		backgroundColor: offWhite,
 	},
 }
 
