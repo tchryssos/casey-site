@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css?family=Anonymous+Pro|Nova+Mono');
+
+@font-face {
+    font-family: "Anonymous Pro";
+    src: url("https://fonts.googleapis.com/css?family=Anonymous+Pro");
+}
+
+@font-face {
+    font-family: "Nova Mono";
+    src: url("https://fonts.googleapis.com/css?family=Nova+Mono'");
+}
+
+body, html {
+	margin: 0;
+	font-size: 14px;
+	font-family: "Anonymous Pro", monospace;
+}
+
+body {
+	position: relative;
+}
+
+h1, h2, h3, p {
+padding: 0;
+margin: 0;
+}
+
+h1 {
+font-size: 2.5rem;
+font-family: "Anonymous Pro", monospace;
+}
+
+iframe {
+width: 100%;
+}
+
+

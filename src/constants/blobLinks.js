@@ -3,7 +3,7 @@ import ChaseSapphire from 'static/svg/home/ChaseSapphire.svg'
 import FISMarketing from 'static/svg/home/FISMarketing.svg'
 import FlatironSchoolStyleGuide from 'static/svg/home/FlatironSchoolStyleGuide.svg'
 import How from 'static/svg/home/How.svg'
-import HowToTampon from 'static/svg/home/HowToTampon.svg'
+import HowToTampons from 'static/svg/home/HowToTampons.svg'
 import MusicalRug from 'static/svg/home/MusicalRug.svg'
 import SeatGeekScholarship from 'static/svg/home/SeatGeekScholarship.svg'
 import TheUprisingCreative from 'static/svg/home/TheUprisingCreative.svg'
@@ -13,73 +13,78 @@ import UXUICourse from 'static/svg/home/UXUICourse.svg'
 const blobLinkData = {
 	FISMarketing: {
 		src: FISMarketing,
+		svgFile: 'FISMarketing',
 		link: '/flatiron-marketing',
 		altText: 'Flatiron School Marketing',
-		sizeClass: 'size50',
-		zClass: 'z3',
+		width: 50,
+		zIndex: 3,
 	},
 	UXUICourse: {
 		src: UXUICourse,
+		svgFile: 'UXUICourse',
 		link: '/ux-ui',
 		altText: 'UX/UI course',
-		sizeClass: 'size50',
-		zClass: '',
+		width: 50,
 	},
 	HowToTampons: {
-		src: HowToTampon,
+		src: HowToTampons,
+		svgFile: 'HowToTampons',
 		link: '/tampons',
 		altText: 'How to put in a tampon',
-		sizeClass: 'size40',
-		zClass: 'z3',
+		width: 40,
+		zIndex: 3,
 	},
 	MusicalRug: {
 		src: MusicalRug,
+		svgFile: 'MusicalRug',
 		link: '/musical-rug',
 		altText: 'Musical Rug',
-		sizeClass: 'size40',
-		zClass: 'z2',
+		width: 40,
+		zIndex: 2,
 	},
 	TheUprisingCreative: {
 		src: TheUprisingCreative,
+		svgFile: 'TheUprisingCreative',
 		link: '/uprising',
 		altText: 'Uprising Creative',
-		sizeClass: 'size50',
-		zClass: '',
+		width: 50,
 	},
 	SeatGeekScholarship: {
 		src: SeatGeekScholarship,
+		svgFile: 'SeatGeekScholarship',
 		link: '/seatgeek',
 		altText: 'SeatGeek Scholarship',
-		sizeClass: 'size100',
-		zClass: 'z3',
+		width: 100,
+		zIndex: 3,
 	},
 	ChaseSapphire: {
 		src: ChaseSapphire,
+		svgFile: 'ChaseSapphire',
 		link: '/chase-sapphire',
 		altText: 'Chase Sapphire',
-		sizeClass: 'size100',
-		zClass: '',
+		width: 100,
 	},
 	FlatironSchoolStyleGuide: {
 		src: FlatironSchoolStyleGuide,
+		svgFile: 'FlatironSchoolStyleGuide',
 		link: '/flatiron-style-guide',
 		altText: 'Flatiron Style Guide',
-		sizeClass: 'size50',
-		zClass: 'z3',
+		width: 50,
+		zIndex: 3,
 	},
 	How: {
 		src: How,
+		svgFile: 'How',
 		link: '/how',
 		altText: 'How',
-		sizeClass: 'size50',
-		zClass: '',
+		width: 50,
 	},
 	ChangeThingsVideo: {
 		src: ChangeThingsVideo,
+		svgFile: 'ChangeThingsVideo',
 		link: '/change-things',
 		altText: 'Change Things Video',
-		sizeClass: 'size75',
-		zClass: '',
+		width: 75,
 	},
 }
 

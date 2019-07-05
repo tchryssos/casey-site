@@ -4,6 +4,7 @@ import PageContent from 'components/PageWrapper/components/PageContent'
 import PageDescription from 'components/PageWrapper/components/PageDescription'
 import ContentBlock from 'components/ContentBlock'
 import Heading from 'components/Typography/Heading'
+import Body from 'components/Typography/Body'
 import Image from 'components/Image'
 import VideoPlayer from 'components/VideoPlayer'
 import Spacer from 'components/Spacer'
@@ -26,13 +27,13 @@ const FlatironMarketing = () => (
 			<ContentBlock>
 				<Heading>Flatiron School</Heading>
 				<Spacer height={2} />
-				<p>
+				<Body>
 					As the first Graphic Design hire at Flatiron School, I handled the creation of all marketing assets including, out of home, web, organic and paid social.
-				</p>
-				<br />
-				<p>
+				</Body>
+				<Spacer />
+				<Body>
 					Role: Creative Direction and Design
-				</p>
+				</Body>
 			</ContentBlock>
 		</PageDescription>
 		<PageContent>

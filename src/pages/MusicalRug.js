@@ -4,6 +4,7 @@ import PageContent from 'components/PageWrapper/components/PageContent'
 import PageDescription from 'components/PageWrapper/components/PageDescription'
 import ContentBlock from 'components/ContentBlock'
 import Heading from 'components/Typography/Heading'
+import Body from 'components/Typography/Body'
 import Image from 'components/Image'
 import Spacer from 'components/Spacer'
 import VideoPlayer from 'components/VideoPlayer'
@@ -18,13 +19,13 @@ const UXUICourse = () => (
 			<ContentBlock>
 				<Heading>Musical Rug</Heading>
 				<Spacer />
-				<p>
+				<Body>
 					Built using Arduino and Processing during UCLA|DMA&apos;s Winter 2016 Special Topics class with Instructor Casey Reas. The project combines hardware and software skills to create a rug that plays sounds upon touch. All sounds are also generated using code.
-				</p>
-				<br />
-				<p>
+				</Body>
+				<Spacer />
+				<Body>
 					Role: Creative Direction, Design, Production
-				</p>
+				</Body>
 			</ContentBlock>
 		</PageDescription>
 		<PageContent>

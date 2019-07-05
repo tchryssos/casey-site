@@ -4,6 +4,7 @@ import PageContent from 'components/PageWrapper/components/PageContent'
 import PageDescription from 'components/PageWrapper/components/PageDescription'
 import ContentBlock from 'components/ContentBlock'
 import Heading from 'components/Typography/Heading'
+import Body from 'components/Typography/Body'
 import Image from 'components/Image'
 import Spacer from 'components/Spacer'
 import VideoPlayer from 'components/VideoPlayer'
@@ -22,13 +23,13 @@ const HowToTampons = () => (
 			<ContentBlock>
 				<Heading>How to put in a tampon</Heading>
 				<Spacer />
-				<p>
+				<Body>
 					How to Put in a Tampon is a collection of scrolling animations. Each interaction is based on a verb taken from a Young Women&apos;s Health article describing how to put in a tampon. This Piece was shown in the UCLA DMA 2016 Senior Exhibit, S.A.D. Show surrounded by tampons hand wrapped with the verbs used in the project.
-				</p>
-				<br />
-				<p>
+				</Body>
+				<Spacer />
+				<Body>
 					Role: Creative Direction, Design, Computer Programming
-				</p>
+				</Body>
 			</ContentBlock>
 		</PageDescription>
 		<PageContent>
