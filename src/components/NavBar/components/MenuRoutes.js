@@ -2,7 +2,6 @@ import React from 'react'
 import { NavLink } from 'react-router-dom'
 import injectSheet from 'react-jss'
 import { MD_MIN_STRING } from 'constants/styles/breakpoints'
-import { navContentHeight, navPaddingHeight } from 'components/NavBar/styles'
 import { black } from 'constants/styles/colors'
 import BlobLinks from 'constants/blobLinks'
 
@@ -10,21 +9,27 @@ const styles = {
 	menuRouteChunk: {
 		display: 'flex',
 		flexDirection: 'column',
-		margin: '3rem',
-		'&:first-of-type': {
-			marginTop: '5rem',
-		},
+		marginLeft: '1rem',
 	},
 	menuLink: {
 		color: black,
 		marginTop: '2rem',
+		'&:first-of-type': {
+			marginTop: 0,
+		},
 	},
 	[MD_MIN_STRING]: {
 		menuRouteChunk: {
 			margin: '2rem 0 0 1rem',
+			'&:first-of-type': {
+				marginTop: '5rem',
+			},
 		},
 		menuLink: {
 			marginTop: '1rem',
+			'&:first-of-type': {
+				marginTop: '2rem',
+			},
 		},
 	},
 }

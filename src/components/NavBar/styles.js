@@ -10,7 +10,7 @@ export default {
 		height: `calc(100vh - ${navContentHeight + (navPaddingHeight * 2)}px)`,
 		backgroundColor: orange,
 		flexDirection: 'column',
-		justifyContent: 'center',
+		justifyContent: 'space-around',
 		display: 'none',
 		position: 'fixed',
 		top: 0,
