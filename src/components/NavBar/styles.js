@@ -7,7 +7,7 @@ export const navPaddingHeight = 24
 export default {
 	menu: {
 		width: '100%',
-		height: `calc(100vh - (${navContentHeight + (navPaddingHeight * 2)}))`,
+		height: `calc(100vh - ${navContentHeight + (navPaddingHeight * 2)}px)`,
 		backgroundColor: orange,
 		flexDirection: 'column',
 		justifyContent: 'center',

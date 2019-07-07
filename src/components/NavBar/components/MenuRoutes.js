@@ -4,6 +4,7 @@ import injectSheet from 'react-jss'
 import { MD_MIN_STRING } from 'constants/styles/breakpoints'
 import { navContentHeight, navPaddingHeight } from 'components/NavBar/styles'
 import { black } from 'constants/styles/colors'
+import BlobLinks from 'constants/blobLinks'
 
 const styles = {
 	menuRouteChunk: {
@@ -34,35 +35,35 @@ const MenuRoutes = ({ classes }) => (
 			<NavLink
 				className={classes.menuLink}
 				exact
-				to="/"
+				to={BlobLinks.FISMarketing.link}
 			>
 				Flatiron School Marketing
 			</NavLink>
 			<NavLink
 				className={classes.menuLink}
 				exact
-				to="/"
+				to={BlobLinks.UXUICourse.link}
 			>
 				UX/UI Course Branding
 			</NavLink>
 			<NavLink
 				className={classes.menuLink}
 				exact
-				to="/"
+				to={BlobLinks.SeatGeekScholarship.link}
 			>
 				Flatiron x SeatGeek Scholarship
 			</NavLink>
 			<NavLink
 				className={classes.menuLink}
 				exact
-				to="/"
+				to={BlobLinks.ChaseSapphire.link}
 			>
 				Chase Sapphire Reserve
 			</NavLink>
 			<NavLink
 				className={classes.menuLink}
 				exact
-				to="/"
+				to={BlobLinks.TheUprisingCreative.link}
 			>
 				The Uprising Creative
 			</NavLink>
@@ -71,14 +72,14 @@ const MenuRoutes = ({ classes }) => (
 			<NavLink
 				className={classes.menuLink}
 				exact
-				to="/"
+				to={BlobLinks.MusicalRug.link}
 			>
 				Musical Rug
 			</NavLink>
 			<NavLink
 				className={classes.menuLink}
 				exact
-				to="/"
+				to={BlobLinks.HowToTampons.link}
 			>
 				How to put in a tampon
 			</NavLink>
