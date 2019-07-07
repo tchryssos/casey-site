@@ -3,13 +3,12 @@ import { MD_MIN_STRING } from 'constants/styles/breakpoints'
 export default {
 	linkWrapper: {
 		'&:last-of-type': {
-			paddingBottom: '84px',
+			// paddingBottom: '350px',
 		},
 		width: ({ width }) => `${width}%`,
 		zIndex: ({ zIndex }) => zIndex || 1,
 	},
 	// Custom CSS for blob placement
-	// This is ugly because of the "arbitrary" placement of the links
 	FISMarketing: {
 		transform: 'translateX(13vw)',
 	},
@@ -34,18 +33,10 @@ export default {
 	FlatironSchoolStyleGuide: {
 		transform: 'translate(5vw, -55vw)',
 	},
-	How: {
+	ChangeThingsVideo: {
 		transform: 'translate(-3vw, -59vw)',
 	},
-	ChangeThingsVideo: {
-		transform: 'translate(-13vw, -60vw)',
-	},
 	[MD_MIN_STRING]: {
-		linkWrapper: {
-			'&:last-of-type': {
-				paddingBottom: '1rem',
-			},
-		},
 		FISMarketing: {
 			transform: 'translateX(0)',
 		},
@@ -70,11 +61,8 @@ export default {
 		FlatironSchoolStyleGuide: {
 			transform: 'translate(2vw, -23vw)',
 		},
-		How: {
-			transform: 'translate(-1vw, -25vw)',
-		},
 		ChangeThingsVideo: {
-			transform: 'translate(-5vw, -25vw)',
+			transform: 'translate(-1vw, -25vw)',
 		},
 	},
 }
