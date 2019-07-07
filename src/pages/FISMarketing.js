@@ -47,7 +47,6 @@ const FlatironMarketing = () => (
 				src="https://player.vimeo.com/video/324643304"
 				title="Stop motion video"
 			/>
-			<Spacer />
 			<ContentBlock>
 				<ItemGrid>
 					<Image src={IG1} alt="Job slideshow" />

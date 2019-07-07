@@ -13,6 +13,9 @@ const styles = {
 			overflowY: 'scroll',
 			maxHeight: '100vh',
 			padding: '0 1rem',
+			'&:first-child': {
+				marginLeft: '50%',
+			},
 		},
 	},
 }

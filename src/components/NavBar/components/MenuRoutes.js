@@ -87,7 +87,7 @@ const MenuRoutes = ({ classes }) => (
 			<NavLink
 				className={classes.menuLink}
 				exact
-				to="/"
+				to="/about"
 			>
 				About
 			</NavLink>

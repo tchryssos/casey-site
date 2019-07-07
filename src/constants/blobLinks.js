@@ -2,7 +2,6 @@ import ChangeThingsVideo from 'static/svg/home/ChangeThingsVideo.svg'
 import ChaseSapphire from 'static/svg/home/ChaseSapphire.svg'
 import FISMarketing from 'static/svg/home/FISMarketing.svg'
 import FlatironSchoolStyleGuide from 'static/svg/home/FlatironSchoolStyleGuide.svg'
-import How from 'static/svg/home/How.svg'
 import HowToTampons from 'static/svg/home/HowToTampons.svg'
 import MusicalRug from 'static/svg/home/MusicalRug.svg'
 import SeatGeekScholarship from 'static/svg/home/SeatGeekScholarship.svg'
@@ -72,19 +71,12 @@ const blobLinkData = {
 		width: 50,
 		zIndex: 3,
 	},
-	How: {
-		src: How,
-		svgFile: 'How',
-		link: '/how',
-		altText: 'How',
-		width: 50,
-	},
 	ChangeThingsVideo: {
 		src: ChangeThingsVideo,
 		svgFile: 'ChangeThingsVideo',
 		link: '/change-things',
 		altText: 'Change Things Video',
-		width: 75,
+		width: 50,
 	},
 }
 

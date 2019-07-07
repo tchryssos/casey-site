@@ -11,6 +11,8 @@ import MusicalRug from 'pages/MusicalRug'
 import TheUprisingCreative from 'pages/TheUprisingCreative'
 import SeatGeekScholarship from 'pages/SeatGeekScholarship'
 import ChaseSapphire from 'pages/ChaseSapphire'
+import ChangeThingsVideo from 'pages/ChangeThingsVideo'
+import About from 'pages/About'
 
 render(
 	<BrowserRouter>
@@ -44,6 +46,14 @@ render(
 				<Route
 					path={blobLinkData.ChaseSapphire.link}
 					component={ChaseSapphire}
+				/>
+				<Route
+					path={blobLinkData.ChangeThingsVideo.link}
+					component={ChangeThingsVideo}
+				/>
+				<Route
+					path="/about"
+					component={About}
 				/>
 			</Switch>
 			<NavBar />
