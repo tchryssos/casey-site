@@ -1,6 +1,8 @@
 import React from 'react'
 import { render } from 'react-dom'
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
+import 'regenerator-runtime/runtime'
+
 import blobLinkData from 'constants/blobLinks'
 import NavBar from 'components/NavBar'
 import Home from 'pages/Home'
@@ -16,7 +18,7 @@ import About from 'pages/About'
 
 render(
 	<BrowserRouter>
-		<>
+		<div style={{ position: 'relative' }}>
 			<Switch>
 				<Route path="/" exact component={Home} />
 				<Route
@@ -57,7 +59,7 @@ render(
 				/>
 			</Switch>
 			<NavBar />
-		</>
+		</div>
 	</BrowserRouter>,
 	document.getElementById('app'),
 )

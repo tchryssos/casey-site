@@ -8,6 +8,7 @@ const styles = {
 		width: ({ scrollable }) => (scrollable ? 'unset' : '100%'),
 	},
 	imageWrapper: {
+		display: 'inline-block',
 		width: ({ size }) => (
 			size === 'half' ? 'calc(50% - 0.5rem)' : '100%'
 		),
