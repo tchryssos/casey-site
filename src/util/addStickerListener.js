@@ -9,9 +9,12 @@ import shoes from 'static/images/About/shoes_sticker.png'
 import terraceHouse from 'static/images/About/terraceHouse_sticker.png'
 
 const stickers = [bread, cocci, fishing, hottinet, kylie, shoes, terraceHouse]
+const getRandomIndex = () => (
+	Math.floor(Math.random() * Math.floor(stickers.length - 1))
+)
 const sticker = (e) => {
 	if (stickers.length) {
-		const src = stickers.pop()
+		const src = stickers[getRandomIndex()]
 		const board = document.getElementById('stickerBoard')
 		const image = document.createElement('img')
 		image.setAttribute('src', src)
