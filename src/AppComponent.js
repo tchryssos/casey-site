@@ -1,5 +1,4 @@
-import React, { useState } from 'react'
-import { render } from 'react-dom'
+import React, { useState, useEffect } from 'react'
 import { Route, Switch, withRouter } from 'react-router-dom'
 
 import blobLinkData from 'constants/blobLinks'
@@ -16,9 +15,11 @@ import ChaseSapphire from 'pages/ChaseSapphire'
 import ChangeThingsVideo from 'pages/ChangeThingsVideo'
 import About from 'pages/About'
 
-const App = ({ location, history }) => {
-	console.log(location, history)
+const App = ({ location }) => {
 	const [isMenuOpen, setIsMenuOpen] = useState(false)
+	useEffect(() => {
+		setIsMenuOpen(false)
+	}, [location])
 	return (
 		<MenuContext.Provider value={{ isMenuOpen, setIsMenuOpen }}>
 			<div style={{ position: 'relative' }}>
