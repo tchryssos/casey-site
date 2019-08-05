@@ -12,7 +12,7 @@ import styles from './styles'
 
 const NavBar = ({ classes }) => (
 	<MenuContext.Consumer>
-		{(isMenuOpen, setIsMenuOpen) => (
+		{({ isMenuOpen, setIsMenuOpen }) => (
 			<>
 				<div
 					className={

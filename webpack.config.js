@@ -52,6 +52,7 @@ module.exports = {
 			styles: path.join(__dirname, 'src/styles'),
 			constants: path.join(__dirname, 'src/constants'),
 			util: path.join(__dirname, 'src/util'),
+			contexts: path.join(__dirname, 'src/contexts'),
 		},
 	},
 }
