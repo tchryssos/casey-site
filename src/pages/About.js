@@ -13,8 +13,9 @@ import Image from 'components/Image'
 
 import addStickerListener from 'util/addStickerListener'
 
-import Resume from 'static/svg/about/resume.svg'
-import ResumeRed from 'static/svg/about/resumeRed.svg'
+import resume from 'static/svg/about/resume.svg'
+import resumeRed from 'static/svg/about/resumeRed.svg'
+import resumePdf from 'static/files/resume.pdf'
 
 const styles = {
 	stickerBoard: {
@@ -26,6 +27,10 @@ const styles = {
 	},
 	resumeWrapper: {
 		display: 'inline',
+	},
+	resumeSvg: {
+		height: '120px',
+		width: '161px',
 	},
 }
 
@@ -44,12 +49,17 @@ const About = ({ classes }) => {
 							onMouseLeave={() => setIsDownloadHovered(false)}
 							className={classes.resumeWrapper}
 						>
-							<NavLink to="/">
+							<a
+								href={resumePdf}
+								target="_blank"
+								rel="noopener noreferrer"
+							>
 								<Image
-									src={isDownloadHovered ? ResumeRed : Resume}
+									src={isDownloadHovered ? resumeRed : resume}
 									alt="Resume download"
+									imageClassName={classes.resumeSvg}
 								/>
-							</NavLink>
+							</a>
 						</div>
 						<Spacer />
 						<Heading>experience</Heading>
