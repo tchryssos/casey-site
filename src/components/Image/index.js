@@ -23,8 +23,15 @@ const styles = {
 	},
 }
 
-const Image = ({ src, alt, imageClassName, classes }) => (
-	<div className={classes.imageWrapper}>
+const Image = ({ src, alt, className, imageClassName, classes }) => (
+	<div
+		className={
+			classNames(
+				classes.imageWrapper,
+				className,
+			)
+		}
+	>
 		<img
 			src={src}
 			alt={alt}

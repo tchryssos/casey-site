@@ -32,6 +32,9 @@ const styles = {
 		height: '120px',
 		width: '161px',
 	},
+	inlineImage: {
+		display: 'inline',
+	},
 }
 
 const About = ({ classes }) => {
@@ -55,6 +58,7 @@ const About = ({ classes }) => {
 								rel="noopener noreferrer"
 							>
 								<Image
+									className={classes.inlineImage}
 									src={isDownloadHovered ? resumeRed : resume}
 									alt="Resume download"
 									imageClassName={classes.resumeSvg}
