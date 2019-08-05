@@ -19,8 +19,8 @@ import About from 'pages/About'
 const App = () => {
 	const [isMenuOpen, setIsMenuOpen] = useState(false)
 	return (
-		<BrowserRouter>
-			<MenuContext.Provider value={{ isMenuOpen, setIsMenuOpen }}>
+		<MenuContext.Provider value={{ isMenuOpen, setIsMenuOpen }}>
+			<BrowserRouter>
 				<div style={{ position: 'relative' }}>
 					<Switch>
 						<Route path="/" exact component={Home} />
@@ -63,8 +63,8 @@ const App = () => {
 					</Switch>
 					<NavBar />
 				</div>
-			</MenuContext.Provider>
-		</BrowserRouter>
+			</BrowserRouter>
+		</MenuContext.Provider>
 	)
 }
 render(
