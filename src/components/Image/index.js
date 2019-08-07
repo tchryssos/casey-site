@@ -13,6 +13,9 @@ const styles = {
 		width: ({ size }) => (
 			size === 'half' ? 'calc(50% - 8px)' : '100%'
 		),
+		border: ({ bordered }) => (
+			bordered ? '1px black solid' : ''
+		),
 		marginTop: '16px',
 		'&:first-of-type': {
 			marginTop: ({ size }) => (size === 'half' ? 0 : '16px'),

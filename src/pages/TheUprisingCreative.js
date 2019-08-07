@@ -38,11 +38,11 @@ const UXUICourse = () => (
 		<PageContent>
 			<ContentBlock>
 				<Heading>Layouts for Animals Magazine</Heading>
-				<Image src={AnimalsOne} alt="Magazine layout" size="full" />
-				<Image src={AnimalsTwo} alt="Magazine layout" size="full" />
-				<Image src={AnimalsThree} alt="Magazine layout" size="full" />
-				<Image src={AnimalsFour} alt="Magazine layout" size="full" />
-				<Image src={AnimalsFive} alt="Magazine layout" size="full" />
+				<Image bordered src={AnimalsOne} alt="Magazine layout" size="full" />
+				<Image bordered src={AnimalsTwo} alt="Magazine layout" size="full" />
+				<Image bordered src={AnimalsThree} alt="Magazine layout" size="full" />
+				<Image bordered src={AnimalsFour} alt="Magazine layout" size="full" />
+				<Image bordered src={AnimalsFive} alt="Magazine layout" size="full" />
 			</ContentBlock>
 			<ContentBlock>
 				<Heading>Pitch deck for the horror film, Skin Deep</Heading>
