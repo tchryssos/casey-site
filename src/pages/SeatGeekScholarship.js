@@ -1,4 +1,6 @@
 import React from 'react'
+import injectSheet from 'react-jss'
+
 import PageWrapper from 'components/PageWrapper'
 import PageContent from 'components/PageWrapper/components/PageContent'
 import PageDescription from 'components/PageWrapper/components/PageDescription'
@@ -8,6 +10,7 @@ import Body from 'components/Typography/Body'
 import Image from 'components/Image'
 import Spacer from 'components/Spacer'
 import ItemGrid from 'components/ItemGrid'
+import { MD_MIN_STRING } from 'constants/styles/breakpoints'
 
 import Stickers from 'static/images/SeatGeekScholarship/stickers.png'
 import FiftyFifty from 'static/images/SeatGeekScholarship/50-50-graphic.png'
@@ -16,11 +19,30 @@ import CarolAnimation from 'static/images/SeatGeekScholarship/carol-animation.gi
 import Perlman from 'static/images/SeatGeekScholarship/perlman.png'
 import Coalition from 'static/images/SeatGeekScholarship/coalition.png'
 
-const HowToTampons = () => (
+const styles = {
+	hideSm: {
+		display: 'none',
+	},
+	[MD_MIN_STRING]: {
+		hideMd: {
+			display: 'none',
+		},
+		hideSm: {
+			display: 'block',
+		},
+	},
+}
+
+const HowToTampons = ({ classes }) => (
 	<PageWrapper>
 		<PageDescription>
 			<ContentBlock>
-				<Image src={Stickers} alt="Stickers" size="full" />
+				<Image
+					src={Stickers}
+					alt="Stickers"
+					size="full"
+					className={classes.hideMd}
+				/>
 				<Heading>Flatiron School x SeatGeek 50/50 Scholarship</Heading>
 				<Spacer />
 				<Body>
@@ -38,6 +60,12 @@ const HowToTampons = () => (
 		</PageDescription>
 		<PageContent>
 			<ContentBlock>
+				<Image
+					src={Stickers}
+					alt="Stickers"
+					size="full"
+					className={classes.hideSm}
+				/>
 				<Image src={FiftyFifty} alt="Scholarship advertisement" size="full" />
 				<Image src={Timeline} alt="Women in computing timeline" size="full" />
 				<Image src={CarolAnimation} alt="Animation of Carol Shaw" size="full" />
@@ -50,4 +78,4 @@ const HowToTampons = () => (
 	</PageWrapper>
 )
 
-export default HowToTampons
+export default injectSheet(styles)(HowToTampons)
