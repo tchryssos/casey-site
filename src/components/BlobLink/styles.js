@@ -37,12 +37,17 @@ export default {
 		transform: 'translateY(-52vw)',
 	},
 	FlatironSchoolStyleGuide: {
-		transform: 'translate(5vw, -70vw)',
+		transform: 'translate(5vw, -72vw)',
 	},
 	ChangeThingsVideo: {
 		transform: 'translate(-3vw, -59vw)',
 	},
 	[MD_MIN_STRING]: {
+		linkWrapper: {
+			'&:last-of-type': {
+				paddingBottom: 0,
+			},
+		},
 		FISMarketing: {
 			transform: 'translateX(0)',
 		},

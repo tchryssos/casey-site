@@ -3,13 +3,13 @@ import { NavLink } from 'react-router-dom'
 import injectSheet from 'react-jss'
 import { MD_MIN_STRING } from 'constants/styles/breakpoints'
 import { black } from 'constants/styles/colors'
-import BlobLinks from 'constants/blobLinks'
+import blobLinkData from 'constants/blobLinks'
 
 const styles = {
-	menuRouteChunk: {
+	menuLinkWrapper: {
 		display: 'flex',
 		flexDirection: 'column',
-		marginLeft: '1rem',
+		margin: '0 0 0 1rem',
 	},
 	menuLink: {
 		color: black,
@@ -17,88 +17,58 @@ const styles = {
 		'&:first-of-type': {
 			marginTop: 0,
 		},
+		'&:last-of-type': {
+			marginTop: '4rem',
+		},
 	},
 	[MD_MIN_STRING]: {
-		menuRouteChunk: {
-			margin: '2rem 0 0 1rem',
-			'&:first-of-type': {
-				marginTop: '5rem',
-			},
+		menuLinkWrapper: {
+			marginTop: '3rem',
 		},
 		menuLink: {
 			marginTop: '1rem',
 			'&:first-of-type': {
 				marginTop: '2rem',
 			},
+			'&:last-of-type': {
+				marginTop: '2rem',
+			},
 		},
 	},
 }
 
+const MenuLink = ({ className, link, text }) => (
+	<NavLink
+		className={className}
+		exact
+		to={link}
+	>
+		{text}
+	</NavLink>
+)
+
+const renderMenuLinks = classes => (
+	Object.keys(blobLinkData).map((key) => {
+		const { link, altText } = blobLinkData[key]
+		return (
+			<MenuLink
+				className={classes.menuLink}
+				link={link}
+				text={altText}
+			/>
+		)
+	})
+)
+
 const MenuRoutes = ({ classes }) => (
-	<>
-		<div className={classes.menuRouteChunk}>
-			<NavLink
-				className={classes.menuLink}
-				exact
-				to={BlobLinks.FISMarketing.link}
-			>
-				Flatiron School Marketing
-			</NavLink>
-			<NavLink
-				className={classes.menuLink}
-				exact
-				to={BlobLinks.UXUICourse.link}
-			>
-				UX/UI Course Branding
-			</NavLink>
-			<NavLink
-				className={classes.menuLink}
-				exact
-				to={BlobLinks.SeatGeekScholarship.link}
-			>
-				Flatiron x SeatGeek Scholarship
-			</NavLink>
-			<NavLink
-				className={classes.menuLink}
-				exact
-				to={BlobLinks.ChaseSapphire.link}
-			>
-				Chase Sapphire Reserve
-			</NavLink>
-			<NavLink
-				className={classes.menuLink}
-				exact
-				to={BlobLinks.TheUprisingCreative.link}
-			>
-				The Uprising Creative
-			</NavLink>
-		</div>
-		<div className={classes.menuRouteChunk}>
-			<NavLink
-				className={classes.menuLink}
-				exact
-				to={BlobLinks.MusicalRug.link}
-			>
-				Musical Rug
-			</NavLink>
-			<NavLink
-				className={classes.menuLink}
-				exact
-				to={BlobLinks.HowToTampons.link}
-			>
-				How to put in a tampon
-			</NavLink>
-		</div>
-		<div className={classes.menuRouteChunk}>
-			<NavLink
-				className={classes.menuLink}
-				exact
-				to="/about"
-			>
-				About
-			</NavLink>
-		</div>
-	</>
+	<div className={classes.menuLinkWrapper}>
+		{renderMenuLinks(classes)}
+		<MenuLink
+			className={classes.menuLink}
+			link="/about"
+			text="About"
+		/>
+	</div>
 )
 
 export default injectSheet(styles)(MenuRoutes)
