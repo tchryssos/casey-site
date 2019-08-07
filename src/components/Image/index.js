@@ -5,19 +5,20 @@ import injectSheet from 'react-jss'
 
 const styles = {
 	imageImg: {
+		display: 'block',
 		width: ({ scrollable }) => (scrollable ? 'unset' : '100%'),
 	},
 	imageWrapper: {
-		display: 'inline-block',
+		display: 'inherit',
 		width: ({ size }) => (
-			size === 'half' ? 'calc(50% - 0.5rem)' : '100%'
+			size === 'half' ? 'calc(50% - 8px)' : '100%'
 		),
-		marginTop: '1rem',
+		marginTop: '16px',
 		'&:first-of-type': {
-			marginTop: ({ size }) => (size === 'half' ? 0 : '1rem'),
+			marginTop: ({ size }) => (size === 'half' ? 0 : '16px'),
 		},
 		'&:nth-of-type(2)': {
-			marginTop: ({ size }) => (size === 'half' ? 0 : '1rem'),
+			marginTop: ({ size }) => (size === 'half' ? 0 : '16px'),
 		},
 		overflow: ({ scrollable }) => (scrollable ? 'scroll' : 'none'),
 	},

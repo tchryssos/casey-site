@@ -19,7 +19,7 @@ const styles = {
 		},
 		pageContentWrapper: {
 			width: `${pageContentWidthPerc}%`,
-			padding: '0 1rem',
+			padding: '0 16px',
 			'&:first-child': {
 				marginLeft: '50%',
 			},

@@ -9,29 +9,29 @@ const styles = {
 	menuLinkWrapper: {
 		display: 'flex',
 		flexDirection: 'column',
-		marginLeft: '1rem',
+		marginLeft: '16px',
 	},
 	menuLink: {
 		color: black,
-		marginTop: '2rem',
+		marginTop: '16px',
 		'&:first-of-type': {
 			marginTop: 0,
 		},
 		'&:last-of-type': {
-			marginTop: '4rem',
+			marginTop: '32px',
 		},
 	},
 	[MD_MIN_STRING]: {
 		menuLinkWrapper: {
-			marginTop: '3rem',
+			marginTop: '24px',
 		},
 		menuLink: {
-			marginTop: '1rem',
+			marginTop: '16px',
 			'&:first-of-type': {
-				marginTop: '2rem',
+				marginTop: '16px',
 			},
 			'&:last-of-type': {
-				marginTop: '2rem',
+				marginTop: '16px',
 			},
 		},
 	},

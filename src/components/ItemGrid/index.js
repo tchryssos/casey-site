@@ -4,6 +4,7 @@ import injectSheet from 'react-jss'
 
 const styles = {
 	itemGridWrapper: {
+		marginTop: '16px',
 		display: 'flex',
 		justifyContent: 'space-between',
 		flexWrap: 'wrap',

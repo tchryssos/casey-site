@@ -4,7 +4,7 @@ import injectSheet from 'react-jss'
 
 const styles = {
 	videoWrapper: {
-		marginTop: '1rem',
+		marginTop: '16px',
 		position: 'relative',
 		width: '100%',
 		paddingBottom: ({ aspectRatio }) => {

@@ -1,10 +1,17 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import injectSheet from 'react-jss'
+import { MD_MIN_STRING } from 'constants/styles/breakpoints'
 
 const styles = {
 	spacer: {
-		height: props => `${props.height}rem`,
+		height: props => `${props.height * 16}px`,
+		display: ({ isHiddenSmall }) => (isHiddenSmall ? 'none' : 'block'),
+	},
+	[MD_MIN_STRING]: {
+		spacer: {
+			display: [['block'], '!important'],
+		},
 	},
 }
 

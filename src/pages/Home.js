@@ -17,7 +17,7 @@ const styles = {
 		justifyContent: 'center',
 		alignItems: 'center',
 		position: 'relative',
-		margin: '1rem',
+		margin: '16px',
 		maxHeight: '100vh',
 		width: '100%',
 	},

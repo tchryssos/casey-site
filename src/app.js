@@ -23,6 +23,8 @@ const styles = {
 	app: {
 		position: 'relative',
 		cursor: `url(${cursor}),auto`,
+		width: '100%',
+		height: '100%',
 	},
 }
 

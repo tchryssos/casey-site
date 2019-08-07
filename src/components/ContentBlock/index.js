@@ -5,11 +5,11 @@ import { MD_MIN_STRING } from 'constants/styles/breakpoints'
 
 const styles = {
 	contentBlock: {
-		margin: '1rem',
+		margin: '16px',
 	},
 	[MD_MIN_STRING]: {
 		contentBlock: {
-			margin: '1rem 0',
+			margin: '16px 0',
 		},
 	},
 }

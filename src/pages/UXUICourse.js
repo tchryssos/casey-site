@@ -9,6 +9,7 @@ import Heading from 'components/Typography/Heading'
 import Body from 'components/Typography/Body'
 import Image from 'components/Image'
 import Spacer from 'components/Spacer'
+import ItemGrid from 'components/ItemGrid'
 
 import PhoneOne from 'static/images/UXUICourse/phone-1.gif'
 import PhoneTwo from 'static/images/UXUICourse/phone-2.gif'
@@ -22,10 +23,7 @@ import { offWhite } from 'constants/styles/colors'
 
 const styles = {
 	partyDesignGraphics: {
-		display: 'flex',
-		justifyContent: 'space-between',
-		alignItems: 'center',
-		padding: '0 4% 32px 4%',
+		padding: '16px',
 		backgroundColor: offWhite,
 	},
 }
@@ -60,11 +58,14 @@ const UXUICourse = ({ classes }) => (
 			</ContentBlock>
 			<Image src={PhoneTwo} alt="Instagram swiper demo" size="full" />
 			<div className={classes.partyDesignGraphics}>
-				<Image src={Cocktail} alt="Design cocktail graphic" size="half" />
-				<Image src={Nametag} alt="Design nametag graphic" size="half" />
+				<ItemGrid>
+					<Image src={Cocktail} alt="Design cocktail graphic" size="half" />
+					<Image src={Nametag} alt="Design nametag graphic" size="half" />
+				</ItemGrid>
 			</div>
 			<Image src={Swag} alt="Swag bag poster" size="full" />
 			<Image src={Tote} alt="Flatiron tote bag" size="full" />
+			<Spacer />
 		</PageContent>
 	</PageWrapper>
 )

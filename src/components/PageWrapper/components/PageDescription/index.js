@@ -19,7 +19,7 @@ const styles = {
 			display: 'block',
 		},
 		padding: {
-			padding: '0 1rem',
+			padding: '0 16px',
 		},
 	},
 }

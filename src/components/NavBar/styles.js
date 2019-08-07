@@ -48,7 +48,7 @@ export default {
 		justifyContent: 'space-between',
 		alignContent: 'center',
 		width: '100%',
-		padding: '0 3rem',
+		padding: '0 24px',
 	},
 	logo: {
 		height: navContentHeight,
@@ -61,7 +61,7 @@ export default {
 		display: 'none',
 	},
 	navTextSpace: {
-		width: '0.5rem',
+		width: '8px',
 	},
 	[MD_MIN_STRING]: {
 		menu: {
@@ -78,11 +78,11 @@ export default {
 			backgroundColor: 'transparent',
 			top: 0,
 			bottom: 'initial',
-			padding: '1rem 0 0 0',
+			padding: '16px 0 0 0',
 			alignItems: 'flex-start',
 		},
 		navContainer: {
-			padding: '0 1rem',
+			padding: '0 16px',
 		},
 		openMenuIcon: {
 			display: 'none',
