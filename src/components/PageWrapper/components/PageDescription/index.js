@@ -1,7 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import injectSheet from 'react-jss'
-import { MD_MIN_STRING } from 'constants/styles/breakpoints'
+import {
+	MD_MIN_STRING, leftColumnWidthPerc,
+} from 'constants/styles/breakpoints'
 import Spacer from 'components/Spacer'
 
 const styles = {
@@ -10,7 +12,7 @@ const styles = {
 	},
 	[MD_MIN_STRING]: {
 		pageDescriptionWrapper: {
-			width: '35%',
+			width: `${leftColumnWidthPerc}%`,
 			marginLeft: '1rem',
 			position: 'fixed',
 		},

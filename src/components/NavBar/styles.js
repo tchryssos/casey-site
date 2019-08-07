@@ -1,5 +1,7 @@
 import { orange, white, gray } from 'constants/styles/colors'
-import { MD_MIN_STRING } from 'constants/styles/breakpoints'
+import {
+	MD_MIN_STRING, leftColumnWidthPerc,
+} from 'constants/styles/breakpoints'
 
 export const navContentHeight = 32
 export const navPaddingHeight = 24
@@ -64,7 +66,7 @@ export default {
 	[MD_MIN_STRING]: {
 		menu: {
 			backgroundColor: white,
-			width: '40%',
+			width: `${leftColumnWidthPerc}%`,
 			height: '100%',
 			justifyContent: 'flex-start',
 		},

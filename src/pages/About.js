@@ -1,5 +1,4 @@
-import React, { useState } from 'react'
-import { NavLink } from 'react-router-dom'
+import React from 'react'
 import injectSheet from 'react-jss'
 
 import PageWrapper from 'components/PageWrapper'
@@ -9,13 +8,9 @@ import Heading from 'components/Typography/Heading'
 import SubHeading from 'components/Typography/SubHeading'
 import Spacer from 'components/Spacer'
 import Body from 'components/Typography/Body'
-import Image from 'components/Image'
+import ResumeButton from 'components/ResumeButton'
 
 import addStickerListener from 'util/addStickerListener'
-
-import resume from 'static/svg/about/resume.svg'
-import resumeRed from 'static/svg/about/resumeRed.svg'
-import resumePdf from 'static/files/resume.pdf'
 
 const styles = {
 	stickerBoard: {
@@ -25,21 +20,9 @@ const styles = {
 		right: 0,
 		bottom: 0,
 	},
-	resumeWrapper: {
-		display: 'inline',
-	},
-	resumeSvg: {
-		height: '120px',
-		width: '161px',
-	},
-	inlineImage: {
-		display: 'inline',
-	},
 }
 
 const About = ({ classes }) => {
-	const [isDownloadHovered, setIsDownloadHovered] = useState(false)
-
 	addStickerListener()
 
 	return (
@@ -47,24 +30,7 @@ const About = ({ classes }) => {
 			<PageWrapper>
 				<PageContent>
 					<ContentBlock>
-						<div
-							onMouseEnter={() => setIsDownloadHovered(true)}
-							onMouseLeave={() => setIsDownloadHovered(false)}
-							className={classes.resumeWrapper}
-						>
-							<a
-								href={resumePdf}
-								target="_blank"
-								rel="noopener noreferrer"
-							>
-								<Image
-									className={classes.inlineImage}
-									src={isDownloadHovered ? resumeRed : resume}
-									alt="Resume download"
-									imageClassName={classes.resumeSvg}
-								/>
-							</a>
-						</div>
+						<ResumeButton />
 						<Spacer />
 						<Heading>experience</Heading>
 						<Spacer height={2} />

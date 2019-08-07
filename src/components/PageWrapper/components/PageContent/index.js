@@ -6,7 +6,7 @@ import { MD_MIN_STRING } from 'constants/styles/breakpoints'
 const styles = {
 	descriptionSpacer: {
 		display: 'none',
-		width: '50%',
+		width: '40%',
 	},
 	pageContentWrapper: {
 		position: 'relative',
@@ -16,7 +16,7 @@ const styles = {
 			display: 'block',
 		},
 		pageContentWrapper: {
-			width: '50%',
+			width: '60%',
 			padding: '0 1rem',
 			'&:first-child': {
 				marginLeft: '50%',
