@@ -19,6 +19,7 @@ const styles = {
 		left: 0,
 		right: 0,
 		bottom: 0,
+		overflowX: 'hidden',
 	},
 }
 
@@ -48,6 +49,7 @@ const About = ({ classes }) => {
 						<Heading>about me</Heading>
 						<Spacer height={2} />
 						<Body>(click anywhere)</Body>
+						<Spacer />
 					</ContentBlock>
 				</PageContent>
 			</PageWrapper>
