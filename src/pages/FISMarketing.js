@@ -42,6 +42,7 @@ const FlatironMarketing = () => (
 			<VideoPlayer
 				src="https://player.vimeo.com/video/324643084"
 				title="Landing page demo"
+				aspectRatio="1:1"
 			/>
 			<VideoPlayer
 				src="https://player.vimeo.com/video/324643304"

@@ -9,7 +9,7 @@ const styles = {
 	menuLinkWrapper: {
 		display: 'flex',
 		flexDirection: 'column',
-		margin: '0 0 0 1rem',
+		marginLeft: '1rem',
 	},
 	menuLink: {
 		color: black,

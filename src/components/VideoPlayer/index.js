@@ -7,7 +7,14 @@ const styles = {
 		marginTop: '1rem',
 		position: 'relative',
 		width: '100%',
-		paddingBottom: '56.25%',
+		paddingBottom: ({ aspectRatio }) => {
+			switch (aspectRatio) {
+				case '1:1':
+					return '100%'
+				default: // 16:9
+					return '56.25%'
+			}
+		},
 	},
 	video: {
 		position: 'absolute',
