@@ -1,12 +1,18 @@
 import { MD_MIN_STRING } from 'constants/styles/breakpoints'
+import { navContentHeight, navPaddingHeight } from 'components/NavBar/styles'
 
 export default {
 	linkWrapper: {
-		'&:last-of-type': {
-			// paddingBottom: '350px',
-		},
-		width: ({ width }) => `${width}%`,
 		zIndex: ({ zIndex }) => zIndex || 1,
+		width: ({ width }) => `${width}%`,
+		'&:last-of-type': {
+			paddingBottom: `${navContentHeight + (navPaddingHeight * 2) + 16}px`,
+		},
+	},
+	animationWrapper: {
+		'&:hover': {
+			transform: 'translate(16px, -16px)',
+		},
 	},
 	// Custom CSS for blob placement
 	FISMarketing: {
@@ -31,7 +37,7 @@ export default {
 		transform: 'translateY(-52vw)',
 	},
 	FlatironSchoolStyleGuide: {
-		transform: 'translate(5vw, -55vw)',
+		transform: 'translate(5vw, -70vw)',
 	},
 	ChangeThingsVideo: {
 		transform: 'translate(-3vw, -59vw)',

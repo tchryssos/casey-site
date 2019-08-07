@@ -16,12 +16,14 @@ const BlobLink = ({
 			)
 		}
 	>
-		<NavLink to={link} exact>
-			<img
-				src={src}
-				alt={`The ${altText} blob.`}
-			/>
-		</NavLink>
+		<div className={classes.animationWrapper}>
+			<NavLink to={link} exact>
+				<img
+					src={src}
+					alt={`The ${altText} blob.`}
+				/>
+			</NavLink>
+		</div>
 	</div>
 )
 
