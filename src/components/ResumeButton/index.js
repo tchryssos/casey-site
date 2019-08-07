@@ -10,6 +10,8 @@ import resumeTextRed from 'static/svg/about/resume-text-red.svg'
 import resumeText from 'static/svg/about/resume-text.svg'
 import resumePdf from 'static/files/resume.pdf'
 
+const svgHeight = '120px'
+const svgWidth = '160px'
 const styles = {
 	'@keyframes spin': {
 		from: { transform: 'rotate(0)' },
@@ -24,15 +26,15 @@ const styles = {
 	svgContainer: {
 		position: 'relative',
 		display: 'inline-block',
-		height: '120px',
-		width: '160px',
+		height: svgHeight,
+		width: svgWidth,
 	},
 	resumeSvg: {
 		position: 'absolute',
 		top: 0,
 		left: 0,
-		height: '120px',
-		width: '160px',
+		height: svgHeight,
+		width: svgWidth,
 	},
 	spinAnimation: {
 		animation: 'spin infinite 1s linear',
