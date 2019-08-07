@@ -11,6 +11,8 @@ const styles = {
 			switch (aspectRatio) {
 				case '1:1':
 					return '100%'
+				case '4:3':
+					return '75%'
 				default: // 16:9
 					return '56.25%'
 			}

@@ -10,8 +10,9 @@ const styles = {
 	},
 	[MD_MIN_STRING]: {
 		pageDescriptionWrapper: {
-			width: '50%',
+			width: '35%',
 			marginLeft: '1rem',
+			position: 'fixed',
 		},
 		descriptionSpacer: {
 			display: 'block',

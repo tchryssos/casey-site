@@ -4,14 +4,19 @@ import injectSheet from 'react-jss'
 import { MD_MIN_STRING } from 'constants/styles/breakpoints'
 
 const styles = {
+	descriptionSpacer: {
+		display: 'none',
+		width: '50%',
+	},
 	pageContentWrapper: {
 		position: 'relative',
 	},
 	[MD_MIN_STRING]: {
+		descriptionSpacer: {
+			display: 'block',
+		},
 		pageContentWrapper: {
 			width: '50%',
-			overflowY: 'scroll',
-			maxHeight: '100vh',
 			padding: '0 1rem',
 			'&:first-child': {
 				marginLeft: '50%',
@@ -21,9 +26,12 @@ const styles = {
 }
 
 const PageContent = ({ children, classes }) => (
-	<div className={classes.pageContentWrapper}>
-		{children}
-	</div>
+	<>
+		<div className={classes.descriptionSpacer} />
+		<div className={classes.pageContentWrapper}>
+			{children}
+		</div>
+	</>
 )
 
 PageContent.propTypes = {
