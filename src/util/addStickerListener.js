@@ -9,17 +9,14 @@ import shoes from 'static/images/About/shoes_sticker.png'
 import terraceHouse from 'static/images/About/terraceHouse_sticker.png'
 
 const stickers = [bread, cocci, fishing, hottinet, kylie, shoes, terraceHouse]
-const getRandomIndex = () => (
-	Math.floor(Math.random() * Math.floor(stickers.length - 1))
-)
 const sticker = (e) => {
 	if (stickers.length) {
-		const src = stickers[getRandomIndex()]
+		const src = stickers[Math.floor(Math.random() * stickers.length)]
 		const board = document.getElementById('stickerBoard')
 		const image = document.createElement('img')
 		image.setAttribute('src', src)
-		const newWidth = 200
-		image.style.cssText = `position: absolute; top: ${e.clientY}px; left: ${e.clientX - (newWidth / 2)}px; z-index: 5; width: ${newWidth}px`
+		const stickerDimension = 200
+		image.style.cssText = `position: absolute; top: ${e.clientY - (stickerDimension / 2)}px; left: ${e.clientX - (stickerDimension / 2)}px; z-index: 5; width: ${stickerDimension}px; height: ${stickerDimension}px`
 		board.appendChild(image)
 	} else {
 		document.removeEventListener('click', sticker)
