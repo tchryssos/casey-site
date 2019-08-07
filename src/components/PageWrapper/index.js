@@ -1,7 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import injectSheet from 'react-jss'
-import { MD_MIN_STRING } from 'constants/styles/breakpoints'
+import {
+	MD_MIN_STRING, pageContentTotalWidthPerc,
+} from 'constants/styles/breakpoints'
 
 const styles = {
 	pageWrapper: {
@@ -12,7 +14,7 @@ const styles = {
 	},
 	[MD_MIN_STRING]: {
 		pageWrapper: {
-			maxWidth: '80%',
+			maxWidth: `${pageContentTotalWidthPerc}%`,
 			flexDirection: 'row',
 			justifyContent: 'flex-start',
 			paddingBottom: 0,

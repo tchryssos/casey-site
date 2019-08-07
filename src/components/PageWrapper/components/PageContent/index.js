@@ -1,12 +1,14 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import injectSheet from 'react-jss'
-import { MD_MIN_STRING } from 'constants/styles/breakpoints'
+import {
+	MD_MIN_STRING, pageContentWidthPerc, pageDescriptionWidthPerc,
+} from 'constants/styles/breakpoints'
 
 const styles = {
 	descriptionSpacer: {
 		display: 'none',
-		width: '40%',
+		width: `${pageDescriptionWidthPerc}%`,
 	},
 	pageContentWrapper: {
 		position: 'relative',
@@ -16,7 +18,7 @@ const styles = {
 			display: 'block',
 		},
 		pageContentWrapper: {
-			width: '60%',
+			width: `${pageContentWidthPerc}%`,
 			padding: '0 1rem',
 			'&:first-child': {
 				marginLeft: '50%',

@@ -36,11 +36,8 @@ export default {
 	ChaseSapphire: {
 		transform: 'translateY(-52vw)',
 	},
-	FlatironSchoolStyleGuide: {
-		transform: 'translate(5vw, -72vw)',
-	},
 	ChangeThingsVideo: {
-		transform: 'translate(-3vw, -59vw)',
+		transform: 'translate(-20vw, -55vw)',
 	},
 	[MD_MIN_STRING]: {
 		linkWrapper: {
@@ -69,11 +66,8 @@ export default {
 		ChaseSapphire: {
 			transform: 'translateY(-23vw)',
 		},
-		FlatironSchoolStyleGuide: {
-			transform: 'translate(2vw, -23vw)',
-		},
 		ChangeThingsVideo: {
-			transform: 'translate(-1vw, -25vw)',
+			transform: 'translate(-15vw, -27vw)',
 		},
 	},
 }

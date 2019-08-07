@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import injectSheet from 'react-jss'
 import {
-	MD_MIN_STRING, leftColumnWidthPerc,
+	MD_MIN_STRING, fixedColumnWidthPerc,
 } from 'constants/styles/breakpoints'
 import Spacer from 'components/Spacer'
 
@@ -12,12 +12,14 @@ const styles = {
 	},
 	[MD_MIN_STRING]: {
 		pageDescriptionWrapper: {
-			width: `${leftColumnWidthPerc}%`,
-			marginLeft: '1rem',
+			width: `${fixedColumnWidthPerc}%`,
 			position: 'fixed',
 		},
 		descriptionSpacer: {
 			display: 'block',
+		},
+		padding: {
+			padding: '0 1rem',
 		},
 	},
 }
@@ -27,7 +29,9 @@ const PageDescription = ({ children, classes }) => (
 		<div className={classes.descriptionSpacer}>
 			<Spacer height={4} />
 		</div>
-		{children}
+		<div className={classes.padding}>
+			{children}
+		</div>
 	</div>
 )
 

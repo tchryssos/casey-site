@@ -64,14 +64,6 @@ const blobLinkData = {
 		altText: 'Chase Sapphire',
 		width: 100,
 	},
-	FlatironSchoolStyleGuide: {
-		src: FlatironSchoolStyleGuide,
-		svgFile: 'FlatironSchoolStyleGuide',
-		link: '/flatiron-style-guide',
-		altText: 'Flatiron Style Guide',
-		width: 50,
-		zIndex: 3,
-	},
 	ChangeThingsVideo: {
 		src: ChangeThingsVideo,
 		svgFile: 'ChangeThingsVideo',
