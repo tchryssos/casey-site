@@ -51,8 +51,8 @@ const UXUICourse = () => (
 				<Body>Photography: Rav Carlotti </Body>
 			</ContentBlock>
 			<ContentBlock>
+				<Image size="full" src={SeaportOne} />
 				<ItemGrid>
-					<Image size="full" src={SeaportOne} />
 					<Image src={SeaportTwo} />
 					<Image src={SeaportThree} />
 					<Image src={SeaportFour} />
@@ -93,6 +93,7 @@ const UXUICourse = () => (
 				<VideoPlayer
 					src="https://player.vimeo.com/video/338774140"
 					title="Reserve What's Next: Social Campaign"
+					aspectRatio="1:1"
 				/>
 			</ContentBlock>
 			<ContentBlock>
@@ -114,6 +115,7 @@ const UXUICourse = () => (
 				<VideoPlayer
 					src="https://player.vimeo.com/video/338773155"
 					title="Six Cities: San Francisco"
+					aspectRatio="1:1"
 				/>
 				<Image scrollable src={CitiesCarousel} size="full" />
 			</ContentBlock>
