@@ -31,7 +31,7 @@ const blobLinkData = {
 		link: '/tampons',
 		altText: 'How to put in a tampon',
 		width: 40,
-		zIndex: 3,
+		zIndex: 4,
 	},
 	MusicalRug: {
 		src: MusicalRug,
@@ -47,6 +47,7 @@ const blobLinkData = {
 		link: '/uprising',
 		altText: 'Uprising Creative',
 		width: 50,
+		zIndex: 3,
 	},
 	SeatGeekScholarship: {
 		src: SeatGeekScholarship,
@@ -54,7 +55,7 @@ const blobLinkData = {
 		link: '/seatgeek',
 		altText: 'SeatGeek Scholarship',
 		width: 100,
-		zIndex: 3,
+		zIndex: 2,
 	},
 	ChaseSapphire: {
 		src: ChaseSapphire,
