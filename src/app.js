@@ -32,6 +32,7 @@ const App = ({ location, classes }) => {
 	const [isMenuOpen, setIsMenuOpen] = useState(false)
 	useEffect(() => {
 		setIsMenuOpen(false)
+		window.scrollTo(0, 0)
 	}, [location])
 	return (
 		<MenuContext.Provider value={{ isMenuOpen, setIsMenuOpen }}>
