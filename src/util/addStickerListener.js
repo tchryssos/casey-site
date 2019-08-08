@@ -10,17 +10,22 @@ import terraceHouse from 'static/images/About/terraceHouse_sticker.png'
 
 const stickers = [bread, cocci, fishing, hottinet, kylie, shoes, terraceHouse]
 const sticker = (e) => {
-	if (stickers.length) {
-		const src = stickers[Math.floor(Math.random() * stickers.length)]
-		const board = document.getElementById('stickerBoard')
-		const image = document.createElement('img')
-		image.setAttribute('src', src)
-		const stickerDimension = 200
-		image.style.cssText = `position: absolute; top: ${e.clientY - (stickerDimension / 2)}px; left: ${e.clientX - (stickerDimension / 2)}px; z-index: 5; width: ${stickerDimension}px; height: ${stickerDimension}px`
-		board.appendChild(image)
-	} else {
-		document.removeEventListener('click', sticker)
-	}
+	const src = stickers[Math.floor(Math.random() * stickers.length)]
+	const board = document.getElementById('stickerBoard')
+	const image = document.createElement('img')
+	image.setAttribute('src', src)
+	const stickerDimension = 200
+	const top = (e.clientY - (stickerDimension / 2)) + board.scrollTop
+	const left = e.clientX - (stickerDimension / 2)
+	image.style.cssText = `
+		position: absolute;
+		top: ${top}px;
+		left: ${left}px;
+		z-index: 5;
+		width: ${stickerDimension}px;
+		height: ${stickerDimension}px
+	`
+	board.appendChild(image)
 }
 
 export default () => {

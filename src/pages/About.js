@@ -32,7 +32,16 @@ const About = ({ classes }) => {
 				<PageContent>
 					<ContentBlock>
 						<ResumeButton />
+					</ContentBlock>
+					<ContentBlock>
+						<Heading>about me</Heading>
+						<Body>(click anywhere)</Body>
+						<Spacer height={2} />
+						<SubHeading>EMAIL</SubHeading>
+						<Body>caseyebradford@gmail.com</Body>
 						<Spacer />
+					</ContentBlock>
+					<ContentBlock>
 						<Heading>experience</Heading>
 						<Spacer height={2} />
 						<SubHeading>DESIGN LEAD</SubHeading>
@@ -44,12 +53,6 @@ const About = ({ classes }) => {
 						<SubHeading>DESIGN INTERN</SubHeading>
 						<Body>The Uprising Creative, Aug 2016</Body>
 						<Spacer height={3} />
-					</ContentBlock>
-					<ContentBlock>
-						<Heading>about me</Heading>
-						<Spacer height={2} />
-						<Body>(click anywhere)</Body>
-						<Spacer />
 					</ContentBlock>
 				</PageContent>
 			</PageWrapper>

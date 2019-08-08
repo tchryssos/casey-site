@@ -44,7 +44,7 @@ const HowToTampons = () => (
 			<Image src={TamponFive} alt="Razor animation" size="full" />
 			<Image src={TamponSix} alt="Texting animation" size="full" />
 			<Image src={TamponSeven} alt="Heart flying out from between legs" size="full" />
-			<Spacer isHiddenSmall />
+			<Spacer />
 		</PageContent>
 	</PageWrapper>
 )

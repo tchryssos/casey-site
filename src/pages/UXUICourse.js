@@ -26,6 +26,9 @@ const styles = {
 		padding: '16px',
 		backgroundColor: offWhite,
 	},
+	hideMargin: {
+		marginTop: 0,
+	},
 }
 
 const UXUICourse = ({ classes }) => (
@@ -58,7 +61,7 @@ const UXUICourse = ({ classes }) => (
 			</ContentBlock>
 			<Image src={PhoneTwo} alt="Instagram swiper demo" size="full" />
 			<div className={classes.partyDesignGraphics}>
-				<ItemGrid>
+				<ItemGrid className={classes.hideMargin}>
 					<Image src={Cocktail} alt="Design cocktail graphic" size="half" />
 					<Image src={Nametag} alt="Design nametag graphic" size="half" />
 				</ItemGrid>

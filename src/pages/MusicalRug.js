@@ -40,7 +40,7 @@ const UXUICourse = () => (
 			/>
 			<Image src={MusicalRugTwo} alt="Setting up musical rug" size="full" />
 			<Image src={MusicalRugThree} alt="Touching musical rug" size="full" />
-			<Spacer isHiddenSmall />
+			<Spacer />
 		</PageContent>
 	</PageWrapper>
 )
