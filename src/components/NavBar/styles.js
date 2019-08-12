@@ -66,7 +66,7 @@ export default {
 	[MD_MIN_STRING]: {
 		menu: {
 			backgroundColor: white,
-			width: `${fixedColumnWidthPerc}`,
+			width: `${fixedColumnWidthPerc}%`,
 			height: '100%',
 			justifyContent: 'flex-start',
 		},

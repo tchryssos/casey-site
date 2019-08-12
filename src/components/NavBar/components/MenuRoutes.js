@@ -17,22 +17,10 @@ const styles = {
 		'&:first-of-type': {
 			marginTop: 0,
 		},
-		'&:last-of-type': {
-			marginTop: '32px',
-		},
 	},
 	[MD_MIN_STRING]: {
 		menuLinkWrapper: {
-			marginTop: '24px',
-		},
-		menuLink: {
-			marginTop: '16px',
-			'&:first-of-type': {
-				marginTop: '16px',
-			},
-			'&:last-of-type': {
-				marginTop: '16px',
-			},
+			marginTop: '64px',
 		},
 	},
 }
