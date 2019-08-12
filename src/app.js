@@ -2,9 +2,12 @@ import React, { useState, useEffect } from 'react'
 import { Route, Switch, withRouter, BrowserRouter } from 'react-router-dom'
 import { render } from 'react-dom'
 import injectSheet from 'react-jss'
+import classNames from 'classnames'
 
 import blobLinkData from 'constants/blobLinks'
+import { SM_MAX_STRING } from 'constants/styles/breakpoints'
 import MenuContext from 'contexts/menu'
+
 import NavBar from 'components/NavBar'
 import Home from 'pages/Home'
 import FISMarketing from 'pages/FISMarketing'
@@ -19,12 +22,18 @@ import About from 'pages/About'
 
 import cursor from 'static/images/Misc/cursor.png'
 
+
 const styles = {
 	app: {
 		position: 'relative',
 		cursor: `url(${cursor}),auto`,
 		width: '100%',
 		height: '100%',
+	},
+	[SM_MAX_STRING]: {
+		fixedBody: {
+			overflow: 'hidden',
+		},
 	},
 }
 
@@ -36,7 +45,14 @@ const App = ({ location, classes }) => {
 	}, [location])
 	return (
 		<MenuContext.Provider value={{ isMenuOpen, setIsMenuOpen }}>
-			<div className={classes.app}>
+			<div
+				className={
+					classNames(
+						classes.app,
+						isMenuOpen ? classes.fixedBody : '',
+					)
+				}
+			>
 				<Switch>
 					<Route path="/" exact component={Home} />
 					<Route
