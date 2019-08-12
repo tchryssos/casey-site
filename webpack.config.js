@@ -37,7 +37,10 @@ module.exports = {
 			},
 			{
 				test: /\.(png|jpg|gif|woff|woff2|ttf|svg|pdf)$/,
-				loader: 'url-loader?limit=8192',
+				loader: 'file-loader',
+				options: {
+					name: '[name].[ext]',
+				},
 			},
 		],
 	},
