@@ -5,7 +5,7 @@ import injectSheet from 'react-jss'
 import classNames from 'classnames'
 
 import blobLinkData from 'constants/blobLinks'
-import { SM_MAX_STRING } from 'constants/styles/breakpoints'
+import { MD_MIN_VALUE } from 'constants/styles/breakpoints'
 import MenuContext from 'contexts/menu'
 
 import NavBar from 'components/NavBar'
@@ -30,11 +30,6 @@ const styles = {
 		width: '100%',
 		height: '100%',
 	},
-	[SM_MAX_STRING]: {
-		fixedBody: {
-			overflow: 'hidden',
-		},
-	},
 }
 
 const App = ({ location, classes }) => {
@@ -43,6 +38,13 @@ const App = ({ location, classes }) => {
 		setIsMenuOpen(false)
 		window.scrollTo(0, 0)
 	}, [location])
+	useEffect(() => {
+		if (isMenuOpen && window.outerWidth < MD_MIN_VALUE) {
+			document.body.style.overflowY = 'hidden'
+		} else {
+			document.body.style.overflowY = 'initial'
+		}
+	})
 	return (
 		<MenuContext.Provider value={{ isMenuOpen, setIsMenuOpen }}>
 			<div
