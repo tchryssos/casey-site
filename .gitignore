@@ -12,7 +12,7 @@ ProjectPages
 .env.development.local
 .env.test.local
 .env.production.local
-www/bundle.js
+www
 .vscode
 
 npm-debug.log*

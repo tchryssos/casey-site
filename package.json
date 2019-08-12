@@ -7,9 +7,8 @@
   "author": "<troychryssos@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "compile": "npm webpack",
     "start": "node server.js",
-    "build:dev": "routing=hash webpack --config webpack.config.dev.js --colors ",
+    "build": "webpack --config webpack.config.js --colors ",
     "lint": "eslint src --fix"
   },
   "dependencies": {
@@ -42,5 +41,7 @@
     "webpack": "^4.38.0",
     "webpack-dev-server": "^3.7.2"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "webpack-cli": "^3.3.6"
+  }
 }
