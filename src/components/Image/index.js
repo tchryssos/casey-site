@@ -9,7 +9,7 @@ const styles = {
 		width: ({ scrollable }) => (scrollable ? 'unset' : '100%'),
 	},
 	imageWrapper: {
-		display: 'inherit',
+		display: 'inline-block',
 		width: ({ size }) => (
 			size === 'half' ? 'calc(50% - 8px)' : '100%'
 		),
