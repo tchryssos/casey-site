@@ -34,17 +34,19 @@ const styles = {
 
 const App = ({ location, classes }) => {
 	const [isMenuOpen, setIsMenuOpen] = useState(false)
+	// On location change, scroll to page top
 	useEffect(() => {
 		setIsMenuOpen(false)
 		window.scrollTo(0, 0)
 	}, [location])
+	// Stop body scroll behind small window menus
 	useEffect(() => {
 		if (isMenuOpen && window.outerWidth < MD_MIN_VALUE) {
 			document.body.style.overflowY = 'hidden'
 		} else {
 			document.body.style.overflowY = 'initial'
 		}
-	})
+	}, [isMenuOpen])
 	return (
 		<MenuContext.Provider value={{ isMenuOpen, setIsMenuOpen }}>
 			<div
