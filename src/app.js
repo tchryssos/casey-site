@@ -5,7 +5,7 @@ import injectSheet from 'react-jss'
 import classNames from 'classnames'
 
 import blobLinkData from 'constants/blobLinks'
-import { MD_MIN_VALUE } from 'constants/styles/breakpoints'
+import { MD_MIN_VALUE, MD_MIN_STRING } from 'constants/styles/breakpoints'
 import MenuContext from 'contexts/menu'
 
 import NavBar from 'components/NavBar'
@@ -26,9 +26,13 @@ import cursor from 'static/images/Misc/cursor.png'
 const styles = {
 	app: {
 		position: 'relative',
-		cursor: `url(${cursor}),auto`,
 		width: '100%',
 		height: '100%',
+	},
+	[MD_MIN_STRING]: {
+		app: {
+			cursor: `url(${cursor}),auto`,
+		},
 	},
 }
 
