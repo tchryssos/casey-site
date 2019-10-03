@@ -10,15 +10,16 @@ import VideoPlayer from 'components/VideoPlayer'
 import Spacer from 'components/Spacer'
 import ItemGrid from 'components/ItemGrid'
 
-import BusGif from 'static/images/FISMarketing/bus-boom.gif'
-import PaulGif from 'static/images/FISMarketing/paul-ryan.gif'
-import IG1 from 'static/images/FISMarketing/ig-1.gif'
-import IG2 from 'static/images/FISMarketing/ig-2.png'
+import LondonTube from 'static/images/FISMarketing/LondonTubeAd.png'
+import LinkNyc from 'static/images/FISMarketing/LinkNyc.png'
+import IG1 from 'static/images/FISMarketing/ig-6.gif'
+import IG2 from 'static/images/FISMarketing/houchronad.png'
 import IG3 from 'static/images/FISMarketing/ig-3.png'
+import BackToSchool from 'static/images/FISMarketing/BackToSchool-Social.gif'
 import IG4 from 'static/images/FISMarketing/ig-4.png'
 import IG5 from 'static/images/FISMarketing/ig-5.png'
-import IG6 from 'static/images/FISMarketing/ig-6.gif'
-import IG7 from 'static/images/FISMarketing/ig-7.png'
+import IG6 from 'static/images/FISMarketing/ActuallyGetJobs.gif'
+import CyberGif from 'static/images/FISMarketing/CyberGif_Square.gif'
 import IG8 from 'static/images/FISMarketing/ig-8.png'
 
 const FlatironMarketing = () => (
@@ -37,8 +38,8 @@ const FlatironMarketing = () => (
 			</ContentBlock>
 		</PageDescription>
 		<PageContent>
-			<Image src={BusGif} alt="Bus boomerang" size="full" />
-			<Image src={PaulGif} alt="Bus boomerang" size="full" />
+			<Image src={LondonTube} alt="LondonTube Ad" size="full" />
+			<Image src={LinkNyc} alt="Nyc Link Ad" size="full" />
 			<VideoPlayer
 				src="https://player.vimeo.com/video/324643084"
 				title="Landing page demo"
@@ -50,13 +51,17 @@ const FlatironMarketing = () => (
 			/>
 			<ContentBlock>
 				<ItemGrid>
-					<Image src={IG1} alt="Job slideshow" />
-					<Image src={IG2} alt="Web language cards" />
+					<Image src={IG2} alt="Students coding" />
+					<Image src={IG1} alt="JIntro to Front End Graphic" />
 					<Image src={IG3} alt="Laptop and plant" />
 					<Image src={IG4} alt="Students coding in Dallas" />
+					</ItemGrid>
+
+					<Image src={BackToSchool} alt="Parents go back to school too" size="full" />
+					<ItemGrid>
 					<Image src={IG5} alt="Young woman coding" />
-					<Image src={IG6} alt="Sign advertising front end courses" />
-					<Image src={IG7} alt="Data science bootcamp graphic" />
+					<Image src={CyberGif} alt="Learn Cybersecurity Analytics" />
+					<Image src={IG6} alt="Logos of employers" />
 					<Image
 						src={IG8}
 						alt="Students comparing code in ad for '2020 skills'"
