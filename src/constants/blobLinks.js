@@ -8,14 +8,13 @@ import SeatGeekScholarship from 'static/svg/home/SeatGeekScholarship.svg'
 import TheUprisingCreative from 'static/svg/home/TheUprisingCreative.svg'
 import UXUICourse from 'static/svg/home/UXUICourse.svg'
 
-// These are arranged in order of importance
 const blobLinkData = {
 	FISMarketing: {
 		src: FISMarketing,
 		svgFile: 'FISMarketing',
 		link: '/flatiron-marketing',
 		altText: 'Flatiron School Marketing',
-		width: 50,
+		width: 50, // Width in percentage
 		zIndex: 3,
 	},
 	UXUICourse: {
