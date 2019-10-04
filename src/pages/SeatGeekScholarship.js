@@ -16,6 +16,8 @@ import Stickers from 'static/images/SeatGeekScholarship/stickers.png'
 import FiftyFifty from 'static/images/SeatGeekScholarship/50-50-graphic.png'
 import Timeline from 'static/images/SeatGeekScholarship/womens-month-timeline.png'
 import CarolAnimation from 'static/images/SeatGeekScholarship/carol-animation.gif'
+import Grace from 'static/images/SeatGeekScholarship/GraceHopper.png'
+import Sweatshirt from 'static/images/SeatGeekScholarship/TrailblazerSweatshirt.jpg'
 import Perlman from 'static/images/SeatGeekScholarship/perlman.png'
 import Coalition from 'static/images/SeatGeekScholarship/coalition.png'
 
@@ -69,6 +71,8 @@ const HowToTampons = ({ classes }) => (
 				<Image src={FiftyFifty} alt="Scholarship advertisement" size="full" />
 				<Image src={Timeline} alt="Women in computing timeline" size="full" />
 				<Image src={CarolAnimation} alt="Animation of Carol Shaw" size="full" />
+				<Image src={Grace} alt="Grace Hopper Sticker" size="full" />
+				<Image src={Sweatshirt} alt="Trailblazer Sweatshirt" size="full" />
 				<ItemGrid>
 					<Image src={Perlman} alt="Drawing of Radia Perlman" />
 					<Image src={Coalition} alt="50/50 gender coalition flyer" />

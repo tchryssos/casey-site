@@ -34,6 +34,7 @@ const FlatironMarketing = () => (
 				<Spacer />
 				<Body>
 					Role: Creative Direction and Design
+					Graphic Designer: Emily Brown
 				</Body>
 			</ContentBlock>
 		</PageDescription>
