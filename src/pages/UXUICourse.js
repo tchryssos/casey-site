@@ -17,7 +17,7 @@ import Future from 'static/images/UXUICourse/future.gif'
 import Cocktail from 'static/images/UXUICourse/cocktail.png'
 import Nametag from 'static/images/UXUICourse/nametag.png'
 import Swag from 'static/images/UXUICourse/swag.jpg'
-import Tote from 'static/images/UXUICourse/tote.png'
+import Tote from 'static/images/UXUICourse/tote.jpg'
 
 import { offWhite } from 'constants/styles/colors'
 
