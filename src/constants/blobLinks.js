@@ -21,7 +21,7 @@ const blobLinkData = {
 		src: UXUICourse,
 		svgFile: 'UXUICourse',
 		link: '/ux-ui',
-		altText: 'UX/UI course',
+		altText: 'UX/UI course branding',
 		width: 50,
 	},
 	HowToTampons: {
