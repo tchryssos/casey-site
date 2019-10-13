@@ -28,6 +28,7 @@ const styles = {
 		position: 'relative',
 		width: '100%',
 		height: '100%',
+		cursor: 'pointer',
 	},
 	[MD_MIN_STRING]: {
 		app: {
@@ -54,6 +55,9 @@ const App = ({ location, classes }) => {
 	return (
 		<MenuContext.Provider value={{ isMenuOpen, setIsMenuOpen }}>
 			<div
+				// iOS onClick hack
+				// https://stackoverflow.com/questions/24077725/mobile-safari-sometimes-does-not-trigger-the-click-event
+				onClick={void 0}
 				className={
 					classNames(
 						classes.app,
