@@ -18,7 +18,7 @@ export default {
 	FISMarketing: {
 		transform: 'translateX(13vw)',
 	},
-	UXUICourse: {
+	UIDesign: {
 		transform: 'translateY(13vw)',
 	},
 	MusicalRug: {
@@ -37,10 +37,10 @@ export default {
 		transform: 'translateY(-52vw)',
 	},
 	ChangeThingsVideo: {
-		transform: 'translate(-3vw, -59vw)',
+		transform: 'translate(3vw, -73vw)',
 	},
 	About: {
-		transform: 'translate(5vw, -55vw)',
+		transform: 'translate(0vw, -55vw)',
 	},
 	[MD_MIN_STRING]: {
 		linkWrapper: {
@@ -51,7 +51,7 @@ export default {
 		FISMarketing: {
 			transform: 'translateX(0)',
 		},
-		UXUICourse: {
+		UIDesign: {
 			transform: 'translate(-5vw, 5vw)',
 		},
 		MusicalRug: {

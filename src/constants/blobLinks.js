@@ -6,7 +6,7 @@ import HowToTampons from 'static/svg/home/HowToTampons.svg'
 import MusicalRug from 'static/svg/home/MusicalRug.svg'
 import SeatGeekScholarship from 'static/svg/home/SeatGeekScholarship.svg'
 import TheUprisingCreative from 'static/svg/home/TheUprisingCreative.svg'
-import UXUICourse from 'static/svg/home/UXUICourse.svg'
+import UIDesign from 'static/svg/home/UIDesign.svg'
 
 const blobLinkData = {
 	FISMarketing: {
@@ -17,11 +17,11 @@ const blobLinkData = {
 		width: 50, // Width in percentage
 		zIndex: 3,
 	},
-	UXUICourse: {
-		src: UXUICourse,
-		svgFile: 'UXUICourse',
-		link: '/ux-ui',
-		altText: 'UX/UI course branding',
+	UIDesign: {
+		src: UIDesign,
+		svgFile: 'UIDesign',
+		link: '/ui-design',
+		altText: 'UI Design Project',
 		width: 50,
 	},
 	HowToTampons: {
