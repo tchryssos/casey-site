@@ -1,12 +1,12 @@
 import ChangeThingsVideo from 'static/svg/home/ChangeThingsVideo.svg'
 import ChaseSapphire from 'static/svg/home/ChaseSapphire.svg'
 import FISMarketing from 'static/svg/home/FISMarketing.svg'
-import FlatironSchoolStyleGuide from 'static/svg/home/FlatironSchoolStyleGuide.svg'
+import About from 'static/svg/home/About.svg'
 import HowToTampons from 'static/svg/home/HowToTampons.svg'
 import MusicalRug from 'static/svg/home/MusicalRug.svg'
 import SeatGeekScholarship from 'static/svg/home/SeatGeekScholarship.svg'
 import TheUprisingCreative from 'static/svg/home/TheUprisingCreative.svg'
-import UXUICourse from 'static/svg/home/UXUICourse.svg'
+import UIDesign from 'static/svg/home/UIDesign.svg'
 
 const blobLinkData = {
 	FISMarketing: {
@@ -17,11 +17,11 @@ const blobLinkData = {
 		width: 50, // Width in percentage
 		zIndex: 3,
 	},
-	UXUICourse: {
-		src: UXUICourse,
-		svgFile: 'UXUICourse',
-		link: '/ux-ui',
-		altText: 'UX/UI course branding',
+	UIDesign: {
+		src: UIDesign,
+		svgFile: 'UIDesign',
+		link: '/ui-design',
+		altText: 'UI Design',
 		width: 50,
 	},
 	HowToTampons: {
@@ -69,7 +69,15 @@ const blobLinkData = {
 		link: '/change-things',
 		altText: 'Change Things Video',
 		width: 50,
+		zIndex: 2,
 	},
+	About: {
+		src: About,
+		svgFile: 'About',
+		link: '/about',
+		altText: 'About Page',
+		width: 50,
+	}
 }
 
 export default blobLinkData
