@@ -11,7 +11,7 @@ import MenuContext from 'contexts/menu'
 import NavBar from 'components/NavBar'
 import Home from 'pages/Home'
 import FISMarketing from 'pages/FISMarketing'
-import UXUICourse from 'pages/UXUICourse'
+import UIDesign from 'pages/UXUICourse'
 import HowToTampons from 'pages/HowToTampons'
 import MusicalRug from 'pages/MusicalRug'
 import TheUprisingCreative from 'pages/TheUprisingCreative'
@@ -72,8 +72,8 @@ const App = ({ location, classes }) => {
 						component={FISMarketing}
 					/>
 					<Route
-						path={blobLinkData.UXUICourse.link}
-						component={UXUICourse}
+						path={blobLinkData.UIDesign.link}
+						component={UIDesign}
 					/>
 					<Route
 						path={blobLinkData.HowToTampons.link}
