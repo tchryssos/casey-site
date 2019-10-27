@@ -11,13 +11,13 @@ import Image from 'components/Image'
 import Spacer from 'components/Spacer'
 import ItemGrid from 'components/ItemGrid'
 
-import PhoneOne from 'static/images/UXUICourse/phone-1.gif'
-import PhoneTwo from 'static/images/UXUICourse/phone-2.gif'
-import Future from 'static/images/UXUICourse/future.gif'
-import Cocktail from 'static/images/UXUICourse/cocktail.png'
-import Nametag from 'static/images/UXUICourse/nametag.png'
-import Swag from 'static/images/UXUICourse/swag.jpg'
-import Tote from 'static/images/UXUICourse/tote.jpg'
+import PhoneOne from 'static/images/UIDesign/phone-1.gif'
+import PhoneTwo from 'static/images/UIDesign/phone-2.gif'
+import Future from 'static/images/UIDesign/future.gif'
+import Cocktail from 'static/images/UIDesign/cocktail.png'
+import Nametag from 'static/images/UIDesign/nametag.png'
+import Swag from 'static/images/UIDesign/swag.jpg'
+import Tote from 'static/images/UIDesign/tote.jpg'
 
 import { offWhite } from 'constants/styles/colors'
 
@@ -31,7 +31,7 @@ const styles = {
 	},
 }
 
-const UXUICourse = ({ classes }) => (
+const UIDesign = ({ classes }) => (
 	<PageWrapper>
 		<PageDescription>
 			<ContentBlock>
@@ -73,4 +73,4 @@ const UXUICourse = ({ classes }) => (
 	</PageWrapper>
 )
 
-export default injectSheet(styles)(UXUICourse)
+export default injectSheet(styles)(UIDesign)

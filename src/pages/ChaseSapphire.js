@@ -27,7 +27,7 @@ import bbqThree from 'static/images/ChaseSapphire/WhatsNext/bbq_3.png'
 import bbqFour from 'static/images/ChaseSapphire/WhatsNext/bbq_4.png'
 
 
-const UXUICourse = () => (
+const ChaseSapphire = () => (
 	<PageWrapper>
 		<PageDescription>
 			<ContentBlock>
@@ -123,4 +123,4 @@ const UXUICourse = () => (
 	</PageWrapper>
 )
 
-export default UXUICourse
+export default ChaseSapphire

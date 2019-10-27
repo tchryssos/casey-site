@@ -13,7 +13,7 @@ import MusicalRugOne from 'static/images/MusicalRug/MusicalRug-1.jpg'
 import MusicalRugTwo from 'static/images/MusicalRug/MusicalRug-2.jpg'
 import MusicalRugThree from 'static/images/MusicalRug/MusicalRug-3.jpg'
 
-const UXUICourse = () => (
+const MusicalRug = () => (
 	<PageWrapper>
 		<PageDescription>
 			<ContentBlock>
@@ -45,4 +45,4 @@ const UXUICourse = () => (
 	</PageWrapper>
 )
 
-export default UXUICourse
+export default MusicalRug
