@@ -69,6 +69,7 @@ const blobLinkData = {
 		link: '/change-things',
 		altText: 'Change Things Video',
 		width: 50,
+		zIndex: 2,
 	},
 	About: {
 		src: About,

@@ -37,7 +37,10 @@ export default {
 		transform: 'translateY(-52vw)',
 	},
 	ChangeThingsVideo: {
-		transform: 'translate(-20vw, -55vw)',
+		transform: 'translate(-3vw, -59vw)',
+	},
+	About: {
+		transform: 'translate(5vw, -55vw)',
 	},
 	[MD_MIN_STRING]: {
 		linkWrapper: {
@@ -67,7 +70,10 @@ export default {
 			transform: 'translateY(-23vw)',
 		},
 		ChangeThingsVideo: {
-			transform: 'translate(-15vw, -27vw)',
+			transform: 'translate(1vw, -26vw)',
+		},
+		About: {
+			transform: 'translate(-1vw, -27vw)',
 		},
 	},
 }
