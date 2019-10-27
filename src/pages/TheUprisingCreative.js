@@ -24,7 +24,7 @@ import DDTwo from 'static/images/TheUprisingCreative/DigitalDomain/dd-permalink-
 
 import RedBullOne from 'static/images/TheUprisingCreative/RedBullRecords/redbull-records.png'
 
-const UXUICourse = () => (
+const TheUprisingCreative = () => (
 	<PageWrapper>
 		<PageDescription>
 			<ContentBlock>
@@ -64,4 +64,4 @@ const UXUICourse = () => (
 	</PageWrapper>
 )
 
-export default UXUICourse
+export default TheUprisingCreative

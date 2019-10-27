@@ -21,7 +21,7 @@ const blobLinkData = {
 		src: UIDesign,
 		svgFile: 'UIDesign',
 		link: '/ui-design',
-		altText: 'UI Design Project',
+		altText: 'UI Design',
 		width: 50,
 	},
 	HowToTampons: {
