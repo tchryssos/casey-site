@@ -1,7 +1,7 @@
 import ChangeThingsVideo from 'static/svg/home/ChangeThingsVideo.svg'
 import ChaseSapphire from 'static/svg/home/ChaseSapphire.svg'
 import FISMarketing from 'static/svg/home/FISMarketing.svg'
-import FlatironSchoolStyleGuide from 'static/svg/home/FlatironSchoolStyleGuide.svg'
+import About from 'static/svg/home/About.svg'
 import HowToTampons from 'static/svg/home/HowToTampons.svg'
 import MusicalRug from 'static/svg/home/MusicalRug.svg'
 import SeatGeekScholarship from 'static/svg/home/SeatGeekScholarship.svg'
@@ -70,6 +70,13 @@ const blobLinkData = {
 		altText: 'Change Things Video',
 		width: 50,
 	},
+	About: {
+		src: About,
+		svgFile: 'About',
+		link: '/about',
+		altText: 'About Page',
+		width: 50,
+	}
 }
 
 export default blobLinkData
