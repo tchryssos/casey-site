@@ -9,15 +9,11 @@ import Heading from 'components/Typography/Heading'
 import Body from 'components/Typography/Body'
 import Image from 'components/Image'
 import Spacer from 'components/Spacer'
-import ItemGrid from 'components/ItemGrid'
 
-import PhoneOne from 'static/images/UIDesign/phone-1.gif'
-import PhoneTwo from 'static/images/UIDesign/phone-2.gif'
-import Future from 'static/images/UIDesign/future.gif'
-import Cocktail from 'static/images/UIDesign/cocktail.png'
-import Nametag from 'static/images/UIDesign/nametag.png'
-import Swag from 'static/images/UIDesign/swag.jpg'
-import Tote from 'static/images/UIDesign/tote.jpg'
+import WireFrames from 'static/images/UIDesign/WireFrames.png'
+import SiteStyles from 'static/images/UIDesign/Styles.png'
+import HomeAboutPages from 'static/images/UIDesign/HomeAbout.png'
+import LogInSignUp from 'static/images/UIDesign/LogInSignUp.gif'
 
 import { offWhite } from 'constants/styles/colors'
 
@@ -35,40 +31,38 @@ const UIDesign = ({ classes }) => (
 	<PageWrapper>
 		<PageDescription>
 			<ContentBlock>
-				<Heading>Flatiron School</Heading>
+				<Heading>UI Design</Heading>
 				<Spacer />
 				<Body>
-					Assets to promote the launch of Flatiron School’s UX/UI Design bootcamp and acquisition of fellow bootcamp, Designation.
-				</Body>
-				<Spacer />
-				<Body>
-					Role: Creative Direction and Design
-				</Body>
-				<Spacer />
-				<Body>
-					Junior Designer: Emily Brown
+					In order to learn more about web design, I took a UI Design course on Udemy. These are the two projects that came out of the course. 
 				</Body>
 			</ContentBlock>
 		</PageDescription>
 		<PageContent>
-			<Image src={PhoneOne} alt="Instagram demo" size="full" />
+		<ContentBlock>
+				<Heading>Roar Bicycles</Heading>
+				<Spacer />
+				<Body>
+					xyz
+				</Body>
+			</ContentBlock>
 			<ContentBlock>
+			<Image src={WireFrames} alt="Wire Frames" size="full" />
+			<Image src={SiteStyles} alt="Logo Fonts and Colors for the site" size="full" />
 				<Image
-					src={Future}
-					alt="Design your future launch party gif"
+					src={HomeAboutPages}
+					alt="About and Home Pages"
 					size="full"
 				/>
+			<Image src={LogInSignUp} alt="Log In and Sign Up Screens" size="full" />
+				</ContentBlock>
+				<ContentBlock>
+				<Heading>Maynooth Furniture</Heading>
+				<Spacer />
+				<Body>
+					xyz
+				</Body>
 			</ContentBlock>
-			<Image src={PhoneTwo} alt="Instagram swiper demo" size="full" />
-			<div className={classes.partyDesignGraphics}>
-				<ItemGrid className={classes.hideMargin}>
-					<Image src={Cocktail} alt="Design cocktail graphic" size="half" />
-					<Image src={Nametag} alt="Design nametag graphic" size="half" />
-				</ItemGrid>
-			</div>
-			<Image src={Swag} alt="Swag bag poster" size="full" />
-			<Image src={Tote} alt="Flatiron tote bag" size="full" />
-			<Spacer />
 		</PageContent>
 	</PageWrapper>
 )
