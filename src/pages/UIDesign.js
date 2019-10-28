@@ -9,6 +9,7 @@ import Heading from 'components/Typography/Heading'
 import Body from 'components/Typography/Body'
 import Image from 'components/Image'
 import Spacer from 'components/Spacer'
+import VideoPlayer from 'components/VideoPlayer'
 
 import WireFrames from 'static/images/UIDesign/WireFrames.png'
 import SiteStyles from 'static/images/UIDesign/Styles.png'
@@ -48,6 +49,10 @@ const UIDesign = ({ classes }) => (
 			</ContentBlock>
 			<ContentBlock>
 			<Image src={WireFrames} alt="Wire Frames" size="full" />
+			<VideoPlayer
+				src="https://player.vimeo.com/video/369424560"
+				title="Musical rug demo"
+			/>
 			<Image src={SiteStyles} alt="Logo Fonts and Colors for the site" size="full" />
 				<Image
 					src={HomeAboutPages}
