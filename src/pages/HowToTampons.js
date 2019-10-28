@@ -34,7 +34,7 @@ const HowToTampons = () => (
 		</PageDescription>
 		<PageContent>
 			<VideoPlayer
-				src="https://player.vimeo.com/video/331255354"
+				src="https://player.vimeo.com/video/331255354?autoplay=1&loop=1"
 				title="Tampon insertion animation"
 			/>
 			<Image src={TamponOne} alt="TV with tampon project" size="full" />

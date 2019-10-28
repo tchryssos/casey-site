@@ -50,7 +50,7 @@ const UIDesign = ({ classes }) => (
 			<ContentBlock>
 			<Image src={WireFrames} alt="Wire Frames" size="full" />
 			<VideoPlayer
-				src="https://player.vimeo.com/video/369424560"
+				src="https://player.vimeo.com/video/369424560?autoplay=1&loop=1"
 				title="Musical rug demo"
 			/>
 			<Image src={SiteStyles} alt="Logo Fonts and Colors for the site" size="full" />

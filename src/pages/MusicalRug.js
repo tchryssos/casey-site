@@ -30,7 +30,7 @@ const MusicalRug = () => (
 		</PageDescription>
 		<PageContent>
 			<VideoPlayer
-				src="https://player.vimeo.com/video/331255265"
+				src="https://player.vimeo.com/video/331255265?autoplay=1&loop=1"
 				title="Musical rug demo"
 			/>
 			<Image
