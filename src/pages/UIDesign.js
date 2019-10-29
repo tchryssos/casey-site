@@ -15,6 +15,7 @@ import WireFrames from 'static/images/UIDesign/WireFrames.png'
 import SiteStyles from 'static/images/UIDesign/Styles.png'
 import HomeAboutPages from 'static/images/UIDesign/HomeAbout.png'
 import LogInSignUp from 'static/images/UIDesign/LogInSignUp.gif'
+import Mobile from 'static/images/UIDesign/mobile.png'
 
 import { offWhite } from 'constants/styles/colors'
 
@@ -60,6 +61,7 @@ const UIDesign = ({ classes }) => (
 					size="full"
 				/>
 			<Image src={LogInSignUp} alt="Log In and Sign Up Screens" size="full" />
+			<Image src={Mobile} alt="Mobile Screens" size="full" />
 				</ContentBlock>
 				<ContentBlock>
 				<Heading>Maynooth Furniture</Heading>
