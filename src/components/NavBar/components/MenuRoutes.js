@@ -51,11 +51,11 @@ const renderMenuLinks = classes => (
 const MenuRoutes = ({ classes }) => (
 	<div className={classes.menuLinkWrapper}>
 		{renderMenuLinks(classes)}
-		<MenuLink
+		{/* <MenuLink
 			className={classes.menuLink}
 			link="/about"
 			text="About"
-		/>
+		/> */}
 	</div>
 )
 
