@@ -45,7 +45,9 @@ const UIDesign = ({ classes }) => (
 				<Heading>Roar Bicycles</Heading>
 				<Spacer />
 				<Body>
-					xyz
+				 	Client: Roar Bikes is a manufacturer of small run, contemporary bicycles. They currently have 3 models of bike to purchase.
+				 	<br></br><br></br>Primary Objective: Build an e-commerce website for people to browse and purchase.
+				 	<br></br><br></br>Audience: Jake is a graphic designer for a large design agency in Los Angles. Jake prides himself on having strange & interesting versions of everyone else’s everyday objects. His shoes are hand made & his backpack is pink. He likes to make his purchase (big or small) from local responsible crafts people. He doesn’t own a car. He always brings a reusable cup to the coffee shop. Jake cycles to work and wants his bicycle to be practical but unique.
 				</Body>
 			</ContentBlock>
 			<ContentBlock>
@@ -63,11 +65,11 @@ const UIDesign = ({ classes }) => (
 			<Image src={LogInSignUp} alt="Log In and Sign Up Screens" size="full" />
 			<Image src={Mobile} alt="Mobile Screens" size="full" />
 				</ContentBlock>
-				<ContentBlock>
+			<ContentBlock>
 				<Heading>Maynooth Furniture</Heading>
 				<Spacer />
 				<Body>
-					xyz
+				 	Coming soon!
 				</Body>
 			</ContentBlock>
 		</PageContent>
