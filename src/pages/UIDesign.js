@@ -17,6 +17,11 @@ import HomeAboutPages from 'static/images/UIDesign/HomeAbout.png'
 import LogInSignUp from 'static/images/UIDesign/LogInSignUp.gif'
 import Mobile from 'static/images/UIDesign/mobile.png'
 
+import MHomePage from 'static/images/UIDesign/MaynoothHomePage.png'
+import MFilter from 'static/images/UIDesign/MaynoothFilter.gif'
+import MStyles from 'static/images/UIDesign/MaynoothStyles.png'
+import MProduct from 'static/images/UIDesign/MaynoothProduct.gif'
+
 import { offWhite } from 'constants/styles/colors'
 
 const styles = {
@@ -69,8 +74,15 @@ const UIDesign = ({ classes }) => (
 				<Heading>Maynooth Furniture</Heading>
 				<Spacer />
 				<Body>
-				 	Coming soon!
+				Client: Maynooth Furniture is a new business selling high-end furniture. 
+				 	<br></br><br></br>Primary Objective: Build an e-commerce website for people to browse and purchase.
 				</Body>
+			</ContentBlock>
+			<ContentBlock>
+			<Image src={MHomePage} alt="Homepage on desktop and mobile" size="full" />
+			<Image src={MFilter} alt="Animation of user selection tool" size="full" />
+			<Image src={MStyles} alt="Style guide for the site" size="full" />
+			<Image src={MProduct} alt="Product page on desktop and mobile" size="full" />
 			</ContentBlock>
 		</PageContent>
 	</PageWrapper>
