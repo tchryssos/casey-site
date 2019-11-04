@@ -21,6 +21,8 @@ import MHomePage from 'static/images/UIDesign/MaynoothHomePage.png'
 import MFilter from 'static/images/UIDesign/MaynoothFilter.gif'
 import MStyles from 'static/images/UIDesign/MaynoothStyles.png'
 import MProduct from 'static/images/UIDesign/MaynoothProduct.gif'
+import MySiteHome from 'static/images/UIDesign/MySiteHome.gif'
+import MySiteAbout from 'static/images/UIDesign/MySiteAbout.gif'
 
 import { offWhite } from 'constants/styles/colors'
 
@@ -83,6 +85,20 @@ const UIDesign = ({ classes }) => (
 			<Image src={MFilter} alt="Animation of user selection tool" size="full" />
 			<Image src={MStyles} alt="Style guide for the site" size="full" />
 			<Image src={MProduct} alt="Product page on desktop and mobile" size="full" />
+			</ContentBlock>
+			<ContentBlock>
+				<Heading>caseybradford.club</Heading>
+				<Spacer />
+				<Body>
+				I began pursuing web design so I could build this site! After interviewing countless designers who all had the same SquareSpace templates, I wanted my site to stand out and best represent my personality. I found that in a portfolio project, the home page and about page were the most effective places for me to get playful with the interactions. 
+				<br></br><br></br>
+				Working very closely with a developer, I learned how to use Github, the terminal, and some simple React in order to make my own edits and collaborate. Yes, I can bundle a js file! Learning about the backend gave me a lot of insight into designing for a dev team, designing for accessibility and optimizing my files for web.
+
+				</Body>
+			</ContentBlock>
+			<ContentBlock>
+			<Image src={MySiteHome} alt="Homepage of this website" size="full" />
+			<Image src={MySiteAbout} alt="About page of this website" size="full" />
 			</ContentBlock>
 		</PageContent>
 	</PageWrapper>
