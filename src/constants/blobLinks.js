@@ -1,4 +1,4 @@
-import ChangeThingsVideo from 'static/svg/home/ChangeThingsVideo.svg'
+// import ChangeThingsVideo from 'static/svg/home/ChangeThingsVideo.svg'
 import ChaseSapphire from 'static/svg/home/ChaseSapphire.svg'
 import FISMarketing from 'static/svg/home/FISMarketing.svg'
 import About from 'static/svg/home/About.svg'
@@ -63,14 +63,14 @@ const blobLinkData = {
 		altText: 'Chase Sapphire',
 		width: 100,
 	},
-	ChangeThingsVideo: {
-		src: ChangeThingsVideo,
-		svgFile: 'ChangeThingsVideo',
-		link: '/change-things',
-		altText: 'Change Things Video',
-		width: 50,
-		zIndex: 2,
-	},
+	// ChangeThingsVideo: {
+	// 	src: ChangeThingsVideo,
+	// 	svgFile: 'ChangeThingsVideo',
+	// 	link: '/change-things',
+	// 	altText: 'Change Things Video',
+	// 	width: 50,
+	// 	zIndex: 2,
+	// },
 	About: {
 		src: About,
 		svgFile: 'About',

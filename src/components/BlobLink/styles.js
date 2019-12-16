@@ -73,7 +73,7 @@ export default {
 			transform: 'translate(1vw, -26vw)',
 		},
 		About: {
-			transform: 'translate(-1vw, -27vw)',
+			transform: 'translate(10vw, -27vw)',
 		},
 	},
 }

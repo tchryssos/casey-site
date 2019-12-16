@@ -95,10 +95,10 @@ const App = ({ location, classes }) => {
 						path={blobLinkData.ChaseSapphire.link}
 						component={ChaseSapphire}
 					/>
-					<Route
+					{/* <Route
 						path={blobLinkData.ChangeThingsVideo.link}
 						component={ChangeThingsVideo}
-					/>
+					/> */}
 					<Route
 						path="/about"
 						component={About}
