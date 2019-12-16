@@ -48,7 +48,7 @@ const UIDesign = ({ classes }) => (
 			</ContentBlock>
 		</PageDescription>
 		<PageContent>
-		<ContentBlock>
+			<ContentBlock>
 				<Heading>Roar Bicycles</Heading>
 				<Spacer />
 				<Body>
@@ -58,20 +58,20 @@ const UIDesign = ({ classes }) => (
 				</Body>
 			</ContentBlock>
 			<ContentBlock>
-			<Image src={WireFrames} alt="Wire Frames" size="full" />
-			<VideoPlayer
-				src="https://player.vimeo.com/video/369424560?autoplay=1&loop=1"
-				title="Musical rug demo"
-			/>
-			<Image src={SiteStyles} alt="Logo Fonts and Colors for the site" size="full" />
+				<Image src={WireFrames} alt="Wire Frames" size="full" />
+				<VideoPlayer
+					src="https://player.vimeo.com/video/369424560?autoplay=1&loop=1"
+					title="Musical rug demo"
+				/>
+				<Image src={SiteStyles} alt="Logo Fonts and Colors for the site" size="full" />
 				<Image
 					src={HomeAboutPages}
 					alt="About and Home Pages"
 					size="full"
 				/>
-			<Image src={LogInSignUp} alt="Log In and Sign Up Screens" size="full" />
-			<Image src={Mobile} alt="Mobile Screens" size="full" />
-				</ContentBlock>
+				<Image src={LogInSignUp} alt="Log In and Sign Up Screens" size="full" />
+				<Image src={Mobile} alt="Mobile Screens" size="full" />
+			</ContentBlock>
 			<ContentBlock>
 				<Heading>Maynooth Furniture</Heading>
 				<Spacer />
@@ -81,10 +81,10 @@ const UIDesign = ({ classes }) => (
 				</Body>
 			</ContentBlock>
 			<ContentBlock>
-			<Image src={MHomePage} alt="Homepage on desktop and mobile" size="full" />
-			<Image src={MFilter} alt="Animation of user selection tool" size="full" />
-			<Image src={MStyles} alt="Style guide for the site" size="full" />
-			<Image src={MProduct} alt="Product page on desktop and mobile" size="full" />
+				<Image src={MHomePage} alt="Homepage on desktop and mobile" size="full" />
+				<Image src={MFilter} alt="Animation of user selection tool" size="full" />
+				<Image src={MStyles} alt="Style guide for the site" size="full" />
+				<Image src={MProduct} alt="Product page on desktop and mobile" size="full" />
 			</ContentBlock>
 			<ContentBlock>
 				<Heading>caseybradford.club</Heading>

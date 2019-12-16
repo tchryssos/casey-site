@@ -21,6 +21,7 @@ import IG5 from 'static/images/FISMarketing/ig-5.png'
 import IG6 from 'static/images/FISMarketing/ActuallyGetJobs.gif'
 import CyberGif from 'static/images/FISMarketing/CyberGif_Square.gif'
 import IG8 from 'static/images/FISMarketing/ig-8.png'
+import JobsReport from 'static/images/FISMarketing/93-finalweb.gif'
 
 const FlatironMarketing = () => (
 	<PageWrapper>
@@ -39,27 +40,44 @@ const FlatironMarketing = () => (
 			</ContentBlock>
 		</PageDescription>
 		<PageContent>
+			<ContentBlock>
+				<Heading>Out of Home Advertising</Heading>
+			</ContentBlock>
 			<Image src={LondonTube} alt="LondonTube Ad" size="full" />
 			<Image src={LinkNyc} alt="Nyc Link Ad" size="full" />
+			<ContentBlock>
+				<Heading>Brand Campaign Video</Heading>
+				<Spacer />
+				<Body>
+					Flatiron School worked with the agency, Humanaut, to create an updated brand video to be used across all channels. On paid social channels we received applications at a quarter of our average cost.
+				</Body>
+				<Spacer />
+				<Body>Role: Client-side project manager/producer</Body>
+				<Spacer />
+				<Body>Agency: Humanaut</Body>
+			</ContentBlock>
 			<VideoPlayer
-				src="https://player.vimeo.com/video/324643084"
-				title="Landing page demo"
-				aspectRatio="1:1"
+				src="https://player.vimeo.com/video/338254527"
+				title="Hero version 14"
 			/>
 			<VideoPlayer
-				src="https://player.vimeo.com/video/324643304"
-				title="Stop motion video"
+				src="https://player.vimeo.com/video/338254396"
+				title="Change Things 30 seconds"
 			/>
+			<ContentBlock>
+				<Heading>Social Advertising</Heading>
+				<Spacer />
+			</ContentBlock>
 			<ContentBlock>
 				<ItemGrid>
 					<Image src={IG2} alt="Students coding" />
 					<Image src={IG1} alt="JIntro to Front End Graphic" />
-					<Image src={IG3} alt="Laptop and plant" />
+					<Image src={JobsReport} alt="93% employment rate" />
 					<Image src={IG4} alt="Students coding in Dallas" />
-					</ItemGrid>
+				</ItemGrid>
 
-					<Image src={BackToSchool} alt="Parents go back to school too" size="full" />
-					<ItemGrid>
+				<Image src={BackToSchool} alt="Parents go back to school too" size="full" />
+				<ItemGrid>
 					<Image src={IG5} alt="Young woman coding" />
 					<Image src={CyberGif} alt="Learn Cybersecurity Analytics" />
 					<Image src={IG6} alt="Logos of employers" />
@@ -68,6 +86,10 @@ const FlatironMarketing = () => (
 						alt="Students comparing code in ad for '2020 skills'"
 					/>
 				</ItemGrid>
+				<VideoPlayer
+					src="https://player.vimeo.com/video/324643304"
+					title="Stop motion video"
+				/>
 			</ContentBlock>
 		</PageContent>
 	</PageWrapper>
