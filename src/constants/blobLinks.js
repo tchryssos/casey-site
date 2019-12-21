@@ -2,7 +2,7 @@
 import ChaseSapphire from 'static/svg/home/ChaseSapphire.svg'
 import FISMarketing from 'static/svg/home/FISMarketing.svg'
 import About from 'static/svg/home/About.svg'
-import HowToTampons from 'static/svg/home/HowToTampons.svg'
+import Portfolio from 'static/svg/home/Portfolio.svg'
 import MusicalRug from 'static/svg/home/MusicalRug.svg'
 import SeatGeekScholarship from 'static/svg/home/SeatGeekScholarship.svg'
 import TheUprisingCreative from 'static/svg/home/TheUprisingCreative.svg'
@@ -24,11 +24,11 @@ const blobLinkData = {
 		altText: 'UI Design',
 		width: 50,
 	},
-	HowToTampons: {
-		src: HowToTampons,
-		svgFile: 'HowToTampons',
-		link: '/tampons',
-		altText: 'How to put in a tampon',
+	Portfolio: {
+		src: Portfolio,
+		svgFile: 'Portfolio',
+		link: '/portfolio',
+		altText: 'Portfolio Design',
 		width: 40,
 		zIndex: 4,
 	},

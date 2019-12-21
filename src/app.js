@@ -12,7 +12,7 @@ import NavBar from 'components/NavBar'
 import Home from 'pages/Home'
 import FISMarketing from 'pages/FISMarketing'
 import UIDesign from 'pages/UIDesign'
-import HowToTampons from 'pages/HowToTampons'
+import Portfolio from 'pages/Portfolio'
 import MusicalRug from 'pages/MusicalRug'
 import TheUprisingCreative from 'pages/TheUprisingCreative'
 import SeatGeekScholarship from 'pages/SeatGeekScholarship'
@@ -76,8 +76,8 @@ const App = ({ location, classes }) => {
 						component={UIDesign}
 					/>
 					<Route
-						path={blobLinkData.HowToTampons.link}
-						component={HowToTampons}
+						path={blobLinkData.Portfolio.link}
+						component={Portfolio}
 					/>
 					<Route
 						path={blobLinkData.MusicalRug.link}
