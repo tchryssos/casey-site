@@ -10,6 +10,7 @@ import Body from 'components/Typography/Body'
 import Spacer from 'components/Spacer'
 import Image from 'components/Image'
 import VideoPlayer from 'components/VideoPlayer'
+import SubHeading from 'components/Typography/SubHeading'
 
 import MyProblem from 'static/images/Portfolio/problemGif-01.gif'
 import MariahBeforeAfter from 'static/images/Portfolio/BeforeAfter1.gif'
@@ -34,16 +35,18 @@ const Portfolio = ({ classes }) => (
 				<Heading>Caseybradford.club</Heading>
 				<Image src={MyProblem} alt="Problem statement" size="full" />
 				<Spacer />
+				<SubHeading>THE CHALLENGE</SubHeading>
 				<Body>
-					Challenge: To build my personal portfolio I was using a Squarespace template that was type heavy making it hard to navigate and rather uninspriring for hiring managers to land on. I even went to an interview where the recruiter told me they liked that my site was ugly on purpose.
+					To build my personal portfolio I was using a Squarespace template that was type heavy making it hard to navigate and rather uninspriring for hiring managers to land on. I even went to an interview where the recruiter told me they liked that my site was ugly on purpose.
 				</Body>
 				<Spacer />
 				<Body>
 					After hiring a team of designers myself, I was shocked by how many versions of the same template I was seeing and how hard it was for any individual to stand out, show personality, and present something mobile friendly.
 				</Body>
 				<Spacer />
+				<SubHeading>HYPOTHESIS</SubHeading>
 				<Body>
-					Hypothesis: If I could make my home page visually interesting with a flow that pulled in viewers and encouraged them to interact with the site, they would stay on my site longer. If I could make my about me section show more personality, viewers would be more likely to connect with me and invest in me as a candidate.
+					If I could make my home page visually interesting with a flow that pulled in viewers and encouraged them to interact with the site, they would stay on my site longer. If I could make my about me section show more personality, viewers would be more likely to connect with me and invest in me as a candidate.
 				</Body>
 				<VideoPlayer
 					src="https://player.vimeo.com/video/380927071?autoplay=1&loop=1"
