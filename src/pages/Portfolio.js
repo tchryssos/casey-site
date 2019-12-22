@@ -70,7 +70,7 @@ const Portfolio = ({ classes }) => (
 				</Body>
 				<VideoPlayer
 					src="https://player.vimeo.com/video/380932381?autoplay=1&loop=1"
-					title="Home Me Page Demo"
+					title="Home Page Demo"
 				/>
 				<VideoPlayer
 					src="https://player.vimeo.com/video/380932474?autoplay=1&loop=1"
