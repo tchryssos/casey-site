@@ -33,6 +33,10 @@ const Portfolio = ({ classes }) => (
 		<PageContent>
 			<ContentBlock>
 				<Heading>Caseybradford.club</Heading>
+				<VideoPlayer
+					src="https://player.vimeo.com/video/380927068?autoplay=1&loop=1"
+					title="About Me Page Demo"
+				/>
 				<Image src={MyProblem} alt="Problem statement" size="full" />
 				<Spacer />
 				<SubHeading>THE CHALLENGE</SubHeading>
@@ -51,10 +55,6 @@ const Portfolio = ({ classes }) => (
 				<VideoPlayer
 					src="https://player.vimeo.com/video/380927071?autoplay=1&loop=1"
 					title="Home Me Page Demo"
-				/>
-				<VideoPlayer
-					src="https://player.vimeo.com/video/380927068?autoplay=1&loop=1"
-					title="About Me Page Demo"
 				/>
 			</ContentBlock>
 			<ContentBlock>
