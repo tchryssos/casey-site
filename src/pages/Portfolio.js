@@ -60,6 +60,9 @@ const Portfolio = ({ classes }) => (
 			<ContentBlock>
 				<Heading>Mariah Adcox Portfolio</Heading>
 				<Image src={MariahBeforeAfter} alt="Before and After of the website" size="full" />
+				<Body>
+					Check teh site out <a href="http://mariah-portfolio.herokuapp.com/">here</a>.
+				</Body>
 				<Spacer />
 				<Body>
 					After learning enough React to make updates to my personal website, I wanted to code a site from scratch. With Mariah's site, I tried to apply a visual system that showed more personality than the black and white Squarespace.
