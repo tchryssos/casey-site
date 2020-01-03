@@ -36,8 +36,8 @@ export default {
 	ChaseSapphire: {
 		transform: 'translateY(-52vw)',
 	},
-	ChangeThingsVideo: {
-		transform: 'translate(3vw, -73vw)',
+	FISWeb: {
+		transform: 'translate(3vw, -65vw)',
 	},
 	About: {
 		transform: 'translate(0vw, -55vw)',
@@ -69,11 +69,11 @@ export default {
 		ChaseSapphire: {
 			transform: 'translateY(-23vw)',
 		},
-		ChangeThingsVideo: {
+		FISWeb: {
 			transform: 'translate(1vw, -26vw)',
 		},
 		About: {
-			transform: 'translate(10vw, -27vw)',
+			transform: 'translate(1vw, -24vw)',
 		},
 	},
 }

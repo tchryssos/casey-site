@@ -17,7 +17,7 @@ import MusicalRug from 'pages/MusicalRug'
 import TheUprisingCreative from 'pages/TheUprisingCreative'
 import SeatGeekScholarship from 'pages/SeatGeekScholarship'
 import ChaseSapphire from 'pages/ChaseSapphire'
-import ChangeThingsVideo from 'pages/ChangeThingsVideo'
+import FISWeb from 'pages/FISWeb'
 import About from 'pages/About'
 
 import cursor from 'static/images/Misc/cursor.png'
@@ -95,10 +95,10 @@ const App = ({ location, classes }) => {
 						path={blobLinkData.ChaseSapphire.link}
 						component={ChaseSapphire}
 					/>
-					{/* <Route
-						path={blobLinkData.ChangeThingsVideo.link}
-						component={ChangeThingsVideo}
-					/> */}
+					<Route
+						path={blobLinkData.FISWeb.link}
+						component={FISWeb}
+					/>
 					<Route
 						path="/about"
 						component={About}

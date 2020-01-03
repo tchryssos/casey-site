@@ -7,6 +7,7 @@ import MusicalRug from 'static/svg/home/MusicalRug.svg'
 import SeatGeekScholarship from 'static/svg/home/SeatGeekScholarship.svg'
 import TheUprisingCreative from 'static/svg/home/TheUprisingCreative.svg'
 import UIDesign from 'static/svg/home/UIDesign.svg'
+import FISWeb from 'static/svg/home/FISWeb.svg'
 
 const blobLinkData = {
 	FISMarketing: {
@@ -63,14 +64,14 @@ const blobLinkData = {
 		altText: 'Chase Sapphire',
 		width: 100,
 	},
-	// ChangeThingsVideo: {
-	// 	src: ChangeThingsVideo,
-	// 	svgFile: 'ChangeThingsVideo',
-	// 	link: '/change-things',
-	// 	altText: 'Change Things Video',
-	// 	width: 50,
-	// 	zIndex: 2,
-	// },
+	FISWeb: {
+		src: FISWeb,
+		svgFile: 'FISWeb',
+		link: '/FIS-web',
+		altText: 'Flatiron School Web Design',
+		width: 50,
+		zIndex: 2,
+	},
 	About: {
 		src: About,
 		svgFile: 'About',
