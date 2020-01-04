@@ -17,6 +17,7 @@ const blobLinkData = {
 		altText: 'Flatiron School Marketing',
 		width: 50, // Width in percentage
 		zIndex: 3,
+		category: 'graphic',
 	},
 	UIDesign: {
 		src: UIDesign,
@@ -24,6 +25,7 @@ const blobLinkData = {
 		link: '/ui-design',
 		altText: 'UI Design',
 		width: 50,
+		category: 'product',
 	},
 	Portfolio: {
 		src: Portfolio,
@@ -32,6 +34,7 @@ const blobLinkData = {
 		altText: 'Portfolio Design',
 		width: 40,
 		zIndex: 4,
+		category: 'product',
 	},
 	MusicalRug: {
 		src: MusicalRug,
@@ -40,6 +43,7 @@ const blobLinkData = {
 		altText: 'Musical Rug',
 		width: 40,
 		zIndex: 2,
+		category: 'product',
 	},
 	TheUprisingCreative: {
 		src: TheUprisingCreative,
@@ -48,6 +52,7 @@ const blobLinkData = {
 		altText: 'Uprising Creative',
 		width: 50,
 		zIndex: 3,
+		category: 'graphic',
 	},
 	SeatGeekScholarship: {
 		src: SeatGeekScholarship,
@@ -56,6 +61,7 @@ const blobLinkData = {
 		altText: 'SeatGeek Scholarship',
 		width: 100,
 		zIndex: 2,
+		category: 'graphic',
 	},
 	ChaseSapphire: {
 		src: ChaseSapphire,
@@ -63,6 +69,7 @@ const blobLinkData = {
 		link: '/chase-sapphire',
 		altText: 'Chase Sapphire',
 		width: 100,
+		category: 'graphic',
 	},
 	FISWeb: {
 		src: FISWeb,
@@ -71,6 +78,7 @@ const blobLinkData = {
 		altText: 'Flatiron School Web Design',
 		width: 50,
 		zIndex: 2,
+		category: 'product',
 	},
 	About: {
 		src: About,
@@ -78,7 +86,7 @@ const blobLinkData = {
 		link: '/about',
 		altText: 'About Page',
 		width: 50,
-	}
+	},
 }
 
 export default blobLinkData
