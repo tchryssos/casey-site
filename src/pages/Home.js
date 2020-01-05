@@ -33,8 +33,15 @@ const styles = {
 		marginLeft: 10,
 		zIndex: 2000,
 		cursor: 'pointer',
+		fontSize: 18,
+		appearance: 'none',
+		border: 'none',
 		'&:hover': {
-			color: 'red',
+			textDecoration: 'underline',
+		},
+		'&:focus': {
+			outline: 'none',
+			textDecoration: 'underline',
 		},
 	},
 	[MD_MIN_STRING]: {
@@ -45,22 +52,25 @@ const styles = {
 }
 
 const Home = ({ classes }) => {
-	// const [category, setCategory] = useState(false)
-	// const setCategoryGraphic = () => setCategory('graphic')
-	// const setCategoryProduct = () => setCategory('product')
+	const [filter, setFilter] = useState(null)
+	const hideGraphic = () => setFilter('graphic')
+	const hideProduct = () => setFilter('product')
+	const hideNone = () => setFilter(null)
 
 	const blobLinks = Object.keys(blobLinkData).map((key) => {
 		const props = blobLinkData[key]
 		return (
-			<BlobLink {...props} key={key} />
+			<BlobLink {...props} key={key} filter={filter} />
 		)
 	})
 	return (
 		<div className={classes.homeContainer}>
 			<div className={classes.blobNav}>
-				{/* <button className={classes.filter}>Graphic Design</button>
+				<button onClick={hideNone} className={classes.filter}>All</button>
 				<p> | </p>
-				<button className={classes.filter}>Product Design</button> */}
+				<button onClick={hideProduct} className={classes.filter}>Graphic Design</button>
+				<p> | </p>
+				<button onClick={hideGraphic} className={classes.filter}>Product Design</button>
 			</div>
 			<div className={classes.homeWrapper}>
 				{blobLinks}

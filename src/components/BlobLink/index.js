@@ -6,7 +6,7 @@ import { NavLink } from 'react-router-dom'
 import styles from './styles'
 
 const BlobLink = ({
-	src, svgFile, link, altText, classes, category,
+	src, svgFile, link, altText, classes, category, filter,
 }) => (
 	<div
 		category={category}
@@ -14,7 +14,7 @@ const BlobLink = ({
 			classNames(
 				classes.linkWrapper,
 				classes[svgFile],
-				// { [classes.hideProduct]: category === 'graphic' },
+				{ [classes.filtered]: filter === category },
 			)
 		}
 	>
