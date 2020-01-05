@@ -6,13 +6,15 @@ import { NavLink } from 'react-router-dom'
 import styles from './styles'
 
 const BlobLink = ({
-	src, svgFile, link, altText, classes,
+	src, svgFile, link, altText, classes, category,
 }) => (
 	<div
+		category={category}
 		className={
 			classNames(
 				classes.linkWrapper,
 				classes[svgFile],
+				// { [classes.hideProduct]: category === 'graphic' },
 			)
 		}
 	>
@@ -32,6 +34,7 @@ BlobLink.propTypes = {
 	svgFile: PropTypes.string,
 	link: PropTypes.string,
 	altText: PropTypes.string,
+	category: PropTypes.string,
 }
 
 export default injectSheet(styles)(BlobLink)

@@ -31,6 +31,8 @@ const styles = {
 	filter: {
 		marginRight: 10,
 		marginLeft: 10,
+		zIndex: 2000,
+		cursor: 'pointer',
 		'&:hover': {
 			color: 'red',
 		},
@@ -46,7 +48,6 @@ const Home = ({ classes }) => {
 	// const [category, setCategory] = useState(false)
 	// const setCategoryGraphic = () => setCategory('graphic')
 	// const setCategoryProduct = () => setCategory('product')
-	// const categoryFunction = category === gray ? setColorWhite : setColorGray
 
 	const blobLinks = Object.keys(blobLinkData).map((key) => {
 		const props = blobLinkData[key]
@@ -57,9 +58,9 @@ const Home = ({ classes }) => {
 	return (
 		<div className={classes.homeContainer}>
 			<div className={classes.blobNav}>
-				<p className={classes.filter}>Graphic Design</p>
+				{/* <button className={classes.filter}>Graphic Design</button>
 				<p> | </p>
-				<p className={classes.filter}>Product Design</p>
+				<button className={classes.filter}>Product Design</button> */}
 			</div>
 			<div className={classes.homeWrapper}>
 				{blobLinks}

@@ -14,6 +14,9 @@ export default {
 			transform: 'translate(16px, -16px)',
 		},
 	},
+	hideProduct: {
+		opacity: 0.5,
+	},
 	// Custom CSS for blob placement
 	FISMarketing: {
 		transform: 'translateX(13vw)',
