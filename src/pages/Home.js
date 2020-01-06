@@ -36,6 +36,8 @@ const styles = {
 		fontSize: 18,
 		appearance: 'none',
 		border: 'none',
+		paddingTop: 0,
+		marginTop: 0,
 		'&:hover': {
 			textDecoration: 'underline',
 		},
@@ -43,6 +45,9 @@ const styles = {
 			outline: 'none',
 			textDecoration: 'underline',
 		},
+	},
+	lineyboy: {
+		fontSize: 18,
 	},
 	[MD_MIN_STRING]: {
 		homeWrapper: {
@@ -67,9 +72,9 @@ const Home = ({ classes }) => {
 		<div className={classes.homeContainer}>
 			<div className={classes.blobNav}>
 				<button onClick={hideNone} className={classes.filter}>All</button>
-				<p> | </p>
+				<p className={classes.lineyboy}> | </p>
 				<button onClick={hideProduct} className={classes.filter}>Graphic Design</button>
-				<p> | </p>
+				<p className={classes.lineyboy}> | </p>
 				<button onClick={hideGraphic} className={classes.filter}>Product Design</button>
 			</div>
 			<div className={classes.homeWrapper}>
