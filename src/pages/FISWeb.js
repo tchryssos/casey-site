@@ -25,21 +25,22 @@ const FISWeb = ({ classes }) => (
 			<ContentBlock>
 				<Heading>Flatiron School Website Design</Heading>
 				<Spacer />
-				<Body>
-					Coming Soon!
-				</Body>
 			</ContentBlock>
 		</PageDescription>
 		<PageContent>
 			<ContentBlock>
 				<Heading>Hero Design Updates</Heading>
 				<Spacer />
-				<SubHeading>BEFORE</SubHeading>
+				<SubHeading>CURRENT</SubHeading>
 				<Spacer />
-				<Body>The hero is the first thing people see when they come to our site. It needs to pull them in and inspire them to take actions. Our current hero is very dark. The images of lively students are covered up by a dark overlay and more text on top of that. We think that if we can brighten up our hero section and separate the text from the images, we could be more creative with our visuals and more inviting to prospective students. </Body>
+				<Body>
+					The hero is the first thing people see when they come to our site. It needs to pull them in and inspire them to take actions. Our current hero is very dark. The images of lively students are covered up by a dark overlay and more text on top of that. We think that if we can brighten up our hero section and separate the text from the images, we could be more creative with our visuals and more inviting to prospective students. 
+				</Body>
 				<Image size="full" src={HeroBefore} />
 				<Spacer />
 				<SubHeading>UPDATED</SubHeading>
+				<Spacer />
+				<Body>Here we brightened up our hero section and separated the text from the images to allow us to use both more dynamically.</Body>
 				<Image size="full" src={HeroAfter} />
 				<Image size="full" src={HeroAfter2} />
 			</ContentBlock>
