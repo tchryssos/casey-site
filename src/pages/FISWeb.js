@@ -8,6 +8,13 @@ import ContentBlock from 'components/ContentBlock'
 import Heading from 'components/Typography/Heading'
 import Body from 'components/Typography/Body'
 import Spacer from 'components/Spacer'
+import Image from 'components/Image'
+import SubHeading from 'components/Typography/SubHeading'
+
+import HeroBefore from 'static/images/FISWeb/FISWebHero-01.png'
+import HeroAfter from 'static/images/FISWeb/FISWebHero-02.png'
+import HeroAfter2 from 'static/images/FISWeb/FISWebHero-03.png'
+
 
 const styles = {
 }
@@ -25,7 +32,16 @@ const FISWeb = ({ classes }) => (
 		</PageDescription>
 		<PageContent>
 			<ContentBlock>
-				<Heading>Coming Soon!</Heading>
+				<Heading>Hero Design Updates</Heading>
+				<Spacer />
+				<SubHeading>BEFORE</SubHeading>
+				<Spacer />
+				<Body>The hero is the first thing people see when they come to our site. It needs to pull them in and inspire them to take actions. Our current hero is very dark. The images of lively students are covered up by a dark overlay and more text on top of that. We think that if we can brighten up our hero section and separate the text from the images, we could be more creative with our visuals and more inviting to prospective students. </Body>
+				<Image size="full" src={HeroBefore} />
+				<Spacer />
+				<SubHeading>UPDATED</SubHeading>
+				<Image size="full" src={HeroAfter} />
+				<Image size="full" src={HeroAfter2} />
 			</ContentBlock>
 		</PageContent>
 	</PageWrapper>
