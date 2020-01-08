@@ -40,7 +40,7 @@ const FISWeb = ({ classes }) => (
 				<Spacer />
 				<SubHeading>UPDATED</SubHeading>
 				<Spacer />
-				<Body>Here we brightened up our hero section and separated the text from the images to allow us to use both more dynamically.</Body>
+				<Body>These updates have not yet been enacted, but we would expect them to increase engagement with our site and decrease bounce rate.</Body>
 				<Image size="full" src={HeroAfter} />
 				<Image size="full" src={HeroAfter2} />
 			</ContentBlock>
