@@ -6,6 +6,11 @@ import { MD_MIN_STRING } from 'constants/styles/breakpoints'
 const styles = {
 	contentBlock: {
 		margin: '16px',
+		[MD_MIN_STRING]: {
+			contentBlock: {
+				margin: '16px 0',
+			},
+		},
 	},
 	[MD_MIN_STRING]: {
 		contentBlock: {

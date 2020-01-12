@@ -10,6 +10,11 @@ const styles = {
 	descriptionSpacer: {
 		display: 'none',
 	},
+	padding: {
+		[MD_MIN_STRING]: {
+			padding: '0 16px',
+		},
+	},
 	[MD_MIN_STRING]: {
 		pageDescriptionWrapper: {
 			width: `${fixedColumnWidthPerc}%`,
@@ -18,9 +23,9 @@ const styles = {
 		descriptionSpacer: {
 			display: 'block',
 		},
-		padding: {
-			padding: '0 16px',
-		},
+		// padding: {
+		// 	padding: '0 16px',
+		// },
 	},
 }
 
