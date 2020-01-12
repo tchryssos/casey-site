@@ -1,5 +1,5 @@
 import React from 'react'
-import classNames from 'classnames'
+import clsx from 'clsx'
 import PropTypes from 'prop-types'
 import injectSheet from 'react-jss'
 
@@ -13,7 +13,7 @@ const styles = {
 }
 
 const ItemGrid = ({ children, className, classes }) => (
-	<div className={classNames(classes.itemGridWrapper, className)}>
+	<div className={clsx(classes.itemGridWrapper, className)}>
 		{children}
 	</div>
 )

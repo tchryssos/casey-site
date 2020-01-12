@@ -1,5 +1,5 @@
 import React from 'react'
-import classNames from 'classnames'
+import clsx from 'clsx'
 import injectSheet from 'react-jss'
 import { NavLink } from 'react-router-dom'
 import MenuContext from 'contexts/menu'
@@ -16,7 +16,7 @@ const NavBar = ({ classes }) => (
 			<>
 				<div
 					className={
-						classNames(
+						clsx(
 							classes.menu,
 							isMenuOpen ? classes.menuVisible : '',
 						)

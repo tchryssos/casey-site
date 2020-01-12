@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { Route, Switch, withRouter, BrowserRouter } from 'react-router-dom'
 import { render } from 'react-dom'
 import { createUseStyles } from 'react-jss'
-import classNames from 'classnames'
+import clsx from 'clsx'
 
 import blobLinkData from 'constants/blobLinks'
 import { MD_MIN_VALUE, MD_MIN_STRING } from 'constants/styles/breakpoints'
@@ -102,7 +102,7 @@ const App = ({ location, classes }) => {
 				// https://stackoverflow.com/questions/24077725/mobile-safari-sometimes-does-not-trigger-the-click-event
 				onClick={void 0}
 				className={
-					classNames(
+					clsx(
 						classes.app,
 						isMenuOpen ? classes.fixedBody : '',
 					)

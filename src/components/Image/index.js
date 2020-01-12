@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import classNames from 'classnames'
+import clsx from 'clsx'
 import injectSheet from 'react-jss'
 
 const styles = {
@@ -30,7 +30,7 @@ const styles = {
 const Image = ({ src, alt, className, imageClassName, classes }) => (
 	<div
 		className={
-			classNames(
+			clsx(
 				classes.imageWrapper,
 				className,
 			)
@@ -40,7 +40,7 @@ const Image = ({ src, alt, className, imageClassName, classes }) => (
 			src={src}
 			alt={alt}
 			className={
-				classNames(
+				clsx(
 					classes.imageImg,
 					imageClassName,
 				)

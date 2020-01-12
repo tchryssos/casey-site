@@ -1,5 +1,5 @@
 import React from 'react'
-import classNames from 'classnames'
+import clsx from 'clsx'
 import PropTypes from 'prop-types'
 import injectSheet from 'react-jss'
 import { NavLink } from 'react-router-dom'
@@ -11,7 +11,7 @@ const BlobLink = ({
 	<div
 		category={category}
 		className={
-			classNames(
+			clsx(
 				classes.linkWrapper,
 				classes[svgFile],
 				{ [classes.filtered]: filter === category },

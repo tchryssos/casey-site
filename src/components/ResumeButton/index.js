@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import classNames from 'classnames'
+import clsx from 'clsx'
 import injectSheet from 'react-jss'
 
 import Image from 'components/Image'
@@ -54,7 +54,7 @@ const SvgComponent = ({ isText, isRed, isHovered, classes }) => (
 		src={srcSwitch(isText, isRed)}
 		alt={isText ? 'Download resume Text' : 'Spiney spinner'}
 		imageClassName={
-			classNames(
+			clsx(
 				classes.resumeSvg,
 				isText ? '' : classes.spinAnimation,
 				(
