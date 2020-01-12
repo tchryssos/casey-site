@@ -79,7 +79,7 @@ const useStyles = createUseStyles(() => {
 	}
 })
 
-const App = ({ location, classes }) => {
+const App = ({ location }) => {
 	const classes = useStyles()
 	const [isMenuOpen, setIsMenuOpen] = useState(false)
 	// On location change, scroll to page top
@@ -153,7 +153,7 @@ const App = ({ location, classes }) => {
 	)
 }
 
-const RouterApp = injectSheet(styles)(withRouter(props => <App {...props} />))
+const RouterApp = withRouter(props => <App {...props} />)
 
 render(
 	<BrowserRouter>
