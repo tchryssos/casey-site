@@ -1,7 +1,8 @@
+import { createUseStyles } from 'react-jss'
 import { MD_MIN_STRING } from 'constants/styles/breakpoints'
 import { navContentHeight, navPaddingHeight } from 'components/NavBar/styles'
 
-export default {
+export default createUseStyles({
 	linkWrapper: {
 		zIndex: ({ zIndex }) => zIndex || 1,
 		width: ({ width }) => `${width}%`,
@@ -79,4 +80,4 @@ export default {
 			transform: 'translate(1vw, -24vw)',
 		},
 	},
-}
+})
