@@ -44,13 +44,11 @@ const useStyles = createUseStyles(() => {
 			body: {
 				...baseStyle,
 				position: 'relative',
+				fontFamily: '"Anonymous Pro", monospace',
 			},
 			'#app': {
 				...baseStyle,
 				fontSize: 14,
-			},
-			div: {
-				boxSizing: 'border-box',
 			},
 			p: marPadZero,
 			h1: {
