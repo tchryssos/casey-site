@@ -22,11 +22,8 @@
 		"no-mixed-spaces-and-tabs": "error",
 		"indent": ["error", "tab", { "SwitchCase": 1 }],
 		"semi": [2, "never"],
-		"no-return-assign": 0,
 
 		"import/no-named-as-default": 0,
-		"import/no-unresolved": [2, { "ignore": ["constants", "components"] } ],
-		"import/no-extraneous-dependencies": 0,
 		"import/extensions": ["never"],
 		"import/prefer-default-export": 0,
 
