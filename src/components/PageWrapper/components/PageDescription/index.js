@@ -1,47 +1,41 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import injectSheet from 'react-jss'
+import { createUseStyles } from 'react-jss'
 import {
 	MD_MIN_STRING, fixedColumnWidthPerc,
 } from 'constants/styles/breakpoints'
 import Spacer from 'components/Spacer'
 
-const styles = {
+const useStyles = createUseStyles({
 	descriptionSpacer: {
 		display: 'none',
+		[MD_MIN_STRING]: {
+			display: 'block',
+		},
 	},
 	padding: {
 		[MD_MIN_STRING]: {
 			padding: '0 16px',
 		},
 	},
-	[MD_MIN_STRING]: {
-		pageDescriptionWrapper: {
+	pageDescriptionWrapper: {
+		[MD_MIN_STRING]: {
 			width: `${fixedColumnWidthPerc}%`,
 			position: 'fixed',
 		},
-		descriptionSpacer: {
-			display: 'block',
-		},
-		// padding: {
-		// 	padding: '0 16px',
-		// },
 	},
-}
+})
 
-const PageDescription = ({ children, classes }) => (
-	<div className={classes.pageDescriptionWrapper}>
-		<div className={classes.descriptionSpacer}>
-			<Spacer height={4} />
+export default ({ children }) => {
+	const classes = useStyles()
+	return (
+		<div className={classes.pageDescriptionWrapper}>
+			<div className={classes.descriptionSpacer}>
+				<Spacer height={4} />
+			</div>
+			<div className={classes.padding}>
+				{children}
+			</div>
 		</div>
-		<div className={classes.padding}>
-			{children}
-		</div>
-	</div>
-)
-
-PageDescription.propTypes = {
-	children: PropTypes.node,
+	)
 }
-
-export default injectSheet(styles)(PageDescription)
