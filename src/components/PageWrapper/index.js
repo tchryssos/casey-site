@@ -1,11 +1,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import injectSheet from 'react-jss'
+import { createUseStyles } from 'react-jss'
 import {
 	MD_MIN_STRING, pageContentTotalWidthPerc,
 } from 'constants/styles/breakpoints'
 
-const styles = {
+const useStyles = createUseStyles({
 	pageWrapper: {
 		display: 'flex',
 		flexDirection: 'column',
@@ -20,16 +20,13 @@ const styles = {
 			paddingBottom: 0,
 		},
 	},
+})
+
+const PageWrapper = ({ children }) => {
+	const classes = useStyles()
+	return (
+		<div className={classes.pageWrapper}>
+			{children}
+		</div>
+	)
 }
-
-const PageWrapper = ({ children, classes }) => (
-	<div className={classes.pageWrapper}>
-		{children}
-	</div>
-)
-
-PageWrapper.propTypes = {
-	children: PropTypes.node,
-}
-
-export default injectSheet(styles)(PageWrapper)

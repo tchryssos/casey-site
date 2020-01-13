@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import clsx from 'clsx'
-import injectSheet from 'react-jss'
+import { createUseStyles } from 'react-jss'
 
 import Image from 'components/Image'
 
@@ -12,7 +12,7 @@ import resumePdf from 'static/files/resume.pdf'
 
 const svgHeight = '120px'
 const svgWidth = '160px'
-const styles = {
+const useStyles = createUseStyles({
 	'@keyframes spin': {
 		from: { transform: 'rotate(0)' },
 		to: { transform: 'rotate(90deg)' },
@@ -39,7 +39,7 @@ const styles = {
 	spinAnimation: {
 		animation: 'spin infinite 1s linear',
 	},
-}
+})
 
 const srcSwitch = (isText, isRed) => {
 	if (isText) {
@@ -76,8 +76,9 @@ const renderSvgs = (classes, isHovered) => (
 	</>
 )
 
-const ResumeButton = ({ classes }) => {
+export default () => {
 	const [isHovered, setIsHovered] = useState(false)
+	const classes = useStyles()
 
 	return (
 		<div
@@ -97,5 +98,3 @@ const ResumeButton = ({ classes }) => {
 		</div>
 	)
 }
-
-export default injectSheet(styles)(ResumeButton)

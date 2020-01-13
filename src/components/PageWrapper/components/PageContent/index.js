@@ -1,11 +1,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import injectSheet from 'react-jss'
+import { createUseStyles } from 'react-jss'
 import {
 	MD_MIN_STRING, pageContentWidthPerc, pageDescriptionWidthPerc,
 } from 'constants/styles/breakpoints'
 
-const styles = {
+const useStyles = createUseStyles({
 	descriptionSpacer: {
 		display: 'none',
 		width: `${pageDescriptionWidthPerc}%`,
@@ -25,19 +25,16 @@ const styles = {
 			},
 		},
 	},
+})
+
+const PageContent = ({ children }) => {
+	const classes = useStyles()
+	return (
+		<>
+			<div className={classes.descriptionSpacer} />
+			<div className={classes.pageContentWrapper}>
+				{children}
+			</div>
+		</>
+	)
 }
-
-const PageContent = ({ children, classes }) => (
-	<>
-		<div className={classes.descriptionSpacer} />
-		<div className={classes.pageContentWrapper}>
-			{children}
-		</div>
-	</>
-)
-
-PageContent.propTypes = {
-	children: PropTypes.node,
-}
-
-export default injectSheet(styles)(PageContent)
