@@ -22,59 +22,58 @@ import About from 'pages/About'
 
 import cursor from 'static/images/Misc/cursor.png'
 
+const marPadZero = {
+	margin: 0,
+	padding: 0,
+}
+const baseStyle = {
+	height: '100%',
+	width: '100%',
+	...marPadZero,
+}
 
-const useStyles = createUseStyles(() => {
-	const marPadZero = {
-		margin: 0,
-		padding: 0,
-	}
-	const baseStyle = {
-		height: '100%',
-		width: '100%',
-		...marPadZero,
-	}
-
-	return {
-		// Start - Base Styles - Start
-		'@import': [
-			"url('https://fonts.googleapis.com/css?family=Anonymous+Pro&display=swap')",
-		],
-		'@global': {
-			html: baseStyle,
-			body: {
-				...baseStyle,
-				position: 'relative',
-				fontFamily: '"Anonymous Pro", monospace',
-			},
-			'#app': {
-				...baseStyle,
-				fontSize: 14,
-			},
-			p: marPadZero,
-			h1: {
-				...marPadZero,
-				fontSize: 36,
-			},
-			h2: marPadZero,
-			h3: marPadZero,
-			iframe: {
-				width: '100%',
-			},
+const useStyles = createUseStyles({
+	// Start - Base Styles - Start
+	'@import': [
+		"url('https://fonts.googleapis.com/css?family=Anonymous+Pro&display=swap')",
+	],
+	'@global': {
+		'*': {
+			fontFamily: '"Anonymous Pro", monospace',
 		},
-		// End - Base Styles - End
-
-		app: {
+		html: baseStyle,
+		body: {
+			...baseStyle,
 			position: 'relative',
+		},
+		'#app': {
+			...baseStyle,
+			fontSize: 14,
+		},
+		p: marPadZero,
+		h1: {
+			...marPadZero,
+			fontSize: 36,
+		},
+		h2: marPadZero,
+		h3: marPadZero,
+		iframe: {
 			width: '100%',
-			height: '100%',
-			cursor: 'auto',
 		},
-		[MD_MIN_STRING]: {
-			app: {
-				cursor: `url(${cursor}),auto`,
-			},
+	},
+	// End - Base Styles - End
+
+	app: {
+		position: 'relative',
+		width: '100%',
+		height: '100%',
+		cursor: 'auto',
+	},
+	[MD_MIN_STRING]: {
+		app: {
+			cursor: `url(${cursor}),auto`,
 		},
-	}
+	},
 })
 
 const App = ({ location }) => {
