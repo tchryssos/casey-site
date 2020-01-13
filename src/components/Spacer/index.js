@@ -1,24 +1,14 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import injectSheet from 'react-jss'
+import { createUseStyles } from 'react-jss'
 
-const styles = {
+const useTyles = createUseStyles(({ height }) => ({
 	spacer: {
-		height: props => `${props.height * 16}px`,
+		height: height * 16,
 	},
+}))
+
+const Spacer = ({ height }) => {
+	const classes = useStyles({ height })
+	return <div className={classes.spacer} />
 }
-
-const Spacer = ({ classes }) => (
-	<div className={classes.spacer} />
-)
-
-Spacer.propTypes = {
-	// eslint-disable-next-line react/no-unused-prop-types
-	height: PropTypes.oneOf([1, 2, 3, 4]),
-}
-
-Spacer.defaultProps = {
-	height: 1,
-}
-
-export default injectSheet(styles)(Spacer)
