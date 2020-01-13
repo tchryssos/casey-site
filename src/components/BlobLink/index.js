@@ -7,7 +7,7 @@ export default ({
 	src, svgFile, link, altText, category, filter,
 	zIndex, width,
 }) => {
-	const classes = useStyles({ zIndex, width})
+	const classes = useStyles({ zIndex, width })
 	return (
 		<div
 			category={category}

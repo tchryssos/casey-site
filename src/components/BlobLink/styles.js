@@ -2,12 +2,12 @@ import { createUseStyles } from 'react-jss'
 import { MD_MIN_STRING } from 'constants/styles/breakpoints'
 import { navContentHeight, navPaddingHeight } from 'components/NavBar/styles'
 
-export default createUseStyles({
+export default createUseStyles(({ zIndex, width }) => ({
 	linkWrapper: {
-		zIndex: ({ zIndex }) => zIndex || 1,
-		width: ({ width }) => `${width}%`,
+		zIndex: zIndex || 1,
+		width: `${width}%`,
 		'&:last-of-type': {
-			paddingBottom: `${navContentHeight + (navPaddingHeight * 2) + 16}px`,
+			paddingBottom: navContentHeight + (navPaddingHeight * 2) + 16,
 		},
 	},
 	animationWrapper: {
@@ -80,4 +80,4 @@ export default createUseStyles({
 			transform: 'translate(1vw, -24vw)',
 		},
 	},
-})
+}))

@@ -43,7 +43,7 @@ const useStyles = createUseStyles({
 })
 
 export default ({
-	src, alt, className, imageClassName, size="half",
+	src, alt, className, imageClassName, size = 'half',
 	scrollable, bordered,
 }) => {
 	const classes = useStyles()

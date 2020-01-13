@@ -48,7 +48,9 @@ const srcSwitch = (isText, isRed) => {
 	return isRed ? resumeCircleRed : resumeCircle
 }
 
-const SvgComponent = ({ isText, isRed, isHovered, classes }) => (
+const SvgComponent = ({
+	isText, isRed, isHovered, classes,
+}) => (
 	<Image
 		className={classes.inline}
 		src={srcSwitch(isText, isRed)}
@@ -56,12 +58,8 @@ const SvgComponent = ({ isText, isRed, isHovered, classes }) => (
 		imageClassName={
 			clsx(
 				classes.resumeSvg,
-				isText ? '' : classes.spinAnimation,
-				(
-					(isRed && !isHovered)
-					|| (!isRed && isHovered) ?
-						classes.hidden : ''
-				),
+				{ [classes.spinAnimation]: !isText },
+				{ [classes.hidden]: (isRed && !isHovered) || (!isRed && isHovered) },
 			)
 		}
 	/>

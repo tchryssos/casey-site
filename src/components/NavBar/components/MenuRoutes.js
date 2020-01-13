@@ -1,11 +1,11 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
-import injectSheet from 'react-jss'
+import { createUseStyles } from 'react-jss'
 import { MD_MIN_STRING } from 'constants/styles/breakpoints'
 import { black } from 'constants/styles/colors'
 import blobLinkData from 'constants/blobLinks'
 
-const styles = {
+const useStyles = createUseStyles({
 	menuLinkWrapper: {
 		display: 'flex',
 		flexDirection: 'column',
@@ -23,7 +23,7 @@ const styles = {
 			marginTop: '64px',
 		},
 	},
-}
+})
 
 const MenuLink = ({ className, link, text }) => (
 	<NavLink
@@ -35,7 +35,7 @@ const MenuLink = ({ className, link, text }) => (
 	</NavLink>
 )
 
-const renderMenuLinks = classes => (
+const renderMenuLinks = (classes) => (
 	Object.keys(blobLinkData).map((key) => {
 		const { link, altText } = blobLinkData[key]
 		return (
@@ -48,15 +48,12 @@ const renderMenuLinks = classes => (
 	})
 )
 
-const MenuRoutes = ({ classes }) => (
-	<div className={classes.menuLinkWrapper}>
-		{renderMenuLinks(classes)}
-		{/* <MenuLink
-			className={classes.menuLink}
-			link="/about"
-			text="About"
-		/> */}
-	</div>
-)
+export default () => {
+	const classes = useStyles()
+	return (
+		<div className={classes.menuLinkWrapper}>
+			{renderMenuLinks(classes)}
+		</div>
+	)
+}
 
-export default injectSheet(styles)(MenuRoutes)

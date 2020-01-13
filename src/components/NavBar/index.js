@@ -1,6 +1,5 @@
 import React from 'react'
 import clsx from 'clsx'
-import injectSheet from 'react-jss'
 import { NavLink } from 'react-router-dom'
 import MenuContext from 'contexts/menu'
 import Logo from 'static/svg/menu/logo.svg'

@@ -1,20 +1,19 @@
 import React from 'react'
 import PageWrapper from 'components/PageWrapper'
-import PageContent from 'components/PageWrapper/components/PageContent'
-import PageDescription from 'components/PageWrapper/components/PageDescription'
-import ContentBlock from 'components/ContentBlock'
-import Heading from 'components/Typography/Heading'
-import Body from 'components/Typography/Body'
-import Image from 'components/Image'
-import VideoPlayer from 'components/VideoPlayer'
-import Spacer from 'components/Spacer'
-import ItemGrid from 'components/ItemGrid'
+// import PageContent from 'components/PageWrapper/components/PageContent'
+// import PageDescription from 'components/PageWrapper/components/PageDescription'
+// import ContentBlock from 'components/ContentBlock'
+// import Heading from 'components/Typography/Heading'
+// import Body from 'components/Typography/Body'
+// import Image from 'components/Image'
+// import VideoPlayer from 'components/VideoPlayer'
+// import Spacer from 'components/Spacer'
+// import ItemGrid from 'components/ItemGrid'
 
 import LondonTube from 'static/images/FISMarketing/LondonTubeAd.png'
 import LinkNyc from 'static/images/FISMarketing/LinkNyc.png'
 import IG1 from 'static/images/FISMarketing/ig-6.gif'
 import IG2 from 'static/images/FISMarketing/houchronad.png'
-import IG3 from 'static/images/FISMarketing/ig-3.png'
 import BackToSchool from 'static/images/FISMarketing/BackToSchool-Social.gif'
 import IG4 from 'static/images/FISMarketing/ig-4.png'
 import IG5 from 'static/images/FISMarketing/ig-5.png'
@@ -23,9 +22,9 @@ import CyberGif from 'static/images/FISMarketing/CyberGif_Square.gif'
 import IG8 from 'static/images/FISMarketing/ig-8.png'
 import JobsReport from 'static/images/FISMarketing/93-finalweb.gif'
 
-const FlatironMarketing = () => (
+export default () => (
 	<PageWrapper>
-		<PageDescription>
+		{/* <PageDescription>
 			<ContentBlock>
 				<Heading>Flatiron School</Heading>
 				<Spacer height={2} />
@@ -91,8 +90,6 @@ const FlatironMarketing = () => (
 					title="Stop motion video"
 				/>
 			</ContentBlock>
-		</PageContent>
+		</PageContent> */}
 	</PageWrapper>
 )
-
-export default FlatironMarketing
