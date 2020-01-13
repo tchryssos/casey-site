@@ -1,5 +1,4 @@
 import React from 'react'
-import injectSheet from 'react-jss'
 
 import PageWrapper from 'components/PageWrapper'
 import PageContent from 'components/PageWrapper/components/PageContent'
@@ -15,11 +14,7 @@ import SubHeading from 'components/Typography/SubHeading'
 import MyProblem from 'static/images/Portfolio/problemGif-01.gif'
 import MariahBeforeAfter from 'static/images/Portfolio/BeforeAfter1.gif'
 
-const styles = {
-
-}
-
-const Portfolio = ({ classes }) => (
+export default () => (
 	<PageWrapper>
 		<PageDescription>
 			<ContentBlock>
@@ -61,7 +56,9 @@ const Portfolio = ({ classes }) => (
 				<Heading>Mariah Adcox Portfolio</Heading>
 				<Image src={MariahBeforeAfter} alt="Before and After of the website" size="full" />
 				<Body>
-					Check teh site out <a href="http://mariah-portfolio.herokuapp.com/">here</a>.
+					Check the site out&nbsp;
+					<a href="http://mariah-portfolio.herokuapp.com/">here</a>
+					.
 				</Body>
 				<Spacer />
 				<Body>
@@ -83,5 +80,3 @@ const Portfolio = ({ classes }) => (
 		</PageContent>
 	</PageWrapper>
 )
-
-export default injectSheet(styles)(Portfolio)

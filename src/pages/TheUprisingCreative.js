@@ -22,7 +22,7 @@ import DDTwo from 'static/images/TheUprisingCreative/DigitalDomain/dd-permalink-
 
 import RedBullOne from 'static/images/TheUprisingCreative/RedBullRecords/redbull-records.png'
 
-const TheUprisingCreative = () => (
+export default () => (
 	<PageWrapper>
 		<PageDescription>
 			<ContentBlock>
@@ -59,5 +59,3 @@ const TheUprisingCreative = () => (
 		</PageContent>
 	</PageWrapper>
 )
-
-export default TheUprisingCreative

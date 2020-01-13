@@ -1,5 +1,4 @@
 import React from 'react'
-import injectSheet from 'react-jss'
 
 import PageWrapper from 'components/PageWrapper'
 import PageContent from 'components/PageWrapper/components/PageContent'
@@ -22,26 +21,14 @@ import MFilter from 'static/images/UIDesign/MaynoothFilter.gif'
 import MStyles from 'static/images/UIDesign/MaynoothStyles.png'
 import MProduct from 'static/images/UIDesign/MaynoothProduct.gif'
 
-import { offWhite } from 'constants/styles/colors'
-
-const styles = {
-	partyDesignGraphics: {
-		padding: '16px',
-		backgroundColor: offWhite,
-	},
-	hideMargin: {
-		marginTop: 0,
-	},
-}
-
-const UIDesign = ({ classes }) => (
+export default () => (
 	<PageWrapper>
 		<PageDescription>
 			<ContentBlock>
 				<Heading>UI Design</Heading>
 				<Spacer />
 				<Body>
-					In order to learn more about web design, I took a UI Design course on Udemy. These are the two projects that came out of the course. 
+					In order to learn more about web design, I took a UI Design course on Udemy. These are the two projects that came out of the course.
 				</Body>
 			</ContentBlock>
 		</PageDescription>
@@ -50,9 +37,15 @@ const UIDesign = ({ classes }) => (
 				<Heading>Roar Bicycles</Heading>
 				<Spacer />
 				<Body>
-				 	Client: Roar Bikes is a manufacturer of small run, contemporary bicycles. They currently have 3 models of bike to purchase.
-				 	<br></br><br></br>Primary Objective: Build an e-commerce website for people to browse and purchase.
-				 	<br></br><br></br>Audience: Jake is a graphic designer for a large design agency in Los Angles. Jake prides himself on having strange & interesting versions of everyone else&#8217;s everyday objects. His shoes are hand made & his backpack is pink. He likes to make his purchase (big or small) from local responsible crafts people. He doesn&#8217;t own a car. He always brings a reusable cup to the coffee shop. Jake cycles to work and wants his bicycle to be practical but unique.
+					Client: Roar Bikes is a manufacturer of small run, contemporary bicycles. They currently have 3 models of bike to purchase.
+				</Body>
+				<Spacer />
+				<Body>
+					Primary Objective: Build an e-commerce website for people to browse and purchase.
+				</Body>
+				<Spacer />
+				<Body>
+					Audience: Jake is a graphic designer for a large design agency in Los Angles. Jake prides himself on having strange &amp; interesting versions of everyone else&apos;s everyday objects. His shoes are hand made &amp; his backpack is pink. He likes to make his purchase (big or small) from local responsible crafts people. He doesn&apos;t own a car. He always brings a reusable cup to the coffee shop. Jake cycles to work and wants his bicycle to be practical but unique.
 				</Body>
 			</ContentBlock>
 			<ContentBlock>
@@ -74,8 +67,11 @@ const UIDesign = ({ classes }) => (
 				<Heading>Maynooth Furniture</Heading>
 				<Spacer />
 				<Body>
-				Client: Maynooth Furniture is a new business selling high-end furniture. 
-				 	<br></br><br></br>Primary Objective: Build an e-commerce website for people to browse and purchase.
+					Client: Maynooth Furniture is a new business selling high-end furniture.
+				</Body>
+				<Spacer height={2} />
+				<Body>
+					Primary Objective: Build an e-commerce website for people to browse and purchase.
 				</Body>
 			</ContentBlock>
 			<ContentBlock>
@@ -87,5 +83,3 @@ const UIDesign = ({ classes }) => (
 		</PageContent>
 	</PageWrapper>
 )
-
-export default injectSheet(styles)(UIDesign)
