@@ -1,8 +1,8 @@
 import React from 'react'
 import { createUseStyles } from 'react-jss'
 
-const useStyles = createUseStyles(({ aspectRatio }) => ({
-	videoWrapper: {
+const useStyles = createUseStyles({
+	videoWrapper: ({ aspectRatio }) => ({
 		marginTop: '16px',
 		position: 'relative',
 		width: '100%',
@@ -16,7 +16,7 @@ const useStyles = createUseStyles(({ aspectRatio }) => ({
 					return '56.25%'
 			}
 		},
-	},
+	}),
 	video: {
 		position: 'absolute',
 		top: 0,
@@ -24,7 +24,7 @@ const useStyles = createUseStyles(({ aspectRatio }) => ({
 		width: '100%',
 		height: '100%',
 	},
-}))
+})
 
 export default ({ src, title, aspectRatio }) => {
 	const classes = useStyles({ aspectRatio })
