@@ -6,21 +6,21 @@ import {
 import Spacer from 'components/Spacer'
 
 const useStyles = createUseStyles({
+	pageDescriptionWrapper: {},
+	padding: {},
 	descriptionSpacer: {
 		display: 'none',
-		[MD_MIN_STRING]: {
-			display: 'block',
-		},
 	},
-	padding: {
-		[MD_MIN_STRING]: {
-			padding: '0 16px',
-		},
-	},
-	pageDescriptionWrapper: {
-		[MD_MIN_STRING]: {
+	[MD_MIN_STRING]: {
+		pageDescriptionWrapper: {
 			width: `${fixedColumnWidthPerc}%`,
 			position: 'fixed',
+		},
+		padding: {
+			padding: '0 16px',
+		},
+		descriptionSpacer: {
+			display: 'block',
 		},
 	},
 })

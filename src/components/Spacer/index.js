@@ -7,7 +7,7 @@ const useStyles = createUseStyles({
 	}),
 })
 
-export default ({ height }) => {
+export default ({ height = 1 }) => {
 	const classes = useStyles({ height })
 	return <div className={classes.spacer} />
 }
