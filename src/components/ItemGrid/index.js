@@ -1,25 +1,21 @@
 import React from 'react'
 import clsx from 'clsx'
-import PropTypes from 'prop-types'
-import injectSheet from 'react-jss'
+import { createUseStyles } from 'react-jss'
 
-const styles = {
+const useStyles = createUseStyles({
 	itemGridWrapper: {
 		marginTop: '16px',
 		display: 'flex',
 		justifyContent: 'space-between',
 		flexWrap: 'wrap',
 	},
+})
+
+export default ({ children, className }) => {
+	const classes = useStyles()
+	return (
+		<div className={clsx(classes.itemGridWrapper, className)}>
+			{children}
+		</div>
+	)
 }
-
-const ItemGrid = ({ children, className, classes }) => (
-	<div className={clsx(classes.itemGridWrapper, className)}>
-		{children}
-	</div>
-)
-
-ItemGrid.propTypes = {
-	children: PropTypes.node,
-}
-
-export default injectSheet(styles)(ItemGrid)
