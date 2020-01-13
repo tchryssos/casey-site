@@ -8,45 +8,46 @@ import HandsUp from 'static/svg/menu/handsup.svg'
 import HandsDown from 'static/svg/menu/handsdown.svg'
 import Heading from 'components/Typography/Heading'
 import MenuRoutes from './components/MenuRoutes'
-import styles from './styles'
+import useStyles from './styles'
 
-const NavBar = ({ classes }) => (
-	<MenuContext.Consumer>
-		{({ isMenuOpen, setIsMenuOpen }) => (
-			<>
-				<div
-					className={
-						clsx(
-							classes.menu,
-							isMenuOpen ? classes.menuVisible : '',
-						)
-					}
-				>
-					<MenuRoutes />
-				</div>
-				<div className={classes.navWrapper}>
-					<div className={classes.navContainer}>
-						<button
-							onClick={() => setIsMenuOpen(!isMenuOpen)}
-							className={classes.menuButton}
-						>
-							<img
-								className={classes.openMenuIcon}
-								src={isMenuOpen ? HandsDown : HandsUp}
-								alt="Menu toggle icon"
-							/>
-							<div className={classes.openMenuText}>
-								<Heading>{isMenuOpen ? 'menu open' : 'menu'}</Heading>
-							</div>
-						</button>
-						<NavLink to="/" exact>
-							<img className={classes.logo} src={Logo} alt="Casey B Logo" />
-						</NavLink>
+export default () => {
+	const classes = useStyles()
+	return (
+		<MenuContext.Consumer>
+			{({ isMenuOpen, setIsMenuOpen }) => (
+				<>
+					<div
+						className={
+							clsx(
+								classes.menu,
+								{ [classes.menuVisible]: isMenuOpen },
+							)
+						}
+					>
+						<MenuRoutes />
 					</div>
-				</div>
-			</>
-		)}
-	</MenuContext.Consumer>
-)
-
-export default injectSheet(styles)(NavBar)
+					<div className={classes.navWrapper}>
+						<div className={classes.navContainer}>
+							<button
+								onClick={() => setIsMenuOpen(!isMenuOpen)}
+								className={classes.menuButton}
+							>
+								<img
+									className={classes.openMenuIcon}
+									src={isMenuOpen ? HandsDown : HandsUp}
+									alt="Menu toggle icon"
+								/>
+								<div className={classes.openMenuText}>
+									<Heading>{isMenuOpen ? 'menu open' : 'menu'}</Heading>
+								</div>
+							</button>
+							<NavLink to="/" exact>
+								<img className={classes.logo} src={Logo} alt="Casey B Logo" />
+							</NavLink>
+						</div>
+					</div>
+				</>
+			)}
+		</MenuContext.Consumer>
+	)
+}
