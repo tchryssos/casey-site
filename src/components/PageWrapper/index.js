@@ -22,7 +22,7 @@ const useStyles = createUseStyles({
 	},
 })
 
-const PageWrapper = ({ children }) => {
+export default ({ children }) => {
 	const classes = useStyles()
 	return (
 		<div className={classes.pageWrapper}>

@@ -27,7 +27,7 @@ const useStyles = createUseStyles({
 	},
 })
 
-const PageContent = ({ children }) => {
+export default ({ children }) => {
 	const classes = useStyles()
 	return (
 		<>
