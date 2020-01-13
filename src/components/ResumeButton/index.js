@@ -14,7 +14,7 @@ const svgHeight = '120px'
 const svgWidth = '160px'
 const useStyles = createUseStyles({
 	'@keyframes spin': {
-		from: { transform: 'rotate(0)' },
+		from: { transform: 'rotate(0deg)' },
 		to: { transform: 'rotate(90deg)' },
 	},
 	inline: {
@@ -37,7 +37,7 @@ const useStyles = createUseStyles({
 		width: svgWidth,
 	},
 	spinAnimation: {
-		animation: 'spin infinite 1s linear',
+		animation: '$spin infinite 1s linear',
 	},
 })
 
