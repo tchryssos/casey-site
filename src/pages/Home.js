@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
-import injectSheet from 'react-jss'
+import { createUseStyles } from 'react-jss'
 import BlobLink from 'components/BlobLink'
 import blobLinkData from 'constants/blobLinks'
 import { MD_MIN_STRING } from 'constants/styles/breakpoints'
 
-const styles = {
+const useStyles = createUseStyles({
 	homeContainer: {
 		display: 'flex',
 		flexDirection: 'column',
@@ -54,9 +54,10 @@ const styles = {
 			width: '50%',
 		},
 	},
-}
+})
 
-const Home = ({ classes }) => {
+export default () => {
+	const classes = useStyles()
 	const [filter, setFilter] = useState(null)
 	const hideGraphic = () => setFilter('graphic')
 	const hideProduct = () => setFilter('product')
@@ -83,5 +84,3 @@ const Home = ({ classes }) => {
 		</div>
 	)
 }
-
-export default injectSheet(styles)(Home)

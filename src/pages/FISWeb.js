@@ -1,5 +1,4 @@
 import React from 'react'
-import injectSheet from 'react-jss'
 
 import PageWrapper from 'components/PageWrapper'
 import PageContent from 'components/PageWrapper/components/PageContent'
@@ -15,11 +14,7 @@ import HeroBefore from 'static/images/FISWeb/FISWebHero-01.png'
 import HeroAfter from 'static/images/FISWeb/FISWebHero-02.png'
 import HeroAfter2 from 'static/images/FISWeb/FISWebHero-03.png'
 
-
-const styles = {
-}
-
-const FISWeb = ({ classes }) => (
+export default () => (
 	<PageWrapper>
 		<PageDescription>
 			<ContentBlock>
@@ -34,7 +29,7 @@ const FISWeb = ({ classes }) => (
 				<SubHeading>CURRENT</SubHeading>
 				<Spacer />
 				<Body>
-					The hero is the first thing people see when they come to our site. It needs to pull them in and inspire them to take actions. Our current hero is very dark. The images of lively students are covered up by a dark overlay and more text on top of that. We think that if we can brighten up our hero section and separate the text from the images, we could be more creative with our visuals and more inviting to prospective students. 
+					The hero is the first thing people see when they come to our site. It needs to pull them in and inspire them to take actions. Our current hero is very dark. The images of lively students are covered up by a dark overlay and more text on top of that. We think that if we can brighten up our hero section and separate the text from the images, we could be more creative with our visuals and more inviting to prospective students.
 				</Body>
 				<Image size="full" src={HeroBefore} />
 				<Spacer />
@@ -48,4 +43,3 @@ const FISWeb = ({ classes }) => (
 	</PageWrapper>
 )
 
-export default injectSheet(styles)(FISWeb)

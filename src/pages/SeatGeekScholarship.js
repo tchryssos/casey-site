@@ -1,5 +1,5 @@
 import React from 'react'
-import injectSheet from 'react-jss'
+import { createUseStyles } from 'react-jss'
 
 import PageWrapper from 'components/PageWrapper'
 import PageContent from 'components/PageWrapper/components/PageContent'
@@ -21,7 +21,7 @@ import Sweatshirt from 'static/images/SeatGeekScholarship/TrailblazerSweatshirt.
 import Perlman from 'static/images/SeatGeekScholarship/perlman.png'
 import Coalition from 'static/images/SeatGeekScholarship/coalition.png'
 
-const styles = {
+const useStyles = createUseStyles({
 	hideSm: {
 		display: 'none',
 	},
@@ -33,53 +33,54 @@ const styles = {
 			display: 'block',
 		},
 	},
+})
+
+export default () => {
+	const classes = useStyles()
+	return (
+		<PageWrapper>
+			<PageDescription>
+				<ContentBlock>
+					<Image
+						src={Stickers}
+						alt="Stickers"
+						size="full"
+						className={classes.hideMd}
+					/>
+					<Heading>Flatiron School x SeatGeek 50/50 Scholarship</Heading>
+					<Spacer />
+					<Body>
+						Assets to promote Flatiron School x SeatGeek 50/50 Scholarship for women in tech. 665 people applied for this scholarship over the 3 week period that it was live for and 60 of those applicants enrolled, mostly on first conversion.
+					</Body>
+					<Spacer />
+					<Body>
+						Role: Creative Direction and Design
+					</Body>
+					<Spacer />
+					<Body>
+						Junior Designer: Emily Brown
+					</Body>
+				</ContentBlock>
+			</PageDescription>
+			<PageContent>
+				<ContentBlock>
+					<Image
+						src={Stickers}
+						alt="Stickers"
+						size="full"
+						className={classes.hideSm}
+					/>
+					<Image src={FiftyFifty} alt="Scholarship advertisement" size="full" />
+					<Image src={Timeline} alt="Women in computing timeline" size="full" />
+					<Image src={CarolAnimation} alt="Animation of Carol Shaw" size="full" />
+					<Image src={Grace} alt="Grace Hopper Sticker" size="full" />
+					<Image src={Sweatshirt} alt="Trailblazer Sweatshirt" size="full" />
+					<ItemGrid>
+						<Image src={Perlman} alt="Drawing of Radia Perlman" />
+						<Image src={Coalition} alt="50/50 gender coalition flyer" />
+					</ItemGrid>
+				</ContentBlock>
+			</PageContent>
+		</PageWrapper>
+	)
 }
-
-const HowToTampons = ({ classes }) => (
-	<PageWrapper>
-		<PageDescription>
-			<ContentBlock>
-				<Image
-					src={Stickers}
-					alt="Stickers"
-					size="full"
-					className={classes.hideMd}
-				/>
-				<Heading>Flatiron School x SeatGeek 50/50 Scholarship</Heading>
-				<Spacer />
-				<Body>
-					Assets to promote Flatiron School x SeatGeek 50/50 Scholarship for women in tech. 665 people applied for this scholarship over the 3 week period that it was live for and 60 of those applicants enrolled, mostly on first conversion.
-				</Body>
-				<Spacer />
-				<Body>
-					Role: Creative Direction and Design
-				</Body>
-				<Spacer />
-				<Body>
-					Junior Designer: Emily Brown
-				</Body>
-			</ContentBlock>
-		</PageDescription>
-		<PageContent>
-			<ContentBlock>
-				<Image
-					src={Stickers}
-					alt="Stickers"
-					size="full"
-					className={classes.hideSm}
-				/>
-				<Image src={FiftyFifty} alt="Scholarship advertisement" size="full" />
-				<Image src={Timeline} alt="Women in computing timeline" size="full" />
-				<Image src={CarolAnimation} alt="Animation of Carol Shaw" size="full" />
-				<Image src={Grace} alt="Grace Hopper Sticker" size="full" />
-				<Image src={Sweatshirt} alt="Trailblazer Sweatshirt" size="full" />
-				<ItemGrid>
-					<Image src={Perlman} alt="Drawing of Radia Perlman" />
-					<Image src={Coalition} alt="50/50 gender coalition flyer" />
-				</ItemGrid>
-			</ContentBlock>
-		</PageContent>
-	</PageWrapper>
-)
-
-export default injectSheet(styles)(HowToTampons)

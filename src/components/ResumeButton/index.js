@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-import classNames from 'classnames'
-import injectSheet from 'react-jss'
+import clsx from 'clsx'
+import { createUseStyles } from 'react-jss'
 
 import Image from 'components/Image'
 
@@ -12,9 +12,9 @@ import resumePdf from 'static/files/resume.pdf'
 
 const svgHeight = '120px'
 const svgWidth = '160px'
-const styles = {
+const useStyles = createUseStyles({
 	'@keyframes spin': {
-		from: { transform: 'rotate(0)' },
+		from: { transform: 'rotate(0deg)' },
 		to: { transform: 'rotate(90deg)' },
 	},
 	inline: {
@@ -37,9 +37,9 @@ const styles = {
 		width: svgWidth,
 	},
 	spinAnimation: {
-		animation: 'spin infinite 1s linear',
+		animation: '$spin infinite 1s linear',
 	},
-}
+})
 
 const srcSwitch = (isText, isRed) => {
 	if (isText) {
@@ -48,20 +48,18 @@ const srcSwitch = (isText, isRed) => {
 	return isRed ? resumeCircleRed : resumeCircle
 }
 
-const SvgComponent = ({ isText, isRed, isHovered, classes }) => (
+const SvgComponent = ({
+	isText, isRed, isHovered, classes,
+}) => (
 	<Image
 		className={classes.inline}
 		src={srcSwitch(isText, isRed)}
 		alt={isText ? 'Download resume Text' : 'Spiney spinner'}
 		imageClassName={
-			classNames(
+			clsx(
 				classes.resumeSvg,
-				isText ? '' : classes.spinAnimation,
-				(
-					(isRed && !isHovered)
-					|| (!isRed && isHovered) ?
-						classes.hidden : ''
-				),
+				{ [classes.spinAnimation]: !isText },
+				{ [classes.hidden]: (isRed && !isHovered) || (!isRed && isHovered) },
 			)
 		}
 	/>
@@ -76,8 +74,9 @@ const renderSvgs = (classes, isHovered) => (
 	</>
 )
 
-const ResumeButton = ({ classes }) => {
+export default () => {
 	const [isHovered, setIsHovered] = useState(false)
+	const classes = useStyles()
 
 	return (
 		<div
@@ -97,5 +96,3 @@ const ResumeButton = ({ classes }) => {
 		</div>
 	)
 }
-
-export default injectSheet(styles)(ResumeButton)

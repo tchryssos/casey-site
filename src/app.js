@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import { Route, Switch, withRouter, BrowserRouter } from 'react-router-dom'
 import { render } from 'react-dom'
-import injectSheet from 'react-jss'
-import classNames from 'classnames'
+import { createUseStyles } from 'react-jss'
+import clsx from 'clsx'
 
 import blobLinkData from 'constants/blobLinks'
 import { MD_MIN_VALUE, MD_MIN_STRING } from 'constants/styles/breakpoints'
@@ -22,8 +22,47 @@ import About from 'pages/About'
 
 import cursor from 'static/images/Misc/cursor.png'
 
+const marPadZero = {
+	margin: 0,
+	padding: 0,
+}
+const baseStyle = {
+	height: '100%',
+	width: '100%',
+	...marPadZero,
+}
 
-const styles = {
+const useStyles = createUseStyles({
+	// Start - Base Styles - Start
+	'@import': [
+		"url('https://fonts.googleapis.com/css?family=Anonymous+Pro&display=swap')",
+	],
+	'@global': {
+		'*': {
+			fontFamily: '"Anonymous Pro", monospace',
+		},
+		html: baseStyle,
+		body: {
+			...baseStyle,
+			position: 'relative',
+		},
+		'#app': {
+			...baseStyle,
+			fontSize: 14,
+		},
+		p: marPadZero,
+		h1: {
+			...marPadZero,
+			fontSize: 36,
+		},
+		h2: marPadZero,
+		h3: marPadZero,
+		iframe: {
+			width: '100%',
+		},
+	},
+	// End - Base Styles - End
+
 	app: {
 		position: 'relative',
 		width: '100%',
@@ -35,9 +74,10 @@ const styles = {
 			cursor: `url(${cursor}),auto`,
 		},
 	},
-}
+})
 
-const App = ({ location, classes }) => {
+const App = ({ location }) => {
+	const classes = useStyles()
 	const [isMenuOpen, setIsMenuOpen] = useState(false)
 	// On location change, scroll to page top
 	useEffect(() => {
@@ -59,7 +99,7 @@ const App = ({ location, classes }) => {
 				// https://stackoverflow.com/questions/24077725/mobile-safari-sometimes-does-not-trigger-the-click-event
 				onClick={void 0}
 				className={
-					classNames(
+					clsx(
 						classes.app,
 						isMenuOpen ? classes.fixedBody : '',
 					)
@@ -110,7 +150,7 @@ const App = ({ location, classes }) => {
 	)
 }
 
-const RouterApp = injectSheet(styles)(withRouter(props => <App {...props} />))
+const RouterApp = withRouter(props => <App {...props} />)
 
 render(
 	<BrowserRouter>

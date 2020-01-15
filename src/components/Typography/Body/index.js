@@ -1,7 +1,6 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 
-const Body = ({ children }) => (
+export default ({ children }) => (
 	<div>
 		<p>
 			{children}
@@ -9,8 +8,3 @@ const Body = ({ children }) => (
 	</div>
 )
 
-Body.propTypes = {
-	children: PropTypes.node,
-}
-
-export default Body

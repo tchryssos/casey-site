@@ -1,5 +1,5 @@
 import React from 'react'
-import injectSheet from 'react-jss'
+import { createUseStyles } from 'react-jss'
 
 import PageWrapper from 'components/PageWrapper'
 import ContentBlock from 'components/ContentBlock'
@@ -12,7 +12,7 @@ import ResumeButton from 'components/ResumeButton'
 
 import addStickerListener from 'util/addStickerListener'
 
-const styles = {
+const useStyles = createUseStyles({
 	stickerBoard: {
 		position: 'absolute',
 		top: 0,
@@ -21,10 +21,11 @@ const styles = {
 		bottom: 0,
 		overflowX: 'hidden',
 	},
-}
+})
 
-const About = ({ classes }) => {
-	addStickerListener()
+export default () => {
+	const classes = useStyles()
+	addStickerListener() // this is a useEffect
 
 	return (
 		<div className={classes.stickerBoard} id="stickerBoard">
@@ -59,5 +60,3 @@ const About = ({ classes }) => {
 		</div>
 	)
 }
-
-export default injectSheet(styles)(About)

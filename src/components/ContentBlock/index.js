@@ -1,9 +1,8 @@
 import React from 'react'
-import PropTypes from 'prop-types'
-import injectSheet from 'react-jss'
+import { createUseStyles } from 'react-jss'
 import { MD_MIN_STRING } from 'constants/styles/breakpoints'
 
-const styles = {
+const useStyles = createUseStyles({
 	contentBlock: {
 		margin: '16px',
 	},
@@ -12,16 +11,13 @@ const styles = {
 			margin: '16px 0',
 		},
 	},
+})
+
+export default ({ children }) => {
+	const classes = useStyles()
+	return (
+		<div className={classes.contentBlock}>
+			{children}
+		</div>
+	)
 }
-
-const ContentBlock = ({ children, classes }) => (
-	<div className={classes.contentBlock}>
-		{children}
-	</div>
-)
-
-ContentBlock.propTypes = {
-	children: PropTypes.node,
-}
-
-export default injectSheet(styles)(ContentBlock)

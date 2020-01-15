@@ -1,3 +1,4 @@
+import { createUseStyles } from 'react-jss'
 import { orange, white, gray } from 'constants/styles/colors'
 import {
 	MD_MIN_STRING, fixedColumnWidthPerc,
@@ -6,7 +7,7 @@ import {
 export const navContentHeight = 32
 export const navPaddingHeight = 24
 
-export default {
+export default createUseStyles({
 	menu: {
 		width: '100%',
 		height: `calc(100vh - ${navContentHeight + (navPaddingHeight * 2)}px)`,
@@ -92,4 +93,4 @@ export default {
 			letterSpacing: 1,
 		},
 	},
-}
+})

@@ -13,7 +13,7 @@ import MusicalRugOne from 'static/images/MusicalRug/MusicalRug-1.jpg'
 import MusicalRugTwo from 'static/images/MusicalRug/MusicalRug-2.jpg'
 import MusicalRugThree from 'static/images/MusicalRug/MusicalRug-3.jpg'
 
-const MusicalRug = () => (
+export default () => (
 	<PageWrapper>
 		<PageDescription>
 			<ContentBlock>
@@ -44,5 +44,3 @@ const MusicalRug = () => (
 		</PageContent>
 	</PageWrapper>
 )
-
-export default MusicalRug

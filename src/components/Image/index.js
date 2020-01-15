@@ -1,66 +1,75 @@
 import React from 'react'
-import PropTypes from 'prop-types'
-import classNames from 'classnames'
-import injectSheet from 'react-jss'
+import clsx from 'clsx'
+import { createUseStyles } from 'react-jss'
 
-const styles = {
+import { black } from 'constants/styles/colors'
+
+const useStyles = createUseStyles({
 	imageImg: {
 		display: 'block',
-		width: ({ scrollable }) => (scrollable ? 'unset' : '100%'),
+		width: '100%',
+	},
+	scrollableImageImg: {
+		width: 'unset',
 	},
 	imageWrapper: {
 		display: 'inline-block',
-		width: ({ size }) => (
-			size === 'half' ? 'calc(50% - 8px)' : '100%'
-		),
-		border: ({ bordered }) => (
-			bordered ? '1px black solid' : ''
-		),
+		width: '100%',
 		marginTop: '16px',
 		'&:first-of-type': {
-			marginTop: ({ size }) => (size === 'half' ? 0 : '16px'),
+			marginTop: 16,
 		},
 		'&:nth-of-type(2)': {
-			marginTop: ({ size }) => (size === 'half' ? 0 : '16px'),
+			marginTop: 16,
 		},
-		overflow: ({ scrollable }) => (scrollable ? 'scroll' : 'none'),
+		overflow: 'none',
 	},
-}
+	borderedImageWrapper: {
+		border: [[1, black, 'solid']],
+	},
+	halfImageWrapper: {
+		width: 'calc(50% - 8px)',
+		marginTop: '16px',
+		'&:first-of-type': {
+			marginTop: 0,
+		},
+		'&:nth-of-type(2)': {
+			marginTop: 0,
+		},
+	},
+	scrollableImageWrapper: {
+		overflow: 'scroll',
+	},
+})
 
-const Image = ({ src, alt, className, imageClassName, classes }) => (
-	<div
-		className={
-			classNames(
-				classes.imageWrapper,
-				className,
-			)
-		}
-	>
-		<img
-			src={src}
-			alt={alt}
+export default ({
+	src, alt, className, imageClassName, size = 'half',
+	scrollable, bordered,
+}) => {
+	const classes = useStyles()
+	return (
+		<div
 			className={
-				classNames(
-					classes.imageImg,
-					imageClassName,
+				clsx(
+					classes.imageWrapper,
+					{ [classes.borderedImageWrapper]: bordered },
+					{ [classes.scrollableImageWrapper]: scrollable },
+					{ [classes.halfImageWrapper]: size === 'half' },
+					className,
 				)
 			}
-		/>
-	</div>
-)
-
-Image.propTypes = {
-	src: PropTypes.string,
-	alt: PropTypes.string,
-	imageClassName: PropTypes.string,
-	/* eslint-disable react/no-unused-prop-types */
-	size: PropTypes.oneOf(['full', 'half']),
-	scrollable: PropTypes.bool,
-	/* eslint-enable react/no-unused-prop-types */
+		>
+			<img
+				src={src}
+				alt={alt}
+				className={
+					clsx(
+						classes.imageImg,
+						{ [classes.scrollableImageImg]: scrollable },
+						imageClassName,
+					)
+				}
+			/>
+		</div>
+	)
 }
-
-Image.defaultProps = {
-	size: 'half',
-}
-
-export default injectSheet(styles)(Image)

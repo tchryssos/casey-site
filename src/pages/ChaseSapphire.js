@@ -27,7 +27,7 @@ import bbqThree from 'static/images/ChaseSapphire/WhatsNext/bbq_3.png'
 import bbqFour from 'static/images/ChaseSapphire/WhatsNext/bbq_4.png'
 
 
-const ChaseSapphire = () => (
+export default () => (
 	<PageWrapper>
 		<PageDescription>
 			<ContentBlock>
@@ -122,5 +122,3 @@ const ChaseSapphire = () => (
 		</PageContent>
 	</PageWrapper>
 )
-
-export default ChaseSapphire
