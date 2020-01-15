@@ -45,7 +45,7 @@ export default () => {
 					<ContentBlock>
 						<Heading>experience</Heading>
 						<Spacer height={2} />
-						<SubHeading>DESIGN LEAD</SubHeading>
+						<SubHeading>DESIGN MANAGER</SubHeading>
 						<Body>WeWork (Flatiron School), Jan 2018 - current</Body>
 						<Spacer height={2} />
 						<SubHeading>ART DIRECTOR</SubHeading>
