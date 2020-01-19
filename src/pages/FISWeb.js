@@ -13,6 +13,8 @@ import SubHeading from 'components/Typography/SubHeading'
 import HeroBefore from 'static/images/FISWeb/FISWebHero-01.png'
 import HeroAfter from 'static/images/FISWeb/FISWebHero-02.png'
 import HeroAfter2 from 'static/images/FISWeb/FISWebHero-03.png'
+import HelloBar from 'static/images/FISWeb/FISWebHelloBar.png'
+import Modal from 'static/images/FISWeb/FISWebModal.png'
 
 export default () => (
 	<PageWrapper>
@@ -39,6 +41,26 @@ export default () => (
 				<Image size="full" src={HeroAfter} />
 				<Image size="full" src={HeroAfter2} />
 			</ContentBlock>
+			<Spacer />
+			<Spacer />
+			<Heading>Hello Bar and Modal Designs</Heading>
+			<Spacer />
+			<Body>
+					In order to share big news on our pages we wanted to test designs for Hello Bar banners and pop-up modals.
+			</Body>
+			<Image size="full" src={HelloBar} />
+			<Image size="full" src={Modal} />
+			<Spacer />
+			<Spacer />
+			<Heading>Tabs</Heading>
+			<Spacer />
+			<Spacer />
+			<SubHeading>CURRENT</SubHeading>
+			<Spacer />
+			<Body>
+				xyz
+			</Body>
+			<Image size="full" src={HeroBefore} />
 		</PageContent>
 	</PageWrapper>
 )
