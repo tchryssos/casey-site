@@ -8,6 +8,7 @@ import SeatGeekScholarship from 'static/svg/home/SeatGeekScholarship.svg'
 import TheUprisingCreative from 'static/svg/home/TheUprisingCreative.svg'
 import UIDesign from 'static/svg/home/UIDesign.svg'
 import FISWeb from 'static/svg/home/FISWeb.svg'
+import ListenJay from 'static/svg/home/ListenJay.svg'
 
 const blobLinkData = {
 	FISMarketing: {
@@ -19,19 +20,19 @@ const blobLinkData = {
 		zIndex: 3,
 		category: 'graphic',
 	},
-	UIDesign: {
-		src: UIDesign,
-		svgFile: 'UIDesign',
-		link: '/ui-design',
-		altText: 'UI Design',
+	FISWeb: {
+		src: FISWeb,
+		svgFile: 'FISWeb',
+		link: '/fis-web',
+		altText: 'Flatiron School Web Design',
 		width: 50,
 		category: 'product',
 	},
-	Portfolio: {
-		src: Portfolio,
-		svgFile: 'Portfolio',
-		link: '/portfolio',
-		altText: 'Portfolio Design',
+	ListenJay: {
+		src: ListenJay,
+		svgFile: 'ListenJay',
+		link: '/listenjay',
+		altText: 'Listen Jay UX/UI Design',
 		width: 40,
 		zIndex: 4,
 		category: 'product',
@@ -63,29 +64,37 @@ const blobLinkData = {
 		zIndex: 2,
 		category: 'graphic',
 	},
+	Portfolio: {
+		src: Portfolio,
+		svgFile: 'Portfolio',
+		link: '/portfolio',
+		altText: 'Portfolio Design',
+		width: 100,
+		category: 'product',
+	},
 	ChaseSapphire: {
 		src: ChaseSapphire,
 		svgFile: 'ChaseSapphire',
 		link: '/chase-sapphire',
-		altText: 'Chase Sapphire',
-		width: 100,
-		category: 'graphic',
-	},
-	FISWeb: {
-		src: FISWeb,
-		svgFile: 'FISWeb',
-		link: '/FIS-web',
-		altText: 'Flatiron School Web Design',
+		altText: 'Chase Sapphire Reserve',
 		width: 50,
 		zIndex: 2,
+		category: 'graphic',
+	},
+	UIDesign: {
+		src: UIDesign,
+		svgFile: 'UIDesign',
+		link: '/UI-design',
+		altText: 'UI Design',
+		width: 50,
 		category: 'product',
 	},
 	About: {
 		src: About,
 		svgFile: 'About',
 		link: '/about',
-		altText: 'About Page',
-		width: 50,
+		altText: 'About Me Page',
+		width: 100,
 	},
 }
 

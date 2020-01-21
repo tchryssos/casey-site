@@ -20,31 +20,34 @@ export default createUseStyles({
 	},
 	// Custom CSS for blob placement
 	FISMarketing: {
-		transform: 'translateX(13vw)',
+		transform: 'translate(8vw, -4vw)',
 	},
-	UIDesign: {
-		transform: 'translateY(13vw)',
+	FISWeb: {
+		transform: 'translateY(8vw)',
 	},
 	MusicalRug: {
 		transform: 'translate(6vw, 3vw)',
 	},
-	HowToTampons: {
+	ListenJay: {
 		transform: 'translate(6vw, -2vw)',
 	},
 	TheUprisingCreative: {
 		transform: 'translate(-25vw, -11vw)',
 	},
 	SeatGeekScholarship: {
-		transform: 'translateY(-34vw)',
+		transform: 'translateY(-30vw)',
 	},
-	ChaseSapphire: {
+	Portfolio: {
 		transform: 'translateY(-52vw)',
 	},
-	FISWeb: {
-		transform: 'translate(3vw, -65vw)',
+	ChaseSapphire: {
+		transform: 'translate(3vw, -55vw)',
+	},
+	UIDesign: {
+		transform: 'translate(0vw, -55vw)',
 	},
 	About: {
-		transform: 'translate(0vw, -55vw)',
+		transform: 'translateY(-65vw)',
 	},
 	[MD_MIN_STRING]: {
 		linkWrapper: {
@@ -55,13 +58,13 @@ export default createUseStyles({
 		FISMarketing: {
 			transform: 'translateX(0)',
 		},
-		UIDesign: {
+		FISWeb: {
 			transform: 'translate(-5vw, 5vw)',
 		},
 		MusicalRug: {
 			transform: 'translate(-2vw, 1vw)',
 		},
-		HowToTampons: {
+		ListenJay: {
 			transform: 'translate(-2vw, -0.5vw)',
 		},
 		TheUprisingCreative: {
@@ -70,14 +73,17 @@ export default createUseStyles({
 		SeatGeekScholarship: {
 			transform: 'translateY(-14vw)',
 		},
-		ChaseSapphire: {
+		Portfolio: {
 			transform: 'translateY(-23vw)',
 		},
-		FISWeb: {
+		ChaseSapphire: {
 			transform: 'translate(1vw, -26vw)',
 		},
+		UIDesign: {
+			transform: 'translate(-1vw, -24vw)',
+		},
 		About: {
-			transform: 'translate(1vw, -24vw)',
+			transform: 'translateY(-30vw)',
 		},
 	},
 })

@@ -18,6 +18,7 @@ import TheUprisingCreative from 'pages/TheUprisingCreative'
 import SeatGeekScholarship from 'pages/SeatGeekScholarship'
 import ChaseSapphire from 'pages/ChaseSapphire'
 import FISWeb from 'pages/FISWeb'
+import ListenJay from 'pages/listenjay'
 import About from 'pages/About'
 
 import cursor from 'static/images/Misc/cursor.png'
@@ -138,6 +139,10 @@ const App = ({ location }) => {
 					<Route
 						path={blobLinkData.FISWeb.link}
 						component={FISWeb}
+					/>
+					<Route
+						path="/listenjay"
+						component={ListenJay}
 					/>
 					<Route
 						path="/about"

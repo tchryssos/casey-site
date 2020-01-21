@@ -37,30 +37,19 @@ export default () => (
 				<Spacer />
 				<SubHeading>UPDATED</SubHeading>
 				<Spacer />
-				<Body>These updates have not yet been enacted, but we would expect them to increase engagement with our site and decrease bounce rate.</Body>
+				<Body>These updates have not yet been enacted, but we would expect them to increase engagement with our site and decrease bounce rate. These updates will also allow us to better match our site pages to campaigns we are running across other channels.</Body>
 				<Image size="full" src={HeroAfter} />
 				<Image size="full" src={HeroAfter2} />
+				<Spacer />
+				<Spacer />
+				<Heading>Hello Bar and Modal Designs</Heading>
+				<Spacer />
+				<Body>
+						In order to share big news on our pages we wanted to test designs for Hello Bar banners and pop-up modals.
+				</Body>
+				<Image size="full" src={HelloBar} />
+				<Image size="full" src={Modal} />
 			</ContentBlock>
-			<Spacer />
-			<Spacer />
-			<Heading>Hello Bar and Modal Designs</Heading>
-			<Spacer />
-			<Body>
-					In order to share big news on our pages we wanted to test designs for Hello Bar banners and pop-up modals.
-			</Body>
-			<Image size="full" src={HelloBar} />
-			<Image size="full" src={Modal} />
-			<Spacer />
-			<Spacer />
-			<Heading>Tabs</Heading>
-			<Spacer />
-			<Spacer />
-			<SubHeading>CURRENT</SubHeading>
-			<Spacer />
-			<Body>
-				xyz
-			</Body>
-			<Image size="full" src={HeroBefore} />
 		</PageContent>
 	</PageWrapper>
 )
