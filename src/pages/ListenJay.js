@@ -1,8 +1,8 @@
 import React from 'react'
 
 import PageWrapper from 'components/PageWrapper'
-import PageContent from 'components/PageWrapper/components/PageContent'
-import PageDescription from 'components/PageWrapper/components/PageDescription'
+import PageContent from 'components/PageContent'
+import PageDescription from 'components/PageDescription'
 import ContentBlock from 'components/ContentBlock'
 import Heading from 'components/Typography/Heading'
 import Body from 'components/Typography/Body'
@@ -31,7 +31,7 @@ export default () => (
 				<Heading>Podcast Episode Page Improvements</Heading>
 				<Spacer />
 				<Body>
-					Listen Jay is a podcast review site that sees most of its traffic through social media posts that link directly to a specific podcast episode's page. Because of that page's priority it was the first one I focused on cleaning up from a UX perspective.
+					Listen Jay is a podcast review site that sees most of its traffic through social media posts that link directly to a specific podcast episode&apos;s page. Because of that page&apos;s priority it was the first one I focused on cleaning up from a UX perspective.
 				</Body>
 				<Image size="full" src={ResultsPod} />
 				<Spacer />

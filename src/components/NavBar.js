@@ -6,8 +6,8 @@ import Logo from 'static/svg/menu/logo.svg'
 import HandsUp from 'static/svg/menu/handsup.svg'
 import HandsDown from 'static/svg/menu/handsdown.svg'
 import Heading from 'components/Typography/Heading'
-import MenuRoutes from './components/MenuRoutes'
-import useStyles from './styles'
+import MenuRoutes from 'components/MenuRoutes'
+import useStyles from './navBarStyles'
 
 export default () => {
 	const classes = useStyles()
@@ -30,6 +30,7 @@ export default () => {
 							<button
 								onClick={() => setIsMenuOpen(!isMenuOpen)}
 								className={classes.menuButton}
+								type="button"
 							>
 								<img
 									className={classes.openMenuIcon}

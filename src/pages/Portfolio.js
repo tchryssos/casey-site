@@ -1,8 +1,8 @@
 import React from 'react'
 
 import PageWrapper from 'components/PageWrapper'
-import PageContent from 'components/PageWrapper/components/PageContent'
-import PageDescription from 'components/PageWrapper/components/PageDescription'
+import PageContent from 'components/PageContent'
+import PageDescription from 'components/PageDescription'
 import ContentBlock from 'components/ContentBlock'
 import Heading from 'components/Typography/Heading'
 import Body from 'components/Typography/Body'
@@ -21,7 +21,7 @@ export default () => (
 				<Heading>Portfolio Design</Heading>
 				<Spacer />
 				<Body>
-					I became very interested in web design and coding after working closely with a developer to redesign my personal website. After learning enough React to edit things on my own website, I wanted to design and build something all on my own so I redid a friend's portfolio as well.
+					I became very interested in web design and coding after working closely with a developer to redesign my personal website. After learning enough React to edit things on my own website, I wanted to design and build something all on my own so I redid a friend&apos;s portfolio as well.
 				</Body>
 			</ContentBlock>
 		</PageDescription>
@@ -62,7 +62,7 @@ export default () => (
 				</Body>
 				<Spacer />
 				<Body>
-					After learning enough React to make updates to my personal website, I wanted to code a site from scratch. With Mariah's site, I tried to apply a visual system that showed more personality than the black and white Squarespace.
+					After learning enough React to make updates to my personal website, I wanted to code a site from scratch. With Mariah&apos;s site, I tried to apply a visual system that showed more personality than the black and white Squarespace.
 				</Body>
 				<Spacer />
 				<Body>

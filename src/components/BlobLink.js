@@ -1,7 +1,7 @@
 import React from 'react'
 import clsx from 'clsx'
 import { NavLink } from 'react-router-dom'
-import useStyles from './styles'
+import useStyles from './blobLinkStyles'
 
 export default ({
 	src, className, link, altText, category, filter,

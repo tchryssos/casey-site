@@ -3,7 +3,7 @@ import { createUseStyles } from 'react-jss'
 
 import PageWrapper from 'components/PageWrapper'
 import ContentBlock from 'components/ContentBlock'
-import PageContent from 'components/PageWrapper/components/PageContent'
+import PageContent from 'components/PageContent'
 import Heading from 'components/Typography/Heading'
 import SubHeading from 'components/Typography/SubHeading'
 import Spacer from 'components/Spacer'
