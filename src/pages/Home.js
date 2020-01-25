@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { createUseStyles } from 'react-jss'
 import BlobLink from 'components/BlobLink'
+import BlobFilterBar from 'components/BlobFilterBar'
 import blobLinkData from 'constants/blobLinks'
 import { MD_MIN_STRING } from 'constants/styles/breakpoints'
 
@@ -21,33 +22,6 @@ const useStyles = createUseStyles({
 		margin: '16px',
 		maxHeight: '100vh',
 		width: '100%',
-	},
-	blobNav: {
-		width: '100%',
-		display: 'flex',
-		justifyContent: 'center',
-		margin: 20,
-	},
-	filter: {
-		marginRight: 10,
-		marginLeft: 10,
-		zIndex: 2000,
-		cursor: 'pointer',
-		fontSize: 18,
-		appearance: 'none',
-		border: 'none',
-		paddingTop: 0,
-		marginTop: 0,
-		'&:hover': {
-			textDecoration: 'underline',
-		},
-		'&:focus': {
-			outline: 'none',
-			textDecoration: 'underline',
-		},
-	},
-	lineyboy: {
-		fontSize: 18,
 	},
 	[MD_MIN_STRING]: {
 		homeWrapper: {
@@ -71,13 +45,11 @@ export default () => {
 	})
 	return (
 		<div className={classes.homeContainer}>
-			<div className={classes.blobNav}>
-				<button onClick={hideNone} className={classes.filter}>All</button>
-				<p className={classes.lineyboy}> | </p>
-				<button onClick={hideProduct} className={classes.filter}>Graphic Design</button>
-				<p className={classes.lineyboy}> | </p>
-				<button onClick={hideGraphic} className={classes.filter}>Product Design</button>
-			</div>
+			<BlobFilterBar
+				hideGraphic={hideGraphic}
+				hideProduct={hideProduct}
+				hideNone={hideNone}
+			/>
 			<div className={classes.homeWrapper}>
 				{blobLinks}
 			</div>
