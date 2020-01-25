@@ -35,7 +35,9 @@ const useStyles = createUseStyles({
 	},
 })
 
-const FilterButton = ({ onClick, text, filter, isActive, classes }) => (
+const FilterButton = ({
+	onClick, text, filter, isActive, classes,
+}) => (
 	<button
 		onClick={onClick}
 		className={clsx(
