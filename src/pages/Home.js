@@ -49,6 +49,7 @@ export default () => {
 				hideGraphic={hideGraphic}
 				hideProduct={hideProduct}
 				hideNone={hideNone}
+				filter={filter}
 			/>
 			<div className={classes.homeWrapper}>
 				{blobLinks}
