@@ -1,19 +1,19 @@
 // import ChangeThingsVideo from 'static/svg/home/ChangeThingsVideo.svg'
-import ChaseSapphire from 'static/svg/home/ChaseSapphire.svg'
-import FISMarketing from 'static/svg/home/FISMarketing.svg'
-import About from 'static/svg/home/About.svg'
-import Portfolio from 'static/svg/home/Portfolio.svg'
-import MusicalRug from 'static/svg/home/MusicalRug.svg'
-import SeatGeekScholarship from 'static/svg/home/SeatGeekScholarship.svg'
-import TheUprisingCreative from 'static/svg/home/TheUprisingCreative.svg'
-import UIDesign from 'static/svg/home/UIDesign.svg'
-import FISWeb from 'static/svg/home/FISWeb.svg'
-import ListenJay from 'static/svg/home/ListenJay.svg'
+import ChaseSapphire from 'static/svg/home/ChaseSapphire-1.svg'
+import FISMarketing from 'static/svg/home/FISMarketing-1.svg'
+import About from 'static/svg/home/About-1.svg'
+import Portfolio from 'static/svg/home/Portfolio-1.svg'
+import MusicalRug from 'static/svg/home/MusicalRug-1.svg'
+import SeatGeekScholarship from 'static/svg/home/SeatGeekScholarship-1.svg'
+import TheUprisingCreative from 'static/svg/home/TheUprisingCreative-1.svg'
+import UIDesign from 'static/svg/home/UIDesign-1.svg'
+import FISWeb from 'static/svg/home/FISWeb-1.svg'
+import ListenJay from 'static/svg/home/ListenJay-1.svg'
 
 const blobLinkData = {
 	FISMarketing: {
 		src: FISMarketing,
-		svgFile: 'FISMarketing',
+		className: 'FISMarketing',
 		link: '/flatiron-marketing',
 		altText: 'Flatiron School Marketing',
 		width: 50, // Width in percentage
@@ -22,7 +22,7 @@ const blobLinkData = {
 	},
 	FISWeb: {
 		src: FISWeb,
-		svgFile: 'FISWeb',
+		className: 'FISWeb',
 		link: '/fis-web',
 		altText: 'Flatiron School Web Design',
 		width: 50,
@@ -30,7 +30,7 @@ const blobLinkData = {
 	},
 	ListenJay: {
 		src: ListenJay,
-		svgFile: 'ListenJay',
+		className: 'ListenJay',
 		link: '/listenjay',
 		altText: 'Listen Jay UX/UI Design',
 		width: 40,
@@ -39,7 +39,7 @@ const blobLinkData = {
 	},
 	MusicalRug: {
 		src: MusicalRug,
-		svgFile: 'MusicalRug',
+		className: 'MusicalRug',
 		link: '/musical-rug',
 		altText: 'Musical Rug',
 		width: 40,
@@ -48,7 +48,7 @@ const blobLinkData = {
 	},
 	TheUprisingCreative: {
 		src: TheUprisingCreative,
-		svgFile: 'TheUprisingCreative',
+		className: 'TheUprisingCreative',
 		link: '/uprising',
 		altText: 'Uprising Creative',
 		width: 50,
@@ -57,7 +57,7 @@ const blobLinkData = {
 	},
 	SeatGeekScholarship: {
 		src: SeatGeekScholarship,
-		svgFile: 'SeatGeekScholarship',
+		className: 'SeatGeekScholarship',
 		link: '/seatgeek',
 		altText: 'SeatGeek Scholarship',
 		width: 100,
@@ -66,7 +66,7 @@ const blobLinkData = {
 	},
 	Portfolio: {
 		src: Portfolio,
-		svgFile: 'Portfolio',
+		className: 'Portfolio',
 		link: '/portfolio',
 		altText: 'Portfolio Design',
 		width: 100,
@@ -74,7 +74,7 @@ const blobLinkData = {
 	},
 	ChaseSapphire: {
 		src: ChaseSapphire,
-		svgFile: 'ChaseSapphire',
+		className: 'ChaseSapphire',
 		link: '/chase-sapphire',
 		altText: 'Chase Sapphire Reserve',
 		width: 50,
@@ -83,7 +83,7 @@ const blobLinkData = {
 	},
 	UIDesign: {
 		src: UIDesign,
-		svgFile: 'UIDesign',
+		className: 'UIDesign',
 		link: '/UI-design',
 		altText: 'UI Design',
 		width: 50,
@@ -91,7 +91,7 @@ const blobLinkData = {
 	},
 	About: {
 		src: About,
-		svgFile: 'About',
+		className: 'About',
 		link: '/about',
 		altText: 'About Me Page',
 		width: 100,

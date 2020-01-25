@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom'
 import useStyles from './styles'
 
 export default ({
-	src, svgFile, link, altText, category, filter,
+	src, className, link, altText, category, filter,
 	zIndex, width,
 }) => {
 	const classes = useStyles({ zIndex, width })
@@ -14,7 +14,7 @@ export default ({
 			className={
 				clsx(
 					classes.linkWrapper,
-					classes[svgFile],
+					classes[className],
 					{ [classes.filtered]: filter === category },
 				)
 			}
