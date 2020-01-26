@@ -10,29 +10,29 @@ const useStyles = createUseStyles({
 		justifyContent: 'center',
 		alignItems: 'center',
 		margin: 20,
-		zIndex: -1,
 	},
 	filter: {
 		backgroundColor: 'transparent',
 		padding: [[6, 12]],
-		zIndex: 2000,
+		margin: [[0, 12]],
+		zIndex: 10,
 		cursor: 'pointer',
 		fontSize: 18,
 		appearance: 'none',
 		border: 'none',
 		'&:hover': {
-			textDecoration: 'underline',
+			// textDecoration: 'underline',
 		},
 		'&:focus': {
 			outline: 'none',
-			textDecoration: 'underline',
+			// textDecoration: 'underline',
 		},
 	},
 	lineyBoy: {
 		fontSize: 18,
 	},
 	activeFilter: {
-		backgroundColor: gray,
+		backgroundColor: '#efefef',
 	},
 })
 
@@ -68,7 +68,7 @@ export default ({
 				isActive={null}
 				text="All"
 			/>
-			<Bar classes={classes} />
+			{/* <Bar classes={classes} /> */}
 			<FilterButton
 				classes={classes}
 				onClick={hideProduct}
@@ -76,7 +76,7 @@ export default ({
 				isActive="product"
 				text="Graphic Design"
 			/>
-			<Bar classes={classes} />
+			{/* <Bar classes={classes} /> */}
 			<FilterButton
 				classes={classes}
 				onClick={hideGraphic}

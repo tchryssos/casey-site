@@ -18,7 +18,7 @@ export default createUseStyles({
 		position: 'fixed',
 		top: 0,
 		left: 0,
-		zIndex: 1000,
+		zIndex: 100,
 	},
 	menuVisible: {
 		display: 'flex',
@@ -42,7 +42,7 @@ export default createUseStyles({
 		justifyContent: 'center',
 		borderTop: `solid 1px ${gray}`,
 		backgroundColor: white,
-		zIndex: 1000,
+		zIndex: 9,
 	},
 	navContainer: {
 		display: 'flex',
