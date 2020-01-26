@@ -42,7 +42,7 @@ export default createUseStyles({
 		justifyContent: 'center',
 		borderTop: `solid 1px ${gray}`,
 		backgroundColor: white,
-		zIndex: 9,
+		zIndex: 200,
 	},
 	navContainer: {
 		display: 'flex',
@@ -65,6 +65,9 @@ export default createUseStyles({
 		width: '8px',
 	},
 	[MD_MIN_STRING]: {
+		// navWrapper: {
+		// 	zIndex: 50,
+		// },
 		menu: {
 			backgroundColor: white,
 			width: `calc(${fixedColumnWidthPerc}% - 16px)`,

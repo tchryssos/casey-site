@@ -2,6 +2,7 @@ import React from 'react'
 import { createUseStyles } from 'react-jss'
 import clsx from 'clsx'
 import { gray } from 'constants/styles/colors'
+import { MD_MIN_STRING } from 'constants/styles/breakpoints'
 
 const useStyles = createUseStyles({
 	blobNav: {
@@ -20,12 +21,8 @@ const useStyles = createUseStyles({
 		fontSize: 18,
 		appearance: 'none',
 		border: 'none',
-		'&:hover': {
-			// textDecoration: 'underline',
-		},
 		'&:focus': {
 			outline: 'none',
-			// textDecoration: 'underline',
 		},
 	},
 	lineyBoy: {
@@ -33,6 +30,11 @@ const useStyles = createUseStyles({
 	},
 	activeFilter: {
 		backgroundColor: '#efefef',
+	},
+	[MD_MIN_STRING]: {
+		filter: {
+			zIndex: 500,
+		},
 	},
 })
 
