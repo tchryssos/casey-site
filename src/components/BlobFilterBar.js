@@ -10,6 +10,7 @@ const useStyles = createUseStyles({
 		justifyContent: 'center',
 		alignItems: 'center',
 		margin: 20,
+		zIndex: -1,
 	},
 	filter: {
 		backgroundColor: 'transparent',
