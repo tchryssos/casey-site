@@ -65,9 +65,6 @@ export default createUseStyles({
 		width: '8px',
 	},
 	[MD_MIN_STRING]: {
-		// navWrapper: {
-		// 	zIndex: 50,
-		// },
 		menu: {
 			backgroundColor: white,
 			width: `calc(${fixedColumnWidthPerc}% - 16px)`,
