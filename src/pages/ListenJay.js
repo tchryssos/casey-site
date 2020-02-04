@@ -10,7 +10,7 @@ import Spacer from 'components/Spacer'
 import Image from 'components/Image'
 import SubHeading from 'components/Typography/SubHeading'
 
-import ResultsPod from 'static/images/ListenJay/iterations.png'
+import ResultsPod from 'static/images/ListenJay/result_podacst.png'
 import Areas from 'static/images/ListenJay/areas.png'
 import Wireframes from 'static/images/ListenJay/wireframes.jpg'
 import LJBranding from 'static/images/ListenJay/LJ-branding.png'
@@ -54,13 +54,6 @@ export default () => (
 				<Image size="full" src={LJBranding} />
 				<Image size="full" src={Player} />
 				<Image size="full" src={Home} />
-				<Spacer />
-				<Spacer />
-				<SubHeading>FEEDBACK AND ITERATIONS</SubHeading>
-				<Spacer />
-				<Body>
-					After talking through the first drafts with the Listen Jay team, it be became apparent that the platform's real differentiator is the ability to share specific clips from a podcast. In the second iteration, we condensed the player and all of the rating functionality to bring the transcript up higher on the page and added new components to better educate our users on our value.
-				</Body>
 			</ContentBlock>
 		</PageContent>
 	</PageWrapper>
