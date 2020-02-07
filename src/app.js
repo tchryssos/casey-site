@@ -19,6 +19,7 @@ import SeatGeekScholarship from 'pages/SeatGeekScholarship'
 import ChaseSapphire from 'pages/ChaseSapphire'
 import FISWeb from 'pages/FISWeb'
 import ListenJay from 'pages/listenjay'
+import ELO from 'pages/elo'
 import About from 'pages/About'
 
 import cursor from 'static/images/Misc/cursor.png'
@@ -147,6 +148,10 @@ const App = ({ location }) => {
 					<Route
 						path="/about"
 						component={About}
+					/>
+					<Route
+						path="/elo"
+						component={ELO}
 					/>
 				</Switch>
 				<NavBar />
