@@ -9,11 +9,13 @@ import Body from 'components/Typography/Body'
 import Spacer from 'components/Spacer'
 import Image from 'components/Image'
 import SubHeading from 'components/Typography/SubHeading'
+import VideoPlayer from 'components/VideoPlayer'
 
 import OGELO from 'static/images/ELO/Og-elo.png'
 import FirstELO from 'static/images/ELO/first-elo.png'
 import ELOGif from 'static/images/ELO/elo-account-flow.gif'
 import ELOWhiteboard from 'static/images/ELO/elo-whiteboard.png'
+
 
 export default () => (
 	<PageWrapper>
@@ -62,6 +64,16 @@ export default () => (
 				<Spacer />
 				<Body>
 					After we created a roadmap for the project, I went off and created wireframe prototypes to make sure we had thought out every user action we wanted to include.
+				</Body>
+				<VideoPlayer
+					src="https://player.vimeo.com/video/390019243?autoplay=1&loop=1"
+					title="Musical rug demo"
+				/>
+				<Spacer />
+				<SubHeading>BRANDING AND VISUAL DESIGN</SubHeading>
+				<Spacer />
+				<Body>
+					Once we felt comfortable with the wireframes and functionality, I explored a few visual directions for the platform.
 				</Body>
 				<Spacer />
 				<Spacer />
