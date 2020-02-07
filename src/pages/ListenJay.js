@@ -10,12 +10,12 @@ import Spacer from 'components/Spacer'
 import Image from 'components/Image'
 import SubHeading from 'components/Typography/SubHeading'
 
-import ResultsPod from 'static/images/ListenJay/result_podacst.png'
+import ResultsPod from 'static/images/ListenJay/iterations.png'
 import Areas from 'static/images/ListenJay/areas.png'
 import Wireframes from 'static/images/ListenJay/wireframes.jpg'
 import LJBranding from 'static/images/ListenJay/LJ-branding.png'
 import Player from 'static/images/ListenJay/player-hifi.png'
-import Home from 'static/images/ListenJay/home-hifi.png'
+import Iteration from 'static/images/ListenJay/iterations-2.png'
 
 
 export default () => (
@@ -38,6 +38,9 @@ export default () => (
 				<Spacer />
 				<SubHeading>IDENTIFY AREAS FOR IMPROVEMENT</SubHeading>
 				<Spacer />
+				<Body>
+					This round of wireframes and mockups was something that I proactively brought to ListenJay without the benefit of talking to them first. These areas were things I identified as a new user without knowledge of teh business strategy.
+				</Body>
 				<Image size="full" src={Areas} />
 				<Spacer />
 				<Spacer />
@@ -49,11 +52,18 @@ export default () => (
 				<SubHeading>BRANDING AND HI-FIDELITY MOCK UPS</SubHeading>
 				<Spacer />
 				<Body>
-					With the Listen Jay branding I wanted to use a more consistent font family that would improve legibility. I also wanted to incorporate colors that made the platform feel modern and use them in a more inviting way.
+					With the Listen Jay branding I wanted to use a more consistent font family that would improve legibility. I also wanted to incorporate colors that are similar to the original colors but made the platform feel modern and use them in a more inviting way.
 				</Body>
 				<Image size="full" src={LJBranding} />
 				<Image size="full" src={Player} />
-				<Image size="full" src={Home} />
+				<Spacer />
+				<Spacer />
+				<SubHeading>FEEDBACK AND ITERATION</SubHeading>
+				<Spacer />
+				<Body>
+					After talking to the ListenJay team, I learned a lot about the functionality of the platform that informed the second round of designs. The key differentiator of ListenJay is the ability to share any line from the transcript and link directly to that part. This lead me to condense the player to bring the transcript higher on the page and remove many of the call-to-actions that a user would encounter before reaching the transcript.
+				</Body>
+				<Image size="full" src={Iteration} />
 			</ContentBlock>
 		</PageContent>
 	</PageWrapper>
