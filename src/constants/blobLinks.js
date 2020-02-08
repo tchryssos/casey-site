@@ -44,7 +44,7 @@ const blobLinkData = {
 		altText: 'Musical Rug',
 		width: 40,
 		zIndex: 2,
-		category: 'product',
+		category: 'graphic',
 	},
 	TheUprisingCreative: {
 		src: TheUprisingCreative,
