@@ -19,16 +19,16 @@ export default createUseStyles({
 		opacity: 0.3,
 	},
 	// Custom CSS for blob placement
-	FISMarketing: {
+	ListenJay: {
 		transform: 'translate(8vw, -4vw)',
 	},
-	FISWeb: {
+	ELO: {
 		transform: 'translateY(8vw)',
 	},
-	MusicalRug: {
+	FISMarketing: {
 		transform: 'translate(6vw, 3vw)',
 	},
-	ListenJay: {
+	FISWeb: {
 		transform: 'translate(6vw, -2vw)',
 	},
 	TheUprisingCreative: {
@@ -43,7 +43,7 @@ export default createUseStyles({
 	ChaseSapphire: {
 		transform: 'translate(3vw, -55vw)',
 	},
-	UIDesign: {
+	MusicalRug: {
 		transform: 'translate(0vw, -55vw)',
 	},
 	About: {
@@ -55,16 +55,16 @@ export default createUseStyles({
 				paddingBottom: 0,
 			},
 		},
-		FISMarketing: {
+		ListenJay: {
 			transform: 'translateX(0)',
 		},
-		FISWeb: {
+		ELO: {
 			transform: 'translate(-5vw, 5vw)',
 		},
-		MusicalRug: {
+		FISMarketing: {
 			transform: 'translate(-2vw, 1vw)',
 		},
-		ListenJay: {
+		FISWeb: {
 			transform: 'translate(-2vw, -0.5vw)',
 		},
 		TheUprisingCreative: {
@@ -79,7 +79,7 @@ export default createUseStyles({
 		ChaseSapphire: {
 			transform: 'translate(1vw, -26vw)',
 		},
-		UIDesign: {
+		MusicalRug: {
 			transform: 'translate(-1vw, -24vw)',
 		},
 		About: {

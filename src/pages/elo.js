@@ -69,8 +69,9 @@ export default () => (
 					After we created a roadmap for the project, I went off and created wireframe prototypes to make sure we had thought out every user action we wanted to include.
 				</Body>
 				<VideoPlayer
-					src="https://player.vimeo.com/video/390019243?autoplay=1&loop=1"
+					src="https://player.vimeo.com/video/390019243?loop=1"
 					title="Musical rug demo"
+					aspectRatio="1:1"
 				/>
 				<Spacer />
 				<Heading>BRANDING AND VISUAL DESIGN</Heading>

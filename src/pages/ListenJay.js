@@ -70,6 +70,7 @@ export default () => (
 				<VideoPlayer
 					src="https://player.vimeo.com/video/390219313?loop=1"
 					title="Musical rug demo"
+					aspectRatio="1:1"
 				/>
 			</ContentBlock>
 		</PageContent>

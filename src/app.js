@@ -11,7 +11,6 @@ import MenuContext from 'contexts/menu'
 import NavBar from 'components/NavBar'
 import Home from 'pages/Home'
 import FISMarketing from 'pages/FISMarketing'
-import UIDesign from 'pages/UIDesign'
 import Portfolio from 'pages/Portfolio'
 import MusicalRug from 'pages/MusicalRug'
 import TheUprisingCreative from 'pages/TheUprisingCreative'
@@ -114,8 +113,8 @@ const App = ({ location }) => {
 						component={FISMarketing}
 					/>
 					<Route
-						path={blobLinkData.UIDesign.link}
-						component={UIDesign}
+						path={blobLinkData.ELO.link}
+						component={ELO}
 					/>
 					<Route
 						path={blobLinkData.Portfolio.link}
