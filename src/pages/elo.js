@@ -27,7 +27,7 @@ export default () => (
 				<Heading>ELO Tracker -WIP-</Heading>
 				<Spacer />
 				<Body>
-					This project was something that my boyfriend started as a personal project so that him and his coworkers could track their rankings while they played Super Smash Bros. At first we worked on coding a simple one page site together, but it quickly evolved into recruiting a back-end dev friend of ours to build a platform that anyone could use to do the same.
+					This project was something that my boyfriend started as a personal project so that him and his coworkers could track their rankings while they played Super Smash Bros. At first we worked on coding a simple one page site together, but it quickly evolved into something larger.
 				</Body>
 				<Spacer />
 				<Body>

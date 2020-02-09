@@ -141,7 +141,7 @@ const App = ({ location }) => {
 						component={FISWeb}
 					/>
 					<Route
-						path="/listenjay"
+						path="/listen-jay"
 						component={ListenJay}
 					/>
 					<Route

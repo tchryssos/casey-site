@@ -59,7 +59,7 @@ export default createUseStyles({
 			transform: 'translateX(0)',
 		},
 		ELO: {
-			transform: 'translate(-5vw, 5vw)',
+			transform: 'translate(-5vw, 1vw)',
 		},
 		FISMarketing: {
 			transform: 'translate(-2vw, 1vw)',

@@ -41,7 +41,7 @@ const blobLinkData = {
 		className: 'FISMarketing',
 		link: '/flatiron-school-marketing',
 		altText: 'Flatiron School Marketing Design',
-		width: 40,
+		width: 50,
 		zIndex: 2,
 		category: 'graphic',
 	},
