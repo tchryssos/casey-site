@@ -1,18 +1,18 @@
-import ChaseSapphire from 'static/svg/home/ChaseSapphire.svg'
-import FISMarketing from 'static/svg/home/FISMarketing.svg'
-import About from 'static/svg/home/About.svg'
-import Portfolio from 'static/svg/home/Portfolio.svg'
-import MusicalRug from 'static/svg/home/MusicalRug.svg'
-import SeatGeekScholarship from 'static/svg/home/SeatGeekScholarship.svg'
-import TheUprisingCreative from 'static/svg/home/TheUprisingCreative.svg'
-import ELO from 'static/svg/home/ELO.svg'
-import FISWeb from 'static/svg/home/FISWeb.svg'
-import ListenJay from 'static/svg/home/ListenJay.svg'
+import ChaseSapphire from 'static/svg/home/ChaseSapphire-2.svg'
+import FISMarketing from 'static/svg/home/FISMarketing-2.svg'
+import About from 'static/svg/home/About-2.svg'
+import Portfolio from 'static/svg/home/Portfolio-2.svg'
+import MusicalRug from 'static/svg/home/MusicalRug-2.svg'
+import SeatGeekScholarship from 'static/svg/home/SeatGeekScholarship-2.svg'
+import TheUprisingCreative from 'static/svg/home/TheUprisingCreative-2.svg'
+import ELO from 'static/svg/home/ELO-2.svg'
+import FISWeb from 'static/svg/home/FISWeb-2.svg'
+import ListenJay from 'static/svg/home/ListenJay-2.svg'
 
 const blobLinkData = {
 	ListenJay: {
 		src: ListenJay,
-		className: 'Listen Jay',
+		className: 'ListenJay',
 		link: '/listen-jay',
 		altText: 'Listen Jay UX/UI Design',
 		width: 50, // Width in percentage
