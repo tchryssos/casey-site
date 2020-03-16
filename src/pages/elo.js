@@ -12,12 +12,11 @@ import SubHeading from 'components/Typography/SubHeading'
 import VideoPlayer from 'components/VideoPlayer'
 
 import OGELO from 'static/images/ELO/Og-elo.png'
-import FirstELO from 'static/images/ELO/first-elo.png'
-import ELOGif from 'static/images/ELO/elo-account-flow.gif'
 import ELOWireframes from 'static/images/ELO/elo-wireframes.png'
 import ELOWhiteboard from 'static/images/ELO/elo-whiteboard.png'
 import ELOHiDef1 from 'static/images/ELO/hidef-1.png'
 import ELOHiDef2 from 'static/images/ELO/hidef-2.png'
+import ELOStorybook from 'static/images/ELO/storybook.gif'
 import ELODarkmode from 'static/images/ELO/elo-darkmode.gif'
 import ELOBluemode from 'static/images/ELO/elo-bluemode.png'
 import ELOYellow from 'static/images/ELO/elo-yellow.png'
@@ -27,7 +26,7 @@ export default () => (
 	<PageWrapper>
 		<PageDescription>
 			<ContentBlock>
-				<Heading>ELO Tracker</Heading>
+				<Heading>Ladders ELO Tracker</Heading>
 				<Spacer />
 				<Body>
 					This project was something that my boyfriend started as a personal project so that him and his coworkers could track their rankings while they played Super Smash Bros. At first we worked on coding a simple one page site together, but it quickly evolved into something larger.
@@ -76,7 +75,22 @@ export default () => (
 				<Image size="full" src={ELOHiDef1} />
 				<Image size="full" src={ELOHiDef2} />
 				<Spacer />
-				<Heading>BRANDING AND VISUAL DESIGN</Heading>
+				<SubHeading>STORYBOOK PRODUCTION</SubHeading>
+				<Spacer />
+				<Body>
+					We used Storybook to build and design all of the components.
+				</Body>
+				<Image size="full" src={ELOStorybook} />
+				<Spacer />
+				<SubHeading>CHALLENGES WE FACED</SubHeading>
+				<Spacer />
+				<Body>
+					We used Storybook to build and design all of the components.
+				</Body>
+				<Spacer />
+				<Spacer />
+				<Spacer />
+				<Heading>Branding</Heading>
 				<Spacer />
 				<Body>
 					Once we felt comfortable with the wireframes and functionality, I explored a few visual directions for the platform.
@@ -85,7 +99,7 @@ export default () => (
 				<SubHeading>Direction 1</SubHeading>
 				<Spacer />
 				<Body>
-					Most gamers use dark mode so that they are not looking at bright screens at night and hurting their eyes. Most gaming-adjacent platforms that we looked at, such as Discord and Challoneg also primarily use a dark mode for their UI.
+					Most gamers use dark mode so that they are not looking at bright screens at night and hurting their eyes. Most gaming-adjacent platforms that we looked at, such as Discord and Challonge also primarily use a dark mode for their UI.
 				</Body>
 				<Image size="full" src={ELODarkmode} />
 				<Spacer />
@@ -104,6 +118,13 @@ export default () => (
 					Here I wanted to try something very different and out of the box. I wanted to have something very playful since games are playful!
 				</Body>
 				<Image size="full" src={ELOYellow} />
+				<Spacer />
+				<Spacer />
+				<SubHeading>Name and Logo</SubHeading>
+				<Spacer />
+				<Body>
+					Here I wanted to try something very different and out of the box. I wanted to have something very playful since games are playful!
+				</Body>
 				<Spacer />
 				<Spacer />
 				<SubHeading>This project is ongoing! This is where we are at currently.</SubHeading>
