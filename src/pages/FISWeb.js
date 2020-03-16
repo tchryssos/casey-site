@@ -15,6 +15,7 @@ import HeroAfter from 'static/images/FISWeb/FISWebHero-02.png'
 import HeroAfter2 from 'static/images/FISWeb/FISWebHero-03.png'
 import HelloBar from 'static/images/FISWeb/FISWebHelloBar.png'
 import Modal from 'static/images/FISWeb/FISWebModal.png'
+import Buttons from 'static/images/FISWeb/accessible_buttons.png'
 
 export default () => (
 	<PageWrapper>
@@ -49,6 +50,14 @@ export default () => (
 				</Body>
 				<Image size="full" src={HelloBar} />
 				<Image size="full" src={Modal} />
+				<Spacer />
+				<Spacer />
+				<Heading>Accessible Buttons</Heading>
+				<Spacer />
+				<Body>
+						None of the buttons on our current site meet AA accessibility standards. To make our site more accessible and up to date with our other branding, we mocked up all of the on-brand color combinations that could meet AA standards.
+				</Body>
+				<Image bordered size="full" src={Buttons} />
 			</ContentBlock>
 		</PageContent>
 	</PageWrapper>
