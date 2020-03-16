@@ -22,13 +22,15 @@ import Perlman from 'static/images/SeatGeekScholarship/perlman.png'
 import Coalition from 'static/images/SeatGeekScholarship/coalition.png'
 
 const useStyles = createUseStyles({
+	hideMd: {
+		[MD_MIN_STRING]: {
+			display: 'none',
+		},
+	},
 	hideSm: {
 		display: 'none',
 	},
 	[MD_MIN_STRING]: {
-		hideMd: {
-			display: 'none',
-		},
 		hideSm: {
 			display: 'block',
 		},
