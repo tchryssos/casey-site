@@ -14,7 +14,10 @@ import VideoPlayer from 'components/VideoPlayer'
 import OGELO from 'static/images/ELO/Og-elo.png'
 import FirstELO from 'static/images/ELO/first-elo.png'
 import ELOGif from 'static/images/ELO/elo-account-flow.gif'
+import ELOWireframes from 'static/images/ELO/elo-wireframes.png'
 import ELOWhiteboard from 'static/images/ELO/elo-whiteboard.png'
+import ELOHiDef1 from 'static/images/ELO/hidef-1.png'
+import ELOHiDef2 from 'static/images/ELO/hidef-2.png'
 import ELODarkmode from 'static/images/ELO/elo-darkmode.gif'
 import ELOBluemode from 'static/images/ELO/elo-bluemode.png'
 import ELOYellow from 'static/images/ELO/elo-yellow.png'
@@ -24,7 +27,7 @@ export default () => (
 	<PageWrapper>
 		<PageDescription>
 			<ContentBlock>
-				<Heading>ELO Tracker -WIP-</Heading>
+				<Heading>ELO Tracker</Heading>
 				<Spacer />
 				<Body>
 					This project was something that my boyfriend started as a personal project so that him and his coworkers could track their rankings while they played Super Smash Bros. At first we worked on coding a simple one page site together, but it quickly evolved into something larger.
@@ -37,42 +40,41 @@ export default () => (
 		</PageDescription>
 		<PageContent>
 			<ContentBlock>
-				<Heading>VERSION 1</Heading>
+				<Heading>Product Design</Heading>
+				<Spacer />
+				<SubHeading>THE IDEA</SubHeading>
 				<Spacer />
 				<Body>
-					This is what my boyfriend had built on his own just for him and his friends to use together.
+					This was the original site that was only accesible to one group of people to use for one game.
 				</Body>
 				<Image bordered size="full" src={OGELO} />
 				<Spacer />
-				<Body>
-					I coded the front-end to clean it up a little and look like this.
-				</Body>
-				<Image size="full" src={FirstELO} />
-				<Spacer />
-				<Spacer />
-				<Heading>VERSION 2</Heading>
+				<SubHeading>SCALING THE PRODUCT</SubHeading>
 				<Spacer />
 				<Body>
-					We decided we wanted more of our friends and even strangers to be able to use the platform and use it for multiple games at a time. At this stage we created a flow to create an account and manage all of your scoreboards.
-				</Body>
-				<Image size="full" src={ELOGif} />
-				<Spacer />
-				<Spacer />
-				<Heading>VERSION 3</Heading>
-				<Spacer />
-				<Body>
-					At this point we recruited our friend who is a backend developer to help us make a more robust user experience. Here we created a brand new roadmap, mapping out all of the features we needed for an MVP.
+					After a few iterations based on what we could build on our own, we recruited our friend who is a backend developer to help us execute on a more robust user experience. Here we created a brand new roadmap, mapping out all of the features we needed for an MVP.
 				</Body>
 				<Image size="full" src={ELOWhiteboard} />
+				<Spacer />
+				<SubHeading>WIREFRAMES</SubHeading>
 				<Spacer />
 				<Body>
 					After we created a roadmap for the project, I went off and created wireframe prototypes to make sure we had thought out every user action we wanted to include.
 				</Body>
+				<Image size="full" src={ELOWireframes} />
 				<VideoPlayer
 					src="https://player.vimeo.com/video/390019243?loop=1"
 					title="Musical rug demo"
 					aspectRatio="1:1"
 				/>
+				<Spacer />
+				<SubHeading>VISUAL DESIGN</SubHeading>
+				<Spacer />
+				<Body>
+					To see the full branding exercise click here.
+				</Body>
+				<Image size="full" src={ELOHiDef1} />
+				<Image size="full" src={ELOHiDef2} />
 				<Spacer />
 				<Heading>BRANDING AND VISUAL DESIGN</Heading>
 				<Spacer />
