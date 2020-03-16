@@ -36,11 +36,12 @@ const baseStyle = {
 const useStyles = createUseStyles({
 	// Start - Base Styles - Start
 	'@import': [
-		"url('https://fonts.googleapis.com/css?family=Anonymous+Pro&display=swap')",
+		"url('https://fonts.googleapis.com/css?family=Anonymous+Pro|Work+Sans&display=swap')",
 	],
 	'@global': {
 		'*': {
 			fontFamily: '"Anonymous Pro", monospace',
+			// fontFamily: '"Work Sans", sans-serif',
 		},
 		html: baseStyle,
 		body: {
