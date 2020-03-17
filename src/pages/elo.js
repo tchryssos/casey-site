@@ -73,7 +73,7 @@ export default () => (
 				<SubHeading>VISUAL DESIGN</SubHeading>
 				<Spacer />
 				<Body>
-					To see the full branding exercise click here.
+					See the full branding exercise lower down on the page.
 				</Body>
 				<Image size="full" src={ELOHiDef1} />
 				<Image size="full" src={ELOHiDef2} />
@@ -84,12 +84,6 @@ export default () => (
 					We used Storybook to build and design all of the components.
 				</Body>
 				<Image size="full" src={ELOStorybook} />
-				<Spacer />
-				<SubHeading>CHALLENGES WE FACED</SubHeading>
-				<Spacer />
-				<Body>
-					We used Storybook to build and design all of the components.
-				</Body>
 				<Spacer />
 				<Spacer />
 				<Spacer />
@@ -137,7 +131,7 @@ export default () => (
 				<Image size="full" src={ELOStyle} />
 				<Spacer />
 				<Spacer />
-				<SubHeading>This project is ongoing! This is where we are at currently.</SubHeading>
+				<SubHeading>This project is ongoing! We are currently in production.</SubHeading>
 				<Spacer />
 				<Spacer />
 			</ContentBlock>
