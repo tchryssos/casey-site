@@ -20,6 +20,9 @@ import ELOStorybook from 'static/images/ELO/storybook.gif'
 import ELODarkmode from 'static/images/ELO/elo-darkmode.gif'
 import ELOBluemode from 'static/images/ELO/elo-bluemode.png'
 import ELOYellow from 'static/images/ELO/elo-yellow.png'
+import ELOAltLogo from 'static/images/ELO/elo-alt-logos.png'
+import ELOLogo from 'static/images/ELO/elo-logo.png'
+import ELOStyle from 'static/images/ELO/elo-styleguide.png'
 
 
 export default () => (
@@ -120,11 +123,18 @@ export default () => (
 				<Image size="full" src={ELOYellow} />
 				<Spacer />
 				<Spacer />
-				<SubHeading>Name and Logo</SubHeading>
+				<SubHeading>Logo</SubHeading>
 				<Spacer />
 				<Body>
-					Here I wanted to try something very different and out of the box. I wanted to have something very playful since games are playful!
+					We developed a list of many names for for the platform and once we landed on Ladders we created multiple logo options below.
 				</Body>
+				<Image size="full" src={ELOAltLogo} />
+				<Spacer />
+				<Body>
+					Below are the final logos.
+				</Body>
+				<Image size="full" src={ELOLogo} />
+				<Image size="full" src={ELOStyle} />
 				<Spacer />
 				<Spacer />
 				<SubHeading>This project is ongoing! This is where we are at currently.</SubHeading>
