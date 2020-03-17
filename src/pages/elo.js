@@ -16,10 +16,8 @@ import ELOWireframes from 'static/images/ELO/elo-wireframes.png'
 import ELOWhiteboard from 'static/images/ELO/elo-whiteboard.png'
 import ELOHiDef1 from 'static/images/ELO/hidef-1.png'
 import ELOHiDef2 from 'static/images/ELO/hidef-2.png'
-import ELOStorybook from 'static/images/ELO/storybook.gif'
-import ELODarkmode from 'static/images/ELO/elo-darkmode.gif'
-import ELOBluemode from 'static/images/ELO/elo-bluemode.png'
-import ELOYellow from 'static/images/ELO/elo-yellow.png'
+import ELOStorybook from 'static/images/ELO/elo-storybook.png'
+import ELODirections from 'static/images/ELO/elo-directions.png'
 import ELOAltLogo from 'static/images/ELO/elo-alt-logos.png'
 import ELOLogo from 'static/images/ELO/elo-logo.png'
 import ELOStyle from 'static/images/ELO/elo-styleguide.png'
@@ -70,54 +68,15 @@ export default () => (
 					aspectRatio="1:1"
 				/>
 				<Spacer />
-				<SubHeading>VISUAL DESIGN</SubHeading>
+				<SubHeading>EXPLORING VISUAL DIRECTIONS</SubHeading>
 				<Spacer />
 				<Body>
-					See the full branding exercise lower down on the page.
+					For this project we explored 3 different visual directions. One that used relied heavily on the dark mode aesthetic we saw a lot in the space, one that used a blue mode to keep the accessibily of dark mode but allo wus to stand out and one that went entirely out of the box.
 				</Body>
-				<Image size="full" src={ELOHiDef1} />
-				<Image size="full" src={ELOHiDef2} />
-				<Spacer />
-				<SubHeading>STORYBOOK PRODUCTION</SubHeading>
-				<Spacer />
-				<Body>
-					We used Storybook to build and design all of the components.
-				</Body>
-				<Image size="full" src={ELOStorybook} />
+				<Image size="full" src={ELODirections} />
 				<Spacer />
 				<Spacer />
-				<Spacer />
-				<Heading>Branding</Heading>
-				<Spacer />
-				<Body>
-					Once we felt comfortable with the wireframes and functionality, I explored a few visual directions for the platform.
-				</Body>
-				<Spacer />
-				<SubHeading>Direction 1</SubHeading>
-				<Spacer />
-				<Body>
-					Most gamers use dark mode so that they are not looking at bright screens at night and hurting their eyes. Most gaming-adjacent platforms that we looked at, such as Discord and Challonge also primarily use a dark mode for their UI.
-				</Body>
-				<Image size="full" src={ELODarkmode} />
-				<Spacer />
-				<Spacer />
-				<SubHeading>Direction 2</SubHeading>
-				<Spacer />
-				<Body>
-					For a second direction I tried a blue mode so that we could keep the usability of a dark mode but stand out from out competitors a little more and add some more personality.
-				</Body>
-				<Image size="full" src={ELOBluemode} />
-				<Spacer />
-				<Spacer />
-				<SubHeading>Direction 3</SubHeading>
-				<Spacer />
-				<Body>
-					Here I wanted to try something very different and out of the box. I wanted to have something very playful since games are playful!
-				</Body>
-				<Image size="full" src={ELOYellow} />
-				<Spacer />
-				<Spacer />
-				<SubHeading>Logo</SubHeading>
+				<SubHeading>LOGO AND STYLE GUIDE</SubHeading>
 				<Spacer />
 				<Body>
 					We developed a list of many names for for the platform and once we landed on Ladders we created multiple logo options below.
@@ -129,6 +88,22 @@ export default () => (
 				</Body>
 				<Image size="full" src={ELOLogo} />
 				<Image size="full" src={ELOStyle} />
+				<Spacer />
+				<Spacer />
+				<SubHeading>FINAL VISUAL DESIGN</SubHeading>
+				<Spacer />
+				<Body>
+					See the full branding exercise here.
+				</Body>
+				<Image size="full" src={ELOHiDef1} />
+				<Image size="full" src={ELOHiDef2} />
+				<Spacer />
+				<SubHeading>STORYBOOK PRODUCTION</SubHeading>
+				<Spacer />
+				<Body>
+					We used Storybook to build and design all of the components.
+				</Body>
+				<Image size="full" src={ELOStorybook} />
 				<Spacer />
 				<Spacer />
 				<SubHeading>This project is ongoing! We are currently in production.</SubHeading>
