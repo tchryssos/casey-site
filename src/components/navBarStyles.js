@@ -11,7 +11,7 @@ export default createUseStyles({
 	menu: {
 		width: '100%',
 		height: `calc(100vh - ${navContentHeight + (navPaddingHeight * 2)}px)`,
-		backgroundColor: orange,
+		backgroundColor: '#346c63',
 		flexDirection: 'column',
 		justifyContent: 'space-around',
 		display: 'none',
@@ -27,6 +27,8 @@ export default createUseStyles({
 		cursor: 'pointer',
 		border: 'none',
 		backgroundColor: 'transparent',
+		display: 'flex',
+		alignItems: 'center',
 		'&:focus': {
 			outline: 'none',
 		},
@@ -53,21 +55,24 @@ export default createUseStyles({
 	},
 	logo: {
 		height: navContentHeight,
+		textDecoration: 'none',
+		color: 'black',
 	},
 	openMenuIcon: {
 		height: navContentHeight,
 	},
 	openMenuText: {
 		textAlign: 'left',
-		display: 'none',
+		// display: 'none',
 	},
 	navTextSpace: {
 		width: '8px',
 	},
 	[MD_MIN_STRING]: {
 		menu: {
-			backgroundColor: white,
-			width: `calc(${fixedColumnWidthPerc}% - 16px)`,
+			backgroundColor: '#346c63',
+			width: '240px',
+			// width: `calc(${fixedColumnWidthPerc}% - 16px)`,
 			height: '100%',
 			justifyContent: 'flex-start',
 		},

@@ -2,12 +2,12 @@ import React from 'react'
 import clsx from 'clsx'
 import { NavLink } from 'react-router-dom'
 import MenuContext from 'contexts/menu'
-import Logo from 'static/svg/menu/logo.svg'
 import HandsUp from 'static/svg/menu/handsup.svg'
 import HandsDown from 'static/svg/menu/handsdown.svg'
 import Heading from 'components/Typography/Heading'
 import MenuRoutes from 'components/MenuRoutes'
 import useStyles from './navBarStyles'
+
 
 export default () => {
 	const classes = useStyles()
@@ -32,17 +32,19 @@ export default () => {
 								className={classes.menuButton}
 								type="button"
 							>
-								<img
+								{/* <img
 									className={classes.openMenuIcon}
 									src={isMenuOpen ? HandsDown : HandsUp}
 									alt="Menu toggle icon"
-								/>
+								/> */}
 								<div className={classes.openMenuText}>
-									<Heading>{isMenuOpen ? 'menu open' : 'menu'}</Heading>
+									<Heading>
+										{isMenuOpen ? 'close' : 'menu'}
+									</Heading>
 								</div>
 							</button>
-							<NavLink to="/" exact>
-								<img className={classes.logo} src={Logo} alt="Casey B Logo" />
+							<NavLink className={classes.logo} to="/" exact>
+								<Heading>casey</Heading>
 							</NavLink>
 						</div>
 					</div>

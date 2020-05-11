@@ -30,6 +30,7 @@ const marPadZero = {
 const baseStyle = {
 	height: '100%',
 	width: '100%',
+	backgroundColor: '#e8e8e8',
 	...marPadZero,
 }
 
