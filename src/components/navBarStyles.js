@@ -22,6 +22,7 @@ export default createUseStyles({
 	},
 	menuVisible: {
 		display: 'flex',
+		zIndex: -10,
 	},
 	menuButton: {
 		cursor: 'pointer',
@@ -57,6 +58,7 @@ export default createUseStyles({
 		height: navContentHeight,
 		textDecoration: 'none',
 		color: 'black',
+		transition: 'transform 0.5s',
 	},
 	openMenuIcon: {
 		height: navContentHeight,
@@ -64,6 +66,12 @@ export default createUseStyles({
 	openMenuText: {
 		textAlign: 'left',
 		// display: 'none',
+	},
+	menuVisibleText: {
+		color: 'white',
+	},
+	menuSlide: {
+		transform: 'translateX(240px)',
 	},
 	navTextSpace: {
 		width: '8px',

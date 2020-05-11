@@ -14,7 +14,7 @@ const useStyles = createUseStyles({
 	},
 	[MD_MIN_STRING]: {
 		pageWrapper: {
-			maxWidth: `${pageContentTotalWidthPerc}%`,
+			// maxWidth: `${pageContentTotalWidthPerc}%`,
 			flexDirection: 'row',
 			justifyContent: 'flex-start',
 			paddingBottom: 0,

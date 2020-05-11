@@ -30,7 +30,7 @@ const marPadZero = {
 const baseStyle = {
 	height: '100%',
 	width: '100%',
-	backgroundColor: '#e8e8e8',
+	// backgroundColor: '#e8e8e8',
 	...marPadZero,
 }
 
@@ -72,6 +72,13 @@ const useStyles = createUseStyles({
 		height: '100%',
 		cursor: 'auto',
 	},
+	menuSlide: {
+		transform: 'translateX(240px)',
+	},
+	switchWrapper: {
+		backgroundColor: '#e8e8e8',
+		transition: 'transform 0.5s',
+	},
 	[MD_MIN_STRING]: {
 		app: {
 			cursor: `url(${cursor}),auto`,
@@ -104,10 +111,18 @@ const App = ({ location }) => {
 				className={
 					clsx(
 						classes.app,
-						isMenuOpen ? classes.fixedBody : '',
+						// isMenuOpen ? classes.fixedBody : '',
 					)
 				}
 			>
+				<div 
+				className={
+					clsx(
+						classes.switchWrapper,
+						{ [classes.menuSlide]: isMenuOpen },
+					)
+				}
+				>
 				<Switch>
 					<Route path="/" exact component={Home} />
 					<Route
@@ -155,6 +170,7 @@ const App = ({ location }) => {
 						component={ELO}
 					/>
 				</Switch>
+				</div>
 				<NavBar />
 			</div>
 		</MenuContext.Provider>
