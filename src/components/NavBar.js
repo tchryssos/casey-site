@@ -39,12 +39,12 @@ export default () => {
 								/> */}
 								<div className={classes.openMenuText}>
 									<Heading>
-										{isMenuOpen ? 'close' : 'menu'}
+										{isMenuOpen ? 'close' : 'Menu'}
 									</Heading>
 								</div>
 							</button>
 							<NavLink className={classes.logo} to="/" exact>
-								<Heading>casey</Heading>
+								<Heading>Casey</Heading>
 							</NavLink>
 						</div>
 					</div>
