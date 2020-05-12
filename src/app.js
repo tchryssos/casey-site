@@ -30,7 +30,7 @@ const marPadZero = {
 const baseStyle = {
 	height: '100%',
 	width: '100%',
-	// backgroundColor: '#e8e8e8',
+	backgroundColor: '#e8e8e8',
 	...marPadZero,
 }
 
@@ -68,6 +68,7 @@ const useStyles = createUseStyles({
 
 	app: {
 		position: 'relative',
+		backgroundColor: '#e8e8e8',
 		width: '100%',
 		height: '100%',
 		cursor: 'auto',
@@ -78,6 +79,8 @@ const useStyles = createUseStyles({
 	switchWrapper: {
 		backgroundColor: '#e8e8e8',
 		transition: 'transform 0.5s',
+		height: '100%',
+		position: 'relative',
 	},
 	[MD_MIN_STRING]: {
 		app: {
@@ -115,6 +118,7 @@ const App = ({ location }) => {
 					)
 				}
 			>
+				<NavBar />
 				<div 
 				className={
 					clsx(
@@ -171,7 +175,7 @@ const App = ({ location }) => {
 					/>
 				</Switch>
 				</div>
-				<NavBar />
+				{/* <NavBar /> */}
 			</div>
 		</MenuContext.Provider>
 	)
