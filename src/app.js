@@ -72,6 +72,7 @@ const useStyles = createUseStyles({
 		width: '100%',
 		height: '100%',
 		cursor: 'auto',
+		overflowX: 'hidden',
 	},
 	menuSlide: {
 		transform: 'translateX(240px)',
@@ -79,8 +80,10 @@ const useStyles = createUseStyles({
 	switchWrapper: {
 		backgroundColor: '#e8e8e8',
 		transition: 'transform 0.5s',
-		height: '100%',
-		position: 'relative',
+		width: '100%',
+		position: 'absolute',
+		top: 0,
+		left: 0,
 	},
 	[MD_MIN_STRING]: {
 		app: {

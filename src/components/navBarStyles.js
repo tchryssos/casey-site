@@ -10,10 +10,6 @@ export const navPaddingHeight = 24
 export default createUseStyles({
 	menuSlideContainer: {
 		position: 'fixed',
-		top: 0,
-		left: 0,
-		zIndex: 100,
-		height: '100%',
 	},
 	menu: {
 		width: '100%',
@@ -21,10 +17,11 @@ export default createUseStyles({
 		backgroundColor: '#346c63',
 		flexDirection: 'column',
 		justifyContent: 'space-around',
-		display: 'flex',
 		transition: 'transform 0.5s',
+		position: 'fixed',
 	},
-	menuSlideCover: {
+	menuCover: {
+		display: 'none',
 		transition: 'transform 0.5s',
 	},
 	menuButton: {
@@ -79,20 +76,24 @@ export default createUseStyles({
 		transform: 'translateX(240px)',
 	},
 	[MD_MIN_STRING]: {
+		menuSlideContainer: {
+			height: '100%',
+		},
 		menu: {
 			backgroundColor: '#0f2b41',
-			width: '240px',
+			width: 240,
 			height: '100%',
 			justifyContent: 'flex-start',
 			zIndex: 0,
 		},
-		menuSlideCover: {
-			backgroundColor: '#e8e8e8',
+		menuCover: {
+			display: 'block',
 			position: 'absolute',
 			top: 0,
 			left: 0,
-			height: '100%',
 			width: 240,
+			height: '100%',
+			backgroundColor: '#e8e8e8',
 		},
 		menuButton: {
 			padding: 0,
@@ -107,6 +108,7 @@ export default createUseStyles({
 			bottom: 'initial',
 			padding: '16px 0 0 0',
 			alignItems: 'flex-start',
+			borderTop: 'none',
 		},
 		navContainer: {
 			padding: '0 16px',

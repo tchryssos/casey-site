@@ -19,7 +19,7 @@ export default () => {
 						</div>
 						<div
 							className={clsx(
-								classes.menuSlideCover,
+								classes.menuCover,
 								{ [classes.menuSlide]: isMenuOpen },
 							)}
 						/>
