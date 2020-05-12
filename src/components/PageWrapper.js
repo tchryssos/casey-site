@@ -1,8 +1,7 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import { createUseStyles } from 'react-jss'
 import {
-	MD_MIN_STRING, pageContentTotalWidthPerc,
+	MD_MIN_STRING,
 } from 'constants/styles/breakpoints'
 
 const useStyles = createUseStyles({

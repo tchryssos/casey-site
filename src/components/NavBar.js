@@ -13,13 +13,16 @@ export default () => {
 		<MenuContext.Consumer>
 			{({ isMenuOpen, setIsMenuOpen }) => (
 				<>
-					<div
-						className={clsx(
-							classes.menu,
-							{ [classes.visibleMenu]: isMenuOpen },
-						)}
-					>
-						<MenuRoutes />
+					<div className={classes.menuSlideContainer}>
+						<div className={classes.menu}>
+							<MenuRoutes />
+						</div>
+						<div
+							className={clsx(
+								classes.menuCover,
+								{ [classes.menuSlide]: isMenuOpen },
+							)}
+						/>
 					</div>
 					<div className={classes.navWrapper}>
 						<div className={classes.navContainer}>

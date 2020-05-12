@@ -80,7 +80,6 @@ const useStyles = createUseStyles({
 	switchWrapper: {
 		backgroundColor: '#e8e8e8',
 		transition: 'transform 0.5s',
-		height: '100%',
 		width: '100%',
 		position: 'absolute',
 		top: 0,
