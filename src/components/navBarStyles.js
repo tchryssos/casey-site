@@ -8,24 +8,18 @@ export const navContentHeight = 32
 export const navPaddingHeight = 24
 
 export default createUseStyles({
-	menuSlideContainer: {
-		position: 'fixed',
-		top: 0,
-		left: 0,
-		zIndex: 100,
-		height: '100%',
-	},
 	menu: {
 		width: '100%',
 		height: `calc(100vh - ${navContentHeight + (navPaddingHeight * 2)}px)`,
 		backgroundColor: '#346c63',
 		flexDirection: 'column',
 		justifyContent: 'space-around',
-		display: 'flex',
+		display: 'none',
 		transition: 'transform 0.5s',
+		position: 'fixed',
 	},
-	menuSlideCover: {
-		transition: 'transform 0.5s',
+	visibleMenu: {
+		display: 'flex',
 	},
 	menuButton: {
 		cursor: 'pointer',
@@ -85,14 +79,6 @@ export default createUseStyles({
 			height: '100%',
 			justifyContent: 'flex-start',
 			zIndex: 0,
-		},
-		menuSlideCover: {
-			backgroundColor: '#e8e8e8',
-			position: 'absolute',
-			top: 0,
-			left: 0,
-			height: '100%',
-			width: 240,
 		},
 		menuButton: {
 			padding: 0,

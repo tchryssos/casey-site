@@ -6,23 +6,13 @@ import {
 } from 'constants/styles/breakpoints'
 
 const useStyles = createUseStyles({
-	descriptionSpacer: {
-		display: 'none',
-		width: `${pageDescriptionWidthPerc}%`,
-	},
 	pageContentWrapper: {
 		position: 'relative',
 	},
 	[MD_MIN_STRING]: {
-		descriptionSpacer: {
-			display: 'block',
-		},
 		pageContentWrapper: {
 			width: `${pageContentWidthPerc}%`,
-			padding: '0 16px',
-			'&:first-child': {
-				marginLeft: '50%',
-			},
+			padding: [[0, 16]],
 		},
 	},
 })
@@ -30,11 +20,8 @@ const useStyles = createUseStyles({
 export default ({ children }) => {
 	const classes = useStyles()
 	return (
-		<>
-			<div className={classes.descriptionSpacer} />
-			<div className={classes.pageContentWrapper}>
-				{children}
-			</div>
-		</>
+		<div className={classes.pageContentWrapper}>
+			{children}
+		</div>
 	)
 }

@@ -11,10 +11,11 @@ const useStyles = createUseStyles({
 		flexDirection: 'column',
 		justifyContent: 'center',
 		paddingBottom: '84px',
+		backgroundColor: '#e8e8e8',
 	},
 	[MD_MIN_STRING]: {
 		pageWrapper: {
-			// maxWidth: `${pageContentTotalWidthPerc}%`,
+			zIndex: 2,
 			flexDirection: 'row',
 			justifyContent: 'flex-start',
 			paddingBottom: 0,
