@@ -20,6 +20,12 @@ import Player from 'static/images/ListenJay/player-hifi.png'
 
 export default () => (
 	<PageWrapper>
+		<PageDescription>
+			<ContentBlock>
+				<Heading>Listen Jay UX/UI Design</Heading>
+				<Spacer />
+			</ContentBlock>
+		</PageDescription>
 		<PageContent>
 			<ContentBlock>
 				<Heading>Podcast Episode Page Improvements</Heading>

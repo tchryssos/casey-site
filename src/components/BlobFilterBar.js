@@ -1,6 +1,7 @@
 import React from 'react'
 import { createUseStyles } from 'react-jss'
 import clsx from 'clsx'
+import { gray } from 'constants/styles/colors'
 import { MD_MIN_STRING } from 'constants/styles/breakpoints'
 
 const useStyles = createUseStyles({
@@ -13,8 +14,8 @@ const useStyles = createUseStyles({
 	},
 	filter: {
 		backgroundColor: 'transparent',
-		padding: [[6, 6]],
-		margin: [[0, 18]],
+		padding: [[6, 12]],
+		margin: [[0, 12]],
 		zIndex: 10,
 		cursor: 'pointer',
 		fontSize: 18,
@@ -28,7 +29,7 @@ const useStyles = createUseStyles({
 		fontSize: 18,
 	},
 	activeFilter: {
-		borderBottom: '2px solid black',
+		backgroundColor: '#efefef',
 	},
 	[MD_MIN_STRING]: {
 		filter: {
@@ -72,18 +73,18 @@ export default ({
 			{/* <Bar classes={classes} /> */}
 			<FilterButton
 				classes={classes}
-				onClick={hideGraphic}
-				isActive="graphic"
-				filter={filter}
-				text="Product Design"
-			/>
-			{/* <Bar classes={classes} /> */}
-			<FilterButton
-				classes={classes}
 				onClick={hideProduct}
 				filter={filter}
 				isActive="product"
 				text="Graphic Design"
+			/>
+			{/* <Bar classes={classes} /> */}
+			<FilterButton
+				classes={classes}
+				onClick={hideGraphic}
+				isActive="graphic"
+				filter={filter}
+				text="Product Design"
 			/>
 		</div>
 	)
