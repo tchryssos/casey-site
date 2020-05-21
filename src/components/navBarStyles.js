@@ -70,7 +70,7 @@ export default createUseStyles({
 	},
 	[MD_MIN_STRING]: {
 		menu: {
-			backgroundColor: '#0f2b41',
+			backgroundColor: '#346c63',
 			width: '240px',
 			// width: `calc(${fixedColumnWidthPerc}% - 16px)`,
 			height: '100%',

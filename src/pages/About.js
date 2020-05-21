@@ -35,37 +35,24 @@ export default () => {
 						<ResumeButton />
 					</ContentBlock>
 					<ContentBlock>
-						<Heading>About Me</Heading>
+						<Heading>about me</Heading>
 						<Body>(click anywhere)</Body>
 						<Spacer height={2} />
-						<SubHeading>Email</SubHeading>
+						<SubHeading>EMAIL</SubHeading>
 						<Body>caseyebradford@gmail.com</Body>
-						<Spacer height={2} />
+						<Spacer />
 					</ContentBlock>
 					<ContentBlock>
-						<Heading>Experience</Heading>
+						<Heading>experience</Heading>
 						<Spacer height={2} />
-						<SubHeading>Design Manager</SubHeading>
-						<Body>WeWork (Flatiron School), Jan 2018 - April 2020</Body>
+						<SubHeading>DESIGN MANAGER</SubHeading>
+						<Body>WeWork (Flatiron School), Jan 2018 - current</Body>
 						<Spacer height={2} />
-						<SubHeading>Art Director</SubHeading>
+						<SubHeading>ART DIRECTOR</SubHeading>
 						<Body>Vayner Media, Aug 2017 - Aug 2018</Body>
 						<Spacer height={2} />
-						<SubHeading>Design Intern</SubHeading>
+						<SubHeading>DESIGN INTERN</SubHeading>
 						<Body>The Uprising Creative, Aug 2016</Body>
-						<Spacer height={2} />
-					</ContentBlock>
-					<ContentBlock>
-						<Heading>Education</Heading>
-						<Spacer height={2} />
-						<SubHeading>Design Lab</SubHeading>
-						<Body>UX Academy, May 2020 - ongoing</Body>
-						<Spacer height={2} />
-						<SubHeading>Flatiron School</SubHeading>
-						<Body>Intro to Front End Web Development, 2019</Body>
-						<Spacer height={2} />
-						<SubHeading>UCLA</SubHeading>
-						<Body>Design Media Arts, Class of 2016</Body>
 						<Spacer height={3} />
 					</ContentBlock>
 				</PageContent>
