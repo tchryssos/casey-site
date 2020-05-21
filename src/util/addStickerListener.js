@@ -7,9 +7,8 @@ import hottinet from 'static/images/About/hottinet.png'
 import kylie from 'static/images/About/kylie_sticker.png'
 import shoes from 'static/images/About/shoes_sticker.png'
 import terraceHouse from 'static/images/About/terraceHouse_sticker.png'
-import animalCrossing from 'static/images/About/animalcrossing.png'
 
-const stickers = [bread, cocci, hottinet, kylie, shoes, terraceHouse, animalCrossing]
+const stickers = [bread, cocci, fishing, hottinet, kylie, shoes, terraceHouse]
 const sticker = (e) => {
 	const src = stickers[Math.floor(Math.random() * stickers.length)]
 	const board = document.getElementById('stickerBoard')
