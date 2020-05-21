@@ -22,7 +22,6 @@ const useStyles = createUseStyles({
 		'&:nth-of-type(2)': {
 			marginTop: 16,
 		},
-		overflow: 'none',
 	},
 	borderedImageWrapper: {
 		border: [[1, black, 'solid']],

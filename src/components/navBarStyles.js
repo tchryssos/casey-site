@@ -8,25 +8,28 @@ export const navContentHeight = 32
 export const navPaddingHeight = 24
 
 export default createUseStyles({
+	menuSlideContainer: {
+		position: 'fixed',
+	},
 	menu: {
 		width: '100%',
 		height: `calc(100vh - ${navContentHeight + (navPaddingHeight * 2)}px)`,
-		backgroundColor: orange,
+		backgroundColor: '#346c63',
 		flexDirection: 'column',
 		justifyContent: 'space-around',
-		display: 'none',
+		transition: 'transform 0.5s',
 		position: 'fixed',
-		top: 0,
-		left: 0,
-		zIndex: 100,
 	},
-	menuVisible: {
-		display: 'flex',
+	menuCover: {
+		display: 'none',
+		transition: 'transform 0.5s',
 	},
 	menuButton: {
 		cursor: 'pointer',
 		border: 'none',
 		backgroundColor: 'transparent',
+		display: 'flex',
+		alignItems: 'center',
 		'&:focus': {
 			outline: 'none',
 		},
@@ -53,27 +56,51 @@ export default createUseStyles({
 	},
 	logo: {
 		height: navContentHeight,
+		textDecoration: 'none',
+		color: 'black',
+		transition: 'transform 0.5s',
 	},
 	openMenuIcon: {
 		height: navContentHeight,
 	},
 	openMenuText: {
 		textAlign: 'left',
-		display: 'none',
+	},
+	menuVisibleText: {
+		color: 'black',
 	},
 	navTextSpace: {
 		width: '8px',
 	},
+	menuSlide: {
+		transform: 'translateX(240px)',
+	},
 	[MD_MIN_STRING]: {
+		menuSlideContainer: {
+			height: '100%',
+		},
 		menu: {
-			backgroundColor: white,
-			width: `calc(${fixedColumnWidthPerc}% - 16px)`,
+			backgroundColor: '#0f2b41',
+			width: 240,
 			height: '100%',
 			justifyContent: 'flex-start',
+			zIndex: 0,
+		},
+		menuCover: {
+			display: 'block',
+			position: 'absolute',
+			top: 0,
+			left: 0,
+			width: 240,
+			height: '100%',
+			backgroundColor: '#e8e8e8',
 		},
 		menuButton: {
 			padding: 0,
 			margin: 0,
+		},
+		menuVisibleText: {
+			color: 'white',
 		},
 		navWrapper: {
 			backgroundColor: 'transparent',
@@ -81,6 +108,7 @@ export default createUseStyles({
 			bottom: 'initial',
 			padding: '16px 0 0 0',
 			alignItems: 'flex-start',
+			borderTop: 'none',
 		},
 		navContainer: {
 			padding: '0 16px',

@@ -30,18 +30,19 @@ const marPadZero = {
 const baseStyle = {
 	height: '100%',
 	width: '100%',
+	backgroundColor: '#e8e8e8',
 	...marPadZero,
 }
 
 const useStyles = createUseStyles({
 	// Start - Base Styles - Start
 	'@import': [
-		"url('https://fonts.googleapis.com/css?family=Anonymous+Pro|Work+Sans&display=swap')",
+		"url('https://fonts.googleapis.com/css?family=Work+Sans&display=swap')",
+		"url('https://use.typekit.net/fso6uhu.css')",
 	],
 	'@global': {
 		'*': {
-			fontFamily: '"Anonymous Pro", monospace',
-			// fontFamily: '"Work Sans", sans-serif',
+			fontFamily: '"Work Sans", sans-serif',
 		},
 		html: baseStyle,
 		body: {
@@ -67,9 +68,22 @@ const useStyles = createUseStyles({
 
 	app: {
 		position: 'relative',
+		backgroundColor: '#e8e8e8',
 		width: '100%',
 		height: '100%',
 		cursor: 'auto',
+		overflowX: 'hidden',
+	},
+	menuSlide: {
+		transform: 'translateX(240px)',
+	},
+	switchWrapper: {
+		backgroundColor: '#e8e8e8',
+		transition: 'transform 0.5s',
+		width: '100%',
+		position: 'absolute',
+		top: 0,
+		left: 0,
 	},
 	[MD_MIN_STRING]: {
 		app: {
@@ -103,10 +117,19 @@ const App = ({ location }) => {
 				className={
 					clsx(
 						classes.app,
-						isMenuOpen ? classes.fixedBody : '',
+						// isMenuOpen ? classes.fixedBody : '',
 					)
 				}
 			>
+				<NavBar />
+				<div 
+				className={
+					clsx(
+						classes.switchWrapper,
+						{ [classes.menuSlide]: isMenuOpen },
+					)
+				}
+				>
 				<Switch>
 					<Route path="/" exact component={Home} />
 					<Route
@@ -154,7 +177,8 @@ const App = ({ location }) => {
 						component={ELO}
 					/>
 				</Switch>
-				<NavBar />
+				</div>
+				{/* <NavBar /> */}
 			</div>
 		</MenuContext.Provider>
 	)

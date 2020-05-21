@@ -14,6 +14,7 @@ const useStyles = createUseStyles({
 		width: '100%',
 	},
 	homeWrapper: {
+		backgroundColor: '#e8e8e8',
 		display: 'flex',
 		flexWrap: 'wrap',
 		justifyContent: 'center',
