@@ -1,7 +1,8 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import { createUseStyles } from 'react-jss'
 import {
-	MD_MIN_STRING,
+	MD_MIN_STRING, pageContentTotalWidthPerc,
 } from 'constants/styles/breakpoints'
 
 const useStyles = createUseStyles({
@@ -10,11 +11,10 @@ const useStyles = createUseStyles({
 		flexDirection: 'column',
 		justifyContent: 'center',
 		paddingBottom: '84px',
-		backgroundColor: '#e8e8e8',
 	},
 	[MD_MIN_STRING]: {
 		pageWrapper: {
-			zIndex: 2,
+			// maxWidth: `${pageContentTotalWidthPerc}%`,
 			flexDirection: 'row',
 			justifyContent: 'flex-start',
 			paddingBottom: 0,
