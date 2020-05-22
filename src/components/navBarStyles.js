@@ -19,6 +19,7 @@ export default createUseStyles({
 		justifyContent: 'space-around',
 		transition: 'transform 0.5s',
 		position: 'fixed',
+		paddingTop: '50px',
 	},
 	menuCover: {
 		display: 'none',
@@ -73,11 +74,14 @@ export default createUseStyles({
 		width: '8px',
 	},
 	menuSlide: {
-		transform: 'translateX(240px)',
+		transform: 'translateX(0px)',
 	},
 	[MD_MIN_STRING]: {
 		menuSlideContainer: {
 			height: '100%',
+		},
+		menuSlide: {
+			transform: 'translateX(240px)',
 		},
 		menu: {
 			backgroundColor: '#0f2b41',
@@ -85,6 +89,7 @@ export default createUseStyles({
 			height: '100%',
 			justifyContent: 'flex-start',
 			zIndex: 0,
+			paddingTop: 0,
 		},
 		menuCover: {
 			display: 'block',
