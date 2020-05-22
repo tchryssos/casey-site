@@ -41,12 +41,12 @@ export default () => (
 				<Body>
 					This round of wireframes and mockups was something that I proactively brought to ListenJay without the benefit of talking to them first. These areas were things I identified as a new user without knowledge of teh business strategy.
 				</Body>
-				<Image size="full" src={Areas} />
+				<Image size="full" src={Areas} bordered />
 				<Spacer />
 				<Spacer />
 				<SubHeading>WIREFRAMES</SubHeading>
 				<Spacer />
-				<Image size="full" src={Wireframes} />
+				<Image size="full" src={Wireframes} bordered />
 				<Spacer />
 				<Spacer />
 				<SubHeading>BRANDING AND HI-FIDELITY MOCK UPS</SubHeading>

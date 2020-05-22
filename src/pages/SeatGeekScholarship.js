@@ -71,15 +71,16 @@ export default () => {
 						alt="Stickers"
 						size="full"
 						className={classes.hideSm}
+						bordered
 					/>
-					<Image src={FiftyFifty} alt="Scholarship advertisement" size="full" />
-					<Image src={Timeline} alt="Women in computing timeline" size="full" />
-					<Image src={CarolAnimation} alt="Animation of Carol Shaw" size="full" />
-					<Image src={Grace} alt="Grace Hopper Sticker" size="full" />
-					<Image src={Sweatshirt} alt="Trailblazer Sweatshirt" size="full" />
+					<Image src={FiftyFifty} alt="Scholarship advertisement" size="full" bordered />
+					<Image src={Timeline} alt="Women in computing timeline" size="full" bordered />
+					<Image src={CarolAnimation} alt="Animation of Carol Shaw" size="full" bordered />
+					<Image src={Grace} alt="Grace Hopper Sticker" size="full" bordered />
+					<Image src={Sweatshirt} alt="Trailblazer Sweatshirt" size="full" bordered />
 					<ItemGrid>
-						<Image src={Perlman} alt="Drawing of Radia Perlman" />
-						<Image src={Coalition} alt="50/50 gender coalition flyer" />
+						<Image src={Perlman} alt="Drawing of Radia Perlman" bordered />
+						<Image src={Coalition} alt="50/50 gender coalition flyer" bordered />
 					</ItemGrid>
 				</ContentBlock>
 			</PageContent>
