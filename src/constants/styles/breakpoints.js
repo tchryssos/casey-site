@@ -1,6 +1,6 @@
 // Media Queries
 export const MD_MIN_VALUE = 768
-export const LG_MIN_VALUE = 1100
+export const LG_MIN_VALUE = 1070
 export const XL_MIN_VALUE = 1200
 
 const mediaString = '@media'
@@ -11,7 +11,7 @@ export const XL_MIN_STRING = `${mediaString} (min-width: ${XL_MIN_VALUE}px)`
 
 // Content & Descriptions
 export const pageContentTotalWidthPerc = 80
-export const pageContentWidthPerc = 80
+export const pageContentWidthPerc = 60
 export const pageDescriptionWidthPerc = 100 - pageContentWidthPerc
 export const fixedColumnWidthPerc = Math.floor(
 	pageContentTotalWidthPerc * (pageDescriptionWidthPerc / 100),

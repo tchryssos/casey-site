@@ -101,7 +101,7 @@ export default createUseStyles({
 			transform: 'translate(1vw, -26vw)',
 		},
 		MusicalRug: {
-			transform: 'translate(-1vw, -24vw)',
+			transform: 'translate(-2vw, -24vw)',
 		},
 		About: {
 			transform: 'translateY(-30vw)',
