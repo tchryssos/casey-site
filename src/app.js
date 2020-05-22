@@ -84,6 +84,7 @@ const useStyles = createUseStyles({
 		position: 'absolute',
 		top: 0,
 		left: 0,
+		height: '100%',
 	},
 	[MD_MIN_STRING]: {
 		app: {
@@ -178,8 +179,8 @@ const App = ({ location }) => {
 						/>
 					</Switch>
 				</div>
-				{/* <NavBar /> */}
 			</div>
+				{/* <NavBar /> */}
 		</MenuContext.Provider>
 	)
 }
