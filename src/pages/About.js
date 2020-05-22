@@ -20,13 +20,14 @@ const useStyles = createUseStyles({
 		right: 0,
 		bottom: 0,
 		overflowX: 'hidden',
+		zIndex: 2000,
 	},
 })
 
 export default () => {
 	const classes = useStyles()
 	addStickerListener() // this is a useEffect
-
+	console.log('hey')
 	return (
 		<div className={classes.stickerBoard} id="stickerBoard">
 			<PageWrapper>

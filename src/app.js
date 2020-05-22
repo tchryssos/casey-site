@@ -17,7 +17,7 @@ import TheUprisingCreative from 'pages/TheUprisingCreative'
 import SeatGeekScholarship from 'pages/SeatGeekScholarship'
 import ChaseSapphire from 'pages/ChaseSapphire'
 import FISWeb from 'pages/FISWeb'
-import ListenJay from 'pages/listenjay'
+import ListenJay from 'pages/ListenJay'
 import ELO from 'pages/elo'
 import About from 'pages/About'
 
@@ -122,61 +122,61 @@ const App = ({ location }) => {
 				}
 			>
 				<NavBar />
-				<div 
-				className={
-					clsx(
-						classes.switchWrapper,
-						{ [classes.menuSlide]: isMenuOpen },
-					)
-				}
+				<div
+					className={
+						clsx(
+							classes.switchWrapper,
+							{ [classes.menuSlide]: isMenuOpen },
+						)
+					}
 				>
-				<Switch>
-					<Route path="/" exact component={Home} />
-					<Route
-						path={blobLinkData.FISMarketing.link}
-						component={FISMarketing}
-					/>
-					<Route
-						path={blobLinkData.ELO.link}
-						component={ELO}
-					/>
-					<Route
-						path={blobLinkData.Portfolio.link}
-						component={Portfolio}
-					/>
-					<Route
-						path={blobLinkData.MusicalRug.link}
-						component={MusicalRug}
-					/>
-					<Route
-						path={blobLinkData.TheUprisingCreative.link}
-						component={TheUprisingCreative}
-					/>
-					<Route
-						path={blobLinkData.SeatGeekScholarship.link}
-						component={SeatGeekScholarship}
-					/>
-					<Route
-						path={blobLinkData.ChaseSapphire.link}
-						component={ChaseSapphire}
-					/>
-					<Route
-						path={blobLinkData.FISWeb.link}
-						component={FISWeb}
-					/>
-					<Route
-						path="/listen-jay"
-						component={ListenJay}
-					/>
-					<Route
-						path="/about"
-						component={About}
-					/>
-					<Route
-						path="/elo"
-						component={ELO}
-					/>
-				</Switch>
+					<Switch>
+						<Route path="/" exact component={Home} />
+						<Route
+							path={blobLinkData.FISMarketing.link}
+							component={FISMarketing}
+						/>
+						<Route
+							path={blobLinkData.ELO.link}
+							component={ELO}
+						/>
+						<Route
+							path={blobLinkData.Portfolio.link}
+							component={Portfolio}
+						/>
+						<Route
+							path={blobLinkData.MusicalRug.link}
+							component={MusicalRug}
+						/>
+						<Route
+							path={blobLinkData.TheUprisingCreative.link}
+							component={TheUprisingCreative}
+						/>
+						<Route
+							path={blobLinkData.SeatGeekScholarship.link}
+							component={SeatGeekScholarship}
+						/>
+						<Route
+							path={blobLinkData.ChaseSapphire.link}
+							component={ChaseSapphire}
+						/>
+						<Route
+							path={blobLinkData.FISWeb.link}
+							component={FISWeb}
+						/>
+						<Route
+							path="/listen-jay"
+							component={ListenJay}
+						/>
+						<Route
+							path="/about"
+							component={About}
+						/>
+						<Route
+							path="/elo"
+							component={ELO}
+						/>
+					</Switch>
 				</div>
 				{/* <NavBar /> */}
 			</div>
@@ -184,7 +184,7 @@ const App = ({ location }) => {
 	)
 }
 
-const RouterApp = withRouter(props => <App {...props} />)
+const RouterApp = withRouter((props) => <App {...props} />)
 
 render(
 	<BrowserRouter>
