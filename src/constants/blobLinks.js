@@ -18,6 +18,8 @@ const blobLinkData = {
 		width: 50, // Width in percentage
 		zIndex: 3,
 		category: 'product',
+		descriptionText: 'Rethinking the most trafficked pages of a podcast discovery platform',
+		descriptionAlignment: 'left',
 	},
 	ELO: {
 		src: ELO,
@@ -26,6 +28,7 @@ const blobLinkData = {
 		altText: 'ELO Tracker',
 		width: 50,
 		category: 'product',
+		descriptionText: 'Building a gaming tool from the ground up',
 	},
 	FISWeb: {
 		src: FISWeb,
@@ -35,6 +38,8 @@ const blobLinkData = {
 		width: 40,
 		zIndex: 4,
 		category: 'product',
+		descriptionText: 'Keeping the Flatiron School site on-brand and accessible',
+		descriptionAlignment: 'left',
 	},
 	FISMarketing: {
 		src: FISMarketing,
@@ -44,6 +49,7 @@ const blobLinkData = {
 		width: 50,
 		zIndex: 2,
 		category: 'graphic',
+		descriptionText: 'Managing a creative team working on everything including out-of-home, video, organic and paid social',
 	},
 	TheUprisingCreative: {
 		src: TheUprisingCreative,
@@ -53,23 +59,28 @@ const blobLinkData = {
 		width: 50,
 		zIndex: 3,
 		category: 'graphic',
+		descriptionText: 'Print and web projects from my internship at an LA based design studio',
+		descriptionAlignment: 'left',
 	},
 	SeatGeekScholarship: {
 		src: SeatGeekScholarship,
 		className: 'SeatGeekScholarship',
 		link: '/seatgeek',
 		altText: 'SeatGeek Scholarship',
-		width: 100,
+		width: 90,
 		zIndex: 2,
 		category: 'graphic',
+		descriptionText: 'Building a digital campaign around our scholarship for women in tech',
 	},
 	Portfolio: {
 		src: Portfolio,
 		className: 'Portfolio',
 		link: '/portfolio',
 		altText: 'Portfolio Design',
-		width: 100,
+		width: 90,
 		category: 'product',
+		descriptionText: 'Designing this website you\'re on right now',
+		descriptionAlignment: 'left',
 	},
 	ChaseSapphire: {
 		src: ChaseSapphire,
@@ -79,6 +90,8 @@ const blobLinkData = {
 		width: 50,
 		zIndex: 2,
 		category: 'graphic',
+		descriptionText: 'Art Directing social campaigns for the hottest travel card',
+		descriptionAlignment: 'left',
 	},
 	MusicalRug: {
 		src: MusicalRug,
@@ -87,6 +100,7 @@ const blobLinkData = {
 		altText: 'Musical Rug',
 		width: 50,
 		category: 'graphic',
+		descriptionText: 'Combining software and hardware skills to create a textile that plays sound upon touch',
 	},
 	About: {
 		src: About,
@@ -94,6 +108,7 @@ const blobLinkData = {
 		link: '/about',
 		altText: 'About Me Page',
 		width: 100,
+		descriptionAlignment: 'none',
 	},
 }
 

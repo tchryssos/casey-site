@@ -1,11 +1,25 @@
 import React from 'react'
 import clsx from 'clsx'
 import { NavLink } from 'react-router-dom'
+import orNull from 'util/orNull'
 import useStyles from './blobLinkStyles'
+
+const Description = ({ classes, descriptionText, descriptionAlignment }) => (
+	<div
+		className={
+			clsx(
+				classes.blobDescriptionWrapper,
+				{ [classes.leftAligned]: descriptionAlignment === 'left' },
+			)
+		}
+	>
+		{descriptionText}
+	</div>
+)
 
 export default ({
 	src, className, link, altText, category, filter,
-	zIndex, width,
+	zIndex, width, descriptionText, descriptionAlignment,
 }) => {
 	const classes = useStyles({ zIndex, width })
 	return (
@@ -27,6 +41,14 @@ export default ({
 					/>
 				</NavLink>
 			</div>
+			{orNull(
+				descriptionAlignment !== 'none',
+				<Description
+					classes={classes}
+					descriptionText={descriptionText}
+					descriptionAlignment={descriptionAlignment}
+				/>,
+			)}
 		</div>
 	)
 }

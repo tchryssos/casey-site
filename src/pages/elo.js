@@ -54,14 +54,14 @@ export default () => (
 				<Body>
 					After a few iterations based on what we could build on our own, we recruited our friend who is a backend developer to help us execute on a more robust user experience. Here we created a brand new roadmap, mapping out all of the features we needed for an MVP.
 				</Body>
-				<Image size="full" src={ELOWhiteboard} />
+				<Image size="full" src={ELOWhiteboard} bordered />
 				<Spacer />
 				<SubHeading>WIREFRAMES</SubHeading>
 				<Spacer />
 				<Body>
 					After we created a roadmap for the project, I went off and created wireframe prototypes to make sure we had thought out every user action we wanted to include.
 				</Body>
-				<Image size="full" src={ELOWireframes} />
+				<Image size="full" src={ELOWireframes} bordered />
 				<VideoPlayer
 					src="https://player.vimeo.com/video/390019243?loop=1"
 					title="Musical rug demo"
@@ -73,7 +73,7 @@ export default () => (
 				<Body>
 					For this project we explored 3 different visual directions. One that used relied heavily on the dark mode aesthetic we saw a lot in the space, one that used a blue mode to keep the accessibily of dark mode but allo wus to stand out and one that went entirely out of the box.
 				</Body>
-				<Image size="full" src={ELODirections} />
+				<Image size="full" src={ELODirections} bordered />
 				<Spacer />
 				<Spacer />
 				<SubHeading>LOGO AND STYLE GUIDE</SubHeading>
@@ -87,7 +87,7 @@ export default () => (
 					Below are the final logos.
 				</Body>
 				<Image size="full" src={ELOLogo} />
-				<Image size="full" src={ELOStyle} />
+				<Image size="full" src={ELOStyle} bordered />
 				<Spacer />
 				<Spacer />
 				<SubHeading>FINAL VISUAL DESIGN</SubHeading>

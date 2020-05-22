@@ -1,16 +1,35 @@
 import { createUseStyles } from 'react-jss'
-import { MD_MIN_STRING } from 'constants/styles/breakpoints'
+import { MD_MIN_STRING, LG_MIN_STRING } from 'constants/styles/breakpoints'
 import { navContentHeight, navPaddingHeight } from 'components/navBarStyles'
 
 export default createUseStyles({
 	linkWrapper: ({ zIndex, width }) => ({
 		zIndex: zIndex || 1,
 		width: `${width}%`,
+		position: 'relative',
 		'&:last-of-type': {
 			paddingBottom: navContentHeight + (navPaddingHeight * 2) + 16,
 		},
 	}),
+	blobDescriptionWrapper: {
+		position: 'absolute',
+		top: '30%',
+		right: '-185px',
+		opacity: 0,
+		transition: 'opacity .15s',
+		width: '125px',
+		borderTop: '3px solid black',
+		paddingTop: '10px',
+		paddingLeft: '30px',
+		fontSize: '12px',
+	},
+	leftAligned: {
+		left: '-165px',
+		paddingLeft: 0,
+		paddingRight: '30px',
+	},
 	animationWrapper: {
+		transition: 'transform .15s',
 		'&:hover': {
 			transform: 'translate(16px, -16px)',
 		},
@@ -54,6 +73,10 @@ export default createUseStyles({
 			'&:last-of-type': {
 				paddingBottom: 0,
 			},
+			'&:hover $blobDescriptionWrapper': {
+				display: 'flex',
+				opacity: '100%',
+			},
 		},
 		ListenJay: {
 			transform: 'translateX(0)',
@@ -80,10 +103,20 @@ export default createUseStyles({
 			transform: 'translate(1vw, -26vw)',
 		},
 		MusicalRug: {
-			transform: 'translate(-1vw, -24vw)',
+			transform: 'translate(-2vw, -24vw)',
 		},
 		About: {
 			transform: 'translateY(-30vw)',
 		},
 	},
+	[LG_MIN_STRING]: {
+		blobDescriptionWrapper: {
+			right: '-275px',
+			width: '200px',
+			fontSize: '14px',
+		},
+		leftAligned: {
+			left: '-240px',
+	},
+},
 })

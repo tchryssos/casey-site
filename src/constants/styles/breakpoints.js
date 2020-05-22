@@ -1,6 +1,6 @@
 // Media Queries
 export const MD_MIN_VALUE = 768
-export const LG_MIN_VALUE = 992
+export const LG_MIN_VALUE = 1070
 export const XL_MIN_VALUE = 1200
 
 const mediaString = '@media'

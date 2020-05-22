@@ -17,7 +17,7 @@ import TheUprisingCreative from 'pages/TheUprisingCreative'
 import SeatGeekScholarship from 'pages/SeatGeekScholarship'
 import ChaseSapphire from 'pages/ChaseSapphire'
 import FISWeb from 'pages/FISWeb'
-import ListenJay from 'pages/listenjay'
+import ListenJay from 'pages/ListenJay'
 import ELO from 'pages/elo'
 import About from 'pages/About'
 
@@ -30,18 +30,19 @@ const marPadZero = {
 const baseStyle = {
 	height: '100%',
 	width: '100%',
+	backgroundColor: '#e8e8e8',
 	...marPadZero,
 }
 
 const useStyles = createUseStyles({
 	// Start - Base Styles - Start
 	'@import': [
-		"url('https://fonts.googleapis.com/css?family=Anonymous+Pro|Work+Sans&display=swap')",
+		"url('https://fonts.googleapis.com/css?family=Work+Sans&display=swap')",
+		"url('https://use.typekit.net/fso6uhu.css')",
 	],
 	'@global': {
 		'*': {
-			fontFamily: '"Anonymous Pro", monospace',
-			// fontFamily: '"Work Sans", sans-serif',
+			fontFamily: '"Work Sans", sans-serif',
 		},
 		html: baseStyle,
 		body: {
@@ -67,13 +68,32 @@ const useStyles = createUseStyles({
 
 	app: {
 		position: 'relative',
+		backgroundColor: '#e8e8e8',
 		width: '100%',
 		height: '100%',
 		cursor: 'auto',
+		overflowX: 'hidden',
+	},
+	menuSlide: {
+		transform: 'translateX(0px)',
+		zIndex: -10,
+	},
+	switchWrapper: {
+		backgroundColor: '#e8e8e8',
+		transition: 'transform 0.5s',
+		width: '100%',
+		position: 'absolute',
+		top: 0,
+		left: 0,
+		height: '100%',
 	},
 	[MD_MIN_STRING]: {
 		app: {
 			cursor: `url(${cursor}),auto`,
+		},
+		menuSlide: {
+			transform: 'translateX(240px)',
+			zIndex: 0,
 		},
 	},
 })
@@ -103,64 +123,74 @@ const App = ({ location }) => {
 				className={
 					clsx(
 						classes.app,
-						isMenuOpen ? classes.fixedBody : '',
+						// isMenuOpen ? classes.fixedBody : '',
 					)
 				}
 			>
-				<Switch>
-					<Route path="/" exact component={Home} />
-					<Route
-						path={blobLinkData.FISMarketing.link}
-						component={FISMarketing}
-					/>
-					<Route
-						path={blobLinkData.ELO.link}
-						component={ELO}
-					/>
-					<Route
-						path={blobLinkData.Portfolio.link}
-						component={Portfolio}
-					/>
-					<Route
-						path={blobLinkData.MusicalRug.link}
-						component={MusicalRug}
-					/>
-					<Route
-						path={blobLinkData.TheUprisingCreative.link}
-						component={TheUprisingCreative}
-					/>
-					<Route
-						path={blobLinkData.SeatGeekScholarship.link}
-						component={SeatGeekScholarship}
-					/>
-					<Route
-						path={blobLinkData.ChaseSapphire.link}
-						component={ChaseSapphire}
-					/>
-					<Route
-						path={blobLinkData.FISWeb.link}
-						component={FISWeb}
-					/>
-					<Route
-						path="/listen-jay"
-						component={ListenJay}
-					/>
-					<Route
-						path="/about"
-						component={About}
-					/>
-					<Route
-						path="/elo"
-						component={ELO}
-					/>
-				</Switch>
 				<NavBar />
+				<div
+					className={
+						clsx(
+							classes.switchWrapper,
+							{ [classes.menuSlide]: isMenuOpen },
+						)
+					}
+				>
+					<Switch>
+						<Route path="/" exact component={Home} />
+						<Route
+							path={blobLinkData.FISMarketing.link}
+							component={FISMarketing}
+						/>
+						<Route
+							path={blobLinkData.ELO.link}
+							component={ELO}
+						/>
+						<Route
+							path={blobLinkData.Portfolio.link}
+							component={Portfolio}
+						/>
+						<Route
+							path={blobLinkData.MusicalRug.link}
+							component={MusicalRug}
+						/>
+						<Route
+							path={blobLinkData.TheUprisingCreative.link}
+							component={TheUprisingCreative}
+						/>
+						<Route
+							path={blobLinkData.SeatGeekScholarship.link}
+							component={SeatGeekScholarship}
+						/>
+						<Route
+							path={blobLinkData.ChaseSapphire.link}
+							component={ChaseSapphire}
+						/>
+						<Route
+							path={blobLinkData.FISWeb.link}
+							component={FISWeb}
+						/>
+						<Route
+							path="/listen-jay"
+							component={ListenJay}
+						/>
+						<Route
+							path="/about"
+							component={About}
+						/>
+						<Route
+							path="/elo"
+							component={ELO}
+						/>
+					</Switch>
+				</div>
 			</div>
+				{/* <NavBar /> */}
 		</MenuContext.Provider>
 	)
 }
 
-const RouterApp = withRouter(props => <App {...props} />)
+const RouterApp = withRouter((props) => <App {...props} />)
 
 render(
 	<BrowserRouter>

@@ -14,12 +14,12 @@ const useStyles = createUseStyles({
 		position: 'relative',
 	},
 	[MD_MIN_STRING]: {
-		descriptionSpacer: {
-			display: 'block',
-		},
+			descriptionSpacer: {
+				display: 'block',
+			},
 		pageContentWrapper: {
 			width: `${pageContentWidthPerc}%`,
-			padding: '0 16px',
+			padding: [[0, 16]],
 			'&:first-child': {
 				marginLeft: '50%',
 			},

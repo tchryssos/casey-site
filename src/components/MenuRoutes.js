@@ -12,15 +12,20 @@ const useStyles = createUseStyles({
 		marginLeft: '16px',
 	},
 	menuLink: {
-		color: black,
+		color: 'white',
 		marginTop: '16px',
-		'&:first-of-type': {
-			marginTop: 0,
+		textDecoration: 'none',
+		fontSize: '18px',
+		'&:hover': {
+			textDecoration: 'underline',
 		},
 	},
 	[MD_MIN_STRING]: {
 		menuLinkWrapper: {
 			marginTop: '64px',
+		},
+		menuLink: {
+			fontSize: '14px',
 		},
 	},
 })

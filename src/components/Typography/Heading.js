@@ -1,5 +1,16 @@
 import React from 'react'
+import { createUseStyles } from 'react-jss'
 
-export default ({ children }) => (
-	<h1>{children}</h1>
-)
+const useStyles = createUseStyles({
+	headlineFont: {
+		fontFamily: '"buena-park-jf", serif',
+		fontWeight: 400,
+	},
+})
+
+export default ({ children }) => {
+	const classes = useStyles()
+	return (
+		<h1 className={classes.headlineFont}>{children}</h1>
+	)
+}
