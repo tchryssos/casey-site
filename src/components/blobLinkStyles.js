@@ -15,7 +15,8 @@ export default createUseStyles({
 		position: 'absolute',
 		top: '30%',
 		right: '-185px',
-		display: 'none',
+		opacity: 0,
+		transition: 'opacity .15s',
 		width: '125px',
 		borderTop: '3px solid black',
 		paddingTop: '10px',
@@ -25,9 +26,10 @@ export default createUseStyles({
 	leftAligned: {
 		left: '-165px',
 		paddingLeft: 0,
-		paddingRight: '30px'
+		paddingRight: '30px',
 	},
 	animationWrapper: {
+		transition: 'transform .15s',
 		'&:hover': {
 			transform: 'translate(16px, -16px)',
 		},
@@ -71,8 +73,9 @@ export default createUseStyles({
 			'&:last-of-type': {
 				paddingBottom: 0,
 			},
-			'&:hover $blobDescriptionWrapper' : {
+			'&:hover $blobDescriptionWrapper': {
 				display: 'flex',
+				opacity: '100%',
 			},
 		},
 		ListenJay: {
