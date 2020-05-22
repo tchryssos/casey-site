@@ -6,10 +6,25 @@ export default createUseStyles({
 	linkWrapper: ({ zIndex, width }) => ({
 		zIndex: zIndex || 1,
 		width: `${width}%`,
+		position: 'relative',
 		'&:last-of-type': {
 			paddingBottom: navContentHeight + (navPaddingHeight * 2) + 16,
 		},
+		'&:hover $blobDescriptionWrapper' : {
+			display: 'flex',
+		},
 	}),
+	blobDescriptionWrapper: {
+		position: 'absolute',
+		top: '30%',
+		left: '115%',
+		display: 'none',
+	},
+	blobDescriptionStyles: {
+		width: '200px',
+		borderTop: '3px solid black',
+		padding: '10px 0px 0px 30px',
+	},
 	animationWrapper: {
 		'&:hover': {
 			transform: 'translate(16px, -16px)',

@@ -18,6 +18,7 @@ const blobLinkData = {
 		width: 50, // Width in percentage
 		zIndex: 3,
 		category: 'product',
+		descriptionText: 'Rethinking the most trafficked pages of a podcast discovery platform',
 	},
 	ELO: {
 		src: ELO,
@@ -26,6 +27,7 @@ const blobLinkData = {
 		altText: 'ELO Tracker',
 		width: 50,
 		category: 'product',
+		descriptionText: 'Building a gaming tool from the ground up',
 	},
 	FISWeb: {
 		src: FISWeb,
@@ -35,6 +37,7 @@ const blobLinkData = {
 		width: 40,
 		zIndex: 4,
 		category: 'product',
+		descriptionText: 'Keeping the Flatiron School site on-brand and accessible',
 	},
 	FISMarketing: {
 		src: FISMarketing,
@@ -44,6 +47,7 @@ const blobLinkData = {
 		width: 50,
 		zIndex: 2,
 		category: 'graphic',
+		descriptionText: 'Managing a creative team working on everything including out-of-home, video, organic and paid social.',
 	},
 	TheUprisingCreative: {
 		src: TheUprisingCreative,
@@ -53,6 +57,7 @@ const blobLinkData = {
 		width: 50,
 		zIndex: 3,
 		category: 'graphic',
+		descriptionText: 'Print and web projects from my internship at an LA based design studio.',
 	},
 	SeatGeekScholarship: {
 		src: SeatGeekScholarship,
@@ -62,6 +67,7 @@ const blobLinkData = {
 		width: 100,
 		zIndex: 2,
 		category: 'graphic',
+		descriptionText: 'Building a digital campaign around our scholarship for women in tech',
 	},
 	Portfolio: {
 		src: Portfolio,
@@ -70,6 +76,7 @@ const blobLinkData = {
 		altText: 'Portfolio Design',
 		width: 100,
 		category: 'product',
+		descriptionText: 'Designing this website you&apos;re on right now',
 	},
 	ChaseSapphire: {
 		src: ChaseSapphire,
@@ -79,6 +86,7 @@ const blobLinkData = {
 		width: 50,
 		zIndex: 2,
 		category: 'graphic',
+		descriptionText: 'Art Directing social campaigns for the hottest travel card ',
 	},
 	MusicalRug: {
 		src: MusicalRug,
@@ -87,6 +95,7 @@ const blobLinkData = {
 		altText: 'Musical Rug',
 		width: 50,
 		category: 'graphic',
+		descriptionText: 'Combining software and hardware skills to create a textile that plays sound upon touch',
 	},
 	About: {
 		src: About,
