@@ -1,7 +1,7 @@
 import { createUseStyles } from 'react-jss'
-import { orange, white, gray } from 'constants/styles/colors'
+import { white, gray } from 'constants/styles/colors'
 import {
-	MD_MIN_STRING, fixedColumnWidthPerc,
+	MD_MIN_STRING,
 } from 'constants/styles/breakpoints'
 
 export const navContentHeight = 32

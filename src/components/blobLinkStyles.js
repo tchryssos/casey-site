@@ -1,7 +1,6 @@
 import { createUseStyles } from 'react-jss'
-import { MD_MIN_STRING } from 'constants/styles/breakpoints'
+import { MD_MIN_STRING, LG_MIN_STRING } from 'constants/styles/breakpoints'
 import { navContentHeight, navPaddingHeight } from 'components/navBarStyles'
-import { LG_MIN_VALUE, LG_MIN_STRING } from '../constants/styles/breakpoints'
 
 export default createUseStyles({
 	linkWrapper: ({ zIndex, width }) => ({

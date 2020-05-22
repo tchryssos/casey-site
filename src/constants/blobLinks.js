@@ -108,6 +108,7 @@ const blobLinkData = {
 		link: '/about',
 		altText: 'About Me Page',
 		width: 100,
+		descriptionAlignment: 'none',
 	},
 }
 
