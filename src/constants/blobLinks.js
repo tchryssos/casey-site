@@ -79,7 +79,7 @@ const blobLinkData = {
 		altText: 'Portfolio Design',
 		width: 90,
 		category: 'product',
-		descriptionText: 'Designing this website you&apos;re on right now',
+		descriptionText: 'Designing this website you\'re on right now',
 		descriptionAlignment: 'left',
 	},
 	ChaseSapphire: {
