@@ -1,6 +1,7 @@
 import { createUseStyles } from 'react-jss'
 import { MD_MIN_STRING } from 'constants/styles/breakpoints'
 import { navContentHeight, navPaddingHeight } from 'components/navBarStyles'
+import { LG_MIN_VALUE, LG_MIN_STRING } from '../constants/styles/breakpoints'
 
 export default createUseStyles({
 	linkWrapper: ({ zIndex, width }) => ({
@@ -10,20 +11,22 @@ export default createUseStyles({
 		'&:last-of-type': {
 			paddingBottom: navContentHeight + (navPaddingHeight * 2) + 16,
 		},
-		'&:hover $blobDescriptionWrapper' : {
-			display: 'flex',
-		},
 	}),
 	blobDescriptionWrapper: {
 		position: 'absolute',
 		top: '30%',
-		left: '115%',
+		right: '-185px',
 		display: 'none',
-	},
-	blobDescriptionStyles: {
-		width: '200px',
+		width: '125px',
 		borderTop: '3px solid black',
-		padding: '10px 0px 0px 30px',
+		paddingTop: '10px',
+		paddingLeft: '30px',
+		fontSize: '12px',
+	},
+	leftAligned: {
+		left: '-165px',
+		paddingLeft: 0,
+		paddingRight: '30px'
 	},
 	animationWrapper: {
 		'&:hover': {
@@ -69,6 +72,9 @@ export default createUseStyles({
 			'&:last-of-type': {
 				paddingBottom: 0,
 			},
+			'&:hover $blobDescriptionWrapper' : {
+				display: 'flex',
+			},
 		},
 		ListenJay: {
 			transform: 'translateX(0)',
@@ -101,4 +107,14 @@ export default createUseStyles({
 			transform: 'translateY(-30vw)',
 		},
 	},
+	[LG_MIN_STRING]: {
+		blobDescriptionWrapper: {
+			right: '-275px',
+			width: '200px',
+			fontSize: '14px',
+		},
+		leftAligned: {
+			left: '-240px',
+	},
+},
 })

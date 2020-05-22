@@ -3,24 +3,22 @@ import clsx from 'clsx'
 import { NavLink } from 'react-router-dom'
 import useStyles from './blobLinkStyles'
 
-const Description = ({ classes, descriptionText }) => (
+const Description = ({ classes, descriptionText, descriptionAlignment }) => (
 	<div
 		className={
 			clsx(
 				classes.blobDescriptionWrapper,
-				// { [classes.filtered]: filter === category },
+				{ [classes.leftAligned]: descriptionAlignment === 'left' },
 			)
 		}
 	>
-		<div className={classes.blobDescriptionStyles}>
-			{descriptionText}
-		</div>
+		{descriptionText}
 	</div>
 )
 
 export default ({
 	src, className, link, altText, category, filter,
-	zIndex, width, descriptionText,
+	zIndex, width, descriptionText, descriptionAlignment,
 }) => {
 	const classes = useStyles({ zIndex, width })
 	return (
@@ -42,7 +40,7 @@ export default ({
 					/>
 				</NavLink>
 			</div>
-			<Description classes={classes} descriptionText={descriptionText} />
+			<Description classes={classes} descriptionText={descriptionText} descriptionAlignment={descriptionAlignment} />
 		</div>
 	)
 }
