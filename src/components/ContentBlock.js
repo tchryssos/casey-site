@@ -1,23 +1,29 @@
 import React from 'react'
+import clsx from 'clsx'
 import { createUseStyles } from 'react-jss'
 import { MD_MIN_STRING } from 'constants/styles/breakpoints'
 
 const useStyles = createUseStyles({
 	contentBlock: {
-		margin: '16px',
+		padding: '48px 32px',
 	},
 	[MD_MIN_STRING]: {
 		contentBlock: {
-			margin: '16px 0',
-			padding: '16px',
+			margin: '0',
+			padding: '48px 20%',
 		},
 	},
 })
 
-export default ({ children }) => {
+export default ({ children, className }) => {
 	const classes = useStyles()
 	return (
-		<div className={classes.contentBlock}>
+		<div
+			className={clsx(
+				classes.contentBlock,
+				className,
+			)}
+		>
 			{children}
 		</div>
 	)
