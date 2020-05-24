@@ -10,6 +10,8 @@ export const navPaddingHeight = 24
 export default createUseStyles({
 	menuSlideContainer: {
 		position: 'fixed',
+		height: '100%',
+		width: '100%',
 	},
 	menu: {
 		width: '100%',
@@ -20,6 +22,7 @@ export default createUseStyles({
 		transition: 'transform 0.5s',
 		position: 'fixed',
 		paddingTop: '50px',
+		zIndex: -1,
 	},
 	menuCover: {
 		// display: 'none',
@@ -60,7 +63,6 @@ export default createUseStyles({
 		padding: '0 24px',
 	},
 	logo: {
-		// height: navContentHeight,
 		textDecoration: 'none',
 		color: 'black',
 		transition: 'transform 0.5s',
@@ -79,13 +81,15 @@ export default createUseStyles({
 	},
 	menuSlide: {
 		transform: 'translateX(0px)',
+		display: 'none',
 	},
 	[MD_MIN_STRING]: {
-		menuSlideContainer: {
-			height: '100%',
-		},
+		// menuSlideContainer: {
+		// 	height: '100%',
+		// },
 		menuSlide: {
 			transform: 'translateX(240px)',
+			display: 'block',
 		},
 		menu: {
 			backgroundColor: '#0f2b41',
