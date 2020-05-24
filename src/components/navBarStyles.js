@@ -22,8 +22,11 @@ export default createUseStyles({
 		paddingTop: '50px',
 	},
 	menuCover: {
-		display: 'none',
+		// display: 'none',
+		height: '100%',
+		backgroundColor: '#e8e8e8',
 		transition: 'transform 0.5s',
+		width: '100%',
 	},
 	menuButton: {
 		cursor: 'pointer',
