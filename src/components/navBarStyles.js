@@ -25,7 +25,6 @@ export default createUseStyles({
 		zIndex: -1,
 	},
 	menuCover: {
-		// display: 'none',
 		height: '100%',
 		backgroundColor: '#e8e8e8',
 		transition: 'transform 0.5s',
@@ -84,9 +83,6 @@ export default createUseStyles({
 		display: 'none',
 	},
 	[MD_MIN_STRING]: {
-		// menuSlideContainer: {
-		// 	height: '100%',
-		// },
 		menuSlide: {
 			transform: 'translateX(240px)',
 			display: 'block',
@@ -104,8 +100,6 @@ export default createUseStyles({
 			position: 'absolute',
 			top: 0,
 			left: 0,
-			width: 240,
-			height: '100%',
 			backgroundColor: '#e8e8e8',
 		},
 		menuButton: {
