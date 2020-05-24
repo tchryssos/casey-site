@@ -10,6 +10,8 @@ export const navPaddingHeight = 24
 export default createUseStyles({
 	menuSlideContainer: {
 		position: 'fixed',
+		height: '100%',
+		width: '100%',
 	},
 	menu: {
 		width: '100%',
@@ -20,10 +22,13 @@ export default createUseStyles({
 		transition: 'transform 0.5s',
 		position: 'fixed',
 		paddingTop: '50px',
+		zIndex: -1,
 	},
 	menuCover: {
-		display: 'none',
+		height: '100%',
+		backgroundColor: '#e8e8e8',
 		transition: 'transform 0.5s',
+		width: '100%',
 	},
 	menuButton: {
 		cursor: 'pointer',
@@ -31,6 +36,7 @@ export default createUseStyles({
 		backgroundColor: 'transparent',
 		display: 'flex',
 		alignItems: 'center',
+		padding: 0,
 		'&:focus': {
 			outline: 'none',
 		},
@@ -40,7 +46,7 @@ export default createUseStyles({
 		bottom: 0,
 		left: 0,
 		right: 0,
-		padding: `${navPaddingHeight}px 0`,
+		padding: '16px 0',
 		display: 'flex',
 		alignContent: 'center',
 		justifyContent: 'center',
@@ -56,7 +62,6 @@ export default createUseStyles({
 		padding: '0 24px',
 	},
 	logo: {
-		height: navContentHeight,
 		textDecoration: 'none',
 		color: 'black',
 		transition: 'transform 0.5s',
@@ -75,13 +80,12 @@ export default createUseStyles({
 	},
 	menuSlide: {
 		transform: 'translateX(0px)',
+		display: 'none',
 	},
 	[MD_MIN_STRING]: {
-		menuSlideContainer: {
-			height: '100%',
-		},
 		menuSlide: {
 			transform: 'translateX(240px)',
+			display: 'block',
 		},
 		menu: {
 			backgroundColor: '#0f2b41',
@@ -96,8 +100,6 @@ export default createUseStyles({
 			position: 'absolute',
 			top: 0,
 			left: 0,
-			width: 240,
-			height: '100%',
 			backgroundColor: '#e8e8e8',
 		},
 		menuButton: {
