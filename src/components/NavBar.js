@@ -3,6 +3,7 @@ import clsx from 'clsx'
 import { NavLink } from 'react-router-dom'
 import MenuContext from 'contexts/menu'
 import Heading from 'components/Typography/Heading'
+import MenuText from 'components/Typography/MenuText'
 import MenuRoutes from 'components/MenuRoutes'
 import useStyles from './navBarStyles'
 
@@ -39,9 +40,9 @@ export default () => {
 										)
 									}
 								>
-									<Heading>
+									<MenuText>
 										{isMenuOpen ? 'Close' : 'Menu'}
-									</Heading>
+									</MenuText>
 								</div>
 							</button>
 							<NavLink
@@ -54,7 +55,7 @@ export default () => {
 								to="/"
 								exact
 							>
-								<Heading>Casey</Heading>
+								<MenuText>Casey</MenuText>
 							</NavLink>
 						</div>
 					</div>

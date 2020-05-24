@@ -31,6 +31,7 @@ export default createUseStyles({
 		backgroundColor: 'transparent',
 		display: 'flex',
 		alignItems: 'center',
+		padding: 0,
 		'&:focus': {
 			outline: 'none',
 		},
@@ -40,7 +41,7 @@ export default createUseStyles({
 		bottom: 0,
 		left: 0,
 		right: 0,
-		padding: `${navPaddingHeight}px 0`,
+		padding: '16px 0',
 		display: 'flex',
 		alignContent: 'center',
 		justifyContent: 'center',
@@ -56,7 +57,7 @@ export default createUseStyles({
 		padding: '0 24px',
 	},
 	logo: {
-		height: navContentHeight,
+		// height: navContentHeight,
 		textDecoration: 'none',
 		color: 'black',
 		transition: 'transform 0.5s',
