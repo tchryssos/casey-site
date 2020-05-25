@@ -4,6 +4,7 @@ import { createUseStyles } from 'react-jss'
 const useStyles = createUseStyles({
 	bodyFont: {
 		fontFamily: '"Work Sans", sans-serif',
+		lineHeight: 1.25,
 	},
 })
 

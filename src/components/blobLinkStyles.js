@@ -22,6 +22,7 @@ export default createUseStyles({
 		paddingTop: '10px',
 		paddingLeft: '30px',
 		fontSize: '12px',
+		lineHeight: 1.25,
 	},
 	leftAligned: {
 		left: '-165px',
