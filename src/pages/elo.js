@@ -13,6 +13,7 @@ import Spacer from 'components/Spacer'
 import Image from 'components/Image'
 import SubHeading from 'components/Typography/SubHeading'
 import VideoPlayer from 'components/VideoPlayer'
+import ItemGrid from 'components/ItemGrid'
 
 import OGELO from 'static/images/ELO/Og-elo.png'
 import ELOWireframes from 'static/images/ELO/elo-wireframes.png'
@@ -24,13 +25,23 @@ import ELODirections from 'static/images/ELO/elo-directions.png'
 import ELOAltLogo from 'static/images/ELO/elo-alt-logos.png'
 import ELOLogo from 'static/images/ELO/elo-logo.png'
 import ELOStyle from 'static/images/ELO/elo-styleguide.png'
+import Test from 'static/images/ELO/test.png'
 
 const useStyles = createUseStyles({
 	headerColor: {
-		backgroundColor: 'red',
+		backgroundColor: '#fad793',
 		[MD_MIN_STRING]: {
-			paddingTop: 200,
+			paddingTop: 150,
 		},
+	},
+	wireFrameBlock: {
+		backgroundColor: '#4fa0f4',
+	},
+	half: {
+		width: '50%',
+	},
+	visualDesignBlock: {
+		backgroundColor: '#fad793',
 	},
 })
 
@@ -39,39 +50,44 @@ export default () => {
 	return (
 		<PageWrapper>
 			<ContentBlock className={classes.headerColor}>
-				<Heading>Ladders ELO Tracker</Heading>
+				<ItemGrid>
+					<div className={classes.half}>
+						<Heading>Ladders ELO Tracker</Heading>
+						<Spacer />
+						<Body>
+							Ladders is a platform that allows people playing any game together to track their ranking among the group. Users enter who won and lost each match and we use the ELO rating system to adjust their ELO score and rank. This product…
+						</Body>
+						<Spacer />
+						<Body>
+							Role: Product Designer
+						</Body>
+					</div>
+					<Image size="half" src={Test} />
+				</ItemGrid>
 				<Spacer />
-				<Body>
-					This project was something that my boyfriend started as a personal project so that him and his coworkers could track their rankings while they played Super Smash Bros. At first we worked on coding a simple one page site together, but it quickly evolved into something larger.
-				</Body>
-				<Spacer />
-				<Body>
-					Role: Product Designer
-				</Body>
 			</ContentBlock>
 			<ContentBlock>
-				<SubHeading>THE IDEA</SubHeading>
+				<SubHeading>THE PRODUCT</SubHeading>
 				<Spacer />
 				<Body>
-					This was the original site that was only accesible to one group of people to use for one game.
+					This project was something that a friend started as a personal project so him and his coworkers could track their rankings while they played Super Smash Bros. Below is the first very simple prototype he built. After using it, we decided we wanted to make it available for multiple games and multiple users.
 				</Body>
 				<Image bordered size="full" src={OGELO} />
 				<Spacer />
-			</ContentBlock>
-			<ContentBlock>
+				<Spacer />
 				<SubHeading>SCALING THE PRODUCT</SubHeading>
 				<Spacer />
 				<Body>
-					After a few iterations based on what we could build on our own, we recruited our friend who is a backend developer to help us execute on a more robust user experience. Here we created a brand new roadmap, mapping out all of the features we needed for an MVP.
+					After a few iterations, we recruited our friend who is a backend developer to round out our product team and help us execute on a more robust user experience. Here we created a brand new product roadmap, mapping out all of the features we needed for an MVP.
 				</Body>
 				<Image size="full" src={ELOWhiteboard} bordered />
 				<Spacer />
 			</ContentBlock>
-			<ContentBlock>
-				<SubHeading>WIREFRAMES</SubHeading>
+			<ContentBlock className={classes.wireFrameBlock}>
+				<SubHeading>WIREFRAMES AND USABILITY TESTING</SubHeading>
 				<Spacer />
 				<Body>
-					After we created a roadmap for the project, I went off and created wireframe prototypes to make sure we had thought out every user action we wanted to include.
+					I kicked off the project by creating a wireframe prototype that we could test for usability. During this phase, we discovered a lot of user needs based around adding and deleting players from a group.
 				</Body>
 				<Image size="full" src={ELOWireframes} bordered />
 				<VideoPlayer
@@ -104,11 +120,10 @@ export default () => {
 				<Image size="full" src={ELOStyle} bordered />
 				<Spacer />
 				<Spacer />
+			</ContentBlock>
+			<ContentBlock className={classes.visualDesignBlock}>
 				<SubHeading>FINAL VISUAL DESIGN</SubHeading>
 				<Spacer />
-				<Body>
-					See the full branding exercise here.
-				</Body>
 				<Image size="full" src={ELOHiDef1} />
 				<Image size="full" src={ELOHiDef2} />
 				<Spacer />
