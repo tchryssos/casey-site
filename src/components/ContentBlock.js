@@ -10,7 +10,7 @@ const useStyles = createUseStyles({
 	[MD_MIN_STRING]: {
 		contentBlock: {
 			margin: '0',
-			padding: '48px 20%',
+			padding: '100px 20%',
 		},
 	},
 })

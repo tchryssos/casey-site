@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import { Route, Switch, withRouter, BrowserRouter } from 'react-router-dom'
 import { render } from 'react-dom'
 import { createUseStyles } from 'react-jss'
@@ -100,12 +100,13 @@ const useStyles = createUseStyles({
 
 const App = ({ location }) => {
 	const classes = useStyles()
+	const appRef = useRef() // used for page scroll reset on navigation
 	const [isMenuOpen, setIsMenuOpen] = useState(false)
 	// On location change, scroll to page top
 	useEffect(() => {
 		setIsMenuOpen(false)
-		window.scrollTo(0, 0)
-	}, [location])
+		appRef.current.scrollTop = 0
+	}, [location.pathname])
 	// Stop body scroll behind small window menus
 	useEffect(() => {
 		if (isMenuOpen && window.outerWidth < MD_MIN_VALUE) {
@@ -126,6 +127,7 @@ const App = ({ location }) => {
 						// isMenuOpen ? classes.fixedBody : '',
 					)
 				}
+				ref={appRef}
 			>
 				<NavBar />
 				<div

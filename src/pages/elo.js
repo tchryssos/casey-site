@@ -38,7 +38,12 @@ const useStyles = createUseStyles({
 		backgroundColor: '#4fa0f4',
 	},
 	half: {
-		width: '50%',
+		width: '100%',
+		marginBottom: 64,
+		[MD_MIN_STRING]: {
+			width: '50%',
+			marginBottom: 0,
+		},
 	},
 	visualDesignBlock: {
 		backgroundColor: '#fad793',
@@ -50,24 +55,25 @@ export default () => {
 	return (
 		<PageWrapper>
 			<ContentBlock className={classes.headerColor}>
-				<ItemGrid>
+				<ItemGrid stackedOnMobile>
 					<div className={classes.half}>
-						<Heading>Ladders ELO Tracker</Heading>
+						<Heading>
+							Ladders is a platform that allows people playing any game together to track their ranking among the group.
+						</Heading>
 						<Spacer />
-						<Body>
-							Ladders is a platform that allows people playing any game together to track their ranking among the group. Users enter who won and lost each match and we use the ELO rating system to adjust their ELO score and rank. This product…
-						</Body>
 						<Spacer />
-						<Body>
+						<SubHeading>
 							Role: Product Designer
-						</Body>
+						</SubHeading>
 					</div>
-					<Image size="half" src={Test} />
+					<Image className={classes.half} src={Test} />
 				</ItemGrid>
 				<Spacer />
 			</ContentBlock>
 			<ContentBlock>
-				<SubHeading>THE PRODUCT</SubHeading>
+				<Heading>
+					The User Need
+				</Heading>
 				<Spacer />
 				<Body>
 					This project was something that a friend started as a personal project so him and his coworkers could track their rankings while they played Super Smash Bros. Below is the first very simple prototype he built. After using it, we decided we wanted to make it available for multiple games and multiple users.
