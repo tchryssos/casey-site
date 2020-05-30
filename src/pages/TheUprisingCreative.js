@@ -1,7 +1,5 @@
 import React from 'react'
 import PageWrapper from 'components/PageWrapper'
-import PageDescription from 'components/PageDescription'
-import PageContent from 'components/PageContent'
 import ContentBlock from 'components/ContentBlock'
 import Heading from 'components/Typography/Heading'
 import Body from 'components/Typography/Body'
@@ -24,38 +22,34 @@ import RedBullOne from 'static/images/TheUprisingCreative/RedBullRecords/redbull
 
 export default () => (
 	<PageWrapper>
-		<PageDescription>
-			<ContentBlock>
-				<Heading>The Uprising Creative Design Internship</Heading>
-				<Spacer />
-				<Body>
-					During my internship I worked on designs for web, merchandise, print ads, logos, letterheads and magazine layouts. Also created pitch decks for upcoming film projects, documented inventory, and sat in on meetings with clients.
-				</Body>
-			</ContentBlock>
-		</PageDescription>
-		<PageContent>
-			<ContentBlock>
-				<Heading>Digital Domain Website Mocks</Heading>
-				<Image src={DDOne} alt="Movie grid" size="full" />
-				<Image src={DDTwo} alt="X-Men movie page" size="full" />
-			</ContentBlock>
-			<ContentBlock>
-				<Heading>Layouts for Animals Magazine</Heading>
-				<Image bordered src={AnimalsOne} alt="Magazine layout" size="full" />
-				<Image bordered src={AnimalsTwo} alt="Magazine layout" size="full" />
-				<Image bordered src={AnimalsFour} alt="Magazine layout" size="full" />
-				<Image bordered src={AnimalsFive} alt="Magazine layout" size="full" />
-			</ContentBlock>
-			<ContentBlock>
-				<Heading>HITS Mag Ad, Red Bull Records</Heading>
-				<Image src={RedBullOne} alt="Paper doll cutout ad" size="full" />
-			</ContentBlock>
-			<ContentBlock>
-				<Heading>Pitch deck for the horror film, Skin Deep</Heading>
-				<Image src={SkinOne} alt="Film title card" size="full" />
-				<Image src={SkinThree} alt="Director's statement" size="full" />
-				<Image src={SkinFour} alt="Crew notes" size="full" />
-			</ContentBlock>
-		</PageContent>
+		<ContentBlock>
+			<Heading>The Uprising Creative Design Internship</Heading>
+			<Spacer />
+			<Body>
+				During my internship I worked on designs for web, merchandise, print ads, logos, letterheads and magazine layouts. Also created pitch decks for upcoming film projects, documented inventory, and sat in on meetings with clients.
+			</Body>
+		</ContentBlock>
+		<ContentBlock>
+			<Heading>Digital Domain Website Mocks</Heading>
+			<Image src={DDOne} alt="Movie grid" size="full" />
+			<Image src={DDTwo} alt="X-Men movie page" size="full" />
+		</ContentBlock>
+		<ContentBlock>
+			<Heading>Layouts for Animals Magazine</Heading>
+			<Image bordered src={AnimalsOne} alt="Magazine layout" size="full" />
+			<Image bordered src={AnimalsTwo} alt="Magazine layout" size="full" />
+			<Image bordered src={AnimalsFour} alt="Magazine layout" size="full" />
+			<Image bordered src={AnimalsFive} alt="Magazine layout" size="full" />
+		</ContentBlock>
+		<ContentBlock>
+			<Heading>HITS Mag Ad, Red Bull Records</Heading>
+			<Image src={RedBullOne} alt="Paper doll cutout ad" size="full" />
+		</ContentBlock>
+		<ContentBlock>
+			<Heading>Pitch deck for the horror film, Skin Deep</Heading>
+			<Image src={SkinOne} alt="Film title card" size="full" />
+			<Image src={SkinThree} alt="Director's statement" size="full" />
+			<Image src={SkinFour} alt="Crew notes" size="full" />
+		</ContentBlock>
 	</PageWrapper>
 )

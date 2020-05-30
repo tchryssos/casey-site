@@ -1,7 +1,5 @@
 import React from 'react'
 import PageWrapper from 'components/PageWrapper'
-import PageContent from 'components/PageContent'
-import PageDescription from 'components/PageDescription'
 import ContentBlock from 'components/ContentBlock'
 import Heading from 'components/Typography/Heading'
 import Body from 'components/Typography/Body'
@@ -24,37 +22,33 @@ import JobsReport from 'static/images/FISMarketing/93-finalweb.gif'
 
 export default () => (
 	<PageWrapper>
-		<PageDescription>
-			<ContentBlock>
-				<Heading>Flatiron School</Heading>
-				<Spacer height={2} />
-				<Body>
-					As the first Graphic Design hire at Flatiron School, I handled the creation of all marketing assets including, out of home, web, organic and paid social.
-				</Body>
-				<Spacer />
-				<Body>
-					Role: Creative Direction and Design
-					Graphic Designer: Emily Brown
-				</Body>
-			</ContentBlock>
-		</PageDescription>
-		<PageContent>
-			<ContentBlock>
-				<Heading>Out of Home Advertising</Heading>
-			</ContentBlock>
+		<ContentBlock>
+			<Heading>Flatiron School</Heading>
+			<Spacer height={2} />
+			<Body>
+				As the first Graphic Design hire at Flatiron School, I handled the creation of all marketing assets including, out of home, web, organic and paid social.
+			</Body>
+			<Spacer />
+			<Body>
+				Role: Creative Direction and Design
+				Graphic Designer: Emily Brown
+			</Body>
+		</ContentBlock>
+		<ContentBlock>
+			<Heading>Out of Home Advertising</Heading>
 			<Image src={LondonTube} alt="LondonTube Ad" size="full" />
 			<Image src={LinkNyc} alt="Nyc Link Ad" size="full" />
-			<ContentBlock>
-				<Heading>Brand Campaign Video</Heading>
-				<Spacer />
-				<Body>
-					Flatiron School worked with the agency, Humanaut, to create an updated brand video to be used across all channels. On paid social channels we received applications at a quarter of our average cost.
-				</Body>
-				<Spacer />
-				<Body>Role: Client-side project manager/producer</Body>
-				<Spacer />
-				<Body>Agency: Humanaut</Body>
-			</ContentBlock>
+		</ContentBlock>
+		<ContentBlock>
+			<Heading>Brand Campaign Video</Heading>
+			<Spacer />
+			<Body>
+				Flatiron School worked with the agency, Humanaut, to create an updated brand video to be used across all channels. On paid social channels we received applications at a quarter of our average cost.
+			</Body>
+			<Spacer />
+			<Body>Role: Client-side project manager/producer</Body>
+			<Spacer />
+			<Body>Agency: Humanaut</Body>
 			<VideoPlayer
 				src="https://player.vimeo.com/video/338254527"
 				title="Hero version 14"
@@ -63,33 +57,31 @@ export default () => (
 				src="https://player.vimeo.com/video/338254396"
 				title="Change Things 30 seconds"
 			/>
-			<ContentBlock>
-				<Heading>Social Advertising</Heading>
-				<Spacer />
-			</ContentBlock>
-			<ContentBlock>
-				<ItemGrid>
-					<Image src={IG2} alt="Students coding" />
-					<Image src={IG1} alt="JIntro to Front End Graphic" />
-					<Image src={JobsReport} alt="93% employment rate" />
-					<Image src={IG4} alt="Students coding in Dallas" />
-				</ItemGrid>
+		</ContentBlock>
+		<ContentBlock>
+			<Heading>Social Advertising</Heading>
+			<Spacer />
+			<ItemGrid>
+				<Image src={IG2} alt="Students coding" />
+				<Image src={IG1} alt="JIntro to Front End Graphic" />
+				<Image src={JobsReport} alt="93% employment rate" />
+				<Image src={IG4} alt="Students coding in Dallas" />
+			</ItemGrid>
 
-				<Image src={BackToSchool} alt="Parents go back to school too" size="full" />
-				<ItemGrid>
-					<Image src={IG5} alt="Young woman coding" />
-					<Image src={CyberGif} alt="Learn Cybersecurity Analytics" />
-					<Image src={IG6} alt="Logos of employers" />
-					<Image
-						src={IG8}
-						alt="Students comparing code in ad for '2020 skills'"
-					/>
-				</ItemGrid>
-				<VideoPlayer
-					src="https://player.vimeo.com/video/324643304"
-					title="Stop motion video"
+			<Image src={BackToSchool} alt="Parents go back to school too" size="full" />
+			<ItemGrid>
+				<Image src={IG5} alt="Young woman coding" />
+				<Image src={CyberGif} alt="Learn Cybersecurity Analytics" />
+				<Image src={IG6} alt="Logos of employers" />
+				<Image
+					src={IG8}
+					alt="Students comparing code in ad for '2020 skills'"
 				/>
-			</ContentBlock>
-		</PageContent>
+			</ItemGrid>
+			<VideoPlayer
+				src="https://player.vimeo.com/video/324643304"
+				title="Stop motion video"
+			/>
+		</ContentBlock>
 	</PageWrapper>
 )

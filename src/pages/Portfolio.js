@@ -1,8 +1,11 @@
 import React from 'react'
+import { createUseStyles } from 'react-jss'
+
+import {
+	MD_MIN_STRING,
+} from 'constants/styles/breakpoints'
 
 import PageWrapper from 'components/PageWrapper'
-import PageContent from 'components/PageContent'
-import PageDescription from 'components/PageDescription'
 import ContentBlock from 'components/ContentBlock'
 import Heading from 'components/Typography/Heading'
 import Body from 'components/Typography/Body'
@@ -12,20 +15,20 @@ import VideoPlayer from 'components/VideoPlayer'
 import SubHeading from 'components/Typography/SubHeading'
 
 import MyProblem from 'static/images/Portfolio/problemGif-01.gif'
-import MariahBeforeAfter from 'static/images/Portfolio/BeforeAfter1.gif'
 
-export default () => (
-	<PageWrapper>
-		<PageDescription>
-			<ContentBlock>
-				<Heading>Portfolio Design</Heading>
-				<Spacer />
-				<Body>
-					I became very interested in web design and coding after working closely with a developer to redesign my personal website. After learning enough React to edit things on my own website, I wanted to design and build something all on my own so I redid a friend&apos;s portfolio as well.
-				</Body>
+const useStyles = createUseStyles({
+	headerBackgroundColor: {
+		backgroundColor: '#4e7fff',
+	},
+})
+
+export default () => {
+	const classes = useStyles()
+	return (
+		<PageWrapper>
+			<ContentBlock className={classes.headerBackgroundColor}>
+				<Heading>A story about building this website</Heading>
 			</ContentBlock>
-		</PageDescription>
-		<PageContent>
 			<ContentBlock>
 				<Heading>Caseybradford.club</Heading>
 				<VideoPlayer
@@ -52,31 +55,6 @@ export default () => (
 					title="Home Me Page Demo"
 				/>
 			</ContentBlock>
-			<ContentBlock>
-				<Heading>Mariah Adcox Portfolio</Heading>
-				<Image src={MariahBeforeAfter} alt="Before and After of the website" size="full" />
-				<Body>
-					Check the site out&nbsp;
-					<a href="http://mariah-portfolio.herokuapp.com/">here</a>
-					.
-				</Body>
-				<Spacer />
-				<Body>
-					After learning enough React to make updates to my personal website, I wanted to code a site from scratch. With Mariah&apos;s site, I tried to apply a visual system that showed more personality than the black and white Squarespace.
-				</Body>
-				<Spacer />
-				<Body>
-					One challenge that I faced here and not with my own website was organizing the categories of projects - copy writing vs. editorial. I put each of these in a corner of the desktop site so that when viewers move back and forth across the page they discover the interactive elements.
-				</Body>
-				<VideoPlayer
-					src="https://player.vimeo.com/video/380932381?autoplay=1&loop=1"
-					title="Home Page Demo"
-				/>
-				<VideoPlayer
-					src="https://player.vimeo.com/video/380932474?autoplay=1&loop=1"
-					title="About Me Page Demo"
-				/>
-			</ContentBlock>
-		</PageContent>
-	</PageWrapper>
-)
+		</PageWrapper>
+	)
+}
