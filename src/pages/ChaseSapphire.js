@@ -14,6 +14,7 @@ import VideoPlayer from 'components/VideoPlayer'
 import ItemGrid from 'components/ItemGrid'
 
 import ChaseCard from 'static/images/ChaseSapphire/Chase_Card.png'
+import CardBG from 'static/images/ChaseSapphire/chase-circle.svg'
 
 import SeaportOne from 'static/images/ChaseSapphire/Seaport/Seaport_01.png'
 import SeaportTwo from 'static/images/ChaseSapphire/Seaport/Seaport_02.png'
@@ -32,8 +33,21 @@ import bbqThree from 'static/images/ChaseSapphire/WhatsNext/bbq_3.png'
 import bbqFour from 'static/images/ChaseSapphire/WhatsNext/bbq_4.png'
 
 const useStyles = createUseStyles({
-	seaportBackgroundColor: {	
+	'@keyframes spin': {
+		from: { transform: 'rotate(0deg)' },
+		to: { transform: 'rotate(90deg)' },
+	},
+	seaportBackgroundColor: {
 		backgroundColor: 'white',
+	},
+	cardImage: {
+		position: 'absolute',
+		zIndex: 2,
+	},
+	cardBG: {
+		position: 'absolute',
+		zIndex: 0,
+		animation: '$spin infinite 5s linear',
 	},
 	half: {
 		width: '100%',
@@ -57,7 +71,10 @@ export default () => {
 							Art directing ad campaigns for the Chase Sapphire Reserve card
 						</Heading>
 					</div>
-					<Image className={classes.half} src={ChaseCard}/>
+					<div className={classes.half}>
+						<Image className={classes.cardImage} size="full" src={ChaseCard} />
+						<Image className={classes.cardBG} size="full" src={CardBG} />
+					</div>
 				</ItemGrid>
 				<Spacer />
 			</ContentBlock>

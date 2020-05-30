@@ -20,18 +20,8 @@ import Perlman from 'static/images/SeatGeekScholarship/perlman.png'
 import Coalition from 'static/images/SeatGeekScholarship/coalition.png'
 
 const useStyles = createUseStyles({
-	hideMd: {
-		[MD_MIN_STRING]: {
-			display: 'none',
-		},
-	},
-	hideSm: {
-		display: 'none',
-	},
-	[MD_MIN_STRING]: {
-		hideSm: {
-			display: 'block',
-		},
+	headerColor: {
+		backgroundColor: '#32cefe',
 	},
 })
 
@@ -39,20 +29,17 @@ export default () => {
 	const classes = useStyles()
 	return (
 		<PageWrapper>
-			<ContentBlock>
-				<Heading>Flatiron School x SeatGeek 50/50 Scholarship</Heading>
-				<Spacer />
-				<Body>
-					Assets to promote Flatiron School x SeatGeek 50/50 Scholarship for women in tech. 665 people applied for this scholarship over the 3 week period that it was live for and 60 of those applicants enrolled, mostly on first conversion.
-				</Body>
-				<Spacer />
-				<Body>
-					Role: Creative Direction and Design
-				</Body>
-				<Spacer />
-				<Body>
-					Junior Designer: Emily Brown
-				</Body>
+			<ContentBlock className={classes.headerColor}>
+				<ItemGrid stackedOnMobile>
+					<div className={classes.half}>
+						<Heading>Flatiron School x SeatGeek 50/50 Scholarship</Heading>
+						<Spacer />
+						<Body>
+							Role: Creative Direction and Design
+						</Body>
+					</div>
+					<Image src={CarolAnimation} alt="Animation of Carol Shaw" bordered />
+				</ItemGrid>
 			</ContentBlock>
 			<ContentBlock>
 				<Image
@@ -65,6 +52,11 @@ export default () => {
 				<Image src={Timeline} alt="Women in computing timeline" size="full" bordered />
 				<Image src={CarolAnimation} alt="Animation of Carol Shaw" size="full" bordered />
 				<Image src={Grace} alt="Grace Hopper Sticker" size="full" bordered />
+				<Spacer height={2} />
+				<Body>
+					665 people applied for this scholarship over the 3 week period that it was live for and 60 of those applicants enrolled, mostly on first conversion.
+				</Body>
+				<Spacer height={2} />
 				<Image src={Sweatshirt} alt="Trailblazer Sweatshirt" size="full" bordered />
 				<ItemGrid>
 					<Image src={Perlman} alt="Drawing of Radia Perlman" bordered />
