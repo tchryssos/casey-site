@@ -17,14 +17,14 @@ import ItemGrid from 'components/ItemGrid'
 
 import OGELO from 'static/images/ELO/Og-elo.png'
 import ELOWireframes from 'static/images/ELO/elo-wireframes.png'
-import ELOWhiteboard from 'static/images/ELO/elo-whiteboard.png'
-import ELOHiDef1 from 'static/images/ELO/hidef-1.png'
+import ELOWhiteboard from 'static/images/ELO/elo-whiteboard-2.png'
+import ELOGitHub from 'static/images/ELO/ELO-githubIssues.png'
 import ELOHiDef2 from 'static/images/ELO/hidef-2.png'
 import ELOStorybook from 'static/images/ELO/elo-storybook.png'
 import ELODirections from 'static/images/ELO/elo-directions.png'
 import ELOAltLogo from 'static/images/ELO/elo-alt-logos.png'
-import ELOLogo from 'static/images/ELO/elo-logo.png'
-import ELOStyle from 'static/images/ELO/elo-styleguide.png'
+import ELOLogoBlack from 'static/images/ELO/elo-logo-01.png'
+import ELOLogoYellow from 'static/images/ELO/elo-logo-02.png'
 import Test from 'static/images/ELO/test.png'
 
 const useStyles = createUseStyles({
@@ -41,12 +41,12 @@ const useStyles = createUseStyles({
 		width: '100%',
 		marginBottom: 64,
 		[MD_MIN_STRING]: {
-			width: '50%',
+			width: 'calc(50% - 8px)',
 			marginBottom: 0,
 		},
 	},
 	visualDesignBlock: {
-		backgroundColor: '#fad793',
+		backgroundColor: '#f5b142',
 	},
 })
 
@@ -58,7 +58,7 @@ export default () => {
 				<ItemGrid stackedOnMobile>
 					<div className={classes.half}>
 						<Heading>
-							Ladders is a platform that allows people playing any game together to track their ranking among the group.
+							Ladders allows people playing games together to track their ranking among the group
 						</Heading>
 						<Spacer />
 						<Spacer />
@@ -72,30 +72,33 @@ export default () => {
 			</ContentBlock>
 			<ContentBlock>
 				<Heading>
-					The User Need
+					How do you know who the best player is?
 				</Heading>
 				<Spacer />
 				<Body>
-					This project was something that a friend started as a personal project so him and his coworkers could track their rankings while they played Super Smash Bros. Below is the first very simple prototype he built. After using it, we decided we wanted to make it available for multiple games and multiple users.
+					This project was something that a friend started as a personal project so he and his coworkers could track their rankings while they played Super Smash Bros. Below is the first very simple prototype he built. After doing some user testing with his friends, we decided we wanted to make it available for multiple games and multiple users.
 				</Body>
-				<Image bordered size="full" src={OGELO} />
+				<Image size="full" src={OGELO} />
 				<Spacer />
 				<Spacer />
-				<SubHeading>SCALING THE PRODUCT</SubHeading>
+				<Heading>Building a Product Roadmap</Heading>
 				<Spacer />
 				<Body>
 					After a few iterations, we recruited our friend who is a backend developer to round out our product team and help us execute on a more robust user experience. Here we created a brand new product roadmap, mapping out all of the features we needed for an MVP.
 				</Body>
-				<Image size="full" src={ELOWhiteboard} bordered />
+				<ItemGrid stackedOnMobile>
+					<Image className={classes.half} size="half" src={ELOWhiteboard} />
+					<Image className={classes.half} size="half" src={ELOGitHub} />
+				</ItemGrid>
 				<Spacer />
 			</ContentBlock>
 			<ContentBlock className={classes.wireFrameBlock}>
-				<SubHeading>WIREFRAMES AND USABILITY TESTING</SubHeading>
+				<Heading>Wireframes and Usability Testing</Heading>
 				<Spacer />
 				<Body>
 					I kicked off the project by creating a wireframe prototype that we could test for usability. During this phase, we discovered a lot of user needs based around adding and deleting players from a group.
 				</Body>
-				<Image size="full" src={ELOWireframes} bordered />
+				<Image size="full" src={ELOWireframes} />
 				<VideoPlayer
 					src="https://player.vimeo.com/video/390019243?loop=1"
 					title="Musical rug demo"
@@ -104,38 +107,36 @@ export default () => {
 				<Spacer />
 			</ContentBlock>
 			<ContentBlock>
-				<SubHeading>EXPLORING VISUAL DIRECTIONS</SubHeading>
+				<Heading>Exploring Visual Directions</Heading>
 				<Spacer />
 				<Body>
 					For this project we explored 3 different visual directions. One that used relied heavily on the dark mode aesthetic we saw a lot in the space, one that used a blue mode to keep the accessibily of dark mode but allo wus to stand out and one that went entirely out of the box.
 				</Body>
-				<Image size="full" src={ELODirections} bordered />
+				<Image size="full" src={ELODirections} />
 				<Spacer />
 				<Spacer />
-				<SubHeading>LOGO AND STYLE GUIDE</SubHeading>
+				<SubHeading>Creating a logo</SubHeading>
 				<Spacer />
 				<Body>
 					We developed a list of many names for for the platform and once we landed on Ladders we created multiple logo options below.
 				</Body>
 				<Image size="full" src={ELOAltLogo} />
 				<Spacer />
-				<Body>
-					Below are the final logos.
-				</Body>
-				<Image size="full" src={ELOLogo} />
-				<Image size="full" src={ELOStyle} bordered />
+				<ItemGrid>
+					<Image size="half" src={ELOLogoBlack} />
+					<Image size="half" src={ELOLogoYellow} />
+				</ItemGrid>
 				<Spacer />
 				<Spacer />
 			</ContentBlock>
 			<ContentBlock className={classes.visualDesignBlock}>
-				<SubHeading>FINAL VISUAL DESIGN</SubHeading>
+				<Heading>Final UI Designs</Heading>
 				<Spacer />
-				<Image size="full" src={ELOHiDef1} />
 				<Image size="full" src={ELOHiDef2} />
 				<Spacer />
 			</ContentBlock>
 			<ContentBlock>
-				<SubHeading>STORYBOOK PRODUCTION</SubHeading>
+				<Heading>Storybook Production</Heading>
 				<Spacer />
 				<Body>
 					We used Storybook to build and design all of the components.

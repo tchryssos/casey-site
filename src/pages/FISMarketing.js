@@ -30,8 +30,11 @@ export default () => (
 			</Body>
 			<Spacer />
 			<Body>
-				Role: Creative Direction and Design
-				Graphic Designer: Emily Brown
+				Role: Design Manager
+			</Body>
+			<Spacer />
+			<Body>
+				Graphic Designers: Emily Brown, Alexa Venazio
 			</Body>
 		</ContentBlock>
 		<ContentBlock>
