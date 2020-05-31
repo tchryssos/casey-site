@@ -5,6 +5,7 @@ import PageWrapper from 'components/PageWrapper'
 import ContentBlock from 'components/ContentBlock'
 import Heading from 'components/Typography/Heading'
 import Body from 'components/Typography/Body'
+import SubHeading from 'components/Typography/SubHeading'
 import Image from 'components/Image'
 import Spacer from 'components/Spacer'
 import ItemGrid from 'components/ItemGrid'
@@ -21,7 +22,15 @@ import Coalition from 'static/images/SeatGeekScholarship/coalition.png'
 
 const useStyles = createUseStyles({
 	headerColor: {
-		backgroundColor: '#32cefe',
+		backgroundColor: '#64aac9',
+	},
+	half: {
+		width: '100%',
+		marginBottom: 64,
+		[MD_MIN_STRING]: {
+			width: '50%',
+			marginBottom: 0,
+		},
 	},
 })
 
@@ -34,11 +43,11 @@ export default () => {
 					<div className={classes.half}>
 						<Heading>Flatiron School x SeatGeek 50/50 Scholarship</Heading>
 						<Spacer />
-						<Body>
+						<SubHeading>
 							Role: Creative Direction and Design
-						</Body>
+						</SubHeading>
 					</div>
-					<Image src={CarolAnimation} alt="Animation of Carol Shaw" bordered />
+					<Image className={classes.half} src={CarolAnimation} alt="Animation of Carol Shaw" />
 				</ItemGrid>
 			</ContentBlock>
 			<ContentBlock>
