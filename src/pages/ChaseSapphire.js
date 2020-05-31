@@ -3,6 +3,7 @@ import { createUseStyles } from 'react-jss'
 import {
 	MD_MIN_STRING,
 } from 'constants/styles/breakpoints'
+import clsx from 'clsx'
 
 import PageWrapper from 'components/PageWrapper'
 import ContentBlock from 'components/ContentBlock'
@@ -45,9 +46,15 @@ const useStyles = createUseStyles({
 		zIndex: 2,
 	},
 	cardBG: {
-		position: 'absolute',
 		zIndex: 0,
 		animation: '$spin infinite 5s linear',
+		width: '90%',
+	},
+	cardAnimationWrapper: {
+		position: 'relative',
+		display: 'flex',
+		justifyContent: 'center',
+		alignItems: 'center',
 	},
 	half: {
 		width: '100%',
@@ -71,7 +78,12 @@ export default () => {
 							Art directing ad campaigns for the Chase Sapphire Reserve card
 						</Heading>
 					</div>
-					<div className={classes.half}>
+					<div
+						className={clsx(
+							classes.half,
+							classes.cardAnimationWrapper,
+						)}
+					>
 						<Image className={classes.cardImage} size="full" src={ChaseCard} />
 						<Image className={classes.cardBG} size="full" src={CardBG} />
 					</div>

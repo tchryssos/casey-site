@@ -9,6 +9,7 @@ const useStyles = createUseStyles({
 		display: 'flex',
 		flexDirection: 'row',
 		justifyContent: 'space-between',
+		alignItems: 'center',
 		flexWrap: 'wrap',
 	},
 	stackedOnMobile: {
