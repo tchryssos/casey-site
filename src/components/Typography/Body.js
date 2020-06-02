@@ -1,11 +1,15 @@
 import React from 'react'
 import { createUseStyles } from 'react-jss'
+import { MD_MIN_STRING } from 'constants/styles/breakpoints'
 
 const useStyles = createUseStyles({
 	bodyFont: {
 		fontFamily: '"Work Sans", sans-serif',
 		lineHeight: 1.25,
-		fontSize: 16,
+		fontSize: 14,
+		[MD_MIN_STRING]: {
+			fontSize: 16,
+		},
 	},
 })
 

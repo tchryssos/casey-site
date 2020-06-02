@@ -9,12 +9,15 @@ import PageWrapper from 'components/PageWrapper'
 import ContentBlock from 'components/ContentBlock'
 import Heading from 'components/Typography/Heading'
 import Body from 'components/Typography/Body'
+import SubHeading from 'components/Typography/SubHeading'
 import Image from 'components/Image'
 import VideoPlayer from 'components/VideoPlayer'
 import Spacer from 'components/Spacer'
 import ItemGrid from 'components/ItemGrid'
 
 import FISorg from 'static/images/FISMarketing/FIS-orgchart-01.png'
+import CourseGraphic from 'static/images/FISMarketing/CourseGraphic.svg'
+
 import LondonTube from 'static/images/FISMarketing/LondonTubeAd.png'
 import LinkNyc from 'static/images/FISMarketing/LinkNyc.png'
 import IG1 from 'static/images/FISMarketing/ig-6.gif'
@@ -52,9 +55,16 @@ export default () => {
 				</ItemGrid>
 			</ContentBlock>
 			<ContentBlock>
-				<Heading>
-					We used sprint cycles to keep us on track with the rest of the team
-				</Heading>
+				<ItemGrid>
+					<div className={classes.half}>
+						<Heading>
+							Working in 2 week sprint cycle
+						</Heading>
+						<Body>
+							desc
+						</Body>
+					</div>
+				</ItemGrid>
 			</ContentBlock>
 			<ContentBlock>
 				<Heading>
@@ -65,6 +75,54 @@ export default () => {
 				<Heading>
 					Outsourcing projects
 				</Heading>
+				<ItemGrid stackedOnMobile>
+					<div className={classes.half}>
+						<SubHeading>
+							Differentiating products and building brand
+						</SubHeading>
+						<Spacer />
+						<Body>
+							Graphics by Sepehr Mokhtarzadeh
+						</Body>
+						<Spacer />
+						<Body>
+							One of Flatiron's strategic goals was to differentiate the products while continuing to build the master brand. I vetted freelance illustrators and ultimately brought on Sepehr Mokhtarzadeh to create the graphics for us. This gave our internal team more bandwith to work on business-as-usual projects.
+						</Body>
+					</div>
+					<Image src={CourseGraphic} className={classes.half} />
+				</ItemGrid>
+				<Spacer height={4} />
+				<SubHeading>
+					Using video to tell our story
+				</SubHeading>
+				<Spacer />
+				<Body>
+					Video by Humanaut
+				</Body>
+				<Spacer />
+				<Body>
+					Flatiron engaged the Humanaut agency to create a brand campaign video and subsequent cuts that could be used across our paid and earned channels.
+				</Body>
+				<VideoPlayer
+					src="https://player.vimeo.com/video/338254527"
+					title="Hero version 14"
+				/>
+				<VideoPlayer
+					src="https://player.vimeo.com/video/338254396"
+					title="Change Things 30 seconds"
+				/>
+				<Spacer height={4} />
+				<SubHeading>
+					Photography
+				</SubHeading>
+				<Spacer />
+				<Body>
+					Photography by Lauren Kallen
+				</Body>
+				<Spacer />
+				<Body>
+					xyz
+				</Body>
 			</ContentBlock>
 			<ContentBlock>
 				<Heading>
@@ -86,14 +144,6 @@ export default () => {
 				<Body>Role: Client-side project manager/producer</Body>
 				<Spacer />
 				<Body>Agency: Humanaut</Body>
-				<VideoPlayer
-					src="https://player.vimeo.com/video/338254527"
-					title="Hero version 14"
-				/>
-				<VideoPlayer
-					src="https://player.vimeo.com/video/338254396"
-					title="Change Things 30 seconds"
-				/>
 			</ContentBlock>
 			<ContentBlock>
 				<Heading>Social Advertising</Heading>
