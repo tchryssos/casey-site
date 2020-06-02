@@ -1,8 +1,6 @@
 import React from 'react'
 
 import PageWrapper from 'components/PageWrapper'
-import PageContent from 'components/PageContent'
-import PageDescription from 'components/PageDescription'
 import ContentBlock from 'components/ContentBlock'
 import Heading from 'components/Typography/Heading'
 import Body from 'components/Typography/Body'

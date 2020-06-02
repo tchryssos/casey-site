@@ -2,7 +2,6 @@ import { useEffect } from 'react'
 
 import bread from 'static/images/About/bread_sticker.png'
 import cocci from 'static/images/About/cocci_sticker.png'
-import fishing from 'static/images/About/fishing.gif'
 import hottinet from 'static/images/About/hottinet.png'
 import kylie from 'static/images/About/kylie_sticker.png'
 import shoes from 'static/images/About/shoes_sticker.png'

@@ -33,7 +33,7 @@ export default () => {
 			</ContentBlock>
 			<ContentBlock>
 				<VideoPlayer
-					src="https://player.vimeo.com/video/331255265?autoplay=1&loop=1"
+					src="https://player.vimeo.com/video/331255265?loop=1"
 					title="Musical rug demo"
 				/>
 				<Spacer height={2} />
