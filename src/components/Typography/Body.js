@@ -5,6 +5,7 @@ const useStyles = createUseStyles({
 	bodyFont: {
 		fontFamily: '"Work Sans", sans-serif',
 		lineHeight: 1.25,
+		fontSize: 16,
 	},
 })
 

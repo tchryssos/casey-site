@@ -52,6 +52,26 @@ export default () => {
 				</ItemGrid>
 			</ContentBlock>
 			<ContentBlock>
+				<Heading>
+					We used sprint cycles to keep us on track with the rest of the team
+				</Heading>
+			</ContentBlock>
+			<ContentBlock>
+				<Heading>
+					Increasing conversions
+				</Heading>
+			</ContentBlock>
+			<ContentBlock>
+				<Heading>
+					Outsourcing projects
+				</Heading>
+			</ContentBlock>
+			<ContentBlock>
+				<Heading>
+					A focus on educating marketers about how to work with a creative team
+				</Heading>
+			</ContentBlock>
+			<ContentBlock>
 				<Heading>Out of Home Advertising</Heading>
 				<Image src={LondonTube} alt="LondonTube Ad" size="full" />
 				<Image src={LinkNyc} alt="Nyc Link Ad" size="full" />
