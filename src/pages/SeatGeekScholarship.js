@@ -22,7 +22,7 @@ import Coalition from 'static/images/SeatGeekScholarship/coalition.png'
 
 const useStyles = createUseStyles({
 	headerColor: {
-		backgroundColor: '#64aac9',
+		backgroundColor: '#00b3e6',
 	},
 	half: {
 		width: '100%',
