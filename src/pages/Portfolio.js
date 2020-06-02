@@ -15,12 +15,15 @@ import VideoPlayer from 'components/VideoPlayer'
 import SubHeading from 'components/Typography/SubHeading'
 import ItemGrid from 'components/ItemGrid'
 
-import MyProblem from 'static/images/Portfolio/problemGif-01.gif'
+import Filter from 'static/images/Portfolio/portfolio-filter.png'
 import HeaderImage from 'static/images/Portfolio/portfolio-header.gif'
 
 const useStyles = createUseStyles({
 	headerBackgroundColor: {
 		backgroundColor: '#4e7fff',
+	},
+	filterBlock: {
+		backgroundColor: '#da8c43',
 	},
 	half: {
 		width: '100%',
@@ -70,11 +73,12 @@ export default () => {
 					Since humans are visual learners, I decided not to write a bio about myself. Instead I included a CTA to click anywhere and created stickers that could tell a user more about me.
 				</Body>
 			</ContentBlock>
-			<ContentBlock>
+			<ContentBlock className={classes.filterBlock}>
 				<SubHeading>GOAL #3</SubHeading>
 				<Spacer />
 				<Heading>Clearly differentiate graphic and product design work</Heading>
 				<Spacer />
+				<Image src={Filter} size="full" />
 				<Body>
 					While navigating the transition from Graphic Design to Product Design, I was accepting both kind of jobs. In order to make it easier for hiring managers and mentors to find the appropriate work more quickly, I added a filter to the homepage.
 				</Body>
