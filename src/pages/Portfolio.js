@@ -13,12 +13,22 @@ import Spacer from 'components/Spacer'
 import Image from 'components/Image'
 import VideoPlayer from 'components/VideoPlayer'
 import SubHeading from 'components/Typography/SubHeading'
+import ItemGrid from 'components/ItemGrid'
 
 import MyProblem from 'static/images/Portfolio/problemGif-01.gif'
+import HeaderImage from 'static/images/Portfolio/portfolio-header.gif'
 
 const useStyles = createUseStyles({
 	headerBackgroundColor: {
 		backgroundColor: '#4e7fff',
+	},
+	half: {
+		width: '100%',
+		marginBottom: 64,
+		[MD_MIN_STRING]: {
+			width: 'calc(50% - 8px)',
+			marginBottom: 0,
+		},
 	},
 })
 
@@ -27,33 +37,56 @@ export default () => {
 	return (
 		<PageWrapper>
 			<ContentBlock className={classes.headerBackgroundColor}>
-				<Heading>A story about building this website</Heading>
+				<ItemGrid stackedOnMobile>
+					<div className={classes.half}>
+						<Heading>Building this website!</Heading>
+					</div>
+					<Image className={classes.half} src={HeaderImage} />
+				</ItemGrid>
 			</ContentBlock>
 			<ContentBlock>
-				<Heading>Caseybradford.club</Heading>
-				<VideoPlayer
-					src="https://player.vimeo.com/video/380927068?autoplay=1&loop=1"
-					title="About Me Page Demo"
-				/>
-				<Image src={MyProblem} alt="Problem statement" size="full" />
+				<SubHeading>GOAL #1</SubHeading>
 				<Spacer />
-				<SubHeading>THE CHALLENGE</SubHeading>
-				<Body>
-					To build my personal portfolio I was using a Squarespace template that was type heavy making it hard to navigate and rather uninspriring for hiring managers to land on. I even went to an interview where the recruiter told me they liked that my site was ugly on purpose.
-				</Body>
-				<Spacer />
-				<Body>
-					After hiring a team of designers myself, I was shocked by how many versions of the same template I was seeing and how hard it was for any individual to stand out, show personality, and present something mobile friendly.
-				</Body>
-				<Spacer />
-				<SubHeading>HYPOTHESIS</SubHeading>
-				<Body>
-					If I could make my home page visually interesting with a flow that pulled in viewers and encouraged them to interact with the site, they would stay on my site longer. If I could make my about me section show more personality, viewers would be more likely to connect with me and invest in me as a candidate.
-				</Body>
+				<Heading>Make my portfolio stand out from the crowd</Heading>
 				<VideoPlayer
 					src="https://player.vimeo.com/video/380927071?autoplay=1&loop=1"
 					title="Home Me Page Demo"
 				/>
+				<Spacer />
+				<Body>
+					After hiring graphic designers for my team, I was shocked at how similar all of the portfolios I was looking at were. To lower the bounch rate of hiring managers looking at my website, I wanted to create a home page that was more interesting and interactive than the sea of squarespaces.
+				</Body>
+			</ContentBlock>
+			<ContentBlock>
+				<SubHeading>GOAL #2</SubHeading>
+				<Spacer />
+				<Heading>Embed personality and tell a hiring manager more about myself</Heading>
+				<VideoPlayer
+					src="https://player.vimeo.com/video/380927068?autoplay=1&loop=1"
+					title="About Me Page Demo"
+				/>
+				<Spacer />
+				<Body>
+					Since humans are visual learners, I decided not to write a bio about myself. Instead I included a CTA to click anywhere and created stickers that could tell a user more about me.
+				</Body>
+			</ContentBlock>
+			<ContentBlock>
+				<SubHeading>GOAL #3</SubHeading>
+				<Spacer />
+				<Heading>Clearly differentiate graphic and product design work</Heading>
+				<Spacer />
+				<Body>
+					While navigating the transition from Graphic Design to Product Design, I was accepting both kind of jobs. In order to make it easier for hiring managers and mentors to find the appropriate work more quickly, I added a filter to the homepage.
+				</Body>
+			</ContentBlock>
+			<ContentBlock>
+				<SubHeading>GOAL #4</SubHeading>
+				<Spacer />
+				<Heading>Create a clear content strategy for each page</Heading>
+				<Spacer />
+				<Body>
+					In the first iteration of the site, I focused on templatizing the project pages to reduce the amount of developer resources I would need. After learning more React myself, I wanted to tailor the pages more to the projects and make them easier to read for hiring managers.
+				</Body>
 			</ContentBlock>
 		</PageWrapper>
 	)
