@@ -1,9 +1,11 @@
 import React from 'react'
 import { createUseStyles } from 'react-jss'
+import {
+	MD_MIN_STRING,
+} from 'constants/styles/breakpoints'
 
 import PageWrapper from 'components/PageWrapper'
 import ContentBlock from 'components/ContentBlock'
-import PageContent from 'components/PageContent'
 import Heading from 'components/Typography/Heading'
 import SubHeading from 'components/Typography/SubHeading'
 import Spacer from 'components/Spacer'
@@ -21,6 +23,12 @@ const useStyles = createUseStyles({
 		bottom: 0,
 		overflowX: 'hidden',
 	},
+	aboutContainer: {
+		paddingLeft: '48px',
+		[MD_MIN_STRING]: {
+			paddingLeft: '30%',
+		},
+	},
 })
 
 export default () => {
@@ -29,7 +37,7 @@ export default () => {
 	return (
 		<div className={classes.stickerBoard} id="stickerBoard">
 			<PageWrapper>
-				<ContentBlock>
+				<ContentBlock className={classes.aboutContainer}>
 					<ResumeButton />
 					<Spacer height={4} />
 					<Heading>About Me</Heading>
