@@ -37,7 +37,6 @@ const baseStyle = {
 const useStyles = createUseStyles({
 	// Start - Base Styles - Start
 	'@import': [
-		"url('https://fonts.googleapis.com/css?family=Work+Sans&display=swap')",
 		"url('https://use.typekit.net/fso6uhu.css')",
 	],
 	'@global': {

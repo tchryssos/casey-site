@@ -1,5 +1,6 @@
 import React from 'react'
 import { createUseStyles } from 'react-jss'
+import clsx from 'clsx'
 
 import {
 	MD_MIN_STRING,
@@ -15,24 +16,39 @@ import VideoPlayer from 'components/VideoPlayer'
 import Spacer from 'components/Spacer'
 import ItemGrid from 'components/ItemGrid'
 
-import FISorg from 'static/images/FISMarketing/FIS-orgchart-01.png'
+import FISorg from 'static/images/FISMarketing/orgchart-01.gif'
 import CourseGraphic from 'static/images/FISMarketing/CourseGraphic.svg'
+import Spinner from 'static/images/FISMarketing/FISM-circle.svg'
 
 import LondonTube from 'static/images/FISMarketing/LondonTubeAd.png'
 import LinkNyc from 'static/images/FISMarketing/LinkNyc.png'
-import IG1 from 'static/images/FISMarketing/ig-6.gif'
 import IG2 from 'static/images/FISMarketing/houchronad.png'
-import BackToSchool from 'static/images/FISMarketing/BackToSchool-Social.gif'
 import IG4 from 'static/images/FISMarketing/ig-4.png'
 import IG5 from 'static/images/FISMarketing/ig-5.png'
-import IG6 from 'static/images/FISMarketing/ActuallyGetJobs.gif'
-import CyberGif from 'static/images/FISMarketing/CyberGif_Square.gif'
 import IG8 from 'static/images/FISMarketing/ig-8.png'
-import JobsReport from 'static/images/FISMarketing/93-finalweb.gif'
 import Scrum from 'static/images/FISMarketing/FIS-Scrum.png'
 
 
 const useStyles = createUseStyles({
+	'@keyframes spin': {
+		from: { transform: 'rotate(0deg)' },
+		to: { transform: 'rotate(90deg)' },
+	},
+	cardImage: {
+		position: 'absolute',
+		zIndex: 2,
+	},
+	cardBG: {
+		zIndex: 0,
+		animation: '$spin infinite 5s linear',
+		width: '90%',
+	},
+	cardAnimationWrapper: {
+		position: 'relative',
+		display: 'flex',
+		justifyContent: 'center',
+		alignItems: 'center',
+	},
 	half: {
 		width: '100%',
 		marginBottom: 64,
@@ -42,8 +58,10 @@ const useStyles = createUseStyles({
 		},
 	},
 	callOutText: {
-		fontWeight: 800,
-		backgroundColor: '#ea9b41',
+		fontWeight: 700,
+	},
+	HowWeWorkBlock: {
+		backgroundColor: '#ed69be',
 	},
 })
 
@@ -54,9 +72,17 @@ export default () => {
 			<ContentBlock>
 				<ItemGrid stackedOnMobile>
 					<div className={classes.half}>
-						<Heading>Building the creative team at Flatiron School</Heading>
+						<Heading>Managing the creative team at Flatiron School</Heading>
 					</div>
-					<Image className={classes.half} src={FISorg} />
+					<div
+						className={clsx(
+							classes.half,
+							classes.cardAnimationWrapper,
+						)}
+					>
+						<Image className={classes.cardImage} size="full" src={FISorg} />
+						<Image className={classes.cardBG} size="full" src={Spinner} />
+					</div>
 				</ItemGrid>
 			</ContentBlock>
 			<ContentBlock>
@@ -69,7 +95,7 @@ export default () => {
 				</Body>
 				<Spacer height={4} />
 				<SubHeading>
-					Using video to tell our story
+					Storytelling through video
 				</SubHeading>
 				<Spacer />
 				<Body>
@@ -106,7 +132,7 @@ export default () => {
 				<ItemGrid stackedOnMobile>
 					<div className={classes.half}>
 						<SubHeading>
-							Differentiating products and building brand
+							Differentiating products while building a brand
 						</SubHeading>
 						<Spacer />
 						<Body>
@@ -121,7 +147,7 @@ export default () => {
 				</ItemGrid>
 				<Spacer height={4} />
 				<SubHeading>
-					Using photography to document our community
+					Storytelling through photography
 				</SubHeading>
 				<Spacer />
 				<Body>
@@ -129,9 +155,15 @@ export default () => {
 				</Body>
 				<Spacer />
 				<Body>
-					As a brand, Flatiron strives to be authentic and transparent. Some of its key differentiators are its amazing community of students and teachers and its access to beautiful WeWork spaces. I wanted to capture photography that showed real students working together in these comfortable and inspiring spaces. Photography was a very important part of the brand that needed to serve many parts of the team including paid advertising, organic social, the website and landing pages.
+					As a brand, Flatiron strives to be authentic and transparent. Some of its key differentiators are its amazing community of students and teachers and its access to beautiful WeWork spaces. I wanted to capture photography that showed real students working together in these comfortable and inspiring spaces. 
 				</Body>
 				<Spacer />
+				<Body>
+					Photography was a very important part of the brand that needed to serve many parts of the team including paid advertising, organic social, the website and landing pages.&nbsp;
+					<span className={classes.callOutText}>
+						These photos supported paid campaigns with a monthly budget of over 1 million dollars.
+					</span>
+				</Body>
 				<ItemGrid>
 					<Image src={IG5} alt="Young woman coding" size="half" />
 					<Image
@@ -148,11 +180,24 @@ export default () => {
 					Launch, launch, launch
 				</Heading>
 				<Spacer />
-				<SubHeading>
-					Use out-of-home advertising to make a big splash in new markets
-				</SubHeading>
+				<Body>
+					In my time at Flatiron School, we launched&nbsp;
+					<span className={classes.callOutText}>
+						10 new locations and 3 new curriculums.
+					</span>
+					&nbsp;A big part of our regional marketing spend went to out of home buys in various markets both new and established.
+				</Body>
+				<Spacer />
+				<Body>
+					In London we had the most success with out of home advertising and, with our first campaign,&nbsp;
+					<span className={classes.callOutText}>
+						saw a 60% increase in organic traffic to the site.
+					</span>
+				</Body>
+				<Image src={LondonTube} alt="LondonTube Ad" size="full" />
+				<Image src={LinkNyc} alt="Nyc Link Ad" size="full" />
 			</ContentBlock>
-			<ContentBlock>
+			<ContentBlock className={classes.HowWeWorkBlock}>
 				<ItemGrid>
 					<div className={classes.half}>
 						<Heading>
@@ -185,29 +230,6 @@ export default () => {
 					</div>
 					<Image src={Scrum} className={classes.half} />
 				</ItemGrid>
-			</ContentBlock>
-			<ContentBlock>
-				<Heading>Out of Home Advertising</Heading>
-				<Image src={LondonTube} alt="LondonTube Ad" size="full" />
-				<Image src={LinkNyc} alt="Nyc Link Ad" size="full" />
-			</ContentBlock>
-			<ContentBlock>
-				<Heading>Social Advertising</Heading>
-				<Spacer />
-				<ItemGrid>
-					<Image src={IG1} alt="JIntro to Front End Graphic" />
-					<Image src={JobsReport} alt="93% employment rate" />
-				</ItemGrid>
-
-				<Image src={BackToSchool} alt="Parents go back to school too" size="full" />
-				<ItemGrid>
-					<Image src={CyberGif} alt="Learn Cybersecurity Analytics" />
-					<Image src={IG6} alt="Logos of employers" />
-				</ItemGrid>
-				<VideoPlayer
-					src="https://player.vimeo.com/video/324643304"
-					title="Stop motion video"
-				/>
 			</ContentBlock>
 		</PageWrapper>
 	)
