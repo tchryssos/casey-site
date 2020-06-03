@@ -62,9 +62,9 @@ export default () => {
 				<Image src={CarolAnimation} alt="Animation of Carol Shaw" size="full" bordered />
 				<Image src={Grace} alt="Grace Hopper Sticker" size="full" bordered />
 				<Spacer height={2} />
-				<Body>
+				<SubHeading>
 					665 people applied for this scholarship over the 3 week period that it was live for and 60 of those applicants enrolled, mostly on first conversion.
-				</Body>
+				</SubHeading>
 				<Spacer height={2} />
 				<Image src={Sweatshirt} alt="Trailblazer Sweatshirt" size="full" bordered />
 				<ItemGrid>

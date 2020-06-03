@@ -16,7 +16,6 @@ import SubHeading from 'components/Typography/SubHeading'
 import ItemGrid from 'components/ItemGrid'
 
 import Filter from 'static/images/Portfolio/portfolio-filter.png'
-import HeaderImage from 'static/images/Portfolio/portfolio-header.gif'
 
 const useStyles = createUseStyles({
 	headerBackgroundColor: {
@@ -44,7 +43,7 @@ export default () => {
 					<div className={classes.half}>
 						<Heading>Building this website!</Heading>
 					</div>
-					<Image className={classes.half} src={HeaderImage} />
+					{/* <Image className={classes.half} src={HeaderImage} /> */}
 				</ItemGrid>
 			</ContentBlock>
 			<ContentBlock>

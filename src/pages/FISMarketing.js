@@ -87,7 +87,7 @@ export default () => {
 			</ContentBlock>
 			<ContentBlock>
 				<Heading>
-					Working with a nimble internal team
+					Working with a lean internal team
 				</Heading>
 				<Spacer />
 				<Body>
@@ -177,8 +177,12 @@ export default () => {
 			</ContentBlock>
 			<ContentBlock>
 				<Heading>
-					Launch, launch, launch
+					Always be launching
 				</Heading>
+				<Spacer height={4} />
+				<SubHeading>
+					Entering New Markets
+				</SubHeading>
 				<Spacer />
 				<Body>
 					In my time at Flatiron School, we launched&nbsp;
@@ -196,6 +200,24 @@ export default () => {
 				</Body>
 				<Image src={LondonTube} alt="LondonTube Ad" size="full" />
 				<Image src={LinkNyc} alt="Nyc Link Ad" size="full" />
+				<Spacer height={4} />
+				<SubHeading>
+					Creating impactful scholarships
+				</SubHeading>
+				<Spacer />
+				<Body>
+					One of the most successful scholarships we executed was an initiative to get more women into tech with the ticketing platform, SeatGeek.
+				</Body>
+				<Spacer />
+				<Body>
+					<span className={classes.callOutText}>
+						665 people applied&nbsp;
+					</span>
+					for this scholarship over the 3 week period that it was live for and 60 of those applicants&nbsp;
+					<span className={classes.callOutText}>
+						enrolled, mostly on first conversion.
+					</span>
+				</Body>
 			</ContentBlock>
 			<ContentBlock className={classes.HowWeWorkBlock}>
 				<ItemGrid>
