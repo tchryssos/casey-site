@@ -19,6 +19,7 @@ import ItemGrid from 'components/ItemGrid'
 import FISorg from 'static/images/FISMarketing/orgchart-01.gif'
 import CourseGraphic from 'static/images/FISMarketing/CourseGraphic.svg'
 import Spinner from 'static/images/FISMarketing/FISM-circle.svg'
+import GraceH from 'static/images/FISMarketing/GraceHopperM.png'
 
 import LondonTube from 'static/images/FISMarketing/LondonTubeAd.png'
 import LinkNyc from 'static/images/FISMarketing/LinkNyc.png'
@@ -201,23 +202,28 @@ export default () => {
 				<Image src={LondonTube} alt="LondonTube Ad" size="full" />
 				<Image src={LinkNyc} alt="Nyc Link Ad" size="full" />
 				<Spacer height={4} />
-				<SubHeading>
-					Creating impactful scholarships
-				</SubHeading>
-				<Spacer />
-				<Body>
-					One of the most successful scholarships we executed was an initiative to get more women into tech with the ticketing platform, SeatGeek.
-				</Body>
-				<Spacer />
-				<Body>
-					<span className={classes.callOutText}>
-						665 people applied&nbsp;
-					</span>
-					for this scholarship over the 3 week period that it was live for and 60 of those applicants&nbsp;
-					<span className={classes.callOutText}>
-						enrolled, mostly on first conversion.
-					</span>
-				</Body>
+				<ItemGrid stackedOnMobile>
+					<div className={classes.half}>
+						<SubHeading>
+							Creating impactful scholarships
+						</SubHeading>
+						<Spacer />
+						<Body>
+							One of the most successful scholarships we executed was an initiative to get more women into tech with the ticketing platform, SeatGeek.
+						</Body>
+						<Spacer />
+						<Body>
+							<span className={classes.callOutText}>
+								665 people applied&nbsp;
+							</span>
+							for this scholarship over the 3 week period that it was live for and 60 of those applicants&nbsp;
+							<span className={classes.callOutText}>
+								enrolled, mostly on first conversion.
+							</span>
+						</Body>
+					</div>
+					<Image className={classes.half} src={GraceH} />
+				</ItemGrid>
 			</ContentBlock>
 			<ContentBlock className={classes.HowWeWorkBlock}>
 				<ItemGrid>
