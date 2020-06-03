@@ -1,4 +1,9 @@
 import React from 'react'
+import { createUseStyles } from 'react-jss'
+
+import {
+	MD_MIN_STRING,
+} from 'constants/styles/breakpoints'
 
 import PageWrapper from 'components/PageWrapper'
 import ContentBlock from 'components/ContentBlock'
@@ -7,57 +12,75 @@ import Body from 'components/Typography/Body'
 import Spacer from 'components/Spacer'
 import Image from 'components/Image'
 import SubHeading from 'components/Typography/SubHeading'
+import ItemGrid from 'components/ItemGrid'
 
 import HeroBefore from 'static/images/FISWeb/FISWebHero-01.png'
 import HeroAfter from 'static/images/FISWeb/FISWebHero-02.png'
 import HeroAfter2 from 'static/images/FISWeb/FISWebHero-03.png'
-import HelloBar from 'static/images/FISWeb/FISWebHelloBar.png'
-import Modal from 'static/images/FISWeb/FISWebModal.png'
-import Buttons from 'static/images/FISWeb/accessible_buttons.png'
+import AACombo from 'static/images/FISWeb/AACombos.png'
 
-export default () => (
-	<PageWrapper>
-		<ContentBlock>
-			<Heading>Flatiron School Website Design</Heading>
-			<Spacer />
-		</ContentBlock>
-		<ContentBlock>
-			<Heading>Hero Design Updates</Heading>
-			<Spacer />
-			<SubHeading>CURRENT</SubHeading>
-			<Spacer />
-			<Body>
-				The hero is the first thing people see when they come to our site. It needs to pull them in and inspire them to take actions. Our current hero is very dark. The images of lively students are covered up by a dark overlay and more text on top of that. We think that if we can brighten up our hero section and separate the text from the images, we could be more creative with our visuals and more inviting to prospective students.
-			</Body>
-			<Image size="full" src={HeroBefore} />
-			<Spacer />
-			<SubHeading>UPDATED</SubHeading>
-			<Spacer />
-			<Body>These updates have not yet been enacted, but we would expect them to increase engagement with our site and decrease bounce rate. These updates will also allow us to better match our site pages to campaigns we are running across other channels.</Body>
-			<Image size="full" src={HeroAfter} />
-			<Image size="full" src={HeroAfter2} />
-			<Spacer />
-			<Spacer />
-		</ContentBlock>
-		<ContentBlock>
-			<Heading>Hello Bar and Modal Designs</Heading>
-			<Spacer />
-			<Body>
-					In order to share big news on our pages we wanted to test designs for Hello Bar banners and pop-up modals.
-			</Body>
-			<Image size="full" src={HelloBar} />
-			<Image size="full" src={Modal} />
-			<Spacer />
-			<Spacer />
-		</ContentBlock>
-		<ContentBlock>
-			<Heading>Accessible Buttons</Heading>
-			<Spacer />
-			<Body>
-					None of the buttons on our current site meet AA accessibility standards. To make our site more accessible and up to date with our other branding, we mocked up all of the on-brand color combinations that could meet AA standards.
-			</Body>
-			<Image bordered size="full" src={Buttons} />
-		</ContentBlock>
-	</PageWrapper>
-)
+const useStyles = createUseStyles({
+	half: {
+		width: '100%',
+		marginBottom: 64,
+		[MD_MIN_STRING]: {
+			width: 'calc(50% - 8px)',
+			marginBottom: 0,
+		},
+	},
+})
+
+export default () => {
+	const classes = useStyles()
+	return (
+		<PageWrapper>
+			<ContentBlock>
+				<Heading>Flatiron School Hero Section Redesign</Heading>
+				<Spacer />
+			</ContentBlock>
+			<ContentBlock>
+				<Image size="full" src={HeroBefore} />
+				<Spacer />
+				<Body>
+					Here is the current hero section on any given page at flatironschool.com.
+				</Body>
+			</ContentBlock>
+			<ContentBlock>
+				<ItemGrid>
+					<div className={classes.half}>
+						<SubHeading>GOAL #1</SubHeading>
+						<Heading>Increase Accessibility</Heading>
+						<Spacer />
+						<Body>
+							After auditing this section for accessibility we found that the buttons with white text on a blue background did not meet AA standards. We also wanted to make sure that the white text over the image was legible in every case.
+						</Body>
+					</div>
+					<Image className={classes.half} src={AACombo} />
+				</ItemGrid>
+				<Spacer height={4} />
+				<SubHeading>GOAL #2</SubHeading>
+				<Heading>Differentiate Pages</Heading>
+				<Spacer />
+				<Body>
+					When the header on every page looks exactly the same it is hard for users to tell where they are on the site. We want to uncover the graphics that make individual campaigns and courses stand out so that if you are on a page for cybersecurity and not design - you know it.
+				</Body>
+				<Spacer height={4} />
+				<SubHeading>GOAL #3</SubHeading>
+				<Heading>Modernize</Heading>
+				<Spacer />
+				<Body>
+					Flatiron School is a coding bootcamp and we want prospective students to be impressed with our tech presence.
+				</Body>
+			</ContentBlock>
+			<ContentBlock>
+				<SubHeading>UPDATED</SubHeading>
+				<Spacer />
+				<Image size="full" src={HeroAfter} />
+				<Image size="full" src={HeroAfter2} />
+				<Spacer />
+				<Spacer />
+			</ContentBlock>
+		</PageWrapper>
+	)
+}
 
