@@ -18,6 +18,7 @@ import HeroBefore from 'static/images/FISWeb/FISWeb_OG.png'
 import HeroAfter from 'static/images/FISWeb/FISWebHero-02.png'
 import HeroAfter2 from 'static/images/FISWeb/FISWebHero-03.png'
 import AACombo from 'static/images/FISWeb/AACombos.png'
+import Cyber from 'static/images/FISWeb/Cyber.png'
 
 const useStyles = createUseStyles({
 	half: {
@@ -62,6 +63,7 @@ export default () => {
 				<Body>
 					When the header on every page looks exactly the same it is hard for users to tell where they are on the site. We want to uncover the graphics that make individual campaigns and courses stand out so that if you are on a page for cybersecurity and not design - you know it.
 				</Body>
+				<Image size="full" src={Cyber} />
 				<Spacer height={4} />
 				<SubHeading>GOAL #3</SubHeading>
 				<Heading>Modernize</Heading>
@@ -69,14 +71,6 @@ export default () => {
 				<Body>
 					Flatiron School is a coding bootcamp and we want prospective students to be impressed with our tech presence.
 				</Body>
-			</ContentBlock>
-			<ContentBlock>
-				<SubHeading>UPDATED</SubHeading>
-				<Spacer />
-				<Image size="full" src={HeroAfter} />
-				<Image size="full" src={HeroAfter2} />
-				<Spacer />
-				<Spacer />
 			</ContentBlock>
 		</PageWrapper>
 	)
