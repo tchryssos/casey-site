@@ -4,7 +4,6 @@ import { createUseStyles } from 'react-jss'
 import PageWrapper from 'components/PageWrapper'
 import ContentBlock from 'components/ContentBlock'
 import Heading from 'components/Typography/Heading'
-import Body from 'components/Typography/Body'
 import SubHeading from 'components/Typography/SubHeading'
 import Image from 'components/Image'
 import Spacer from 'components/Spacer'
@@ -16,6 +15,7 @@ import FiftyFifty from 'static/images/SeatGeekScholarship/50-50-graphic.png'
 import Timeline from 'static/images/SeatGeekScholarship/womens-month-timeline.png'
 import CarolAnimation from 'static/images/SeatGeekScholarship/carol-animation.gif'
 import Grace from 'static/images/SeatGeekScholarship/GraceHopper.png'
+import GraceHeader from 'static/images/SeatGeekScholarship/GraceHopper_transparent.png'
 import Sweatshirt from 'static/images/SeatGeekScholarship/TrailblazerSweatshirt.jpg'
 import Perlman from 'static/images/SeatGeekScholarship/perlman.png'
 import Coalition from 'static/images/SeatGeekScholarship/coalition.png'
@@ -47,7 +47,7 @@ export default () => {
 							Role: Creative Direction and Design
 						</SubHeading>
 					</div>
-					<Image className={classes.half} src={CarolAnimation} alt="Animation of Carol Shaw" />
+					<Image className={classes.half} src={GraceHeader} alt="Animation of Carol Shaw" />
 				</ItemGrid>
 			</ContentBlock>
 			<ContentBlock>
