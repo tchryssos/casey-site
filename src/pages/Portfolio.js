@@ -16,6 +16,9 @@ import SubHeading from 'components/Typography/SubHeading'
 import ItemGrid from 'components/ItemGrid'
 
 import Filter from 'static/images/Portfolio/portfolio-filter.png'
+import OldProjectPage from 'static/images/Portfolio/old-project-page.png'
+import FISMPage from 'static/images/Portfolio/portfolio-fism.png'
+import LaddersPage from 'static/images/Portfolio/portfolio-ladders.png'
 
 const useStyles = createUseStyles({
 	headerBackgroundColor: {
@@ -23,6 +26,9 @@ const useStyles = createUseStyles({
 	},
 	filterBlock: {
 		backgroundColor: '#da8c43',
+	},
+	contentStrategyBlock: {
+		// backgroundColor: 'white',
 	},
 	half: {
 		width: '100%',
@@ -82,7 +88,7 @@ export default () => {
 					While navigating the transition from Graphic Design to Product Design, I was accepting both kind of jobs. In order to make it easier for hiring managers and mentors to find the appropriate work more quickly, I added a filter to the homepage.
 				</Body>
 			</ContentBlock>
-			<ContentBlock>
+			<ContentBlock className={classes.contentStrategyBlock}>
 				<SubHeading>GOAL #4</SubHeading>
 				<Spacer />
 				<Heading>Create a clear content strategy for each page</Heading>
@@ -90,6 +96,20 @@ export default () => {
 				<Body>
 					In the first iteration of the site, I focused on templatizing the project pages to reduce the amount of developer resources I would need. After learning more React myself, I wanted to tailor the pages more to the projects and make them easier to read for hiring managers.
 				</Body>
+				<Spacer />
+				<Body>
+					In the first iteration of the site every page had two components - a description on the left and a scrolling content area witha stream of text and images.
+				</Body>
+				<Spacer />
+				<Image src={OldProjectPage} size="full" bordered />
+				<Spacer />
+				<Body>
+					In version 2, I created components that would help differentiate the pages and make them more digestible to a user.
+				</Body>
+				<ItemGrid>
+					<Image size="half" src={LaddersPage} />
+					<Image size="half" src={FISMPage} />
+				</ItemGrid>
 			</ContentBlock>
 		</PageWrapper>
 	)
