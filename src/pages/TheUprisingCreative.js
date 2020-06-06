@@ -24,10 +24,7 @@ import RedBullOne from 'static/images/TheUprisingCreative/RedBullRecords/redbull
 
 const useStyles = createUseStyles({
 	headerColor: {
-		backgroundColor: '#2b2b2b',
-	},
-	headerTextColor: {
-		color: 'white',
+		backgroundColor: '#4E7FFF',
 	},
 })
 
@@ -36,7 +33,7 @@ export default () => {
 	return (
 		<PageWrapper>
 			<ContentBlock className={classes.headerColor}>
-				<Heading className={classes.headerTextColor}>Work from my internship at The Uprising Creative</Heading>
+				<Heading>Work from my internship at The Uprising Creative</Heading>
 				<Spacer />
 				<Body>
 					During my internship I worked on designs for web, merchandise, print ads, logos, letterheads and magazine layouts. Also created pitch decks for upcoming film projects, documented inventory, and sat in on meetings with clients.

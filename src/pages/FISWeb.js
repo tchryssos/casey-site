@@ -14,9 +14,7 @@ import Image from 'components/Image'
 import SubHeading from 'components/Typography/SubHeading'
 import ItemGrid from 'components/ItemGrid'
 
-import HeroBefore from 'static/images/FISWeb/FISWeb_OG.png'
-import HeroAfter from 'static/images/FISWeb/FISWebHero-02.png'
-import HeroAfter2 from 'static/images/FISWeb/FISWebHero-03.png'
+import HeroBefore from 'static/images/FISWeb/FISWeb_OG_2.png'
 import AACombo from 'static/images/FISWeb/AACombos.png'
 import Cyber from 'static/images/FISWeb/Cyber.png'
 
