@@ -36,6 +36,8 @@ const useStyles = createUseStyles({
 		backgroundColor: 'white',
 	},
 	scrollTextPadding: {
+		paddingTop: 100,
+		transform: 'translateY(-100px)',
 	},
 	half: {
 		width: '100%',
@@ -56,7 +58,7 @@ export default () => {
 		const scrollOffset = app.scrollTop - scrollingContainer.current.offsetTop
 		const containerHeight = scrollingContainer.current.offsetHeight
 		const textHeight = scrollingTextContainer.current.offsetHeight
-		if (scrollOffset >= 0 && scrollOffset <= containerHeight - textHeight) {
+		if (scrollOffset >= -100 && scrollOffset <= containerHeight - textHeight) {
 			scrollingTextContainer.current.style.transform = `translateY(${scrollOffset}px)`
 		}
 	}
