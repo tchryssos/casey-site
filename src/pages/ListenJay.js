@@ -15,16 +15,24 @@ import SubHeading from 'components/Typography/SubHeading'
 import VideoPlayer from 'components/VideoPlayer'
 import ItemGrid from 'components/ItemGrid'
 
-import ResultsPod from 'static/images/ListenJay/iterations.gif'
-import Areas from 'static/images/ListenJay/areas.png'
-import Wireframes from 'static/images/ListenJay/wireframes.jpg'
-import LJBranding from 'static/images/ListenJay/LJ-branding.png'
-import Player from 'static/images/ListenJay/player-hifi.png'
+
+import HeaderImage from 'static/images/ListenJay/LJ-HeaderImage.png'
+import LJBranding from 'static/images/ListenJay/LJ-Brand.png'
+import Wires from 'static/images/ListenJay/LJ-Wires.png'
 import Flow from 'static/images/ListenJay/LJ-flow-01.png'
 import CTA from 'static/images/ListenJay/LJ-CTA.png'
 import Modal from 'static/images/ListenJay/LJ-Modal.png'
 
 const useStyles = createUseStyles({
+	wiresBlock: {
+		backgroundColor: '#b4e0ff',
+	},
+	headerBlock: {
+		backgroundColor: 'pink',
+	},
+	brandBlock: {
+		backgroundColor: 'white',
+	},
 	half: {
 		width: '100%',
 		marginBottom: 64,
@@ -39,8 +47,15 @@ export default () => {
 	const classes = useStyles()
 	return (
 		<PageWrapper>
-			<ContentBlock>
-				<Heading>Listen Jay is a podcast discovery tool looking to improve its usability and branding</Heading>
+			<ContentBlock className={classes.headerBlock}>
+				<ItemGrid stackedOnMobile>
+					<div className={classes.half}>
+						<Heading>Listen Jay is a podcast discovery tool looking to improve its usability and branding</Heading>
+						<Spacer />
+						<SubHeading>Role: UX/UI Designer</SubHeading>
+					</div>
+					<Image src={HeaderImage} className={classes.half} />
+				</ItemGrid>
 				<Spacer />
 			</ContentBlock>
 			<ContentBlock>
@@ -58,7 +73,7 @@ export default () => {
 					<Image src={Flow} className={classes.half} />
 				</ItemGrid>
 			</ContentBlock>
-			<ContentBlock>
+			<ContentBlock className={classes.brandBlock}>
 				<Heading>
 					Audit the existing page for usability
 				</Heading>
@@ -73,7 +88,7 @@ export default () => {
 							Currently above the player controls there are thumbs up and down buttons, a heart button, a place to comment and two separate CTAs to share. At the top of the page each podcast is also ranked by both stars and thumbs. all of these icons can be confusing and overwhelming to the user.
 						</Body>
 					</div>
-					<Image src={CTA} className={classes.half} />
+					<Image src={CTA} className={classes.half} bordered />
 				</ItemGrid>
 				<Spacer height={2} />
 				<SubHeading>
@@ -85,28 +100,45 @@ export default () => {
 				</Body>
 				<Image src={Modal} size="full" />
 			</ContentBlock>
-			<ContentBlock>
+			<ContentBlock className={classes.wiresBlock}>
 				<Heading>Iterate on Wireframes</Heading>
-			</ContentBlock>
-			<ContentBlock>
-				<Heading>
-					Branding
-				</Heading>
+				<Spacer />
 				<Body>
-					fun, inviting
+					In the first iteration, I focused on keeping most of the functionality but streamlining it. In the second iteration, I wanted to make it more obvious that users can share one part of the transcript and also make it easier to find other episodes. Finally, I decided to condense the player even more to bring the transcript higher up on the page, since that is the key differentiator for ListenJay. I also added a CTA to search for anything at the bottom of the page to keep users engaged.
 				</Body>
+				<Spacer />
+				<Image src={Wires} size="full" />
+			</ContentBlock>
+			<ContentBlock className={classes.brandBlock}>
+				<Heading>
+					Elevate the brand
+				</Heading>
+				<Spacer />
+				<Body>
+					Using san serif fonts and a consistent type system modernized the ListenJay brand. Adding more vibrant colors to the UI helped created a visual heirarchy and also made the platform more inviting.
+				</Body>
+				<Spacer />
 				<Image size="full" src={LJBranding} />
 			</ContentBlock>
 			<ContentBlock>
 				<Heading>
-					Differentiating, Value Props
+					Polishing / Bringing it all together.
 				</Heading>
+				<Spacer />
 				<SubHeading>
-					Bring the transcript up on the page
+					Final UI Designs
 				</SubHeading>
+				<Spacer />
 				<SubHeading>
 					Create Onboarding flow to explain transcript
 				</SubHeading>
+				<Spacer />
+				<Body>
+					ListenJay's main differentiator is its ability to create a share link that drives to one specific quote in a podcast. Because this is hard to understand from the player page, I created an onboarding flow to help users understand the capabilities.
+				</Body>
+				<Heading>
+					Update this video
+				</Heading>
 				<VideoPlayer
 					src="https://player.vimeo.com/video/390219313?loop=1"
 					title="Musical rug demo"
