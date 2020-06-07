@@ -126,6 +126,7 @@ const App = ({ location }) => {
 						// isMenuOpen ? classes.fixedBody : '',
 					)
 				}
+				id="scrollApp"
 				ref={appRef}
 			>
 				<NavBar />

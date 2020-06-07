@@ -12,6 +12,9 @@ const useStyles = createUseStyles({
 		alignItems: 'center',
 		flexWrap: 'wrap',
 	},
+	startAligned: {
+		alignItems: 'flex-start',
+	},
 	stackedOnMobile: {
 		flexDirection: 'column',
 		[MD_MIN_STRING]: {
@@ -20,12 +23,15 @@ const useStyles = createUseStyles({
 	},
 })
 
-export default ({ children, className, stackedOnMobile }) => {
+export default ({ 
+	children, className, stackedOnMobile, startAligned,
+}) => {
 	const classes = useStyles()
 	return (
 		<div
 			className={clsx(
 				{ [classes.stackedOnMobile]: stackedOnMobile },
+				{ [classes.startAligned]: startAligned },
 				classes.itemGridWrapper,
 				className,
 			)}

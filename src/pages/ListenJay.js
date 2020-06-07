@@ -1,5 +1,6 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import { createUseStyles } from 'react-jss'
+import clsx from 'clsx'
 
 import {
 	MD_MIN_STRING,
@@ -22,16 +23,19 @@ import Wires from 'static/images/ListenJay/LJ-Wires.png'
 import Flow from 'static/images/ListenJay/LJ-flow-01.png'
 import CTA from 'static/images/ListenJay/LJ-CTA.png'
 import Modal from 'static/images/ListenJay/LJ-Modal.png'
+import UIMock from 'static/images/ListenJay/testmock.png'
 
 const useStyles = createUseStyles({
 	wiresBlock: {
 		backgroundColor: '#b4e0ff',
 	},
 	headerBlock: {
-		backgroundColor: 'pink',
+		backgroundColor: '#b4e0ff',
 	},
 	brandBlock: {
 		backgroundColor: 'white',
+	},
+	scrollTextPadding: {
 	},
 	half: {
 		width: '100%',
@@ -45,6 +49,22 @@ const useStyles = createUseStyles({
 
 export default () => {
 	const classes = useStyles()
+	const scrollingContainer = useRef()
+	const scrollingTextContainer = useRef()
+	const scrollListener = () => {
+		const app = document.querySelector('#scrollApp')
+		const scrollOffset = app.scrollTop - scrollingContainer.current.offsetTop
+		const containerHeight = scrollingContainer.current.offsetHeight
+		const textHeight = scrollingTextContainer.current.offsetHeight
+		if (scrollOffset >= 0 && scrollOffset <= containerHeight - textHeight) {
+			scrollingTextContainer.current.style.transform = `translateY(${scrollOffset}px)`
+		}
+	}
+	useEffect(() => {
+		const app = document.querySelector('#scrollApp')
+		app.addEventListener('scroll', scrollListener)
+		return () => app.removeEventListener('scroll', scrollListener)
+	}, [])
 	return (
 		<PageWrapper>
 			<ContentBlock className={classes.headerBlock}>
@@ -121,14 +141,31 @@ export default () => {
 				<Image size="full" src={LJBranding} />
 			</ContentBlock>
 			<ContentBlock>
-				<Heading>
-					Polishing / Bringing it all together.
-				</Heading>
-				<Spacer />
-				<SubHeading>
-					Final UI Designs
-				</SubHeading>
-				<Spacer />
+				<div ref={scrollingContainer}>
+					<ItemGrid stackedOnMobile startAligned>
+						<div
+							ref={scrollingTextContainer}
+							className={clsx(
+								classes.half,
+								classes.scrollTextPadding,
+							)}
+						>
+							<Heading>
+								Polishing / Bringing it all together
+							</Heading>
+							<Spacer />
+							<SubHeading>
+								Final UI Designs
+							</SubHeading>
+							<Spacer />
+							<Body>
+								ListenJay's main differentiator is its ability to create a share link that drives to one specific quote in a podcast. Because this is hard to understand from the player page, I created an onboarding flow to help users understand the capabilities.
+							</Body>
+						</div>
+						<Image src={UIMock} className={classes.half} />
+					</ItemGrid>
+				</div>
+				<Spacer height={3} />
 				<SubHeading>
 					Create Onboarding flow to explain transcript
 				</SubHeading>
