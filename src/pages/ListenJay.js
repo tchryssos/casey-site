@@ -3,7 +3,7 @@ import { createUseStyles } from 'react-jss'
 import clsx from 'clsx'
 
 import {
-	MD_MIN_STRING,
+	MD_MIN_STRING, MD_MIN_VALUE,
 } from 'constants/styles/breakpoints'
 
 import PageWrapper from 'components/PageWrapper'
@@ -36,8 +36,10 @@ const useStyles = createUseStyles({
 		backgroundColor: 'white',
 	},
 	scrollTextPadding: {
-		paddingTop: 100,
-		transform: 'translateY(-100px)',
+		[MD_MIN_STRING]: {
+			paddingTop: 100,
+			transform: 'translateY(-100px)',
+		},
 	},
 	half: {
 		width: '100%',
@@ -54,18 +56,24 @@ export default () => {
 	const scrollingContainer = useRef()
 	const scrollingTextContainer = useRef()
 	const scrollListener = () => {
-		const app = document.querySelector('#scrollApp')
-		const scrollOffset = app.scrollTop - scrollingContainer.current.offsetTop
-		const containerHeight = scrollingContainer.current.offsetHeight
-		const textHeight = scrollingTextContainer.current.offsetHeight
-		if (scrollOffset >= -100 && scrollOffset <= containerHeight - textHeight) {
-			scrollingTextContainer.current.style.transform = `translateY(${scrollOffset}px)`
+		if (window.innerWidth >= MD_MIN_VALUE) {
+			const app = document.querySelector('#scrollApp')
+			const scrollOffset = app.scrollTop - scrollingContainer.current.offsetTop
+			const containerHeight = scrollingContainer.current.offsetHeight
+			const textHeight = scrollingTextContainer.current.offsetHeight
+			if (scrollOffset >= -100 && scrollOffset <= containerHeight - textHeight) {
+				scrollingTextContainer.current.style.transform = `translateY(${scrollOffset}px)`
+			}
+		} else {
+			scrollingTextContainer.current.style.transform = 'translateY(0px)'
 		}
 	}
 	useEffect(() => {
-		const app = document.querySelector('#scrollApp')
-		app.addEventListener('scroll', scrollListener)
-		return () => app.removeEventListener('scroll', scrollListener)
+		if (window.innerWidth >= MD_MIN_VALUE) {
+			const app = document.querySelector('#scrollApp')
+			app.addEventListener('scroll', scrollListener)
+			return () => app.removeEventListener('scroll', scrollListener)
+		}
 	}, [])
 	return (
 		<PageWrapper>
