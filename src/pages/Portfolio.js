@@ -1,5 +1,6 @@
 import React from 'react'
 import { createUseStyles } from 'react-jss'
+import clsx from 'clsx'
 
 import {
 	MD_MIN_STRING,
@@ -19,19 +20,52 @@ import Filter from 'static/images/Portfolio/portfolio-filter.png'
 import OldProjectPage from 'static/images/Portfolio/old-project-page.png'
 import FISMPage from 'static/images/Portfolio/portfolio-fism.png'
 import LaddersPage from 'static/images/Portfolio/portfolio-ladders.png'
+import HeaderCode from 'static/images/Portfolio/portfolio-header-01.png'
+import HeaderSite from 'static/images/Portfolio/portfolio-header-02.png'
+import HeaderTerm from 'static/images/Portfolio/portfolio-header-03.png'
 
 const useStyles = createUseStyles({
+	'@keyframes shake': {
+		'0%': { transform: 'translate(1px, 1px) rotate(0deg)' },
+		'10%': { transform: 'translate(-1px, -2px) rotate(-1deg)' },
+		'20%': { transform: 'translate(-3px, 0px) rotate(1deg)' },
+		'30%': { transform: 'translate(3px, 2px) rotate(0deg)' },
+		'40%': { transform: 'translate(1px, -1px) rotate(1deg)' },
+		'50%': { transform: 'translate(-1px, 2px) rotate(-1deg)' },
+		'60%': { transform: 'translate(-3px, 1px) rotate(0deg)' },
+		'70%': { transform: 'translate(3px, 1px) rotate(-1deg)' },
+		'80%': { transform: 'translate(-1px, -1px) rotate(1deg)' },
+		'90%': { transform: 'translate(1px, 2px) rotate(0deg)' },
+		'100%': { transform: 'translate(1px, -2px) rotate(-1deg)' },
+	},
 	headerBackgroundColor: {
 		backgroundColor: '#4e7fff',
 	},
 	filterBlock: {
 		backgroundColor: '#da8c43',
 	},
-	contentStrategyBlock: {
-		// backgroundColor: 'white',
+	imageContainer: {
+		position: 'relative',
+	},
+	headerCode: {
+		position: 'absolute',
+		width: 200,
+		transform: 'translate(25px, 50px)',
+		animation: '$shake 8s infinite',
+	},
+	headerSite: {
+		position: 'absolute',
+		width: 200,
+		transform: 'translate(150px, -50px)',
+	},
+	headerTerm: {
+		position: 'absolute',
+		width: 100,
+		transform: 'translate(235px, 100px)',
 	},
 	half: {
 		width: '100%',
+		height: 200,
 		marginBottom: 64,
 		[MD_MIN_STRING]: {
 			width: 'calc(50% - 8px)',
@@ -46,10 +80,28 @@ export default () => {
 		<PageWrapper>
 			<ContentBlock className={classes.headerBackgroundColor}>
 				<ItemGrid stackedOnMobile>
-					<div className={classes.half}>
+					<div
+						className={clsx(
+							classes.half,
+							classes.imageContainer,
+						)}
+					>
 						<Heading>Building this website!</Heading>
 					</div>
-					{/* <Image className={classes.half} src={HeaderImage} /> */}
+					<div className={classes.half}>
+						<Image
+							src={HeaderSite}
+							className={classes.headerSite}
+						/>
+						<Image
+							src={HeaderCode}
+							className={classes.headerCode}
+						/>
+						<Image
+							src={HeaderTerm}
+							className={classes.headerTerm}
+						/>
+					</div>
 				</ItemGrid>
 			</ContentBlock>
 			<ContentBlock>
