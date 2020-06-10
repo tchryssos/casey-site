@@ -180,7 +180,7 @@ export default () => {
 				<Heading>
 					Always be launching
 				</Heading>
-				<Spacer height={4} />
+				<Spacer />
 				<SubHeading>
 					Entering New Markets
 				</SubHeading>
