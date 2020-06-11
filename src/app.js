@@ -161,16 +161,8 @@ const App = ({ location }) => {
 							component={TheUprisingCreative}
 						/>
 						<Route
-							path={blobLinkData.SeatGeekScholarship.link}
-							component={SeatGeekScholarship}
-						/>
-						<Route
 							path={blobLinkData.ChaseSapphire.link}
 							component={ChaseSapphire}
-						/>
-						<Route
-							path={blobLinkData.FISWeb.link}
-							component={FISWeb}
 						/>
 						<Route
 							path="/listen-jay"

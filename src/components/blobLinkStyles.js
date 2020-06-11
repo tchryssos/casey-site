@@ -42,32 +42,26 @@ export default createUseStyles({
 	ListenJay: {
 		transform: 'translate(8vw, -4vw)',
 	},
-	ELO: {
+	FISMarketing: {
 		transform: 'translateY(8vw)',
 	},
-	FISMarketing: {
+	Portfolio: {
 		transform: 'translate(6vw, 3vw)',
 	},
-	FISWeb: {
+	ELO: {
 		transform: 'translate(6vw, -2vw)',
 	},
 	TheUprisingCreative: {
 		transform: 'translate(-25vw, -11vw)',
 	},
-	SeatGeekScholarship: {
+	ChaseSapphire: {
 		transform: 'translateY(-30vw)',
 	},
-	Portfolio: {
-		transform: 'translateY(-52vw)',
-	},
-	ChaseSapphire: {
-		transform: 'translate(3vw, -55vw)',
-	},
 	MusicalRug: {
-		transform: 'translate(0vw, -55vw)',
+		transform: 'translate(3vw, -35vw)',
 	},
 	About: {
-		transform: 'translateY(-65vw)',
+		transform: 'translate(0vw, -30vw)',
 	},
 	[MD_MIN_STRING]: {
 		linkWrapper: {
@@ -82,32 +76,26 @@ export default createUseStyles({
 		ListenJay: {
 			transform: 'translateX(0)',
 		},
-		ELO: {
+		FISMarketing: {
 			transform: 'translate(-5vw, 1vw)',
 		},
-		FISMarketing: {
+		Portfolio: {
 			transform: 'translate(-2vw, 1vw)',
 		},
-		FISWeb: {
+		ELO: {
 			transform: 'translate(-2vw, -0.5vw)',
 		},
 		TheUprisingCreative: {
 			transform: 'translate(-13vw, -4vw)',
 		},
-		SeatGeekScholarship: {
+		ChaseSapphire: {
 			transform: 'translateY(-14vw)',
 		},
-		Portfolio: {
-			transform: 'translateY(-23vw)',
-		},
-		ChaseSapphire: {
-			transform: 'translate(1vw, -26vw)',
-		},
 		MusicalRug: {
-			transform: 'translate(-2vw, -24vw)',
+			transform: 'translate(1vw, -18vw)',
 		},
 		About: {
-			transform: 'translateY(-30vw)',
+			transform: 'translate(-2vw, -15vw)',
 		},
 	},
 	[LG_MIN_STRING]: {
