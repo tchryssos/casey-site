@@ -19,7 +19,8 @@ import OGELO from 'static/images/ELO/Og-elo.png'
 import ELOWireframes from 'static/images/ELO/elo-wireframes.png'
 import ELOWhiteboard from 'static/images/ELO/elo-whiteboard-2.png'
 import ELOGitHub from 'static/images/ELO/ELO-githubIssues.png'
-import ELOHiDef2 from 'static/images/ELO/hidef-2.png'
+import ELOHiDef1 from 'static/images/ELO/ladders_hidef_1.png'
+import ELOHiDef2 from 'static/images/ELO/ladders_hidef_2.png'
 import ELOStorybook from 'static/images/ELO/elo-storybook.png'
 import ELODirections from 'static/images/ELO/elo-directions.png'
 import ELOAltLogo from 'static/images/ELO/elo-alt-logos.png'
@@ -132,6 +133,7 @@ export default () => {
 			<ContentBlock className={classes.visualDesignBlock}>
 				<Heading>Final UI Designs</Heading>
 				<Spacer />
+				<Image size="full" src={ELOHiDef1} />
 				<Image size="full" src={ELOHiDef2} />
 				<Spacer />
 			</ContentBlock>
