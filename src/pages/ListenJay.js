@@ -15,6 +15,7 @@ import Image from 'components/Image'
 import SubHeading from 'components/Typography/SubHeading'
 import VideoPlayer from 'components/VideoPlayer'
 import ItemGrid from 'components/ItemGrid'
+import Note from 'components/Typography/Note'
 
 
 import HeaderImage from 'static/images/ListenJay/LJ-HeaderImage.png'
@@ -56,7 +57,7 @@ const useStyles = createUseStyles({
 	},
 	WireframeDescription: {
 		[MD_MIN_STRING]: {
-			height: 200,
+			height: 150,
 		},
 	},
 	scrollTextPadding: {
@@ -164,9 +165,9 @@ export default () => {
 								Iteration 1
 							</SubHeading>
 							<Spacer />
-							<Body>
+							<Note>
 								Keeps most of the functionality but creates more of a heirarchy and removes the repetitive CTAs.
-							</Body>
+							</Note>
 						</div>
 						<Image className={classes.thirdImage} size="full" src={Wires1} />
 					</div>
@@ -176,9 +177,9 @@ export default () => {
 								Iteration 2
 							</SubHeading>
 							<Spacer />
-							<Body>
+							<Note>
 								Makes it apparent that users can share a quote or piece from the transcript. Adds in discovery feature for other episodes.
-							</Body>
+							</Note>
 						</div>
 						<Image className={classes.thirdImage} size="full" src={Wires2} />
 					</div>
@@ -188,9 +189,9 @@ export default () => {
 								Iteration 3
 							</SubHeading>
 							<Spacer />
-							<Body>
+							<Note>
 								Condenses the episode information to bring the transcript and main CTA up.
-							</Body>
+							</Note>
 						</div>
 						<Image className={classes.thirdImage} size="full" src={Wires3} />
 					</div>
@@ -218,7 +219,7 @@ export default () => {
 							)}
 						>
 							<Heading>
-								Polishing / Bringing it all together
+								Bringing it all together
 							</Heading>
 							<Spacer />
 							<SubHeading>
@@ -226,7 +227,7 @@ export default () => {
 							</SubHeading>
 							<Spacer />
 							<Body>
-								ListenJay's main differentiator is its ability to create a share link that drives to one specific quote in a podcast. Because this is hard to understand from the player page, I created an onboarding flow to help users understand the capabilities.
+								For the final UI designs, I used the third iteration of the wireframes as a jumping off point. Combined with the new branding, this created a v2 of ListenJay's podcast episode page that I believe will work better for new users coming from social and also show off ListenJay as a brand.
 							</Body>
 						</div>
 						<Image src={UIMock} className={classes.half} />
@@ -234,18 +235,15 @@ export default () => {
 				</div>
 				<Spacer height={3} />
 				<SubHeading>
-					Create Onboarding flow to explain transcript
+					Prototyping an onboarding flow for listeners
 				</SubHeading>
 				<Spacer />
 				<Body>
-					ListenJay's main differentiator is its ability to create a share link that drives to one specific quote in a podcast. Because this is hard to understand from the player page, I created an onboarding flow to help users understand the capabilities.
+					ListenJay's main differentiator is its ability to create a share link that drives to one specific quote in a podcast. Because this is hard to understand from the player page, I created an onboarding flow to help users understand the capabilities better.
 				</Body>
-				<Heading>
-					Update this video
-				</Heading>
 				<VideoPlayer
-					src="https://player.vimeo.com/video/390219313?loop=1"
-					title="Musical rug demo"
+					src="https://player.vimeo.com/video/428292732?loop=1"
+					title="Prototype Animation"
 					aspectRatio="1:1"
 				/>
 			</ContentBlock>
