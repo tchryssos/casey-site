@@ -1,5 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react'
-import { Route, Switch, withRouter, BrowserRouter } from 'react-router-dom'
+import {
+	Route, Switch, withRouter, BrowserRouter,
+} from 'react-router-dom'
 import { render } from 'react-dom'
 import { createUseStyles } from 'react-jss'
 import clsx from 'clsx'
