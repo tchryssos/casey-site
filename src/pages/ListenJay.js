@@ -20,6 +20,9 @@ import ItemGrid from 'components/ItemGrid'
 import HeaderImage from 'static/images/ListenJay/LJ-HeaderImage.png'
 import LJBranding from 'static/images/ListenJay/LJ-Brand.png'
 import Wires from 'static/images/ListenJay/LJ-Wires.png'
+import Wires1 from 'static/images/ListenJay/ITERATION-1.png'
+import Wires2 from 'static/images/ListenJay/ITERATION-2.png'
+import Wires3 from 'static/images/ListenJay/ITERATION-3.png'
 import Flow from 'static/images/ListenJay/LJ-flow-01.png'
 import CTA from 'static/images/ListenJay/LJ-CTA.png'
 import Modal from 'static/images/ListenJay/LJ-Modal.png'
@@ -34,6 +37,27 @@ const useStyles = createUseStyles({
 	},
 	brandBlock: {
 		backgroundColor: 'white',
+	},
+	third: {
+		width: '100%',
+		marginBottom: 64,
+		[MD_MIN_STRING]: {
+			width: '30%',
+			marginBottom: 0,
+		},
+	},
+	thirdImage: {
+		width: '60%',
+		marginLeft: '20%',
+		[MD_MIN_STRING]: {
+			width: '100%',
+			marginLeft: 0,
+		},
+	},
+	WireframeDescription: {
+		[MD_MIN_STRING]: {
+			height: 200,
+		},
 	},
 	scrollTextPadding: {
 		[MD_MIN_STRING]: {
@@ -133,11 +157,44 @@ export default () => {
 			<ContentBlock className={classes.wiresBlock}>
 				<Heading>Iterate on Wireframes</Heading>
 				<Spacer />
-				<Body>
-					In the first iteration, I focused on keeping most of the functionality but streamlining it. In the second iteration, I wanted to make it more obvious that users can share one part of the transcript and also make it easier to find other episodes. Finally, I decided to condense the player even more to bring the transcript higher up on the page, since that is the key differentiator for ListenJay. I also added a CTA to search for anything at the bottom of the page to keep users engaged.
-				</Body>
-				<Spacer />
-				<Image src={Wires} size="full" />
+				<ItemGrid stackedOnMobile startAligned>
+					<div className={classes.third}>
+						<div className={classes.WireframeDescription}>
+							<SubHeading>
+								Iteration 1
+							</SubHeading>
+							<Spacer />
+							<Body>
+								Keeps most of the functionality but creates more of a heirarchy and removes the repetitive CTAs.
+							</Body>
+						</div>
+						<Image className={classes.thirdImage} size="full" src={Wires1} />
+					</div>
+					<div className={classes.third}>
+						<div className={classes.WireframeDescription}>
+							<SubHeading>
+								Iteration 2
+							</SubHeading>
+							<Spacer />
+							<Body>
+								Makes it apparent that users can share a quote or piece from the transcript. Adds in discovery feature for other episodes.
+							</Body>
+						</div>
+						<Image className={classes.thirdImage} size="full" src={Wires2} />
+					</div>
+					<div className={classes.third}>
+						<div className={classes.WireframeDescription}>
+							<SubHeading>
+								Iteration 3
+							</SubHeading>
+							<Spacer />
+							<Body>
+								Condenses the episode information to bring the transcript and main CTA up.
+							</Body>
+						</div>
+						<Image className={classes.thirdImage} size="full" src={Wires3} />
+					</div>
+				</ItemGrid>
 			</ContentBlock>
 			<ContentBlock className={classes.brandBlock}>
 				<Heading>
