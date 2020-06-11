@@ -8,7 +8,7 @@ export default createUseStyles({
 		width: `${width}%`,
 		position: 'relative',
 		'&:last-of-type': {
-			paddingBottom: navContentHeight + (navPaddingHeight * 2) + 16,
+			// paddingBottom: navContentHeight + (navPaddingHeight * 2) + 16,
 		},
 	}),
 	blobDescriptionWrapper: {
@@ -92,7 +92,7 @@ export default createUseStyles({
 			transform: 'translateY(-14vw)',
 		},
 		MusicalRug: {
-			transform: 'translate(1vw, -18vw)',
+			transform: 'translate(1vw, -15vw)',
 		},
 		About: {
 			transform: 'translate(-2vw, -15vw)',
