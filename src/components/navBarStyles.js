@@ -64,7 +64,8 @@ export default createUseStyles({
 	logo: {
 		textDecoration: 'none',
 		color: 'black',
-		transition: 'transform 0.5s',
+		transition: '',
+		display: 'block !important',
 	},
 	openMenuIcon: {
 		height: navContentHeight,
@@ -86,6 +87,9 @@ export default createUseStyles({
 		menuSlide: {
 			transform: 'translateX(240px)',
 			display: 'block',
+		},
+		logo: {
+			transition: 'transform 0.5s',
 		},
 		menu: {
 			backgroundColor: '#0f2b41',

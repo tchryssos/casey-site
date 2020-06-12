@@ -25,6 +25,7 @@ const useStyles = createUseStyles({
 	},
 	borderedImageWrapper: {
 		border: [[1, black, 'solid']],
+		boxSizing: 'border-box',
 	},
 	halfImageWrapper: {
 		width: 'calc(50% - 8px)',

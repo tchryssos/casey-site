@@ -21,7 +21,7 @@ const useStyles = createUseStyles({
 		alignItems: 'center',
 		position: 'relative',
 		margin: '16px',
-		maxHeight: '100vh',
+		// maxHeight: '100vh',
 		width: '100%',
 	},
 	[MD_MIN_STRING]: {

@@ -1,7 +1,7 @@
 import React from 'react'
+import { createUseStyles } from 'react-jss'
+
 import PageWrapper from 'components/PageWrapper'
-import PageDescription from 'components/PageDescription'
-import PageContent from 'components/PageContent'
 import ContentBlock from 'components/ContentBlock'
 import Heading from 'components/Typography/Heading'
 import Body from 'components/Typography/Body'
@@ -22,18 +22,23 @@ import DDTwo from 'static/images/TheUprisingCreative/DigitalDomain/dd-permalink-
 
 import RedBullOne from 'static/images/TheUprisingCreative/RedBullRecords/redbull-records.png'
 
-export default () => (
-	<PageWrapper>
-		<PageDescription>
-			<ContentBlock>
-				<Heading>The Uprising Creative Design Internship</Heading>
+const useStyles = createUseStyles({
+	headerColor: {
+		backgroundColor: '#4E7FFF',
+	},
+})
+
+export default () => {
+	const classes = useStyles()
+	return (
+		<PageWrapper>
+			<ContentBlock className={classes.headerColor}>
+				<Heading>Work from my internship at The Uprising Creative</Heading>
 				<Spacer />
 				<Body>
 					During my internship I worked on designs for web, merchandise, print ads, logos, letterheads and magazine layouts. Also created pitch decks for upcoming film projects, documented inventory, and sat in on meetings with clients.
 				</Body>
 			</ContentBlock>
-		</PageDescription>
-		<PageContent>
 			<ContentBlock>
 				<Heading>Digital Domain Website Mocks</Heading>
 				<Image src={DDOne} alt="Movie grid" size="full" />
@@ -56,6 +61,6 @@ export default () => (
 				<Image src={SkinThree} alt="Director's statement" size="full" />
 				<Image src={SkinFour} alt="Crew notes" size="full" />
 			</ContentBlock>
-		</PageContent>
-	</PageWrapper>
+		</PageWrapper>
 )
+}

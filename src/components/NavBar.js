@@ -48,8 +48,8 @@ export default () => {
 							<NavLink
 								className={
 									clsx(
-										classes.logo,
 										{ [classes.menuSlide]: isMenuOpen },
+										classes.logo,
 									)
 								}
 								to="/"

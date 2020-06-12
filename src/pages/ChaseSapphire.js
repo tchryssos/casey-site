@@ -1,7 +1,11 @@
 import React from 'react'
+import { createUseStyles } from 'react-jss'
+import {
+	MD_MIN_STRING,
+} from 'constants/styles/breakpoints'
+import clsx from 'clsx'
+
 import PageWrapper from 'components/PageWrapper'
-import PageContent from 'components/PageContent'
-import PageDescription from 'components/PageDescription'
 import ContentBlock from 'components/ContentBlock'
 import Heading from 'components/Typography/Heading'
 import Body from 'components/Typography/Body'
@@ -9,6 +13,9 @@ import Image from 'components/Image'
 import Spacer from 'components/Spacer'
 import VideoPlayer from 'components/VideoPlayer'
 import ItemGrid from 'components/ItemGrid'
+
+import ChaseCard from 'static/images/ChaseSapphire/Chase_Card.png'
+import CardBG from 'static/images/ChaseSapphire/chase-circle.svg'
 
 import SeaportOne from 'static/images/ChaseSapphire/Seaport/Seaport_01.png'
 import SeaportTwo from 'static/images/ChaseSapphire/Seaport/Seaport_02.png'
@@ -26,20 +33,64 @@ import bbqTwo from 'static/images/ChaseSapphire/WhatsNext/bbq_2.png'
 import bbqThree from 'static/images/ChaseSapphire/WhatsNext/bbq_3.png'
 import bbqFour from 'static/images/ChaseSapphire/WhatsNext/bbq_4.png'
 
+const useStyles = createUseStyles({
+	'@keyframes spin': {
+		from: { transform: 'rotate(0deg)' },
+		to: { transform: 'rotate(90deg)' },
+	},
+	seaportBackgroundColor: {
+		backgroundColor: 'white',
+	},
+	cardImage: {
+		position: 'absolute',
+		zIndex: 2,
+	},
+	cardBG: {
+		zIndex: 0,
+		animation: '$spin infinite 5s linear',
+		width: '90%',
+	},
+	cardAnimationWrapper: {
+		position: 'relative',
+		display: 'flex',
+		justifyContent: 'center',
+		alignItems: 'center',
+	},
+	half: {
+		width: '100%',
+		marginBottom: 64,
+		[MD_MIN_STRING]: {
+			width: '50%',
+			marginBottom: 0,
+		},
+	},
+})
 
-export default () => (
-	<PageWrapper>
-		<PageDescription>
+
+export default () => {
+	const classes = useStyles()
+	return (
+		<PageWrapper>
 			<ContentBlock>
-				<Heading>Chase Sapphire</Heading>
+				<ItemGrid stackedOnMobile>
+					<div className={classes.half}>
+						<Heading>
+							Art directing ad campaigns for the Chase Sapphire Reserve card
+						</Heading>
+					</div>
+					<div
+						className={clsx(
+							classes.half,
+							classes.cardAnimationWrapper,
+						)}
+					>
+						<Image className={classes.cardImage} size="full" src={ChaseCard} />
+						<Image className={classes.cardBG} size="full" src={CardBG} />
+					</div>
+				</ItemGrid>
 				<Spacer />
-				<Body>
-					As an Art Director at VaynerMedia, I worked primarily on the Chase Sapphire Reserve line of business, creating original work and repurposing existing assets for their social channels.
-				</Body>
 			</ContentBlock>
-		</PageDescription>
-		<PageContent>
-			<ContentBlock>
+			<ContentBlock className={classes.seaportBackgroundColor}>
 				<Heading>Summer at the Seaport</Heading>
 				<Spacer />
 				<Body>
@@ -49,8 +100,6 @@ export default () => (
 				<Body>Role: Art Direction</Body>
 				<Spacer />
 				<Body>Photography: Rav Carlotti </Body>
-			</ContentBlock>
-			<ContentBlock>
 				<Image size="full" src={SeaportOne} />
 				<ItemGrid>
 					<Image src={SeaportTwo} />
@@ -78,8 +127,6 @@ export default () => (
 				<Body>
 					Creative Director: Etan Bednarsh
 				</Body>
-			</ContentBlock>
-			<ContentBlock>
 				<VideoPlayer
 					src="https://player.vimeo.com/video/338773040"
 					title="Reserve What's Next: Clip 4"
@@ -106,8 +153,6 @@ export default () => (
 				<Body>Role: Junior Art Director, Graphic Designer</Body>
 				<Spacer />
 				<Body>Senior Art Director: Lauren Bolger</Body>
-			</ContentBlock>
-			<ContentBlock>
 				<ItemGrid>
 					<Image src={CitiesLiho} />
 					<Image src={CitiesCaw} />
@@ -119,6 +164,7 @@ export default () => (
 				/>
 				<Image scrollable src={CitiesCarousel} size="full" />
 			</ContentBlock>
-		</PageContent>
-	</PageWrapper>
-)
+		</PageWrapper>
+	)
+}
+

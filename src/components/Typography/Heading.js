@@ -1,5 +1,6 @@
 import React from 'react'
 import { createUseStyles } from 'react-jss'
+import clsx from 'clsx'
 
 const useStyles = createUseStyles({
 	headlineFont: {
@@ -8,9 +9,16 @@ const useStyles = createUseStyles({
 	},
 })
 
-export default ({ children }) => {
+export default ({ children, className }) => {
 	const classes = useStyles()
 	return (
-		<h1 className={classes.headlineFont}>{children}</h1>
+		<h1
+			className={clsx(
+				classes.headlineFont,
+				className,
+			)}
+		>
+			{children}
+		</h1>
 	)
 }
