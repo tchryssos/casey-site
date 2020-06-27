@@ -19,6 +19,7 @@ import TheUprisingCreative from 'pages/TheUprisingCreative'
 import ChaseSapphire from 'pages/ChaseSapphire'
 import ListenJay from 'pages/ListenJay'
 import ELO from 'pages/elo'
+import Mirror from 'pages/Mirror'
 import About from 'pages/About'
 
 import cursor from 'static/images/Misc/cursor.png'
@@ -175,6 +176,10 @@ const App = ({ location }) => {
 						<Route
 							path="/elo"
 							component={ELO}
+						/>
+						<Route
+							path="/mirror"
+							component={Mirror}
 						/>
 					</Switch>
 				</div>
