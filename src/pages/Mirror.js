@@ -11,6 +11,11 @@ import ItemGrid from 'components/ItemGrid'
 import SubHeading from 'components/Typography/SubHeading'
 import Spacer from 'components/Spacer'
 import Body from 'components/Typography/Body'
+import Image from 'components/Image'
+
+import PAINPOINTS from 'static/images/Mirror/Pain_Goal-01.png'
+import GOALS from 'static/images/Mirror/Pain_Goal-02.png'
+import CardSort from 'static/images/Mirror/CardSorting.png'
 
 const useStyles = createUseStyles({
 	third: {
@@ -18,6 +23,14 @@ const useStyles = createUseStyles({
 		marginBottom: 64,
 		[MD_MIN_STRING]: {
 			width: '30%',
+			marginBottom: 0,
+		},
+	},
+	half: {
+		width: '100%',
+		marginBottom: 64,
+		[MD_MIN_STRING]: {
+			width: 'calc(50% - 8px)',
 			marginBottom: 0,
 		},
 	},
@@ -30,13 +43,13 @@ export default () => {
 		<PageWrapper>
 			<ContentBlock>
 				<Heading>
-					Mirror is a global brick-and-mortar clothing store looking to take their business online.
+					Mirror is a global brick-and-mortar clothing store looking to take their business online
 				</Heading>
 			</ContentBlock>
 			<ContentBlock>
 				<Heading>Competitive Landscape</Heading>
 				<Spacer />
-				<ItemGrid stackedOnMobile startAligned>
+				<ItemGrid startAligned>
 					<div className={classes.third}>
 						<SubHeading>Zara</SubHeading>
 						<Spacer />
@@ -81,10 +94,63 @@ export default () => {
 			</ContentBlock>
 			<ContentBlock>
 				<Heading>
-					User Interviews
+					User Research
 				</Heading>
 				<Spacer />
-				<Body>I interviewed 3 people, males and females 22-30 years old.</Body>
+				<Body>I interviewed a group of males and females 22-30 years old who shop online regularly about their online shopping habits.</Body>
+				<Spacer />
+				<ItemGrid stackedOnMobile>
+					<div className={classes.half}>
+						<SubHeading>Main Goals</SubHeading>
+						<Image src={PAINPOINTS} size="full" />
+					</div>
+					<div className={classes.half}>
+						<SubHeading>Main Pain Points</SubHeading>
+						<Image src={GOALS} size="full" />
+					</div>
+				</ItemGrid>
+				<Spacer height={2} />
+				<SubHeading>The Mirror Customer</SubHeading>
+			</ContentBlock>
+			<ContentBlock>
+				<Heading>What is the best way to organize an online shop?</Heading>
+				<Spacer />
+				<ItemGrid>
+					<div className={classes.half}>
+						<SubHeading>Card Sorting Exercise</SubHeading>
+						<Spacer />
+						<Body>
+							I did a remote card sorting exercise via Trello and Zoom with 6 participants who shop online regularly. They sorted 50 items from the Mirror catalog.
+						</Body>
+						<Spacer />
+						<SubHeading>Key Takeaways</SubHeading>
+						<ul>
+							<li>
+								Most participants included skirts, pants, and overalls in "Bottoms"
+							</li>
+							<li>
+								Most participants wanted to sort major categories by occassion
+							</li>
+							<li>
+								There was the most variety in the way participants organized the "Accessories" category.
+							</li>
+						</ul>
+					</div>
+					<div className={classes.half}>
+						<Image src={CardSort} size="full" />
+					</div>
+				</ItemGrid>
+				<Spacer height={4} />
+				<SubHeading>Creating a site map</SubHeading>
+			</ContentBlock>
+			<ContentBlock>
+				<Heading>Locking in the layout</Heading>
+			</ContentBlock>
+			<ContentBlock>
+				<Heading>Evolving the brand for online</Heading>
+			</ContentBlock>
+			<ContentBlock>
+				<Heading>Usability Testing</Heading>
 			</ContentBlock>
 		</PageWrapper>
 	)
