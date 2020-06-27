@@ -7,6 +7,7 @@ export default createUseStyles({
 		zIndex: zIndex || 1,
 		width: `${width}%`,
 		position: 'relative',
+		transition: 'opacity 0.5s',
 		'&:last-of-type': {
 			// paddingBottom: navContentHeight + (navPaddingHeight * 2) + 16,
 		},
