@@ -74,8 +74,7 @@ const useStyles = createUseStyles({
 		overflowX: 'hidden',
 	},
 	menuSlide: {
-		transform: 'translateX(0px)',
-		zIndex: -10,
+		transform: 'translateX(768px)',
 	},
 	switchWrapper: {
 		backgroundColor: '#e8e8e8',
@@ -92,7 +91,6 @@ const useStyles = createUseStyles({
 		},
 		menuSlide: {
 			transform: 'translateX(240px)',
-			zIndex: 0,
 		},
 	},
 })

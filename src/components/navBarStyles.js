@@ -80,13 +80,11 @@ export default createUseStyles({
 		width: '8px',
 	},
 	menuSlide: {
-		transform: 'translateX(0px)',
-		display: 'none',
+		transform: 'translateX(768px)',
 	},
 	[MD_MIN_STRING]: {
 		menuSlide: {
 			transform: 'translateX(240px)',
-			display: 'block',
 		},
 		logo: {
 			transition: 'transform 0.5s',
