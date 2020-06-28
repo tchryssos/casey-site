@@ -16,6 +16,7 @@ import Image from 'components/Image'
 import PAINPOINTS from 'static/images/Mirror/Pain_Goal-01.png'
 import GOALS from 'static/images/Mirror/Pain_Goal-02.png'
 import CardSort from 'static/images/Mirror/CardSorting.png'
+import SiteMap from 'static/images/Mirror/SiteMap.png'
 
 const useStyles = createUseStyles({
 	third: {
@@ -123,25 +124,26 @@ export default () => {
 							I did a remote card sorting exercise via Trello and Zoom with 6 participants who shop online regularly. They sorted 50 items from the Mirror catalog.
 						</Body>
 						<Spacer />
-						<SubHeading>Key Takeaways</SubHeading>
-						<ul>
-							<li>
-								Most participants included skirts, pants, and overalls in "Bottoms"
-							</li>
-							<li>
-								Most participants wanted to sort major categories by occassion
-							</li>
-							<li>
-								There was the most variety in the way participants organized the "Accessories" category.
-							</li>
-						</ul>
 					</div>
 					<div className={classes.half}>
 						<Image src={CardSort} size="full" />
 					</div>
 				</ItemGrid>
+				<SubHeading>Key Takeaways</SubHeading>
+				<ul>
+					<li>
+						Most participants included skirts, pants, and overalls in "Bottoms"
+					</li>
+					<li>
+						Most participants wanted to sort major categories by occassion
+					</li>
+					<li>
+						There was the most variety in the way participants organized the "Accessories" category.
+					</li>
+				</ul>
 				<Spacer height={4} />
 				<SubHeading>Creating a site map</SubHeading>
+				<Image src={SiteMap} size="full" />
 			</ContentBlock>
 			<ContentBlock>
 				<Heading>Locking in the layout</Heading>
