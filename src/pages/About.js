@@ -24,9 +24,6 @@ const useStyles = createUseStyles({
 		bottom: 0,
 		overflowX: 'hidden',
 	},
-	reviewBlock: {
-		// backgroundColor: 'white',
-	},
 	quoteSection: {
 		width: '100%',
 		backgroundColor: '#EA9B41',
@@ -94,10 +91,10 @@ export default () => {
 				</ContentBlock>
 				<div className={classes.quoteSection}>
 					<SubHeading>
-						What my coleagues are saying
+						What my colleagues are saying
 					</SubHeading>
 				</div>
-				<ContentBlock className={classes.reviewBlock}>
+				<ContentBlock>
 					<SubHeading>
 						&quot;Her creative talent is equally matched by her well-organized way of operating.&quot;
 					</SubHeading>
@@ -118,7 +115,7 @@ export default () => {
 						&quot;Her ability to juggle multiple high priority projects puts the rest of her team at ease.&quot;
 					</SubHeading>
 					<Spacer />
-					<Body>Katharine Lucic</Body>
+					<Body>Katharine Lucic, Marketing Events Manager</Body>
 					<Spacer />
 					<a href="https://www.linkedin.com/in/caseyebradford/">
 						<Body>Read more on my LinkedIn Profile</Body>

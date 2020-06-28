@@ -2,7 +2,6 @@ import React from 'react'
 import { NavLink } from 'react-router-dom'
 import { createUseStyles } from 'react-jss'
 import { MD_MIN_STRING } from 'constants/styles/breakpoints'
-import { black } from 'constants/styles/colors'
 import blobLinkData from 'constants/blobLinks'
 
 const useStyles = createUseStyles({
