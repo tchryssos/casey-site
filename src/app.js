@@ -32,6 +32,7 @@ const baseStyle = {
 	width: '100%',
 	backgroundColor: '#e8e8e8',
 	...marPadZero,
+	overscrollBehavior: 'none',
 }
 
 const useStyles = createUseStyles({
@@ -72,7 +73,6 @@ const useStyles = createUseStyles({
 		height: '100%',
 		cursor: 'auto',
 		overflowX: 'hidden',
-		overscrollBehavior: 'none',
 	},
 	menuSlide: {
 		transform: 'translateX(768px)',
