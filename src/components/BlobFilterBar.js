@@ -77,10 +77,15 @@ export default ({
 	setFilter, filter,
 }) => {
 	const classes = useStyles()
+	// Refs
 	const activeFilterRef = useRef()
+
+	// State
 	const [refWidth, setRefWidth] = useState(0)
 	const [refOffset, setRefOffset] = useState(0)
 	const [windowWidth, setWindowWidth] = useState(window.innerWidth)
+
+	// Effects
 	const updateWindowWidth = debounce(() => setWindowWidth(window.innerWidth), 75)
 	useEffect(() => {
 		window.addEventListener('resize', updateWindowWidth)
@@ -92,6 +97,8 @@ export default ({
 		setRefWidth(offsetWidth)
 		setRefOffset(offsetLeft)
 	}, [filter, windowWidth])
+
+	// Return
 	return (
 		<div className={classes.blobNav}>
 			<div className={classes.buttonWrapper}>
