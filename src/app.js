@@ -32,6 +32,8 @@ const baseStyle = {
 	width: '100%',
 	backgroundColor: '#e8e8e8',
 	...marPadZero,
+	// because main app doesn't scroll due to menu animation restrictions
+	// overscroll leads to undesirable "bounce" on any scroll
 	overscrollBehavior: 'none',
 }
 
