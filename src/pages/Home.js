@@ -34,9 +34,6 @@ const useStyles = createUseStyles({
 export default () => {
 	const classes = useStyles()
 	const [filter, setFilter] = useState(null)
-	const hideGraphic = () => setFilter('graphic')
-	const hideProduct = () => setFilter('product')
-	const hideNone = () => setFilter(null)
 
 	const blobLinks = Object.keys(blobLinkData).map((key) => {
 		const props = blobLinkData[key]
@@ -47,9 +44,7 @@ export default () => {
 	return (
 		<div className={classes.homeContainer}>
 			<BlobFilterBar
-				hideGraphic={hideGraphic}
-				hideProduct={hideProduct}
-				hideNone={hideNone}
+				setFilter={setFilter}
 				filter={filter}
 			/>
 			<div className={classes.homeWrapper}>

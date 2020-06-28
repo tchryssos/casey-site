@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useRef, useEffect, useState } from 'react'
 import { createUseStyles } from 'react-jss'
 import clsx from 'clsx'
 import { MD_MIN_STRING } from 'constants/styles/breakpoints'
@@ -30,61 +30,68 @@ const useStyles = createUseStyles({
 			margin: [[0, 18]],
 		},
 	},
-	lineyBoy: {
-		fontSize: 18,
-	},
 	activeFilter: {
 		borderBottom: '2px solid black',
 	},
 })
 
 const FilterButton = ({
-	onClick, text, filter, isActive, classes,
-}) => (
-	<button
-		onClick={onClick}
-		className={clsx(
-			classes.filter,
-			{ [classes.activeFilter]: filter === isActive },
-		)}
-		type="button"
-	>
-		{text}
-	</button>
-)
-
-const Bar = ({ classes }) => (
-	<p className={classes.lineyBoy}> | </p>
-)
+	setFilter, text, filter, hides, activeRef,
+	classes,
+}) => {
+	const active = filter === hides
+	return (
+		<button
+			onClick={() => setFilter(hides)}
+			className={clsx(
+				classes.filter,
+				{ [classes.activeFilter]: active },
+			)}
+			type="button"
+			ref={active ? activeRef : undefined}
+		>
+			{text}
+		</button>
+	)
+}
 
 export default ({
-	hideGraphic, hideProduct, hideNone, filter,
+	setFilter, filter,
 }) => {
 	const classes = useStyles()
+	const activeFilterRef = useRef()
+	const [refWidth, setRefWidth] = useState(0)
+	const [refOffset, setRefOffset] = useState(0)
+	useEffect(() => {
+		const { offsetLeft, offsetWidth } = activeFilterRef.current
+		setRefWidth(offsetWidth)
+		setRefOffset(offsetLeft)
+	}, [activeFilterRef.current])
 	return (
 		<div className={classes.blobNav}>
 			<FilterButton
 				classes={classes}
-				onClick={hideNone}
+				setFilter={setFilter}
 				filter={filter}
-				isActive={null}
+				hides={null}
 				text="All"
+				activeRef={activeFilterRef}
 			/>
-			{/* <Bar classes={classes} /> */}
 			<FilterButton
 				classes={classes}
-				onClick={hideGraphic}
-				isActive="graphic"
+				setFilter={setFilter}
+				hides="graphic"
 				filter={filter}
 				text="Product Design"
+				activeRef={activeFilterRef}
 			/>
-			{/* <Bar classes={classes} /> */}
 			<FilterButton
 				classes={classes}
-				onClick={hideProduct}
+				setFilter={setFilter}
 				filter={filter}
-				isActive="product"
+				hides="product"
 				text="Graphic Design"
+				activeRef={activeFilterRef}
 			/>
 		</div>
 	)
