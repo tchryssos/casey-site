@@ -72,6 +72,7 @@ const useStyles = createUseStyles({
 		height: '100%',
 		cursor: 'auto',
 		overflowX: 'hidden',
+		overscrollBehavior: 'none',
 	},
 	menuSlide: {
 		transform: 'translateX(768px)',
