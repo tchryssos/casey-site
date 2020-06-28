@@ -36,13 +36,13 @@ const useStyles = createUseStyles({
 })
 
 const FilterButton = ({
-	setFilter, text, filter, hides, activeRef,
+	setFilter, text, filter, onClickHides, activeRef,
 	classes,
 }) => {
-	const active = filter === hides
+	const active = filter === onClickHides
 	return (
 		<button
-			onClick={() => setFilter(hides)}
+			onClick={() => setFilter(onClickHides)}
 			className={clsx(
 				classes.filter,
 				{ [classes.activeFilter]: active },
@@ -73,14 +73,14 @@ export default ({
 				classes={classes}
 				setFilter={setFilter}
 				filter={filter}
-				hides={null}
+				onClickHides={null}
 				text="All"
 				activeRef={activeFilterRef}
 			/>
 			<FilterButton
 				classes={classes}
 				setFilter={setFilter}
-				hides="graphic"
+				onClickHides="graphic"
 				filter={filter}
 				text="Product Design"
 				activeRef={activeFilterRef}
@@ -89,7 +89,7 @@ export default ({
 				classes={classes}
 				setFilter={setFilter}
 				filter={filter}
-				hides="product"
+				onClickHides="product"
 				text="Graphic Design"
 				activeRef={activeFilterRef}
 			/>
