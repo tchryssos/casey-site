@@ -24,12 +24,8 @@ const useStyles = createUseStyles({
 		bottom: 0,
 		overflowX: 'hidden',
 	},
-	quoteSection: {
-		width: '100%',
-		backgroundColor: '#EA9B41',
-		textAlign: 'center',
-		padding: 8,
-		fontWeight: 700,
+	reviewBlock: {
+		backgroundColor: '#fad793',
 	},
 	half: {
 		width: '100%',
@@ -89,12 +85,11 @@ export default () => {
 						</div>
 					</ItemGrid>
 				</ContentBlock>
-				<div className={classes.quoteSection}>
-					<SubHeading>
+				<ContentBlock className={classes.reviewBlock}>
+					<Heading>
 						What my colleagues are saying
-					</SubHeading>
-				</div>
-				<ContentBlock>
+					</Heading>
+					<Spacer height={2} />
 					<SubHeading>
 						&quot;Her creative talent is equally matched by her well-organized way of operating.&quot;
 					</SubHeading>
