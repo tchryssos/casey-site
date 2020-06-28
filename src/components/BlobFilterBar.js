@@ -7,14 +7,16 @@ const useStyles = createUseStyles({
 	blobNav: {
 		width: '100%',
 		display: 'flex',
-		justifyContent: 'center',
+		justifyContent: 'space-evenly',
 		alignItems: 'center',
 		margin: 20,
+		[MD_MIN_STRING]: {
+			justifyContent: 'center',
+		},
 	},
 	filter: {
 		backgroundColor: 'transparent',
 		padding: [[6, 6]],
-		margin: [[0, 18]],
 		zIndex: 10,
 		cursor: 'pointer',
 		fontSize: 18,
@@ -23,17 +25,16 @@ const useStyles = createUseStyles({
 		'&:focus': {
 			outline: 'none',
 		},
+		[MD_MIN_STRING]: {
+			zIndex: 500,
+			margin: [[0, 18]],
+		},
 	},
 	lineyBoy: {
 		fontSize: 18,
 	},
 	activeFilter: {
 		borderBottom: '2px solid black',
-	},
-	[MD_MIN_STRING]: {
-		filter: {
-			zIndex: 500,
-		},
 	},
 })
 
