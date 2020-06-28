@@ -48,6 +48,7 @@ const renderMenuLinks = (classes) => (
 				className={classes.menuLink}
 				link={link}
 				text={altText}
+				key={key}
 			/>
 		)
 	})
