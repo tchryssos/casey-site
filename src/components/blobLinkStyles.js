@@ -37,7 +37,7 @@ export default createUseStyles({
 		},
 	},
 	filtered: {
-		opacity: 0.3,
+		opacity: 0.2,
 	},
 	// Custom CSS for blob placement
 	ListenJay: {
