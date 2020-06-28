@@ -154,7 +154,7 @@ export default () => {
 				/>
 				<Spacer />
 				<Body>
-					After hiring graphic designers for my team, I was shocked at how similar all of the portfolios I was looking at were. To lower the bounch rate of hiring managers looking at my website, I wanted to create a home page that was more interesting and interactive than the sea of squarespaces.
+					After hiring graphic designers for my team, I was shocked at how similar all of the portfolios I was looking at were. To lower the bounce rate of hiring managers looking at my website, I wanted to create a home page that was more interesting and interactive than the sea of squarespaces.
 				</Body>
 			</ContentBlock>
 			<ContentBlock>
