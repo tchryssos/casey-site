@@ -1,15 +1,21 @@
 import React, { useRef, useEffect, useState } from 'react'
 import { createUseStyles } from 'react-jss'
-import clsx from 'clsx'
+import debounce from 'lodash.debounce'
 import { MD_MIN_STRING } from 'constants/styles/breakpoints'
+import { black } from 'constants/styles/colors'
 
 const useStyles = createUseStyles({
 	blobNav: {
 		width: '100%',
 		display: 'flex',
+		flexDirection: 'column',
+		margin: 20,
+	},
+	buttonWrapper: {
+		width: '100%',
+		display: 'flex',
 		justifyContent: 'space-evenly',
 		alignItems: 'center',
-		margin: 20,
 		[MD_MIN_STRING]: {
 			justifyContent: 'center',
 		},
@@ -30,8 +36,11 @@ const useStyles = createUseStyles({
 			margin: [[0, 18]],
 		},
 	},
-	activeFilter: {
-		borderBottom: '2px solid black',
+	filterBar: {
+		height: 2,
+		backgroundColor: black,
+		width: 1,
+		transition: 'all 0.2s',
 	},
 })
 
@@ -39,21 +48,30 @@ const FilterButton = ({
 	setFilter, text, filter, onClickHides, activeRef,
 	classes,
 }) => {
-	const active = filter === onClickHides
+	const isActive = filter === onClickHides
 	return (
 		<button
 			onClick={() => setFilter(onClickHides)}
-			className={clsx(
-				classes.filter,
-				{ [classes.activeFilter]: active },
-			)}
+			className={classes.filter}
 			type="button"
-			ref={active ? activeRef : undefined}
+			ref={isActive ? activeRef : undefined}
 		>
 			{text}
 		</button>
 	)
 }
+
+const FilterBar = ({
+	classes, width, offset,
+}) => (
+	<div
+		className={classes.filterBar}
+		style={{
+			width,
+			transform: `translateX(${Math.round(offset)}px)`,
+		}}
+	/>
+)
 
 export default ({
 	setFilter, filter,
@@ -62,36 +80,50 @@ export default ({
 	const activeFilterRef = useRef()
 	const [refWidth, setRefWidth] = useState(0)
 	const [refOffset, setRefOffset] = useState(0)
+	const [windowWidth, setWindowWidth] = useState(window.innerWidth)
+	const updateWindowWidth = debounce(() => setWindowWidth(window.innerWidth), 75)
+	useEffect(() => {
+		window.addEventListener('resize', updateWindowWidth)
+		return () => window.removeEventListener('resize', updateWindowWidth)
+	}, [])
+
 	useEffect(() => {
 		const { offsetLeft, offsetWidth } = activeFilterRef.current
 		setRefWidth(offsetWidth)
 		setRefOffset(offsetLeft)
-	}, [activeFilterRef.current])
+	}, [filter, windowWidth])
 	return (
 		<div className={classes.blobNav}>
-			<FilterButton
+			<div className={classes.buttonWrapper}>
+				<FilterButton
+					classes={classes}
+					setFilter={setFilter}
+					filter={filter}
+					onClickHides={null}
+					text="All"
+					activeRef={activeFilterRef}
+				/>
+				<FilterButton
+					classes={classes}
+					setFilter={setFilter}
+					onClickHides="graphic"
+					filter={filter}
+					text="Product Design"
+					activeRef={activeFilterRef}
+				/>
+				<FilterButton
+					classes={classes}
+					setFilter={setFilter}
+					filter={filter}
+					onClickHides="product"
+					text="Graphic Design"
+					activeRef={activeFilterRef}
+				/>
+			</div>
+			<FilterBar
 				classes={classes}
-				setFilter={setFilter}
-				filter={filter}
-				onClickHides={null}
-				text="All"
-				activeRef={activeFilterRef}
-			/>
-			<FilterButton
-				classes={classes}
-				setFilter={setFilter}
-				onClickHides="graphic"
-				filter={filter}
-				text="Product Design"
-				activeRef={activeFilterRef}
-			/>
-			<FilterButton
-				classes={classes}
-				setFilter={setFilter}
-				filter={filter}
-				onClickHides="product"
-				text="Graphic Design"
-				activeRef={activeFilterRef}
+				offset={refOffset}
+				width={refWidth}
 			/>
 		</div>
 	)
