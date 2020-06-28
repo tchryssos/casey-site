@@ -95,11 +95,13 @@ export default () => {
 			</ContentBlock>
 			<ContentBlock>
 				<Heading>
-					User Research
+					Discovering the Mirror Customer
 				</Heading>
 				<Spacer />
 				<Body>I interviewed a group of males and females 22-30 years old who shop online regularly about their online shopping habits.</Body>
 				<Spacer />
+				<SubHeading>Target Persona</SubHeading>
+				<Spacer height={2} />
 				<ItemGrid stackedOnMobile>
 					<div className={classes.half}>
 						<SubHeading>Main Goals</SubHeading>
@@ -110,8 +112,6 @@ export default () => {
 						<Image src={GOALS} size="full" />
 					</div>
 				</ItemGrid>
-				<Spacer height={2} />
-				<SubHeading>The Mirror Customer</SubHeading>
 			</ContentBlock>
 			<ContentBlock>
 				<Heading>What is the best way to organize an online shop?</Heading>
@@ -132,18 +132,22 @@ export default () => {
 				<SubHeading>Key Takeaways</SubHeading>
 				<ul>
 					<li>
-						Most participants included skirts, pants, and overalls in "Bottoms"
+						Most participants included skirts, pants, and overalls in &quot;Bottoms&quot;
 					</li>
 					<li>
 						Most participants wanted to sort major categories by occassion
 					</li>
 					<li>
-						There was the most variety in the way participants organized the "Accessories" category.
+						There was the most variety in the way participants organized the &quot;Accessories&quot; category.
 					</li>
 				</ul>
 				<Spacer height={4} />
 				<SubHeading>Creating a site map</SubHeading>
 				<Image src={SiteMap} size="full" />
+				<Spacer height={4} />
+				<SubHeading>
+					Identifying Design Patterns
+				</SubHeading>
 			</ContentBlock>
 			<ContentBlock>
 				<Heading>Locking in the layout</Heading>
