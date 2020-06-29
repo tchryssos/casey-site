@@ -17,8 +17,12 @@ import Image from 'components/Image'
 import CardSort from 'static/images/Mirror/CardSorting.png'
 import SiteMap from 'static/images/Mirror/SiteMap.png'
 import Persona from 'static/images/Mirror/persona.png'
-import StyleTile from 'static/images/Mirror/StyleTile.png'
-import Logo from 'static/images/Mirror/mirrorLogo.png'
+import StyleTile from 'static/images/Mirror/StyleTile-03.png'
+import Logo from 'static/images/Mirror/Logo-01.png'
+import CartPattern from 'static/images/Mirror/DesignPatternCart-01.png'
+import FilterPattern from 'static/images/Mirror/DesignPatternFilter-02.png'
+import NavPattern from 'static/images/Mirror/DesignPatternNav-03.png'
+import UIKIT from 'static/images/Mirror/UIKIT.png'
 
 const useStyles = createUseStyles({
 	third: {
@@ -28,6 +32,18 @@ const useStyles = createUseStyles({
 			width: '30%',
 			marginBottom: 0,
 		},
+	},
+	brandBlock: {
+		backgroundColor: '#FFFAF1',
+	},
+	secondaryBlock: {
+		backgroundColor: '#fde8c7',
+	},
+	whiteBlock: {
+		backgroundColor: 'white',
+	},
+	wiresBlock: {
+		backgroundColor: '#b4e0ff',
 	},
 	half: {
 		width: '100%',
@@ -44,13 +60,13 @@ export default () => {
 	const classes = useStyles()
 	return (
 		<PageWrapper>
-			<ContentBlock>
+			<ContentBlock className={classes.brandBlock}>
 				<SubHeading>CASE STUDY</SubHeading>
 				<Heading>
 					Mirror is a global brick-and-mortar clothing store looking to take their business online
 				</Heading>
 			</ContentBlock>
-			<ContentBlock>
+			<ContentBlock className={classes.secondaryBlock}>
 				<Heading>Competitive Landscape</Heading>
 				<Spacer />
 				<ItemGrid startAligned>
@@ -96,7 +112,7 @@ export default () => {
 					</div>
 				</ItemGrid>
 			</ContentBlock>
-			<ContentBlock>
+			<ContentBlock className={classes.whiteBlock}>
 				<Heading>
 					Discovering the Mirror Customer
 				</Heading>
@@ -122,7 +138,7 @@ export default () => {
 				</Body>
 				<Spacer height={2} />
 			</ContentBlock>
-			<ContentBlock>
+			<ContentBlock className={classes.brandBlock}>
 				<Heading>What is the best way to organize an online shop?</Heading>
 				<Spacer />
 				<ItemGrid>
@@ -160,13 +176,34 @@ export default () => {
 				<Body>
 					I gathered and analyzed examples of navigation, cart, product detail page, and filtering systems from competitor websites in order to inform the Mirror wireframes.
 				</Body>
+				<Spacer />
+				<SubHeading>Navigation</SubHeading>
+				<Spacer />
+				<Body>
+					The ASOS nav bar has a toggle for mens/womens and then cascades down in layers revealing all of the options which is helpful when navigating. It is nice that it includes some images. This menu starts as a hamburger menu on mobile but has the same structure as the desktop version.
+				</Body>
+				<Image src={NavPattern} size="full" />
+				<Spacer />
+				<SubHeading>Filtering</SubHeading>
+				<Spacer />
+				<Body>
+					Urban keeps all of the filters available on desktop on the right side while you browse. This is allows the filters and options to always be seen.
+					Madewell and Outdoor Voices use a top nav for filters which feels more premium.	Madewell also includes occasions to sort by pulled out from the filtering.
+				</Body>
+				<Image src={FilterPattern} size="full" />
+				<Spacer />
+				<SubHeading>Cart Overlay</SubHeading>
+				<Spacer />
+				<Body>
+					It is common on shopping sites to show a preview of the cart when a user hovers over or clicks the cart icon. This is helpful because users can preview their cart without losing the page that they are on and they can edit their cart while they shop
+				</Body>
+				<Image src={CartPattern} size="full" />
 			</ContentBlock>
-			<ContentBlock>
+			<ContentBlock className={classes.wiresBlock}>
 				<Heading>Locking in the layout</Heading>
 			</ContentBlock>
-			<ContentBlock>
+			<ContentBlock className={classes.brandBlock}>
 				<Heading>Evolving the brand for online</Heading>
-				<Spacer height={2} />
 				<ItemGrid>
 					<div className={classes.half}>
 						<SubHeading>Logo Exploration</SubHeading>
@@ -182,6 +219,10 @@ export default () => {
 				<Spacer />
 				<Body>Mirror's goals are to have a site that is accessible and easy to use but also to be a trendy and modern brand. For these reasons I used a digestible san-serif typeface for the body text and played with multiple bold colors to both add excitment and create more heirarchy.</Body>
 				<Image src={StyleTile} size="full" />
+				<Image src={UIKIT} size="full" />
+			</ContentBlock>
+			<ContentBlock>
+				<Heading>High Fidelity Mock Ups</Heading>
 			</ContentBlock>
 			<ContentBlock>
 				<Heading>Usability Testing</Heading>
