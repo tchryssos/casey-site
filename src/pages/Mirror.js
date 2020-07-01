@@ -1,7 +1,7 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import { createUseStyles } from 'react-jss'
 import {
-	MD_MIN_STRING,
+	MD_MIN_STRING, MD_MIN_VALUE,
 } from 'constants/styles/breakpoints'
 import clsx from 'clsx'
 
@@ -25,8 +25,9 @@ import CartPattern from 'static/images/Mirror/DesignPatternCart-01.png'
 import FilterPattern from 'static/images/Mirror/DesignPatternFilter-02.png'
 import NavPattern from 'static/images/Mirror/DesignPatternNav-03.png'
 import UIKIT from 'static/images/Mirror/UIKIT.png'
-import UserFlow from 'static/images/Mirror/UserFlow-01.png'
+import UserFlow from 'static/images/Mirror/userflow-02.png'
 import UsabilityHeader from 'static/images/Mirror/Frame30.png'
+import SizeGuide from 'static/images/Mirror/SizeGuide.png'
 
 const useStyles = createUseStyles({
 	third: {
@@ -60,6 +61,18 @@ const useStyles = createUseStyles({
 	boxShadow: {
 		boxShadow: '10px 10px #384ea1',
 	},
+	research: {
+		backgroundColor: '#384ea1',
+		padding: 8,
+		color: 'white',
+		whiteSpace: 'nowrap',
+	},
+	scrollTextPadding: {
+		[MD_MIN_STRING]: {
+			paddingTop: 100,
+			transform: 'translateY(-100px)',
+		},
+	},
 	half: {
 		width: '100%',
 		marginBottom: 64,
@@ -73,6 +86,28 @@ const useStyles = createUseStyles({
 
 export default () => {
 	const classes = useStyles()
+	const scrollingContainer = useRef()
+	const scrollingTextContainer = useRef()
+	const scrollListener = () => {
+		if (window.innerWidth >= MD_MIN_VALUE) {
+			const app = document.querySelector('#scrollApp')
+			const scrollOffset = app.scrollTop - scrollingContainer.current.offsetTop
+			const containerHeight = scrollingContainer.current.offsetHeight
+			const textHeight = scrollingTextContainer.current.offsetHeight
+			if (scrollOffset >= -100 && scrollOffset <= containerHeight - textHeight) {
+				scrollingTextContainer.current.style.transform = `translateY(${scrollOffset}px)`
+			}
+		} else {
+			scrollingTextContainer.current.style.transform = 'translateY(0px)'
+		}
+	}
+	useEffect(() => {
+		if (window.innerWidth >= MD_MIN_VALUE) {
+			const app = document.querySelector('#scrollApp')
+			app.addEventListener('scroll', scrollListener)
+			return () => app.removeEventListener('scroll', scrollListener)
+		}
+	}, [])
 	return (
 		<PageWrapper>
 			<ContentBlock className={classes.brandBlock}>
@@ -81,8 +116,8 @@ export default () => {
 					Mirror is a global brick-and-mortar clothing store looking to take their business online
 				</Heading>
 			</ContentBlock>
-			<div>
-				process
+			<div className={classes.research}>
+				RESEARCH RESEARCH RESEARCH
 			</div>
 			<ContentBlock className={classes.brandBlock}>
 				<Heading>
@@ -95,6 +130,9 @@ export default () => {
 				<Spacer />
 				<Image src={Persona} size="full" />
 			</ContentBlock>
+			<div className={classes.research}>
+				ARCHITECTURE
+			</div>
 			<ContentBlock className={classes.brandBlock}>
 				<Heading>What is the best way to organize an online shop?</Heading>
 				<Spacer />
@@ -157,17 +195,21 @@ export default () => {
 				</Body>
 				<Image src={CartPattern} size="full" />
 			</ContentBlock>
-			<ContentBlock className={classes.wiresBlock}>
-				<Heading>Locking in the layout</Heading>
+			<div className={classes.research}>
+				LAYOUT
+			</div>
+			<ContentBlock>
+				<Heading>Building the user experience</Heading>
 				<Spacer />
-				<SubHeading>User Task: Purchase a new white Tshirt</SubHeading>
-				<Image src={UserFlow} size="full" />
 				<VideoPlayer
 					src="https://player.vimeo.com/video/434350879?loop=1?"
 					title="Prototype Animation"
 					aspectRatio="1:1"
 				/>
 			</ContentBlock>
+			<div className={classes.research}>
+				BRAND
+			</div>
 			<ContentBlock className={classes.brandBlock}>
 				<Heading>Evolving the brand for online</Heading>
 				<ItemGrid>
@@ -190,6 +232,9 @@ export default () => {
 			<ContentBlock>
 				<Heading>High Fidelity Mock Ups</Heading>
 			</ContentBlock>
+			<div className={classes.research}>
+				TESTING
+			</div>
 			<ContentBlock className={classes.brandBlock}>
 				<ItemGrid>
 					<div className={classes.half}>
@@ -219,10 +264,30 @@ export default () => {
 					/>
 				</ItemGrid>
 				<Spacer />
-				<SubHeading>Executing the tests</SubHeading>
+				<div ref={scrollingContainer}>
+					<ItemGrid stackedOnMobile startAligned>
+						<div
+							ref={scrollingTextContainer}
+							className={clsx(
+								classes.half,
+								classes.scrollTextPadding,
+							)}
+						>
+							<Body>USER TASK</Body>
+							<SubHeading>Add a new white Tshirt to the cart</SubHeading>
+							<Spacer />
+							<Body>
+								For this project I built out the necessary pages for a user to filter, find an item, and add it to the cart.
+							</Body>
+						</div>
+						<Image src={UserFlow} className={classes.half} />
+					</ItemGrid>
+				</div>
+				<Spacer />
+				<SubHeading>User testing in a remote world</SubHeading>
 				<Spacer />
 				<Body>
-					xyz
+					For my user tests I created a Figma prototype and had participants screenshare over Zoom as they moved through the task, narrating their decision making process along the way.
 				</Body>
 				<VideoPlayer
 					src="https://player.vimeo.com/video/434380887?loop=1"
@@ -231,6 +296,30 @@ export default () => {
 				/>
 				<Spacer height={2} />
 				<SubHeading>Analyzing the results</SubHeading>
+				<Spacer />
+				<ItemGrid startaligned>
+					<div className={classes.half}>
+						<Heading>100%</Heading>
+						<SubHeading>of participants added an item to the cart with no problem</SubHeading>
+					</div>
+					<div className={classes.half}>
+						<Heading>50%</Heading>
+						<SubHeading>of participants used the filters to sort</SubHeading>
+					</div>
+				</ItemGrid>
+				<Spacer />
+				<ItemGrid>
+					<div className={classes.half}>
+						<SubHeading>Price and Size</SubHeading>
+						<Spacer />
+						<Body>Multiple participants mentioned discrepancies in the price or that the prices were high which signals that price is very important to users. Many also mentioned wanting to click on the size guide to find their size, which had not yet been prototyped. To the right is a first iteration I created after these tests.</Body>
+					</div>
+					<Image src={SizeGuide} className={classes.half} />
+				</ItemGrid>
+				<Spacer />
+				<SubHeading>QuickView Feature</SubHeading>
+				<Spacer />
+				<Body>Only one person out of six used the quick view feature. I think this is because I only asked participants to add one item to the cart instead of multiple. I would want to test this again with a multi-item task.</Body>
 			</ContentBlock>
 		</PageWrapper>
 	)

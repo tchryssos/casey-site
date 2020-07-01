@@ -20,7 +20,6 @@ import Note from 'components/Typography/Note'
 
 import HeaderImage from 'static/images/ListenJay/LJ-HeaderImage.png'
 import LJBranding from 'static/images/ListenJay/LJ-Brand.png'
-import Wires from 'static/images/ListenJay/LJ-Wires.png'
 import Wires1 from 'static/images/ListenJay/ITERATION-1.png'
 import Wires2 from 'static/images/ListenJay/ITERATION-2.png'
 import Wires3 from 'static/images/ListenJay/ITERATION-3.png'
