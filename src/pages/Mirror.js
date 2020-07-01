@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Suspense } from 'react'
 import { createUseStyles } from 'react-jss'
 import {
 	MD_MIN_STRING,
@@ -12,6 +12,7 @@ import SubHeading from 'components/Typography/SubHeading'
 import Spacer from 'components/Spacer'
 import Body from 'components/Typography/Body'
 import Image from 'components/Image'
+import VideoPlayer from 'components/VideoPlayer'
 
 
 import CardSort from 'static/images/Mirror/CardSorting.png'
@@ -23,6 +24,9 @@ import CartPattern from 'static/images/Mirror/DesignPatternCart-01.png'
 import FilterPattern from 'static/images/Mirror/DesignPatternFilter-02.png'
 import NavPattern from 'static/images/Mirror/DesignPatternNav-03.png'
 import UIKIT from 'static/images/Mirror/UIKIT.png'
+import MobileWires from 'static/images/Mirror/MobilePrototypeWire.png'
+import UserFlow from 'static/images/Mirror/UserFlow-01.png'
+import UsabilityHeader from 'static/images/Mirror/Frame30.png'
 
 const useStyles = createUseStyles({
 	third: {
@@ -31,6 +35,14 @@ const useStyles = createUseStyles({
 		[MD_MIN_STRING]: {
 			width: '30%',
 			marginBottom: 0,
+		},
+	},
+	thirdImage: {
+		width: '60%',
+		marginLeft: '20%',
+		[MD_MIN_STRING]: {
+			width: '100%',
+			marginLeft: 0,
 		},
 	},
 	brandBlock: {
@@ -66,52 +78,6 @@ export default () => {
 					Mirror is a global brick-and-mortar clothing store looking to take their business online
 				</Heading>
 			</ContentBlock>
-			{/* <ContentBlock className={classes.secondaryBlock}>
-				<Heading>Competitive Landscape</Heading>
-				<Spacer />
-				<ItemGrid startAligned>
-					<div className={classes.third}>
-						<SubHeading>Zara</SubHeading>
-						<Spacer />
-						<Body>STRENGTHS</Body>
-						<ul>
-							<li>Flashy Imagery</li>
-							<li>Strong Aesthetic</li>
-						</ul>
-						<Body>WEAKNESSES</Body>
-						<ul>
-							<li>Marketing > Usability</li>
-							<li>Poor Customer Service</li>
-						</ul>
-					</div>
-					<div className={classes.third}>
-						<SubHeading>ASOS</SubHeading>
-						<Spacer />
-						<Body>STRENGTHS</Body>
-						<ul>
-							<li>Only online</li>
-							<li>Save for later feature</li>
-						</ul>
-						<Body>WEAKNESSES</Body>
-						<ul>
-							<li>Hard to filter</li>
-							<li>No reviews</li>
-						</ul>
-					</div>
-					<div className={classes.third}>
-						<SubHeading>Urban Outfitters</SubHeading>
-						<Spacer />
-						<Body>STRENGTHS</Body>
-						<ul>
-							<li>Influencer marketing</li>
-						</ul>
-						<Body>WEAKNESSES</Body>
-						<ul>
-							<li>Poor reviews</li>
-						</ul>
-					</div>
-				</ItemGrid>
-			</ContentBlock> */}
 			<ContentBlock className={classes.brandBlock}>
 				<Heading>
 					Discovering the Mirror Customer
@@ -122,21 +88,6 @@ export default () => {
 				</Body>
 				<Spacer />
 				<Image src={Persona} size="full" />
-				<Spacer />
-				<Body>Seconday Persona</Body>
-				<SubHeading>Browsing Brad</SubHeading>
-				<Spacer />
-				<Body>
-					“I often have an impulse to buy something, browse a lot, and rarely end up buying it”
-				</Body>
-				<Spacer height={2} />
-				<Body>Seconday Persona</Body>
-				<SubHeading>Straight Shooter Susan</SubHeading>
-				<Spacer />
-				<Body>
-					“My daughter loves the leggings from Athleta, so I use their online store often to send her things”
-				</Body>
-				<Spacer height={2} />
 			</ContentBlock>
 			<ContentBlock className={classes.brandBlock}>
 				<Heading>What is the best way to organize an online shop?</Heading>
@@ -168,10 +119,11 @@ export default () => {
 				<Spacer height={2} />
 				<SubHeading>Creating a site map</SubHeading>
 				<Image src={SiteMap} size="full" />
-				<Spacer height={4} />
-				<SubHeading>
+			</ContentBlock>
+			<ContentBlock>
+				<Heading>
 					Identifying Design Patterns
-				</SubHeading>
+				</Heading>
 				<Spacer />
 				<Body>
 					I gathered and analyzed examples of navigation, cart, product detail page, and filtering systems from competitor websites in order to inform the Mirror wireframes.
@@ -201,6 +153,15 @@ export default () => {
 			</ContentBlock>
 			<ContentBlock className={classes.wiresBlock}>
 				<Heading>Locking in the layout</Heading>
+				<Spacer />
+				<SubHeading>User Task: Purchase a new white Tshirt</SubHeading>
+				<Image src={UserFlow} size="full" />
+				<Image src={MobileWires} size="full" />
+				<VideoPlayer
+					src="https://player.vimeo.com/video/434350879?loop=1?"
+					title="Prototype Animation"
+					aspectRatio="1:1"
+				/>
 			</ContentBlock>
 			<ContentBlock className={classes.brandBlock}>
 				<Heading>Evolving the brand for online</Heading>
@@ -224,8 +185,32 @@ export default () => {
 			<ContentBlock>
 				<Heading>High Fidelity Mock Ups</Heading>
 			</ContentBlock>
-			<ContentBlock>
-				<Heading>Usability Testing</Heading>
+			<ContentBlock className={classes.brandBlock}>
+				<ItemGrid>
+					<div className={classes.half}>
+						<Heading>Usability Testing</Heading>
+						<Spacer />
+						<SubHeading>GOALS</SubHeading>
+						<Body>
+							Test whether users can find an item and add it to the cart. Understand how many participants use filters and quick view functionality.
+						</Body>
+						<Spacer />
+						<SubHeading>PARTICIPANTS</SubHeading>
+						<Body>
+							Six users, male and female, 22-35 years old.
+						</Body>
+						<Spacer />
+						<SubHeading>PROMPT</SubHeading>
+						<Body>
+							You've spilled on your favorite white shirt and need to order a new one.
+						</Body>
+					</div>
+					<Image src={UsabilityHeader} className={classes.half} />
+				</ItemGrid>
+				<Spacer />
+				<SubHeading>Executing the tests</SubHeading>
+				<Spacer />
+				<SubHeading>Analyzing the results</SubHeading>
 			</ContentBlock>
 		</PageWrapper>
 	)
