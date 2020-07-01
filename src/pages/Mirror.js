@@ -1,8 +1,9 @@
-import React, { Suspense } from 'react'
+import React from 'react'
 import { createUseStyles } from 'react-jss'
 import {
 	MD_MIN_STRING,
 } from 'constants/styles/breakpoints'
+import clsx from 'clsx'
 
 import PageWrapper from 'components/PageWrapper'
 import ContentBlock from 'components/ContentBlock'
@@ -24,7 +25,6 @@ import CartPattern from 'static/images/Mirror/DesignPatternCart-01.png'
 import FilterPattern from 'static/images/Mirror/DesignPatternFilter-02.png'
 import NavPattern from 'static/images/Mirror/DesignPatternNav-03.png'
 import UIKIT from 'static/images/Mirror/UIKIT.png'
-import MobileWires from 'static/images/Mirror/MobilePrototypeWire.png'
 import UserFlow from 'static/images/Mirror/UserFlow-01.png'
 import UsabilityHeader from 'static/images/Mirror/Frame30.png'
 
@@ -57,6 +57,9 @@ const useStyles = createUseStyles({
 	wiresBlock: {
 		backgroundColor: '#b4e0ff',
 	},
+	boxShadow: {
+		boxShadow: '10px 10px #384ea1',
+	},
 	half: {
 		width: '100%',
 		marginBottom: 64,
@@ -78,6 +81,9 @@ export default () => {
 					Mirror is a global brick-and-mortar clothing store looking to take their business online
 				</Heading>
 			</ContentBlock>
+			<div>
+				process
+			</div>
 			<ContentBlock className={classes.brandBlock}>
 				<Heading>
 					Discovering the Mirror Customer
@@ -156,7 +162,6 @@ export default () => {
 				<Spacer />
 				<SubHeading>User Task: Purchase a new white Tshirt</SubHeading>
 				<Image src={UserFlow} size="full" />
-				<Image src={MobileWires} size="full" />
 				<VideoPlayer
 					src="https://player.vimeo.com/video/434350879?loop=1?"
 					title="Prototype Animation"
@@ -205,11 +210,26 @@ export default () => {
 							You've spilled on your favorite white shirt and need to order a new one.
 						</Body>
 					</div>
-					<Image src={UsabilityHeader} className={classes.half} />
+					<Image
+						src={UsabilityHeader}
+						className={clsx(
+							classes.half,
+							classes.boxShadow,
+						)}
+					/>
 				</ItemGrid>
 				<Spacer />
 				<SubHeading>Executing the tests</SubHeading>
 				<Spacer />
+				<Body>
+					xyz
+				</Body>
+				<VideoPlayer
+					src="https://player.vimeo.com/video/434380887?loop=1"
+					title="Prototype Animation"
+					aspectRatio="16:9"
+				/>
+				<Spacer height={2} />
 				<SubHeading>Analyzing the results</SubHeading>
 			</ContentBlock>
 		</PageWrapper>
