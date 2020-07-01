@@ -16,7 +16,7 @@ import Image from 'components/Image'
 
 import CardSort from 'static/images/Mirror/CardSorting.png'
 import SiteMap from 'static/images/Mirror/SiteMap.png'
-import Persona from 'static/images/Mirror/persona.png'
+import Persona from 'static/images/Mirror/Persona-03.png'
 import StyleTile from 'static/images/Mirror/StyleTile-03.png'
 import Logo from 'static/images/Mirror/Logo-01.png'
 import CartPattern from 'static/images/Mirror/DesignPatternCart-01.png'
@@ -66,7 +66,7 @@ export default () => {
 					Mirror is a global brick-and-mortar clothing store looking to take their business online
 				</Heading>
 			</ContentBlock>
-			<ContentBlock className={classes.secondaryBlock}>
+			{/* <ContentBlock className={classes.secondaryBlock}>
 				<Heading>Competitive Landscape</Heading>
 				<Spacer />
 				<ItemGrid startAligned>
@@ -111,16 +111,16 @@ export default () => {
 						</ul>
 					</div>
 				</ItemGrid>
-			</ContentBlock>
-			<ContentBlock className={classes.whiteBlock}>
+			</ContentBlock> */}
+			<ContentBlock className={classes.brandBlock}>
 				<Heading>
 					Discovering the Mirror Customer
 				</Heading>
 				<Spacer />
-				<Body>I interviewed a group of males and females 22-30 years old who shop online regularly about their online shopping habits.</Body>
+				<Body>
+					I did competitive research as well as interviewed a group of males and females 22-30 years old who shop online regularly about their online shopping habits.
+				</Body>
 				<Spacer />
-				<Body>Target Persona</Body>
-				<SubHeading>Fashionista Fran</SubHeading>
 				<Image src={Persona} size="full" />
 				<Spacer />
 				<Body>Seconday Persona</Body>
@@ -165,7 +165,7 @@ export default () => {
 						<Spacer />
 					</div>
 				</ItemGrid>
-				<Spacer height={4} />
+				<Spacer height={2} />
 				<SubHeading>Creating a site map</SubHeading>
 				<Image src={SiteMap} size="full" />
 				<Spacer height={4} />
