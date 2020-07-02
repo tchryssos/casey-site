@@ -15,7 +15,7 @@ import Body from 'components/Typography/Body'
 import Image from 'components/Image'
 import VideoPlayer from 'components/VideoPlayer'
 
-
+import HeaderImage from 'static/images/Mirror/HiFiPDP.gif'
 import CardSort from 'static/images/Mirror/CardSorting.png'
 import SiteMap from 'static/images/Mirror/SiteMap.png'
 import Persona from 'static/images/Mirror/Persona-03.png'
@@ -117,11 +117,26 @@ export default () => {
 	}, [])
 	return (
 		<PageWrapper>
-			<ContentBlock className={classes.brandBlock}>
-				<SubHeading>CASE STUDY</SubHeading>
-				<Heading>
-					Mirror is a global brick-and-mortar clothing store looking to take their business online
-				</Heading>
+			<ContentBlock className={classes.secondaryBlock}>
+				<ItemGrid>
+					<div className={classes.half} >
+						<SubHeading>CASE STUDY</SubHeading>
+						<Heading>
+							Mirror is a global brick-and-mortar clothing store looking to take their business online
+						</Heading>
+					</div>
+					<div className={classes.half}>
+						<VideoPlayer
+							src="https://player.vimeo.com/video/434853454?autoplay=1&loop=1&autopause=0"
+							title="Prototype Animation"
+							aspectRatio="1:1"
+						/>
+					</div>
+				</ItemGrid>
+				<Spacer />
+				<Body>
+					This project was done as part of the curriculum for Design Lab's UX Academy. I completed the project on my own and was responsible for the research, UX/UI Design, and asset creation.
+				</Body>
 			</ContentBlock>
 			<div className={classes.research}>
 				RESEARCH RESEARCH RESEARCH
@@ -175,7 +190,7 @@ export default () => {
 				<SubHeading>Creating a site map</SubHeading>
 				<Image src={SiteMap} size="full" />
 			</ContentBlock>
-			<ContentBlock>
+			<ContentBlock className={classes.secondaryBlock}>
 				<Heading>
 					Identifying Design Patterns
 				</Heading>
@@ -221,8 +236,8 @@ export default () => {
 								classes.scrollTextPadding,
 							)}
 						>
-							<Body>USER TASK</Body>
-							<SubHeading>Add a new white Tshirt to the cart</SubHeading>
+							<SubHeading>USER TASK</SubHeading>
+							<Heading>Add a new white Tshirt to the cart</Heading>
 							<Spacer />
 							<Body>
 								For this project I built out the necessary pages for a user to filter, find an item, and add it to the cart.
@@ -241,7 +256,7 @@ export default () => {
 				BRAND
 			</div>
 			<ContentBlock className={classes.brandBlock}>
-				<Heading>Evolving the brand for online</Heading>
+				<Heading>Evolving the brand for their online debut</Heading>
 				<ItemGrid>
 					<div className={classes.half}>
 						<SubHeading>Logo Exploration</SubHeading>
@@ -339,7 +354,7 @@ export default () => {
 				<Spacer />
 				<Body>Only one person out of six used the quick view feature. I think this is because I only asked participants to add one item to the cart instead of multiple. I would want to test this again with a multi-item task.</Body>
 			</ContentBlock>
-			<ContentBlock>
+			<ContentBlock className={classes.secondaryBlock}>
 				<Heading>
 					Learnings
 				</Heading>
