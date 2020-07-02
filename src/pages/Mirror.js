@@ -28,6 +28,10 @@ import UIKIT from 'static/images/Mirror/UIKIT.png'
 import UserFlow from 'static/images/Mirror/userflow-02.png'
 import UsabilityHeader from 'static/images/Mirror/Frame30.png'
 import SizeGuide from 'static/images/Mirror/SizeGuide.png'
+import HifiHome from 'static/images/Mirror/HifIHome.png'
+import HifiCategory from 'static/images/Mirror/HifiCategory.png'
+import HifiPDP from 'static/images/Mirror/HiFiPDP.png'
+
 
 const useStyles = createUseStyles({
 	third: {
@@ -57,6 +61,9 @@ const useStyles = createUseStyles({
 	},
 	wiresBlock: {
 		backgroundColor: '#b4e0ff',
+	},
+	hifiblock: {
+		backgroundColor: '#e7b2c2',
 	},
 	boxShadow: {
 		boxShadow: '10px 10px #384ea1',
@@ -123,6 +130,10 @@ export default () => {
 				<Heading>
 					Discovering the Mirror Customer
 				</Heading>
+				<Spacer />
+				<Body>
+					Competitive Research > Create a Research Plan > User Interviews > Define a Persona
+				</Body>
 				<Spacer />
 				<Body>
 					I did competitive research as well as interviewed a group of males and females 22-30 years old who shop online regularly about their online shopping habits.
@@ -198,9 +209,28 @@ export default () => {
 			<div className={classes.research}>
 				LAYOUT
 			</div>
-			<ContentBlock>
+			<ContentBlock className={classes.wiresBlock}>
 				<Heading>Building the user experience</Heading>
 				<Spacer />
+				<div ref={scrollingContainer}>
+					<ItemGrid stackedOnMobile startAligned>
+						<div
+							ref={scrollingTextContainer}
+							className={clsx(
+								classes.half,
+								classes.scrollTextPadding,
+							)}
+						>
+							<Body>USER TASK</Body>
+							<SubHeading>Add a new white Tshirt to the cart</SubHeading>
+							<Spacer />
+							<Body>
+								For this project I built out the necessary pages for a user to filter, find an item, and add it to the cart.
+							</Body>
+						</div>
+						<Image src={UserFlow} className={classes.half} />
+					</ItemGrid>
+				</div>
 				<VideoPlayer
 					src="https://player.vimeo.com/video/434350879?loop=1?"
 					title="Prototype Animation"
@@ -229,8 +259,15 @@ export default () => {
 				<Image src={StyleTile} size="full" />
 				<Image src={UIKIT} size="full" />
 			</ContentBlock>
-			<ContentBlock>
+			<ContentBlock className={classes.hifiblock}>
 				<Heading>High Fidelity Mock Ups</Heading>
+				<Spacer />
+				<Body>
+					I used Figma to create visual designs for the key pages: Home Page, Category Page, and Product Detail Page.
+				</Body>
+				<Image src={HifiHome} size="full" />
+				<Image src={HifiCategory} size="full" />
+				<Image src={HifiPDP} size="full" />
 			</ContentBlock>
 			<div className={classes.research}>
 				TESTING
@@ -264,25 +301,6 @@ export default () => {
 					/>
 				</ItemGrid>
 				<Spacer />
-				<div ref={scrollingContainer}>
-					<ItemGrid stackedOnMobile startAligned>
-						<div
-							ref={scrollingTextContainer}
-							className={clsx(
-								classes.half,
-								classes.scrollTextPadding,
-							)}
-						>
-							<Body>USER TASK</Body>
-							<SubHeading>Add a new white Tshirt to the cart</SubHeading>
-							<Spacer />
-							<Body>
-								For this project I built out the necessary pages for a user to filter, find an item, and add it to the cart.
-							</Body>
-						</div>
-						<Image src={UserFlow} className={classes.half} />
-					</ItemGrid>
-				</div>
 				<Spacer />
 				<SubHeading>User testing in a remote world</SubHeading>
 				<Spacer />
@@ -320,6 +338,11 @@ export default () => {
 				<SubHeading>QuickView Feature</SubHeading>
 				<Spacer />
 				<Body>Only one person out of six used the quick view feature. I think this is because I only asked participants to add one item to the cart instead of multiple. I would want to test this again with a multi-item task.</Body>
+			</ContentBlock>
+			<ContentBlock>
+				<Heading>
+					Learnings
+				</Heading>
 			</ContentBlock>
 		</PageWrapper>
 	)
