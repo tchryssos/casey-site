@@ -15,7 +15,6 @@ import Body from 'components/Typography/Body'
 import Image from 'components/Image'
 import VideoPlayer from 'components/VideoPlayer'
 
-import HeaderImage from 'static/images/Mirror/HiFiPDP.gif'
 import CardSort from 'static/images/Mirror/CardSorting.png'
 import SiteMap from 'static/images/Mirror/SiteMap.png'
 import Persona from 'static/images/Mirror/Persona-03.png'
@@ -73,6 +72,7 @@ const useStyles = createUseStyles({
 		padding: 8,
 		color: 'white',
 		whiteSpace: 'nowrap',
+		textAlign: 'center',
 	},
 	scrollTextPadding: {
 		[MD_MIN_STRING]: {
@@ -139,16 +139,12 @@ export default () => {
 				</Body>
 			</ContentBlock>
 			<div className={classes.research}>
-				RESEARCH RESEARCH RESEARCH
+				RESEARCH
 			</div>
 			<ContentBlock className={classes.brandBlock}>
 				<Heading>
 					Discovering the Mirror Customer
 				</Heading>
-				<Spacer />
-				<Body>
-					Competitive Research > Create a Research Plan > User Interviews > Define a Persona
-				</Body>
 				<Spacer />
 				<Body>
 					I did competitive research as well as interviewed a group of males and females 22-30 years old who shop online regularly about their online shopping habits.
@@ -247,7 +243,7 @@ export default () => {
 					</ItemGrid>
 				</div>
 				<VideoPlayer
-					src="https://player.vimeo.com/video/434350879?loop=1?"
+					src="https://player.vimeo.com/video/434350879?loop=1&autopause=0"
 					title="Prototype Animation"
 					aspectRatio="1:1"
 				/>
