@@ -15,7 +15,9 @@ const useStyles = createUseStyles({
 	},
 })
 
-export default ({ children, className, intersectionCallback, intersectionThreshold }) => {
+export default ({
+	children, className, intersectionCallback, intersectionThreshold,
+}) => {
 	const classes = useStyles()
 	if (intersectionCallback) {
 		const options = {

@@ -97,8 +97,8 @@ export default () => {
 	useEffect(() => {
 		if (window.innerWidth >= MD_MIN_VALUE && scrollZone) {
 			scrollZone.addEventListener('scroll', scrollListener)
-			return () => scrollZone.removeEventListener('scroll', scrollListener)
 		}
+		return () => scrollZone.removeEventListener('scroll', scrollListener)
 	}, [scrollZone])
 	return (
 		<PageWrapper>
@@ -122,7 +122,7 @@ export default () => {
 						</Heading>
 						<Spacer />
 						<Body>
-							The majority of ListenJay's current users land on the site after clicking a link on social media. These social posts take them directly to the podcast episode's page so that is the page we decided to focus on first.
+							The majority of ListenJay&apos;s current users land on the site after clicking a link on social media. These social posts take them directly to the podcast episode&apos;s page so that is the page we decided to focus on first.
 						</Body>
 					</div>
 					<Image src={Flow} className={classes.half} />
@@ -227,7 +227,7 @@ export default () => {
 							</SubHeading>
 							<Spacer />
 							<Body>
-								For the final UI designs, I used the third iteration of the wireframes as a jumping off point. Combined with the new branding, this created a v2 of ListenJay's podcast episode page that I believe will work better for new users coming from social and also show off ListenJay as a brand.
+								For the final UI designs, I used the third iteration of the wireframes as a jumping off point. Combined with the new branding, this created a v2 of ListenJay&apos;s podcast episode page that I believe will work better for new users coming from social and also show off ListenJay as a brand.
 							</Body>
 						</div>
 						<Image src={UIMock} className={classes.half} />
@@ -239,7 +239,7 @@ export default () => {
 				</SubHeading>
 				<Spacer />
 				<Body>
-					ListenJay's main differentiator is its ability to create a share link that drives to one specific quote in a podcast. Because this is hard to understand from the player page, I created an onboarding flow to help users understand the capabilities better.
+					ListenJay&apos;s main differentiator is its ability to create a share link that drives to one specific quote in a podcast. Because this is hard to understand from the player page, I created an onboarding flow to help users understand the capabilities better.
 				</Body>
 				<VideoPlayer
 					src="https://player.vimeo.com/video/428292732?loop=1"

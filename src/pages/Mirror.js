@@ -137,8 +137,8 @@ export default () => {
 	useEffect(() => {
 		if (window.innerWidth >= MD_MIN_VALUE && scrollZone) {
 			scrollZone.addEventListener('scroll', scrollListener)
-			return () => scrollZone.removeEventListener('scroll', scrollListener)
 		}
+		return () => scrollZone.removeEventListener('scroll', scrollListener)
 	}, [scrollZone])
 	return (
 		<PageWrapper>
@@ -162,10 +162,10 @@ export default () => {
 					<Body>Testing</Body>
 				</a>
 			</div>
-			<a name="brief" >
+			<a name="brief">
 				<ContentBlock className={classes.secondaryBlock}>
 					<ItemGrid>
-						<div className={classes.half} >
+						<div className={classes.half}>
 							<SubHeading>CASE STUDY</SubHeading>
 							<Heading>
 								Mirror is a global brick-and-mortar clothing store looking to take their business online
@@ -181,14 +181,14 @@ export default () => {
 					</ItemGrid>
 					<Spacer />
 					<Body>
-						This project was done as part of the curriculum for Design Lab's UX Academy. I completed the project on my own and was responsible for the research, UX/UI Design, and asset creation.
+						This project was done as part of the curriculum for Design Lab&apos;s UX Academy. I completed the project on my own and was responsible for the research, UX/UI Design, and asset creation.
 					</Body>
 				</ContentBlock>
 			</a>
 			<div className={classes.research}>
 				RESEARCH
 			</div>
-			<a name="persona" >
+			<a name="persona">
 				<ContentBlock className={classes.brandBlock}>
 					<Heading>
 						Discovering the Mirror Customer
@@ -271,7 +271,7 @@ export default () => {
 			<div className={classes.research}>
 				LAYOUT
 			</div>
-			<a name="layout" >
+			<a name="layout">
 				<ContentBlock className={classes.wiresBlock}>
 					<Heading>Building the user experience</Heading>
 					<Spacer />
@@ -304,7 +304,7 @@ export default () => {
 			<div className={classes.research}>
 				BRAND
 			</div>
-			<a name="brand" >
+			<a name="brand">
 				<ContentBlock className={classes.brandBlock}>
 					<Heading>Evolving the brand for their online debut</Heading>
 					<ItemGrid>
@@ -320,7 +320,7 @@ export default () => {
 					<Spacer height={2} />
 					<SubHeading>Developing a Style Guide and UI Kit</SubHeading>
 					<Spacer />
-					<Body>Mirror's goals are to have a site that is accessible and easy to use but also to be a trendy and modern brand. For these reasons I used a digestible san-serif typeface for the body text and played with multiple bold colors to both add excitment and create more heirarchy.</Body>
+					<Body>Mirror&apos;s goals are to have a site that is accessible and easy to use but also to be a trendy and modern brand. For these reasons I used a digestible san-serif typeface for the body text and played with multiple bold colors to both add excitment and create more heirarchy.</Body>
 					<Image src={StyleTile} size="full" />
 					<Image src={UIKIT} size="full" />
 				</ContentBlock>
@@ -356,7 +356,7 @@ export default () => {
 							<Spacer />
 							<SubHeading>PROMPT</SubHeading>
 							<Body>
-								You've spilled on your favorite white shirt and need to order a new one.
+								You&apos;ve spilled on your favorite white shirt and need to order a new one.
 							</Body>
 						</div>
 						<Image
