@@ -1,7 +1,8 @@
-import React from 'react'
+import React, { useContext, useRef, useEffect } from 'react'
 import clsx from 'clsx'
 import { createUseStyles } from 'react-jss'
 import { MD_MIN_STRING } from 'constants/styles/breakpoints'
+import ScrollContext from 'contexts/scroll'
 
 const useStyles = createUseStyles({
 	contentBlock: {
@@ -19,20 +20,26 @@ export default ({
 	children, className, intersectionCallback, intersectionThreshold,
 }) => {
 	const classes = useStyles()
-	if (intersectionCallback) {
-		const options = {
-			root: document.querySelector('#scrollApp'),
-			rootMargin: '0px',
-			threshold: intersectionThreshold || 0.1,
+	const { getScroll } = useContext(ScrollContext)
+	const blockRef = useRef()
+	useEffect(() => {
+		if (intersectionCallback && blockRef.current) {
+			const options = {
+				root: getScroll(),
+				rootMargin: '0px',
+				threshold: intersectionThreshold || 0.1,
+			}
+			const observer = new IntersectionObserver(intersectionCallback, options)
+			observer.observe(blockRef.current)
 		}
-		const observer = new IntersectionObserver(intersectionCallback, options)
-	}
+	}, [intersectionCallback, blockRef.current])
 	return (
 		<div
 			className={clsx(
 				classes.contentBlock,
 				className,
 			)}
+			ref={blockRef}
 		>
 			{children}
 		</div>

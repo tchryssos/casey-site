@@ -305,7 +305,10 @@ export default () => {
 				BRAND
 			</div>
 			<a name="brand">
-				<ContentBlock className={classes.brandBlock}>
+				<ContentBlock
+					intersectionCallback={() => console.log("Hello")}
+					className={classes.brandBlock}
+				>
 					<Heading>Evolving the brand for their online debut</Heading>
 					<ItemGrid>
 						<div className={classes.half}>
