@@ -119,12 +119,11 @@ export default () => {
 	const classes = useStyles()
 	const scrollingContainer = useRef()
 	const scrollingTextContainer = useRef()
-	const { scrollRef } = useContext(ScrollContext)
-	const scrollZone = scrollRef.current
+	const { getScroll } = useContext(ScrollContext)
 	const scrollListener = () => {
 		if (window.innerWidth >= MD_MIN_VALUE) {
 			// @TODO rework this logic into a component or effect
-			const scrollOffset = scrollZone.scrollTop - scrollingContainer.current.offsetTop
+			const scrollOffset = getScroll()?.scrollTop - scrollingContainer.current.offsetTop
 			const containerHeight = scrollingContainer.current.offsetHeight
 			const textHeight = scrollingTextContainer.current.offsetHeight
 			if (scrollOffset >= -100 && scrollOffset <= containerHeight - textHeight) {
@@ -135,11 +134,12 @@ export default () => {
 		}
 	}
 	useEffect(() => {
+		const scrollZone = getScroll()
 		if (window.innerWidth >= MD_MIN_VALUE && scrollZone) {
 			scrollZone.addEventListener('scroll', scrollListener)
 		}
-		return () => scrollZone.removeEventListener('scroll', scrollListener)
-	}, [scrollZone])
+		return () => scrollZone?.removeEventListener('scroll', scrollListener)
+	}, [])
 	return (
 		<PageWrapper>
 			<div className={classes.MirrorPageNav}>

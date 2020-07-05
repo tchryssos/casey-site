@@ -102,6 +102,7 @@ const useStyles = createUseStyles({
 const App = ({ location }) => {
 	const classes = useStyles()
 	const scrollRef = useRef() // used for page scroll reset on navigation
+	const getScroll = () => scrollRef.current
 	const [isMenuOpen, setIsMenuOpen] = useState(false)
 	// On location change, scroll to page top
 	useEffect(() => {
@@ -118,7 +119,7 @@ const App = ({ location }) => {
 	}, [isMenuOpen])
 	return (
 		<MenuContext.Provider value={{ isMenuOpen, setIsMenuOpen }}>
-			<ScrollContext.Provider value={{ scrollRef }}>
+			<ScrollContext.Provider value={{ getScroll }}>
 				{/* eslint-disable */}
 				<div
 					// iOS onClick hack
