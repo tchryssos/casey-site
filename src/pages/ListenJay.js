@@ -1,10 +1,11 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect, useRef, useContext } from 'react'
 import { createUseStyles } from 'react-jss'
 import clsx from 'clsx'
 
 import {
 	MD_MIN_STRING, MD_MIN_VALUE,
 } from 'constants/styles/breakpoints'
+import ScrollContext from 'contexts/scroll'
 
 import PageWrapper from 'components/PageWrapper'
 import ContentBlock from 'components/ContentBlock'
@@ -79,10 +80,11 @@ export default () => {
 	const classes = useStyles()
 	const scrollingContainer = useRef()
 	const scrollingTextContainer = useRef()
+	const { scrollRef } = useContext(ScrollContext)
+	const scrollZone = scrollRef.current
 	const scrollListener = () => {
 		if (window.innerWidth >= MD_MIN_VALUE) {
-			const app = document.querySelector('#scrollApp')
-			const scrollOffset = app.scrollTop - scrollingContainer.current.offsetTop
+			const scrollOffset = scrollZone.scrollTop - scrollingContainer.current.offsetTop
 			const containerHeight = scrollingContainer.current.offsetHeight
 			const textHeight = scrollingTextContainer.current.offsetHeight
 			if (scrollOffset >= -100 && scrollOffset <= containerHeight - textHeight) {
@@ -93,12 +95,11 @@ export default () => {
 		}
 	}
 	useEffect(() => {
-		if (window.innerWidth >= MD_MIN_VALUE) {
-			const app = document.querySelector('#scrollApp')
-			app.addEventListener('scroll', scrollListener)
-			return () => app.removeEventListener('scroll', scrollListener)
+		if (window.innerWidth >= MD_MIN_VALUE && scrollZone) {
+			scrollZone.addEventListener('scroll', scrollListener)
+			return () => scrollZone.removeEventListener('scroll', scrollListener)
 		}
-	}, [])
+	}, [scrollZone])
 	return (
 		<PageWrapper>
 			<ContentBlock className={classes.headerBlock}>

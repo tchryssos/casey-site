@@ -15,8 +15,16 @@ const useStyles = createUseStyles({
 	},
 })
 
-export default ({ children, className }) => {
+export default ({ children, className, intersectionCallback, intersectionThreshold }) => {
 	const classes = useStyles()
+	if (intersectionCallback) {
+		const options = {
+			root: document.querySelector('#scrollApp'),
+			rootMargin: '0px',
+			threshold: intersectionThreshold || 0.1,
+		}
+		const observer = new IntersectionObserver(intersectionCallback, options)
+	}
 	return (
 		<div
 			className={clsx(
