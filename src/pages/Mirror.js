@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useContext } from 'react'
+import React, { useState, useEffect, useRef, useContext } from 'react'
 import { createUseStyles } from 'react-jss'
 import clsx from 'clsx'
 
@@ -56,6 +56,9 @@ const useStyles = createUseStyles({
 		boxSizing: 'border-box',
 		color: 'white',
 		backgroundColor: '#384ea1',
+	},
+	sectionIntersected: {
+		color: 'red',
 	},
 	third: {
 		width: '100%',
@@ -117,6 +120,12 @@ const useStyles = createUseStyles({
 
 export default () => {
 	const classes = useStyles()
+	const [currentIntersecting, setCurrentIntersecting] = useState()
+	const checkBlockVisible = (title) => (entries) => {
+		if (entries[0]?.isIntersecting) {
+			setCurrentIntersecting(title)
+		}
+	}
 	const scrollingContainer = useRef()
 	const scrollingTextContainer = useRef()
 	const { getScroll } = useContext(ScrollContext)
@@ -143,7 +152,13 @@ export default () => {
 	return (
 		<PageWrapper>
 			<div className={classes.MirrorPageNav}>
-				<a className={classes.link} href="#brief">
+				<a
+					className={clsx(
+						classes.link,
+						{ [classes.sectionIntersected]: currentIntersecting === 'brief' },
+					)}
+					href="#brief"
+				>
 					<Body>Brief</Body>
 				</a>
 				<a className={classes.link} href="#persona">
@@ -152,10 +167,22 @@ export default () => {
 				<a className={classes.link} href="#ia">
 					<Body>Information Architecture</Body>
 				</a>
-				<a className={classes.link} href="#layout">
+				<a
+					className={clsx(
+						classes.link,
+						{ [classes.sectionIntersected]: currentIntersecting === 'layout' },
+					)}
+					href="#layout"
+				>
 					<Body>Layout</Body>
 				</a>
-				<a className={classes.link} href="#branf">
+				<a
+					className={clsx(
+						classes.link,
+						{ [classes.sectionIntersected]: currentIntersecting === 'brand' },
+					)}
+					href="#brand"
+				>
 					<Body>Brand</Body>
 				</a>
 				<a className={classes.link} href="#testing">
@@ -272,7 +299,10 @@ export default () => {
 				LAYOUT
 			</div>
 			<a name="layout">
-				<ContentBlock className={classes.wiresBlock}>
+				<ContentBlock
+					intersectionCallback={checkBlockVisible('layout')}
+					className={classes.wiresBlock}
+				>
 					<Heading>Building the user experience</Heading>
 					<Spacer />
 					<div ref={scrollingContainer}>
@@ -306,7 +336,7 @@ export default () => {
 			</div>
 			<a name="brand">
 				<ContentBlock
-					intersectionCallback={() => console.log("Hello")}
+					intersectionCallback={checkBlockVisible('brand')}
 					className={classes.brandBlock}
 				>
 					<Heading>Evolving the brand for their online debut</Heading>
