@@ -1,4 +1,6 @@
-import React, { useState, useEffect, useRef, useContext } from 'react'
+import React, {
+	useState, useEffect, useRef, useContext,
+} from 'react'
 import { createUseStyles } from 'react-jss'
 import clsx from 'clsx'
 
@@ -17,6 +19,7 @@ import Spacer from 'components/Spacer'
 import Body from 'components/Typography/Body'
 import Image from 'components/Image'
 import VideoPlayer from 'components/VideoPlayer'
+import IntersectObserver from 'components/IntersectObserver'
 
 import CardSort from 'static/images/Mirror/CardSorting.png'
 import SiteMap from 'static/images/Mirror/SiteMap.png'
@@ -47,15 +50,19 @@ const useStyles = createUseStyles({
 		},
 	},
 	MirrorPageNav: {
-		position: 'fixed',
-		display: 'flex',
-		justifyContent: 'space-between',
-		bottom: 0,
-		width: '100%',
-		padding: 16,
-		boxSizing: 'border-box',
-		color: 'white',
-		backgroundColor: '#384ea1',
+		display: 'none',
+		[MD_MIN_STRING]: {
+			position: 'fixed',
+			display: 'flex',
+			justifyContent: 'space-between',
+			bottom: 0,
+			width: '100%',
+			padding: 16,
+			boxSizing: 'border-box',
+			color: 'white',
+			backgroundColor: '#384ea1',
+			zIndex: 100,
+		},
 	},
 	sectionIntersected: {
 		color: 'red',
@@ -189,6 +196,7 @@ export default () => {
 					<Body>Testing</Body>
 				</a>
 			</div>
+			{/* eslint-disable jsx-a11y/anchor-is-valid */}
 			<a name="brief">
 				<ContentBlock className={classes.secondaryBlock}>
 					<ItemGrid>
@@ -212,10 +220,10 @@ export default () => {
 					</Body>
 				</ContentBlock>
 			</a>
-			<div className={classes.research}>
-				RESEARCH
-			</div>
 			<a name="persona">
+				<div className={classes.research}>
+					RESEARCH
+				</div>
 				<ContentBlock className={classes.brandBlock}>
 					<Heading>
 						Discovering the Mirror Customer
@@ -228,10 +236,10 @@ export default () => {
 					<Image src={Persona} size="full" />
 				</ContentBlock>
 			</a>
-			<div className={classes.research}>
-				ARCHITECTURE
-			</div>
 			<a name="ia">
+				<div className={classes.research}>
+					ARCHITECTURE
+				</div>
 				<ContentBlock className={classes.brandBlock}>
 					<Heading>What is the best way to organize an online shop?</Heading>
 					<Spacer />
@@ -295,79 +303,84 @@ export default () => {
 				</Body>
 				<Image src={CartPattern} size="full" />
 			</ContentBlock> */}
-			<div className={classes.research}>
-				LAYOUT
-			</div>
 			<a name="layout">
-				<ContentBlock
+				<IntersectObserver
+					className={classes.research}
 					intersectionCallback={checkBlockVisible('layout')}
-					className={classes.wiresBlock}
 				>
-					<Heading>Building the user experience</Heading>
-					<Spacer />
-					<div ref={scrollingContainer}>
-						<ItemGrid stackedOnMobile startAligned>
-							<div
-								ref={scrollingTextContainer}
-								className={clsx(
-									classes.half,
-									classes.scrollTextPadding,
-								)}
-							>
-								<SubHeading>USER TASK</SubHeading>
-								<Heading>Add a new white Tshirt to the cart</Heading>
-								<Spacer />
-								<Body>
-									For this project I built out the necessary pages for a user to filter, find an item, and add it to the cart.
-								</Body>
-							</div>
-							<Image src={UserFlow} className={classes.half} />
-						</ItemGrid>
-					</div>
-					<VideoPlayer
-						src="https://player.vimeo.com/video/434350879?loop=1&autopause=0"
-						title="Prototype Animation"
-						aspectRatio="1:1"
-					/>
-				</ContentBlock>
+					LAYOUT
+				</IntersectObserver>
 			</a>
-			<div className={classes.research}>
-				BRAND
-			</div>
-			<a name="brand">
-				<ContentBlock
-					intersectionCallback={checkBlockVisible('brand')}
-					className={classes.brandBlock}
-				>
-					<Heading>Evolving the brand for their online debut</Heading>
-					<ItemGrid>
-						<div className={classes.half}>
-							<SubHeading>Logo Exploration</SubHeading>
+			<ContentBlock
+				className={classes.wiresBlock}
+			>
+				<Heading>Building the user experience</Heading>
+				<Spacer />
+				<div ref={scrollingContainer}>
+					<ItemGrid stackedOnMobile startAligned>
+						<div
+							ref={scrollingTextContainer}
+							className={clsx(
+								classes.half,
+								classes.scrollTextPadding,
+							)}
+						>
+							<SubHeading>USER TASK</SubHeading>
+							<Heading>Add a new white Tshirt to the cart</Heading>
 							<Spacer />
-							<Body>While exploring logo options for Mirror, I played a lot with turning the &quot;o&quot; into a literal mirror. Ultimately, this felt outdated but I used a font that allowed me to stretch some of the letters to place emphasis on the &quot;o&quot; in a more elevated way. </Body>
+							<Body>
+								For this project I built out the necessary pages for a user to filter, find an item, and add it to the cart.
+							</Body>
 						</div>
-						<div className={classes.half}>
-							<Image src={Logo} size="full" />
-						</div>
+						<Image src={UserFlow} className={classes.half} />
 					</ItemGrid>
-					<Spacer height={2} />
-					<SubHeading>Developing a Style Guide and UI Kit</SubHeading>
-					<Spacer />
-					<Body>Mirror&apos;s goals are to have a site that is accessible and easy to use but also to be a trendy and modern brand. For these reasons I used a digestible san-serif typeface for the body text and played with multiple bold colors to both add excitment and create more heirarchy.</Body>
-					<Image src={StyleTile} size="full" />
-					<Image src={UIKIT} size="full" />
-				</ContentBlock>
-				<ContentBlock className={classes.hifiblock}>
-					<Heading>High Fidelity Mock Ups</Heading>
-					<Spacer />
-					<Body>
-						I used Figma to create visual designs for the key pages: Home Page, Category Page, and Product Detail Page.
-					</Body>
-					<Image src={HifiHome} size="full" />
-					<Image src={HifiCategory} size="full" />
-					<Image src={HifiPDP} size="full" />
-				</ContentBlock>
+				</div>
+				<VideoPlayer
+					src="https://player.vimeo.com/video/434350879?loop=1&autopause=0"
+					title="Prototype Animation"
+					aspectRatio="1:1"
+				/>
+			</ContentBlock>
+			<a name="brand">
+				<IntersectObserver
+					className={classes.research}
+					intersectionCallback={checkBlockVisible('brand')}
+				>
+					BRAND
+				</IntersectObserver>
 			</a>
+			<ContentBlock
+				intersectionCallback={checkBlockVisible('brand')}
+				className={classes.brandBlock}
+			>
+				<Heading>Evolving the brand for their online debut</Heading>
+				<ItemGrid>
+					<div className={classes.half}>
+						<SubHeading>Logo Exploration</SubHeading>
+						<Spacer />
+						<Body>While exploring logo options for Mirror, I played a lot with turning the &quot;o&quot; into a literal mirror. Ultimately, this felt outdated but I used a font that allowed me to stretch some of the letters to place emphasis on the &quot;o&quot; in a more elevated way. </Body>
+					</div>
+					<div className={classes.half}>
+						<Image src={Logo} size="full" />
+					</div>
+				</ItemGrid>
+				<Spacer height={2} />
+				<SubHeading>Developing a Style Guide and UI Kit</SubHeading>
+				<Spacer />
+				<Body>Mirror&apos;s goals are to have a site that is accessible and easy to use but also to be a trendy and modern brand. For these reasons I used a digestible san-serif typeface for the body text and played with multiple bold colors to both add excitment and create more heirarchy.</Body>
+				<Image src={StyleTile} size="full" />
+				<Image src={UIKIT} size="full" />
+			</ContentBlock>
+			<ContentBlock className={classes.hifiblock}>
+				<Heading>High Fidelity Mock Ups</Heading>
+				<Spacer />
+				<Body>
+					I used Figma to create visual designs for the key pages: Home Page, Category Page, and Product Detail Page.
+				</Body>
+				<Image src={HifiHome} size="full" />
+				<Image src={HifiCategory} size="full" />
+				<Image src={HifiPDP} size="full" />
+			</ContentBlock>
 			<div className={classes.research}>
 				TESTING
 			</div>
