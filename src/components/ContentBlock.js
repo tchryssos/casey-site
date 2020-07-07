@@ -16,12 +16,14 @@ const useStyles = createUseStyles({
 	},
 })
 
+const defaultThresh = [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1]
 export default ({
-	children, className, intersectionCallback, intersectionThresholds = [0.1, 0.9],
+	children, className, intersectionCallback, intersectionThresholds = defaultThresh,
 }) => {
 	const classes = useStyles()
 	const { getScroll } = useContext(ScrollContext)
 	const blockRef = useRef()
+	// @TODO One observer for all elements
 	useEffect(() => {
 		if (intersectionCallback && blockRef.current) {
 			const options = {

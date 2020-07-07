@@ -184,12 +184,14 @@ const MirrorPageNav = ({ classes, currentIntersecting }) => (
 export default () => {
 	const classes = useStyles()
 	const [currentIntersecting, setCurrentIntersecting] = useState('brief')
-	console.log(currentIntersecting)
 
 	// START - PAGE INTERSECTION LOGIC - START
 	const checkBlockVisible = (title) => (entries) => {
 		const { isIntersecting = false, intersectionRatio = 0 } = entries[0]
-		if (isIntersecting && !Math.round(intersectionRatio)) {
+		if (isIntersecting) {
+			console.log(`${title}: `, entries)
+		}
+		if (isIntersecting && intersectionRatio < 0.25) {
 			setCurrentIntersecting(title)
 		}
 	}
