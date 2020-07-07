@@ -27,9 +27,6 @@ import SiteMap from 'static/images/Mirror/SiteMap.png'
 import Persona from 'static/images/Mirror/Persona-03.png'
 import StyleTile from 'static/images/Mirror/StyleTile-03.png'
 import Logo from 'static/images/Mirror/Logo-01.png'
-// import CartPattern from 'static/images/Mirror/DesignPatternCart-01.png'
-// import FilterPattern from 'static/images/Mirror/DesignPatternFilter-02.png'
-// import NavPattern from 'static/images/Mirror/DesignPatternNav-03.png'
 import UIKIT from 'static/images/Mirror/UIKIT.png'
 import UserFlow from 'static/images/Mirror/userflow-02.png'
 import UsabilityHeader from 'static/images/Mirror/Frame30.png'
@@ -66,11 +63,11 @@ const useStyles = createUseStyles({
 			zIndex: 100,
 		},
 	},
-	sectionIntersected: {
-		backgroundColor: '#4e7fff',
-		'&:visited': {
-		},
-	},
+	// sectionIntersected: {
+	// 	backgroundColor: '#4e7fff',
+	// 	'&:visited': {
+	// 	},
+	// },
 	third: {
 		width: '100%',
 		marginBottom: 64,
@@ -87,19 +84,19 @@ const useStyles = createUseStyles({
 			marginLeft: 0,
 		},
 	},
-	brandBlock: {
+	mirrorColorPrimary: {
 		backgroundColor: '#FFFAF1',
 	},
-	secondaryBlock: {
+	mirrorColorSecondary: {
 		backgroundColor: '#fde8c7',
 	},
 	whiteBlock: {
 		backgroundColor: 'white',
 	},
-	wiresBlock: {
+	blueBackground: {
 		backgroundColor: '#b4e0ff',
 	},
-	hifiblock: {
+	pinkBackground: {
 		backgroundColor: '#e7b2c2',
 	},
 	boxShadow: {
@@ -162,7 +159,7 @@ const MirrorPageNav = ({ classes, currentIntersecting }) => (
 			classes={classes}
 			currentIntersecting={currentIntersecting}
 			link="ia"
-			text="Information Architecture"
+			text="Architecture"
 		/>
 		<PageNavLink
 			classes={classes}
@@ -180,6 +177,11 @@ const MirrorPageNav = ({ classes, currentIntersecting }) => (
 			classes={classes}
 			currentIntersecting={currentIntersecting}
 			link="testing"
+		/>
+		<PageNavLink
+			classes={classes}
+			currentIntersecting={currentIntersecting}
+			link="learnings"
 		/>
 	</div>
 )
@@ -251,7 +253,7 @@ export default () => {
 				<ContentBlock
 					blockRef={briefRef}
 					blockId="brief"
-					className={classes.secondaryBlock}
+					className={classes.mirrorColorSecondary}
 				>
 					<ItemGrid>
 						<div className={classes.half}>
@@ -284,7 +286,7 @@ export default () => {
 				<ContentBlock
 					blockRef={personaRef}
 					blockId="persona"
-					className={classes.brandBlock}
+					className={classes.mirrorColorPrimary}
 				>
 					<Heading>
 						Discovering the Mirror Customer
@@ -305,7 +307,7 @@ export default () => {
 					ARCHITECTURE
 				</div>
 				<ContentBlock
-					className={classes.brandBlock}
+					className={classes.mirrorColorPrimary}
 					blockRef={iaRef}
 					blockId="ia"
 				>
@@ -349,7 +351,7 @@ export default () => {
 				</div>
 			</a>
 			<ContentBlock
-				className={classes.wiresBlock}
+				className={classes.blueBackground}
 				blockRef={layoutRef}
 				blockId="layout"
 			>
@@ -390,7 +392,7 @@ export default () => {
 			</a>
 			<ContentBlock
 				blockRef={brandRef}
-				className={classes.brandBlock}
+				className={classes.mirrorColorPrimary}
 				blockId="brand"
 			>
 				<Heading>Evolving the brand for their online debut</Heading>
@@ -412,7 +414,7 @@ export default () => {
 				<Image src={UIKIT} size="full" />
 			</ContentBlock>
 			<ContentBlock
-				className={classes.hifiblock}
+				className={classes.pinkBackground}
 				blockRef={hifiRef}
 				blockId="hifi"
 			>
@@ -434,7 +436,7 @@ export default () => {
 				</div>
 			</a>
 			<ContentBlock
-				className={classes.brandBlock}
+				className={classes.mirrorColorPrimary}
 				blockRef={testingRef}
 				blockId="testing"
 			>
@@ -507,8 +509,31 @@ export default () => {
 			</ContentBlock>
 			{/* END - TESTING - END */}
 
-			<ContentBlock>
+			<a name="learnings">
+				<div className={classes.sectionLabel}>
+					Learnings
+				</div>
+			</a>
+			<ContentBlock className={classes.mirrorColorSecondary}>
 				<Heading>Key Learnings</Heading>
+				<Spacer />
+				<SubHeading>Research is important!</SubHeading>
+				<Spacer />
+				<Body>
+					With a background in graphic design, I felt fairly comfortable navigating the visual design of the pages and presenting my work. Coming into Design Lab, I wanted to learn more about how to execute meaningul user research and testing. I found that interviewing potential users and going through the research process helped me to feel confident in my decision making and back it up with data that put the user at the center.
+				</Body>
+				<Spacer />
+				<SubHeading>Design for every option</SubHeading>
+				<Spacer />
+				<Body>
+					This project helped me understand just how much detail goes into any online shopping experience. Filling in my prototypes with real content was informative in planning for situations like different length product names and reviews, showing sizes and colors that are out of stock, and creating different states for filters and drop-downs.
+				</Body>
+				<Spacer />
+				<SubHeading>Working Remotely</SubHeading>
+				<Spacer />
+				<Body>
+					Even though some of my research and testing plans involved processes that would ideally be hands-on, I was able to adapt most of them to be executed virtually. I used zoom to facilitate card-sorting via a Trello board and also to observe participants interacting with my Figma prototype. I used Maze to help other students with their testing and learned a lot about planning for what is feasible and being flexible.
+				</Body>
 			</ContentBlock>
 
 		</PageWrapper>
