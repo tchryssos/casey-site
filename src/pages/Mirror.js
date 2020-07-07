@@ -3,7 +3,6 @@ import React, {
 } from 'react'
 import { createUseStyles } from 'react-jss'
 import clsx from 'clsx'
-import throttle from 'lodash.throttle'
 import debounce from 'lodash.debounce'
 
 import {
