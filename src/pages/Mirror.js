@@ -342,38 +342,6 @@ export default () => {
 			</a>
 			{/* END - ARCHITECTURE - END */}
 
-			{/* <ContentBlock className={classes.secondaryBlock}>
-				<Heading>
-					Identifying Design Patterns
-				</Heading>
-				<Spacer />
-				<Body>
-					I gathered and analyzed examples of navigation, cart, product detail page, and filtering systems from competitor websites in order to inform the Mirror wireframes.
-				</Body>
-				<Spacer />
-				<SubHeading>Navigation</SubHeading>
-				<Spacer />
-				<Body>
-					The ASOS nav bar has a toggle for mens/womens and then cascades down in layers revealing all of the options which is helpful when navigating. It is nice that it includes some images. This menu starts as a hamburger menu on mobile but has the same structure as the desktop version.
-				</Body>
-				<Image src={NavPattern} size="full" />
-				<Spacer />
-				<SubHeading>Filtering</SubHeading>
-				<Spacer />
-				<Body>
-					Urban keeps all of the filters available on desktop on the right side while you browse. This is allows the filters and options to always be seen.
-					Madewell and Outdoor Voices use a top nav for filters which feels more premium.	Madewell also includes occasions to sort by pulled out from the filtering.
-				</Body>
-				<Image src={FilterPattern} size="full" />
-				<Spacer />
-				<SubHeading>Cart Overlay</SubHeading>
-				<Spacer />
-				<Body>
-					It is common on shopping sites to show a preview of the cart when a user hovers over or clicks the cart icon. This is helpful because users can preview their cart without losing the page that they are on and they can edit their cart while they shop
-				</Body>
-				<Image src={CartPattern} size="full" />
-			</ContentBlock> */}
-
 			{/* START - LAYOUT - START */}
 			<a name="layout">
 				<div className={classes.sectionLabel}>
@@ -538,6 +506,10 @@ export default () => {
 				<Body>Only one person out of six used the quick view feature. I think this is because I only asked participants to add one item to the cart instead of multiple. I would want to test this again with a multi-item task.</Body>
 			</ContentBlock>
 			{/* END - TESTING - END */}
+
+			<ContentBlock>
+				<Heading>Key Learnings</Heading>
+			</ContentBlock>
 
 		</PageWrapper>
 	)

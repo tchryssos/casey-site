@@ -7,22 +7,22 @@ const defaultThresholds = [
 export default (getScroll) => (
 	targets, intersectionCallback, intersectionThresholds = defaultThresholds,
 ) => {
-	useEffect(() => {
-		const currents = targets.filter((x) => x.current)
-		let observer
-		if (intersectionCallback && currents.length === targets.length) {
-			const options = {
-				root: getScroll(),
-				rootMargin: '0px',
-				threshold: intersectionThresholds,
-			}
-			observer = new IntersectionObserver(intersectionCallback, options)
-			targets.forEach(
-				(t) => observer.observe(t.current),
-			)
-		}
-		return () => targets.forEach(
-			(t) => observer?.unobserve(t.current),
-		)
-	}, [intersectionCallback, ...targets])
+	// useEffect(() => {
+	// 	const currents = targets.filter((x) => x.current)
+	// 	let observer
+	// 	if (intersectionCallback && currents.length === targets.length) {
+	// 		const options = {
+	// 			root: getScroll(),
+	// 			rootMargin: '0px',
+	// 			threshold: intersectionThresholds,
+	// 		}
+	// 		observer = new IntersectionObserver(intersectionCallback, options)
+	// 		targets.forEach(
+	// 			(t) => observer.observe(t.current),
+	// 		)
+	// 	}
+	// 	return () => targets.forEach(
+	// 		(t) => observer?.unobserve(t.current),
+	// 	)
+	// }, [intersectionCallback, ...targets])
 }
