@@ -3,6 +3,7 @@ import React, {
 } from 'react'
 import { createUseStyles } from 'react-jss'
 import clsx from 'clsx'
+import throttle from 'lodash.throttle'
 
 import {
 	MD_MIN_STRING, MD_MIN_VALUE,
@@ -123,21 +124,70 @@ const useStyles = createUseStyles({
 	},
 })
 
+// START - PAGE NAV - START
+const MirrorPageNav = ({ classes, currentIntersecting }) => (
+	<div className={classes.MirrorPageNav}>
+		<a
+			className={clsx(
+				classes.link,
+				{ [classes.sectionIntersected]: currentIntersecting === 'brief' },
+			)}
+			href="#brief"
+		>
+			<Body>Brief</Body>
+		</a>
+		<a className={classes.link} href="#persona">
+			<Body>Personas</Body>
+		</a>
+		<a className={classes.link} href="#ia">
+			<Body>Information Architecture</Body>
+		</a>
+		<a
+			className={clsx(
+				classes.link,
+				{ [classes.sectionIntersected]: currentIntersecting === 'layout' },
+			)}
+			href="#layout"
+		>
+			<Body>Layout</Body>
+		</a>
+		<a
+			className={clsx(
+				classes.link,
+				{ [classes.sectionIntersected]: currentIntersecting === 'brand' },
+			)}
+			href="#brand"
+		>
+			<Body>Brand</Body>
+		</a>
+		<a className={classes.link} href="#testing">
+			<Body>Testing</Body>
+		</a>
+	</div>
+)
+// END - PAGE NAV - END
+
 
 export default () => {
 	const classes = useStyles()
 	const [currentIntersecting, setCurrentIntersecting] = useState()
+	console.log(currentIntersecting)
 
+	// START - PAGE INTERSECTION LOGIC - START
 	const checkBlockVisible = (title) => (entries) => {
 		if (entries[0]?.isIntersecting) {
-			console.log(entries)
+			console.log(entries, title)
 			setCurrentIntersecting(title)
 		}
 	}
+	const throttledCBV = throttle(checkBlockVisible, 100)
+	// END - PAGE INTERSECTION LOGIC - END
 
+	// START - PAGE SCROLL LOGIC - START
 	const scrollingContainer = useRef()
 	const scrollingTextContainer = useRef()
 	const { getScroll } = useContext(ScrollContext)
+
 	const scrollListener = () => {
 		if (window.innerWidth >= MD_MIN_VALUE) {
 			// @TODO rework this logic into a component or effect
@@ -151,6 +201,7 @@ export default () => {
 			scrollingTextContainer.current.style.transform = 'translateY(0px)'
 		}
 	}
+
 	useEffect(() => {
 		const scrollZone = getScroll()
 		if (window.innerWidth >= MD_MIN_VALUE && scrollZone) {
@@ -158,50 +209,15 @@ export default () => {
 		}
 		return () => scrollZone?.removeEventListener('scroll', scrollListener)
 	}, [])
+	// END - PAGE SCROLL LOGIC - END
+
 	return (
 		<PageWrapper>
-			<div className={classes.MirrorPageNav}>
-				<a
-					className={clsx(
-						classes.link,
-						{ [classes.sectionIntersected]: currentIntersecting === 'brief' },
-					)}
-					href="#brief"
-				>
-					<Body>Brief</Body>
-				</a>
-				<a className={classes.link} href="#persona">
-					<Body>Personas</Body>
-				</a>
-				<a className={classes.link} href="#ia">
-					<Body>Information Architecture</Body>
-				</a>
-				<a
-					className={clsx(
-						classes.link,
-						{ [classes.sectionIntersected]: currentIntersecting === 'layout' },
-					)}
-					href="#layout"
-				>
-					<Body>Layout</Body>
-				</a>
-				<a
-					className={clsx(
-						classes.link,
-						{ [classes.sectionIntersected]: currentIntersecting === 'brand' },
-					)}
-					href="#brand"
-				>
-					<Body>Brand</Body>
-				</a>
-				<a className={classes.link} href="#testing">
-					<Body>Testing</Body>
-				</a>
-			</div>
+			<MirrorPageNav classes={classes} currentIntersecting={currentIntersecting} />
 			{/* eslint-disable jsx-a11y/anchor-is-valid */}
 			<a name="brief">
 				<ContentBlock
-					intersectionCallback={checkBlockVisible('brief')}
+					intersectionCallback={throttledCBV('brief')}
 					className={classes.secondaryBlock}
 				>
 					<ItemGrid>
@@ -230,7 +246,7 @@ export default () => {
 					RESEARCH
 				</div>
 				<ContentBlock
-					intersectionCallback={checkBlockVisible('persona')}
+					intersectionCallback={throttledCBV('persona')}
 					className={classes.brandBlock}
 				>
 					<Heading>
@@ -250,7 +266,7 @@ export default () => {
 				</div>
 				<ContentBlock
 					className={classes.brandBlock}
-					intersectionCallback={checkBlockVisible('ia')}
+					intersectionCallback={throttledCBV('ia')}
 				>
 					<Heading>What is the best way to organize an online shop?</Heading>
 					<Spacer />
@@ -321,7 +337,7 @@ export default () => {
 			</a>
 			<ContentBlock
 				className={classes.wiresBlock}
-				intersectionCallback={checkBlockVisible('layout')}
+				intersectionCallback={throttledCBV('layout')}
 			>
 				<Heading>Building the user experience</Heading>
 				<Spacer />
@@ -356,7 +372,7 @@ export default () => {
 				</div>
 			</a>
 			<ContentBlock
-				intersectionCallback={checkBlockVisible('brand')}
+				intersectionCallback={throttledCBV('brand')}
 				className={classes.brandBlock}
 			>
 				<Heading>Evolving the brand for their online debut</Heading>
@@ -394,7 +410,7 @@ export default () => {
 			</a>
 			<ContentBlock
 				className={classes.brandBlock}
-				intersectionCallback={checkBlockVisible('testing')}
+				intersectionCallback={throttledCBV('testing')}
 			>
 				<ItemGrid>
 					<div className={classes.half}>
