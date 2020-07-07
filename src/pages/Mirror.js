@@ -43,6 +43,7 @@ const useStyles = createUseStyles({
 	link: {
 		color: 'white',
 		display: 'block',
+		padding: 8,
 		'&:hover': {
 			color: 'white',
 		},
@@ -58,17 +59,16 @@ const useStyles = createUseStyles({
 			justifyContent: 'space-between',
 			bottom: 0,
 			width: '100%',
-			padding: 16,
+			padding: 8,
 			boxSizing: 'border-box',
 			color: 'white',
-			backgroundColor: '#384ea1',
+			backgroundColor: '#0f2b41',
 			zIndex: 100,
 		},
 	},
 	sectionIntersected: {
-		color: 'red',
+		backgroundColor: '#4e7fff',
 		'&:visited': {
-			color: 'red',
 		},
 	},
 	third: {
@@ -106,7 +106,7 @@ const useStyles = createUseStyles({
 		boxShadow: '10px 10px #384ea1',
 	},
 	sectionLabel: {
-		backgroundColor: '#384ea1',
+		backgroundColor: '#4e7fff',
 		padding: 8,
 		color: 'white',
 		whiteSpace: 'nowrap',
@@ -156,7 +156,7 @@ const MirrorPageNav = ({ classes, currentIntersecting }) => (
 			classes={classes}
 			currentIntersecting={currentIntersecting}
 			link="persona"
-			text="Personas"
+			text="Research"
 		/>
 		<PageNavLink
 			classes={classes}
@@ -173,6 +173,7 @@ const MirrorPageNav = ({ classes, currentIntersecting }) => (
 			classes={classes}
 			currentIntersecting={currentIntersecting}
 			link="brand"
+			text="Branding"
 			altLink="hifi"
 		/>
 		<PageNavLink
