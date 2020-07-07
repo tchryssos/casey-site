@@ -17,7 +17,7 @@ const useStyles = createUseStyles({
 })
 
 export default ({
-	children, className, intersectionCallback, intersectionThreshold,
+	children, className, intersectionCallback, intersectionThresholds = [0.1, 0.9],
 }) => {
 	const classes = useStyles()
 	const { getScroll } = useContext(ScrollContext)
@@ -27,7 +27,7 @@ export default ({
 			const options = {
 				root: getScroll(),
 				rootMargin: '0px',
-				threshold: intersectionThreshold || 0.1,
+				threshold: intersectionThresholds,
 			}
 			const observer = new IntersectionObserver(intersectionCallback, options)
 			observer.observe(blockRef.current)

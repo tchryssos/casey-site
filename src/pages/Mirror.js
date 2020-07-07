@@ -19,7 +19,6 @@ import Spacer from 'components/Spacer'
 import Body from 'components/Typography/Body'
 import Image from 'components/Image'
 import VideoPlayer from 'components/VideoPlayer'
-import IntersectObserver from 'components/IntersectObserver'
 
 import CardSort from 'static/images/Mirror/CardSorting.png'
 import SiteMap from 'static/images/Mirror/SiteMap.png'
@@ -101,7 +100,7 @@ const useStyles = createUseStyles({
 	boxShadow: {
 		boxShadow: '10px 10px #384ea1',
 	},
-	research: {
+	sectionLabel: {
 		backgroundColor: '#384ea1',
 		padding: 8,
 		color: 'white',
@@ -128,11 +127,14 @@ const useStyles = createUseStyles({
 export default () => {
 	const classes = useStyles()
 	const [currentIntersecting, setCurrentIntersecting] = useState()
+
 	const checkBlockVisible = (title) => (entries) => {
 		if (entries[0]?.isIntersecting) {
+			console.log(entries)
 			setCurrentIntersecting(title)
 		}
 	}
+
 	const scrollingContainer = useRef()
 	const scrollingTextContainer = useRef()
 	const { getScroll } = useContext(ScrollContext)
@@ -198,7 +200,10 @@ export default () => {
 			</div>
 			{/* eslint-disable jsx-a11y/anchor-is-valid */}
 			<a name="brief">
-				<ContentBlock className={classes.secondaryBlock}>
+				<ContentBlock
+					intersectionCallback={checkBlockVisible('brief')}
+					className={classes.secondaryBlock}
+				>
 					<ItemGrid>
 						<div className={classes.half}>
 							<SubHeading>CASE STUDY</SubHeading>
@@ -221,10 +226,13 @@ export default () => {
 				</ContentBlock>
 			</a>
 			<a name="persona">
-				<div className={classes.research}>
+				<div className={classes.sectionLabel}>
 					RESEARCH
 				</div>
-				<ContentBlock className={classes.brandBlock}>
+				<ContentBlock
+					intersectionCallback={checkBlockVisible('persona')}
+					className={classes.brandBlock}
+				>
 					<Heading>
 						Discovering the Mirror Customer
 					</Heading>
@@ -237,10 +245,13 @@ export default () => {
 				</ContentBlock>
 			</a>
 			<a name="ia">
-				<div className={classes.research}>
+				<div className={classes.sectionLabel}>
 					ARCHITECTURE
 				</div>
-				<ContentBlock className={classes.brandBlock}>
+				<ContentBlock
+					className={classes.brandBlock}
+					intersectionCallback={checkBlockVisible('ia')}
+				>
 					<Heading>What is the best way to organize an online shop?</Heading>
 					<Spacer />
 					<ItemGrid>
@@ -304,15 +315,13 @@ export default () => {
 				<Image src={CartPattern} size="full" />
 			</ContentBlock> */}
 			<a name="layout">
-				<IntersectObserver
-					className={classes.research}
-					intersectionCallback={checkBlockVisible('layout')}
-				>
+				<div className={classes.sectionLabel}>
 					LAYOUT
-				</IntersectObserver>
+				</div>
 			</a>
 			<ContentBlock
 				className={classes.wiresBlock}
+				intersectionCallback={checkBlockVisible('layout')}
 			>
 				<Heading>Building the user experience</Heading>
 				<Spacer />
@@ -342,12 +351,9 @@ export default () => {
 				/>
 			</ContentBlock>
 			<a name="brand">
-				<IntersectObserver
-					className={classes.research}
-					intersectionCallback={checkBlockVisible('brand')}
-				>
+				<div className={classes.sectionLabel}>
 					BRAND
-				</IntersectObserver>
+				</div>
 			</a>
 			<ContentBlock
 				intersectionCallback={checkBlockVisible('brand')}
@@ -381,79 +387,82 @@ export default () => {
 				<Image src={HifiCategory} size="full" />
 				<Image src={HifiPDP} size="full" />
 			</ContentBlock>
-			<div className={classes.research}>
-				TESTING
-			</div>
 			<a name="testing">
-				<ContentBlock className={classes.brandBlock}>
-					<ItemGrid>
-						<div className={classes.half}>
-							<Heading>Usability Testing</Heading>
-							<Spacer />
-							<SubHeading>GOALS</SubHeading>
-							<Body>
-								Test whether users can find an item and add it to the cart. Understand how many participants use filters and quick view functionality.
-							</Body>
-							<Spacer />
-							<SubHeading>PARTICIPANTS</SubHeading>
-							<Body>
-								Six users, male and female, 22-35 years old.
-							</Body>
-							<Spacer />
-							<SubHeading>PROMPT</SubHeading>
-							<Body>
-								You&apos;ve spilled on your favorite white shirt and need to order a new one.
-							</Body>
-						</div>
-						<Image
-							src={UsabilityHeader}
-							size="full"
-							className={clsx(
-								classes.half,
-								classes.boxShadow,
-							)}
-						/>
-					</ItemGrid>
-					<Spacer />
-					<Spacer />
-					<SubHeading>User testing in a remote world</SubHeading>
-					<Spacer />
-					<Body>
-						For my user tests I created a Figma prototype and had participants screenshare over Zoom as they moved through the task, narrating their decision making process along the way.
-					</Body>
-					<VideoPlayer
-						src="https://player.vimeo.com/video/434380887?loop=1"
-						title="Prototype Animation"
-						aspectRatio="16:9"
-					/>
-					<Spacer height={2} />
-					<SubHeading>Analyzing the results</SubHeading>
-					<Spacer />
-					<ItemGrid startaligned>
-						<div className={classes.half}>
-							<Heading>100%</Heading>
-							<SubHeading>of participants added an item to the cart with no problem</SubHeading>
-						</div>
-						<div className={classes.half}>
-							<Heading>50%</Heading>
-							<SubHeading>of participants used the filters to sort</SubHeading>
-						</div>
-					</ItemGrid>
-					<Spacer />
-					<ItemGrid>
-						<div className={classes.half}>
-							<SubHeading>Price and Size</SubHeading>
-							<Spacer />
-							<Body>Multiple participants mentioned discrepancies in the price or that the prices were high which signals that price is very important to users. Many also mentioned wanting to click on the size guide to find their size, which had not yet been prototyped. To the right is a first iteration I created after these tests.</Body>
-						</div>
-						<Image src={SizeGuide} className={classes.half} />
-					</ItemGrid>
-					<Spacer />
-					<SubHeading>QuickView Feature</SubHeading>
-					<Spacer />
-					<Body>Only one person out of six used the quick view feature. I think this is because I only asked participants to add one item to the cart instead of multiple. I would want to test this again with a multi-item task.</Body>
-				</ContentBlock>
+				<div className={classes.sectionLabel}>
+					TESTING
+				</div>
 			</a>
+			<ContentBlock
+				className={classes.brandBlock}
+				intersectionCallback={checkBlockVisible('testing')}
+			>
+				<ItemGrid>
+					<div className={classes.half}>
+						<Heading>Usability Testing</Heading>
+						<Spacer />
+						<SubHeading>GOALS</SubHeading>
+						<Body>
+							Test whether users can find an item and add it to the cart. Understand how many participants use filters and quick view functionality.
+						</Body>
+						<Spacer />
+						<SubHeading>PARTICIPANTS</SubHeading>
+						<Body>
+							Six users, male and female, 22-35 years old.
+						</Body>
+						<Spacer />
+						<SubHeading>PROMPT</SubHeading>
+						<Body>
+							You&apos;ve spilled on your favorite white shirt and need to order a new one.
+						</Body>
+					</div>
+					<Image
+						src={UsabilityHeader}
+						size="full"
+						className={clsx(
+							classes.half,
+							classes.boxShadow,
+						)}
+					/>
+				</ItemGrid>
+				<Spacer />
+				<Spacer />
+				<SubHeading>User testing in a remote world</SubHeading>
+				<Spacer />
+				<Body>
+					For my user tests I created a Figma prototype and had participants screenshare over Zoom as they moved through the task, narrating their decision making process along the way.
+				</Body>
+				<VideoPlayer
+					src="https://player.vimeo.com/video/434380887?loop=1"
+					title="Prototype Animation"
+					aspectRatio="16:9"
+				/>
+				<Spacer height={2} />
+				<SubHeading>Analyzing the results</SubHeading>
+				<Spacer />
+				<ItemGrid startaligned>
+					<div className={classes.half}>
+						<Heading>100%</Heading>
+						<SubHeading>of participants added an item to the cart with no problem</SubHeading>
+					</div>
+					<div className={classes.half}>
+						<Heading>50%</Heading>
+						<SubHeading>of participants used the filters to sort</SubHeading>
+					</div>
+				</ItemGrid>
+				<Spacer />
+				<ItemGrid>
+					<div className={classes.half}>
+						<SubHeading>Price and Size</SubHeading>
+						<Spacer />
+						<Body>Multiple participants mentioned discrepancies in the price or that the prices were high which signals that price is very important to users. Many also mentioned wanting to click on the size guide to find their size, which had not yet been prototyped. To the right is a first iteration I created after these tests.</Body>
+					</div>
+					<Image src={SizeGuide} className={classes.half} />
+				</ItemGrid>
+				<Spacer />
+				<SubHeading>QuickView Feature</SubHeading>
+				<Spacer />
+				<Body>Only one person out of six used the quick view feature. I think this is because I only asked participants to add one item to the cart instead of multiple. I would want to test this again with a multi-item task.</Body>
+			</ContentBlock>
 		</PageWrapper>
 	)
 }
