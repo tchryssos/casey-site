@@ -187,7 +187,7 @@ const MirrorPageNav = ({ classes, currentIntersecting }) => (
 export default () => {
 	const classes = useStyles()
 	const { getScroll } = useContext(ScrollContext)
-	const [currentIntersecting, setCurrentIntersecting] = useState('brief')
+	const [currentIntersecting, setCurrentIntersecting] = useState()
 
 	// START - PAGE INTERSECTION LOGIC - START
 	const briefRef = useRef()
@@ -196,17 +196,15 @@ export default () => {
 	const layoutRef = useRef()
 	const brandRef = useRef()
 	const testingRef = useRef()
-	const checkBlockVisible = (title) => (entries) => {
-		console.log(title, entries)
-		const { isIntersecting = false, intersectionRatio = 0 } = entries[0]
+	const checkBlockVisible = (entries) => {
+		const { isIntersecting, target } = entries.sort((a, b) => (
+			a.intersectionRatio > b.intersectionRatio ? -1 : 1
+		))[0]
 		if (isIntersecting) {
-			console.log(`${title}: `, entries)
-		}
-		if (isIntersecting && intersectionRatio < 0.25) {
-			setCurrentIntersecting(title)
+			setCurrentIntersecting(target.id)
 		}
 	}
-	const throttledCBV = (title) => throttle(checkBlockVisible(title), 100)
+	const throttledCBV = throttle(checkBlockVisible, 100)
 	useIntersectionObserver(getScroll)([
 		briefRef, personaRef, iaRef, layoutRef, brandRef,
 		testingRef,
@@ -249,6 +247,7 @@ export default () => {
 			<a name="brief">
 				<ContentBlock
 					blockRef={briefRef}
+					blockId="brief"
 					className={classes.secondaryBlock}
 				>
 					<ItemGrid>
@@ -281,6 +280,7 @@ export default () => {
 				</div>
 				<ContentBlock
 					blockRef={personaRef}
+					blockId="persona"
 					className={classes.brandBlock}
 				>
 					<Heading>
@@ -304,6 +304,7 @@ export default () => {
 				<ContentBlock
 					className={classes.brandBlock}
 					blockRef={iaRef}
+					blockId="ia"
 				>
 					<Heading>What is the best way to organize an online shop?</Heading>
 					<Spacer />
@@ -379,6 +380,7 @@ export default () => {
 			<ContentBlock
 				className={classes.wiresBlock}
 				blockRef={layoutRef}
+				blockId="layout"
 			>
 				<Heading>Building the user experience</Heading>
 				<Spacer />
@@ -418,6 +420,7 @@ export default () => {
 			<ContentBlock
 				blockRef={brandRef}
 				className={classes.brandBlock}
+				blockId="brand"
 			>
 				<Heading>Evolving the brand for their online debut</Heading>
 				<ItemGrid>
@@ -458,6 +461,7 @@ export default () => {
 			<ContentBlock
 				className={classes.brandBlock}
 				blockRef={testingRef}
+				blockId="testing"
 			>
 				<ItemGrid>
 					<div className={classes.half}>

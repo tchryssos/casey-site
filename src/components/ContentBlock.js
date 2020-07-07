@@ -16,7 +16,7 @@ const useStyles = createUseStyles({
 })
 
 export default ({
-	children, className, blockRef,
+	children, className, blockRef, blockId,
 }) => {
 	const classes = useStyles()
 	return (
@@ -26,6 +26,7 @@ export default ({
 				className,
 			)}
 			ref={blockRef}
+			id={blockId}
 		>
 			{children}
 		</div>
