@@ -10,6 +10,7 @@ import {
 } from 'constants/styles/breakpoints'
 
 import ScrollContext from 'contexts/scroll'
+import useIntersectionObserver from 'effects/useIntersectionObserver'
 
 import PageWrapper from 'components/PageWrapper'
 import ContentBlock from 'components/ContentBlock'
@@ -26,9 +27,9 @@ import SiteMap from 'static/images/Mirror/SiteMap.png'
 import Persona from 'static/images/Mirror/Persona-03.png'
 import StyleTile from 'static/images/Mirror/StyleTile-03.png'
 import Logo from 'static/images/Mirror/Logo-01.png'
-import CartPattern from 'static/images/Mirror/DesignPatternCart-01.png'
-import FilterPattern from 'static/images/Mirror/DesignPatternFilter-02.png'
-import NavPattern from 'static/images/Mirror/DesignPatternNav-03.png'
+// import CartPattern from 'static/images/Mirror/DesignPatternCart-01.png'
+// import FilterPattern from 'static/images/Mirror/DesignPatternFilter-02.png'
+// import NavPattern from 'static/images/Mirror/DesignPatternNav-03.png'
 import UIKIT from 'static/images/Mirror/UIKIT.png'
 import UserFlow from 'static/images/Mirror/userflow-02.png'
 import UsabilityHeader from 'static/images/Mirror/Frame30.png'
@@ -128,7 +129,9 @@ const useStyles = createUseStyles({
 })
 
 // START - PAGE NAV LINK - START
-const PageNavLink = ({ classes, currentIntersecting, link, text }) => (
+const PageNavLink = ({
+	classes, currentIntersecting, link, text,
+}) => (
 	<a
 		className={clsx(
 			classes.link,
@@ -183,10 +186,18 @@ const MirrorPageNav = ({ classes, currentIntersecting }) => (
 
 export default () => {
 	const classes = useStyles()
+	const { getScroll } = useContext(ScrollContext)
 	const [currentIntersecting, setCurrentIntersecting] = useState('brief')
 
 	// START - PAGE INTERSECTION LOGIC - START
+	const briefRef = useRef()
+	const personaRef = useRef()
+	const iaRef = useRef()
+	const layoutRef = useRef()
+	const brandRef = useRef()
+	const testingRef = useRef()
 	const checkBlockVisible = (title) => (entries) => {
+		console.log(title, entries)
 		const { isIntersecting = false, intersectionRatio = 0 } = entries[0]
 		if (isIntersecting) {
 			console.log(`${title}: `, entries)
@@ -196,12 +207,15 @@ export default () => {
 		}
 	}
 	const throttledCBV = (title) => throttle(checkBlockVisible(title), 100)
+	useIntersectionObserver(getScroll)([
+		briefRef, personaRef, iaRef, layoutRef, brandRef,
+		testingRef,
+	], throttledCBV)
 	// END - PAGE INTERSECTION LOGIC - END
 
 	// START - PAGE SCROLL LOGIC - START
 	const scrollingContainer = useRef()
 	const scrollingTextContainer = useRef()
-	const { getScroll } = useContext(ScrollContext)
 
 	const scrollListener = () => {
 		if (window.innerWidth >= MD_MIN_VALUE) {
@@ -234,7 +248,7 @@ export default () => {
 			{/* START - BRIEF - START */}
 			<a name="brief">
 				<ContentBlock
-					intersectionCallback={throttledCBV('brief')}
+					blockRef={briefRef}
 					className={classes.secondaryBlock}
 				>
 					<ItemGrid>
@@ -266,7 +280,7 @@ export default () => {
 					RESEARCH
 				</div>
 				<ContentBlock
-					intersectionCallback={throttledCBV('persona')}
+					blockRef={personaRef}
 					className={classes.brandBlock}
 				>
 					<Heading>
@@ -289,7 +303,7 @@ export default () => {
 				</div>
 				<ContentBlock
 					className={classes.brandBlock}
-					intersectionCallback={throttledCBV('ia')}
+					blockRef={iaRef}
 				>
 					<Heading>What is the best way to organize an online shop?</Heading>
 					<Spacer />
@@ -364,7 +378,7 @@ export default () => {
 			</a>
 			<ContentBlock
 				className={classes.wiresBlock}
-				intersectionCallback={throttledCBV('layout')}
+				blockRef={layoutRef}
 			>
 				<Heading>Building the user experience</Heading>
 				<Spacer />
@@ -402,7 +416,7 @@ export default () => {
 				</div>
 			</a>
 			<ContentBlock
-				intersectionCallback={throttledCBV('brand')}
+				blockRef={brandRef}
 				className={classes.brandBlock}
 			>
 				<Heading>Evolving the brand for their online debut</Heading>
@@ -443,7 +457,7 @@ export default () => {
 			</a>
 			<ContentBlock
 				className={classes.brandBlock}
-				intersectionCallback={throttledCBV('testing')}
+				blockRef={testingRef}
 			>
 				<ItemGrid>
 					<div className={classes.half}>
