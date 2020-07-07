@@ -215,6 +215,8 @@ export default () => {
 		<PageWrapper>
 			<MirrorPageNav classes={classes} currentIntersecting={currentIntersecting} />
 			{/* eslint-disable jsx-a11y/anchor-is-valid */}
+
+			{/* START - BRIEF - START */}
 			<a name="brief">
 				<ContentBlock
 					intersectionCallback={throttledCBV('brief')}
@@ -241,6 +243,9 @@ export default () => {
 					</Body>
 				</ContentBlock>
 			</a>
+			{/* END - BRIEF - END */}
+
+			{/* START - RESEARCH - START */}
 			<a name="persona">
 				<div className={classes.sectionLabel}>
 					RESEARCH
@@ -260,6 +265,9 @@ export default () => {
 					<Image src={Persona} size="full" />
 				</ContentBlock>
 			</a>
+			{/* END - RESEARCH - END */}
+
+			{/* START - ARCHITECTURE - START */}
 			<a name="ia">
 				<div className={classes.sectionLabel}>
 					ARCHITECTURE
@@ -299,6 +307,8 @@ export default () => {
 					<Image src={SiteMap} size="full" />
 				</ContentBlock>
 			</a>
+			{/* END - ARCHITECTURE - END */}
+
 			{/* <ContentBlock className={classes.secondaryBlock}>
 				<Heading>
 					Identifying Design Patterns
@@ -330,6 +340,8 @@ export default () => {
 				</Body>
 				<Image src={CartPattern} size="full" />
 			</ContentBlock> */}
+
+			{/* START - LAYOUT - START */}
 			<a name="layout">
 				<div className={classes.sectionLabel}>
 					LAYOUT
@@ -366,6 +378,9 @@ export default () => {
 					aspectRatio="1:1"
 				/>
 			</ContentBlock>
+			{/* END - LAYOUT - END */}
+
+			{/* START - BRAND - START */}
 			<a name="brand">
 				<div className={classes.sectionLabel}>
 					BRAND
@@ -403,6 +418,9 @@ export default () => {
 				<Image src={HifiCategory} size="full" />
 				<Image src={HifiPDP} size="full" />
 			</ContentBlock>
+			{/* END - BRAND - END */}
+
+			{/* START - TESTING - START */}
 			<a name="testing">
 				<div className={classes.sectionLabel}>
 					TESTING
@@ -479,6 +497,8 @@ export default () => {
 				<Spacer />
 				<Body>Only one person out of six used the quick view feature. I think this is because I only asked participants to add one item to the cart instead of multiple. I would want to test this again with a multi-item task.</Body>
 			</ContentBlock>
+			{/* END - TESTING - END */}
+
 		</PageWrapper>
 	)
 }
