@@ -4,6 +4,7 @@ import React, {
 import { createUseStyles } from 'react-jss'
 import clsx from 'clsx'
 import throttle from 'lodash.throttle'
+import debounce from 'lodash.debounce'
 
 import {
 	MD_MIN_STRING, MD_MIN_VALUE,
@@ -130,12 +131,12 @@ const useStyles = createUseStyles({
 
 // START - PAGE NAV LINK - START
 const PageNavLink = ({
-	classes, currentIntersecting, link, text,
+	classes, currentIntersecting, link, altLink, text,
 }) => (
 	<a
 		className={clsx(
 			classes.link,
-			{ [classes.sectionIntersected]: currentIntersecting === link },
+			{ [classes.sectionIntersected]: currentIntersecting === link || currentIntersecting === altLink },
 		)}
 		href={`#${link}`}
 	>
@@ -173,6 +174,7 @@ const MirrorPageNav = ({ classes, currentIntersecting }) => (
 			classes={classes}
 			currentIntersecting={currentIntersecting}
 			link="brand"
+			altLink="hifi"
 		/>
 		<PageNavLink
 			classes={classes}
@@ -187,7 +189,6 @@ const MirrorPageNav = ({ classes, currentIntersecting }) => (
 export default () => {
 	const classes = useStyles()
 	const { getScroll } = useContext(ScrollContext)
-	const [currentIntersecting, setCurrentIntersecting] = useState()
 
 	// START - PAGE INTERSECTION LOGIC - START
 	const briefRef = useRef()
@@ -195,7 +196,9 @@ export default () => {
 	const iaRef = useRef()
 	const layoutRef = useRef()
 	const brandRef = useRef()
+	const hifiRef = useRef()
 	const testingRef = useRef()
+	const [currentIntersecting, setCurrentIntersecting] = useState()
 	const setVisibleBlock = (entries) => {
 		const { isIntersecting, target } = entries.sort((a, b) => (
 			a.intersectionRatio > b.intersectionRatio ? -1 : 1
@@ -204,10 +207,10 @@ export default () => {
 			setCurrentIntersecting(target.id)
 		}
 	}
-	const throttledCBV = throttle(setVisibleBlock, 100)
+	const throttledCBV = debounce(setVisibleBlock, 100)
 	useIntersectionObserver(getScroll)([
 		briefRef, personaRef, iaRef, layoutRef, brandRef,
-		testingRef,
+		hifiRef, testingRef,
 	], throttledCBV)
 	// END - PAGE INTERSECTION LOGIC - END
 
@@ -440,7 +443,11 @@ export default () => {
 				<Image src={StyleTile} size="full" />
 				<Image src={UIKIT} size="full" />
 			</ContentBlock>
-			<ContentBlock className={classes.hifiblock}>
+			<ContentBlock
+				className={classes.hifiblock}
+				blockRef={hifiRef}
+				blockId="hifi"
+			>
 				<Heading>High Fidelity Mock Ups</Heading>
 				<Spacer />
 				<Body>
