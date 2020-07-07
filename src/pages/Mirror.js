@@ -66,6 +66,9 @@ const useStyles = createUseStyles({
 	},
 	sectionIntersected: {
 		color: 'red',
+		'&:visited': {
+			color: 'red',
+		},
 	},
 	third: {
 		width: '100%',
@@ -124,45 +127,55 @@ const useStyles = createUseStyles({
 	},
 })
 
+// START - PAGE NAV LINK - START
+const PageNavLink = ({ classes, currentIntersecting, link, text }) => (
+	<a
+		className={clsx(
+			classes.link,
+			{ [classes.sectionIntersected]: currentIntersecting === link },
+		)}
+		href={`#${link}`}
+	>
+		<Body>{text || `${link[0].toUpperCase()}${link.slice(1)}`}</Body>
+	</a>
+)
+// END - PAGE NAV LINK - END
+
 // START - PAGE NAV - START
 const MirrorPageNav = ({ classes, currentIntersecting }) => (
 	<div className={classes.MirrorPageNav}>
-		<a
-			className={clsx(
-				classes.link,
-				{ [classes.sectionIntersected]: currentIntersecting === 'brief' },
-			)}
-			href="#brief"
-		>
-			<Body>Brief</Body>
-		</a>
-		<a className={classes.link} href="#persona">
-			<Body>Personas</Body>
-		</a>
-		<a className={classes.link} href="#ia">
-			<Body>Information Architecture</Body>
-		</a>
-		<a
-			className={clsx(
-				classes.link,
-				{ [classes.sectionIntersected]: currentIntersecting === 'layout' },
-			)}
-			href="#layout"
-		>
-			<Body>Layout</Body>
-		</a>
-		<a
-			className={clsx(
-				classes.link,
-				{ [classes.sectionIntersected]: currentIntersecting === 'brand' },
-			)}
-			href="#brand"
-		>
-			<Body>Brand</Body>
-		</a>
-		<a className={classes.link} href="#testing">
-			<Body>Testing</Body>
-		</a>
+		<PageNavLink
+			classes={classes}
+			currentIntersecting={currentIntersecting}
+			link="brief"
+		/>
+		<PageNavLink
+			classes={classes}
+			currentIntersecting={currentIntersecting}
+			link="persona"
+			text="Personas"
+		/>
+		<PageNavLink
+			classes={classes}
+			currentIntersecting={currentIntersecting}
+			link="ia"
+			text="Information Architecture"
+		/>
+		<PageNavLink
+			classes={classes}
+			currentIntersecting={currentIntersecting}
+			link="layout"
+		/>
+		<PageNavLink
+			classes={classes}
+			currentIntersecting={currentIntersecting}
+			link="brand"
+		/>
+		<PageNavLink
+			classes={classes}
+			currentIntersecting={currentIntersecting}
+			link="testing"
+		/>
 	</div>
 )
 // END - PAGE NAV - END
@@ -170,17 +183,17 @@ const MirrorPageNav = ({ classes, currentIntersecting }) => (
 
 export default () => {
 	const classes = useStyles()
-	const [currentIntersecting, setCurrentIntersecting] = useState()
+	const [currentIntersecting, setCurrentIntersecting] = useState('brief')
 	console.log(currentIntersecting)
 
 	// START - PAGE INTERSECTION LOGIC - START
 	const checkBlockVisible = (title) => (entries) => {
-		if (entries[0]?.isIntersecting) {
-			console.log(entries, title)
+		const { isIntersecting = false, intersectionRatio = 0 } = entries[0]
+		if (isIntersecting && !Math.round(intersectionRatio)) {
 			setCurrentIntersecting(title)
 		}
 	}
-	const throttledCBV = throttle(checkBlockVisible, 100)
+	const throttledCBV = (title) => throttle(checkBlockVisible(title), 100)
 	// END - PAGE INTERSECTION LOGIC - END
 
 	// START - PAGE SCROLL LOGIC - START
