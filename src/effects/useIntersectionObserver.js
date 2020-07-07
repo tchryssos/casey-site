@@ -19,7 +19,7 @@ export default (getScroll) => (
 			)
 		}
 		return () => targets.forEach(
-			(t) => observer?.unobserve(t),
+			(t) => observer?.unobserve(t.current),
 		)
 	}, [intersectionCallback, ...targets])
 }

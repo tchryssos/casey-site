@@ -196,7 +196,7 @@ export default () => {
 	const layoutRef = useRef()
 	const brandRef = useRef()
 	const testingRef = useRef()
-	const checkBlockVisible = (entries) => {
+	const setVisibleBlock = (entries) => {
 		const { isIntersecting, target } = entries.sort((a, b) => (
 			a.intersectionRatio > b.intersectionRatio ? -1 : 1
 		))[0]
@@ -204,7 +204,7 @@ export default () => {
 			setCurrentIntersecting(target.id)
 		}
 	}
-	const throttledCBV = throttle(checkBlockVisible, 100)
+	const throttledCBV = throttle(setVisibleBlock, 100)
 	useIntersectionObserver(getScroll)([
 		briefRef, personaRef, iaRef, layoutRef, brandRef,
 		testingRef,
