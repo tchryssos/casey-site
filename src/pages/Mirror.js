@@ -27,9 +27,6 @@ import SiteMap from 'static/images/Mirror/SiteMap.png'
 import Persona from 'static/images/Mirror/Persona-03.png'
 import StyleTile from 'static/images/Mirror/StyleTile-03.png'
 import Logo from 'static/images/Mirror/Logo-01.png'
-// import CartPattern from 'static/images/Mirror/DesignPatternCart-01.png'
-// import FilterPattern from 'static/images/Mirror/DesignPatternFilter-02.png'
-// import NavPattern from 'static/images/Mirror/DesignPatternNav-03.png'
 import UIKIT from 'static/images/Mirror/UIKIT.png'
 import UserFlow from 'static/images/Mirror/userflow-02.png'
 import UsabilityHeader from 'static/images/Mirror/Frame30.png'
@@ -43,6 +40,7 @@ const useStyles = createUseStyles({
 	link: {
 		color: 'white',
 		display: 'block',
+		padding: 8,
 		'&:hover': {
 			color: 'white',
 		},
@@ -58,19 +56,18 @@ const useStyles = createUseStyles({
 			justifyContent: 'space-between',
 			bottom: 0,
 			width: '100%',
-			padding: 16,
+			padding: 8,
 			boxSizing: 'border-box',
 			color: 'white',
-			backgroundColor: '#384ea1',
+			backgroundColor: '#0f2b41',
 			zIndex: 100,
 		},
 	},
-	sectionIntersected: {
-		color: 'red',
-		'&:visited': {
-			color: 'red',
-		},
-	},
+	// sectionIntersected: {
+	// 	backgroundColor: '#4e7fff',
+	// 	'&:visited': {
+	// 	},
+	// },
 	third: {
 		width: '100%',
 		marginBottom: 64,
@@ -87,26 +84,26 @@ const useStyles = createUseStyles({
 			marginLeft: 0,
 		},
 	},
-	brandBlock: {
+	mirrorColorPrimary: {
 		backgroundColor: '#FFFAF1',
 	},
-	secondaryBlock: {
+	mirrorColorSecondary: {
 		backgroundColor: '#fde8c7',
 	},
 	whiteBlock: {
 		backgroundColor: 'white',
 	},
-	wiresBlock: {
+	blueBackground: {
 		backgroundColor: '#b4e0ff',
 	},
-	hifiblock: {
+	pinkBackground: {
 		backgroundColor: '#e7b2c2',
 	},
 	boxShadow: {
 		boxShadow: '10px 10px #384ea1',
 	},
 	sectionLabel: {
-		backgroundColor: '#384ea1',
+		backgroundColor: '#4e7fff',
 		padding: 8,
 		color: 'white',
 		whiteSpace: 'nowrap',
@@ -156,13 +153,13 @@ const MirrorPageNav = ({ classes, currentIntersecting }) => (
 			classes={classes}
 			currentIntersecting={currentIntersecting}
 			link="persona"
-			text="Personas"
+			text="Research"
 		/>
 		<PageNavLink
 			classes={classes}
 			currentIntersecting={currentIntersecting}
 			link="ia"
-			text="Information Architecture"
+			text="Architecture"
 		/>
 		<PageNavLink
 			classes={classes}
@@ -173,12 +170,18 @@ const MirrorPageNav = ({ classes, currentIntersecting }) => (
 			classes={classes}
 			currentIntersecting={currentIntersecting}
 			link="brand"
+			text="Branding"
 			altLink="hifi"
 		/>
 		<PageNavLink
 			classes={classes}
 			currentIntersecting={currentIntersecting}
 			link="testing"
+		/>
+		<PageNavLink
+			classes={classes}
+			currentIntersecting={currentIntersecting}
+			link="learnings"
 		/>
 	</div>
 )
@@ -250,7 +253,7 @@ export default () => {
 				<ContentBlock
 					blockRef={briefRef}
 					blockId="brief"
-					className={classes.secondaryBlock}
+					className={classes.mirrorColorSecondary}
 				>
 					<ItemGrid>
 						<div className={classes.half}>
@@ -283,7 +286,7 @@ export default () => {
 				<ContentBlock
 					blockRef={personaRef}
 					blockId="persona"
-					className={classes.brandBlock}
+					className={classes.mirrorColorPrimary}
 				>
 					<Heading>
 						Discovering the Mirror Customer
@@ -304,7 +307,7 @@ export default () => {
 					ARCHITECTURE
 				</div>
 				<ContentBlock
-					className={classes.brandBlock}
+					className={classes.mirrorColorPrimary}
 					blockRef={iaRef}
 					blockId="ia"
 				>
@@ -341,38 +344,6 @@ export default () => {
 			</a>
 			{/* END - ARCHITECTURE - END */}
 
-			{/* <ContentBlock className={classes.secondaryBlock}>
-				<Heading>
-					Identifying Design Patterns
-				</Heading>
-				<Spacer />
-				<Body>
-					I gathered and analyzed examples of navigation, cart, product detail page, and filtering systems from competitor websites in order to inform the Mirror wireframes.
-				</Body>
-				<Spacer />
-				<SubHeading>Navigation</SubHeading>
-				<Spacer />
-				<Body>
-					The ASOS nav bar has a toggle for mens/womens and then cascades down in layers revealing all of the options which is helpful when navigating. It is nice that it includes some images. This menu starts as a hamburger menu on mobile but has the same structure as the desktop version.
-				</Body>
-				<Image src={NavPattern} size="full" />
-				<Spacer />
-				<SubHeading>Filtering</SubHeading>
-				<Spacer />
-				<Body>
-					Urban keeps all of the filters available on desktop on the right side while you browse. This is allows the filters and options to always be seen.
-					Madewell and Outdoor Voices use a top nav for filters which feels more premium.	Madewell also includes occasions to sort by pulled out from the filtering.
-				</Body>
-				<Image src={FilterPattern} size="full" />
-				<Spacer />
-				<SubHeading>Cart Overlay</SubHeading>
-				<Spacer />
-				<Body>
-					It is common on shopping sites to show a preview of the cart when a user hovers over or clicks the cart icon. This is helpful because users can preview their cart without losing the page that they are on and they can edit their cart while they shop
-				</Body>
-				<Image src={CartPattern} size="full" />
-			</ContentBlock> */}
-
 			{/* START - LAYOUT - START */}
 			<a name="layout">
 				<div className={classes.sectionLabel}>
@@ -380,7 +351,7 @@ export default () => {
 				</div>
 			</a>
 			<ContentBlock
-				className={classes.wiresBlock}
+				className={classes.blueBackground}
 				blockRef={layoutRef}
 				blockId="layout"
 			>
@@ -421,7 +392,7 @@ export default () => {
 			</a>
 			<ContentBlock
 				blockRef={brandRef}
-				className={classes.brandBlock}
+				className={classes.mirrorColorPrimary}
 				blockId="brand"
 			>
 				<Heading>Evolving the brand for their online debut</Heading>
@@ -443,7 +414,7 @@ export default () => {
 				<Image src={UIKIT} size="full" />
 			</ContentBlock>
 			<ContentBlock
-				className={classes.hifiblock}
+				className={classes.pinkBackground}
 				blockRef={hifiRef}
 				blockId="hifi"
 			>
@@ -465,7 +436,7 @@ export default () => {
 				</div>
 			</a>
 			<ContentBlock
-				className={classes.brandBlock}
+				className={classes.mirrorColorPrimary}
 				blockRef={testingRef}
 				blockId="testing"
 			>
@@ -537,6 +508,33 @@ export default () => {
 				<Body>Only one person out of six used the quick view feature. I think this is because I only asked participants to add one item to the cart instead of multiple. I would want to test this again with a multi-item task.</Body>
 			</ContentBlock>
 			{/* END - TESTING - END */}
+
+			<a name="learnings">
+				<div className={classes.sectionLabel}>
+					Learnings
+				</div>
+			</a>
+			<ContentBlock className={classes.mirrorColorSecondary}>
+				<Heading>Key Learnings</Heading>
+				<Spacer />
+				<SubHeading>Research is important!</SubHeading>
+				<Spacer />
+				<Body>
+					With a background in graphic design, I felt fairly comfortable navigating the visual design of the pages and presenting my work. Coming into Design Lab, I wanted to learn more about how to execute meaningul user research and testing. I found that interviewing potential users and going through the research process helped me to feel confident in my decision making and back it up with data that put the user at the center.
+				</Body>
+				<Spacer />
+				<SubHeading>Design for every option</SubHeading>
+				<Spacer />
+				<Body>
+					This project helped me understand just how much detail goes into any online shopping experience. Filling in my prototypes with real content was informative in planning for situations like different length product names and reviews, showing sizes and colors that are out of stock, and creating different states for filters and drop-downs.
+				</Body>
+				<Spacer />
+				<SubHeading>Working Remotely</SubHeading>
+				<Spacer />
+				<Body>
+					Even though some of my research and testing plans involved processes that would ideally be hands-on, I was able to adapt most of them to be executed virtually. I used zoom to facilitate card-sorting via a Trello board and also to observe participants interacting with my Figma prototype. I used Maze to help other students with their testing and learned a lot about planning for what is feasible and being flexible.
+				</Body>
+			</ContentBlock>
 
 		</PageWrapper>
 	)
