@@ -9,9 +9,13 @@ import SubHeading from 'components/Typography/SubHeading'
 import Body from 'components/Typography/Body'
 import Spacer from 'components/Spacer'
 import Image from 'components/Image'
+import ItemGrid from 'components/ItemGrid'
 
-import Frank from 'static/images/MensHealth/Frank.png'
-import PhotoRange from 'static/images/MensHealth/photography.png'
+import Frank from 'static/images/MensHealth/personaFrank.png'
+import Tom from 'static/images/MensHealth/personaTom.png'
+import PhotoRange from 'static/images/MensHealth/ImageRange_1.png'
+import SiteMap1 from 'static/images/MensHealth/SiteMap1.png'
+import SiteMap2 from 'static/images/MensHealth/SiteMap2.png'
 
 const useStyles = createUseStyles({
 
@@ -66,7 +70,7 @@ export default () => {
 					I interviewed a group of men between the ages of 35 and 55 about their health care habits and body goals to create the following personas.
 				</Body>
 				<Image src={Frank} size="full" />
-				<Image src={Frank} size="full" />
+				<Image src={Tom} size="full" />
 				<Spacer height={2} />
 				<SubHeading>
 					Finding the right photography
@@ -84,8 +88,15 @@ export default () => {
 				</Heading>
 				<Spacer />
 				<SubHeading>Auditing the Site Map</SubHeading>
+				<ItemGrid>
+					<Image src={SiteMap1} size="half" />
+					<Image src={SiteMap2} size="half" />
+				</ItemGrid>
+				<Spacer />
 				<SubHeading>Creating wireframes from existing content</SubHeading>
+				<Spacer />
 				<SubHeading>Building for scalability</SubHeading>
+				<Spacer />
 			</ContentBlock>
 			<ContentBlock>
 				<Heading>Modernizing the brand</Heading>
