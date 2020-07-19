@@ -10,6 +10,7 @@ import Body from 'components/Typography/Body'
 import Spacer from 'components/Spacer'
 import Image from 'components/Image'
 import ItemGrid from 'components/ItemGrid'
+import ImageLightBox from 'components/ImageLightBox'
 
 import Frank from 'static/images/MensHealth/personaFrank.png'
 import Tom from 'static/images/MensHealth/personaTom.png'
@@ -92,6 +93,7 @@ export default () => {
 					<Image src={SiteMap1} size="half" />
 					<Image src={SiteMap2} size="half" />
 				</ItemGrid>
+				<ImageLightBox src={SiteMap1} />
 				<Spacer />
 				<SubHeading>Creating wireframes from existing content</SubHeading>
 				<Spacer />
