@@ -6,9 +6,12 @@ import ImageLightBoxModal from 'components/ImageLightBoxModal'
 
 const useStyles = createUseStyles({
 	imageWrapper: {
-		width: '50%',
+		width: 'calc(50% - 8px)',
+		padding: 0,
+		margin: 0,
+		borderRadius: 0,
 		'&:hover': {
-			border: '1px solid red',
+			border: '2px solid red',
 		},
 	},
 	image: {

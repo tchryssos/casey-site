@@ -89,11 +89,11 @@ export default () => {
 				</Heading>
 				<Spacer />
 				<SubHeading>Auditing the Site Map</SubHeading>
-				<ItemGrid>
-					<Image src={SiteMap1} size="half" />
-					<Image src={SiteMap2} size="half" />
+				<Spacer />
+				<ItemGrid stackedOnMobile>
+					<ImageLightBox src={SiteMap1} />
+					<ImageLightBox src={SiteMap2} />
 				</ItemGrid>
-				<ImageLightBox src={SiteMap1} />
 				<Spacer />
 				<SubHeading>Creating wireframes from existing content</SubHeading>
 				<Spacer />
@@ -102,6 +102,12 @@ export default () => {
 			</ContentBlock>
 			<ContentBlock>
 				<Heading>Modernizing the brand</Heading>
+				<Spacer />
+				<SubHeading>Logo</SubHeading>
+				<Spacer />
+				<SubHeading>Brand Guidelines</SubHeading>
+				<Spacer />
+				<SubHeading>Visual Designs</SubHeading>
 			</ContentBlock>
 			<ContentBlock>
 				<Heading>Testing</Heading>

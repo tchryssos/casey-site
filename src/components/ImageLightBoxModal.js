@@ -13,16 +13,29 @@ const useStyles = createUseStyles({
 		width: '100%',
 		backgroundColor: 'rgba(0, 0, 0, 0.25)',
 	},
-	image: {
+	xWrapper: {
 		width: '70%',
 		margin: '5% 15%',
 		border: '2px solid black',
+		position: 'relative',
+	},
+	image: {
+		width: '100%',
 	},
 	closeModal: {
 		position: 'absolute',
-		right: '50%',
+		zIndex: 5,
+		right: 0,
 		top: 0,
-		fontSize: 64,
+		fontSize: 16,
+		textDecoration: 'underline',
+		borderRadius: 0,
+		backgroundColor: '#2b2b2b',
+		color: 'white',
+		boxShadow: 'none',
+		'&:hover': {
+			backgroundColor: 'red',
+		},
 	},
 	showModal: {
 		display: 'block',
@@ -45,13 +58,13 @@ export default ({
 				)
 			}
 		>
-			<div>
+			<div className={classes.xWrapper}>
 				<button
 					className={classes.closeModal}
 					type="button"
 					onClick={setClosed}
 				>
-					x
+					Close
 				</button>
 				<img
 					src={src}
