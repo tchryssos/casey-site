@@ -11,7 +11,7 @@ const useStyles = createUseStyles({
 		margin: 0,
 		borderRadius: 0,
 		'&:hover': {
-			border: '2px solid red',
+			border: '4px solid #4E7FFF',
 		},
 	},
 	image: {

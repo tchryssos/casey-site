@@ -30,11 +30,13 @@ const useStyles = createUseStyles({
 		fontSize: 16,
 		textDecoration: 'underline',
 		borderRadius: 0,
+		border: 'none',
+		padding: 8,
 		backgroundColor: '#2b2b2b',
 		color: 'white',
 		boxShadow: 'none',
 		'&:hover': {
-			backgroundColor: 'red',
+			backgroundColor: '#4E7FFF',
 		},
 	},
 	showModal: {

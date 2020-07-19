@@ -19,6 +19,9 @@ import PhotoRange from 'static/images/MensHealth/photoRange-01.png'
 import SiteMap1 from 'static/images/MensHealth/SiteMap1.png'
 import SiteMap2 from 'static/images/MensHealth/SiteMap2.png'
 import MHHLogo from 'static/images/MensHealth/MHHLogo.png'
+import MHHBranding from 'static/images/MensHealth/MHHBranding.png'
+import Goal1 from 'static/images/MensHealth/goal1.gif'
+import Goal2 from 'static/images/MensHealth/goal2.png'
 
 const useStyles = createUseStyles({
 	whiteBlock: {
@@ -26,6 +29,9 @@ const useStyles = createUseStyles({
 	},
 	blueBlock: {
 		backgroundColor: '#E0EEFF',
+	},
+	orangeBlock: {
+		backgroundColor: '#DF7356',
 	},
 	half: {
 		width: '100%',
@@ -41,7 +47,7 @@ export default () => {
 	const classes = useStyles()
 	return (
 		<PageWrapper>
-			<ContentBlock className={classes.whiteBlock}>
+			<ContentBlock className={classes.blueBlock}>
 				<Heading>
 					Men&apos;s Health Houston is looking to revamp their website in anicipation of a new location launch
 				</Heading>
@@ -53,8 +59,7 @@ export default () => {
 				<Body>
 					I got in touch with Men&apos;s Health Houston through my network. I worked directly with the clients to redesign the site and hired a developer to build it out. I held weekly meetings for all of us to connect and move the project forward.
 				</Body>
-			</ContentBlock>
-			<ContentBlock className={classes.blueBlock}>
+				<Spacer />
 				<ItemGrid startAligned stackedOnMobile>
 					<div className={classes.half}>
 						<SubHeading>
@@ -76,7 +81,7 @@ export default () => {
 			</ContentBlock>
 			<ContentBlock className={classes.whiteBlock}>
 				<Heading>
-					A woman designing a Men&apos;s Health site
+					Getting in the head of the Men&apos;s Health customer
 				</Heading>
 				<Spacer />
 				<Body>
@@ -120,7 +125,7 @@ export default () => {
 				<SubHeading>Building for scalability</SubHeading>
 				<Spacer />
 			</ContentBlock>
-			<ContentBlock>
+			<ContentBlock className={classes.whiteBlock}>
 				<Heading>Modernizing the brand</Heading>
 				<ItemGrid>
 					<div className={classes.half}>
@@ -134,8 +139,10 @@ export default () => {
 				</ItemGrid>
 				<Spacer />
 				<SubHeading>Brand Guidelines</SubHeading>
-				<Spacer />
-				<SubHeading>Visual Designs</SubHeading>
+				<Image src={MHHBranding} size="full" />
+			</ContentBlock>
+			<ContentBlock className={classes.orangeBlock}>
+				<Heading>Visual Designs</Heading>
 			</ContentBlock>
 			<ContentBlock>
 				<Heading>Testing</Heading>
