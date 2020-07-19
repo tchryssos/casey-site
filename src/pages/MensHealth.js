@@ -1,5 +1,6 @@
 import React from 'react'
 import { createUseStyles } from 'react-jss'
+import { MD_MIN_STRING } from 'constants/styles/breakpoints'
 
 
 import PageWrapper from 'components/PageWrapper'
@@ -14,19 +15,33 @@ import ImageLightBox from 'components/ImageLightBox'
 
 import Frank from 'static/images/MensHealth/personaFrank.png'
 import Tom from 'static/images/MensHealth/personaTom.png'
-import PhotoRange from 'static/images/MensHealth/ImageRange_1.png'
+import PhotoRange from 'static/images/MensHealth/photoRange-01.png'
 import SiteMap1 from 'static/images/MensHealth/SiteMap1.png'
 import SiteMap2 from 'static/images/MensHealth/SiteMap2.png'
+import MHHLogo from 'static/images/MensHealth/MHHLogo.png'
 
 const useStyles = createUseStyles({
-
+	whiteBlock: {
+		backgroundColor: 'white',
+	},
+	blueBlock: {
+		backgroundColor: '#E0EEFF',
+	},
+	half: {
+		width: '100%',
+		marginBottom: 64,
+		[MD_MIN_STRING]: {
+			width: 'calc(50% - 8px)',
+			marginBottom: 0,
+		},
+	},
 })
 
 export default () => {
 	const classes = useStyles()
 	return (
 		<PageWrapper>
-			<ContentBlock>
+			<ContentBlock className={classes.whiteBlock}>
 				<Heading>
 					Men&apos;s Health Houston is looking to revamp their website in anicipation of a new location launch
 				</Heading>
@@ -39,22 +54,27 @@ export default () => {
 					I got in touch with Men&apos;s Health Houston through my network. I worked directly with the clients to redesign the site and hired a developer to build it out. I held weekly meetings for all of us to connect and move the project forward.
 				</Body>
 			</ContentBlock>
-			<ContentBlock>
-				<SubHeading>
-					GOAL #1
-				</SubHeading>
-				<Body>
-					Elevate the branding and simplify the content for users coming to the site.
-				</Body>
-				<Spacer />
-				<SubHeading>
-					GOAL #2
-				</SubHeading>
-				<Body>
-					Create a modular design system that will streamline the internal process for managing the site.
-				</Body>
+			<ContentBlock className={classes.blueBlock}>
+				<ItemGrid startAligned stackedOnMobile>
+					<div className={classes.half}>
+						<SubHeading>
+							GOAL #1
+						</SubHeading>
+						<Body>
+							Elevate the branding and simplify the content for users coming to the site.
+						</Body>
+					</div>
+					<div className={classes.half}>
+						<SubHeading>
+							GOAL #2
+						</SubHeading>
+						<Body>
+							Create a modular design system that will streamline the internal process for managing the site.
+						</Body>
+					</div>
+				</ItemGrid>
 			</ContentBlock>
-			<ContentBlock>
+			<ContentBlock className={classes.whiteBlock}>
 				<Heading>
 					A woman designing a Men&apos;s Health site
 				</Heading>
@@ -83,7 +103,7 @@ export default () => {
 				<Spacer />
 				<Image src={PhotoRange} size="full" />
 			</ContentBlock>
-			<ContentBlock>
+			<ContentBlock className={classes.blueBlock}>
 				<Heading>
 					Streamlining the existing content
 				</Heading>
@@ -102,8 +122,16 @@ export default () => {
 			</ContentBlock>
 			<ContentBlock>
 				<Heading>Modernizing the brand</Heading>
-				<Spacer />
-				<SubHeading>Logo</SubHeading>
+				<ItemGrid>
+					<div className={classes.half}>
+						<SubHeading>Adjusting the logo for web</SubHeading>
+						<Spacer />
+						<Body>
+							The logo was an important piece of the brand to keep from the previous site since it is used in marketing and other assets. While I kept the basic form, color, and serif font, I wanted to make the detail bolder and less intricate so it could be more legible on mobile and web screens.
+						</Body>
+					</div>
+					<Image className={classes.half} src={MHHLogo} size="full" />
+				</ItemGrid>
 				<Spacer />
 				<SubHeading>Brand Guidelines</SubHeading>
 				<Spacer />
