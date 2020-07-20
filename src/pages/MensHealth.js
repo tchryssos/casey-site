@@ -22,8 +22,9 @@ import SiteMap2 from 'static/images/MensHealth/SiteMap2.png'
 import MHHLogo from 'static/images/MensHealth/MHHLogo.png'
 import MHHBranding from 'static/images/MensHealth/MHHBranding.png'
 import CompareWires from 'static/images/MensHealth/compareWire.png'
-import HomeDesktop from 'static/images/MensHealth/HomePage_Desktop.png'
+import HomeDesktop from 'static/images/MensHealth/HomePage_Desktop2.png'
 import GainsWaveDesktop from 'static/images/MensHealth/GainsWave_Desktop.png'
+import MapModal from 'static/images/MensHealth/MapModal.png'
 
 
 const useStyles = createUseStyles({
@@ -159,13 +160,13 @@ export default () => {
 				<Image src={MHHBranding} size="full" />
 			</ContentBlock>
 			<ContentBlock className={classes.orangeBlock}>
-				<Heading>Visual Designs</Heading> 
+				<Heading>Visual Designs</Heading>
 				<VideoPlayer
 					src="https://player.vimeo.com/video/440119937?loop=1"
 					title="Prototype Animation"
 					aspectRatio="16:9"
 				/>
-				<ItemGrid startAligned>
+				<ItemGrid startAligned stackedOnMobile>
 					<Image className={classes.half} size="full" src={HomeDesktop} />
 					<Image className={classes.half} size="full" src={GainsWaveDesktop} />
 				</ItemGrid>
@@ -173,16 +174,43 @@ export default () => {
 			<div className={classes.sectionLabel}>
 				TEST
 			</div>
-			<ContentBlock>
-				<Heading>Testing</Heading>
+			<ContentBlock className={classes.blueBlock}>
+				<Heading>Usability Testing</Heading>
+				<Spacer />
+				<ItemGrid startAligned>
+					<div className={classes.half}>
+						<Heading>100%</Heading>
+						<SubHeading>of participants were able to learn about a service and book an appointment with no problems</SubHeading>
+					</div>
+					<div className={classes.half}>
+						<Heading>100%</Heading>
+						<SubHeading>of participants used the icon-based navigation on the home page</SubHeading>
+					</div>
+				</ItemGrid>
+				<Spacer />
+				<ItemGrid>
+					<div className={classes.half}>
+						<SubHeading>
+							Multiple CTAs
+						</SubHeading>
+						<Body>
+							There were CTAs to schedule an appointment at multiple points throughout the page. Each participant used a different CTA to schedule their appointment which validates each individual placement.
+						</Body>
+					</div>
+					<Image className={classes.half} src={MapModal} size="full" />
+				</ItemGrid>
 			</ContentBlock>
 			<div className={classes.sectionLabel}>
 				DEVELOP
 			</div>
-			<ContentBlock>
+			<ContentBlock className={classes.whiteBlock}>
 				<Heading>Key learnings</Heading>
 				<Spacer />
 				<SubHeading>Developer Handoff</SubHeading>
+				<Spacer />
+				<SubHeading>Client Project Management</SubHeading>
+				<Spacer />
+				<SubHeading>Compenetizing</SubHeading>
 			</ContentBlock>
 		</PageWrapper>
 	)
