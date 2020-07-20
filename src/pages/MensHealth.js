@@ -12,6 +12,7 @@ import Spacer from 'components/Spacer'
 import Image from 'components/Image'
 import ItemGrid from 'components/ItemGrid'
 import ImageLightBox from 'components/ImageLightBox'
+import VideoPlayer from 'components/VideoPlayer'
 
 import Frank from 'static/images/MensHealth/personaFrank.png'
 import Tom from 'static/images/MensHealth/personaTom.png'
@@ -21,6 +22,8 @@ import SiteMap2 from 'static/images/MensHealth/SiteMap2.png'
 import MHHLogo from 'static/images/MensHealth/MHHLogo.png'
 import MHHBranding from 'static/images/MensHealth/MHHBranding.png'
 import CompareWires from 'static/images/MensHealth/compareWire.png'
+import HomeDesktop from 'static/images/MensHealth/HomePage_Desktop.png'
+import GainsWaveDesktop from 'static/images/MensHealth/GainsWave_Desktop.png'
 
 
 const useStyles = createUseStyles({
@@ -62,10 +65,6 @@ export default () => {
 				<SubHeading>
 					Role: Product Designer
 				</SubHeading>
-				<Spacer />
-				<Body>
-					I got in touch with Men&apos;s Health Houston through my network. I worked directly with the clients to redesign the site and hired a developer to build it out. I held weekly meetings for all of us to connect and move the project forward.
-				</Body>
 				<Spacer />
 				<ItemGrid startAligned stackedOnMobile>
 					<div className={classes.half}>
@@ -136,7 +135,7 @@ export default () => {
 				<SubHeading>Creating wireframes from existing content</SubHeading>
 				<Spacer />
 				<Body>
-					One of the main goals with this project was to streamline the content on the pages to make it more digestible for users.
+					One of the main goals with this project was to streamline the content on the pages to make it more digestible for users. Below is an example of how I
 				</Body>
 				<Image src={CompareWires} size="full" />
 			</ContentBlock>
@@ -160,7 +159,16 @@ export default () => {
 				<Image src={MHHBranding} size="full" />
 			</ContentBlock>
 			<ContentBlock className={classes.orangeBlock}>
-				<Heading>Visual Designs</Heading>
+				<Heading>Visual Designs</Heading> 
+				<VideoPlayer
+					src="https://player.vimeo.com/video/440119937?loop=1"
+					title="Prototype Animation"
+					aspectRatio="16:9"
+				/>
+				<ItemGrid startAligned>
+					<Image className={classes.half} size="full" src={HomeDesktop} />
+					<Image className={classes.half} size="full" src={GainsWaveDesktop} />
+				</ItemGrid>
 			</ContentBlock>
 			<div className={classes.sectionLabel}>
 				TEST
