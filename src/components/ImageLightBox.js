@@ -1,17 +1,23 @@
 import React, { useState } from 'react'
 import clsx from 'clsx'
 import { createUseStyles } from 'react-jss'
+import { MD_MIN_STRING, MD_MIN_VALUE } from 'constants/styles/breakpoints'
 
 import ImageLightBoxModal from 'components/ImageLightBoxModal'
 
 const useStyles = createUseStyles({
 	imageWrapper: {
-		width: 'calc(50% - 8px)',
+		width: '100%',
 		padding: 0,
-		margin: 0,
+		marginBottom: 16,
 		borderRadius: 0,
-		'&:hover': {
-			border: '4px solid #4E7FFF',
+		[MD_MIN_STRING]: {
+			width: 'calc(50% - 8px)',
+			margin: 0,
+			cursor: 'pointer',
+			'&:hover': {
+				border: '4px solid #4E7FFF',
+			},
 		},
 	},
 	image: {
@@ -28,7 +34,11 @@ export default ({
 		<>
 			<button
 				type="button"
-				onClick={() => setIsClicked(true)}
+				onClick={() => {
+					if (window.innerWidth >= MD_MIN_VALUE) {
+						setIsClicked(true)
+					}
+				}}
 				className={
 					clsx(
 						classes.imageWrapper,
