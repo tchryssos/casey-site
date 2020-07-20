@@ -20,8 +20,8 @@ import SiteMap1 from 'static/images/MensHealth/SiteMap1.png'
 import SiteMap2 from 'static/images/MensHealth/SiteMap2.png'
 import MHHLogo from 'static/images/MensHealth/MHHLogo.png'
 import MHHBranding from 'static/images/MensHealth/MHHBranding.png'
-import Goal1 from 'static/images/MensHealth/goal1.gif'
-import Goal2 from 'static/images/MensHealth/goal2.png'
+import CompareWires from 'static/images/MensHealth/compareWire.png'
+
 
 const useStyles = createUseStyles({
 	whiteBlock: {
@@ -32,6 +32,13 @@ const useStyles = createUseStyles({
 	},
 	orangeBlock: {
 		backgroundColor: '#DF7356',
+	},
+	sectionLabel: {
+		backgroundColor: '#4e7fff',
+		padding: 8,
+		color: 'white',
+		whiteSpace: 'nowrap',
+		textAlign: 'center',
 	},
 	half: {
 		width: '100%',
@@ -79,6 +86,9 @@ export default () => {
 					</div>
 				</ItemGrid>
 			</ContentBlock>
+			<div className={classes.sectionLabel}>
+				DISCOVER
+			</div>
 			<ContentBlock className={classes.whiteBlock}>
 				<Heading>
 					Getting in the head of the Men&apos;s Health customer
@@ -108,6 +118,9 @@ export default () => {
 				<Spacer />
 				<Image src={PhotoRange} size="full" />
 			</ContentBlock>
+			<div className={classes.sectionLabel}>
+				DEFINE
+			</div>
 			<ContentBlock className={classes.blueBlock}>
 				<Heading>
 					Streamlining the existing content
@@ -119,12 +132,17 @@ export default () => {
 					<ImageLightBox src={SiteMap1} />
 					<ImageLightBox src={SiteMap2} />
 				</ItemGrid>
-				<Spacer />
+				<Spacer height={2} />
 				<SubHeading>Creating wireframes from existing content</SubHeading>
 				<Spacer />
-				<SubHeading>Building for scalability</SubHeading>
-				<Spacer />
+				<Body>
+					One of the main goals with this project was to streamline the content on the pages to make it more digestible for users.
+				</Body>
+				<Image src={CompareWires} size="full" />
 			</ContentBlock>
+			<div className={classes.sectionLabel}>
+				DESIGN
+			</div>
 			<ContentBlock className={classes.whiteBlock}>
 				<Heading>Modernizing the brand</Heading>
 				<ItemGrid>
@@ -138,15 +156,21 @@ export default () => {
 					<Image className={classes.half} src={MHHLogo} size="full" />
 				</ItemGrid>
 				<Spacer />
-				<SubHeading>Brand Guidelines</SubHeading>
+				<SubHeading>Creating new guidelines</SubHeading>
 				<Image src={MHHBranding} size="full" />
 			</ContentBlock>
 			<ContentBlock className={classes.orangeBlock}>
 				<Heading>Visual Designs</Heading>
 			</ContentBlock>
+			<div className={classes.sectionLabel}>
+				TEST
+			</div>
 			<ContentBlock>
 				<Heading>Testing</Heading>
 			</ContentBlock>
+			<div className={classes.sectionLabel}>
+				DEVELOP
+			</div>
 			<ContentBlock>
 				<Heading>Key learnings</Heading>
 				<Spacer />
