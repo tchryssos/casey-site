@@ -13,6 +13,7 @@ import Image from 'components/Image'
 import ItemGrid from 'components/ItemGrid'
 import ImageLightBox from 'components/ImageLightBox'
 import VideoPlayer from 'components/VideoPlayer'
+import PageNav from 'components/PageNav'
 
 import Frank from 'static/images/MensHealth/personaFrank.png'
 import Tom from 'static/images/MensHealth/personaTom.png'
@@ -56,8 +57,21 @@ const useStyles = createUseStyles({
 
 export default () => {
 	const classes = useStyles()
+	const navLinks = [
+		{ link: 'brief' },
+		{ link: 'define' },
+		{ link: 'discover' },
+		{ link: 'design' },
+		{ link: 'develop' },
+	]
 	return (
 		<PageWrapper>
+			<PageNav
+				navLinkObjects={navLinks}
+			/>
+			{/* eslint-disable jsx-a11y/anchor-is-valid */}
+			{/* eslint-disable jsx-a11y/anchor-has-content */}
+			<a name="brief" />
 			<ContentBlock className={classes.blueBlock}>
 				<Heading>
 					Men&apos;s Health Houston is looking to revamp their website in anicipation of a new location launch
@@ -86,6 +100,7 @@ export default () => {
 					</div>
 				</ItemGrid>
 			</ContentBlock>
+			<a name="discover" />
 			<div className={classes.sectionLabel}>
 				DISCOVER
 			</div>
@@ -118,6 +133,7 @@ export default () => {
 				<Spacer />
 				<Image src={PhotoRange} size="full" />
 			</ContentBlock>
+			<a name="define" />
 			<div className={classes.sectionLabel}>
 				DEFINE
 			</div>
@@ -140,6 +156,7 @@ export default () => {
 				</Body>
 				<Image src={CompareWires} size="full" />
 			</ContentBlock>
+			<a name="design" />
 			<div className={classes.sectionLabel}>
 				DESIGN
 			</div>
@@ -200,6 +217,7 @@ export default () => {
 					<Image className={classes.half} src={MapModal} size="full" />
 				</ItemGrid>
 			</ContentBlock>
+			<a name="develop" />
 			<div className={classes.sectionLabel}>
 				DEVELOP
 			</div>
