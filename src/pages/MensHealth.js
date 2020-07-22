@@ -184,7 +184,7 @@ export default () => {
 					</div>
 					<div className={classes.half}>
 						<Heading>100%</Heading>
-						<SubHeading>of participants used the icon-based navigation on the home page</SubHeading>
+						<SubHeading>of participants used the icon-based navigation on the home page validating that addition</SubHeading>
 					</div>
 				</ItemGrid>
 				<Spacer />
@@ -194,7 +194,7 @@ export default () => {
 							Multiple CTAs
 						</SubHeading>
 						<Body>
-							There were CTAs to schedule an appointment at multiple points throughout the page. Each participant used a different CTA to schedule their appointment which validates each individual placement.
+							There were CTAs to schedule an appointment at multiple points throughout the page. Each participant used a different CTA to schedule their appointment which validates each individual placements.
 						</Body>
 					</div>
 					<Image className={classes.half} src={MapModal} size="full" />
@@ -204,13 +204,22 @@ export default () => {
 				DEVELOP
 			</div>
 			<ContentBlock className={classes.whiteBlock}>
-				<Heading>Key learnings</Heading>
+				<Heading>What did I learn from this project?</Heading>
 				<Spacer />
-				<SubHeading>Developer Handoff</SubHeading>
+				<SubHeading>Design leadership skills</SubHeading>
+				<Body>
+					My main role for this project was Product Designer but ended up wearing lots of hats. I hired the developer, created the timeline, redesigned the branding, and held weekly meetings to gather everyone together together to make decisions and gain approvals
+				</Body>
 				<Spacer />
-				<SubHeading>Client Project Management</SubHeading>
+				<SubHeading>Collaborating with a developer</SubHeading>
+				<Body>
+					Working closely with a developer on this project was a great experience. It helped me learn the difference between what a developer and a client need from a designer. We also collaborated to uncover responsive design sticking points that needed extra attention.
+				</Body>
 				<Spacer />
-				<SubHeading>Compenetizing</SubHeading>
+				<SubHeading>Building for scale</SubHeading>
+				<Body>
+					The ideal outcome for this project was to arm the Men&apos;s Health Houston team with everything they would need to add new services and locations to their site on their own in the future. We kept this in mind at every step of the way.
+				</Body>
 			</ContentBlock>
 		</PageWrapper>
 	)
