@@ -26,7 +26,7 @@ import CompareWires from 'static/images/MensHealth/compareWire.png'
 import HomeDesktop from 'static/images/MensHealth/HomePage_Desktop2.png'
 import GainsWaveDesktop from 'static/images/MensHealth/GainsWave_Desktop.png'
 import MapModal from 'static/images/MensHealth/MapModal.png'
-import MHHHero from 'static/images/MensHealth/Frame_24.png'
+import MHHHero from 'static/images/MensHealth/MHH_Hero.png'
 
 
 const useStyles = createUseStyles({
