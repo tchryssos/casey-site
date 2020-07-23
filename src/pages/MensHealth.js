@@ -26,6 +26,7 @@ import CompareWires from 'static/images/MensHealth/compareWire.png'
 import HomeDesktop from 'static/images/MensHealth/HomePage_Desktop2.png'
 import GainsWaveDesktop from 'static/images/MensHealth/GainsWave_Desktop.png'
 import MapModal from 'static/images/MensHealth/MapModal.png'
+import MHHHero from 'static/images/MensHealth/Frame_24.png'
 
 
 const useStyles = createUseStyles({
@@ -59,8 +60,8 @@ export default () => {
 	const classes = useStyles()
 	const navLinks = [
 		{ link: 'brief' },
-		{ link: 'define' },
 		{ link: 'discover' },
+		{ link: 'define' },
 		{ link: 'design' },
 		{ link: 'develop' },
 	]
@@ -73,13 +74,18 @@ export default () => {
 			{/* eslint-disable jsx-a11y/anchor-has-content */}
 			<a name="brief" />
 			<ContentBlock className={classes.blueBlock}>
-				<Heading>
-					Men&apos;s Health Houston is looking to revamp their website in anicipation of a new location launch
-				</Heading>
-				<Spacer />
-				<SubHeading>
-					Role: Product Designer
-				</SubHeading>
+				<ItemGrid stackedOnMobile>
+					<div className={classes.half}>
+						<Heading>
+							Men&apos;s Health Houston is looking to revamp their website in anicipation of a new location launch
+						</Heading>
+						<Spacer />
+						<SubHeading>
+							Role: Product Designer
+						</SubHeading>
+					</div>
+					<Image src={MHHHero} size="full" className={classes.half} />
+				</ItemGrid>
 				<Spacer />
 				<ItemGrid startAligned stackedOnMobile>
 					<div className={classes.half}>
