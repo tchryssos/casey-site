@@ -174,15 +174,15 @@ const App = ({ location }) => {
 								component={ChaseSapphire}
 							/>
 							<Route
-								path="/listen-jay"
+								path={blobLinkData.ListenJay.link}
 								component={ListenJay}
 							/>
 							<Route
-								path="/about"
+								path={blobLinkData.About.link}
 								component={About}
 							/>
 							<Route
-								path="/elo"
+								path={blobLinkData.ELO.link}
 								component={ELO}
 							/>
 							<Route
@@ -190,7 +190,7 @@ const App = ({ location }) => {
 								component={Mirror}
 							/>
 							<Route
-								path="/menshealth"
+								path={blobLinkData.MensHealth.link}
 								component={MensHealth}
 							/>
 							<Route

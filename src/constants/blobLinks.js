@@ -1,22 +1,23 @@
-import ChaseSapphire from 'static/svg/home/ChaseSapphire-3.svg'
-import FISMarketing from 'static/svg/home/FISMarketing-3.svg'
-import About from 'static/svg/home/About-3.svg'
-import Portfolio from 'static/svg/home/Portfolio-3.svg'
-import MusicalRug from 'static/svg/home/MusicalRug-3.svg'
-import TheUprisingCreative from 'static/svg/home/TheUprisingCreative-3.svg'
-import ELO from 'static/svg/home/ELO-3.svg'
-import ListenJay from 'static/svg/home/ListenJay-3.svg'
+import ChaseSapphire from 'static/svg/home/ChaseSapphire-4.svg'
+import FISMarketing from 'static/svg/home/FISMarketing-4.svg'
+import About from 'static/svg/home/About-4.svg'
+import Portfolio from 'static/svg/home/Portfolio-4.svg'
+import MusicalRug from 'static/svg/home/MusicalRug-4.svg'
+import TheUprisingCreative from 'static/svg/home/TheUprisingCreative-4.svg'
+import ELO from 'static/svg/home/ELO-4.svg'
+import ListenJay from 'static/svg/home/ListenJay-4.svg'
+import MensHealth from 'static/svg/home/MensHealth-4.svg'
 
 const blobLinkData = {
-	ListenJay: {
-		src: ListenJay,
-		className: 'ListenJay',
-		link: '/listen-jay',
-		altText: 'Listen Jay UX/UI Design',
+	MensHealth: {
+		src: MensHealth,
+		className: 'MensHealth',
+		link: '/mens-health',
+		altText: "Men's Health Houston Redesign",
 		width: 50, // Width in percentage
 		zIndex: 3,
 		category: 'product',
-		descriptionText: 'Rethinking the most trafficked pages of a podcast discovery platform',
+		descriptionText: "Updating the branding and website design for a men's health clinic",
 		descriptionAlignment: 'left',
 	},
 	FISMarketing: {
@@ -40,15 +41,15 @@ const blobLinkData = {
 		descriptionText: 'Building a gaming tool from the ground up',
 		descriptionAlignment: 'left',
 	},
-	Portfolio: {
-		src: Portfolio,
-		className: 'Portfolio',
-		link: '/portfolio',
-		altText: 'Portfolio Design',
+	ListenJay: {
+		src: ListenJay,
+		className: 'ListenJay',
+		link: '/listen-jay',
+		altText: 'ListenJay UX/UI Design',
 		width: 50,
 		zIndex: 3,
 		category: 'product',
-		descriptionText: 'Designing this website you\'re on right now',
+		descriptionText: 'Rethinking the most trafficked page of a podcast discover platform',
 	},
 	TheUprisingCreative: {
 		src: TheUprisingCreative,
@@ -61,15 +62,15 @@ const blobLinkData = {
 		descriptionText: 'Print and web projects from my internship at an LA based design studio',
 		descriptionAlignment: 'left',
 	},
-	ChaseSapphire: {
-		src: ChaseSapphire,
-		className: 'ChaseSapphire',
-		link: '/chase-sapphire',
-		altText: 'Chase Sapphire Reserve',
+	Portfolio: {
+		src: Portfolio,
+		className: 'Portfolio',
+		link: '/portfolio',
+		altText: 'Portfolio Design',
 		width: 100,
 		zIndex: 3,
-		category: 'graphic',
-		descriptionText: 'Art Directing social campaigns for the hottest travel card',
+		category: 'product',
+		descriptionText: 'Designing this website you\'re on right now',
 	},
 	MusicalRug: {
 		src: MusicalRug,
@@ -81,12 +82,21 @@ const blobLinkData = {
 		descriptionText: 'Combining software and hardware skills to create a textile that plays sound upon touch',
 		descriptionAlignment: 'left',
 	},
+	ChaseSapphire: {
+		src: ChaseSapphire,
+		className: 'ChaseSapphire',
+		link: '/chase-sapphire',
+		altText: 'Chase Sapphire Reserve',
+		width: 50,
+		category: 'graphic',
+		descriptionText: 'Art Directing social campaigns for the hottest travel card',
+	},
 	About: {
 		src: About,
 		className: 'About',
 		link: '/about',
 		altText: 'About Me Page',
-		width: 50,
+		width: 100,
 		descriptionAlignment: 'none',
 	},
 }
