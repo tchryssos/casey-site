@@ -21,7 +21,9 @@ import ChaseSapphire from 'pages/ChaseSapphire'
 import ListenJay from 'pages/ListenJay'
 import ELO from 'pages/elo'
 import Mirror from 'pages/Mirror'
+import MensHealth from 'pages/MensHealth'
 import About from 'pages/About'
+import FourOhFour from 'pages/404'
 
 import cursor from 'static/images/Misc/cursor.png'
 
@@ -172,20 +174,27 @@ const App = ({ location }) => {
 								component={ChaseSapphire}
 							/>
 							<Route
-								path="/listen-jay"
+								path={blobLinkData.ListenJay.link}
 								component={ListenJay}
 							/>
 							<Route
-								path="/about"
+								path={blobLinkData.About.link}
 								component={About}
 							/>
 							<Route
-								path="/elo"
+								path={blobLinkData.ELO.link}
 								component={ELO}
 							/>
 							<Route
 								path="/mirror"
 								component={Mirror}
+							/>
+							<Route
+								path={blobLinkData.MensHealth.link}
+								component={MensHealth}
+							/>
+							<Route
+								component={FourOhFour}
 							/>
 						</Switch>
 					</div>

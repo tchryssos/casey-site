@@ -40,13 +40,13 @@ export default createUseStyles({
 		opacity: 0.2,
 	},
 	// Custom CSS for blob placement
-	ListenJay: {
+	MensHealth: {
 		transform: 'translate(8vw, -4vw)',
 	},
 	FISMarketing: {
 		transform: 'translateY(8vw)',
 	},
-	Portfolio: {
+	ListenJay: {
 		transform: 'translate(6vw, 3vw)',
 	},
 	ELO: {
@@ -55,14 +55,17 @@ export default createUseStyles({
 	TheUprisingCreative: {
 		transform: 'translate(-25vw, -11vw)',
 	},
-	ChaseSapphire: {
+	Portfolio: {
 		transform: 'translateY(-30vw)',
 	},
 	MusicalRug: {
 		transform: 'translate(3vw, -35vw)',
 	},
-	About: {
+	ChaseSapphire: {
 		transform: 'translate(0vw, -30vw)',
+	},
+	About: {
+		transform: 'translate(0vw, -40vw)',
 	},
 	[MD_MIN_STRING]: {
 		linkWrapper: {
@@ -74,13 +77,13 @@ export default createUseStyles({
 				opacity: '100%',
 			},
 		},
-		ListenJay: {
+		MensHealth: {
 			transform: 'translateX(0)',
 		},
 		FISMarketing: {
 			transform: 'translate(-5vw, 1vw)',
 		},
-		Portfolio: {
+		ListenJay: {
 			transform: 'translate(-2vw, 1vw)',
 		},
 		ELO: {
@@ -89,14 +92,17 @@ export default createUseStyles({
 		TheUprisingCreative: {
 			transform: 'translate(-13vw, -4vw)',
 		},
-		ChaseSapphire: {
+		Portfolio: {
 			transform: 'translateY(-14vw)',
 		},
 		MusicalRug: {
 			transform: 'translate(1vw, -15vw)',
 		},
-		About: {
+		ChaseSapphire: {
 			transform: 'translate(-2vw, -15vw)',
+		},
+		About: {
+			transform: 'translate(0vw, -20vw)',
 		},
 	},
 	[LG_MIN_STRING]: {
@@ -107,6 +113,6 @@ export default createUseStyles({
 		},
 		leftAligned: {
 			left: '-240px',
+		},
 	},
-},
 })

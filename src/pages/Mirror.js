@@ -21,6 +21,7 @@ import Spacer from 'components/Spacer'
 import Body from 'components/Typography/Body'
 import Image from 'components/Image'
 import VideoPlayer from 'components/VideoPlayer'
+import PageNav from 'components/PageNav'
 
 import CardSort from 'static/images/Mirror/CardSorting.png'
 import SiteMap from 'static/images/Mirror/SiteMap.png'
@@ -37,32 +38,6 @@ import HifiPDP from 'static/images/Mirror/HiFiPDP.png'
 
 
 const useStyles = createUseStyles({
-	link: {
-		color: 'white',
-		display: 'block',
-		padding: 8,
-		'&:hover': {
-			color: 'white',
-		},
-		'&:visited': {
-			color: 'white',
-		},
-	},
-	MirrorPageNav: {
-		display: 'none',
-		[MD_MIN_STRING]: {
-			position: 'fixed',
-			display: 'flex',
-			justifyContent: 'space-between',
-			bottom: 0,
-			width: '100%',
-			padding: 8,
-			boxSizing: 'border-box',
-			color: 'white',
-			backgroundColor: '#0f2b41',
-			zIndex: 100,
-		},
-	},
 	// sectionIntersected: {
 	// 	backgroundColor: '#4e7fff',
 	// 	'&:visited': {
@@ -125,69 +100,6 @@ const useStyles = createUseStyles({
 	},
 })
 
-// START - PAGE NAV LINK - START
-const PageNavLink = ({
-	classes, currentIntersecting, link, altLink, text,
-}) => (
-	<a
-		className={clsx(
-			classes.link,
-			{ [classes.sectionIntersected]: currentIntersecting === link || currentIntersecting === altLink },
-		)}
-		href={`#${link}`}
-	>
-		<Body>{text || `${link[0].toUpperCase()}${link.slice(1)}`}</Body>
-	</a>
-)
-// END - PAGE NAV LINK - END
-
-// START - PAGE NAV - START
-const MirrorPageNav = ({ classes, currentIntersecting }) => (
-	<div className={classes.MirrorPageNav}>
-		<PageNavLink
-			classes={classes}
-			currentIntersecting={currentIntersecting}
-			link="brief"
-		/>
-		<PageNavLink
-			classes={classes}
-			currentIntersecting={currentIntersecting}
-			link="persona"
-			text="Research"
-		/>
-		<PageNavLink
-			classes={classes}
-			currentIntersecting={currentIntersecting}
-			link="ia"
-			text="Architecture"
-		/>
-		<PageNavLink
-			classes={classes}
-			currentIntersecting={currentIntersecting}
-			link="layout"
-		/>
-		<PageNavLink
-			classes={classes}
-			currentIntersecting={currentIntersecting}
-			link="brand"
-			text="Branding"
-			altLink="hifi"
-		/>
-		<PageNavLink
-			classes={classes}
-			currentIntersecting={currentIntersecting}
-			link="testing"
-		/>
-		<PageNavLink
-			classes={classes}
-			currentIntersecting={currentIntersecting}
-			link="learnings"
-		/>
-	</div>
-)
-// END - PAGE NAV - END
-
-
 export default () => {
 	const classes = useStyles()
 	const { getScroll } = useContext(ScrollContext)
@@ -200,6 +112,16 @@ export default () => {
 	const brandRef = useRef()
 	const hifiRef = useRef()
 	const testingRef = useRef()
+	const navLinks = [
+		{ link: 'brief' },
+		{ link: 'persona', text: 'Research' },
+		{ link: 'ia', text: 'Architecture' },
+		{ link: 'layout' },
+		{ link: 'brand', text: 'Branding', altLink: 'hifi' },
+		{ link: 'testing' },
+		{ link: 'learnings' },
+	]
+
 	const [currentIntersecting, setCurrentIntersecting] = useState()
 	const setVisibleBlock = (entries) => {
 		const { isIntersecting, target } = entries.sort((a, b) => (
@@ -245,7 +167,10 @@ export default () => {
 
 	return (
 		<PageWrapper>
-			<MirrorPageNav classes={classes} currentIntersecting={currentIntersecting} />
+			<PageNav
+				currentIntersecting={currentIntersecting}
+				navLinkObjects={navLinks}
+			/>
 			{/* eslint-disable jsx-a11y/anchor-is-valid */}
 
 			{/* START - BRIEF - START */}
