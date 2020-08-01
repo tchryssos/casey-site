@@ -1,6 +1,7 @@
 import React from 'react'
 import { createUseStyles } from 'react-jss'
 import { MD_MIN_STRING } from 'constants/styles/breakpoints'
+import clsx from 'clsx'
 
 import PageWrapper from 'components/PageWrapper'
 import ContentBlock from 'components/ContentBlock'
@@ -12,10 +13,11 @@ import Spacer from 'components/Spacer'
 import ItemGrid from 'components/ItemGrid'
 
 import Interviews from 'static/images/ListenJayUXA/userInterviews-01.png'
-import Persona from 'static/images/ListenJayUXA/podcastpete.png'
+import Persona from 'static/images/ListenJayUXA/podcastpete_circle.png'
 import UserFlow from 'static/images/ListenJayUXA/userflow-01.png'
 import Wireframe00 from 'static/images/ListenJayUXA/wireframe-00.png'
 import Wireframe01 from 'static/images/ListenJayUXA/wireframe-01.png'
+import WireSketch from 'static/images/ListenJayUXA/wiresketch-01.png'
 
 const useStyles = createUseStyles({
 	half: {
@@ -47,18 +49,31 @@ const useStyles = createUseStyles({
 		backgroundColor: '#4e7fff',
 		width: 20,
 		height: 20,
+		marginRight: 8,
 	},
 	yellowBall: {
 		borderRadius: 100,
 		backgroundColor: '#e5892e',
 		width: 20,
 		height: 20,
+		marginRight: 8,
 	},
 	greenBall: {
 		borderRadius: 100,
 		backgroundColor: '#0f2b41',
 		width: 20,
 		height: 20,
+		marginRight: 8,
+	},
+	ballName: {
+		display: 'flex',
+		alignItems: 'center',
+	},
+	centered: {
+		textAlign: 'center',
+	},
+	wiresBlock: {
+		backgroundColor: '#b4e0ff',
 	},
 })
 
@@ -87,7 +102,7 @@ export default () => {
 					</div>
 					<div className={classes.twoThirds}>
 						<div>
-							<div>
+							<div className={classes.ballName}>
 								<div className={classes.blueBall} />
 								<SubHeading>Pete</SubHeading>
 							</div>
@@ -106,7 +121,7 @@ export default () => {
 						</div>
 						<Spacer />
 						<div>
-							<div>
+							<div className={classes.ballName}>
 								<div className={classes.yellowBall} />
 								<SubHeading>Sean</SubHeading>
 							</div>
@@ -125,7 +140,7 @@ export default () => {
 						</div>
 						<Spacer />
 						<div>
-							<div>
+							<div className={classes.ballName}>
 								<div className={classes.greenBall} />
 								<SubHeading>Brandon</SubHeading>
 							</div>
@@ -144,14 +159,19 @@ export default () => {
 						</div>
 					</div>
 				</ItemGrid>
-				<Spacer height={2} />
+				<Spacer height={4} />
 				<SubHeading>
 					Defining the persona for this feature
 				</SubHeading>
 				<Spacer />
 				<ItemGrid stackedOnMobile>
-					<div className={classes.half}>
-						<Image src={Persona} />
+					<div
+						className={clsx(
+							classes.half,
+							classes.centered,
+						)}
+					>
+						<Image src={Persona} size="full" />
 						<Heading>Podcast Pete</Heading>
 						<Body>THE INDEPENDENT PODCASTER</Body>
 						<Body>Male | 30 yrs old | New York</Body>
@@ -177,7 +197,7 @@ export default () => {
 					</div>
 				</ItemGrid>
 			</ContentBlock>
-			<ContentBlock>
+			<ContentBlock className={classes.wiresBlock}>
 				<Heading>
 					Building the feature
 				</Heading>
@@ -185,10 +205,17 @@ export default () => {
 				<SubHeading>
 					Creating a user flow
 				</SubHeading>
+				<Body>
+					The focus of this project was on a user flow that started from the transcript editor page on ListenJay and ended with users downloading their graphics.
+				</Body>
 				<Image src={UserFlow} size="full" />
 				<SubHeading>
 					Wireframes
 				</SubHeading>
+				<Body>
+					I used Figma to bring pen and paper sketched to life. I built out the wire frames using components that would be easy to adjust when adding visual design.
+				</Body>
+				<Image src={WireSketch} size="full" />
 				<Image src={Wireframe00} size="full" />
 				<Image src={Wireframe01} size="full" />
 			</ContentBlock>
