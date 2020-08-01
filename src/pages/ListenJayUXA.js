@@ -13,8 +13,9 @@ import ItemGrid from 'components/ItemGrid'
 
 import Interviews from 'static/images/ListenJayUXA/userInterviews-01.png'
 import Persona from 'static/images/ListenJayUXA/podcastpete.png'
-import UserFlow from 'static/images/ListenJayUXA/userflow.png'
-import Wireframes from 'static/images/ListenJayUXA/wireframes.png'
+import UserFlow from 'static/images/ListenJayUXA/userflow-01.png'
+import Wireframe00 from 'static/images/ListenJayUXA/wireframe-00.png'
+import Wireframe01 from 'static/images/ListenJayUXA/wireframe-01.png'
 
 const useStyles = createUseStyles({
 	half: {
@@ -92,8 +93,8 @@ export default () => {
 				<SubHeading>
 					Wireframes
 				</SubHeading>
-				<Image src={Wireframes} size="full" />
-				<Body> ^ replace </Body>
+				<Image src={Wireframe00} size="full" />
+				<Image src={Wireframe01} size="full" />
 			</ContentBlock>
 			<ContentBlock>
 				<Heading>
