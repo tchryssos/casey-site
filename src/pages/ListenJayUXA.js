@@ -26,6 +26,40 @@ const useStyles = createUseStyles({
 			marginBottom: 0,
 		},
 	},
+	third: {
+		width: '100%',
+		marginBottom: 64,
+		[MD_MIN_STRING]: {
+			width: '30%',
+			marginBottom: 0,
+		},
+	},
+	twoThird: {
+		width: '100%',
+		marginBottom: 64,
+		[MD_MIN_STRING]: {
+			width: '60%',
+			marginBottom: 0,
+		},
+	},
+	blueBall: {
+		borderRadius: 100,
+		backgroundColor: '#4e7fff',
+		width: 20,
+		height: 20,
+	},
+	yellowBall: {
+		borderRadius: 100,
+		backgroundColor: '#e5892e',
+		width: 20,
+		height: 20,
+	},
+	greenBall: {
+		borderRadius: 100,
+		backgroundColor: '#0f2b41',
+		width: 20,
+		height: 20,
+	},
 })
 
 export default () => {
@@ -47,7 +81,69 @@ export default () => {
 				</SubHeading>
 				<Spacer />
 				<Body> I interviewed a few podcasters with relatively new or small podcasts about how they were getting their shows off the ground.</Body>
-				<Image src={Interviews} size="full" />
+				<ItemGrid>
+					<div className={classes.third}>
+						<Image src={Interviews} size="full" />
+					</div>
+					<div className={classes.twoThirds}>
+						<div>
+							<div>
+								<div className={classes.blueBall} />
+								<SubHeading>Pete</SubHeading>
+							</div>
+							<Body>
+								<b>Biggest Obstacle:</b>
+								&nbsp;Writing copy that sounds genuine
+							</Body>
+							<Body>
+								<b>Promotion Plan:</b>
+								&nbsp;Through his own platform as an artist
+							</Body>
+							<Body>
+								<b>Biggest Win:</b>
+								&nbsp;Distribution platforms and Apple podcast rankings
+							</Body>
+						</div>
+						<Spacer />
+						<div>
+							<div>
+								<div className={classes.yellowBall} />
+								<SubHeading>Sean</SubHeading>
+							</div>
+							<Body>
+								<b>Biggest Obstacle:</b>
+								&nbsp;Learning curve on new tools
+							</Body>
+							<Body>
+								<b>Promotion Plan:</b>
+								&nbsp;Shares quotes on personal social channels
+							</Body>
+							<Body>
+								<b>Biggest Win:</b>
+								&nbsp;Using Anchor as an all-in-one platform
+							</Body>
+						</div>
+						<Spacer />
+						<div>
+							<div>
+								<div className={classes.greenBall} />
+								<SubHeading>Brandon</SubHeading>
+							</div>
+							<Body>
+								<b>Biggest Obstacle:</b>
+								&nbsp;Standing out against the crowd
+							</Body>
+							<Body>
+								<b>Promotion Plan:</b>
+								&nbsp;Posting organically in relative interest groups
+							</Body>
+							<Body>
+								<b>Biggest Win:</b>
+								&nbsp;Boosting social posts did not increase listen
+							</Body>
+						</div>
+					</div>
+				</ItemGrid>
 				<Spacer height={2} />
 				<SubHeading>
 					Defining the persona for this feature
