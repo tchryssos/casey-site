@@ -11,6 +11,8 @@ import Body from 'components/Typography/Body'
 import Image from 'components/Image'
 import Spacer from 'components/Spacer'
 import ItemGrid from 'components/ItemGrid'
+import VideoPlayer from 'components/VideoPlayer'
+
 
 import Interviews from 'static/images/ListenJayUXA/userInterviews-01.png'
 import Persona from 'static/images/ListenJayUXA/podcastpete_circle.png'
@@ -223,6 +225,11 @@ export default () => {
 				<Heading>
 					Branding/Visual Designs
 				</Heading>
+				<VideoPlayer
+					src="https://player.vimeo.com/video/444084058?loop=1"
+					title="Prototype Animation"
+					aspectRatio="1:1"
+				/>
 			</ContentBlock>
 			<ContentBlock>
 				<Heading>
