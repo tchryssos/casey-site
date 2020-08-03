@@ -60,9 +60,16 @@ const useStyles = createUseStyles({
 		height: 20,
 		marginRight: 8,
 	},
-	greenBall: {
+	darkBlueBall: {
 		borderRadius: 100,
 		backgroundColor: '#0f2b41',
+		width: 20,
+		height: 20,
+		marginRight: 8,
+	},
+	greenBall: {
+		borderRadius: 100,
+		backgroundColor: '#346c63',
 		width: 20,
 		height: 20,
 		marginRight: 8,
@@ -85,8 +92,14 @@ export default () => {
 		<PageWrapper>
 			<ContentBlock>
 				<Heading>
-					ListenJay PodQuote Feature
+					ListenJay wants to help podcasters&apos; promote their shows
 				</Heading>
+				<Spacer />
+				<SubHeading>Role: Product Designer</SubHeading>
+				<Spacer />
+				<Body>
+					ListenJay is a podcast discovery platform. Their main differentiator is that they enable users to share a link to a specific quote from a podcast. They have seen a lot of traffic from sharing specific quotes on their social channels. Now they want to add a feature to their transcripting tool that will allow podcasters to create quote graphics to promote their shows.
+				</Body>
 			</ContentBlock>
 			<ContentBlock>
 				<Heading>
@@ -143,7 +156,7 @@ export default () => {
 						<Spacer />
 						<div>
 							<div className={classes.ballName}>
-								<div className={classes.greenBall} />
+								<div className={classes.darkBlueBall} />
 								<SubHeading>Brandon</SubHeading>
 							</div>
 							<Body>
@@ -155,8 +168,27 @@ export default () => {
 								&nbsp;Posting organically in relative interest groups
 							</Body>
 							<Body>
-								<b>Biggest Win:</b>
+								<b>Biggest Learning:</b>
 								&nbsp;Boosting social posts did not increase listen
+							</Body>
+						</div>
+						<Spacer />
+						<div>
+							<div className={classes.ballName}>
+								<div className={classes.greenBall} />
+								<SubHeading>Logan</SubHeading>
+							</div>
+							<Body>
+								<b>Biggest Obstacle:</b>
+								&nbsp;Time
+							</Body>
+							<Body>
+								<b>Promotion Plan:</b>
+								&nbsp;Meeting listeners where they are on social
+							</Body>
+							<Body>
+								<b>Goals:</b>
+								&nbsp;Spotify Ads, Transcripts
 							</Body>
 						</div>
 					</div>
@@ -223,18 +255,30 @@ export default () => {
 			</ContentBlock>
 			<ContentBlock>
 				<Heading>
-					Branding/Visual Designs
+					Visual Designs
 				</Heading>
+				<Spacer />
+				<Body>I updated the branding for ListenJay as part of another project for them and used that new design system to build out these pages.</Body>
 				<VideoPlayer
-					src="https://player.vimeo.com/video/444084058?loop=1"
+					src="https://player.vimeo.com/video/444319554?loop=1"
 					title="Prototype Animation"
-					aspectRatio="1:1"
+					aspectRatio="16:9"
 				/>
 			</ContentBlock>
 			<ContentBlock>
 				<Heading>
-					Testing
+					Usability Testing
 				</Heading>
+				<Spacer />
+				<Body>I tested this prototype with a handful of partcicpants to gague the usabilty and also test the proof of concept.</Body>
+				<Spacer />
+				<SubHeading>Key Takeaways</SubHeading>
+				<Body>For some participants, thinking about editing a transcript and creating graphics at the same time was too much. Some participants understood that they could highlight something in order to come back later but in order to make these tasks more separate, I adjusted the flow below.</Body>
+				<VideoPlayer
+					src="https://player.vimeo.com/video/444317718?loop=1"
+					title="Prototype Animation"
+					aspectRatio="16:9"
+				/>
 			</ContentBlock>
 		</PageWrapper>
 	)
