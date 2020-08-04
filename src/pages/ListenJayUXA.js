@@ -20,6 +20,8 @@ import UserFlow from 'static/images/ListenJayUXA/userflow-01.png'
 import Wireframe00 from 'static/images/ListenJayUXA/wireframe-00.png'
 import Wireframe01 from 'static/images/ListenJayUXA/wireframe-01.png'
 import WireSketch from 'static/images/ListenJayUXA/wiresketch-01.png'
+import HifiDesign from 'static/images/ListenJayUXA/Hifi_Design.png'
+import HifiTranscript from 'static/images/ListenJayUXA/Hifi_Transcript.png'
 
 const useStyles = createUseStyles({
 	half: {
@@ -84,6 +86,16 @@ const useStyles = createUseStyles({
 	wiresBlock: {
 		backgroundColor: '#b4e0ff',
 	},
+	sectionLabel: {
+		backgroundColor: '#4e7fff',
+		padding: 8,
+		color: 'white',
+		whiteSpace: 'nowrap',
+		textAlign: 'center',
+	},
+	brandColorBlock: {
+		backgroundColor: '#FFEAC8',
+	},
 })
 
 export default () => {
@@ -91,16 +103,26 @@ export default () => {
 	return (
 		<PageWrapper>
 			<ContentBlock>
-				<Heading>
-					ListenJay wants to help podcasters&apos; promote their shows
-				</Heading>
-				<Spacer />
-				<SubHeading>Role: Product Designer</SubHeading>
+				<ItemGrid stackedOnMobile>
+					<div className={classes.half}>
+						<Heading>
+							ListenJay wants to help podcasters&apos; promote their shows
+						</Heading>
+						<Spacer />
+						<SubHeading>Role: Product Designer</SubHeading>
+					</div>
+					<div className={classes.half}>
+						placeholder for image
+					</div>
+				</ItemGrid>
 				<Spacer />
 				<Body>
 					ListenJay is a podcast discovery platform. Their main differentiator is that they enable users to share a link to a specific quote from a podcast. They have seen a lot of traffic from sharing specific quotes on their social channels. Now they want to add a feature to their transcripting tool that will allow podcasters to create quote graphics to promote their shows.
 				</Body>
 			</ContentBlock>
+			<div className={classes.sectionLabel}>
+				DISCOVER
+			</div>
 			<ContentBlock>
 				<Heading>
 					Understanding the podcaster&apos;s needs
@@ -231,6 +253,9 @@ export default () => {
 					</div>
 				</ItemGrid>
 			</ContentBlock>
+			<div className={classes.sectionLabel}>
+				DEFINE
+			</div>
 			<ContentBlock className={classes.wiresBlock}>
 				<Heading>
 					Building the feature
@@ -253,7 +278,10 @@ export default () => {
 				<Image src={Wireframe00} size="full" />
 				<Image src={Wireframe01} size="full" />
 			</ContentBlock>
-			<ContentBlock>
+			<div className={classes.sectionLabel}>
+				DESIGN
+			</div>
+			<ContentBlock className={classes.brandColorBlock}>
 				<Heading>
 					Visual Designs
 				</Heading>
@@ -264,7 +292,12 @@ export default () => {
 					title="Prototype Animation"
 					aspectRatio="16:9"
 				/>
+				<Image src={HifiTranscript} size="full" />
+				<Image src={HifiDesign} size="full" />
 			</ContentBlock>
+			<div className={classes.sectionLabel}>
+				TEST
+			</div>
 			<ContentBlock>
 				<Heading>
 					Usability Testing
