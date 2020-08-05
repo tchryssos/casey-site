@@ -123,7 +123,11 @@ export default () => {
 						<SubHeading>Role: Product Designer</SubHeading>
 					</div>
 					<div className={classes.half}>
-						placeholder for image
+						<VideoPlayer
+							src="https://player.vimeo.com/video/444995903?autoplay=1?loop=1"
+							title="Prototype Animation"
+							aspectRatio="1:1"
+						/>
 					</div>
 				</ItemGrid>
 				<Spacer />
