@@ -40,7 +40,7 @@ const useStyles = createUseStyles({
 			marginBottom: 0,
 		},
 	},
-	twoThird: {
+	twoThirds: {
 		width: '100%',
 		marginBottom: 64,
 		[MD_MIN_STRING]: {
@@ -102,11 +102,11 @@ export default () => {
 	const classes = useStyles()
 	return (
 		<PageWrapper>
-			<ContentBlock>
+			<ContentBlock className={classes.brandColorBlock}>
 				<ItemGrid stackedOnMobile>
 					<div className={classes.half}>
 						<Heading>
-							ListenJay wants to help podcasters&apos; promote their shows
+							ListenJay helps people discover new podcasts
 						</Heading>
 						<Spacer />
 						<SubHeading>Role: Product Designer</SubHeading>
@@ -117,7 +117,7 @@ export default () => {
 				</ItemGrid>
 				<Spacer />
 				<Body>
-					ListenJay is a podcast discovery platform. Their main differentiator is that they enable users to share a link to a specific quote from a podcast. They have seen a lot of traffic from sharing specific quotes on their social channels. Now they want to add a feature to their transcripting tool that will allow podcasters to create quote graphics to promote their shows.
+					ListenJay lets users share a link to a specific quote from any podcast. They have gotten a lot of engagement from sharing these quotes on their own social channels. Now they want to create a tool that will allow podcasters to take quotes straight from their transcript and turn them into sharable graphics.
 				</Body>
 			</ContentBlock>
 			<div className={classes.sectionLabel}>
@@ -141,77 +141,22 @@ export default () => {
 						<div>
 							<div className={classes.ballName}>
 								<div className={classes.blueBall} />
-								<SubHeading>Pete</SubHeading>
+								<SubHeading>Transcribing is useful to people who want to share quotes and have increased accessibility but it can be costly</SubHeading>
 							</div>
-							<Body>
-								<b>Biggest Obstacle:</b>
-								&nbsp;Writing copy that sounds genuine
-							</Body>
-							<Body>
-								<b>Promotion Plan:</b>
-								&nbsp;Through his own platform as an artist
-							</Body>
-							<Body>
-								<b>Biggest Win:</b>
-								&nbsp;Distribution platforms and Apple podcast rankings
-							</Body>
 						</div>
-						<Spacer />
+						<Spacer height={2} />
 						<div>
 							<div className={classes.ballName}>
 								<div className={classes.yellowBall} />
-								<SubHeading>Sean</SubHeading>
+								<SubHeading>Many podcasters depend on their own social channels and distribution platforms to promote their shows</SubHeading>
 							</div>
-							<Body>
-								<b>Biggest Obstacle:</b>
-								&nbsp;Learning curve on new tools
-							</Body>
-							<Body>
-								<b>Promotion Plan:</b>
-								&nbsp;Shares quotes on personal social channels
-							</Body>
-							<Body>
-								<b>Biggest Win:</b>
-								&nbsp;Using Anchor as an all-in-one platform
-							</Body>
 						</div>
-						<Spacer />
+						<Spacer height={2} />
 						<div>
 							<div className={classes.ballName}>
 								<div className={classes.darkBlueBall} />
-								<SubHeading>Brandon</SubHeading>
+								<SubHeading>Podcasters are wearing many hats so tools need to be easy to learn</SubHeading>
 							</div>
-							<Body>
-								<b>Biggest Obstacle:</b>
-								&nbsp;Standing out against the crowd
-							</Body>
-							<Body>
-								<b>Promotion Plan:</b>
-								&nbsp;Posting organically in relative interest groups
-							</Body>
-							<Body>
-								<b>Biggest Learning:</b>
-								&nbsp;Boosting social posts did not increase listen
-							</Body>
-						</div>
-						<Spacer />
-						<div>
-							<div className={classes.ballName}>
-								<div className={classes.greenBall} />
-								<SubHeading>Logan</SubHeading>
-							</div>
-							<Body>
-								<b>Biggest Obstacle:</b>
-								&nbsp;Time
-							</Body>
-							<Body>
-								<b>Promotion Plan:</b>
-								&nbsp;Meeting listeners where they are on social
-							</Body>
-							<Body>
-								<b>Goals:</b>
-								&nbsp;Spotify Ads, Transcripts
-							</Body>
 						</div>
 					</div>
 				</ItemGrid>
@@ -300,12 +245,17 @@ export default () => {
 			</div>
 			<ContentBlock>
 				<Heading>
-					Usability Testing
+					Validation Testing
 				</Heading>
 				<Spacer />
 				<Body>I tested this prototype with a handful of partcicpants to gague the usabilty and also test the proof of concept.</Body>
 				<Spacer />
-				<SubHeading>Key Takeaways</SubHeading>
+				<SubHeading>Validation</SubHeading>
+				<Body>
+					All of the participants understood the product and were excited to use it.
+				</Body>
+				<Spacer />
+				<SubHeading>Separating Tasks</SubHeading>
 				<Body>For some participants, thinking about editing a transcript and creating graphics at the same time was too much. Some participants understood that they could highlight something in order to come back later but in order to make these tasks more separate, I adjusted the flow below.</Body>
 				<VideoPlayer
 					src="https://player.vimeo.com/video/444317718?loop=1"
@@ -313,6 +263,28 @@ export default () => {
 					aspectRatio="16:9"
 				/>
 			</ContentBlock>
+			<div className={classes.sectionLabel}>
+				LEARNINGS
+			</div>
+			<ContentBlock className={classes.brandColorBlock}>
+				<Heading>What I learned from this project</Heading>
+				<Spacer />
+				<SubHeading>Finding participants can be a challenge</SubHeading>
+				<Body>
+					Finding people to interview for niche products, like something built only for people who have podcasts, can be hard! For this project I reached out to multiple networks and a lot of strangers. Some were happy to help me!
+				</Body>
+				<Spacer />
+				<SubHeading>User research can lead to great competitive research</SubHeading>
+				<Body>
+					I found that doing user research before/in tandem with competitive analysis allowed me to ask participants what tools they are using day to day and then take a closer look at those
+				</Body>
+				<Spacer />
+				<SubHeading>Building for prototypes</SubHeading>
+				<Body>
+					The controls for the design editor on this project were complex to prototype for testing. I learned a lot about using overlays and hover states in Figma to create something that feels realistic.
+				</Body>
+			</ContentBlock>
+
 		</PageWrapper>
 	)
 }
