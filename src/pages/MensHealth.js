@@ -1,6 +1,7 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { createUseStyles } from 'react-jss'
 import { MD_MIN_STRING } from 'constants/styles/breakpoints'
+import { sectionBlue } from 'constants/styles/colors'
 
 
 import PageWrapper from 'components/PageWrapper'
@@ -40,7 +41,7 @@ const useStyles = createUseStyles({
 		backgroundColor: '#DF7356',
 	},
 	sectionLabel: {
-		backgroundColor: '#4e7fff',
+		backgroundColor: sectionBlue,
 		padding: 8,
 		color: 'white',
 		whiteSpace: 'nowrap',
@@ -57,15 +58,15 @@ const useStyles = createUseStyles({
 })
 
 export default () => {
-	const classes = useStyles()
-	const [currentBlock, setCurrentBlock] = useState()
-
 	const brief = 'brief'
 	const discover = 'discover'
 	const define = 'define'
 	const design = 'design'
 	const test = 'test'
 	const develop = 'develop'
+
+	const classes = useStyles()
+	// const [currentBlock, setCurrentBlock] = useState(brief)
 
 	const navLinks = [
 		{ link: brief },
@@ -77,15 +78,12 @@ export default () => {
 	]
 	return (
 		<PageWrapper>
-			<PageNav
-				navLinkObjects={navLinks}
-			/>
+			<PageNav navLinkObjects={navLinks} />
 			{/* eslint-disable jsx-a11y/anchor-is-valid */}
 			{/* eslint-disable jsx-a11y/anchor-has-content */}
 			<a name={brief} />
 			<ContentBlock
 				className={classes.blueBlock}
-				setCurrentBlock={setCurrentBlock}
 				blockId={brief}
 			>
 				<ItemGrid stackedOnMobile>
@@ -126,7 +124,6 @@ export default () => {
 			</div>
 			<ContentBlock
 				className={classes.whiteBlock}
-				setCurrentBlock={setCurrentBlock}
 				blockId={discover}
 			>
 				<Heading>
@@ -163,7 +160,6 @@ export default () => {
 			</div>
 			<ContentBlock
 				className={classes.blueBlock}
-				setCurrentBlock={setCurrentBlock}
 				blockId={define}
 			>
 				<Heading>
@@ -190,7 +186,6 @@ export default () => {
 			</div>
 			<ContentBlock
 				className={classes.whiteBlock}
-				setCurrentBlock={setCurrentBlock}
 				blockId={design}
 			>
 				<Heading>Modernizing the brand</Heading>
@@ -226,7 +221,6 @@ export default () => {
 			</div>
 			<ContentBlock
 				className={classes.blueBlock}
-				setCurrentBlock={setCurrentBlock}
 				blockId={test}
 			>
 				<Heading>Usability Testing</Heading>
@@ -260,7 +254,6 @@ export default () => {
 			</div>
 			<ContentBlock
 				className={classes.whiteBlock}
-				setCurrentBlock={setCurrentBlock}
 				blockId={develop}
 			>
 				<Heading>What did I learn from this project?</Heading>

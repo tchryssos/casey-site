@@ -2,6 +2,7 @@ import React from 'react'
 import { createUseStyles } from 'react-jss'
 import clsx from 'clsx'
 import { MD_MIN_STRING } from 'constants/styles/breakpoints'
+import { sectionBlue } from 'constants/styles/colors'
 
 import Body from 'components/Typography/Body'
 
@@ -32,16 +33,19 @@ const useStyles = createUseStyles({
 			zIndex: 100,
 		},
 	},
+	sectionInView: {
+		backgroundColor: sectionBlue,
+	},
 })
 
 // START - PAGE NAV LINK - START
 const PageNavLink = ({
-	classes, currentIntersecting, link, altLink, text,
+	classes, inView, link, altLink, text,
 }) => (
 	<a
 		className={clsx(
 			classes.link,
-			{ [classes.sectionIntersected]: currentIntersecting === link || currentIntersecting === altLink },
+			{ [classes.sectionInView]: inView && (inView === link || inView === altLink) },
 		)}
 		href={`#${link}`}
 	>
@@ -51,14 +55,14 @@ const PageNavLink = ({
 // END - PAGE NAV LINK - END
 
 // START - PAGE NAV - START
-const PageNav = ({ currentIntersecting, navLinkObjects }) => {
+const PageNav = ({ inView, navLinkObjects }) => {
 	const classes = useStyles()
 	return (
 		<div className={classes.PageNav}>
 			{navLinkObjects.map(({ link, text, altLink }) => (
 				<PageNavLink
 					classes={classes}
-					currentIntersecting={currentIntersecting}
+					inView={inView}
 					link={link}
 					text={text}
 					altLink={altLink}

@@ -1,9 +1,8 @@
-import React, { useRef, useEffect, useContext } from 'react'
+import React, { useRef } from 'react'
 import clsx from 'clsx'
-import debounce from 'lodash.debounce'
 import { createUseStyles } from 'react-jss'
 import { MD_MIN_STRING } from 'constants/styles/breakpoints'
-import ScrollContext from 'contexts/scroll'
+// import ScrollContext from 'contexts/scroll'
 
 const useStyles = createUseStyles({
 	contentBlock: {
@@ -20,23 +19,25 @@ const useStyles = createUseStyles({
 export default ({
 	children, className, setCurrentBlock, blockId,
 }) => {
-	const { getScroll } = useContext(ScrollContext)
+	// const { getScroll } = useContext(ScrollContext)
 	const classes = useStyles()
 	const blockRef = useRef()
 
-	useEffect(() => {
-		const onScroll = debounce(() => {
-			const { scrollTop,  } = getScroll()
-			const { offsetTop, offsetHeight } = blockRef.current
-			const inView = scrollTop >= offsetTop && scrollTop <= offsetTop + offsetHeight
-			if (inView) {
-				console.log(`${blockId} is in view`)
-			}
-		}, 100)
-		const scrollable = getScroll()
-		scrollable.addEventListener('scroll', onScroll)
-		return () => scrollable.removeEventListener('scroll', onScroll)
-	}, [])
+	// useEffect(() => {
+	// 	if (setCurrentBlock) {
+	// 		const onScroll = debounce(() => {
+	// 			const { scrollTop } = getScroll()
+	// 			const { offsetTop, offsetHeight } = blockRef.current
+	// 			const inView = scrollTop >= offsetTop && scrollTop <= offsetTop + offsetHeight
+	// 			if (inView) {
+	// 				setCurrentBlock(blockId)
+	// 			}
+	// 		}, 100)
+	// 		const scrollable = getScroll()
+	// 		scrollable.addEventListener('scroll', onScroll)
+	// 		return () => scrollable.removeEventListener('scroll', onScroll)
+	// 	}
+	// }, [])
 
 	return (
 		<div
