@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { createUseStyles } from 'react-jss'
 import { MD_MIN_STRING } from 'constants/styles/breakpoints'
 
@@ -58,12 +58,22 @@ const useStyles = createUseStyles({
 
 export default () => {
 	const classes = useStyles()
+	const [currentBlock, setCurrentBlock] = useState()
+
+	const brief = 'brief'
+	const discover = 'discover'
+	const define = 'define'
+	const design = 'design'
+	const test = 'test'
+	const develop = 'develop'
+
 	const navLinks = [
-		{ link: 'brief' },
-		{ link: 'discover' },
-		{ link: 'define' },
-		{ link: 'design' },
-		{ link: 'develop' },
+		{ link: brief },
+		{ link: discover },
+		{ link: define },
+		{ link: design },
+		{ link: test },
+		{ link: develop },
 	]
 	return (
 		<PageWrapper>
@@ -72,8 +82,12 @@ export default () => {
 			/>
 			{/* eslint-disable jsx-a11y/anchor-is-valid */}
 			{/* eslint-disable jsx-a11y/anchor-has-content */}
-			<a name="brief" />
-			<ContentBlock className={classes.blueBlock}>
+			<a name={brief} />
+			<ContentBlock
+				className={classes.blueBlock}
+				setCurrentBlock={setCurrentBlock}
+				blockId={brief}
+			>
 				<ItemGrid stackedOnMobile>
 					<div className={classes.half}>
 						<Heading>
@@ -106,11 +120,15 @@ export default () => {
 					</div>
 				</ItemGrid>
 			</ContentBlock>
-			<a name="discover" />
+			<a name={discover} />
 			<div className={classes.sectionLabel}>
 				DISCOVER
 			</div>
-			<ContentBlock className={classes.whiteBlock}>
+			<ContentBlock
+				className={classes.whiteBlock}
+				setCurrentBlock={setCurrentBlock}
+				blockId={discover}
+			>
 				<Heading>
 					Getting in the head of the Men&apos;s Health customer
 				</Heading>
@@ -139,11 +157,15 @@ export default () => {
 				<Spacer />
 				<Image src={PhotoRange} size="full" />
 			</ContentBlock>
-			<a name="define" />
+			<a name={define} />
 			<div className={classes.sectionLabel}>
 				DEFINE
 			</div>
-			<ContentBlock className={classes.blueBlock}>
+			<ContentBlock
+				className={classes.blueBlock}
+				setCurrentBlock={setCurrentBlock}
+				blockId={define}
+			>
 				<Heading>
 					Streamlining the existing content
 				</Heading>
@@ -162,11 +184,15 @@ export default () => {
 				</Body>
 				<Image src={CompareWires} size="full" />
 			</ContentBlock>
-			<a name="design" />
+			<a name={design} />
 			<div className={classes.sectionLabel}>
 				DESIGN
 			</div>
-			<ContentBlock className={classes.whiteBlock}>
+			<ContentBlock
+				className={classes.whiteBlock}
+				setCurrentBlock={setCurrentBlock}
+				blockId={design}
+			>
 				<Heading>Modernizing the brand</Heading>
 				<ItemGrid>
 					<div className={classes.half}>
@@ -194,10 +220,15 @@ export default () => {
 					<Image className={classes.half} size="full" src={GainsWaveDesktop} />
 				</ItemGrid>
 			</ContentBlock>
+			<a name={test} />
 			<div className={classes.sectionLabel}>
 				TEST
 			</div>
-			<ContentBlock className={classes.blueBlock}>
+			<ContentBlock
+				className={classes.blueBlock}
+				setCurrentBlock={setCurrentBlock}
+				blockId={test}
+			>
 				<Heading>Usability Testing</Heading>
 				<Spacer />
 				<ItemGrid startAligned>
@@ -223,11 +254,15 @@ export default () => {
 					<Image className={classes.half} src={MapModal} size="full" />
 				</ItemGrid>
 			</ContentBlock>
-			<a name="develop" />
+			<a name={develop} />
 			<div className={classes.sectionLabel}>
 				DEVELOP
 			</div>
-			<ContentBlock className={classes.whiteBlock}>
+			<ContentBlock
+				className={classes.whiteBlock}
+				setCurrentBlock={setCurrentBlock}
+				blockId={develop}
+			>
 				<Heading>What did I learn from this project?</Heading>
 				<Spacer />
 				<SubHeading>Design leadership skills</SubHeading>
