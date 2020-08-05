@@ -50,6 +50,7 @@ const useStyles = createUseStyles({
 		},
 	},
 	blueBall: {
+		flexShrink: 0,
 		borderRadius: 100,
 		backgroundColor: '#4e7fff',
 		width: 20,
@@ -57,6 +58,7 @@ const useStyles = createUseStyles({
 		marginRight: 8,
 	},
 	yellowBall: {
+		flexShrink: 0,
 		borderRadius: 100,
 		backgroundColor: '#e5892e',
 		width: 20,
@@ -64,15 +66,9 @@ const useStyles = createUseStyles({
 		marginRight: 8,
 	},
 	darkBlueBall: {
+		flexShrink: 0,
 		borderRadius: 100,
 		backgroundColor: '#0f2b41',
-		width: 20,
-		height: 20,
-		marginRight: 8,
-	},
-	greenBall: {
-		borderRadius: 100,
-		backgroundColor: '#346c63',
 		width: 20,
 		height: 20,
 		marginRight: 8,
