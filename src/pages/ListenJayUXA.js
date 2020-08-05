@@ -12,6 +12,7 @@ import Image from 'components/Image'
 import Spacer from 'components/Spacer'
 import ItemGrid from 'components/ItemGrid'
 import VideoPlayer from 'components/VideoPlayer'
+import PageNav from 'components/PageNav'
 
 
 import Interviews from 'static/images/ListenJayUXA/userInterviews-01.png'
@@ -100,8 +101,22 @@ const useStyles = createUseStyles({
 
 export default () => {
 	const classes = useStyles()
+	const navLinks = [
+		{ link: 'brief' },
+		{ link: 'discover' },
+		{ link: 'define' },
+		{ link: 'design' },
+		{ link: 'test' },
+		{ link: 'learnings' },
+	]
 	return (
 		<PageWrapper>
+			<PageNav
+				navLinkObjects={navLinks}
+			/>
+			{/* eslint-disable jsx-a11y/anchor-is-valid */}
+			{/* eslint-disable jsx-a11y/anchor-has-content */}
+			<a name="brief" />
 			<ContentBlock className={classes.brandColorBlock}>
 				<ItemGrid stackedOnMobile>
 					<div className={classes.half}>
@@ -120,6 +135,7 @@ export default () => {
 					ListenJay lets users share a link to a specific quote from any podcast. They have gotten a lot of engagement from sharing these quotes on their own social channels. Now they want to create a tool that will allow podcasters to take quotes straight from their transcript and turn them into sharable graphics.
 				</Body>
 			</ContentBlock>
+			<a name="discover" />
 			<div className={classes.sectionLabel}>
 				DISCOVER
 			</div>
@@ -198,6 +214,7 @@ export default () => {
 					</div>
 				</ItemGrid>
 			</ContentBlock>
+			<a name="define" />
 			<div className={classes.sectionLabel}>
 				DEFINE
 			</div>
@@ -223,6 +240,7 @@ export default () => {
 				<Image src={Wireframe00} size="full" />
 				<Image src={Wireframe01} size="full" />
 			</ContentBlock>
+			<a name="design" />
 			<div className={classes.sectionLabel}>
 				DESIGN
 			</div>
@@ -240,6 +258,7 @@ export default () => {
 				<Image src={HifiTranscript} size="full" />
 				<Image src={HifiDesign} size="full" />
 			</ContentBlock>
+			<a name="test" />
 			<div className={classes.sectionLabel}>
 				TEST
 			</div>
@@ -263,6 +282,7 @@ export default () => {
 					aspectRatio="16:9"
 				/>
 			</ContentBlock>
+			<a name="learnings" />
 			<div className={classes.sectionLabel}>
 				LEARNINGS
 			</div>
