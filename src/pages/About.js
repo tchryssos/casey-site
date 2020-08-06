@@ -50,7 +50,7 @@ export default () => {
 					<Body>(click anywhere)</Body>
 					<Spacer />
 					<Body>
-						I am an adaptable graphic designer with experience building creative teams from the ground up at WeWork’s Flatiron School. Currently working on freelance projects in product design.
+						I am an adaptable designer with experience building creative teams from the ground up at WeWork’s Flatiron School. Currently working on freelance projects in product design.
 					</Body>
 					<Spacer height={2} />
 					<SubHeading>Email</SubHeading>
@@ -60,21 +60,21 @@ export default () => {
 						<div className={classes.half}>
 							<Heading>Experience</Heading>
 							<Spacer height={2} />
+							<SubHeading>Product Designer</SubHeading>
+							<Body>Freelance, May 2020 - current</Body>
+							<Spacer height={2} />
 							<SubHeading>Design Manager</SubHeading>
 							<Body>WeWork (Flatiron School), Jan 2018 - April 2020</Body>
 							<Spacer height={2} />
 							<SubHeading>Art Director</SubHeading>
 							<Body>Vayner Media, Aug 2017 - Aug 2018</Body>
 							<Spacer height={2} />
-							<SubHeading>Design Intern</SubHeading>
-							<Body>The Uprising Creative, Aug 2016</Body>
-							<Spacer height={2} />
 						</div>
 						<div className={classes.half}>
 							<Heading>Education</Heading>
 							<Spacer height={2} />
 							<SubHeading>Design Lab</SubHeading>
-							<Body>UX Academy, May 2020 - ongoing</Body>
+							<Body>UX Academy, May 2020 - current</Body>
 							<Spacer height={2} />
 							<SubHeading>Flatiron School</SubHeading>
 							<Body>Intro to Front End Web Development, 2019</Body>
