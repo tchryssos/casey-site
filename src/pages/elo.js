@@ -12,13 +12,10 @@ import Body from 'components/Typography/Body'
 import Spacer from 'components/Spacer'
 import Image from 'components/Image'
 import SubHeading from 'components/Typography/SubHeading'
-import VideoPlayer from 'components/VideoPlayer'
 import ItemGrid from 'components/ItemGrid'
+import VideoPlayer from 'components/VideoPlayer'
 
 import OGELO from 'static/images/ELO/Og-elo.png'
-import ELOWireframes from 'static/images/ELO/elo-wireframes.png'
-import ELOWhiteboard from 'static/images/ELO/elo-whiteboard-2.png'
-import ELOGitHub from 'static/images/ELO/ELO-githubIssues.png'
 import ELOHiDef1 from 'static/images/ELO/ladders_hidef_1.png'
 import ELOHiDef2 from 'static/images/ELO/ladders_hidef_2.png'
 import ELOStorybook from 'static/images/ELO/elo-storybook.png'
@@ -27,6 +24,9 @@ import ELOAltLogo from 'static/images/ELO/elo-alt-logos.png'
 import ELOLogoBlack from 'static/images/ELO/elo-logo-01.png'
 import ELOLogoYellow from 'static/images/ELO/elo-logo-02.png'
 import Test from 'static/images/ELO/test.png'
+import UserFlow from 'static/images/ELO/userflow-03.png'
+import NewWires from 'static/images/ELO/new_flow.png'
+import ReturningWires from 'static/images/ELO/returning_flow.png'
 
 const useStyles = createUseStyles({
 	headerColor: {
@@ -48,6 +48,9 @@ const useStyles = createUseStyles({
 	},
 	visualDesignBlock: {
 		backgroundColor: '#f5b142',
+	},
+	highlight: {
+		backgroundColor: 'yellow',
 	},
 })
 
@@ -81,31 +84,53 @@ export default () => {
 				</Body>
 				<Image size="full" src={OGELO} />
 				<Spacer />
-				<Spacer />
-				<Heading>Building a Product Roadmap</Heading>
-				<Spacer />
-				<Body>
-					After a few iterations, we recruited our friend who is a backend developer to round out our product team and help us execute on a more robust user experience. Here we created a brand new product roadmap, mapping out all of the features we needed for an MVP.
-				</Body>
-				<ItemGrid stackedOnMobile>
-					<Image className={classes.half} size="half" src={ELOWhiteboard} />
-					<Image className={classes.half} size="half" src={ELOGitHub} />
-				</ItemGrid>
-				<Spacer />
 			</ContentBlock>
-			<ContentBlock className={classes.wireFrameBlock}>
-				<Heading>Wireframes and Usability Testing</Heading>
+			<ContentBlock>
+				<Heading>Understanding the user</Heading>
 				<Spacer />
-				<Body>
-					I kicked off the project by creating a wireframe prototype that we could test for usability. During this phase, we discovered a lot of user needs based around adding and deleting players from a group.
-				</Body>
-				<Image size="full" src={ELOWireframes} />
+				<SubHeading>Persona</SubHeading>
+				<SubHeading>Competitive Research</SubHeading>
+			</ContentBlock>
+			<ContentBlock>
+				<Heading>Building with a user-centered approach</Heading>
+				<Spacer />
+				<Body>The first and most important task that I focused on was allowing users to submit whether they won or lost a game. After I got some feedback on this flow, I decided to map out the flow for someone using the app for the first time to set up a game as a second priority.</Body>
+				<ItemGrid>
+					<div className={classes.half}>
+						<Body>NEW USER TASK</Body>
+						<SubHeading>
+							<span className={classes.highlight}>I want to</span>
+							&nbsp;try this new tool to track my game
+						</SubHeading>
+					</div>
+					<div className={classes.half}>
+						<Image src={UserFlow} size="full" />
+					</div>
+				</ItemGrid>
+				<Body>New User Task Wireframes</Body>
+				<Image src={NewWires} size="full" />
+				<Body>Prototype for testing</Body>
 				<VideoPlayer
-					src="https://player.vimeo.com/video/390019243?loop=1"
-					title="Musical rug demo"
+					src="https://player.vimeo.com/video/448968438?loop=1"
+					title="Prototype Animation"
 					aspectRatio="1:1"
 				/>
-				<Spacer />
+				<ItemGrid>
+					<div className={classes.half}>
+						<Body>RETURNING USER TASK</Body>
+						<SubHeading>
+							I just beat my friend at a game and&nbsp;
+							<span className={classes.highlight}>I need to</span>
+							&nbsp;submit this match and see how it affects my ranking
+						</SubHeading>
+					</div>
+					<div className={classes.half}>
+						<Image src={UserFlow} size="full" />
+					</div>
+				</ItemGrid>
+				<Body>Returning User Task Wireframes</Body>
+				<Image src={ReturningWires} size="full" />
+				<Body>Prototype for testing</Body>
 			</ContentBlock>
 			<ContentBlock>
 				<Heading>Exploring Visual Directions</Heading>
