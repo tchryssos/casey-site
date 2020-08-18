@@ -19,7 +19,6 @@ import OGELO from 'static/images/ELO/Og-elo.png'
 import ELOHiDef1 from 'static/images/ELO/ladders_hidef_1.png'
 import ELOHiDef2 from 'static/images/ELO/ladders_hidef_2.png'
 import ELOStorybook from 'static/images/ELO/elo-storybook.png'
-import ELODirections from 'static/images/ELO/elo-directions.png'
 import ELOAltLogo from 'static/images/ELO/elo-alt-logos.png'
 import ELOLogoBlack from 'static/images/ELO/elo-logo-01.png'
 import ELOLogoYellow from 'static/images/ELO/elo-logo-02.png'
@@ -27,6 +26,7 @@ import Test from 'static/images/ELO/test.png'
 import UserFlow from 'static/images/ELO/userflow-03.png'
 import NewWires from 'static/images/ELO/new_flow.png'
 import ReturningWires from 'static/images/ELO/returning_flow.png'
+import UIKit from 'static/images/ELO/UIKit_2.png'
 
 const useStyles = createUseStyles({
 	headerColor: {
@@ -131,15 +131,14 @@ export default () => {
 				<Body>Returning User Task Wireframes</Body>
 				<Image src={ReturningWires} size="full" />
 				<Body>Prototype for testing</Body>
+				<VideoPlayer
+					src="https://player.vimeo.com/video/448970796?loop=1"
+					title="Prototype Animation"
+					aspectRatio="1:1"
+				/>
 			</ContentBlock>
 			<ContentBlock>
-				<Heading>Exploring Visual Directions</Heading>
-				<Spacer />
-				<Body>
-					For this project we explored 3 different visual directions. One that used relied heavily on the dark mode aesthetic we saw a lot in the space, one that used a blue mode to keep the accessibily of dark mode but allo wus to stand out and one that went entirely out of the box.
-				</Body>
-				<Image size="full" src={ELODirections} />
-				<Spacer />
+				<Heading>Creating a visual design system</Heading>
 				<Spacer />
 				<SubHeading>Creating a logo</SubHeading>
 				<Spacer />
@@ -152,8 +151,9 @@ export default () => {
 					<Image size="half" src={ELOLogoBlack} />
 					<Image size="half" src={ELOLogoYellow} />
 				</ItemGrid>
-				<Spacer />
-				<Spacer />
+				<Spacer height={2} />
+				<SubHeading>Cohesive UI Kit</SubHeading>
+				<Image src={UIKit} size="full" />
 			</ContentBlock>
 			<ContentBlock className={classes.visualDesignBlock}>
 				<Heading>Final UI Designs</Heading>
@@ -163,8 +163,12 @@ export default () => {
 				<Spacer />
 			</ContentBlock>
 			<ContentBlock>
-				<Heading>Storybook Production</Heading>
+				<Heading>Testing</Heading>
+			</ContentBlock>
+			<ContentBlock>
+				<Heading>Development</Heading>
 				<Spacer />
+				<SubHeading>Storybook Production</SubHeading>
 				<Body>
 					We used Storybook to build and design all of the components.
 				</Body>
