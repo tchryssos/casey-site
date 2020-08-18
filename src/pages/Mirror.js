@@ -1,16 +1,12 @@
-import React, {
-	useState, useEffect, useRef, useContext,
-} from 'react'
+import React, { useEffect, useRef, useContext } from 'react'
 import { createUseStyles } from 'react-jss'
 import clsx from 'clsx'
-import debounce from 'lodash.debounce'
 
 import {
 	MD_MIN_STRING, MD_MIN_VALUE,
 } from 'constants/styles/breakpoints'
 
 import ScrollContext from 'contexts/scroll'
-import useIntersectionObserver from 'effects/useIntersectionObserver'
 
 import PageWrapper from 'components/PageWrapper'
 import ContentBlock from 'components/ContentBlock'
@@ -38,11 +34,6 @@ import HifiPDP from 'static/images/Mirror/HiFiPDP.png'
 
 
 const useStyles = createUseStyles({
-	// sectionIntersected: {
-	// 	backgroundColor: '#4e7fff',
-	// 	'&:visited': {
-	// 	},
-	// },
 	third: {
 		width: '100%',
 		marginBottom: 64,
@@ -104,14 +95,6 @@ export default () => {
 	const classes = useStyles()
 	const { getScroll } = useContext(ScrollContext)
 
-	// START - PAGE INTERSECTION LOGIC - START
-	const briefRef = useRef()
-	const personaRef = useRef()
-	const iaRef = useRef()
-	const layoutRef = useRef()
-	const brandRef = useRef()
-	const hifiRef = useRef()
-	const testingRef = useRef()
 	const navLinks = [
 		{ link: 'brief' },
 		{ link: 'persona', text: 'Research' },
@@ -121,22 +104,6 @@ export default () => {
 		{ link: 'testing' },
 		{ link: 'learnings' },
 	]
-
-	const [currentIntersecting, setCurrentIntersecting] = useState()
-	const setVisibleBlock = (entries) => {
-		const { isIntersecting, target } = entries.sort((a, b) => (
-			a.intersectionRatio > b.intersectionRatio ? -1 : 1
-		))[0]
-		if (isIntersecting) {
-			setCurrentIntersecting(target.id)
-		}
-	}
-	const throttledCBV = debounce(setVisibleBlock, 100)
-	useIntersectionObserver(getScroll)([
-		briefRef, personaRef, iaRef, layoutRef, brandRef,
-		hifiRef, testingRef,
-	], throttledCBV)
-	// END - PAGE INTERSECTION LOGIC - END
 
 	// START - PAGE SCROLL LOGIC - START
 	const scrollingContainer = useRef()
@@ -167,16 +134,12 @@ export default () => {
 
 	return (
 		<PageWrapper>
-			<PageNav
-				currentIntersecting={currentIntersecting}
-				navLinkObjects={navLinks}
-			/>
+			<PageNav navLinkObjects={navLinks} />
 			{/* eslint-disable jsx-a11y/anchor-is-valid */}
 
 			{/* START - BRIEF - START */}
 			<a name="brief">
 				<ContentBlock
-					blockRef={briefRef}
 					blockId="brief"
 					className={classes.mirrorColorSecondary}
 				>
@@ -209,7 +172,6 @@ export default () => {
 					RESEARCH
 				</div>
 				<ContentBlock
-					blockRef={personaRef}
 					blockId="persona"
 					className={classes.mirrorColorPrimary}
 				>
@@ -233,7 +195,6 @@ export default () => {
 				</div>
 				<ContentBlock
 					className={classes.mirrorColorPrimary}
-					blockRef={iaRef}
 					blockId="ia"
 				>
 					<Heading>What is the best way to organize an online shop?</Heading>
@@ -277,7 +238,6 @@ export default () => {
 			</a>
 			<ContentBlock
 				className={classes.blueBackground}
-				blockRef={layoutRef}
 				blockId="layout"
 			>
 				<Heading>Building the user experience</Heading>
@@ -316,7 +276,6 @@ export default () => {
 				</div>
 			</a>
 			<ContentBlock
-				blockRef={brandRef}
 				className={classes.mirrorColorPrimary}
 				blockId="brand"
 			>
@@ -340,7 +299,6 @@ export default () => {
 			</ContentBlock>
 			<ContentBlock
 				className={classes.pinkBackground}
-				blockRef={hifiRef}
 				blockId="hifi"
 			>
 				<Heading>High Fidelity Mock Ups</Heading>
@@ -362,7 +320,6 @@ export default () => {
 			</a>
 			<ContentBlock
 				className={classes.mirrorColorPrimary}
-				blockRef={testingRef}
 				blockId="testing"
 			>
 				<ItemGrid>
