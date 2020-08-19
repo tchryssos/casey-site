@@ -49,9 +49,6 @@ const useStyles = createUseStyles({
 	visualDesignBlock: {
 		backgroundColor: '#f5b142',
 	},
-	highlight: {
-		backgroundColor: 'yellow',
-	},
 })
 
 export default () => {
@@ -99,8 +96,7 @@ export default () => {
 					<div className={classes.half}>
 						<Body>NEW USER TASK</Body>
 						<SubHeading>
-							<span className={classes.highlight}>I want to</span>
-							&nbsp;try this new tool to track my game
+							I want to try this new tool to track my game
 						</SubHeading>
 					</div>
 					<div className={classes.half}>
@@ -119,9 +115,8 @@ export default () => {
 					<div className={classes.half}>
 						<Body>RETURNING USER TASK</Body>
 						<SubHeading>
-							I just beat my friend at a game and&nbsp;
-							<span className={classes.highlight}>I need to</span>
-							&nbsp;submit this match and see how it affects my ranking
+							I just beat my friend at a game andI need to
+							submit this match and see how it affects my ranking
 						</SubHeading>
 					</div>
 					<div className={classes.half}>
@@ -163,7 +158,28 @@ export default () => {
 				<Spacer />
 			</ContentBlock>
 			<ContentBlock>
-				<Heading>Testing</Heading>
+				<Heading>Testing for Validation and Usability</Heading>
+				<Body>
+					I had each participant complete the tasks for both new and returning users. I observed them complete the tasks over Zoom.
+				</Body>
+				<Spacer />
+				<SubHeading>
+					100% of the users completed both tasks with no problems
+				</SubHeading>
+				<Spacer />
+				<SubHeading>
+					Multiple paths to completion
+				</SubHeading>
+				<Body>
+					I built the forms so that if a new user clicked the Submit a Match button and did not yet have any games set up they could be redirected to complete that form first. During testing, participants used both pathways to complete the task validating this choice.
+				</Body>
+				<Spacer />
+				<SubHeading>
+					Too many options
+				</SubHeading>
+				<Body>
+					Initially I added a setting for volatility when users were setting up a ranking board. This setting was meant to affect how much each game changed the rankings. Most participants were a little confused about this setting so I ultimately decided to remove it or build it in to advanced settings later.
+				</Body>
 			</ContentBlock>
 			<ContentBlock>
 				<Heading>Development</Heading>
@@ -178,6 +194,26 @@ export default () => {
 				<SubHeading>This project is ongoing! We are currently in production.</SubHeading>
 				<Spacer />
 				<Spacer />
+			</ContentBlock>
+			<ContentBlock>
+				<Heading>Key Learnings</Heading>
+				<Spacer />
+				<SubHeading>
+					User Centered Approach to a Roadmap
+				</SubHeading>
+				<Body>
+					Working closely with developers on this project I had a tendency to lean into a developer or business mindset to planning the roadmap. I was creating priority between sign-up and login pages but shifted my mindset to think about the flows that were most necessary and valuable to the user.
+				</Body>
+				<Spacer />
+				<SubHeading>Coding Skills</SubHeading>
+				<Body>
+					As a designer with some coding skills working with a small team of 2 developers to build an entire app, I also put my coding skills to the test, styling and building simple elements in our Storybook using React.
+				</Body>
+				<Spacer />
+				<SubHeading>End to End App</SubHeading>
+				<Body>
+					Creating something from scratch can be overwhelming at times but always rewarding. I found that focusing on what would be the most valuable to the user and testing those interactions helped me reign myself in from taking on too much right out of the gate.
+				</Body>
 			</ContentBlock>
 		</PageWrapper>
 	)
