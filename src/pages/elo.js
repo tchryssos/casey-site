@@ -15,17 +15,15 @@ import SubHeading from 'components/Typography/SubHeading'
 import ItemGrid from 'components/ItemGrid'
 import VideoPlayer from 'components/VideoPlayer'
 
-import OGELO from 'static/images/ELO/Og-elo.png'
-import ELOHiDef1 from 'static/images/ELO/ladders_hidef_1.png'
-import ELOHiDef2 from 'static/images/ELO/ladders_hidef_2.png'
 import ELOStorybook from 'static/images/ELO/elo-storybook.png'
 import ELOAltLogo from 'static/images/ELO/elo-alt-logos.png'
 import ELOLogoBlack from 'static/images/ELO/elo-logo-01.png'
 import ELOLogoYellow from 'static/images/ELO/elo-logo-02.png'
 import Test from 'static/images/ELO/test.png'
 import UserFlow from 'static/images/ELO/userflow-03.png'
-import NewWires from 'static/images/ELO/new_flow.png'
-import ReturningWires from 'static/images/ELO/returning_flow.png'
+import UserFlow2 from 'static/images/ELO/userflow-returning.png'
+import NewWires from 'static/images/ELO/newUserWires.png'
+import ReturningWires from 'static/images/ELO/returningUserWires.png'
 import UIKit from 'static/images/ELO/UIKit_2.png'
 import Visual1 from 'static/images/ELO/sideBySide-01.png'
 import Visual2 from 'static/images/ELO/sideBySide-02.png'
@@ -42,6 +40,9 @@ const useStyles = createUseStyles({
 	},
 	whiteBlock: {
 		backgroundColor: 'white',
+	},
+	blueBackground: {
+		backgroundColor: '#b4e0ff',
 	},
 	half: {
 		width: '100%',
@@ -78,20 +79,9 @@ export default () => {
 					<Image className={classes.half} src={Test} />
 				</ItemGrid>
 				<Spacer />
-			</ContentBlock>
-			<ContentBlock>
-				<Heading>
-					How do you know who the best player is?
-				</Heading>
-				<Spacer />
-				<ItemGrid>
-					<div className={classes.half}>
-						<Body>
-							This project was something that a friend started as a personal project so he and his coworkers could track their rankings while they played Super Smash Bros. Below is the first very simple prototype he built. After doing some user testing with his friends, we decided we wanted to make it available for multiple games and multiple users.
-						</Body>
-					</div>
-					<Image size="full" src={OGELO} className={classes.half} />
-				</ItemGrid>
+				<Body>
+					xyz fgh
+				</Body>
 			</ContentBlock>
 			<ContentBlock className={classes.whiteBlock}>
 				<Heading>Understanding the user</Heading>
@@ -99,7 +89,7 @@ export default () => {
 				<SubHeading>Persona</SubHeading>
 				<SubHeading>Competitive Research</SubHeading>
 			</ContentBlock>
-			<ContentBlock>
+			<ContentBlock className={classes.blueBackground}>
 				<Heading>Building with a user-centered approach</Heading>
 				<Spacer />
 				<Body>The first and most important task that I focused on was allowing users to submit whether they won or lost a game. After I got some feedback on this flow, I decided to map out the flow for someone using the app for the first time to set up a game as a second priority.</Body>
@@ -131,7 +121,7 @@ export default () => {
 						</SubHeading>
 					</div>
 					<div className={classes.half}>
-						<Image src={UserFlow} size="full" />
+						<Image src={UserFlow2} size="full" />
 					</div>
 				</ItemGrid>
 				<Body>Returning User Task Wireframes</Body>
@@ -161,12 +151,10 @@ export default () => {
 				<SubHeading>Cohesive UI Kit</SubHeading>
 				<Image src={UIKit} size="full" />
 			</ContentBlock>
-			<ContentBlock className={classes.visualDesignBlock}>
+			<ContentBlock className={classes.whiteBlock}>
 				<Heading>Final UI Designs</Heading>
 				<Spacer />
 				<Image size="full" src={Visual1} />
-			</ContentBlock>
-			<ContentBlock className={classes.visualDesignBlock2}>
 				<Image size="full" src={Visual2} />
 				<Spacer />
 			</ContentBlock>
