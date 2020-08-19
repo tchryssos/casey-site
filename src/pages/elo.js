@@ -76,11 +76,14 @@ export default () => {
 					How do you know who the best player is?
 				</Heading>
 				<Spacer />
-				<Body>
-					This project was something that a friend started as a personal project so he and his coworkers could track their rankings while they played Super Smash Bros. Below is the first very simple prototype he built. After doing some user testing with his friends, we decided we wanted to make it available for multiple games and multiple users.
-				</Body>
-				<Image size="full" src={OGELO} />
-				<Spacer />
+				<ItemGrid>
+					<div className={classes.half}>
+						<Body>
+							This project was something that a friend started as a personal project so he and his coworkers could track their rankings while they played Super Smash Bros. Below is the first very simple prototype he built. After doing some user testing with his friends, we decided we wanted to make it available for multiple games and multiple users.
+						</Body>
+					</div>
+					<Image size="full" src={OGELO} className={classes.half} />
+				</ItemGrid>
 			</ContentBlock>
 			<ContentBlock>
 				<Heading>Understanding the user</Heading>
@@ -182,20 +185,6 @@ export default () => {
 				</Body>
 			</ContentBlock>
 			<ContentBlock>
-				<Heading>Development</Heading>
-				<Spacer />
-				<SubHeading>Storybook Production</SubHeading>
-				<Body>
-					We used Storybook to build and design all of the components.
-				</Body>
-				<Image size="full" src={ELOStorybook} />
-				<Spacer />
-				<Spacer />
-				<SubHeading>This project is ongoing! We are currently in production.</SubHeading>
-				<Spacer />
-				<Spacer />
-			</ContentBlock>
-			<ContentBlock>
 				<Heading>Key Learnings</Heading>
 				<Spacer />
 				<SubHeading>
@@ -205,10 +194,15 @@ export default () => {
 					Working closely with developers on this project I had a tendency to lean into a developer or business mindset to planning the roadmap. I was creating priority between sign-up and login pages but shifted my mindset to think about the flows that were most necessary and valuable to the user.
 				</Body>
 				<Spacer />
-				<SubHeading>Coding Skills</SubHeading>
-				<Body>
-					As a designer with some coding skills working with a small team of 2 developers to build an entire app, I also put my coding skills to the test, styling and building simple elements in our Storybook using React.
-				</Body>
+				<ItemGrid>
+					<div className={classes.half}>
+						<SubHeading>Coding Skills</SubHeading>
+						<Body>
+							As a designer with some coding skills working with a small team of 2 developers to build an entire app, I also put my coding skills to the test, styling and building simple elements in our Storybook using React.
+						</Body>
+					</div>
+					<Image src={ELOStorybook} className={classes.half} />
+				</ItemGrid>
 				<Spacer />
 				<SubHeading>End to End App</SubHeading>
 				<Body>
