@@ -27,16 +27,21 @@ import UserFlow from 'static/images/ELO/userflow-03.png'
 import NewWires from 'static/images/ELO/new_flow.png'
 import ReturningWires from 'static/images/ELO/returning_flow.png'
 import UIKit from 'static/images/ELO/UIKit_2.png'
+import Visual1 from 'static/images/ELO/sideBySide-01.png'
+import Visual2 from 'static/images/ELO/sideBySide-02.png'
 
 const useStyles = createUseStyles({
 	headerColor: {
 		backgroundColor: '#fad793',
 		[MD_MIN_STRING]: {
-			paddingTop: 150,
+			paddingTop: 100,
 		},
 	},
-	wireFrameBlock: {
-		backgroundColor: '#4fa0f4',
+	lightYellow: {
+		backgroundColor: '#fad793',
+	},
+	whiteBlock: {
+		backgroundColor: 'white',
 	},
 	half: {
 		width: '100%',
@@ -48,6 +53,9 @@ const useStyles = createUseStyles({
 	},
 	visualDesignBlock: {
 		backgroundColor: '#f5b142',
+	},
+	visualDesignBlock2: {
+		backgroundColor: '#595959',
 	},
 })
 
@@ -85,7 +93,7 @@ export default () => {
 					<Image size="full" src={OGELO} className={classes.half} />
 				</ItemGrid>
 			</ContentBlock>
-			<ContentBlock>
+			<ContentBlock className={classes.whiteBlock}>
 				<Heading>Understanding the user</Heading>
 				<Spacer />
 				<SubHeading>Persona</SubHeading>
@@ -156,8 +164,10 @@ export default () => {
 			<ContentBlock className={classes.visualDesignBlock}>
 				<Heading>Final UI Designs</Heading>
 				<Spacer />
-				<Image size="full" src={ELOHiDef1} />
-				<Image size="full" src={ELOHiDef2} />
+				<Image size="full" src={Visual1} />
+			</ContentBlock>
+			<ContentBlock className={classes.visualDesignBlock2}>
+				<Image size="full" src={Visual2} />
 				<Spacer />
 			</ContentBlock>
 			<ContentBlock>
@@ -184,7 +194,7 @@ export default () => {
 					Initially I added a setting for volatility when users were setting up a ranking board. This setting was meant to affect how much each game changed the rankings. Most participants were a little confused about this setting so I ultimately decided to remove it or build it in to advanced settings later.
 				</Body>
 			</ContentBlock>
-			<ContentBlock>
+			<ContentBlock className={classes.lightYellow}>
 				<Heading>Key Learnings</Heading>
 				<Spacer />
 				<SubHeading>
