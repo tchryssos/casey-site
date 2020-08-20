@@ -106,7 +106,55 @@ export default () => {
 			<ContentBlock className={classes.whiteBlock}>
 				<Heading>Understanding the user</Heading>
 				<Spacer />
-				<SubHeading>Persona</SubHeading>
+				<div className={classes.lightYellow}>
+					<ItemGrid>
+						<div className={classes.half}>
+							<div>
+								photo
+							</div>
+							<div>
+								<Heading>Sam</Heading>
+								<SubHeading>The Avid Gamer</SubHeading>
+							</div>
+						</div>
+						<div className={classes.half}>
+							<SubHeading>Goals</SubHeading>
+							<ul>
+								<li>
+									Improve skills at playing certain games and gauge that improvement
+								</li>
+								<li>
+									Have some competitive fun
+								</li>
+							</ul>
+							<SubHeading>Frustrations</SubHeading>
+							<ul>
+								<li>
+									Entering info quickly and easily
+								</li>
+								<li>
+									Mobile experience
+								</li>
+								<li>
+									Seeing change in data over time
+								</li>
+							</ul>
+							<SubHeading>Motivations</SubHeading>
+							<ul>
+								<li>
+									Winning
+								</li>
+								<li>
+									Improving skills
+								</li>
+								<li>
+									Prizes and bets
+								</li>
+							</ul>
+						</div>
+					</ItemGrid>
+				</div>
+				<Spacer />
 				<SubHeading>Competitive Research</SubHeading>
 			</ContentBlock>
 			<ContentBlock className={classes.blueBackground}>
