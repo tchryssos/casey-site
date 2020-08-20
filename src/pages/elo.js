@@ -23,13 +23,14 @@ import ELOAltLogo from 'static/images/ELO/elo-alt-logos.png'
 import ELOLogoBlack from 'static/images/ELO/elo-logo-01.png'
 import ELOLogoYellow from 'static/images/ELO/elo-logo-02.png'
 import Test from 'static/images/ELO/test.png'
-import UserFlow from 'static/images/ELO/userflow-03.png'
-import UserFlow2 from 'static/images/ELO/userflow-returning.png'
-import NewWires from 'static/images/ELO/newUserWires.png'
-import ReturningWires from 'static/images/ELO/returningUserWires.png'
 import UIKit from 'static/images/ELO/UIKit_2.png'
 import Visual1 from 'static/images/ELO/sideBySide-01.png'
 import Visual2 from 'static/images/ELO/sideBySide-02.png'
+import Competitors from 'static/images/ELO/competitors-01.png'
+import WireDisabled from 'static/images/ELO/wire.png'
+import finalflow from 'static/images/ELO/final.png'
+import complexWire from 'static/images/ELO/complexWire.png'
+
 
 const useStyles = createUseStyles({
 	headerColor: {
@@ -40,6 +41,11 @@ const useStyles = createUseStyles({
 	},
 	lightYellow: {
 		backgroundColor: '#fad793',
+	},
+	persona: {
+		backgroundColor: '#fad793',
+		padding: 16,
+		borderRadius: 10,
 	},
 	whiteBlock: {
 		backgroundColor: 'white',
@@ -66,6 +72,9 @@ const useStyles = createUseStyles({
 			paddingTop: 150,
 			transform: 'translateY(-100px)',
 		},
+	},
+	highlight: {
+		backgroundColor: 'white',
 	},
 })
 
@@ -99,19 +108,22 @@ export default () => {
 					<Image className={classes.half} src={Test} />
 				</ItemGrid>
 				<Spacer />
+				<SubHeading>Main Goal</SubHeading>
+				<Spacer />
 				<Body>
-					xyz fgh
+					Define and build out an MVP of the product that will allow people playing games together to track their ranking among the group.
 				</Body>
 			</ContentBlock>
 			<ContentBlock className={classes.whiteBlock}>
 				<Heading>Understanding the user</Heading>
 				<Spacer />
-				<div className={classes.lightYellow}>
+				<Body>
+					I interviewed a handful of people who play games with freinds regularly and used their statements to create the following persona.
+				</Body>
+				<Spacer />
+				<div className={classes.persona}>
 					<ItemGrid>
 						<div className={classes.half}>
-							<div>
-								photo
-							</div>
 							<div>
 								<Heading>Sam</Heading>
 								<SubHeading>The Avid Gamer</SubHeading>
@@ -154,65 +166,56 @@ export default () => {
 						</div>
 					</ItemGrid>
 				</div>
+				<Spacer height={3} />
+				<SubHeading>What are people using now?</SubHeading>
 				<Spacer />
-				<SubHeading>Competitive Research</SubHeading>
+				<Body>
+					People who are tracking games now, are using tools as simple as the notes app so we have to make sure that using this app is just as easy. More serious gamers are using very complex tools like Challonge where leaderboards are hidden behind complicated UI.
+				</Body>
+				<Image src={Competitors} size="full" />
 			</ContentBlock>
 			<ContentBlock className={classes.blueBackground}>
 				<Heading>Building with a user-centered approach</Heading>
 				<Spacer />
-				<Body>The first and most important task that I focused on was allowing users to submit whether they won or lost a game. After I got some feedback on this flow, I decided to map out the flow for someone using the app for the first time to set up a game as a second priority.</Body>
-				<div ref={scrollingContainer}>
-					<ItemGrid stackedOnMobile startAligned>
-						<div
-							ref={scrollingTextContainer}
-							className={clsx(
-								classes.half,
-								classes.scrollTextPadding,
-							)}
-						>
-							<Body>NEW USER TASK</Body>
-							<SubHeading>
-								I want to try this new tool to track my game
-							</SubHeading>
-						</div>
-						<div className={classes.half}>
-							<Image src={UserFlow} size="full" />
-						</div>
-					</ItemGrid>
-				</div>
+				<Spacer height={2} />
+				<Body>THE MAIN USER TASK</Body>
+				<SubHeading>
+					I just beat my friend at a game and&nbsp;
+					<span className={classes.highlight}>&nbsp;I need to&nbsp;</span>
+					&nbsp;submit this match and see how it affects my ranking
+				</SubHeading>
 				<Spacer />
-				<Body>New User Task Wireframes</Body>
-				<Image src={NewWires} size="full" />
-				<Body>Prototype for testing</Body>
+				<ItemGrid>
+					<div className={classes.half}>
+						<SubHeading>
+							Iterating on wireframes
+						</SubHeading>
+						<Spacer />
+						<Body>
+							Originally I wanted to lead new users to create a leaderboard before they could submit a match by disabling some CTAs and highlighting others. I quickly realized that I could let the user click where they wanted to if I could help navigate them to complete the necessary tasks in the back end.
+						</Body>
+					</div>
+					<Image src={WireDisabled} size="full" className={classes.half} />
+				</ItemGrid>
+				<SubHeading>Ajdusting for a user-centered experience</SubHeading>
+				<Spacer />
+				<Body>
+					I adjusted this flow so that before filling out the form to submit a match, users had to select a game. If there were no games, I could populate the form to create a game instead of blocking pathways that a user would want to take.
+				</Body>
+				<Image src={finalflow} size="full" />
+				<SubHeading>
+					Building functional prototypes
+				</SubHeading>
+				<Spacer />
+				<Body>
+					To test these flows I built out two prototypes
+				</Body>
+				<Image src={complexWire} size="full" />
 				<VideoPlayer
 					src="https://player.vimeo.com/video/448968438?loop=1"
 					title="Prototype Animation"
 					aspectRatio="1:1"
 				/>
-				<div ref={scrollingContainer2}>
-					<ItemGrid stackedOnMobile startAligned>
-						<div
-							ref={scrollingTextContainer2}
-							className={clsx(
-								classes.half,
-								classes.scrollTextPadding,
-							)}
-						>
-							<Body>RETURNING USER TASK</Body>
-							<SubHeading>
-								I just beat my friend at a game andI need to
-								submit this match and see how it affects my ranking
-							</SubHeading>
-						</div>
-						<div className={classes.half}>
-							<Image src={UserFlow2} size="full" />
-						</div>
-					</ItemGrid>
-				</div>
-				<Spacer />
-				<Body>Returning User Task Wireframes</Body>
-				<Image src={ReturningWires} size="full" />
-				<Body>Prototype for testing</Body>
 				<VideoPlayer
 					src="https://player.vimeo.com/video/448970796?loop=1"
 					title="Prototype Animation"
