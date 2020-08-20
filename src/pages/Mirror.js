@@ -1,12 +1,12 @@
-import React, { useEffect, useRef, useContext } from 'react'
+import React, { useRef } from 'react'
 import { createUseStyles } from 'react-jss'
 import clsx from 'clsx'
 
 import {
-	MD_MIN_STRING, MD_MIN_VALUE,
+	MD_MIN_STRING,
 } from 'constants/styles/breakpoints'
 
-import ScrollContext from 'contexts/scroll'
+import useScrollingText from 'effects/useScrollingText'
 
 import PageWrapper from 'components/PageWrapper'
 import ContentBlock from 'components/ContentBlock'
@@ -93,7 +93,6 @@ const useStyles = createUseStyles({
 
 export default () => {
 	const classes = useStyles()
-	const { getScroll } = useContext(ScrollContext)
 
 	const navLinks = [
 		{ link: 'brief' },
@@ -108,28 +107,9 @@ export default () => {
 	// START - PAGE SCROLL LOGIC - START
 	const scrollingContainer = useRef()
 	const scrollingTextContainer = useRef()
+	useScrollingText(scrollingContainer, scrollingTextContainer)
 
-	const scrollListener = () => {
-		if (window.innerWidth >= MD_MIN_VALUE) {
-			// @TODO rework this logic into a component or effect
-			const scrollOffset = getScroll()?.scrollTop - scrollingContainer.current.offsetTop
-			const containerHeight = scrollingContainer.current.offsetHeight
-			const textHeight = scrollingTextContainer.current.offsetHeight
-			if (scrollOffset >= -100 && scrollOffset <= containerHeight - textHeight) {
-				scrollingTextContainer.current.style.transform = `translateY(${scrollOffset}px)`
-			}
-		} else {
-			scrollingTextContainer.current.style.transform = 'translateY(0px)'
-		}
-	}
 
-	useEffect(() => {
-		const scrollZone = getScroll()
-		if (window.innerWidth >= MD_MIN_VALUE && scrollZone) {
-			scrollZone.addEventListener('scroll', scrollListener)
-		}
-		return () => scrollZone?.removeEventListener('scroll', scrollListener)
-	}, [])
 	// END - PAGE SCROLL LOGIC - END
 
 	return (

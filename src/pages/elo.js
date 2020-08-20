@@ -1,9 +1,12 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import { createUseStyles } from 'react-jss'
+import clsx from 'clsx'
 
 import {
 	MD_MIN_STRING,
 } from 'constants/styles/breakpoints'
+
+import useScrollingText from 'effects/useScrollingText'
 
 import PageWrapper from 'components/PageWrapper'
 import ContentBlock from 'components/ContentBlock'
@@ -58,10 +61,27 @@ const useStyles = createUseStyles({
 	visualDesignBlock2: {
 		backgroundColor: '#595959',
 	},
+	scrollTextPadding: {
+		[MD_MIN_STRING]: {
+			paddingTop: 150,
+			transform: 'translateY(-100px)',
+		},
+	},
 })
 
 export default () => {
 	const classes = useStyles()
+
+	// START - PAGE SCROLL LOGIC - START
+	const scrollingContainer = useRef()
+	const scrollingTextContainer = useRef()
+	useScrollingText(scrollingContainer, scrollingTextContainer)
+
+	const scrollingContainer2 = useRef()
+	const scrollingTextContainer2 = useRef()
+	useScrollingText(scrollingContainer2, scrollingTextContainer2)
+	// END - PAGE SCROLL LOGIC - END
+
 	return (
 		<PageWrapper>
 			<ContentBlock className={classes.headerColor}>
@@ -93,17 +113,26 @@ export default () => {
 				<Heading>Building with a user-centered approach</Heading>
 				<Spacer />
 				<Body>The first and most important task that I focused on was allowing users to submit whether they won or lost a game. After I got some feedback on this flow, I decided to map out the flow for someone using the app for the first time to set up a game as a second priority.</Body>
-				<ItemGrid>
-					<div className={classes.half}>
-						<Body>NEW USER TASK</Body>
-						<SubHeading>
-							I want to try this new tool to track my game
-						</SubHeading>
-					</div>
-					<div className={classes.half}>
-						<Image src={UserFlow} size="full" />
-					</div>
-				</ItemGrid>
+				<div ref={scrollingContainer}>
+					<ItemGrid stackedOnMobile startAligned>
+						<div
+							ref={scrollingTextContainer}
+							className={clsx(
+								classes.half,
+								classes.scrollTextPadding,
+							)}
+						>
+							<Body>NEW USER TASK</Body>
+							<SubHeading>
+								I want to try this new tool to track my game
+							</SubHeading>
+						</div>
+						<div className={classes.half}>
+							<Image src={UserFlow} size="full" />
+						</div>
+					</ItemGrid>
+				</div>
+				<Spacer />
 				<Body>New User Task Wireframes</Body>
 				<Image src={NewWires} size="full" />
 				<Body>Prototype for testing</Body>
@@ -112,18 +141,27 @@ export default () => {
 					title="Prototype Animation"
 					aspectRatio="1:1"
 				/>
-				<ItemGrid>
-					<div className={classes.half}>
-						<Body>RETURNING USER TASK</Body>
-						<SubHeading>
-							I just beat my friend at a game andI need to
-							submit this match and see how it affects my ranking
-						</SubHeading>
-					</div>
-					<div className={classes.half}>
-						<Image src={UserFlow2} size="full" />
-					</div>
-				</ItemGrid>
+				<div ref={scrollingContainer2}>
+					<ItemGrid stackedOnMobile startAligned>
+						<div
+							ref={scrollingTextContainer2}
+							className={clsx(
+								classes.half,
+								classes.scrollTextPadding,
+							)}
+						>
+							<Body>RETURNING USER TASK</Body>
+							<SubHeading>
+								I just beat my friend at a game andI need to
+								submit this match and see how it affects my ranking
+							</SubHeading>
+						</div>
+						<div className={classes.half}>
+							<Image src={UserFlow2} size="full" />
+						</div>
+					</ItemGrid>
+				</div>
+				<Spacer />
 				<Body>Returning User Task Wireframes</Body>
 				<Image src={ReturningWires} size="full" />
 				<Body>Prototype for testing</Body>
