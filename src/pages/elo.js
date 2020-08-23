@@ -22,7 +22,7 @@ import ELOStorybook from 'static/images/ELO/elo-storybook.png'
 import ELOAltLogo from 'static/images/ELO/elo-alt-logos.png'
 import ELOLogoBlack from 'static/images/ELO/elo-logo-01.png'
 import ELOLogoYellow from 'static/images/ELO/elo-logo-02.png'
-import Test from 'static/images/ELO/test.png'
+import Hero from 'static/images/ELO/hero.png'
 import UIKit from 'static/images/ELO/UIKit_2.png'
 import Visual1 from 'static/images/ELO/sideBySide-01.png'
 import Visual2 from 'static/images/ELO/sideBySide-02.png'
@@ -30,6 +30,8 @@ import Competitors from 'static/images/ELO/competitors-01.png'
 import WireDisabled from 'static/images/ELO/wire.png'
 import finalflow from 'static/images/ELO/final.png'
 import complexWire from 'static/images/ELO/complexWire.png'
+import testingScreenshot from 'static/images/ELO/testingScreenshot.png'
+import Persona from 'static/images/ELO/persona.png'
 
 
 const useStyles = createUseStyles({
@@ -76,6 +78,14 @@ const useStyles = createUseStyles({
 	highlight: {
 		backgroundColor: 'white',
 	},
+	personaName: {
+		display: 'flex',
+		alignItems: 'center',
+	},
+	personaImage: {
+		width: '30%',
+		marginRight: 8,
+	},
 })
 
 export default () => {
@@ -105,7 +115,7 @@ export default () => {
 							Role: Product Designer
 						</SubHeading>
 					</div>
-					<Image className={classes.half} src={Test} />
+					<Image className={classes.half} src={Hero} />
 				</ItemGrid>
 				<Spacer />
 				<SubHeading>Main Goal</SubHeading>
@@ -124,9 +134,12 @@ export default () => {
 				<div className={classes.persona}>
 					<ItemGrid>
 						<div className={classes.half}>
-							<div>
-								<Heading>Sam</Heading>
-								<SubHeading>The Avid Gamer</SubHeading>
+							<div className={classes.personaName}>
+								<Image src={Persona} className={classes.personaImage} />
+								<div>
+									<Heading>Sam</Heading>
+									<SubHeading>The Avid Gamer</SubHeading>
+								</div>
 							</div>
 						</div>
 						<div className={classes.half}>
@@ -257,12 +270,17 @@ export default () => {
 					100% of the users completed both tasks with no problems
 				</SubHeading>
 				<Spacer />
-				<SubHeading>
-					Multiple paths to completion
-				</SubHeading>
-				<Body>
-					I built the forms so that if a new user clicked the Submit a Match button and did not yet have any games set up they could be redirected to complete that form first. During testing, participants used both pathways to complete the task validating this choice.
-				</Body>
+				<ItemGrid>
+					<div className={classes.half}>
+						<SubHeading>
+							Multiple paths to completion
+						</SubHeading>
+						<Body>
+							I built the forms so that if a new user clicked the Submit a Match button and did not yet have any games set up they could be redirected to complete that form first. During testing, participants used both pathways to complete the task validating this choice.
+						</Body>
+					</div>
+					<Image src={testingScreenshot} className={classes.half} size="full" />
+				</ItemGrid>
 				<Spacer />
 				<SubHeading>
 					Too many options
