@@ -64,8 +64,11 @@ export default createUseStyles({
 	ChaseSapphire: {
 		transform: 'translate(0vw, -30vw)',
 	},
+	Mirror: {
+		transform: 'translate(0vw, -34vw)',
+	},
 	About: {
-		transform: 'translate(0vw, -40vw)',
+		transform: 'translate(0vw, -50vw)',
 	},
 	[MD_MIN_STRING]: {
 		linkWrapper: {
@@ -101,8 +104,11 @@ export default createUseStyles({
 		ChaseSapphire: {
 			transform: 'translate(-2vw, -15vw)',
 		},
+		Mirror: {
+			transform: 'translate(0vw, -16vw)',
+		},
 		About: {
-			transform: 'translate(0vw, -20vw)',
+			transform: 'translate(0vw, -23vw)',
 		},
 	},
 	[LG_MIN_STRING]: {

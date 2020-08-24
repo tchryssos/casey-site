@@ -176,7 +176,7 @@ const App = ({ location }) => {
 							/>
 							<Route
 								path={blobLinkData.ListenJay.link}
-								component={ListenJay}
+								component={ListenJayUXA}
 							/>
 							<Route
 								path={blobLinkData.About.link}
@@ -191,8 +191,8 @@ const App = ({ location }) => {
 								component={Mirror}
 							/>
 							<Route
-								path="/listenjay-uxa"
-								component={ListenJayUXA}
+								path="/listenjay-og"
+								component={ListenJay}
 							/>
 							<Route
 								path={blobLinkData.MensHealth.link}
