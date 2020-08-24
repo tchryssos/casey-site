@@ -13,7 +13,7 @@ import Body from 'components/Typography/Body'
 import ResumeButton from 'components/ResumeButton'
 import ItemGrid from 'components/ItemGrid'
 
-import addStickerListener from 'util/addStickerListener'
+import useStickers from 'effects/useStickers'
 
 const useStyles = createUseStyles({
 	stickerBoard: {
@@ -39,7 +39,7 @@ const useStyles = createUseStyles({
 
 export default () => {
 	const classes = useStyles()
-	addStickerListener() // this is a useEffect
+	useStickers()
 	return (
 		<div className={classes.stickerBoard} id="stickerBoard">
 			<PageWrapper>
