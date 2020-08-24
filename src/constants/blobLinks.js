@@ -5,7 +5,7 @@ import Portfolio from 'static/svg/home/Portfolio-4.svg'
 import MusicalRug from 'static/svg/home/MusicalRug-4.svg'
 import TheUprisingCreative from 'static/svg/home/TheUprisingCreative-4.svg'
 import ELO from 'static/svg/home/ELO-4.svg'
-import ListenJay from 'static/svg/home/ListenJay-4.svg'
+import ListenJay from 'static/svg/home/ListenJay-5.svg'
 import MensHealth from 'static/svg/home/MensHealth-4.svg'
 import Mirror from 'static/svg/home/Mirror-4.svg'
 
