@@ -190,10 +190,10 @@ const App = ({ location }) => {
 								path="/mirror"
 								component={Mirror}
 							/>
-							{/* <Route
-								path="/listenjay-uxa"
-								component={ListenJayUXA}
-							/> */}
+							<Route
+								path="/listenjay-og"
+								component={ListenJay}
+							/>
 							<Route
 								path={blobLinkData.MensHealth.link}
 								component={MensHealth}

@@ -7,6 +7,7 @@ import TheUprisingCreative from 'static/svg/home/TheUprisingCreative-4.svg'
 import ELO from 'static/svg/home/ELO-4.svg'
 import ListenJay from 'static/svg/home/ListenJay-4.svg'
 import MensHealth from 'static/svg/home/MensHealth-4.svg'
+import Mirror from 'static/svg/home/Mirror-4.svg'
 
 const blobLinkData = {
 	MensHealth: {
@@ -90,6 +91,15 @@ const blobLinkData = {
 		width: 50,
 		category: 'graphic',
 		descriptionText: 'Art Directing social campaigns for the hottest travel card',
+	},
+	Mirror: {
+		src: Mirror,
+		className: 'Mirror',
+		link: '/mirror',
+		altText: 'Mirror Case Study',
+		width: 70,
+		category: 'product',
+		descriptionText: 'DesignLab case study project focused on a clothing ecommerce site',
 	},
 	About: {
 		src: About,
