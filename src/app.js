@@ -176,7 +176,7 @@ const App = ({ location }) => {
 							/>
 							<Route
 								path={blobLinkData.ListenJay.link}
-								component={ListenJay}
+								component={ListenJayUXA}
 							/>
 							<Route
 								path={blobLinkData.About.link}
@@ -190,10 +190,10 @@ const App = ({ location }) => {
 								path="/mirror"
 								component={Mirror}
 							/>
-							<Route
+							{/* <Route
 								path="/listenjay-uxa"
 								component={ListenJayUXA}
-							/>
+							/> */}
 							<Route
 								path={blobLinkData.MensHealth.link}
 								component={MensHealth}

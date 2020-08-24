@@ -45,11 +45,11 @@ const blobLinkData = {
 		src: ListenJay,
 		className: 'ListenJay',
 		link: '/listen-jay',
-		altText: 'ListenJay UX/UI Design',
+		altText: 'ListenJay New Feature',
 		width: 50,
 		zIndex: 3,
 		category: 'product',
-		descriptionText: 'Rethinking the most trafficked page of a podcast discover platform',
+		descriptionText: 'Adding a feature to a podcast discovery platform',
 	},
 	TheUprisingCreative: {
 		src: TheUprisingCreative,
