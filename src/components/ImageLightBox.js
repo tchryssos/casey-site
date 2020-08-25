@@ -7,17 +7,23 @@ import ImageLightBoxModal from 'components/ImageLightBoxModal'
 
 const useStyles = createUseStyles({
 	imageWrapper: {
+		display: 'inline-flex',
+		'-webkit-appearance': 'none',
+		'-moz-appearance': 'none',
+		appearance: 'none',
+		background: 'none',
 		width: '100%',
 		padding: 0,
 		marginBottom: 16,
 		borderRadius: 0,
+		cursor: 'pointer',
+		border: '4px solid transparent',
+		'&:hover': {
+			border: '4px solid #4E7FFF',
+		},
 		[MD_MIN_STRING]: {
 			width: 'calc(50% - 8px)',
 			margin: 0,
-			cursor: 'pointer',
-			'&:hover': {
-				border: '4px solid #4E7FFF',
-			},
 		},
 	},
 	image: {
