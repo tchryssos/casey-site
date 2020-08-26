@@ -39,6 +39,11 @@ const useStyles = createUseStyles({
 		backgroundColor: '#346c63',
 		padding: 8,
 		color: 'white',
+		display: 'inline-flex',
+		'&:hover': {
+			backgroundColor: '#4e7fff',
+			transform: 'translate(5px, -5px)',
+		},
 	},
 	link: {
 		textDecoration: 'none',
@@ -120,7 +125,12 @@ export default () => {
 					<Spacer />
 					<Body>Katharine Lucic, Marketing Events Manager</Body>
 					<Spacer height={3} />
-					<a className={classes.link} href="https://www.linkedin.com/in/caseyebradford/">
+					<a
+						className={classes.link}
+						href="https://www.linkedin.com/in/caseyebradford/"
+						target="_blank"
+						rel="noreferrer"
+					>
 						<div className={classes.linkedInButton}>
 							<Body><b>Read more on my LinkedIn Profile</b></Body>
 						</div>
