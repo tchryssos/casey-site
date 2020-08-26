@@ -35,6 +35,14 @@ const useStyles = createUseStyles({
 			marginBottom: 0,
 		},
 	},
+	linkedInButton: {
+		backgroundColor: '#346c63',
+		padding: 8,
+		color: 'white',
+	},
+	link: {
+		textDecoration: 'none',
+	},
 })
 
 export default () => {
@@ -111,9 +119,11 @@ export default () => {
 					</SubHeading>
 					<Spacer />
 					<Body>Katharine Lucic, Marketing Events Manager</Body>
-					<Spacer />
-					<a href="https://www.linkedin.com/in/caseyebradford/">
-						<Body>Read more on my LinkedIn Profile</Body>
+					<Spacer height={3} />
+					<a className={classes.link} href="https://www.linkedin.com/in/caseyebradford/">
+						<div className={classes.linkedInButton}>
+							<Body><b>Read more on my LinkedIn Profile</b></Body>
+						</div>
 					</a>
 				</ContentBlock>
 			</PageWrapper>

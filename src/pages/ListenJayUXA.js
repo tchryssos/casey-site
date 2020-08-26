@@ -137,7 +137,7 @@ export default () => {
 			</ContentBlock>
 			<a name="discover" />
 			<div className={classes.sectionLabel}>
-				DISCOVER
+				Discover
 			</div>
 			<ContentBlock>
 				<Heading>
@@ -216,7 +216,7 @@ export default () => {
 			</ContentBlock>
 			<a name="define" />
 			<div className={classes.sectionLabel}>
-				DEFINE
+				Define
 			</div>
 			<ContentBlock className={classes.wiresBlock}>
 				<Heading>
@@ -260,7 +260,7 @@ export default () => {
 			</ContentBlock>
 			<a name="test" />
 			<div className={classes.sectionLabel}>
-				TEST
+				Test
 			</div>
 			<ContentBlock>
 				<Heading>
@@ -284,7 +284,7 @@ export default () => {
 			</ContentBlock>
 			<a name="learnings" />
 			<div className={classes.sectionLabel}>
-				LEARNINGS
+				Learnings
 			</div>
 			<ContentBlock className={classes.brandColorBlock}>
 				<Heading>What I learned from this project</Heading>

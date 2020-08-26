@@ -11,8 +11,10 @@ const useStyles = createUseStyles({
 		color: 'white',
 		display: 'block',
 		padding: 8,
+		textDecoration: 'none',
 		'&:hover': {
 			color: 'white',
+			backgroundColor: '#4e7fff',
 		},
 		'&:visited': {
 			color: 'white',

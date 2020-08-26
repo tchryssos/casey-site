@@ -92,6 +92,7 @@ const useStyles = createUseStyles({
 		color: 'white',
 		whiteSpace: 'nowrap',
 		textAlign: 'center',
+		fontSize: 16,
 	},
 })
 
@@ -150,7 +151,7 @@ export default () => {
 			{/* START - RESEARCH - START */}
 			<a name="research">
 				<div className={classes.sectionLabel}>
-					RESEARCH
+					Research
 				</div>
 				<ContentBlock className={classes.whiteBlock}>
 					<Heading>Understanding the user</Heading>
@@ -220,7 +221,7 @@ export default () => {
 			{/* START - ARCH - START */}
 			<a name="architecture">
 				<div className={classes.sectionLabel}>
-					ARCHITECTURE
+					Architecture
 				</div>
 				<ContentBlock className={classes.blueBackground}>
 					<Heading>Building with a user-centered approach</Heading>
@@ -275,7 +276,7 @@ export default () => {
 			{/* START - BRAND - START */}
 			<a name="branding">
 				<div className={classes.sectionLabel}>
-					BRANDING
+					Branding
 				</div>
 				<ContentBlock>
 					<Heading>Creating a visual design system</Heading>
@@ -307,7 +308,7 @@ export default () => {
 			{/* START - TEST - START */}
 			<a name="testing">
 				<div className={classes.sectionLabel}>
-					TESTING
+					Testing
 				</div>
 				<ContentBlock>
 					<Heading>Testing for Validation and Usability</Heading>
@@ -322,7 +323,7 @@ export default () => {
 					<ItemGrid>
 						<div className={classes.half}>
 							<SubHeading>
-								Multiple paths to completion
+								Offering multiple paths to completion
 							</SubHeading>
 							<Body>
 								I built the forms so that if a new user clicked the Submit a Match button and did not yet have any games set up they could be redirected to complete that form first. During testing, participants used both pathways to complete the task validating this choice.
@@ -332,7 +333,7 @@ export default () => {
 					</ItemGrid>
 					<Spacer />
 					<SubHeading>
-						Too many options
+						Reducing complexity
 					</SubHeading>
 					<Body>
 						Initially I added a setting for volatility when users were setting up a ranking board. This setting was meant to affect how much each game changed the rankings. Most participants were a little confused about this setting so I ultimately decided to remove it or build it in to advanced settings later.
@@ -343,7 +344,7 @@ export default () => {
 			{/* START - LEARNINGS - START */}
 			<a name="learnings">
 				<div className={classes.sectionLabel}>
-					LEARNINGS
+					Learnings
 				</div>
 				<ContentBlock className={classes.lightYellow}>
 					<Heading>Key Learnings</Heading>
