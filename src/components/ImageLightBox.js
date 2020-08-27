@@ -18,12 +18,12 @@ const useStyles = createUseStyles({
 		borderRadius: 0,
 		cursor: 'pointer',
 		border: '4px solid transparent',
-		'&:hover': {
-			border: '4px solid #4E7FFF',
-		},
 		[MD_MIN_STRING]: {
 			width: 'calc(50% - 8px)',
 			margin: 0,
+			'&:hover': {
+				border: '4px solid #4E7FFF',
+			},
 		},
 	},
 	image: {

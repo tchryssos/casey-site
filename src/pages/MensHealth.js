@@ -1,7 +1,6 @@
 import React from 'react'
 import { createUseStyles } from 'react-jss'
 import { MD_MIN_STRING } from 'constants/styles/breakpoints'
-import { sectionBlue } from 'constants/styles/colors'
 
 
 import PageWrapper from 'components/PageWrapper'
@@ -41,7 +40,7 @@ const useStyles = createUseStyles({
 		backgroundColor: '#DF7356',
 	},
 	sectionLabel: {
-		backgroundColor: sectionBlue,
+		backgroundColor: '#4e7fff',
 		padding: 8,
 		color: 'white',
 		whiteSpace: 'nowrap',
@@ -120,7 +119,7 @@ export default () => {
 			</ContentBlock>
 			<a name={discover} />
 			<div className={classes.sectionLabel}>
-				DISCOVER
+				Discover
 			</div>
 			<ContentBlock
 				className={classes.whiteBlock}
@@ -156,7 +155,7 @@ export default () => {
 			</ContentBlock>
 			<a name={define} />
 			<div className={classes.sectionLabel}>
-				DEFINE
+				Define
 			</div>
 			<ContentBlock
 				className={classes.blueBlock}
@@ -182,7 +181,7 @@ export default () => {
 			</ContentBlock>
 			<a name={design} />
 			<div className={classes.sectionLabel}>
-				DESIGN
+				Design
 			</div>
 			<ContentBlock
 				className={classes.whiteBlock}
@@ -217,7 +216,7 @@ export default () => {
 			</ContentBlock>
 			<a name={test} />
 			<div className={classes.sectionLabel}>
-				TEST
+				Test
 			</div>
 			<ContentBlock
 				className={classes.blueBlock}
@@ -250,7 +249,7 @@ export default () => {
 			</ContentBlock>
 			<a name={develop} />
 			<div className={classes.sectionLabel}>
-				DEVELOP
+				Develop
 			</div>
 			<ContentBlock
 				className={classes.whiteBlock}
