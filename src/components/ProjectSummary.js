@@ -22,7 +22,9 @@ const useStyles = createUseStyles({
 	projectLinkTypography: {
 		paddingTop: 24,
 		width: '100%',
+		textAlign: 'center',
 		[MD_MIN_STRING]: {
+			textAlign: 'left',
 			paddingLeft: 32,
 			width: '70%',
 		},
@@ -45,6 +47,9 @@ const useStyles = createUseStyles({
 			backgroundColor: '#4e7fff',
 		},
 	},
+	link: {
+		textDecoration: 'none',
+	},
 })
 
 export default ({
@@ -66,7 +71,7 @@ export default ({
 						{body}
 					</Body>
 					<Spacer />
-					<NavLink to={link} exact>
+					<NavLink to={link} exact className={classes.link}>
 						<div className={classes.viewButton}>
 							<Body><b>VIEW THE WORK</b></Body>
 						</div>

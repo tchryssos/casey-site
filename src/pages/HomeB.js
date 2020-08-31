@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import { createUseStyles } from 'react-jss'
 import { NavLink } from 'react-router-dom'
 
@@ -22,6 +22,14 @@ const useStyles = createUseStyles({
 		textAlign: 'center',
 		backgroundColor: 'white',
 	},
+	aboutLink: {
+		textDecoration: 'none',
+		borderBottom: '2px solid blue',
+		color: 'blue',
+	},
+	aboutBody: {
+		lineHeight: 1.75,
+	},
 })
 
 const HomeB = () => {
@@ -33,9 +41,9 @@ const HomeB = () => {
 					I am a product designer with an extensive background in brand and marketing design.
 				</Heading>
 				<Spacer />
-				<Body>
+				<Body className={classes.aboutBody}>
 					Read more about me&nbsp;
-					<NavLink to="/about" exact>
+					<NavLink className={classes.aboutLink} to="/about" exact>
 						here
 					</NavLink>
 					&nbsp;and view my most recent work below
