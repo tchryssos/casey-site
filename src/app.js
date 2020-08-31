@@ -8,7 +8,7 @@ import clsx from 'clsx'
 
 import blobLinkData from 'constants/blobLinks'
 import { MD_MIN_VALUE, MD_MIN_STRING } from 'constants/styles/breakpoints'
-import { AltHomePath } from 'constants/navigation'
+import { AltHomePath, HomePath } from 'constants/navigation'
 import MenuContext from 'contexts/menu'
 import ScrollContext from 'contexts/scroll'
 import PageGatingContext from 'contexts/pageGating'
@@ -157,7 +157,8 @@ const App = ({ location }) => {
 							}
 						>
 							<Switch>
-								<Route path="/" exact component={Home} />
+								<Route path={HomePath} exact component={Home} />
+								<Route path={AltHomePath} component={HomeB} />
 								<Route
 									path={blobLinkData.FISMarketing.link}
 									component={FISMarketing}
@@ -206,13 +207,7 @@ const App = ({ location }) => {
 									path={blobLinkData.MensHealth.link}
 									component={MensHealth}
 								/>
-								<Route
-									path={AltHomePath}
-									component={HomeB}
-								/>
-								<Route
-									component={FourOhFour}
-								/>
+								<Route component={FourOhFour} />
 							</Switch>
 						</div>
 					</div>

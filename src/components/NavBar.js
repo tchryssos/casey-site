@@ -1,7 +1,9 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import clsx from 'clsx'
 import { NavLink } from 'react-router-dom'
 import MenuContext from 'contexts/menu'
+import PageGatingContext from 'contexts/pageGating'
+import { AltHomePath, HomePath } from 'constants/navigation'
 import MenuText from 'components/Typography/MenuText'
 import MenuRoutes from 'components/MenuRoutes'
 import useStyles from './navBarStyles'
@@ -9,6 +11,7 @@ import useStyles from './navBarStyles'
 
 export default () => {
 	const classes = useStyles()
+	const { isAltHome } = useContext(PageGatingContext)
 	return (
 		<MenuContext.Consumer>
 			{({ isMenuOpen, setIsMenuOpen }) => (
@@ -51,7 +54,7 @@ export default () => {
 										classes.logo,
 									)
 								}
-								to="/"
+								to={isAltHome ? AltHomePath : HomePath}
 								exact
 							>
 								<MenuText>Casey</MenuText>
