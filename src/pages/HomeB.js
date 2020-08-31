@@ -1,5 +1,8 @@
 import React from 'react'
 import { createUseStyles } from 'react-jss'
+import { NavLink } from 'react-router-dom'
+
+import blobLinkData from 'constants/blobLinks'
 
 import PageWrapper from 'components/PageWrapper'
 import ContentBlock from 'components/ContentBlock'
@@ -31,7 +34,11 @@ export default () => {
 				</Heading>
 				<Spacer />
 				<Body>
-					Read more about me here and view my most recent work below
+					Read more about me&nbsp;
+					<NavLink to="/about" exact>
+						here
+					</NavLink>
+					&nbsp;and view my most recent work below
 				</Body>
 			</ContentBlock>
 			<ContentBlock>
@@ -40,35 +47,35 @@ export default () => {
 					body="Updating the branding and website design for a men&apos;s health clinic"
 					tag="DESIGNLAB CASE STUDY"
 					imageSrc={MHHBlob}
-					link=""
+					link={blobLinkData.MensHealth.link}
 				/>
 				<ProjectSummary
 					heading="Flatiron School Marketing"
 					body="Managing a creative team working on everything including out-of-home, video, organic and paid social"
 					tag="Marketing Design Leadership"
 					imageSrc={FISBlob}
-					link=""
+					link={blobLinkData.FISMarketing.link}
 				/>
 				<ProjectSummary
 					heading="End to End App Design for a Gaming Tool"
 					body="Building a tool for people playing games to track their ranking amongst friends"
 					tag="DESIGNLAB CASE STUDY"
 					imageSrc={ELOBlob}
-					link=""
+					link={blobLinkData.ELO.link}
 				/>
 				<ProjectSummary
 					heading="ListenJay Quote Creation Feature"
 					body="Adding a feature to a podcast discovery platform"
 					tag="DESIGNLAB CASE STUDY"
 					imageSrc={ListenJayBlob}
-					link=""
+					link={blobLinkData.ListenJay.link}
 				/>
 				<ProjectSummary
 					heading="Ecommerce Website Design"
 					body="DesignLab case study project focused on a clothing ecommerce site"
 					tag="DesignLab Case Study"
 					imageSrc={MirrorBlob}
-					link=""
+					link="/mirror"
 				/>
 			</ContentBlock>
 		</PageWrapper>
