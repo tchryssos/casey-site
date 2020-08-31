@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { createUseStyles } from 'react-jss'
 import { NavLink } from 'react-router-dom'
 
@@ -24,7 +24,7 @@ const useStyles = createUseStyles({
 	},
 })
 
-export default () => {
+const HomeB = () => {
 	const classes = useStyles()
 	return (
 		<PageWrapper>
@@ -81,3 +81,5 @@ export default () => {
 		</PageWrapper>
 	)
 }
+
+export default HomeB

@@ -72,6 +72,7 @@ const blobLinkData = {
 		zIndex: 3,
 		category: 'product',
 		descriptionText: 'Designing this website you\'re on right now',
+		hideOnAltHome: true,
 	},
 	MusicalRug: {
 		src: MusicalRug,
