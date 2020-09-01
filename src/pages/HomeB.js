@@ -38,7 +38,7 @@ const HomeB = () => {
 		<PageWrapper>
 			<ContentBlock className={classes.aboutMeHeader}>
 				<Heading>
-					I am a product designer with an extensive background in brand and marketing design.
+					I am a product designer with an extensive background in brand and marketing&nbsp;design.
 				</Heading>
 				<Spacer />
 				<Body className={classes.aboutBody}>
