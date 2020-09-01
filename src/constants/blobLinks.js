@@ -62,6 +62,7 @@ const blobLinkData = {
 		category: 'graphic',
 		descriptionText: 'Print and web projects from my internship at an LA based design studio',
 		descriptionAlignment: 'left',
+		hideOnAltHome: true,
 	},
 	Portfolio: {
 		src: Portfolio,
@@ -72,6 +73,7 @@ const blobLinkData = {
 		zIndex: 3,
 		category: 'product',
 		descriptionText: 'Designing this website you\'re on right now',
+		hideOnAltHome: true,
 	},
 	MusicalRug: {
 		src: MusicalRug,
@@ -82,6 +84,7 @@ const blobLinkData = {
 		category: 'graphic',
 		descriptionText: 'Combining software and hardware skills to create a textile that plays sound upon touch',
 		descriptionAlignment: 'left',
+		hideOnAltHome: true,
 	},
 	ChaseSapphire: {
 		src: ChaseSapphire,
@@ -91,6 +94,7 @@ const blobLinkData = {
 		width: 50,
 		category: 'graphic',
 		descriptionText: 'Art Directing social campaigns for the hottest travel card',
+		hideOnAltHome: true,
 	},
 	Mirror: {
 		src: Mirror,

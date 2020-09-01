@@ -1,8 +1,10 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { NavLink } from 'react-router-dom'
 import { createUseStyles } from 'react-jss'
+import PageGatingContext from 'contexts/pageGating'
 import { MD_MIN_STRING } from 'constants/styles/breakpoints'
 import blobLinkData from 'constants/blobLinks'
+import orNull from 'util/orNull'
 
 const useStyles = createUseStyles({
 	menuLinkWrapper: {
@@ -39,25 +41,27 @@ const MenuLink = ({ className, link, text }) => (
 	</NavLink>
 )
 
-const renderMenuLinks = (classes) => (
+const MenuLinks = ({ classes, isAltHome }) => (
 	Object.keys(blobLinkData).map((key) => {
-		const { link, altText } = blobLinkData[key]
-		return (
+		const { link, altText, hideOnAltHome } = blobLinkData[key]
+		return orNull(
+			!(hideOnAltHome && isAltHome),
 			<MenuLink
 				className={classes.menuLink}
 				link={link}
 				text={altText}
 				key={key}
-			/>
+			/>,
 		)
 	})
 )
 
 export default () => {
 	const classes = useStyles()
+	const { isAltHome } = useContext(PageGatingContext)
 	return (
 		<div className={classes.menuLinkWrapper}>
-			{renderMenuLinks(classes)}
+			<MenuLinks classes={classes} isAltHome={isAltHome} />
 		</div>
 	)
 }

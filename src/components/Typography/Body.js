@@ -1,5 +1,6 @@
 import React from 'react'
 import { createUseStyles } from 'react-jss'
+import clsx from 'clsx'
 import { MD_MIN_STRING } from 'constants/styles/breakpoints'
 
 const useStyles = createUseStyles({
@@ -13,11 +14,15 @@ const useStyles = createUseStyles({
 	},
 })
 
-export default ({ children }) => {
+export default ({ children, className }) => {
 	const classes = useStyles()
 	return (
 		<div>
-			<p className={classes.bodyFont}>
+			<p className={clsx(
+				classes.bodyFont,
+				className,
+			)}
+			>
 				{children}
 			</p>
 		</div>
