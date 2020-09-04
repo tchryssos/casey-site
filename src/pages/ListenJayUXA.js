@@ -148,12 +148,14 @@ export default () => {
 					Conducting User Interviews
 				</SubHeading>
 				<Spacer />
-				<Body> I interviewed a few podcasters with relatively new or small podcasts about how they were getting their shows off the ground.</Body>
+				<Body> I interviewed a few podcasters with relatively new or small podcasts about how they were getting their shows off the ground. Since no one in my immediate network has a podcast I did a lot of cold outreach to podcast hosts and online podcasting communities to recruit participants.</Body>
 				<ItemGrid>
 					<div className={classes.third}>
 						<Image src={Interviews} size="full" />
 					</div>
 					<div className={classes.twoThirds}>
+						<Body>KEY TAKEAWAYS</Body>
+						<Spacer />
 						<div>
 							<div className={classes.ballName}>
 								<div className={classes.blueBall} />
@@ -181,6 +183,9 @@ export default () => {
 					Defining the persona for this feature
 				</SubHeading>
 				<Spacer />
+				<Body>
+					ListenJay has features that serve both podcast listeners and podcast hosts. When I was collaborating with the ListenJay team to create this feature, I learned that they did not know much about what podcasters actually needed or used currently so I decided to create a persona for their tools aimed at the podcast hosts and producers themselves. This persona is based on the key takeaways from my user interviews above.
+				</Body>
 				<ItemGrid stackedOnMobile>
 					<div
 						className={clsx(
@@ -227,7 +232,7 @@ export default () => {
 					Creating a user flow
 				</SubHeading>
 				<Body>
-					The focus of this project was on a user flow that started from the transcript editor page on ListenJay and ended with users downloading their graphics.
+					Many of the users I interviewed described a process where they would edit a transcript or listen back to a show in order to find quotes to share on social. They would then go into Canva or a similar tool to create graphics from these quotes. My goal with this feature was to allow all of that process to happen in one place.
 				</Body>
 				<Image src={UserFlow} size="full" />
 				<SubHeading>
@@ -237,7 +242,23 @@ export default () => {
 					I used Figma to bring pen and paper sketched to life. I built out the wire frames using components that would be easy to adjust when adding visual design.
 				</Body>
 				<Image src={WireSketch} size="full" />
+				<SubHeading>
+					Initial Wireframes
+				</SubHeading>
+				<Spacer />
+				<SubHeading>
+					The Transcript Editor
+				</SubHeading>
+				<Body>
+					My goal with this page was to create a way for users to easily highlight quotes and bring them into the design editor. I looked at many other transcript services to identify design patterns that would be successful here including Sonix which used a similar highlight functionality.
+				</Body>
 				<Image src={Wireframe00} size="full" />
+				<SubHeading>
+					The Quote Editor
+				</SubHeading>
+				<Body>
+					During my user interviews I found that many podcasters are wearing a lot of hats to support their show. Most of them are not designers and need quick and easy ways to produce promotional graphics. I wanted this editor to allow customization but be relatively simple in nature for my initial testing where I could identify additional editing needs.
+				</Body>
 				<Image src={Wireframe01} size="full" />
 			</ContentBlock>
 			<a name="design" />
@@ -249,12 +270,18 @@ export default () => {
 					Visual Designs
 				</Heading>
 				<Spacer />
-				<Body>I updated the branding for ListenJay as part of another project for them and used that new design system to build out these pages.</Body>
+				<Body>I updated the branding for ListenJay as part of another project for them and used that new design system to build out the final pages. The following video shows the prototype that I built to test this flow.</Body>
 				<VideoPlayer
 					src="https://player.vimeo.com/video/444319554?loop=1"
 					title="Prototype Animation"
 					aspectRatio="16:9"
 				/>
+				<Spacer height={2} />
+				<SubHeading>Adding design</SubHeading>
+				<Body>
+					The ListenJay brand is bold and fun. They want to stand out from the stark and techy design of tools like Apple or Spotify and create a more friendly vibe.
+				</Body>
+				<Spacer />
 				<Image src={HifiTranscript} size="full" />
 				<Image src={HifiDesign} size="full" />
 			</ContentBlock>
