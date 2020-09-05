@@ -32,6 +32,9 @@ import finalflow from 'static/images/ELO/final.png'
 import complexWire from 'static/images/ELO/complexWire.png'
 import testingScreenshot from 'static/images/ELO/testingScreenshot.png'
 import Persona from 'static/images/ELO/persona.png'
+import ScoreKeep from 'static/images/ELO/scorekeep.png'
+import OGELO from 'static/images/ELO/Og-elo.png'
+import Roadmap from 'static/images/ELO/elo-roadmap.png'
 
 
 const useStyles = createUseStyles({
@@ -94,6 +97,11 @@ const useStyles = createUseStyles({
 		textAlign: 'center',
 		fontSize: 16,
 	},
+	quote: {
+		padding: '24px',
+		borderTop: '2px solid black',
+		backgroundColor: 'white',
+	},
 })
 
 export default () => {
@@ -120,7 +128,7 @@ export default () => {
 
 	return (
 		<PageWrapper>
-			<PageNav navLinkObjects={navLinks} />
+			{/* <PageNav navLinkObjects={navLinks} /> */}
 			{/* eslint-disable jsx-a11y/anchor-is-valid */}
 
 			{/* START - BRIEF - START */}
@@ -139,12 +147,6 @@ export default () => {
 						</div>
 						<Image className={classes.half} src={Hero} />
 					</ItemGrid>
-					<Spacer />
-					<SubHeading>Main Goal</SubHeading>
-					<Spacer />
-					<Body>
-						Define and build out an MVP of the product that will allow people playing games together to track their ranking among the group.
-					</Body>
 				</ContentBlock>
 			</a>
 
@@ -154,7 +156,55 @@ export default () => {
 					Research
 				</div>
 				<ContentBlock className={classes.whiteBlock}>
-					<Heading>Understanding the user</Heading>
+					<Heading>Defining the problem</Heading>
+					<Spacer />
+					<ItemGrid>
+						<Image src={ScoreKeep} className={classes.half} />
+						<div className={classes.half}>
+							<SubHeading>What are players using to keep score now?</SubHeading>
+							<Spacer />
+							<Body>
+								One of the most fun parts of playing games in having a little bit of competitive fun with friends. The tools available to track your score now range from something as simple as pen and paper to complex tools used by professional gamers and organizations but there&apos;s not much in between the two.
+							</Body>
+						</div>
+					</ItemGrid>
+					{/* <Image src={Competitors} size="full" /> */}
+					<Spacer />
+					<ItemGrid>
+						<div className={classes.half}>
+							<SubHeading>
+								Iterating from a first draft
+							</SubHeading>
+							<Spacer />
+							<Body>
+								This is the first draft that the developers working on this project orginally built on their own. It only worked for one group of friends and one game. This prototype was the jumping off point for a more robust project.
+							</Body>
+						</div>
+						<Image src={OGELO} className={classes.half} />
+					</ItemGrid>
+					<Spacer height={3} />
+					<Heading>Define, Research, Define Again</Heading>
+					<Spacer />
+					<ItemGrid>
+						<div className={classes.half}>
+							<SubHeading>
+								Building a product roadmap
+							</SubHeading>
+							<Spacer />
+							<Body>
+								In order to take this project to the next level, I sat down with the developers to define a set of features we would need. We sketched out some flows on a whiteboard and created a list of Github Issues to keep track of tasks.
+							</Body>
+						</div>
+						<Image src={Roadmap} className={classes.half} />
+					</ItemGrid>
+					<Spacer />
+					<SubHeading>
+						 Putting the user at the center
+					</SubHeading>
+					<Spacer />
+					<Body>
+						After making the long list of needs above, I decided it would be more helpful to understand what would be most valuable to the user to prioritize our efforts in more of an agile approach.
+					</Body>
 					<Spacer />
 					<Body>
 						I interviewed a handful of people who play games with freinds regularly and used their statements to create the following persona.
@@ -209,12 +259,6 @@ export default () => {
 						</ItemGrid>
 					</div>
 					<Spacer height={3} />
-					<SubHeading>What are people using now?</SubHeading>
-					<Spacer />
-					<Body>
-						People who are tracking games now, are using tools as simple as the notes app so we have to make sure that using this app is just as easy. More serious gamers are using very complex tools like Challonge where leaderboards are hidden behind complicated UI.
-					</Body>
-					<Image src={Competitors} size="full" />
 				</ContentBlock>
 			</a>
 
@@ -226,7 +270,21 @@ export default () => {
 				<ContentBlock className={classes.blueBackground}>
 					<Heading>Building with a user-centered approach</Heading>
 					<Spacer />
-					<Spacer height={2} />
+					<ItemGrid>
+						<div className={classes.half}>
+							<Body>
+								In our original roadmap we focused on including things like account setting and log in screens. After auditing this list under a more user-centered lens, we decided to focus on the flows that were bringing value to the user before getting into the nitty gritty details.
+							</Body>
+						</div>
+						<div className={classes.half}>
+							<div className={classes.quote}>
+								<Heading>
+									&ldquo;No one ever says, Oh, I can&apos;t wait to set up this new tool&rdquo;
+								</Heading>
+							</div>
+						</div>
+					</ItemGrid>
+					<Spacer height={3} />
 					<Body>THE MAIN USER TASK</Body>
 					<SubHeading>
 						I just beat my friend at a game and&nbsp;
@@ -257,7 +315,7 @@ export default () => {
 					</SubHeading>
 					<Spacer />
 					<Body>
-						To test these flows I built out two prototypes
+						To test these flows I built out two prototypes - one that mimicked the experience for a new user and one for a returning user.
 					</Body>
 					<Image src={complexWire} size="full" />
 					<VideoPlayer
@@ -281,13 +339,22 @@ export default () => {
 				<ContentBlock>
 					<Heading>Creating a visual design system</Heading>
 					<Spacer />
+					<SubHeading>Exploring visual direction</SubHeading>
+					<Spacer />
+					<Body>
+						ADD HERE
+					</Body>
+					<Spacer />
 					<SubHeading>Creating a logo</SubHeading>
 					<Spacer />
 					<Body>
 						We developed a list of many names for for the platform and once we landed on Ladders we created multiple logo options below.
 					</Body>
+					<Spacer />
+					<Body>Previous drafts of the logo</Body>
 					<Image size="full" src={ELOAltLogo} />
 					<Spacer />
+					<Body>Final logos</Body>
 					<ItemGrid>
 						<Image size="half" src={ELOLogoBlack} />
 						<Image size="half" src={ELOLogoYellow} />
