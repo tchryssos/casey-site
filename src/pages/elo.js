@@ -26,7 +26,6 @@ import Hero from 'static/images/ELO/hero.png'
 import UIKit from 'static/images/ELO/UIKit_2.png'
 import Visual1 from 'static/images/ELO/sideBySide-01.png'
 import Visual2 from 'static/images/ELO/sideBySide-02.png'
-import Competitors from 'static/images/ELO/competitors-01.png'
 import WireDisabled from 'static/images/ELO/wire.png'
 import finalflow from 'static/images/ELO/final.png'
 import complexWire from 'static/images/ELO/complexWire.png'
@@ -35,6 +34,7 @@ import Persona from 'static/images/ELO/persona.png'
 import ScoreKeep from 'static/images/ELO/scorekeep.png'
 import OGELO from 'static/images/ELO/Og-elo.png'
 import Roadmap from 'static/images/ELO/elo-roadmap.png'
+import Directions from 'static/images/ELO/elo-directions.png'
 
 
 const useStyles = createUseStyles({
@@ -109,11 +109,11 @@ export default () => {
 
 	const navLinks = [
 		{ link: 'brief' },
-		{ link: 'research' },
-		{ link: 'architecture' },
-		{ link: 'branding' },
-		{ link: 'testing' },
-		{ link: 'learnings' },
+		{ link: 'discover' },
+		{ link: 'define' },
+		{ link: 'design' },
+		{ link: 'deploy' },
+		{ link: 'learn' },
 	]
 
 	// START - PAGE SCROLL LOGIC - START
@@ -128,7 +128,7 @@ export default () => {
 
 	return (
 		<PageWrapper>
-			{/* <PageNav navLinkObjects={navLinks} /> */}
+			<PageNav navLinkObjects={navLinks} />
 			{/* eslint-disable jsx-a11y/anchor-is-valid */}
 
 			{/* START - BRIEF - START */}
@@ -151,9 +151,9 @@ export default () => {
 			</a>
 
 			{/* START - RESEARCH - START */}
-			<a name="research">
+			<a name="discover">
 				<div className={classes.sectionLabel}>
-					Research
+					DISCOVER
 				</div>
 				<ContentBlock className={classes.whiteBlock}>
 					<Heading>Defining the problem</Heading>
@@ -168,7 +168,6 @@ export default () => {
 							</Body>
 						</div>
 					</ItemGrid>
-					{/* <Image src={Competitors} size="full" /> */}
 					<Spacer />
 					<ItemGrid>
 						<div className={classes.half}>
@@ -199,7 +198,7 @@ export default () => {
 					</ItemGrid>
 					<Spacer />
 					<SubHeading>
-						 Putting the user at the center
+						Putting the user at the center
 					</SubHeading>
 					<Spacer />
 					<Body>
@@ -263,9 +262,9 @@ export default () => {
 			</a>
 
 			{/* START - ARCH - START */}
-			<a name="architecture">
+			<a name="define">
 				<div className={classes.sectionLabel}>
-					Architecture
+					DEFINE
 				</div>
 				<ContentBlock className={classes.blueBackground}>
 					<Heading>Building with a user-centered approach</Heading>
@@ -332,9 +331,9 @@ export default () => {
 			</a>
 
 			{/* START - BRAND - START */}
-			<a name="branding">
+			<a name="design">
 				<div className={classes.sectionLabel}>
-					Branding
+					DESIGN
 				</div>
 				<ContentBlock>
 					<Heading>Creating a visual design system</Heading>
@@ -342,8 +341,13 @@ export default () => {
 					<SubHeading>Exploring visual direction</SubHeading>
 					<Spacer />
 					<Body>
-						ADD HERE
+						When designing branding for Ladders, I wanted to explore an option that used primarily dark mode because it is a hallmark of video game culture. I also wanted to explore a colorful option on the other end of the spectrum to emphasize the playfulness surrounding games. What I landed on was a combination of both - using dark mode for usability but with a bright yellow to add a bold playful pop.
 					</Body>
+					<Spacer />
+					<Body>
+						Previous visual directions
+					</Body>
+					<Image src={Directions} size="full" />
 					<Spacer />
 					<SubHeading>Creating a logo</SubHeading>
 					<Spacer />
@@ -366,6 +370,8 @@ export default () => {
 				<ContentBlock className={classes.whiteBlock}>
 					<Heading>Final UI Designs</Heading>
 					<Spacer />
+					<Body>These are some of the main screens designed in order to test our main user flow.</Body>
+					<Spacer />
 					<Image size="full" src={Visual1} />
 					<Image size="full" src={Visual2} />
 					<Spacer />
@@ -373,9 +379,9 @@ export default () => {
 			</a>
 
 			{/* START - TEST - START */}
-			<a name="testing">
+			<a name="deploy">
 				<div className={classes.sectionLabel}>
-					Testing
+					DEPLOY
 				</div>
 				<ContentBlock>
 					<Heading>Testing for Validation and Usability</Heading>
@@ -409,9 +415,9 @@ export default () => {
 			</a>
 
 			{/* START - LEARNINGS - START */}
-			<a name="learnings">
+			<a name="learn">
 				<div className={classes.sectionLabel}>
-					Learnings
+					LEARN
 				</div>
 				<ContentBlock className={classes.lightYellow}>
 					<Heading>Key Learnings</Heading>
