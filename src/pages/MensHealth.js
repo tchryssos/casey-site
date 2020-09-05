@@ -1,6 +1,7 @@
 import React from 'react'
 import { createUseStyles } from 'react-jss'
 import { MD_MIN_STRING } from 'constants/styles/breakpoints'
+import clsx from 'clsx'
 
 
 import PageWrapper from 'components/PageWrapper'
@@ -27,6 +28,7 @@ import HomeDesktop from 'static/images/MensHealth/HomePage_Desktop2.png'
 import GainsWaveDesktop from 'static/images/MensHealth/GainsWave_Desktop.png'
 import MapModal from 'static/images/MensHealth/MapModal.png'
 import MHHHero from 'static/images/MensHealth/MHH_Hero.png'
+import HomeWires from 'static/images/MensHealth/homeWires.png'
 
 
 const useStyles = createUseStyles({
@@ -53,6 +55,9 @@ const useStyles = createUseStyles({
 			width: 'calc(50% - 8px)',
 			marginBottom: 0,
 		},
+	},
+	lastBlock: {
+		paddingBottom: 148,
 	},
 })
 
@@ -138,7 +143,7 @@ export default () => {
 				</SubHeading>
 				<Spacer />
 				<Body>
-					I interviewed a group of men between the ages of 35 and 55 about their health care habits and body goals to create the following personas.
+					I interviewed a group of men between the ages of 35 and 55 about their health care habits and body goals to create the following personas. I reached out to networks I was a part of to find men in the correct demographic and interviewed them over the phone.
 				</Body>
 				<Image src={Frank} size="full" />
 				<Image src={Tom} size="full" />
@@ -166,6 +171,9 @@ export default () => {
 				</Heading>
 				<Spacer />
 				<SubHeading>Auditing the Site Map</SubHeading>
+				<Body>
+					The original site was built with many pages that were serving overlapping purposes and some of the terminology was a little too medical for people to understand. In order to create a clear roadmap of the pages I would be working on I audited and streamlined the site map. You can seea snapshot of my process below.
+				</Body>
 				<Spacer />
 				<ItemGrid stackedOnMobile>
 					<ImageLightBox src={SiteMap1} />
@@ -175,9 +183,16 @@ export default () => {
 				<SubHeading>Creating wireframes from existing content</SubHeading>
 				<Spacer />
 				<Body>
-					One of the main goals with this project was to streamline the content on the pages to make it more digestible for users. Below is an example of how I
+					One of the main goals with this project was to streamline the content on the pages to make it more digestible for users. Below is an example of how I reorganized the existing content to be more straight forward and digestible.
 				</Body>
 				<Image src={CompareWires} size="full" />
+				<SubHeading>
+					Recognizing Design Patterns
+				</SubHeading>
+				<Body>
+					I looked at many competitor sites to understand how they were organizing their content. Most sites made it very clear what their services were from first glance. I wanted to create a visual navigation system on the home page that allowed user to get directly where they needed to go.
+				</Body>
+				<Image src={HomeWires} size="full" />
 			</ContentBlock>
 			<a name={design} />
 			<div className={classes.sectionLabel}>
@@ -200,15 +215,27 @@ export default () => {
 				</ItemGrid>
 				<Spacer />
 				<SubHeading>Creating new guidelines</SubHeading>
+				<Spacer />
+				<Body>
+					The clients wanted to update their branding to be more modern. Beyond their logo, they were open to changing everything. I used some of the blues from their original branding and expanded the palette to include a more bold orange. I created icons set that would emphasize a friendly approach and used a more clean and legible font to get their personality across.
+				</Body>
 				<Image src={MHHBranding} size="full" />
 			</ContentBlock>
 			<ContentBlock className={classes.orangeBlock}>
 				<Heading>Visual Designs</Heading>
+				<Spacer />
+				<Body>
+					I created a prototype to test with for usability and also to show the developer how I imagined the site working.
+				</Body>
 				<VideoPlayer
 					src="https://player.vimeo.com/video/440119937?loop=1"
 					title="Prototype Animation"
 					aspectRatio="16:9"
 				/>
+				<Spacer height={2} />
+				<Body>
+					The two pages that I focused the majority of my time on were the home page and a template for a service page. These pages contained the most specific components and these modules were reused on many other pages for easy scalability.
+				</Body>
 				<ItemGrid startAligned stackedOnMobile>
 					<Image className={classes.half} size="full" src={HomeDesktop} />
 					<Image className={classes.half} size="full" src={GainsWaveDesktop} />
@@ -223,6 +250,10 @@ export default () => {
 				blockId={test}
 			>
 				<Heading>Usability Testing</Heading>
+				<Spacer />
+				<Body>
+					I tested both the mobile and desktop prototypes with a handful of participants over Zoom.
+				</Body>
 				<Spacer />
 				<ItemGrid startAligned>
 					<div className={classes.half}>
@@ -252,8 +283,10 @@ export default () => {
 				Develop
 			</div>
 			<ContentBlock
-				className={classes.whiteBlock}
-				blockId={develop}
+				className={clsx(
+					classes.whiteBlock,
+					classes.lastBlock,
+				)}
 			>
 				<Heading>What did I learn from this project?</Heading>
 				<Spacer />

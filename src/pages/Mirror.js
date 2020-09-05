@@ -31,6 +31,8 @@ import SizeGuide from 'static/images/Mirror/SizeGuide.png'
 import HifiHome from 'static/images/Mirror/HifIHome.png'
 import HifiCategory from 'static/images/Mirror/HifiCategory.png'
 import HifiPDP from 'static/images/Mirror/HiFiPDP.png'
+import LogoEx from 'static/images/Mirror/logoExploration.png'
+import Sketches from 'static/images/Mirror/sketchesMirror.png'
 
 
 const useStyles = createUseStyles({
@@ -89,6 +91,9 @@ const useStyles = createUseStyles({
 			marginBottom: 0,
 		},
 	},
+	lastBlock: {
+		paddingBottom: 148,
+	},
 })
 
 export default () => {
@@ -138,6 +143,14 @@ export default () => {
 							/>
 						</div>
 					</ItemGrid>
+					<Spacer />
+					<Body>
+						Mirror wants to&nbsp;
+						<b>maintain it’s great customer service</b>
+						&nbsp;in its online shop, but also&nbsp;
+						<b>reach a new audience</b>
+						&nbsp;by adding an online experience that is modern and easy to use.
+					</Body>
 					<Spacer />
 					<Body>
 						This project was done as part of the curriculum for Design Lab&apos;s UX Academy. I completed the project on my own and was responsible for the research, UX/UI Design, and asset creation.
@@ -205,6 +218,9 @@ export default () => {
 					</ItemGrid>
 					<Spacer height={2} />
 					<SubHeading>Creating a site map</SubHeading>
+					<Body>
+						I organized the main shopping nav based on the results from my card sorting exercise. I also looked at common design patterns in other ecommerce sites to organize the footer and global nav content.
+					</Body>
 					<Image src={SiteMap} size="full" />
 				</ContentBlock>
 			</a>
@@ -241,6 +257,15 @@ export default () => {
 						<Image src={UserFlow} className={classes.half} />
 					</ItemGrid>
 				</div>
+				<Spacer />
+				<SubHeading>Getting started with some sketches</SubHeading>
+				<Body>
+					The first page I wante dto focus on was the home page. Below are two of my first sketches of this page.
+				</Body>
+				<Image src={Sketches} size="full" />
+				<Spacer />
+				<SubHeading>Seeing the pages in motion</SubHeading>
+				<Body>I created the below prototype from my wireframes to test the flow I laid out.</Body>
 				<VideoPlayer
 					src="https://player.vimeo.com/video/434350879?loop=1&autopause=0"
 					title="Prototype Animation"
@@ -270,6 +295,10 @@ export default () => {
 						<Image src={Logo} size="full" />
 					</div>
 				</ItemGrid>
+				<Body>
+					Previous drafts of the logo
+				</Body>
+				<Image src={LogoEx} size="full" />
 				<Spacer height={2} />
 				<SubHeading>Developing a Style Guide and UI Kit</SubHeading>
 				<Spacer />
@@ -286,8 +315,21 @@ export default () => {
 				<Body>
 					I used Figma to create visual designs for the key pages: Home Page, Category Page, and Product Detail Page.
 				</Body>
+				<Spacer />
+				<SubHeading>Home Page</SubHeading>
+				<Body>
+					In my reserach, most shoppers will filter directly down the category they are looking for.If they are lingering on the home page they are here to browse and will need some persuasion to click through to an item. This is why I put spaces for promotional campaigns and carousels of new arrivals on the homepage as well as a banner with a coupon code for first time visitors to encourage a purchase.
+				</Body>
 				<Image src={HifiHome} size="full" />
+				<SubHeading>Category Page</SubHeading>
+				<Body>
+					Most participants in the card sorting exercise chose to sort the items by the occasion for which they would wear them. This finding led me to place those filters larger and across the top of the page. Users also mentioned a desire to like or save things for later, which I built into the Mirror site.
+				</Body>
 				<Image src={HifiCategory} size="full" />
+				<SubHeading>Product Detail Page</SubHeading>
+				<Body>
+					I looked at many competitor sites to understand how I would best lay out the product detail page and images. I wanted to basic information to be front and center accompanied by a scrolling image gallery. I also wanted to make the reviews more visual for a quick read.
+				</Body>
 				<Image src={HifiPDP} size="full" />
 			</ContentBlock>
 			{/* END - BRAND - END */}
@@ -376,7 +418,12 @@ export default () => {
 					Learnings
 				</div>
 			</a>
-			<ContentBlock className={classes.mirrorColorSecondary}>
+			<ContentBlock
+				className={clsx(
+					classes.mirrorColorSecondary,
+					classes.lastBlock,
+				)}
+			>
 				<Heading>Key Learnings</Heading>
 				<Spacer />
 				<SubHeading>Research is important!</SubHeading>

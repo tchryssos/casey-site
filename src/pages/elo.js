@@ -26,12 +26,15 @@ import Hero from 'static/images/ELO/hero.png'
 import UIKit from 'static/images/ELO/UIKit_2.png'
 import Visual1 from 'static/images/ELO/sideBySide-01.png'
 import Visual2 from 'static/images/ELO/sideBySide-02.png'
-import Competitors from 'static/images/ELO/competitors-01.png'
 import WireDisabled from 'static/images/ELO/wire.png'
 import finalflow from 'static/images/ELO/final.png'
 import complexWire from 'static/images/ELO/complexWire.png'
 import testingScreenshot from 'static/images/ELO/testingScreenshot.png'
 import Persona from 'static/images/ELO/persona.png'
+import ScoreKeep from 'static/images/ELO/scorekeep.png'
+import OGELO from 'static/images/ELO/Og-elo.png'
+import Roadmap from 'static/images/ELO/elo-roadmap.png'
+import Directions from 'static/images/ELO/elo-directions.png'
 
 
 const useStyles = createUseStyles({
@@ -43,6 +46,7 @@ const useStyles = createUseStyles({
 	},
 	lightYellow: {
 		backgroundColor: '#fad793',
+		paddingBottom: 148,
 	},
 	persona: {
 		backgroundColor: '#fad793',
@@ -94,6 +98,11 @@ const useStyles = createUseStyles({
 		textAlign: 'center',
 		fontSize: 16,
 	},
+	quote: {
+		padding: '24px',
+		borderTop: '2px solid black',
+		backgroundColor: 'white',
+	},
 })
 
 export default () => {
@@ -101,11 +110,11 @@ export default () => {
 
 	const navLinks = [
 		{ link: 'brief' },
-		{ link: 'research' },
-		{ link: 'architecture' },
-		{ link: 'branding' },
-		{ link: 'testing' },
-		{ link: 'learnings' },
+		{ link: 'discover' },
+		{ link: 'define' },
+		{ link: 'design' },
+		{ link: 'deploy' },
+		{ link: 'learn' },
 	]
 
 	// START - PAGE SCROLL LOGIC - START
@@ -139,22 +148,63 @@ export default () => {
 						</div>
 						<Image className={classes.half} src={Hero} />
 					</ItemGrid>
-					<Spacer />
-					<SubHeading>Main Goal</SubHeading>
-					<Spacer />
-					<Body>
-						Define and build out an MVP of the product that will allow people playing games together to track their ranking among the group.
-					</Body>
 				</ContentBlock>
 			</a>
 
 			{/* START - RESEARCH - START */}
-			<a name="research">
+			<a name="discover">
 				<div className={classes.sectionLabel}>
-					Research
+					DISCOVER
 				</div>
 				<ContentBlock className={classes.whiteBlock}>
-					<Heading>Understanding the user</Heading>
+					<Heading>Defining the problem</Heading>
+					<Spacer />
+					<ItemGrid>
+						<Image src={ScoreKeep} className={classes.half} />
+						<div className={classes.half}>
+							<SubHeading>What are players using to keep score now?</SubHeading>
+							<Spacer />
+							<Body>
+								One of the most fun parts of playing games in having a little bit of competitive fun with friends. The tools available to track your score now range from something as simple as pen and paper to complex tools used by professional gamers and organizations but there&apos;s not much in between the two.
+							</Body>
+						</div>
+					</ItemGrid>
+					<Spacer />
+					<ItemGrid>
+						<div className={classes.half}>
+							<SubHeading>
+								Iterating from a first draft
+							</SubHeading>
+							<Spacer />
+							<Body>
+								This is the first draft that the developers working on this project orginally built on their own. It only worked for one group of friends and one game. This prototype was the jumping off point for a more robust project.
+							</Body>
+						</div>
+						<Image src={OGELO} className={classes.half} />
+					</ItemGrid>
+					<Spacer height={3} />
+					<Heading>Define, Research, Define Again</Heading>
+					<Spacer />
+					<ItemGrid>
+						<div className={classes.half}>
+							<SubHeading>
+								Building a product roadmap
+							</SubHeading>
+							<Spacer />
+							<Body>
+								In order to take this project to the next level, I sat down with the developers to define a set of features we would need. We sketched out some flows on a whiteboard and created a list of Github Issues to keep track of tasks.
+							</Body>
+						</div>
+						<Image src={Roadmap} className={classes.half} />
+					</ItemGrid>
+					<Spacer />
+					<SubHeading>
+						Putting the user at the center
+					</SubHeading>
+					<Spacer />
+					<Body>
+						After making the long list of needs above, I decided it would be more helpful to understand what would be most valuable to the user to prioritize our efforts in more of an agile approach.
+					</Body>
 					<Spacer />
 					<Body>
 						I interviewed a handful of people who play games with freinds regularly and used their statements to create the following persona.
@@ -209,24 +259,32 @@ export default () => {
 						</ItemGrid>
 					</div>
 					<Spacer height={3} />
-					<SubHeading>What are people using now?</SubHeading>
-					<Spacer />
-					<Body>
-						People who are tracking games now, are using tools as simple as the notes app so we have to make sure that using this app is just as easy. More serious gamers are using very complex tools like Challonge where leaderboards are hidden behind complicated UI.
-					</Body>
-					<Image src={Competitors} size="full" />
 				</ContentBlock>
 			</a>
 
 			{/* START - ARCH - START */}
-			<a name="architecture">
+			<a name="define">
 				<div className={classes.sectionLabel}>
-					Architecture
+					DEFINE
 				</div>
 				<ContentBlock className={classes.blueBackground}>
 					<Heading>Building with a user-centered approach</Heading>
 					<Spacer />
-					<Spacer height={2} />
+					<ItemGrid>
+						<div className={classes.half}>
+							<Body>
+								In our original roadmap we focused on including things like account setting and log in screens. After auditing this list under a more user-centered lens, we decided to focus on the flows that were bringing value to the user before getting into the nitty gritty details.
+							</Body>
+						</div>
+						<div className={classes.half}>
+							<div className={classes.quote}>
+								<Heading>
+									&ldquo;No one ever says, Oh, I can&apos;t wait to set up this new tool&rdquo;
+								</Heading>
+							</div>
+						</div>
+					</ItemGrid>
+					<Spacer height={3} />
 					<Body>THE MAIN USER TASK</Body>
 					<SubHeading>
 						I just beat my friend at a game and&nbsp;
@@ -257,7 +315,7 @@ export default () => {
 					</SubHeading>
 					<Spacer />
 					<Body>
-						To test these flows I built out two prototypes
+						To test these flows I built out two prototypes - one that mimicked the experience for a new user and one for a returning user.
 					</Body>
 					<Image src={complexWire} size="full" />
 					<VideoPlayer
@@ -274,20 +332,34 @@ export default () => {
 			</a>
 
 			{/* START - BRAND - START */}
-			<a name="branding">
+			<a name="design">
 				<div className={classes.sectionLabel}>
-					Branding
+					DESIGN
 				</div>
 				<ContentBlock>
 					<Heading>Creating a visual design system</Heading>
+					<Spacer />
+					<SubHeading>Exploring visual direction</SubHeading>
+					<Spacer />
+					<Body>
+						When designing branding for Ladders, I wanted to explore an option that used primarily dark mode because it is a hallmark of video game culture. I also wanted to explore a colorful option on the other end of the spectrum to emphasize the playfulness surrounding games. What I landed on was a combination of both - using dark mode for usability but with a bright yellow to add a bold playful pop.
+					</Body>
+					<Spacer />
+					<Body>
+						Previous visual directions
+					</Body>
+					<Image src={Directions} size="full" />
 					<Spacer />
 					<SubHeading>Creating a logo</SubHeading>
 					<Spacer />
 					<Body>
 						We developed a list of many names for for the platform and once we landed on Ladders we created multiple logo options below.
 					</Body>
+					<Spacer />
+					<Body>Previous drafts of the logo</Body>
 					<Image size="full" src={ELOAltLogo} />
 					<Spacer />
+					<Body>Final logos</Body>
 					<ItemGrid>
 						<Image size="half" src={ELOLogoBlack} />
 						<Image size="half" src={ELOLogoYellow} />
@@ -299,6 +371,8 @@ export default () => {
 				<ContentBlock className={classes.whiteBlock}>
 					<Heading>Final UI Designs</Heading>
 					<Spacer />
+					<Body>These are some of the main screens designed in order to test our main user flow.</Body>
+					<Spacer />
 					<Image size="full" src={Visual1} />
 					<Image size="full" src={Visual2} />
 					<Spacer />
@@ -306,9 +380,9 @@ export default () => {
 			</a>
 
 			{/* START - TEST - START */}
-			<a name="testing">
+			<a name="deploy">
 				<div className={classes.sectionLabel}>
-					Testing
+					DEPLOY
 				</div>
 				<ContentBlock>
 					<Heading>Testing for Validation and Usability</Heading>
@@ -342,9 +416,9 @@ export default () => {
 			</a>
 
 			{/* START - LEARNINGS - START */}
-			<a name="learnings">
+			<a name="learn">
 				<div className={classes.sectionLabel}>
-					Learnings
+					LEARN
 				</div>
 				<ContentBlock className={classes.lightYellow}>
 					<Heading>Key Learnings</Heading>
