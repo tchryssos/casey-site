@@ -93,6 +93,9 @@ const useStyles = createUseStyles({
 	brandColorBlock: {
 		backgroundColor: '#FFEAC8',
 	},
+	lastBlock: {
+		paddingBottom: 148,
+	},
 })
 
 export default () => {
@@ -313,7 +316,12 @@ export default () => {
 			<div className={classes.sectionLabel}>
 				Learnings
 			</div>
-			<ContentBlock className={classes.brandColorBlock}>
+			<ContentBlock
+				className={clsx(
+					classes.brandColorBlock,
+					classes.lastBlock,
+				)}
+			>
 				<Heading>What I learned from this project</Heading>
 				<Spacer />
 				<SubHeading>Finding participants can be a challenge</SubHeading>

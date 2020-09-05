@@ -46,6 +46,7 @@ const useStyles = createUseStyles({
 	},
 	lightYellow: {
 		backgroundColor: '#fad793',
+		paddingBottom: 148,
 	},
 	persona: {
 		backgroundColor: '#fad793',

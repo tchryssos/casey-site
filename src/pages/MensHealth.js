@@ -1,6 +1,7 @@
 import React from 'react'
 import { createUseStyles } from 'react-jss'
 import { MD_MIN_STRING } from 'constants/styles/breakpoints'
+import clsx from 'clsx'
 
 
 import PageWrapper from 'components/PageWrapper'
@@ -54,6 +55,9 @@ const useStyles = createUseStyles({
 			width: 'calc(50% - 8px)',
 			marginBottom: 0,
 		},
+	},
+	lastBlock: {
+		paddingBottom: 148,
 	},
 })
 
@@ -279,8 +283,10 @@ export default () => {
 				Develop
 			</div>
 			<ContentBlock
-				className={classes.whiteBlock}
-				blockId={develop}
+				className={clsx(
+					classes.whiteBlock,
+					classes.lastBlock,
+				)}
 			>
 				<Heading>What did I learn from this project?</Heading>
 				<Spacer />

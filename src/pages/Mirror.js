@@ -91,6 +91,9 @@ const useStyles = createUseStyles({
 			marginBottom: 0,
 		},
 	},
+	lastBlock: {
+		paddingBottom: 148,
+	},
 })
 
 export default () => {
@@ -415,7 +418,12 @@ export default () => {
 					Learnings
 				</div>
 			</a>
-			<ContentBlock className={classes.mirrorColorSecondary}>
+			<ContentBlock
+				className={clsx(
+					classes.mirrorColorSecondary,
+					classes.lastBlock,
+				)}
+			>
 				<Heading>Key Learnings</Heading>
 				<Spacer />
 				<SubHeading>Research is important!</SubHeading>
