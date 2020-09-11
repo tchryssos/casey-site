@@ -73,10 +73,6 @@ export default () => {
 					&nbsp;and view my most recent work below
 				</Body>
 			</ContentBlock>
-			{/* <BlobFilterBar
-				setFilter={setFilter}
-				filter={filter}
-			/> */}
 			<div className={classes.homeWrapper}>
 				{blobLinks}
 			</div>

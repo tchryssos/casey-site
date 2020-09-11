@@ -58,20 +58,11 @@ export default createUseStyles({
 	ELO: {
 		transform: 'translate(6vw, -2vw)',
 	},
-	TheUprisingCreative: {
-		transform: 'translate(-25vw, -11vw)',
-	},
 	Portfolio: {
 		transform: 'translateY(-30vw)',
 	},
-	MusicalRug: {
-		transform: 'translate(3vw, -35vw)',
-	},
-	ChaseSapphire: {
-		transform: 'translate(0vw, -30vw)',
-	},
 	Mirror: {
-		transform: 'translate(0vw, -34vw)',
+		transform: 'translate(-25vw, -11vw)',
 	},
 	About: {
 		transform: 'translate(0vw, -50vw)',
@@ -98,23 +89,14 @@ export default createUseStyles({
 		ELO: {
 			transform: 'translate(-2vw, -0.5vw)',
 		},
-		TheUprisingCreative: {
-			transform: 'translate(-13vw, -4vw)',
-		},
 		Portfolio: {
-			transform: 'translateY(-14vw)',
-		},
-		MusicalRug: {
-			transform: 'translate(1vw, -15vw)',
-		},
-		ChaseSapphire: {
-			transform: 'translate(-2vw, -15vw)',
+			transform: 'translateY(-10vw)',
 		},
 		Mirror: {
-			transform: 'translate(0vw, -16vw)',
+			transform: 'translate(-13vw, -1vw)',
 		},
 		About: {
-			transform: 'translate(0vw, -23vw)',
+			transform: 'translate(0vw, -18vw)',
 		},
 	},
 	[LG_MIN_STRING]: {

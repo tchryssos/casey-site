@@ -164,24 +164,8 @@ const App = ({ location }) => {
 									component={FISMarketing}
 								/>
 								<Route
-									path={blobLinkData.ELO.link}
-									component={ELO}
-								/>
-								<Route
 									path={blobLinkData.Portfolio.link}
 									component={Portfolio}
-								/>
-								<Route
-									path={blobLinkData.MusicalRug.link}
-									component={MusicalRug}
-								/>
-								<Route
-									path={blobLinkData.TheUprisingCreative.link}
-									component={TheUprisingCreative}
-								/>
-								<Route
-									path={blobLinkData.ChaseSapphire.link}
-									component={ChaseSapphire}
 								/>
 								<Route
 									path={blobLinkData.ListenJay.link}
