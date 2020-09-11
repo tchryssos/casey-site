@@ -12,6 +12,10 @@ export default createUseStyles({
 			// paddingBottom: navContentHeight + (navPaddingHeight * 2) + 16,
 		},
 	}),
+	descriptionImage: {
+		width: '100%',
+		paddingTop: 16,
+	},
 	blobDescriptionWrapper: {
 		position: 'absolute',
 		top: '30%',
@@ -24,6 +28,8 @@ export default createUseStyles({
 		paddingLeft: '30px',
 		fontSize: '12px',
 		lineHeight: 1.25,
+		display: 'flex',
+		flexDirection: 'column',
 	},
 	leftAligned: {
 		left: '-165px',

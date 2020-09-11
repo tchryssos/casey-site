@@ -9,6 +9,11 @@ import ListenJay from 'static/svg/home/ListenJay-5.svg'
 import MensHealth from 'static/svg/home/MensHealth-4.svg'
 import Mirror from 'static/svg/home/Mirror-4.svg'
 
+import MensHealthDesciption from 'static/images/Descriptions/mhh_di-01.png'
+import FISMDesciption from 'static/images/Descriptions/FIS_di.png'
+import ELODesciption from 'static/images/Descriptions/ELO_di.png'
+import LJUXADesciption from 'static/images/Descriptions/LJ_di.png'
+
 const blobLinkData = {
 	MensHealth: {
 		src: MensHealth,
@@ -20,6 +25,7 @@ const blobLinkData = {
 		category: 'product',
 		descriptionText: "Updating the branding and website design for a men's health clinic",
 		descriptionAlignment: 'left',
+		descriptionImage: MensHealthDesciption,
 	},
 	FISMarketing: {
 		src: FISMarketing,
@@ -30,6 +36,7 @@ const blobLinkData = {
 		zIndex: 2,
 		category: 'graphic',
 		descriptionText: 'Managing a creative team working on everything including out-of-home, video, organic and paid social',
+		descriptionImage: FISMDesciption,
 	},
 	ELO: {
 		src: ELO,
@@ -41,6 +48,7 @@ const blobLinkData = {
 		category: 'product',
 		descriptionText: 'Building a gaming tool from the ground up',
 		descriptionAlignment: 'left',
+		descriptionImage: ELODesciption,
 	},
 	ListenJay: {
 		src: ListenJay,
@@ -51,6 +59,7 @@ const blobLinkData = {
 		zIndex: 3,
 		category: 'product',
 		descriptionText: 'Adding a feature to a podcast discovery platform',
+		descriptionImage: LJUXADesciption,
 	},
 	TheUprisingCreative: {
 		src: TheUprisingCreative,

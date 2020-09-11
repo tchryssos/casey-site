@@ -4,7 +4,9 @@ import { NavLink } from 'react-router-dom'
 import orNull from 'util/orNull'
 import useStyles from './blobLinkStyles'
 
-const Description = ({ classes, descriptionText, descriptionAlignment }) => (
+const Description = ({
+	classes, descriptionText, descriptionAlignment, descriptionImage,
+}) => (
 	<div
 		className={
 			clsx(
@@ -14,12 +16,13 @@ const Description = ({ classes, descriptionText, descriptionAlignment }) => (
 		}
 	>
 		{descriptionText}
+		<img className={classes.descriptionImage} src={descriptionImage} alt="" />
 	</div>
 )
 
 export default ({
 	src, className, link, altText, category, filter,
-	zIndex, width, descriptionText, descriptionAlignment,
+	zIndex, width, descriptionText, descriptionImage, descriptionAlignment,
 }) => {
 	const classes = useStyles({ zIndex, width })
 	return (
@@ -47,6 +50,7 @@ export default ({
 					classes={classes}
 					descriptionText={descriptionText}
 					descriptionAlignment={descriptionAlignment}
+					descriptionImage={descriptionImage}
 				/>,
 			)}
 		</div>

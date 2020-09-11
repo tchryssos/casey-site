@@ -4,6 +4,12 @@ import BlobLink from 'components/BlobLink'
 import BlobFilterBar from 'components/BlobFilterBar'
 import blobLinkData from 'constants/blobLinks'
 import { MD_MIN_STRING } from 'constants/styles/breakpoints'
+import { NavLink } from 'react-router-dom'
+
+import Heading from 'components/Typography/Heading'
+import ContentBlock from 'components/ContentBlock'
+import Body from 'components/Typography/Body'
+import Spacer from 'components/Spacer'
 
 const useStyles = createUseStyles({
 	homeContainer: {
@@ -24,6 +30,17 @@ const useStyles = createUseStyles({
 		// maxHeight: '100vh',
 		width: '100%',
 	},
+	aboutMeHeader: {
+		textAlign: 'center',
+	},
+	aboutLink: {
+		textDecoration: 'none',
+		borderBottom: '2px solid blue',
+		color: 'blue',
+	},
+	aboutBody: {
+		lineHeight: 1.75,
+	},
 	[MD_MIN_STRING]: {
 		homeWrapper: {
 			width: '50%',
@@ -43,10 +60,23 @@ export default () => {
 	})
 	return (
 		<div className={classes.homeContainer}>
-			<BlobFilterBar
+			<ContentBlock className={classes.aboutMeHeader}>
+				<Heading>
+					Product designer balancing personality and&nbsp;utility
+				</Heading>
+				<Spacer />
+				<Body className={classes.aboutBody}>
+					Read more about me&nbsp;
+					<NavLink className={classes.aboutLink} to="/about" exact>
+						here
+					</NavLink>
+					&nbsp;and view my most recent work below
+				</Body>
+			</ContentBlock>
+			{/* <BlobFilterBar
 				setFilter={setFilter}
 				filter={filter}
-			/>
+			/> */}
 			<div className={classes.homeWrapper}>
 				{blobLinks}
 			</div>
