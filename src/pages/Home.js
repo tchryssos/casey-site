@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import { createUseStyles } from 'react-jss'
 import BlobLink from 'components/BlobLink'
-import BlobFilterBar from 'components/BlobFilterBar'
 import blobLinkData from 'constants/blobLinks'
 import { MD_MIN_STRING } from 'constants/styles/breakpoints'
 import { NavLink } from 'react-router-dom'
