@@ -1,6 +1,5 @@
 import { createUseStyles } from 'react-jss'
 import { MD_MIN_STRING, LG_MIN_STRING } from 'constants/styles/breakpoints'
-import { navContentHeight, navPaddingHeight } from 'components/navBarStyles'
 
 export default createUseStyles({
 	linkWrapper: ({ zIndex, width }) => ({
@@ -8,9 +7,6 @@ export default createUseStyles({
 		width: `${width}%`,
 		position: 'relative',
 		transition: `opacity ${(zIndex || 1) * 0.3}s`,
-		'&:last-of-type': {
-			// paddingBottom: navContentHeight + (navPaddingHeight * 2) + 16,
-		},
 	}),
 	descriptionImage: {
 		width: '100%',
@@ -47,25 +43,25 @@ export default createUseStyles({
 	},
 	// Custom CSS for blob placement
 	MensHealth: {
-		transform: 'translate(8vw, -4vw)',
+		transform: 'translate(2vw, -4vw)',
 	},
 	FISMarketing: {
-		transform: 'translateY(8vw)',
+		transform: 'translate(-2vw, 8vw)',
 	},
 	ListenJay: {
-		transform: 'translate(6vw, 3vw)',
+		transform: 'translate(2vw, 6vw)',
 	},
 	ELO: {
-		transform: 'translate(6vw, -2vw)',
+		transform: 'translate(2vw, -3vw)',
 	},
 	Portfolio: {
-		transform: 'translateY(-30vw)',
+		transform: 'translateY(-20vw)',
 	},
 	Mirror: {
-		transform: 'translate(-25vw, -11vw)',
+		transform: 'translate(-20vw, -4vw)',
 	},
 	About: {
-		transform: 'translate(0vw, -50vw)',
+		transform: 'translate(0vw, -35vw)',
 	},
 	[MD_MIN_STRING]: {
 		linkWrapper: {
