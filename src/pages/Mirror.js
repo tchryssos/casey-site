@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React, { useRef, useContext } from 'react'
 import { createUseStyles } from 'react-jss'
 import clsx from 'clsx'
 import { NavLink } from 'react-router-dom'
@@ -7,6 +7,8 @@ import {
 	MD_MIN_STRING,
 } from 'constants/styles/breakpoints'
 
+import PageGatingContext from 'contexts/pageGating'
+import orNull from 'util/orNull'
 import useScrollingText from 'effects/useScrollingText'
 
 import PageWrapper from 'components/PageWrapper'
@@ -34,6 +36,8 @@ import HifiCategory from 'static/images/Mirror/HifiCategory.png'
 import HifiPDP from 'static/images/Mirror/HiFiPDP.png'
 import LogoEx from 'static/images/Mirror/logoExploration.png'
 import Sketches from 'static/images/Mirror/sketchesMirror.png'
+import WireHome from 'static/images/Mirror/wire-home.png'
+import WireCategory from 'static/images/Mirror/wire-category.png'
 
 
 const useStyles = createUseStyles({
@@ -108,6 +112,7 @@ const useStyles = createUseStyles({
 
 export default () => {
 	const classes = useStyles()
+	const { isAltHome } = useContext(PageGatingContext)
 
 	const navLinks = [
 		{ link: 'brief' },
@@ -186,6 +191,28 @@ export default () => {
 						I did competitive research as well as interviewed a group of males and females 22-30 years old who shop online regularly about their online shopping habits.
 					</Body>
 					<Spacer />
+					{orNull(
+						isAltHome,
+						(
+							<>
+								<Body>
+									KEY TAKEAWAYS
+								</Body>
+								<Spacer />
+								<ul>
+									<li>
+										People do a lot of research before they buy to get the best deal. This makes easy to find reviews, referrals and coupon codes extra important.
+									</li>
+									<li>
+										Ease in the payment and shipping process are very important, especially for people who have to shop online.
+									</li>
+									<li>
+										Filters are often poor quality or hard to navigate, espcially on mobile.
+									</li>
+								</ul>
+							</>
+						),
+					)}
 					<Image src={Persona} size="full" />
 				</ContentBlock>
 			</a>
@@ -269,13 +296,41 @@ export default () => {
 				</div>
 				<Spacer />
 				<SubHeading>Getting started with some sketches</SubHeading>
+				<Spacer />
 				<Body>
-					The first page I wante dto focus on was the home page. Below are two of my first sketches of this page.
+					The first page I wanted to focus on was the home page. Below are two of my first sketches of this page. With these sketched I wanted to make coupon codes for first time customers easy to find, highlight any sales or special collections and show off new arrivals for returning customers.
+				</Body>
+				<Spacer />
+				<Body>
+					In my card sorting exercise, most participants wanted to sort the items by occasion. Because of this finding, I wanted to use the hero image to highlight the lookbook for a certain occasion.
 				</Body>
 				<Image src={Sketches} size="full" />
+				{orNull(
+					isAltHome,
+					(
+						<>
+							<Spacer />
+							<SubHeading>
+								Implementing key research takeaways
+							</SubHeading>
+							<Spacer />
+							<Body>
+								Here is a piece from the final wireframe for the home page that came out of the above sketches. Here we show off items for an occasion, give a coupon code, and display new arrivals.
+							</Body>
+							<Image src={WireHome} size="full" />
+							<Spacer />
+							<Body>
+								I also emphasized an occasion-based search on the category page, by pulling those filters above the rest and making them more visibile.
+							</Body>
+							<Spacer />
+							<Image src={WireCategory} size="full" />
+						</>
+					),
+				)}
 				<Spacer />
 				<SubHeading>Seeing the pages in motion</SubHeading>
-				<Body>I created the below prototype from my wireframes to test the flow I laid out.</Body>
+				<Spacer />
+				<Body>Most of the participants I interviewed wanted to be able to browse on mobile easily. The best way for me to double check my work with this experience was to build out a prototype and see for myself how easy was to navigate and filter items.</Body>
 				<VideoPlayer
 					src="https://player.vimeo.com/video/434350879?loop=1&autopause=0"
 					title="Prototype Animation"
