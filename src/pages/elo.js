@@ -1,10 +1,12 @@
-import React, { useRef } from 'react'
+import React, { useRef, useContext } from 'react'
 import { createUseStyles } from 'react-jss'
 
 import {
 	MD_MIN_STRING,
 } from 'constants/styles/breakpoints'
 
+import PageGatingContext from 'contexts/pageGating'
+import orNull from 'util/orNull'
 import useScrollingText from 'effects/useScrollingText'
 
 import PageWrapper from 'components/PageWrapper'
@@ -36,6 +38,7 @@ import ScoreKeep from 'static/images/ELO/scorekeep.png'
 import OGELO from 'static/images/ELO/Og-elo.png'
 import Roadmap from 'static/images/ELO/elo-roadmap.png'
 import Directions from 'static/images/ELO/elo-directions.png'
+import ELOWire from 'static/images/ELO/elo_wire.png'
 
 
 const useStyles = createUseStyles({
@@ -106,6 +109,7 @@ const useStyles = createUseStyles({
 })
 
 export default () => {
+	const { isAltHome } = useContext(PageGatingContext)
 	const classes = useStyles()
 
 	const navLinks = [
@@ -292,6 +296,22 @@ export default () => {
 						&nbsp;submit this match and see how it affects my ranking
 					</SubHeading>
 					<Spacer />
+					{orNull(
+						isAltHome,
+						(
+							<>
+								<SubHeading>
+									Sketching out our idea
+								</SubHeading>
+								<Spacer />
+								<Body>
+									The developers I was working with had a rough draft of something working as seen earlier on this page. Once we decided on the key features, I drew out the following screens as a gut check before working through wireframes.
+								</Body>
+								<Spacer />
+								<Image src={ELOWire} size="full" />
+							</>
+						),
+					)}
 					<ItemGrid>
 						<div className={classes.half}>
 							<SubHeading>
@@ -310,24 +330,12 @@ export default () => {
 						I adjusted this flow so that before filling out the form to submit a match, users had to select a game. If there were no games, I could populate the form to create a game instead of blocking pathways that a user would want to take.
 					</Body>
 					<Image src={finalflow} size="full" />
-					<SubHeading>
-						Building functional prototypes
-					</SubHeading>
+					<SubHeading>Building functional prototypes</SubHeading>
 					<Spacer />
 					<Body>
-						To test these flows I built out two prototypes - one that mimicked the experience for a new user and one for a returning user.
+						 Creating working forms in a prototype was a fun challenge with this project that involved a complex prototype full of overlays and hover states.
 					</Body>
 					<Image src={complexWire} size="full" />
-					<VideoPlayer
-						src="https://player.vimeo.com/video/448968438?loop=1"
-						title="Prototype Animation"
-						aspectRatio="1:1"
-					/>
-					<VideoPlayer
-						src="https://player.vimeo.com/video/448970796?loop=1"
-						title="Prototype Animation"
-						aspectRatio="1:1"
-					/>
 				</ContentBlock>
 			</a>
 
@@ -366,12 +374,20 @@ export default () => {
 					</ItemGrid>
 					<Spacer height={2} />
 					<SubHeading>Cohesive UI Kit</SubHeading>
+					<Spacer />
+					<Body>
+						Below are some examples of components that are repeated throughout the experience. I built my original wireframes out using components in Figma so that when it came time to add the branding it would be very quick and easy to change something once and have it reflected everywhere.
+					</Body>
 					<Image src={UIKit} size="full" />
 				</ContentBlock>
 				<ContentBlock className={classes.whiteBlock}>
 					<Heading>Final UI Designs</Heading>
 					<Spacer />
-					<Body>These are some of the main screens designed in order to test our main user flow.</Body>
+					<Body>These are some of the main screens designed in order to test our main user flow. I used the yellow brand color to highlight the most used CTAs and the user&apos;s ranking among their group.</Body>
+					<Spacer />
+					<Body>
+						I used a collapsed version of the logo to give more real estate to the valuable information and used a fun font for th eleaderboard titles to reflect teh playfulness of gaming.
+					</Body>
 					<Spacer />
 					<Image size="full" src={Visual1} />
 					<Image size="full" src={Visual2} />
@@ -386,8 +402,31 @@ export default () => {
 				</div>
 				<ContentBlock>
 					<Heading>Testing for Validation and Usability</Heading>
+					<Spacer />
+					<SubHeading>
+						Building functional prototypes
+					</SubHeading>
+					<Spacer />
 					<Body>
-						I had each participant complete the tasks for both new and returning users. I observed them complete the tasks over Zoom.
+						To test these flows I built out two prototypes - one that mimicked the experience for a new user and one for a returning user.
+					</Body>
+					<VideoPlayer
+						src="https://player.vimeo.com/video/448968438?loop=1"
+						title="Prototype Animation"
+						aspectRatio="1:1"
+					/>
+					<VideoPlayer
+						src="https://player.vimeo.com/video/448970796?loop=1"
+						title="Prototype Animation"
+						aspectRatio="1:1"
+					/>
+					<Spacer />
+					<SubHeading>
+						Executing Tests
+					</SubHeading>
+					<Spacer />
+					<Body>
+						I had each participant complete the tasks for both new and returning users. I observed them complete the tasks over Zoom using teh above prototypes.
 					</Body>
 					<Spacer />
 					<SubHeading>
