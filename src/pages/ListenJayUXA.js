@@ -13,6 +13,7 @@ import Spacer from 'components/Spacer'
 import ItemGrid from 'components/ItemGrid'
 import VideoPlayer from 'components/VideoPlayer'
 import PageNav from 'components/PageNav'
+import NextProject from 'components/NextProject'
 
 
 import Interviews from 'static/images/ListenJayUXA/userInterviews-01.png'
@@ -92,9 +93,6 @@ const useStyles = createUseStyles({
 	},
 	brandColorBlock: {
 		backgroundColor: '#FFEAC8',
-	},
-	lastBlock: {
-		paddingBottom: 148,
 	},
 })
 
@@ -316,12 +314,7 @@ export default () => {
 			<div className={classes.sectionLabel}>
 				Learnings
 			</div>
-			<ContentBlock
-				className={clsx(
-					classes.brandColorBlock,
-					classes.lastBlock,
-				)}
-			>
+			<ContentBlock className={classes.brandColorBlock}>
 				<Heading>What I learned from this project</Heading>
 				<Spacer />
 				<SubHeading>Finding participants can be a challenge</SubHeading>
@@ -339,7 +332,7 @@ export default () => {
 					The controls for the design editor on this project were complex to prototype for testing. I learned a lot about using overlays and hover states in Figma to create something that feels realistic.
 				</Body>
 			</ContentBlock>
-
+			<NextProject link="/mirror" />
 		</PageWrapper>
 	)
 }
