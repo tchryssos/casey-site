@@ -1,9 +1,14 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { createUseStyles } from 'react-jss'
 import BlobLink from 'components/BlobLink'
-import BlobFilterBar from 'components/BlobFilterBar'
 import blobLinkData from 'constants/blobLinks'
 import { MD_MIN_STRING } from 'constants/styles/breakpoints'
+import { NavLink } from 'react-router-dom'
+
+import Heading from 'components/Typography/Heading'
+import ContentBlock from 'components/ContentBlock'
+import Body from 'components/Typography/Body'
+import Spacer from 'components/Spacer'
 
 const useStyles = createUseStyles({
 	homeContainer: {
@@ -24,6 +29,17 @@ const useStyles = createUseStyles({
 		// maxHeight: '100vh',
 		width: '100%',
 	},
+	aboutMeHeader: {
+		textAlign: 'center',
+	},
+	aboutLink: {
+		textDecoration: 'none',
+		borderBottom: '2px solid blue',
+		color: 'blue',
+	},
+	aboutBody: {
+		lineHeight: 1.75,
+	},
 	[MD_MIN_STRING]: {
 		homeWrapper: {
 			width: '50%',
@@ -33,20 +49,28 @@ const useStyles = createUseStyles({
 
 export default () => {
 	const classes = useStyles()
-	const [filter, setFilter] = useState(null)
 
 	const blobLinks = Object.keys(blobLinkData).map((key) => {
 		const props = blobLinkData[key]
 		return (
-			<BlobLink {...props} key={key} filter={filter} />
+			<BlobLink {...props} key={key} />
 		)
 	})
 	return (
 		<div className={classes.homeContainer}>
-			<BlobFilterBar
-				setFilter={setFilter}
-				filter={filter}
-			/>
+			<ContentBlock className={classes.aboutMeHeader}>
+				<Heading>
+					Product designer balancing personality and&nbsp;utility
+				</Heading>
+				<Spacer />
+				<Body className={classes.aboutBody}>
+					Read more about me&nbsp;
+					<NavLink className={classes.aboutLink} to="/about" exact>
+						here
+					</NavLink>
+					&nbsp;and view my most recent work below
+				</Body>
+			</ContentBlock>
 			<div className={classes.homeWrapper}>
 				{blobLinks}
 			</div>

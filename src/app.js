@@ -17,9 +17,6 @@ import NavBar from 'components/NavBar'
 import Home from 'pages/Home'
 import FISMarketing from 'pages/FISMarketing'
 import Portfolio from 'pages/Portfolio'
-import MusicalRug from 'pages/MusicalRug'
-import TheUprisingCreative from 'pages/TheUprisingCreative'
-import ChaseSapphire from 'pages/ChaseSapphire'
 import ListenJay from 'pages/ListenJay'
 import ELO from 'pages/elo'
 import Mirror from 'pages/Mirror'
@@ -164,24 +161,8 @@ const App = ({ location }) => {
 									component={FISMarketing}
 								/>
 								<Route
-									path={blobLinkData.ELO.link}
-									component={ELO}
-								/>
-								<Route
 									path={blobLinkData.Portfolio.link}
 									component={Portfolio}
-								/>
-								<Route
-									path={blobLinkData.MusicalRug.link}
-									component={MusicalRug}
-								/>
-								<Route
-									path={blobLinkData.TheUprisingCreative.link}
-									component={TheUprisingCreative}
-								/>
-								<Route
-									path={blobLinkData.ChaseSapphire.link}
-									component={ChaseSapphire}
 								/>
 								<Route
 									path={blobLinkData.ListenJay.link}

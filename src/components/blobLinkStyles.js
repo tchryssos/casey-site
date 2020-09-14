@@ -1,6 +1,5 @@
 import { createUseStyles } from 'react-jss'
 import { MD_MIN_STRING, LG_MIN_STRING } from 'constants/styles/breakpoints'
-import { navContentHeight, navPaddingHeight } from 'components/navBarStyles'
 
 export default createUseStyles({
 	linkWrapper: ({ zIndex, width }) => ({
@@ -8,10 +7,11 @@ export default createUseStyles({
 		width: `${width}%`,
 		position: 'relative',
 		transition: `opacity ${(zIndex || 1) * 0.3}s`,
-		'&:last-of-type': {
-			// paddingBottom: navContentHeight + (navPaddingHeight * 2) + 16,
-		},
 	}),
+	descriptionImage: {
+		width: '100%',
+		paddingTop: 16,
+	},
 	blobDescriptionWrapper: {
 		position: 'absolute',
 		top: '30%',
@@ -24,6 +24,8 @@ export default createUseStyles({
 		paddingLeft: '30px',
 		fontSize: '12px',
 		lineHeight: 1.25,
+		display: 'flex',
+		flexDirection: 'column',
 	},
 	leftAligned: {
 		left: '-165px',
@@ -36,39 +38,27 @@ export default createUseStyles({
 			transform: 'translate(16px, -16px)',
 		},
 	},
-	filtered: {
-		opacity: 0.2,
-	},
 	// Custom CSS for blob placement
 	MensHealth: {
-		transform: 'translate(8vw, -4vw)',
+		transform: 'translate(2vw, -4vw)',
 	},
 	FISMarketing: {
-		transform: 'translateY(8vw)',
+		transform: 'translate(-2vw, 8vw)',
 	},
 	ListenJay: {
-		transform: 'translate(6vw, 3vw)',
+		transform: 'translate(2vw, 6vw)',
 	},
 	ELO: {
-		transform: 'translate(6vw, -2vw)',
-	},
-	TheUprisingCreative: {
-		transform: 'translate(-25vw, -11vw)',
+		transform: 'translate(2vw, -3vw)',
 	},
 	Portfolio: {
-		transform: 'translateY(-30vw)',
-	},
-	MusicalRug: {
-		transform: 'translate(3vw, -35vw)',
-	},
-	ChaseSapphire: {
-		transform: 'translate(0vw, -30vw)',
+		transform: 'translateY(-20vw)',
 	},
 	Mirror: {
-		transform: 'translate(0vw, -34vw)',
+		transform: 'translate(-20vw, -4vw)',
 	},
 	About: {
-		transform: 'translate(0vw, -50vw)',
+		transform: 'translate(0vw, -35vw)',
 	},
 	[MD_MIN_STRING]: {
 		linkWrapper: {
@@ -92,23 +82,14 @@ export default createUseStyles({
 		ELO: {
 			transform: 'translate(-2vw, -0.5vw)',
 		},
-		TheUprisingCreative: {
-			transform: 'translate(-13vw, -4vw)',
-		},
 		Portfolio: {
-			transform: 'translateY(-14vw)',
-		},
-		MusicalRug: {
-			transform: 'translate(1vw, -15vw)',
-		},
-		ChaseSapphire: {
-			transform: 'translate(-2vw, -15vw)',
+			transform: 'translateY(-10vw)',
 		},
 		Mirror: {
-			transform: 'translate(0vw, -16vw)',
+			transform: 'translate(-13vw, -1vw)',
 		},
 		About: {
-			transform: 'translate(0vw, -23vw)',
+			transform: 'translate(0vw, -18vw)',
 		},
 	},
 	[LG_MIN_STRING]: {
