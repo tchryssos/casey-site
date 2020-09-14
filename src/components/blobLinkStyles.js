@@ -38,9 +38,6 @@ export default createUseStyles({
 			transform: 'translate(16px, -16px)',
 		},
 	},
-	filtered: {
-		opacity: 0.2,
-	},
 	// Custom CSS for blob placement
 	MensHealth: {
 		transform: 'translate(2vw, -4vw)',

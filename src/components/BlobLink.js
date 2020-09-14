@@ -21,7 +21,7 @@ const Description = ({
 )
 
 export default ({
-	src, className, link, altText, category, filter,
+	src, className, link, altText, category,
 	zIndex, width, descriptionText, descriptionImage, descriptionAlignment,
 }) => {
 	const classes = useStyles({ zIndex, width })
@@ -32,7 +32,6 @@ export default ({
 				clsx(
 					classes.linkWrapper,
 					classes[className],
-					{ [classes.filtered]: filter === category },
 				)
 			}
 		>

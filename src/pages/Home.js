@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { createUseStyles } from 'react-jss'
 import BlobLink from 'components/BlobLink'
 import blobLinkData from 'constants/blobLinks'
@@ -49,12 +49,11 @@ const useStyles = createUseStyles({
 
 export default () => {
 	const classes = useStyles()
-	const [filter, setFilter] = useState(null)
 
 	const blobLinks = Object.keys(blobLinkData).map((key) => {
 		const props = blobLinkData[key]
 		return (
-			<BlobLink {...props} key={key} filter={filter} />
+			<BlobLink {...props} key={key} />
 		)
 	})
 	return (
