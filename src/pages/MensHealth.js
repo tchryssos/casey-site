@@ -1,9 +1,9 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { createUseStyles } from 'react-jss'
 import { MD_MIN_STRING } from 'constants/styles/breakpoints'
-import clsx from 'clsx'
-import { NavLink } from 'react-router-dom'
 
+import PageGatingContext from 'contexts/pageGating'
+import orNull from 'util/orNull'
 
 import PageWrapper from 'components/PageWrapper'
 import ContentBlock from 'components/ContentBlock'
@@ -65,6 +65,8 @@ const useStyles = createUseStyles({
 })
 
 export default () => {
+	const { isAltHome } = useContext(PageGatingContext)
+
 	const brief = 'brief'
 	const discover = 'discover'
 	const define = 'define'
@@ -106,9 +108,14 @@ export default () => {
 					<Image src={MHHHero} size="full" className={classes.half} />
 				</ItemGrid>
 				<Spacer />
-				<Body>
-					Men&apos;s Health Houston is a small men&apos;s health clinic in Texas. Their current website is built on WordPress and uses a template that lacks heirarchy and personality and is difficult to navigate. As they drive more online advertisting to their site, they are looking for a refresh.
-				</Body>
+				{orNull(
+					isAltHome,
+					(
+						<Body>
+							Men&apos;s Health Houston is a small men&apos;s health clinic in Texas. Their current website is built on WordPress and uses a template that lacks heirarchy and personality and is difficult to navigate. As they drive more online advertisting to their site, they are looking for a refresh.
+						</Body>
+					),
+				)}
 				<ItemGrid startAligned stackedOnMobile>
 					<div className={classes.half}>
 						<SubHeading>
@@ -151,9 +158,31 @@ export default () => {
 				<Body>
 					I interviewed a group of men between the ages of 35 and 55 about their health care habits and body goals to create the following personas. I reached out to networks I was a part of to find men in the correct demographic and interviewed them over the phone.
 				</Body>
+				<Spacer />
+				{orNull(
+					isAltHome,
+					(
+						<>
+							<Body>
+								KEY TAKEAWAYS
+							</Body>
+							<ul>
+								<li>
+									Men won&apos;t go to the doctor unless the HAVE to
+								</li>
+								<li>
+									Having a good online booking experience is important to younger men and having an easily accessible phone number is important to older men
+								</li>
+								<li>
+									For men who are looking for a new doctor, reviews and doctor bios are the most important
+								</li>
+							</ul>
+						</>
+					),
+				)}
 				<Spacer height={2} />
 				<SubHeading>
-					Key Insight from Interviews: Finding the right photography
+					Key Insight: Finding the right photography
 				</SubHeading>
 				<Spacer />
 				<Body>
@@ -170,7 +199,7 @@ export default () => {
 				</SubHeading>
 				<Spacer />
 				<Body>
-					I ultimately created two distinct personas because the men I interviewed at different ends of the target age range had different needs and expectations.
+					I ultimately created two distinct personas because the men I interviewed at different ends of the target age range had different needs and expectations. Men 45-55 want to take preventative measures while men 35-45 just wanted to be better about going to the doctor at all.
 				</Body>
 				<Image src={Frank} size="full" />
 				<Image src={Tom} size="full" />
@@ -189,9 +218,29 @@ export default () => {
 				<Spacer />
 				<SubHeading>Auditing the Site Map</SubHeading>
 				<Body>
-					The original site was built with many pages that were serving overlapping purposes and some of the terminology was a little too medical for people to understand. In order to create a clear roadmap of the pages I would be working on I audited and streamlined the site map. You can seea snapshot of my process below.
+					The original site was built with many pages that were serving overlapping purposes and some of the terminology was a little too medical for people to understand. In order to create a clear roadmap of the pages I would be working on I audited and streamlined the site map. You can see a snapshot of my process below.
 				</Body>
 				<Spacer />
+				{orNull(
+					isAltHome,
+					(
+						<>
+							<Body>KEY TAKEAWAYS</Body>
+							<ul>
+								<li>
+									ABOUT US INFO: This info was spread out across three separate pages that made it a lot of work for the user to digest all of it so we consolidated them.
+								</li>
+								<li>
+									LOW T QUIZ: The clients had a quiz prominently displayed on their site that was recieving very little traffic and made the healthcare experience seem impersonal. We removed this because we would rather surface more valuable information.
+								</li>
+								<li>
+									GAINSWAVE: GAINSWave is the name of a specific treatment that uses soundwaves to increase blood flow. The ultimate goal with this service was to improve patients sexual health so we decided to rename services that sounded too medical and weren&apos; immediately understandable.
+								</li>
+							</ul>
+							<Spacer />
+						</>
+					),
+				)}
 				<ItemGrid stackedOnMobile>
 					<ImageLightBox src={SiteMap1} />
 					<ImageLightBox src={SiteMap2} />
@@ -200,16 +249,24 @@ export default () => {
 				<SubHeading>Creating wireframes from existing content</SubHeading>
 				<Spacer />
 				<Body>
-					One of the main goals with this project was to streamline the content on the pages to make it more digestible for users. Below is an example of how I reorganized the existing content to be more straight forward and digestible.
+					One of the most imprtant pages in this redesign was the service page template because that is where we expect customers to convert. As my proposal to win this project work, I submitted the below sketch. In order to end at this wireframe, I looked at competitor sites like Roman, Hims and Vault Health. Then I took the existing content from the site and streamlined it creating heirarchy and flow to guide the user.
+				</Body>
+				<Spacer />
+				<Body>
+					This new page clearly shows the benefits and candidacy information for this treatment without making the user click out to other pages to get it. I also encourages the user of more conversational headlines that would make the user feel more at ease about understanding a complex medical procedure.
 				</Body>
 				<Image src={CompareWires} size="full" />
 				<SubHeading>
 					Recognizing Design Patterns
 				</SubHeading>
+				<Spacer />
 				<Body>
-					I looked at many competitor sites to understand how they were organizing their content. Most sites made it very clear what their services were from first glance. I wanted to create a visual navigation system on the home page that allowed user to get directly where they needed to go.
+					The second most important page was the home page where we wanted to make it clear what the clinic offers and how you can learn more. I looked at many competitor sites to understand how they were organizing their content. Most sites made it very clear what their services were from first glance. I wanted to create a visual navigation system on the home page that allowed user to get directly where they needed to go.
 				</Body>
 				<Image src={HomeWires} size="full" />
+				<Body>
+					The most effective version of this was the third iteration above that included hot links to the main service pages so candidates looking for something specific could navigate directly there.
+				</Body>
 			</ContentBlock>
 			<a name={design} />
 			<div className={classes.sectionLabel}>
@@ -220,6 +277,17 @@ export default () => {
 				blockId={design}
 			>
 				<Heading>Modernizing the brand</Heading>
+				{orNull(
+					isAltHome,
+					(
+						<>
+							<Body>
+								The clients wanted their brand to be professional and modern but also to show off their personal and approachable attitude towards sensitive health topics.
+							</Body>
+							<Spacer />
+						</>
+					),
+				)}
 				<ItemGrid>
 					<div className={classes.half}>
 						<SubHeading>Adjusting the logo for web</SubHeading>
@@ -234,7 +302,7 @@ export default () => {
 				<SubHeading>Creating new guidelines</SubHeading>
 				<Spacer />
 				<Body>
-					The clients wanted to update their branding to be more modern. Beyond their logo, they were open to changing everything. I used some of the blues from their original branding and expanded the palette to include a more bold orange. I created icons set that would emphasize a friendly approach and used a more clean and legible font to get their personality across.
+					Beyond their logo, they were open to changing everything. I used some of the blues from their original branding and expanded the palette to include a more bold orange. I created icons set that would emphasize an optimistic approach and used a more clean and legible font to get their personality across.
 				</Body>
 				<Image src={MHHBranding} size="full" />
 			</ContentBlock>
@@ -242,21 +310,43 @@ export default () => {
 				<Heading>Visual Designs</Heading>
 				<Spacer />
 				<Body>
-					I created a prototype to test with for usability and also to show the developer how I imagined the site working.
-				</Body>
-				<VideoPlayer
-					src="https://player.vimeo.com/video/440119937?loop=1"
-					title="Prototype Animation"
-					aspectRatio="16:9"
-				/>
-				<Spacer height={2} />
-				<Body>
 					The two pages that I focused the majority of my time on were the home page and a template for a service page. These pages contained the most specific components and these modules were reused on many other pages for easy scalability.
 				</Body>
 				<Spacer />
-				<Body>
-					In my research, participants mentioned that the doctor bios were one of the most important parts of choosing someone new so I decided to include those on the home page.
-				</Body>
+				{orNull(
+					isAltHome,
+					(
+						<>
+							<SubHeading>
+								Home Page
+							</SubHeading>
+							<Spacer />
+							<Body>
+								The #1 goal with the home page was to paint a clear picture of the clinic&apos;s offerings. For this reason, I created the top section with icons for an expedited flow and used the majority of the real estate to explain the service benefits.
+							</Body>
+							<Spacer />
+							<Body>
+								In my research, participants mentioned that the doctor bios were one of the most important parts of choosing someone new so after the service, I decided to include our team on the home page.
+							</Body>
+							<Spacer />
+							<Body>
+								Based on the interviews with the Fit n Fifty Franks we also decided to keep the phone number in the nav on desktop for easy accesibility.
+							</Body>
+							<Spacer />
+							<SubHeading>
+								Service Page 
+							</SubHeading>
+							<Spacer />
+							<Body>
+								Similar to above, the goal here was to highlight the benefits and candidacy information for the services before diving deeper into additional resources and FAQs.
+							</Body>
+							<Spacer />
+							<Body>
+								In my interviews, reviews were an important factor in choosing a new doctor. So after the user scrolls past the basic service info, I used a video testimonial the client has recorded to meet that need.
+							</Body>
+						</>
+					),
+				)}
 				<ItemGrid startAligned stackedOnMobile>
 					<Image className={classes.half} size="full" src={HomeDesktop} />
 					<Image className={classes.half} size="full" src={GainsWaveDesktop} />
@@ -273,7 +363,16 @@ export default () => {
 				<Heading>Usability Testing</Heading>
 				<Spacer />
 				<Body>
-					I tested both the mobile and desktop prototypes with a handful of participants over Zoom.
+					Our users placed an emphasis on the importance of an easy to use UI. In order to test our assumptions with men in the right demographic, I created a prototype to test with for usability and also to show the developer how I imagined the site working.
+				</Body>
+				<VideoPlayer
+					src="https://player.vimeo.com/video/440119937?loop=1"
+					title="Prototype Animation"
+					aspectRatio="16:9"
+				/>
+				<Spacer height={2} />
+				<Body>
+					I tested both the mobile and desktop prototypes with a handful of participants. I sent them a link to my Figma prototype and had them screen share and narrate their thought process as they moved through the wireframes.
 				</Body>
 				<Spacer />
 				<ItemGrid startAligned>

@@ -65,7 +65,6 @@ const blobLinkData = {
 		zIndex: 4,
 		descriptionText: 'DesignLab case study project focused on a clothing ecommerce site',
 		descriptionAlignment: 'left',
-		hideOnAltHome: true,
 		descriptionImage: MirrorDescription,
 	},
 	Portfolio: {

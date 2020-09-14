@@ -106,7 +106,8 @@ const useStyles = createUseStyles({
 const App = ({ location }) => {
 	const classes = useStyles()
 	const scrollRef = useRef() // used for page scroll reset on navigation
-	const isAltHomeRef = useRef(location.pathname.toLowerCase() === AltHomePath)
+	// const isAltHomeRef = useRef(location.pathname.toLowerCase() === AltHomePath)
+	const isAltHomeRef = useRef(true)
 	const getScroll = () => scrollRef.current
 	const [isMenuOpen, setIsMenuOpen] = useState(false)
 	// On location change, scroll to page top
