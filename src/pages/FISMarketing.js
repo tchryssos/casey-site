@@ -15,6 +15,7 @@ import Image from 'components/Image'
 import VideoPlayer from 'components/VideoPlayer'
 import Spacer from 'components/Spacer'
 import ItemGrid from 'components/ItemGrid'
+import NextProject from 'components/NextProject'
 
 import FISorg from 'static/images/FISMarketing/orgchart-01.gif'
 import CourseGraphic from 'static/images/FISMarketing/CourseGraphic.svg'
@@ -259,6 +260,7 @@ export default () => {
 					<Image src={Scrum} className={classes.half} />
 				</ItemGrid>
 			</ContentBlock>
+			<NextProject link="/elo-tracker" />
 		</PageWrapper>
 	)
 }

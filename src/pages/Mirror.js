@@ -1,6 +1,7 @@
 import React, { useRef } from 'react'
 import { createUseStyles } from 'react-jss'
 import clsx from 'clsx'
+import { NavLink } from 'react-router-dom'
 
 import {
 	MD_MIN_STRING,
@@ -93,6 +94,15 @@ const useStyles = createUseStyles({
 	},
 	lastBlock: {
 		paddingBottom: 148,
+	},
+	aboutLink: {
+		textDecoration: 'none',
+		borderBottom: '2px solid blue',
+		color: 'blue',
+	},
+	aboutBody: {
+		lineHeight: 1.75,
+		textAlign: 'center',
 	},
 })
 
@@ -418,12 +428,7 @@ export default () => {
 					Learnings
 				</div>
 			</a>
-			<ContentBlock
-				className={clsx(
-					classes.mirrorColorSecondary,
-					classes.lastBlock,
-				)}
-			>
+			<ContentBlock className={classes.mirrorColorSecondary}>
 				<Heading>Key Learnings</Heading>
 				<Spacer />
 				<SubHeading>Research is important!</SubHeading>
@@ -444,7 +449,13 @@ export default () => {
 					Even though some of my research and testing plans involved processes that would ideally be hands-on, I was able to adapt most of them to be executed virtually. I used zoom to facilitate card-sorting via a Trello board and also to observe participants interacting with my Figma prototype. I used Maze to help other students with their testing and learned a lot about planning for what is feasible and being flexible.
 				</Body>
 			</ContentBlock>
-
+			<ContentBlock className={classes.lastBlock}>
+				<Body className={classes.aboutBody}>
+					<NavLink className={classes.aboutLink} to="/Home" exact>
+						Back to Home
+					</NavLink>
+				</Body>
+			</ContentBlock>
 		</PageWrapper>
 	)
 }

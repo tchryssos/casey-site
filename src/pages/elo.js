@@ -17,6 +17,7 @@ import SubHeading from 'components/Typography/SubHeading'
 import ItemGrid from 'components/ItemGrid'
 import VideoPlayer from 'components/VideoPlayer'
 import PageNav from 'components/PageNav'
+import NextProject from 'components/NextProject'
 
 import ELOStorybook from 'static/images/ELO/elo-storybook.png'
 import ELOAltLogo from 'static/images/ELO/elo-alt-logos.png'
@@ -46,7 +47,6 @@ const useStyles = createUseStyles({
 	},
 	lightYellow: {
 		backgroundColor: '#fad793',
-		paddingBottom: 148,
 	},
 	persona: {
 		backgroundColor: '#fad793',
@@ -445,6 +445,7 @@ export default () => {
 						Creating something from scratch can be overwhelming at times but always rewarding. I found that focusing on what would be the most valuable to the user and testing those interactions helped me reign myself in from taking on too much right out of the gate.
 					</Body>
 				</ContentBlock>
+				<NextProject link="/listen-jay" />
 			</a>
 		</PageWrapper>
 	)

@@ -2,6 +2,7 @@ import React from 'react'
 import { createUseStyles } from 'react-jss'
 import { MD_MIN_STRING } from 'constants/styles/breakpoints'
 import clsx from 'clsx'
+import { NavLink } from 'react-router-dom'
 
 
 import PageWrapper from 'components/PageWrapper'
@@ -15,6 +16,7 @@ import ItemGrid from 'components/ItemGrid'
 import ImageLightBox from 'components/ImageLightBox'
 import VideoPlayer from 'components/VideoPlayer'
 import PageNav from 'components/PageNav'
+import NextProject from 'components/NextProject'
 
 import Frank from 'static/images/MensHealth/personaFrank.png'
 import Tom from 'static/images/MensHealth/personaTom.png'
@@ -48,6 +50,10 @@ const useStyles = createUseStyles({
 		whiteSpace: 'nowrap',
 		textAlign: 'center',
 	},
+	quote: {
+		textAlign: 'center',
+		padding: 16,
+	},
 	half: {
 		width: '100%',
 		marginBottom: 64,
@@ -55,9 +61,6 @@ const useStyles = createUseStyles({
 			width: 'calc(50% - 8px)',
 			marginBottom: 0,
 		},
-	},
-	lastBlock: {
-		paddingBottom: 148,
 	},
 })
 
@@ -103,6 +106,9 @@ export default () => {
 					<Image src={MHHHero} size="full" className={classes.half} />
 				</ItemGrid>
 				<Spacer />
+				<Body>
+					Men&apos;s Health Houston is a small men&apos;s health clinic in Texas. Their current website is built on WordPress and uses a template that lacks heirarchy and personality and is difficult to navigate. As they drive more online advertisting to their site, they are looking for a refresh.
+				</Body>
 				<ItemGrid startAligned stackedOnMobile>
 					<div className={classes.half}>
 						<SubHeading>
@@ -139,24 +145,35 @@ export default () => {
 				</Body>
 				<Spacer />
 				<SubHeading>
-					Defining Personas
+					User Interviews
 				</SubHeading>
 				<Spacer />
 				<Body>
 					I interviewed a group of men between the ages of 35 and 55 about their health care habits and body goals to create the following personas. I reached out to networks I was a part of to find men in the correct demographic and interviewed them over the phone.
 				</Body>
-				<Image src={Frank} size="full" />
-				<Image src={Tom} size="full" />
 				<Spacer height={2} />
 				<SubHeading>
-					Finding the right photography
+					Key Insight from Interviews: Finding the right photography
 				</SubHeading>
 				<Spacer />
 				<Body>
 					One of the biggest challenges with this project was figuring out how relatable versus aspirational the photography should be. While the clients thought their audience wanted extremely aspirational imagery, our interviews showed that most wanted to see someone relatable to them.
 				</Body>
 				<Spacer />
+				<Heading className={classes.quote}>
+					&ldquo;I would want to see someone like George Clooney but dressed as a nerd&rdquo;
+				</Heading>
 				<Image src={PhotoRange} size="full" />
+				<Spacer height={2} />
+				<SubHeading>
+					Defining Personas
+				</SubHeading>
+				<Spacer />
+				<Body>
+					I ultimately created two distinct personas because the men I interviewed at different ends of the target age range had different needs and expectations.
+				</Body>
+				<Image src={Frank} size="full" />
+				<Image src={Tom} size="full" />
 			</ContentBlock>
 			<a name={define} />
 			<div className={classes.sectionLabel}>
@@ -236,6 +253,10 @@ export default () => {
 				<Body>
 					The two pages that I focused the majority of my time on were the home page and a template for a service page. These pages contained the most specific components and these modules were reused on many other pages for easy scalability.
 				</Body>
+				<Spacer />
+				<Body>
+					In my research, participants mentioned that the doctor bios were one of the most important parts of choosing someone new so I decided to include those on the home page.
+				</Body>
 				<ItemGrid startAligned stackedOnMobile>
 					<Image className={classes.half} size="full" src={HomeDesktop} />
 					<Image className={classes.half} size="full" src={GainsWaveDesktop} />
@@ -282,12 +303,7 @@ export default () => {
 			<div className={classes.sectionLabel}>
 				Develop
 			</div>
-			<ContentBlock
-				className={clsx(
-					classes.whiteBlock,
-					classes.lastBlock,
-				)}
-			>
+			<ContentBlock className={classes.whiteBlock}>
 				<Heading>What did I learn from this project?</Heading>
 				<Spacer />
 				<SubHeading>Design leadership skills</SubHeading>
@@ -305,6 +321,7 @@ export default () => {
 					The ideal outcome for this project was to arm the Men&apos;s Health Houston team with everything they would need to add new services and locations to their site on their own in the future. We kept this in mind at every step of the way.
 				</Body>
 			</ContentBlock>
+			<NextProject link="/flatiron-school-marketing" />
 		</PageWrapper>
 	)
 }
