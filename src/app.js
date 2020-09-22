@@ -79,6 +79,8 @@ const useStyles = createUseStyles({
 		width: '100%',
 		height: '100%',
 		cursor: 'auto',
+	},
+	menuOpenApp: {
 		overflowX: 'hidden',
 	},
 	menuSlide: {
@@ -138,7 +140,7 @@ const App = ({ location }) => {
 						className={
 							clsx(
 								classes.app,
-								// isMenuOpen ? classes.fixedBody : '',
+								{ [classes.menuOpenApp]: isMenuOpen },
 							)
 						}
 						id="scrollApp"

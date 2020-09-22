@@ -40,7 +40,7 @@ export default createUseStyles({
 	},
 	// Custom CSS for blob placement
 	MensHealth: {
-		transform: 'translate(2vw, -4vw)',
+		transform: 'translate(2vw, 2vw)',
 	},
 	FISMarketing: {
 		transform: 'translate(-2vw, 8vw)',
