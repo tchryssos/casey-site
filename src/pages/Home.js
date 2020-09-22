@@ -26,8 +26,8 @@ const useStyles = createUseStyles({
 		alignItems: 'center',
 		position: 'relative',
 		margin: '16px',
-		// maxHeight: '100vh',
 		width: '100%',
+		overflowX: 'hidden',
 	},
 	aboutMeHeader: {
 		textAlign: 'center',
@@ -43,6 +43,7 @@ const useStyles = createUseStyles({
 	[MD_MIN_STRING]: {
 		homeWrapper: {
 			width: '50%',
+			overflowX: 'initial',
 		},
 	},
 })
