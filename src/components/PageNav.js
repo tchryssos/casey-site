@@ -68,6 +68,7 @@ const PageNav = ({ inView, navLinkObjects }) => {
 					link={link}
 					text={text}
 					altLink={altLink}
+					key={link}
 				/>
 			))}
 		</div>

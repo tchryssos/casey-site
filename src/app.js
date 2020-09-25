@@ -107,14 +107,15 @@ const useStyles = createUseStyles({
 
 const App = ({ location }) => {
 	const classes = useStyles()
-	const scrollRef = useRef() // used for page scroll reset on navigation
+	// Scroll ref is used to reset scroll position on route change
+	// and controll some scrolling effects on various pages
+	const scrollRef = useRef(document.documentElement)
 	const isAltHomeRef = useRef(location.pathname.toLowerCase() === AltHomePath)
-	// const isAltHomeRef = useRef(true)
 	const getScroll = () => scrollRef.current
 	const [isMenuOpen, setIsMenuOpen] = useState(false)
-	// On location change, scroll to page top
 	useEffect(() => {
 		setIsMenuOpen(false)
+		// On location change, scroll to page top
 		scrollRef.current.scrollTop = 0
 		if (location.pathname.toLowerCase() === AltHomePath) {
 			isAltHomeRef.current = true
@@ -144,7 +145,6 @@ const App = ({ location }) => {
 							)
 						}
 						id="scrollApp"
-						ref={scrollRef}
 					>
 					{/* eslint-enable */}
 						<NavBar />

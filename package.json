@@ -38,6 +38,7 @@
     "jss-plugin-extend": "^10.1.1",
     "jss-plugin-vendor-prefixer": "^10.1.1",
     "lodash.debounce": "^4.0.8",
+    "lodash.throttle": "^4.1.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-jss": "^10.1.1",

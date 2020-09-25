@@ -1,4 +1,4 @@
-import React, { useRef, useContext } from 'react'
+import React, { useContext } from 'react'
 import { createUseStyles } from 'react-jss'
 
 import {
@@ -7,7 +7,6 @@ import {
 
 import PageGatingContext from 'contexts/pageGating'
 import orNull from 'util/orNull'
-import useScrollingText from 'effects/useScrollingText'
 
 import PageWrapper from 'components/PageWrapper'
 import ContentBlock from 'components/ContentBlock'
@@ -120,16 +119,6 @@ export default () => {
 		{ link: 'deploy' },
 		{ link: 'learn' },
 	]
-
-	// START - PAGE SCROLL LOGIC - START
-	const scrollingContainer = useRef()
-	const scrollingTextContainer = useRef()
-	useScrollingText(scrollingContainer, scrollingTextContainer)
-
-	const scrollingContainer2 = useRef()
-	const scrollingTextContainer2 = useRef()
-	useScrollingText(scrollingContainer2, scrollingTextContainer2)
-	// END - PAGE SCROLL LOGIC - END
 
 	return (
 		<PageWrapper>
@@ -333,7 +322,7 @@ export default () => {
 					<SubHeading>Building functional prototypes</SubHeading>
 					<Spacer />
 					<Body>
-						 Creating working forms in a prototype was a fun challenge with this project that involved a complex prototype full of overlays and hover states.
+						Creating working forms in a prototype was a fun challenge with this project that involved a complex prototype full of overlays and hover states.
 					</Body>
 					<Image src={complexWire} size="full" />
 				</ContentBlock>
