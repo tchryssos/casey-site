@@ -90,6 +90,8 @@ const useStyles = createUseStyles({
 		color: 'white',
 		whiteSpace: 'nowrap',
 		textAlign: 'center',
+		fontWeight: 500,
+		textTransform: 'uppercase',
 	},
 	brandColorBlock: {
 		backgroundColor: '#FFEAC8',

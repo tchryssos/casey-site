@@ -1,6 +1,7 @@
 import React from 'react'
 import { createUseStyles } from 'react-jss'
 import clsx from 'clsx'
+import { NavLink } from 'react-router-dom'
 
 import {
 	MD_MIN_STRING,
@@ -72,6 +73,18 @@ const useStyles = createUseStyles({
 	},
 	imageContainer: {
 		position: 'relative',
+	},
+	lastBlock: {
+		paddingBottom: 148,
+	},
+	aboutLink: {
+		textDecoration: 'none',
+		borderBottom: '2px solid blue',
+		color: 'blue',
+	},
+	aboutBody: {
+		lineHeight: 1.75,
+		textAlign: 'center',
 	},
 	headerImg: {
 		position: 'absolute',
@@ -202,6 +215,13 @@ export default () => {
 					<Image size="half" src={LaddersPage} />
 					<Image size="half" src={FISMPage} />
 				</ItemGrid>
+			</ContentBlock>
+			<ContentBlock className={classes.lastBlock}>
+				<Body className={classes.aboutBody}>
+					<NavLink className={classes.aboutLink} to="/" exact>
+						Back to Home
+					</NavLink>
+				</Body>
 			</ContentBlock>
 		</PageWrapper>
 	)

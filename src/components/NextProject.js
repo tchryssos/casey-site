@@ -29,7 +29,7 @@ export default ({ link }) => {
 	const { isAltHome } = useContext(PageGatingContext)
 	const classes = useStyles()
 	return orNull(
-		isAltHome,
+		!isAltHome,
 		<ContentBlock className={classes.lastBlock}>
 			<Body className={classes.aboutBody}>
 				View the next project&nbsp;

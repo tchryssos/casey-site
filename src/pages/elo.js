@@ -99,6 +99,7 @@ const useStyles = createUseStyles({
 		whiteSpace: 'nowrap',
 		textAlign: 'center',
 		fontSize: 16,
+		fontWeight: 500,
 	},
 	quote: {
 		padding: '24px',

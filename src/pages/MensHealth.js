@@ -49,6 +49,8 @@ const useStyles = createUseStyles({
 		color: 'white',
 		whiteSpace: 'nowrap',
 		textAlign: 'center',
+		fontWeight: 500,
+		textTransform: 'uppercase',
 	},
 	quote: {
 		textAlign: 'center',
