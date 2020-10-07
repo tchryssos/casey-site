@@ -110,9 +110,6 @@ const useStyles = createUseStyles({
 		transform: 'translate(40px, 100px)',
 		animation: '$shake3 8s infinite',
 	},
-	animationContainer: {
-
-	},
 	half: {
 		width: '100%',
 		height: 200,
