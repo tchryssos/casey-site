@@ -86,9 +86,6 @@ const useStyles = createUseStyles({
 		lineHeight: 1.75,
 		textAlign: 'center',
 	},
-	headerImg: {
-		position: 'absolute',
-	},
 	headerCode: {
 		position: 'absolute',
 		width: 200,

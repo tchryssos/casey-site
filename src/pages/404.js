@@ -7,8 +7,7 @@ import ContentBlock from 'components/ContentBlock'
 import SubHeading from 'components/Typography/SubHeading'
 import Image from 'components/Image'
 
-import BlobBody from 'static/svg/404/404-body.svg'
-import BlobEye from 'static/svg/404/404-eye.svg'
+import AnimalCrossing from 'static/images/About/animalcrossing.png'
 
 const useStyles = createUseStyles({
 	'@keyframes spinRight': {
@@ -34,25 +33,8 @@ const useStyles = createUseStyles({
 	cAligned: {
 		textAlign: 'center',
 	},
-	blobBoy: {
-		position: 'relative',
-		width: '100%',
-		display: 'flex',
-		justifyContent: 'center',
-		alignItems: 'center',
-	},
-	blobBody: {
+	ACImage: {
 		width: 200,
-	},
-	blobEyeLeft: {
-		position: 'absolute',
-		width: 40,
-		animation: '$spinRight 3s infinite linear',
-	},
-	blobEyeRight: {
-		position: 'absolute',
-		width: 40,
-		animation: '$spinLeft 3s infinite linear',
 	},
 })
 
@@ -61,11 +43,7 @@ export default () => {
 	return (
 		<PageWrapper>
 			<ContentBlock className={classes.cAligned}>
-				<div className={classes.blobBoy}>
-					<Image src={BlobBody} className={classes.blobBody} />
-					<Image src={BlobEye} className={classes.blobEyeLeft} />
-					<Image src={BlobEye} className={classes.blobEyeRight} />
-				</div>
+				<Image src={AnimalCrossing} className={classes.ACImage} />
 				<SubHeading>
 					Sorry, we can&apos;t find that page.
 				</SubHeading>
