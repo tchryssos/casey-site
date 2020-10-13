@@ -10,15 +10,23 @@ import ContentBlock from 'components/ContentBlock'
 import Body from 'components/Typography/Body'
 import Spacer from 'components/Spacer'
 import LogoCollection from 'components/LogoCollection'
+import Image from 'components/Image'
+
+import Wave from 'static/svg/misc/wave_1.svg'
 
 const useStyles = createUseStyles({
+	'@keyframes wave': {
+		'0%': { transform: 'translateX(0px)' },
+		'50%': { transform: 'translateX(-50%)' },
+		'100%': { transform: 'translateX(0px)' },
+	},
 	homeContainer: {
 		display: 'flex',
 		flexDirection: 'column',
 		justifyContent: 'center',
 		alignItems: 'center',
 		width: '100%',
-		backgroundColor: '#efefef',
+		backgroundColor: '#e5E5E5',
 	},
 	homeWrapper: {
 		display: 'flex',
@@ -33,7 +41,6 @@ const useStyles = createUseStyles({
 	aboutMeHeader: {
 		textAlign: 'center',
 		backgroundColor: '#f7f7f7',
-		marginBottom: 64,
 	},
 	aboutLink: {
 		textDecoration: 'none',
@@ -42,6 +49,18 @@ const useStyles = createUseStyles({
 	},
 	aboutBody: {
 		lineHeight: 1.75,
+	},
+	waveWrapper: {
+		width: '100%',
+		backgroundColor: '#f7f7f7',
+		padding: 0,
+		margin: 0,
+	},
+	waveImage: {
+		width: '200%',
+		animation: '$wave 20s infinite',
+		margin: 0,
+		padding: 0,
 	},
 	[MD_MIN_STRING]: {
 		homeWrapper: {
@@ -76,6 +95,9 @@ export default () => {
 				</Body>
 				<LogoCollection />
 			</ContentBlock>
+			<div className={classes.waveWrapper}>
+				<Image src={Wave} className={classes.waveImage} />
+			</div>
 			<div className={classes.homeWrapper}>
 				{blobLinks}
 			</div>
