@@ -6,6 +6,8 @@ import ListenJay from 'static/svg/home/ListenJay-6.svg'
 import MensHealth from 'static/svg/home/MHH-5.svg'
 import Mirror from 'static/svg/home/Mirror-6.svg'
 
+import { UX_TAG, BRAND_TAG, LEAD_TAG } from 'constants/tags'
+
 import MensHealthDesciption from 'static/images/Descriptions/mhh_di-01.png'
 import FISMDesciption from 'static/images/Descriptions/FIS_di.png'
 import ELODesciption from 'static/images/Descriptions/ELO_di.png'
@@ -24,6 +26,7 @@ const blobLinkData = {
 		descriptionText: "Updating the branding and website design for a men's health clinic",
 		descriptionAlignment: 'left',
 		descriptionImage: MensHealthDesciption,
+		tags: [UX_TAG, BRAND_TAG],
 	},
 	FISMarketing: {
 		src: FISMarketing,
@@ -34,6 +37,7 @@ const blobLinkData = {
 		zIndex: 2,
 		descriptionText: 'Managing a creative team working on everything including out-of-home, video, organic and paid social',
 		descriptionImage: FISMDesciption,
+		tags: [BRAND_TAG, LEAD_TAG],
 	},
 	ELO: {
 		src: ELO,
@@ -45,6 +49,7 @@ const blobLinkData = {
 		descriptionText: 'Building a gaming tool from the ground up',
 		descriptionAlignment: 'left',
 		descriptionImage: ELODesciption,
+		tags: [UX_TAG, BRAND_TAG],
 	},
 	ListenJay: {
 		src: ListenJay,
@@ -55,6 +60,7 @@ const blobLinkData = {
 		zIndex: 3,
 		descriptionText: 'Adding a feature to a podcast discovery platform',
 		descriptionImage: LJUXADesciption,
+		tags: [UX_TAG],
 	},
 	Mirror: {
 		src: Mirror,
@@ -66,6 +72,7 @@ const blobLinkData = {
 		descriptionText: 'DesignLab case study project focused on a clothing ecommerce site',
 		descriptionAlignment: 'left',
 		descriptionImage: MirrorDescription,
+		tags: [UX_TAG, BRAND_TAG],
 	},
 	Portfolio: {
 		src: Portfolio,
@@ -77,6 +84,7 @@ const blobLinkData = {
 		descriptionText: 'Designing this website you\'re on right now',
 		hideOnAltHome: true,
 		descriptionImage: PortfolioDescription,
+		tags: [UX_TAG],
 	},
 	About: {
 		src: About,

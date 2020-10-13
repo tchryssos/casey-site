@@ -67,13 +67,12 @@ export default () => {
 					Designer balancing personality and&nbsp;utility
 				</Heading>
 				<Spacer />
-				<Body>UX/UI | Brand | Design Leadership</Body>
 				<Body className={classes.aboutBody}>
-					Read more about me&nbsp;
+					I am a designer focused on UX/UI, Brand and Design Leadership. Read more about me&nbsp;
 					<NavLink className={classes.aboutLink} to="/about" exact>
 						here
 					</NavLink>
-					&nbsp;and view my most recent work below
+					&nbsp;and view my most recent work below.
 				</Body>
 				<LogoCollection />
 			</ContentBlock>

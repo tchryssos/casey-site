@@ -60,6 +60,9 @@ export default createUseStyles({
 	About: {
 		transform: 'translate(0vw, -35vw)',
 	},
+	tagWrapper: {
+		marginTop: 4,
+	},
 	[MD_MIN_STRING]: {
 		linkWrapper: {
 			'&:last-of-type': {
