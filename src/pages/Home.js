@@ -57,13 +57,16 @@ const useStyles = createUseStyles({
 		margin: 0,
 		overflow: 'hidden',
 		display: 'block',
+		marginBottom: 48,
 	},
 	waveImage: {
 		width: '200%',
-		animation: '$wave 20s infinite',
+		animation: '$wave 30s infinite',
 		margin: 0,
 		padding: 0,
 		display: 'block',
+		transform: 'translateY(1px)',
+		// @TODO figure out why theres a 1 pixel line below image
 	},
 	[MD_MIN_STRING]: {
 		homeWrapper: {

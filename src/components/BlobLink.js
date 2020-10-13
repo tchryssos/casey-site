@@ -34,7 +34,7 @@ const Description = ({
 export default ({
 	src, className, link, altText, category,
 	zIndex, width, descriptionText, descriptionImage, descriptionAlignment,
-	tags,
+	tags, mobileSrc,
 }) => {
 	const classes = useStyles({ zIndex, width })
 	return (
@@ -52,6 +52,12 @@ export default ({
 					<img
 						src={src}
 						alt={`The ${altText} blob.`}
+						className={classes.desktopBlobs}
+					/>
+					<img
+						src={mobileSrc}
+						alt={`The ${altText} blob.`}
+						className={classes.mobileBlobs}
 					/>
 				</NavLink>
 			</div>

@@ -38,30 +38,36 @@ export default createUseStyles({
 			transform: 'translate(16px, -16px)',
 		},
 	},
+	desktopBlobs: {
+		display: 'none',
+	},
+	mobileBlobs: {
+		display: 'block',
+	},
 	// Custom CSS for blob placement
 	MensHealth: {
-		transform: 'translate(2vw, 2vw)',
+		transform: 'translate(2vw, 7vw)',
 	},
 	FISMarketing: {
-		transform: 'translate(-2vw, 8vw)',
+		transform: 'translate(-2vw, 13vw)',
 	},
 	ListenJay: {
-		transform: 'translate(2vw, 6vw)',
+		transform: 'translate(2vw, 15vw)',
 	},
 	ELO: {
-		transform: 'translate(2vw, -3vw)',
+		transform: 'translate(2vw, 5vw)',
 	},
 	Chase: {
-		transform: 'translate(-45vw, -15vw)',
+		transform: 'translate(-45vw, -7vw)',
 	},
 	Portfolio: {
-		transform: 'translate(20vw, -35vw)',
+		transform: 'translate(20vw, -25vw)',
 	},
 	Mirror: {
-		transform: 'translate(1vw, 25vw)',
+		transform: 'translate(1vw, 35vw)',
 	},
 	About: {
-		transform: 'translate(0vw, -40vw)',
+		transform: 'translate(0vw, -25vw)',
 	},
 	tagWrapper: {
 		marginTop: 4,
@@ -75,6 +81,12 @@ export default createUseStyles({
 				display: 'flex',
 				opacity: '100%',
 			},
+		},
+		desktopBlobs: {
+			display: 'block',
+		},
+		mobileBlobs: {
+			display: 'none',
 		},
 		MensHealth: {
 			transform: 'translateX(0)',
