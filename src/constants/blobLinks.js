@@ -1,10 +1,10 @@
-import FISMarketing from 'static/svg/home/FISMarketing-5.svg'
-import About from 'static/svg/home/About-5.svg'
-import Portfolio from 'static/svg/home/Portfolio-5.svg'
-import ELO from 'static/svg/home/ELO-5.svg'
-import ListenJay from 'static/svg/home/ListenJay-6.svg'
-import MensHealth from 'static/svg/home/MHH-5.svg'
-import Mirror from 'static/svg/home/Mirror-6.svg'
+import FISMarketing from 'static/svg/home/FISMarketing-7.svg'
+import About from 'static/svg/home/About-7.svg'
+import Portfolio from 'static/svg/home/Portfolio-7.svg'
+import ELO from 'static/svg/home/ELO-7.svg'
+import ListenJay from 'static/svg/home/ListenJay-7.svg'
+import MensHealth from 'static/svg/home/MHH-7.svg'
+import Mirror from 'static/svg/home/Mirror-7.svg'
 
 import { UX_TAG, BRAND_TAG, LEAD_TAG } from 'constants/tags'
 
@@ -79,7 +79,7 @@ const blobLinkData = {
 		className: 'Portfolio',
 		link: '/portfolio',
 		altText: 'Portfolio Design',
-		width: 100,
+		width: 50,
 		zIndex: 3,
 		descriptionText: 'Designing this website you\'re on right now',
 		hideOnAltHome: true,
