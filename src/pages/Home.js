@@ -12,7 +12,7 @@ import Spacer from 'components/Spacer'
 import LogoCollection from 'components/LogoCollection'
 import Image from 'components/Image'
 
-import Wave from 'static/svg/misc/wave_1.svg'
+import Wave from 'static/svg/misc/wave_2.svg'
 
 const useStyles = createUseStyles({
 	'@keyframes wave': {
@@ -55,12 +55,15 @@ const useStyles = createUseStyles({
 		backgroundColor: '#f7f7f7',
 		padding: 0,
 		margin: 0,
+		overflow: 'hidden',
+		display: 'block',
 	},
 	waveImage: {
 		width: '200%',
 		animation: '$wave 20s infinite',
 		margin: 0,
 		padding: 0,
+		display: 'block',
 	},
 	[MD_MIN_STRING]: {
 		homeWrapper: {

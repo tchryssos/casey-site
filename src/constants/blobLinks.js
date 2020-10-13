@@ -5,6 +5,7 @@ import ELO from 'static/svg/home/ELO-7.svg'
 import ListenJay from 'static/svg/home/ListenJay-7.svg'
 import MensHealth from 'static/svg/home/MHH-7.svg'
 import Mirror from 'static/svg/home/Mirror-7.svg'
+import Chase from 'static/svg/home/Chase-7.svg'
 
 import { UX_TAG, BRAND_TAG, LEAD_TAG } from 'constants/tags'
 
@@ -14,6 +15,8 @@ import ELODesciption from 'static/images/Descriptions/ELO_di.png'
 import LJUXADesciption from 'static/images/Descriptions/LJ_di.png'
 import MirrorDescription from 'static/images/Descriptions/Mirror-di.png'
 import PortfolioDescription from 'static/images/Descriptions/portfolio_di.png'
+import ChaseDescription from 'static/images/ChaseSapphire/Chase_Card.png'
+
 
 const blobLinkData = {
 	MensHealth: {
@@ -73,6 +76,19 @@ const blobLinkData = {
 		descriptionAlignment: 'left',
 		descriptionImage: MirrorDescription,
 		tags: [UX_TAG, BRAND_TAG],
+	},
+	Chase: {
+		src: Chase,
+		className: 'Chase',
+		link: '/chase',
+		altText: 'Chase Sapphire',
+		width: 50,
+		zIndex: 3,
+		descriptionText: 'Social assets for the Chase Sapphire Reserve Card',
+		hideOnAltHome: true,
+		descriptionAlignment: 'left',
+		descriptionImage: ChaseDescription,
+		tags: [BRAND_TAG],
 	},
 	Portfolio: {
 		src: Portfolio,

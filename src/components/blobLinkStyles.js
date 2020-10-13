@@ -51,14 +51,17 @@ export default createUseStyles({
 	ELO: {
 		transform: 'translate(2vw, -3vw)',
 	},
+	Chase: {
+		transform: 'translate(-45vw, -15vw)',
+	},
 	Portfolio: {
-		transform: 'translateY(-20vw)',
+		transform: 'translate(20vw, -35vw)',
 	},
 	Mirror: {
-		transform: 'translate(-20vw, -4vw)',
+		transform: 'translate(1vw, 25vw)',
 	},
 	About: {
-		transform: 'translate(0vw, -35vw)',
+		transform: 'translate(0vw, -40vw)',
 	},
 	tagWrapper: {
 		marginTop: 4,
@@ -85,14 +88,17 @@ export default createUseStyles({
 		ELO: {
 			transform: 'translate(-2vw, -0.5vw)',
 		},
+		Chase: {
+			transform: 'translate(-24vw, -4vw)',
+		},
 		Portfolio: {
-			transform: 'translateY(-10vw)',
+			transform: 'translate(12vw, -14vw)',
 		},
 		Mirror: {
-			transform: 'translate(-13vw, -1vw)',
+			transform: 'translate(1vw, 16vw)',
 		},
 		About: {
-			transform: 'translate(0vw, -18vw)',
+			transform: 'translate(0vw, -15vw)',
 		},
 	},
 	[LG_MIN_STRING]: {
