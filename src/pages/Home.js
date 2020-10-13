@@ -9,6 +9,7 @@ import Heading from 'components/Typography/Heading'
 import ContentBlock from 'components/ContentBlock'
 import Body from 'components/Typography/Body'
 import Spacer from 'components/Spacer'
+import LogoCollection from 'components/LogoCollection'
 
 const useStyles = createUseStyles({
 	homeContainer: {
@@ -61,9 +62,10 @@ export default () => {
 		<div className={classes.homeContainer}>
 			<ContentBlock className={classes.aboutMeHeader}>
 				<Heading>
-					Product designer balancing personality and&nbsp;utility
+					Designer balancing personality and&nbsp;utility
 				</Heading>
 				<Spacer />
+				<Body>UX/UI | Brand | Design Leadership</Body>
 				<Body className={classes.aboutBody}>
 					Read more about me&nbsp;
 					<NavLink className={classes.aboutLink} to="/about" exact>
@@ -71,6 +73,7 @@ export default () => {
 					</NavLink>
 					&nbsp;and view my most recent work below
 				</Body>
+				<LogoCollection />
 			</ContentBlock>
 			<div className={classes.homeWrapper}>
 				{blobLinks}
