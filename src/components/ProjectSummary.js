@@ -1,13 +1,12 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom'
 import { createUseStyles } from 'react-jss'
 import { MD_MIN_STRING } from 'constants/styles/breakpoints'
 
 import Heading from 'components/Typography/Heading'
 import Body from 'components/Typography/Body'
-import Note from 'components/Typography/Note'
 import Image from 'components/Image'
 import Spacer from 'components/Spacer'
+import Tag from 'components/Tag'
 
 const useStyles = createUseStyles({
 	projectLink: {
@@ -50,10 +49,13 @@ const useStyles = createUseStyles({
 	link: {
 		textDecoration: 'none',
 	},
+	tagWrapper: {
+		marginTop: 4,
+	},
 })
 
 export default ({
-	heading, body, tag, imageSrc, link,
+	heading, body, tags, imageSrc,
 }) => {
 	const classes = useStyles()
 	return (
@@ -61,9 +63,13 @@ export default ({
 			<div className={classes.projectLink}>
 				<Image size="full" src={imageSrc} className={classes.projectLinkImage} />
 				<div className={classes.projectLinkTypography}>
-					<Note className={classes.uppercase}>
-						{tag}
-					</Note>
+					{/* <div className={classes.tagWrapper}>
+						{tags.map(
+							(tag) => (
+								<Tag tag={tag} />
+							),
+						)}
+					</div> */}
 					<Heading>
 						{heading}
 					</Heading>
@@ -71,11 +77,6 @@ export default ({
 						{body}
 					</Body>
 					<Spacer />
-					<NavLink to={link} exact className={classes.link}>
-						<div className={classes.viewButton}>
-							<Body><b>VIEW THE WORK</b></Body>
-						</div>
-					</NavLink>
 				</div>
 			</div>
 		</div>
