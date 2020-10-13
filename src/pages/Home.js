@@ -18,9 +18,9 @@ const useStyles = createUseStyles({
 		justifyContent: 'center',
 		alignItems: 'center',
 		width: '100%',
+		backgroundColor: '#efefef',
 	},
 	homeWrapper: {
-		backgroundColor: '#e8e8e8',
 		display: 'flex',
 		flexWrap: 'wrap',
 		justifyContent: 'center',
@@ -32,6 +32,8 @@ const useStyles = createUseStyles({
 	},
 	aboutMeHeader: {
 		textAlign: 'center',
+		backgroundColor: '#f7f7f7',
+		marginBottom: 64,
 	},
 	aboutLink: {
 		textDecoration: 'none',
