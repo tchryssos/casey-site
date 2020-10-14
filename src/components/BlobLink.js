@@ -2,10 +2,14 @@ import React from 'react'
 import clsx from 'clsx'
 import { NavLink } from 'react-router-dom'
 import orNull from 'util/orNull'
+
+import Tag from 'components/Tag'
+
 import useStyles from './blobLinkStyles'
 
 const Description = ({
 	classes, descriptionText, descriptionAlignment, descriptionImage,
+	tags,
 }) => (
 	<div
 		className={
@@ -16,6 +20,13 @@ const Description = ({
 		}
 	>
 		{descriptionText}
+		<div className={classes.tagWrapper}>
+			{tags.map(
+				(tag) => (
+					<Tag tag={tag} />
+				),
+			)}
+		</div>
 		<img className={classes.descriptionImage} src={descriptionImage} alt="" />
 	</div>
 )
@@ -23,6 +34,7 @@ const Description = ({
 export default ({
 	src, className, link, altText, category,
 	zIndex, width, descriptionText, descriptionImage, descriptionAlignment,
+	tags, mobileSrc,
 }) => {
 	const classes = useStyles({ zIndex, width })
 	return (
@@ -40,6 +52,12 @@ export default ({
 					<img
 						src={src}
 						alt={`The ${altText} blob.`}
+						className={classes.desktopBlobs}
+					/>
+					<img
+						src={mobileSrc}
+						alt={`The ${altText} blob.`}
+						className={classes.mobileBlobs}
 					/>
 				</NavLink>
 			</div>
@@ -50,6 +68,7 @@ export default ({
 					descriptionText={descriptionText}
 					descriptionAlignment={descriptionAlignment}
 					descriptionImage={descriptionImage}
+					tags={tags}
 				/>,
 			)}
 		</div>

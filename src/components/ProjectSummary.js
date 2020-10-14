@@ -5,7 +5,6 @@ import { MD_MIN_STRING } from 'constants/styles/breakpoints'
 
 import Heading from 'components/Typography/Heading'
 import Body from 'components/Typography/Body'
-import Note from 'components/Typography/Note'
 import Image from 'components/Image'
 import Spacer from 'components/Spacer'
 
@@ -53,7 +52,7 @@ const useStyles = createUseStyles({
 })
 
 export default ({
-	heading, body, tag, imageSrc, link,
+	heading, body, imageSrc, link,
 }) => {
 	const classes = useStyles()
 	return (
@@ -61,9 +60,6 @@ export default ({
 			<div className={classes.projectLink}>
 				<Image size="full" src={imageSrc} className={classes.projectLinkImage} />
 				<div className={classes.projectLinkTypography}>
-					<Note className={classes.uppercase}>
-						{tag}
-					</Note>
 					<Heading>
 						{heading}
 					</Heading>

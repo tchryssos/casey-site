@@ -9,17 +9,26 @@ import Heading from 'components/Typography/Heading'
 import ContentBlock from 'components/ContentBlock'
 import Body from 'components/Typography/Body'
 import Spacer from 'components/Spacer'
+import LogoCollection from 'components/LogoCollection'
+import Image from 'components/Image'
+
+import Wave from 'static/svg/misc/wave_2.svg'
 
 const useStyles = createUseStyles({
+	'@keyframes wave': {
+		'0%': { transform: 'translateX(0px)' },
+		'50%': { transform: 'translateX(-50%)' },
+		'100%': { transform: 'translateX(0px)' },
+	},
 	homeContainer: {
 		display: 'flex',
 		flexDirection: 'column',
 		justifyContent: 'center',
 		alignItems: 'center',
 		width: '100%',
+		backgroundColor: '#e5E5E5',
 	},
 	homeWrapper: {
-		backgroundColor: '#e8e8e8',
 		display: 'flex',
 		flexWrap: 'wrap',
 		justifyContent: 'center',
@@ -31,6 +40,7 @@ const useStyles = createUseStyles({
 	},
 	aboutMeHeader: {
 		textAlign: 'center',
+		backgroundColor: '#f7f7f7',
 	},
 	aboutLink: {
 		textDecoration: 'none',
@@ -39,6 +49,24 @@ const useStyles = createUseStyles({
 	},
 	aboutBody: {
 		lineHeight: 1.75,
+	},
+	waveWrapper: {
+		width: '100%',
+		backgroundColor: '#f7f7f7',
+		padding: 0,
+		margin: 0,
+		overflow: 'hidden',
+		display: 'block',
+		marginBottom: 48,
+	},
+	waveImage: {
+		width: '200%',
+		animation: '$wave 30s infinite',
+		margin: 0,
+		padding: 0,
+		display: 'block',
+		transform: 'translateY(1px)',
+		// @TODO figure out why theres a 1 pixel line below image
 	},
 	[MD_MIN_STRING]: {
 		homeWrapper: {
@@ -61,17 +89,21 @@ export default () => {
 		<div className={classes.homeContainer}>
 			<ContentBlock className={classes.aboutMeHeader}>
 				<Heading>
-					Product designer balancing personality and&nbsp;utility
+					Designer balancing personality and&nbsp;utility
 				</Heading>
 				<Spacer />
 				<Body className={classes.aboutBody}>
-					Read more about me&nbsp;
+					I am a designer focused on UX/UI, Brand and Design Leadership. Read more about me&nbsp;
 					<NavLink className={classes.aboutLink} to="/about" exact>
 						here
 					</NavLink>
-					&nbsp;and view my most recent work below
+					&nbsp;and view my most recent work below.
 				</Body>
+				<LogoCollection />
 			</ContentBlock>
+			<div className={classes.waveWrapper}>
+				<Image src={Wave} className={classes.waveImage} />
+			</div>
 			<div className={classes.homeWrapper}>
 				{blobLinks}
 			</div>
