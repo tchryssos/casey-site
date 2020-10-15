@@ -13,6 +13,7 @@ import Image from 'components/Image'
 import Spacer from 'components/Spacer'
 import VideoPlayer from 'components/VideoPlayer'
 import ItemGrid from 'components/ItemGrid'
+import NextProject from 'components/NextProject'
 
 import ChaseCard from 'static/images/ChaseSapphire/Chase_Card.png'
 import CardBG from 'static/images/ChaseSapphire/chase-circle.svg'
@@ -164,6 +165,7 @@ export default () => {
 				/>
 				<Image scrollable src={CitiesCarousel} size="full" />
 			</ContentBlock>
+			<NextProject link="/mirror" />
 		</PageWrapper>
 	)
 }

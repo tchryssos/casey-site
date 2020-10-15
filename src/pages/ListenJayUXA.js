@@ -334,7 +334,7 @@ export default () => {
 					The controls for the design editor on this project were complex to prototype for testing. I learned a lot about using overlays and hover states in Figma to create something that feels realistic.
 				</Body>
 			</ContentBlock>
-			<NextProject link="/mirror" />
+			<NextProject link="/chase" />
 		</PageWrapper>
 	)
 }
