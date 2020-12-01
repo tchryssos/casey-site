@@ -23,51 +23,81 @@ export default () => {
 		<PageWrapper>
 			<ContentBlock>
 				<Heading className={classes.test}>
-					Ellipsis
+					Ellipsis Health wants to update their site to be modern, professional and tell their story better
 				</Heading>
 			</ContentBlock>
 			<ContentBlock>
 				<SubHeading>
-					GOAL #1
+					THE SITUATION
 				</SubHeading>
+				<ul>
+					<li>
+						Timeline: 1 week
+					</li>
+					<li>
+						Should be managable by the Ellipsis team in the future
+					</li>
+					<li>
+						Speaks to Patients, Providers and Investors
+					</li>
+				</ul>
+				<SubHeading>
+					THE TASK
+				</SubHeading>
+				<ul>
+					<li>
+						Design and build a fully functional website
+					</li>
+					<li>
+						Expand the brand guidelines for web
+					</li>
+					<li>
+						Enhance the content gathered by the Ellipsis team
+					</li>
+				</ul>
+			</ContentBlock>
+			<ContentBlock>
+				<SubHeading>
+					THE ACTIONS
+				</SubHeading>
+				<Spacer />
+				<Heading>
+					Build a Wix site that doesn’t look like a Wix site
+				</Heading>
 				<Body>
-					Display a professional and modern brand that keeps up with our competition
+					It was important that this site be able to scale with the team after my 1 week stint with them. Because their existing site was built in Wix we stuck with that platform so they could easily make changes down the line.
 				</Body>
-				<SubHeading>
-					GOAL #2
-				</SubHeading>
+			</ContentBlock>
+			<ContentBlock>
+				<Heading>
+					Expand the brand guidelines for web
+				</Heading>
 				<Body>
-					Enhance our brand storytelling
+					Ellipsis Health had just created a new logo and color palette for their brand. While this needed to be present in the site designs, there was not a lot of other guidance on visual so I worked with the team to grow their style guide for web.
+				</Body>
+				<Spacer />
+				<SubHeading>
+					The Ellipsis
+				</SubHeading>
+				<SubHeading>
+					The Sound Wave
+				</SubHeading>
+				<SubHeading>
+					Iconography
+				</SubHeading>
+			</ContentBlock>
+			<ContentBlock>
+				<Heading>
+					Speak to all of our users
+				</Heading>
+				<Body>
+					While this project started as a single-page site, it quickly grew beyond a simple splash page as we thought about the information our users are looking for
 				</Body>
 			</ContentBlock>
 			<ContentBlock>
-				<Heading>
-					Speaking to each of our users
-				</Heading>
 				<SubHeading>
-					Patients
+					THE RESULTS
 				</SubHeading>
-				<SubHeading>
-					Providers
-				</SubHeading>
-				<SubHeading>
-					Investors
-				</SubHeading>
-			</ContentBlock>
-			<ContentBlock>
-				<Heading>
-					Making a big impact in a short amount of time
-				</Heading>
-			</ContentBlock>
-			<ContentBlock>
-				<Heading>
-					Expanding the existing brand guidelines to work for web
-				</Heading>
-			</ContentBlock>
-			<ContentBlock>
-				<Heading>
-					Learnings
-				</Heading>
 			</ContentBlock>
 		</PageWrapper>
 	)
