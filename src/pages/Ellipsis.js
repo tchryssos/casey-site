@@ -16,6 +16,10 @@ import ItemGrid from 'components/ItemGrid'
 import VideoPlayer from 'components/VideoPlayer'
 
 import BeforeAfter from 'static/images/Ellipsis/ellipsis_before_after.gif'
+import Icons from 'static/images/Ellipsis/motifIcon.png'
+import SoundWave from 'static/images/Ellipsis/motifWave.png'
+import EllipsisSketch from 'static/images/Ellipsis/ellipsis_motif.png'
+import AboveFold from 'static/images/Ellipsis/site_abovefold.png'
 
 
 const useStyles = createUseStyles({
@@ -103,19 +107,30 @@ export default () => {
 				<SubHeading>
 					The Ellipsis
 				</SubHeading>
+				<ItemGrid stackedOnMobile>
+					<Image src={EllipsisSketch} size="full" className={classes.half} />
+					<Image src={AboveFold} size="full" className={classes.half} />
+				</ItemGrid>
 				<SubHeading>
 					The Sound Wave
 				</SubHeading>
+				<Spacer />
+				<Body>Since one of Ellipsis Health&apos;s goals is to establish speech as a vital sign, the sound wave became an important design element as well. In graphic treatments, it is often combined with the ellipsis circles, but I also used it to help create heirarchy in our typography.</Body>
+				<Image src={SoundWave} size="full" />
 				<SubHeading>
 					Iconography
 				</SubHeading>
+				<Spacer />
+				<Body>Because we didn't have any existing icons ready to use, I created some to enhance certain ideas brought in the site.</Body>
+				<Image src={Icons} size="full" />
 			</ContentBlock>
 			<ContentBlock>
 				<Heading>
 					Speak to all of our users
 				</Heading>
+				<Spacer />
 				<Body>
-					While this project started as a single-page site, it quickly grew beyond a simple splash page as we thought about the information our users are looking for
+					While this project started as a single-page site, it quickly grew beyond a simple splash page as we thought about the information each of our users are looking for.
 				</Body>
 			</ContentBlock>
 			<ContentBlock>
