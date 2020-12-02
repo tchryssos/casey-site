@@ -20,6 +20,8 @@ import Icons from 'static/images/Ellipsis/motifIcon.png'
 import SoundWave from 'static/images/Ellipsis/motifWave.png'
 import EllipsisSketch from 'static/images/Ellipsis/ellipsis_motif.png'
 import AboveFold from 'static/images/Ellipsis/site_abovefold.png'
+import Copy from 'static/images/Ellipsis/copy.png'
+import NavGif from 'static/images/Ellipsis/navgif.gif'
 
 
 const useStyles = createUseStyles({
@@ -90,10 +92,6 @@ export default () => {
 				<Body>
 					It was important that this site be able to scale with the team after my 1 week stint with them. Because their existing site was built in Wix we stuck with that platform so they could easily make changes down the line.
 				</Body>
-				<VideoPlayer
-					src="https://player.vimeo.com/video/486223850?autoplay=1&loop=1&autopause=0"
-					title="Wix Editing"
-				/>
 			</ContentBlock>
 			<ContentBlock>
 				<Heading>
@@ -126,12 +124,44 @@ export default () => {
 			</ContentBlock>
 			<ContentBlock>
 				<Heading>
-					Speak to all of our users
+					Speak to each of our users
 				</Heading>
 				<Spacer />
 				<Body>
 					While this project started as a single-page site, it quickly grew beyond a simple splash page as we thought about the information each of our users are looking for.
 				</Body>
+				<Spacer />
+				<Image src={NavGif} size="full" />
+				<Spacer />
+				<ItemGrid>
+					<div className={classes.half} stackedOnMobile>
+						<SubHeading>
+							Patients
+						</SubHeading>
+						<Spacer />
+						<Body>
+							When patients come to the site we want them to be able to understand what we have to offer immediately. We want our copy to be straight forward and ommit any medical jargon that could be confusing.
+						</Body>
+					</div>
+					<Image src={Copy} className={classes.half} size="full" />
+				</ItemGrid>
+				<Spacer />
+				<SubHeading>
+					Providers
+				</SubHeading>
+				<Spacer />
+				<Body>
+					We want providers to have access to their data immediately so we keep the Provider Login CTA always on in the navigation. We use infographics to explain our problems and solutions in a digestible way but also provide links to our papers so providers can dig deeper if they want.
+				</Body>
+				<Spacer />
+				<SubHeading>
+					Investors
+				</SubHeading>
+				<Spacer />
+				<Body>
+					To enhance our professionalism and credibilty we included our key press pieces and also included a snapshot of our leadership team.
+				</Body>
+
 			</ContentBlock>
 			<ContentBlock>
 				<SubHeading>
