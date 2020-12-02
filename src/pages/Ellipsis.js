@@ -1,6 +1,10 @@
 import React from 'react'
 import { createUseStyles } from 'react-jss'
 
+import {
+	MD_MIN_STRING,
+} from 'constants/styles/breakpoints'
+
 import PageWrapper from 'components/PageWrapper'
 import ContentBlock from 'components/ContentBlock'
 import Heading from 'components/Typography/Heading'
@@ -8,11 +12,20 @@ import SubHeading from 'components/Typography/SubHeading'
 import Body from 'components/Typography/Body'
 import Image from 'components/Image'
 import Spacer from 'components/Spacer'
+import ItemGrid from 'components/ItemGrid'
+import VideoPlayer from 'components/VideoPlayer'
+
+import BeforeAfter from 'static/images/Ellipsis/ellipsis_before_after.gif'
 
 
 const useStyles = createUseStyles({
-	test: {
-		color: 'black',
+	half: {
+		width: '100%',
+		marginBottom: 64,
+		[MD_MIN_STRING]: {
+			width: 'calc(50% - 8px)',
+			marginBottom: 0,
+		},
 	},
 })
 
@@ -22,39 +35,44 @@ export default () => {
 	return (
 		<PageWrapper>
 			<ContentBlock>
-				<Heading className={classes.test}>
+				<Heading>
 					Ellipsis Health wants to update their site to be modern, professional and tell their story better
 				</Heading>
 			</ContentBlock>
 			<ContentBlock>
-				<SubHeading>
-					THE SITUATION
-				</SubHeading>
-				<ul>
-					<li>
-						Timeline: 1 week
-					</li>
-					<li>
-						Should be managable by the Ellipsis team in the future
-					</li>
-					<li>
-						Speaks to Patients, Providers and Investors
-					</li>
-				</ul>
-				<SubHeading>
-					THE TASK
-				</SubHeading>
-				<ul>
-					<li>
-						Design and build a fully functional website
-					</li>
-					<li>
-						Expand the brand guidelines for web
-					</li>
-					<li>
-						Enhance the content gathered by the Ellipsis team
-					</li>
-				</ul>
+				<ItemGrid stackedOnMobile>
+					<div className={classes.half}>
+						<SubHeading>
+							THE SITUATION
+						</SubHeading>
+						<ul>
+							<li>
+								Timeline: 1 week
+							</li>
+							<li>
+								Should be managable by the Ellipsis team in the future
+							</li>
+							<li>
+								Speaks to Patients, Providers and Investors
+							</li>
+						</ul>
+						<SubHeading>
+							THE TASK
+						</SubHeading>
+						<ul>
+							<li>
+								Design and build a fully functional website
+							</li>
+							<li>
+								Expand the brand guidelines for web
+							</li>
+							<li>
+								Enhance the content gathered by the Ellipsis team
+							</li>
+						</ul>
+					</div>
+					<Image src={BeforeAfter} className={classes.half} />
+				</ItemGrid>
 			</ContentBlock>
 			<ContentBlock>
 				<SubHeading>
@@ -64,14 +82,20 @@ export default () => {
 				<Heading>
 					Build a Wix site that doesn’t look like a Wix site
 				</Heading>
+				<Spacer />
 				<Body>
 					It was important that this site be able to scale with the team after my 1 week stint with them. Because their existing site was built in Wix we stuck with that platform so they could easily make changes down the line.
 				</Body>
+				<VideoPlayer
+					src="https://player.vimeo.com/video/486223850?autoplay=1&loop=1&autopause=0"
+					title="Wix Editing"
+				/>
 			</ContentBlock>
 			<ContentBlock>
 				<Heading>
 					Expand the brand guidelines for web
 				</Heading>
+				<Spacer />
 				<Body>
 					Ellipsis Health had just created a new logo and color palette for their brand. While this needed to be present in the site designs, there was not a lot of other guidance on visual so I worked with the team to grow their style guide for web.
 				</Body>
