@@ -1,9 +1,11 @@
 import React from 'react'
 import { createUseStyles } from 'react-jss'
+import { MD_MIN_STRING } from 'constants/styles/breakpoints'
 
 import { NavLink } from 'react-router-dom'
 
 import resumePdf from 'static/files/resume.pdf'
+import BigCasey from 'static/svg/misc/FOOTERNAME.svg'
 
 const useStyles = createUseStyles({
 	footerWrapper: {
@@ -18,7 +20,14 @@ const useStyles = createUseStyles({
 		textAlign: 'center',
 	},
 	footerLinkContainer: {
-		width: '33%',
+		width: '80%',
+		margin: '0 10%',
+		textAlign: 'center',
+		[MD_MIN_STRING]: {
+			width: '33%',
+			margin: '0',
+			textAlign: 'left',
+		},
 	},
 	footerLink: {
 		color: 'white',
@@ -28,6 +37,11 @@ const useStyles = createUseStyles({
 	},
 	footerFlexWrapper: {
 		display: 'flex',
+		marginTop: 40,
+		flexDirection: 'column',
+		[MD_MIN_STRING]: {
+			flexDirection: 'row',
+		},
 	},
 })
 
@@ -35,7 +49,7 @@ export default () => {
 	const classes = useStyles()
 	return (
 		<div className={classes.footerWrapper}>
-			<p className={classes.bigCasey}>CASEY</p>
+			<img src={BigCasey} alt="Casey" />
 			<div className={classes.footerFlexWrapper}>
 				<div className={classes.footerLinkContainer}>
 					<NavLink className={classes.footerLink} to="/about" exact>About Me</NavLink>
