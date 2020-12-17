@@ -13,6 +13,7 @@ import ScrollContext from 'contexts/scroll'
 
 import NavBar from 'components/NavBar'
 import Home from 'pages/Home'
+import Footer from 'components/Footer'
 import FISMarketing from 'pages/FISMarketing'
 import Portfolio from 'pages/Portfolio'
 import ListenJay from 'pages/ListenJay'
@@ -142,6 +143,7 @@ const App = ({ location }) => {
 						<Route path="/all-projects" component={AllProjects} />
 						<Route component={FourOhFour} />
 					</Switch>
+					<Footer />
 				</div>
 			</ScrollContext.Provider>
 			{/* <NavBar /> */}

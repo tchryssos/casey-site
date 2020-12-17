@@ -2,11 +2,12 @@ import React from 'react'
 import { MD_MIN_STRING } from 'constants/styles/breakpoints'
 import { createUseStyles } from 'react-jss'
 
-import PageWrapper from 'components/PageWrapper'
+
 import ContentBlock from 'components/ContentBlock'
 import Spacer from 'components/Spacer'
 import Body from 'components/Typography/Body'
 import Heading from 'components/Typography/Heading'
+
 import BlobLink from 'components/BlobLink'
 import blobLinkData from 'constants/blobLinks'
 
@@ -65,6 +66,11 @@ export default () => {
 			<div className={classes.homeWrapper}>
 				{blobLinks}
 			</div>
+			{/* <ContentBlock>
+				<SubHeading>
+					DesignLab Case Studies
+				</SubHeading>
+			</ContentBlock> */}
 		</div>
 	)
 }
