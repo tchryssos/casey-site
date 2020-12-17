@@ -24,6 +24,7 @@ import FourOhFour from 'pages/404'
 import ListenJayUXA from 'pages/ListenJayUXA'
 import Chase from 'pages/Chase'
 import Ellipsis from 'pages/Ellipsis'
+import AllProjects from 'pages/AllProjects'
 
 import cursor from 'static/images/Misc/cursor.png'
 
@@ -138,6 +139,7 @@ const App = ({ location }) => {
 						<Route path={blobLinkData.MensHealth.link} component={MensHealth} />
 						<Route path={blobLinkData.Chase.link} component={Chase} />
 						<Route path="/ellipsis" component={Ellipsis} />
+						<Route path="/all-projects" component={AllProjects} />
 						<Route component={FourOhFour} />
 					</Switch>
 				</div>
