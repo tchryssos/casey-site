@@ -11,10 +11,16 @@ import Spacer from 'components/Spacer'
 import LogoCollection from 'components/LogoCollection'
 import PageWrapper from 'components/PageWrapper'
 import Image from 'components/Image'
+import ProjectPreview from 'components/ProjectPreview'
 
-import Preview from 'static/svg/home/PortfolioPreview.svg'
+import Preview1 from 'static/svg/home/ProjectPreview_1.svg'
+import Preview2 from 'static/svg/home/ProjectPreview_2.svg'
+import Preview3 from 'static/svg/home/ProjectPreview_3.svg'
+import Preview4 from 'static/svg/home/ProjectPreview_4.svg'
 import AnimalCrossing from 'static/images/About/animalcrossing.png'
 import MensHealthDesciption from 'static/images/Descriptions/mhh_di-01.png'
+import FISMDesciption from 'static/images/Descriptions/FIS_di.png'
+import ELODesciption from 'static/images/Descriptions/ELO_di.png'
 
 
 const useStyles = createUseStyles({
@@ -64,16 +70,6 @@ const useStyles = createUseStyles({
 		flexDirection: 'row',
 		justifyContent: 'space-between',
 	},
-	projectPreviewContainer: {
-		paddingTop: 20,
-		width: '45%',
-		'&:hover $absolute': {
-			display: 'block',
-		},
-		'&:hover $projectTitle': {
-			textDecoration: 'underline',
-		},
-	},
 	quoteWrapper: {
 		display: 'flex',
 		alignItems: 'center',
@@ -81,14 +77,6 @@ const useStyles = createUseStyles({
 	quoteBlock: {
 		backgroundColor: '#f7f7f7',
 		padding: '100px 10%',
-	},
-	relative: {
-		position: 'relative',
-	},
-	absolute: {
-		position: 'absolute',
-		width: '80%',
-		display: 'none',
 	},
 	[MD_MIN_STRING]: {
 		homeWrapper: {
@@ -126,34 +114,34 @@ const Home = () => {
 					</NavLink>
 				</div>
 				<div className={classes.flexContainer}>
-					<div className={classes.projectPreviewContainer}>
-						<div className={classes.relative}>
-							<Image src={MensHealthDesciption} className={classes.absolute} />
-							<Image src={Preview} size="full" />
-						</div>
-						<Spacer />
-						<SubHeading>
-							Men&apos;s Health Memorial Website Redesign
-						</SubHeading>
-						<Spacer height={0.5} />
-						<Body>
-							BRAND, UX/UI, LEADERSHIP
-						</Body>
-					</div>
-					<div className={classes.projectPreviewContainer}>
-						<div className={classes.relative}>
-							<Image src={MensHealthDesciption} className={classes.absolute} />
-							<Image src={Preview} size="full" />
-						</div>
-						<Spacer />
-						<SubHeading className={classes.projectTitle}>
-							Men&apos;s Health Memorial Website Redesign
-						</SubHeading>
-						<Spacer height={0.5} />
-						<Body>
-							BRAND, UX/UI, LEADERSHIP
-						</Body>
-					</div>
+					<ProjectPreview
+						tags="UXUI, Brand, leadership"
+						title="Me&apos;s Health Memorial Website Redesign"
+						bgImage={Preview1}
+						hoverImage={MensHealthDesciption}
+						link="/mens-health"
+					/>
+					<ProjectPreview
+						tags="Brand, leadership"
+						title="Managing Design at Flatiron School"
+						bgImage={Preview4}
+						hoverImage={FISMDesciption}
+						link="/flatiron-school-marketing"
+					/>
+					<ProjectPreview
+						tags="Brand, UXUI"
+						title="Ellipsis Health Wix Website Build"
+						bgImage={Preview3}
+						hoverImage={MensHealthDesciption}
+						link="/ellipsis"
+					/>
+					<ProjectPreview
+						tags="Brand, UXUI"
+						title="End to End Gaming App Design"
+						bgImage={Preview2}
+						hoverImage={ELODesciption}
+						link="/elo-tracker"
+					/>
 				</div>
 			</ContentBlock>
 			<ContentBlock className={classes.quoteBlock}>
