@@ -15,7 +15,7 @@ import Spacer from 'components/Spacer'
 import ItemGrid from 'components/ItemGrid'
 import VideoPlayer from 'components/VideoPlayer'
 
-import BeforeAfter from 'static/images/Ellipsis/beforeAfter.gif'
+import BeforeAfter from 'static/images/Ellipsis/beforeAfter.png'
 import Icons from 'static/images/Ellipsis/motifIcon.png'
 import SoundWave from 'static/images/Ellipsis/motifWave.png'
 import EllipsisSketch from 'static/images/Ellipsis/ellipsis_motif.png'
@@ -23,6 +23,8 @@ import AboveFold from 'static/images/Ellipsis/site_abovefold.png'
 import Copy from 'static/images/Ellipsis/copy.png'
 import NavGif from 'static/images/Ellipsis/navgif.gif'
 import Wix from 'static/images/Ellipsis/Wix.png'
+import Press from 'static/images/Ellipsis/Press.png'
+import Solutions from 'static/images/Ellipsis/Solutions.png'
 
 
 const useStyles = createUseStyles({
@@ -90,7 +92,7 @@ export default () => {
 					Build a Wix site that doesn’t look like a Wix site
 				</Heading>
 				<Spacer />
-				<ItemGrid>
+				<ItemGrid stackedOnMobile>
 					<Body className={classes.half}>
 						It was important that this site be able to scale with the team after my 1 week stint with them. Because their existing site was built in Wix we stuck with that platform so they could easily make changes down the line.
 					</Body>
@@ -179,6 +181,8 @@ export default () => {
 					src="https://player.vimeo.com/video/486566045"
 					title="Home Page of Website"
 				/>
+				<Image src={Press} size="full" />
+				<Image src={Solutions} size="full" />
 			</ContentBlock>
 		</PageWrapper>
 	)
