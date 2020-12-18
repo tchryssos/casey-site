@@ -133,7 +133,7 @@ const Home = () => {
 						title="Ellipsis Health Wix Website Build"
 						bgImage={Preview3}
 						hoverImage={MensHealthDesciption}
-						link="/ellipsis"
+						link="/all-projectsß"
 					/>
 					<ProjectPreview
 						tags="Brand, UXUI"
