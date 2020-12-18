@@ -14,6 +14,7 @@ import Image from 'components/Image'
 
 import Preview from 'static/svg/home/PortfolioPreview.svg'
 import AnimalCrossing from 'static/images/About/animalcrossing.png'
+import MensHealthDesciption from 'static/images/Descriptions/mhh_di-01.png'
 
 
 const useStyles = createUseStyles({
@@ -57,8 +58,21 @@ const useStyles = createUseStyles({
 			backgroundColor: '#4e7fff',
 		},
 	},
+	flexContainer: {
+		display: 'flex',
+		flexWrap: 'wrap',
+		flexDirection: 'row',
+		justifyContent: 'space-between',
+	},
 	projectPreviewContainer: {
 		paddingTop: 20,
+		width: '45%',
+		'&:hover $absolute': {
+			display: 'block',
+		},
+		'&:hover $projectTitle': {
+			textDecoration: 'underline',
+		},
 	},
 	quoteWrapper: {
 		display: 'flex',
@@ -67,6 +81,14 @@ const useStyles = createUseStyles({
 	quoteBlock: {
 		backgroundColor: '#f7f7f7',
 		padding: '100px 10%',
+	},
+	relative: {
+		position: 'relative',
+	},
+	absolute: {
+		position: 'absolute',
+		width: '80%',
+		display: 'none',
 	},
 	[MD_MIN_STRING]: {
 		homeWrapper: {
@@ -103,15 +125,35 @@ const Home = () => {
 						<Body>All Projects</Body>
 					</NavLink>
 				</div>
-				<div className={classes.projectPreviewContainer}>
-					<Image src={Preview} size="half" />
-					<Spacer />
-					<SubHeading>
-						Men&apos;s Health Memorial
-					</SubHeading>
-					<Body>
-						BRAND, UX/UI, LEADERSHIP
-					</Body>
+				<div className={classes.flexContainer}>
+					<div className={classes.projectPreviewContainer}>
+						<div className={classes.relative}>
+							<Image src={MensHealthDesciption} className={classes.absolute} />
+							<Image src={Preview} size="full" />
+						</div>
+						<Spacer />
+						<SubHeading>
+							Men&apos;s Health Memorial Website Redesign
+						</SubHeading>
+						<Spacer height={0.5} />
+						<Body>
+							BRAND, UX/UI, LEADERSHIP
+						</Body>
+					</div>
+					<div className={classes.projectPreviewContainer}>
+						<div className={classes.relative}>
+							<Image src={MensHealthDesciption} className={classes.absolute} />
+							<Image src={Preview} size="full" />
+						</div>
+						<Spacer />
+						<SubHeading className={classes.projectTitle}>
+							Men&apos;s Health Memorial Website Redesign
+						</SubHeading>
+						<Spacer height={0.5} />
+						<Body>
+							BRAND, UX/UI, LEADERSHIP
+						</Body>
+					</div>
 				</div>
 			</ContentBlock>
 			<ContentBlock className={classes.quoteBlock}>
@@ -126,7 +168,7 @@ const Home = () => {
 						<Spacer />
 					</div>
 				</div>
-				<NavLink className={classes.Button} to="/all-projects">
+				<NavLink className={classes.Button} to="/about">
 					<Body>About Me</Body>
 				</NavLink>
 			</ContentBlock>

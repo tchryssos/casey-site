@@ -34,6 +34,9 @@ const useStyles = createUseStyles({
 		fontSize: 16,
 		marginBottom: 8,
 		display: 'block',
+		'&:hover': {
+			color: '#4e7fff',
+		},
 	},
 	footerFlexWrapper: {
 		display: 'flex',
