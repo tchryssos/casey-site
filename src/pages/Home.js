@@ -77,6 +77,9 @@ const useStyles = createUseStyles({
 	quoteBlock: {
 		backgroundColor: '#f7f7f7',
 		padding: '100px 10%',
+		display: 'flex',
+		flexDirection: 'column',
+		alignItems: 'center',
 	},
 	[MD_MIN_STRING]: {
 		homeWrapper: {

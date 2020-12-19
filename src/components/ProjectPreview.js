@@ -15,19 +15,25 @@ const useStyles = createUseStyles({
 		textDecoration: 'none',
 		color: '#2b2b2b',
 		'&:hover $absolute': {
-			display: 'block',
+			display: 'flex',
 		},
 		'&:hover $projectTitle': {
 			textDecoration: 'underline',
 		},
+	},
+	projectTitle: {
+
 	},
 	relative: {
 		position: 'relative',
 	},
 	absolute: {
 		position: 'absolute',
-		width: '80%',
+		width: '100%',
+		height: '100%',
 		display: 'none',
+		justifyContent: 'center',
+		alignItems: 'center',
 	},
 	uppercase: {
 		textTransform: 'uppercase',
@@ -41,7 +47,9 @@ export default ({
 	return (
 		<NavLink className={classes.projectPreviewContainer} to={link}>
 			<div className={classes.relative}>
-				<Image src={hoverImage} className={classes.absolute} />
+				<div className={classes.absolute}>
+					<Image src={hoverImage} />
+				</div>
 				<Image src={bgImage} size="full" />
 			</div>
 			<Spacer />
