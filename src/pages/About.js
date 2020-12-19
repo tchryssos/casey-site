@@ -35,14 +35,15 @@ const useStyles = createUseStyles({
 			marginBottom: 0,
 		},
 	},
-	linkedInButton: {
-		backgroundColor: '#346c63',
+	Button: {
+		backgroundColor: '#2b2b2b',
 		padding: 8,
 		color: 'white',
 		display: 'inline-flex',
+		textTransform: 'uppercase',
+		textDecoration: 'none',
 		'&:hover': {
 			backgroundColor: '#4e7fff',
-			transform: 'translate(5px, -5px)',
 		},
 	},
 	link: {
@@ -131,8 +132,8 @@ export default () => {
 						target="_blank"
 						rel="noreferrer"
 					>
-						<div className={classes.linkedInButton}>
-							<Body><b>Read more on my LinkedIn Profile</b></Body>
+						<div className={classes.Button}>
+							<Body>Read more on my LinkedIn Profile</Body>
 						</div>
 					</a>
 				</ContentBlock>

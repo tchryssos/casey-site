@@ -8,7 +8,6 @@ const useStyles = createUseStyles({
 		display: 'flex',
 		flexDirection: 'column',
 		justifyContent: 'center',
-		paddingBottom: '71px',
 		backgroundColor: lightGray,
 	},
 	[MD_MIN_STRING]: {

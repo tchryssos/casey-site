@@ -7,12 +7,18 @@ import Body from 'components/Typography/Body'
 
 const useStyles = createUseStyles({
 	lastBlock: {
-		paddingBottom: 148,
+		padding: 20,
+		backgroundColor: '#2b2b2b',
+		color: 'white',
 	},
 	aboutLink: {
 		textDecoration: 'none',
-		borderBottom: '2px solid blue',
-		color: 'blue',
+		borderBottom: '2px solid #4e7fff',
+		color: '#ea9b41',
+		'&:hover': {
+			borderBottom: '2px solid #ea9b41',
+			color: '#4e7fff',
+		},
 	},
 	aboutBody: {
 		lineHeight: 1.75,

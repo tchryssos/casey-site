@@ -81,6 +81,12 @@ const useStyles = createUseStyles({
 		flexDirection: 'column',
 		alignItems: 'center',
 	},
+	animalcrossing: {
+		display: 'none',
+		[MD_MIN_STRING]: {
+			display: 'block',
+		},
+	},
 	[MD_MIN_STRING]: {
 		homeWrapper: {
 			width: '50%',
@@ -149,7 +155,7 @@ const Home = () => {
 			</ContentBlock>
 			<ContentBlock className={classes.quoteBlock}>
 				<div className={classes.quoteWrapper}>
-					<Image src={AnimalCrossing} />
+					<Image className={classes.animalcrossing} src={AnimalCrossing} />
 					<div>
 						<Heading>
 							“Her creative talent is equally matched by her well-organized way of operating.”

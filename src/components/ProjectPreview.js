@@ -35,6 +35,9 @@ const useStyles = createUseStyles({
 		justifyContent: 'center',
 		alignItems: 'center',
 	},
+	hoverImage: {
+		width: '100%',
+	},
 	uppercase: {
 		textTransform: 'uppercase',
 	},
@@ -48,7 +51,7 @@ export default ({
 		<NavLink className={classes.projectPreviewContainer} to={link}>
 			<div className={classes.relative}>
 				<div className={classes.absolute}>
-					<Image src={hoverImage} />
+					<Image src={hoverImage} className={classes.hoverImage} />
 				</div>
 				<Image src={bgImage} size="full" />
 			</div>
