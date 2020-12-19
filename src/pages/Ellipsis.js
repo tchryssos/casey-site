@@ -18,13 +18,13 @@ import VideoPlayer from 'components/VideoPlayer'
 import BeforeAfter from 'static/images/Ellipsis/beforeAfter.png'
 import Icons from 'static/images/Ellipsis/motifIcon.png'
 import SoundWave from 'static/images/Ellipsis/motifWave.png'
-import EllipsisSketch from 'static/images/Ellipsis/ellipsis_motif.png'
+import EllipsisSketch from 'static/images/Ellipsis/EH_Hero-03.png'
 import AboveFold from 'static/images/Ellipsis/site_abovefold.png'
 import Copy from 'static/images/Ellipsis/copy.png'
 import NavGif from 'static/images/Ellipsis/navgif.gif'
-import Wix from 'static/images/Ellipsis/Wix.png'
 import Press from 'static/images/Ellipsis/Press.png'
 import Solutions from 'static/images/Ellipsis/Solutions.png'
+import Hero from 'static/images/Ellipsis/EllipsisHero.png'
 
 
 const useStyles = createUseStyles({
@@ -44,44 +44,19 @@ export default () => {
 	return (
 		<PageWrapper>
 			<ContentBlock>
-				<Heading>
-					Ellipsis Health wants to update their site to be modern, professional and tell their story better
-				</Heading>
-			</ContentBlock>
-			<ContentBlock>
-				<ItemGrid stackedOnMobile>
+				<ItemGrid>
 					<div className={classes.half}>
-						<SubHeading>
-							THE SITUATION
-						</SubHeading>
-						<ul>
-							<li>
-								Timeline: 1 week
-							</li>
-							<li>
-								Should be managable by the Ellipsis team in the future
-							</li>
-							<li>
-								Speaks to Patients, Providers and Investors
-							</li>
-						</ul>
-						<SubHeading>
-							THE TASK
-						</SubHeading>
-						<ul>
-							<li>
-								Design and build a fully functional website
-							</li>
-							<li>
-								Expand the brand guidelines for web
-							</li>
-							<li>
-								Enhance the content gathered by the Ellipsis team
-							</li>
-						</ul>
+						<Heading>
+							Ellipsis Health wants to update their site to be modern and professional
+						</Heading>
+						<Spacer />
+						<Body>
+							In one week, we need to design, build and launch a website that is easily manageable by the Ellipsis team moving forward. The site needs to be modern, professional and speak to the Ellipsis audience.
+						</Body>
 					</div>
-					<Image src={BeforeAfter} className={classes.half} />
+					<Image src={Hero} className={classes.half} />
 				</ItemGrid>
+
 			</ContentBlock>
 			<ContentBlock>
 				<SubHeading>
@@ -93,10 +68,12 @@ export default () => {
 				</Heading>
 				<Spacer />
 				<ItemGrid stackedOnMobile>
-					<Body className={classes.half}>
-						It was important that this site be able to scale with the team after my 1 week stint with them. Because their existing site was built in Wix we stuck with that platform so they could easily make changes down the line.
-					</Body>
-					<Image src={Wix} className={classes.half} />
+					<div className={classes.half}>
+						<Body>
+							It was important that this site be able to scale with the team after my 1 week stint with them. Because their existing site was built in Wix we stuck with that platform so they could easily make changes down the line.
+						</Body>
+					</div>
+					<Image src={BeforeAfter} className={classes.half} />
 				</ItemGrid>
 			</ContentBlock>
 			<ContentBlock>
@@ -125,7 +102,7 @@ export default () => {
 					Iconography
 				</SubHeading>
 				<Spacer />
-				<Body>Because we didn't have any existing icons ready to use, I created some to enhance certain ideas brought in the site.</Body>
+				<Body>Because we didn&apos;t have any existing icons ready to use, I created some to enhance certain ideas brought in the site.</Body>
 				<Image src={Icons} size="full" />
 			</ContentBlock>
 			<ContentBlock>
