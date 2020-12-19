@@ -10,9 +10,7 @@ import ContentBlock from 'components/ContentBlock'
 import Heading from 'components/Typography/Heading'
 import SubHeading from 'components/Typography/SubHeading'
 import Body from 'components/Typography/Body'
-import Image from 'components/Image'
 import Spacer from 'components/Spacer'
-import ItemGrid from 'components/ItemGrid'
 
 
 const useStyles = createUseStyles({
@@ -52,7 +50,7 @@ export default () => {
 					Make it clear to users how to record, pause, and submit their voice responses.
 				</Body>
 				<Spacer />
-				<Body>Bonus: Show proress without making them feel like they have to finish at any point</Body>
+				<Body>Bonus: Show progress without making them feel like they have to finish at any point</Body>
 			</ContentBlock>
 			<ContentBlock>
 				<Heading>Starting point</Heading>
