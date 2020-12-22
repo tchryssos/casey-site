@@ -23,7 +23,6 @@ import FourOhFour from 'pages/404'
 import ListenJayUXA from 'pages/ListenJayUXA'
 import Chase from 'pages/Chase'
 import Ellipsis from 'pages/Ellipsis'
-import EllipsisApp from 'pages/EllipsisApp'
 
 import cursor from 'static/images/Misc/cursor.png'
 
@@ -220,10 +219,6 @@ const App = ({ location }) => {
 								<Route
 									path="/ellipsis"
 									component={Ellipsis}
-								/>
-								<Route
-									path="/ellipsis-app"
-									component={EllipsisApp}
 								/>
 								<Route component={FourOhFour} />
 							</Switch>

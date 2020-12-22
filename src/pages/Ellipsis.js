@@ -13,7 +13,6 @@ import Body from 'components/Typography/Body'
 import Image from 'components/Image'
 import Spacer from 'components/Spacer'
 import ItemGrid from 'components/ItemGrid'
-import VideoPlayer from 'components/VideoPlayer'
 
 import BeforeAfter from 'static/images/Ellipsis/beforeAfter.png'
 import Icons from 'static/images/Ellipsis/motifIcon.png'
@@ -25,6 +24,7 @@ import NavGif from 'static/images/Ellipsis/navgif.gif'
 import Press from 'static/images/Ellipsis/Press.png'
 import Solutions from 'static/images/Ellipsis/Solutions.png'
 import Hero from 'static/images/Ellipsis/EllipsisHero.png'
+import Home from 'static/images/Ellipsis/Home.png'
 
 
 const useStyles = createUseStyles({
@@ -44,18 +44,14 @@ export default () => {
 	return (
 		<PageWrapper>
 			<ContentBlock>
-				<ItemGrid>
-					<div className={classes.half}>
-						<Heading>
-							Ellipsis Health wants to update their site to be modern and professional
-						</Heading>
-						<Spacer />
-						<Body>
-							In one week, we need to design, build and launch a website that is easily manageable by the Ellipsis team moving forward. The site needs to be modern, professional and speak to the Ellipsis audience.
-						</Body>
-					</div>
-					<Image src={Hero} className={classes.half} />
-				</ItemGrid>
+				<Heading>
+					Ellipsis Health wants to update their site to be modern and professional
+				</Heading>
+				<Spacer />
+				<Body>
+					In one week, we need to design, build and launch a website that is easily manageable by the Ellipsis team moving forward. The site needs to align with their new branding and speak to the Ellipsis audience.
+				</Body>
+				<Image src={Hero} size="full" />
 
 			</ContentBlock>
 			<ContentBlock>
@@ -70,7 +66,7 @@ export default () => {
 				<ItemGrid stackedOnMobile>
 					<div className={classes.half}>
 						<Body>
-							It was important that this site be able to scale with the team after my 1 week stint with them. Because their existing site was built in Wix we stuck with that platform so they could easily make changes down the line.
+							It was important that this site be able to scale with the team after my 1 week stint with them. Because their existing site was built in Wix we stuck with that platform so they could easily make changes down the line, but we customized our template to speak to the brand.
 						</Body>
 					</div>
 					<Image src={BeforeAfter} className={classes.half} />
@@ -88,6 +84,10 @@ export default () => {
 				<SubHeading>
 					The Ellipsis
 				</SubHeading>
+				<Spacer />
+				<Body>
+					The form of the ellipsis is essential to this brand so I wanted to find as many creative ways to use the three circles as possible.
+				</Body>
 				<ItemGrid stackedOnMobile>
 					<Image src={EllipsisSketch} size="full" className={classes.half} />
 					<Image src={AboveFold} size="full" className={classes.half} />
@@ -137,13 +137,15 @@ export default () => {
 					We want providers to have access to their data immediately so we keep the Provider Login CTA always on in the navigation. We use infographics to explain our problems and solutions in a digestible way but also provide links to our papers so providers can dig deeper if they want.
 				</Body>
 				<Spacer />
+				<Image src={Solutions} size="full" />
 				<SubHeading>
 					Investors
 				</SubHeading>
 				<Spacer />
 				<Body>
-					To enhance our professionalism and credibilty we included our key press pieces and also included a snapshot of our leadership team.
+					To enhance our professionalism and credibilty we included our key press pieces and also included a snapshot of our leadership team on out about page.
 				</Body>
+				<Image src={Press} size="full" />
 
 			</ContentBlock>
 			<ContentBlock>
@@ -151,15 +153,10 @@ export default () => {
 					THE RESULTS
 				</SubHeading>
 				<Heading>
-					XYZ
+					Key Learnings
 				</Heading>
 				<Spacer />
-				<VideoPlayer
-					src="https://player.vimeo.com/video/486566045"
-					title="Home Page of Website"
-				/>
-				<Image src={Press} size="full" />
-				<Image src={Solutions} size="full" />
+
 			</ContentBlock>
 		</PageWrapper>
 	)
