@@ -1,17 +1,14 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import clsx from 'clsx'
 import { NavLink } from 'react-router-dom'
 import MenuContext from 'contexts/menu'
-import PageGatingContext from 'contexts/pageGating'
-import { AltHomePath, HomePath } from 'constants/navigation'
+import { HomePath } from 'constants/navigation'
 import MenuText from 'components/Typography/MenuText'
 import MenuRoutes from 'components/MenuRoutes'
 import useStyles from './navBarStyles'
 
-
 export default () => {
 	const classes = useStyles()
-	const { isAltHome } = useContext(PageGatingContext)
 	return (
 		<MenuContext.Consumer>
 			{({ isMenuOpen, setIsMenuOpen }) => (
@@ -21,10 +18,9 @@ export default () => {
 							<MenuRoutes />
 						</div>
 						<div
-							className={clsx(
-								classes.menuCover,
-								{ [classes.menuSlide]: isMenuOpen },
-							)}
+							className={clsx(classes.menuCover, {
+								[classes.menuSlide]: isMenuOpen,
+							})}
 						/>
 					</div>
 					<div className={classes.navWrapper}>
@@ -35,26 +31,19 @@ export default () => {
 								type="button"
 							>
 								<div
-									className={
-										clsx(
-											classes.openMenuText,
-											{ [classes.menuVisibleText]: isMenuOpen },
-										)
-									}
+									className={clsx(classes.openMenuText, {
+										[classes.menuVisibleText]: isMenuOpen,
+									})}
 								>
-									<MenuText>
-										{isMenuOpen ? 'Close' : 'Menu'}
-									</MenuText>
+									<MenuText>{isMenuOpen ? 'Close' : 'Menu'}</MenuText>
 								</div>
 							</button>
 							<NavLink
-								className={
-									clsx(
-										{ [classes.menuSlide]: isMenuOpen },
-										classes.logo,
-									)
-								}
-								to={isAltHome ? AltHomePath : HomePath}
+								className={clsx(
+									{ [classes.menuSlide]: isMenuOpen },
+									classes.logo,
+								)}
+								to={HomePath}
 								exact
 							>
 								<MenuText>Casey</MenuText>

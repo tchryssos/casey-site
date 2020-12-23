@@ -1,9 +1,6 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import { createUseStyles } from 'react-jss'
 import { MD_MIN_STRING } from 'constants/styles/breakpoints'
-
-import PageGatingContext from 'contexts/pageGating'
-import orNull from 'util/orNull'
 
 import PageWrapper from 'components/PageWrapper'
 import ContentBlock from 'components/ContentBlock'
@@ -31,7 +28,6 @@ import GainsWaveDesktop from 'static/images/MensHealth/GainsWave_Desktop.png'
 import MapModal from 'static/images/MensHealth/MapModal.png'
 import MHHHero from 'static/images/MensHealth/MHH_Hero.png'
 import HomeWires from 'static/images/MensHealth/homeWires.png'
-
 
 const useStyles = createUseStyles({
 	whiteBlock: {
@@ -67,8 +63,6 @@ const useStyles = createUseStyles({
 })
 
 export default () => {
-	const { isAltHome } = useContext(PageGatingContext)
-
 	const brief = 'brief'
 	const discover = 'discover'
 	const define = 'define'
@@ -93,156 +87,99 @@ export default () => {
 			{/* eslint-disable jsx-a11y/anchor-is-valid */}
 			{/* eslint-disable jsx-a11y/anchor-has-content */}
 			<a name={brief} />
-			<ContentBlock
-				className={classes.blueBlock}
-				blockId={brief}
-			>
+			<ContentBlock className={classes.blueBlock} blockId={brief}>
 				<ItemGrid stackedOnMobile>
 					<div className={classes.half}>
 						<Heading>
-							Men&apos;s Health Houston is looking to revamp their website in anicipation of a new location launch
+							Men&apos;s Health Houston is looking to revamp their website in
+							anicipation of a new location launch
 						</Heading>
 						<Spacer />
-						<SubHeading>
-							Role: Product Designer
-						</SubHeading>
+						<SubHeading>Role: Product Designer</SubHeading>
 					</div>
 					<Image src={MHHHero} size="full" className={classes.half} />
 				</ItemGrid>
 				<Spacer />
-				{orNull(
-					isAltHome,
-					(
-						<Body>
-							Men&apos;s Health Houston is a small men&apos;s health clinic in Texas. Their current website is built on WordPress and uses a template that lacks heirarchy and personality and is difficult to navigate. As they drive more online advertisting to their site, they are looking for a refresh.
-						</Body>
-					),
-				)}
 				<ItemGrid startAligned stackedOnMobile>
 					<div className={classes.half}>
-						<SubHeading>
-							GOAL #1
-						</SubHeading>
+						<SubHeading>GOAL #1</SubHeading>
 						<Body>
-							Elevate the branding and simplify the content for users coming to the site.
+							Elevate the branding and simplify the content for users coming to
+							the site.
 						</Body>
 					</div>
 					<div className={classes.half}>
-						<SubHeading>
-							GOAL #2
-						</SubHeading>
+						<SubHeading>GOAL #2</SubHeading>
 						<Body>
-							Create a modular design system that will streamline the internal process for managing the site.
+							Create a modular design system that will streamline the internal
+							process for managing the site.
 						</Body>
 					</div>
 				</ItemGrid>
 			</ContentBlock>
 			<a name={discover} />
-			<div className={classes.sectionLabel}>
-				Discover
-			</div>
-			<ContentBlock
-				className={classes.whiteBlock}
-				blockId={discover}
-			>
-				<Heading>
-					Getting in the head of the Men&apos;s Health customer
-				</Heading>
+			<div className={classes.sectionLabel}>Discover</div>
+			<ContentBlock className={classes.whiteBlock} blockId={discover}>
+				<Heading>Getting in the head of the Men&apos;s Health customer</Heading>
 				<Spacer />
 				<Body>
-					Men&apos;s Health Houston knows who their main customers and demographics are, but because I don&apos;t frequent men&apos;s health sites I wanted to do some work to get in the mindset of our consumer.
+					Men&apos;s Health Houston knows who their main customers and
+					demographics are, but because I don&apos;t frequent men&apos;s health
+					sites I wanted to do some work to get in the mindset of our consumer.
 				</Body>
 				<Spacer />
-				<SubHeading>
-					User Interviews
-				</SubHeading>
+				<SubHeading>User Interviews</SubHeading>
 				<Spacer />
 				<Body>
-					I interviewed a group of men between the ages of 35 and 55 about their health care habits and body goals to create the following personas. I reached out to networks I was a part of to find men in the correct demographic and interviewed them over the phone.
+					I interviewed a group of men between the ages of 35 and 55 about their
+					health care habits and body goals to create the following personas. I
+					reached out to networks I was a part of to find men in the correct
+					demographic and interviewed them over the phone.
 				</Body>
 				<Spacer />
-				{orNull(
-					isAltHome,
-					(
-						<>
-							<Body>
-								KEY TAKEAWAYS
-							</Body>
-							<ul>
-								<li>
-									Men won&apos;t go to the doctor unless the HAVE to
-								</li>
-								<li>
-									Having a good online booking experience is important to younger men and having an easily accessible phone number is important to older men
-								</li>
-								<li>
-									For men who are looking for a new doctor, reviews and doctor bios are the most important
-								</li>
-							</ul>
-						</>
-					),
-				)}
 				<Spacer height={2} />
-				<SubHeading>
-					Key Insight: Finding the right photography
-				</SubHeading>
+				<SubHeading>Key Insight: Finding the right photography</SubHeading>
 				<Spacer />
 				<Body>
-					One of the biggest challenges with this project was figuring out how relatable versus aspirational the photography should be. While the clients thought their audience wanted extremely aspirational imagery, our interviews showed that most wanted to see someone relatable to them.
+					One of the biggest challenges with this project was figuring out how
+					relatable versus aspirational the photography should be. While the
+					clients thought their audience wanted extremely aspirational imagery,
+					our interviews showed that most wanted to see someone relatable to
+					them.
 				</Body>
 				<Spacer />
 				<Heading className={classes.quote}>
-					&ldquo;I would want to see someone like George Clooney but dressed as a nerd&rdquo;
+					&ldquo;I would want to see someone like George Clooney but dressed as
+					a nerd&rdquo;
 				</Heading>
 				<Image src={PhotoRange} size="full" />
 				<Spacer height={2} />
-				<SubHeading>
-					Defining Personas
-				</SubHeading>
+				<SubHeading>Defining Personas</SubHeading>
 				<Spacer />
 				<Body>
-					I ultimately created two distinct personas because the men I interviewed at different ends of the target age range had different needs and expectations. Men 45-55 want to take preventative measures while men 35-45 just wanted to be better about going to the doctor at all.
+					I ultimately created two distinct personas because the men I
+					interviewed at different ends of the target age range had different
+					needs and expectations. Men 45-55 want to take preventative measures
+					while men 35-45 just wanted to be better about going to the doctor at
+					all.
 				</Body>
 				<Image src={Frank} size="full" />
 				<Image src={Tom} size="full" />
 			</ContentBlock>
 			<a name={define} />
-			<div className={classes.sectionLabel}>
-				Define
-			</div>
-			<ContentBlock
-				className={classes.blueBlock}
-				blockId={define}
-			>
-				<Heading>
-					Streamlining the existing content
-				</Heading>
+			<div className={classes.sectionLabel}>Define</div>
+			<ContentBlock className={classes.blueBlock} blockId={define}>
+				<Heading>Streamlining the existing content</Heading>
 				<Spacer />
 				<SubHeading>Auditing the Site Map</SubHeading>
 				<Body>
-					The original site was built with many pages that were serving overlapping purposes and some of the terminology was a little too medical for people to understand. In order to create a clear roadmap of the pages I would be working on I audited and streamlined the site map. You can see a snapshot of my process below.
+					The original site was built with many pages that were serving
+					overlapping purposes and some of the terminology was a little too
+					medical for people to understand. In order to create a clear roadmap
+					of the pages I would be working on I audited and streamlined the site
+					map. You can see a snapshot of my process below.
 				</Body>
 				<Spacer />
-				{orNull(
-					isAltHome,
-					(
-						<>
-							<Body>KEY TAKEAWAYS</Body>
-							<ul>
-								<li>
-									ABOUT US INFO: This info was spread out across three separate pages that made it a lot of work for the user to digest all of it so we consolidated them.
-								</li>
-								<li>
-									LOW T QUIZ: The clients had a quiz prominently displayed on their site that was recieving very little traffic and made the healthcare experience seem impersonal. We removed this because we would rather surface more valuable information.
-								</li>
-								<li>
-									GAINSWAVE: GAINSWave is the name of a specific treatment that uses soundwaves to increase blood flow. The ultimate goal with this service was to improve patients sexual health so we decided to rename services that sounded too medical and weren&apos; immediately understandable.
-								</li>
-							</ul>
-							<Spacer />
-						</>
-					),
-				)}
 				<ItemGrid stackedOnMobile>
 					<ImageLightBox src={SiteMap1} />
 					<ImageLightBox src={SiteMap2} />
@@ -251,51 +188,55 @@ export default () => {
 				<SubHeading>Creating wireframes from existing content</SubHeading>
 				<Spacer />
 				<Body>
-					One of the most imprtant pages in this redesign was the service page template because that is where we expect customers to convert. As my proposal to win this project work, I submitted the below sketch. In order to end at this wireframe, I looked at competitor sites like Roman, Hims and Vault Health. Then I took the existing content from the site and streamlined it creating heirarchy and flow to guide the user.
+					One of the most imprtant pages in this redesign was the service page
+					template because that is where we expect customers to convert. As my
+					proposal to win this project work, I submitted the below sketch. In
+					order to end at this wireframe, I looked at competitor sites like
+					Roman, Hims and Vault Health. Then I took the existing content from
+					the site and streamlined it creating heirarchy and flow to guide the
+					user.
 				</Body>
 				<Spacer />
 				<Body>
-					This new page clearly shows the benefits and candidacy information for this treatment without making the user click out to other pages to get it. I also encourages the user of more conversational headlines that would make the user feel more at ease about understanding a complex medical procedure.
+					This new page clearly shows the benefits and candidacy information for
+					this treatment without making the user click out to other pages to get
+					it. I also encourages the user of more conversational headlines that
+					would make the user feel more at ease about understanding a complex
+					medical procedure.
 				</Body>
 				<Image src={CompareWires} size="full" />
-				<SubHeading>
-					Recognizing Design Patterns
-				</SubHeading>
+				<SubHeading>Recognizing Design Patterns</SubHeading>
 				<Spacer />
 				<Body>
-					The second most important page was the home page where we wanted to make it clear what the clinic offers and how you can learn more. I looked at many competitor sites to understand how they were organizing their content. Most sites made it very clear what their services were from first glance. I wanted to create a visual navigation system on the home page that allowed user to get directly where they needed to go.
+					The second most important page was the home page where we wanted to
+					make it clear what the clinic offers and how you can learn more. I
+					looked at many competitor sites to understand how they were organizing
+					their content. Most sites made it very clear what their services were
+					from first glance. I wanted to create a visual navigation system on
+					the home page that allowed user to get directly where they needed to
+					go.
 				</Body>
 				<Image src={HomeWires} size="full" />
 				<Body>
-					The most effective version of this was the third iteration above that included hot links to the main service pages so candidates looking for something specific could navigate directly there.
+					The most effective version of this was the third iteration above that
+					included hot links to the main service pages so candidates looking for
+					something specific could navigate directly there.
 				</Body>
 			</ContentBlock>
 			<a name={design} />
-			<div className={classes.sectionLabel}>
-				Design
-			</div>
-			<ContentBlock
-				className={classes.whiteBlock}
-				blockId={design}
-			>
+			<div className={classes.sectionLabel}>Design</div>
+			<ContentBlock className={classes.whiteBlock} blockId={design}>
 				<Heading>Modernizing the brand</Heading>
-				{orNull(
-					isAltHome,
-					(
-						<>
-							<Body>
-								The clients wanted their brand to be professional and modern but also to show off their personal and approachable attitude towards sensitive health topics.
-							</Body>
-							<Spacer />
-						</>
-					),
-				)}
 				<ItemGrid>
 					<div className={classes.half}>
 						<SubHeading>Adjusting the logo for web</SubHeading>
 						<Spacer />
 						<Body>
-							The logo was an important piece of the brand to keep from the previous site since it is used in marketing and other assets. While I kept the basic form, color, and serif font, I wanted to make the detail bolder and less intricate so it could be more legible on mobile and web screens.
+							The logo was an important piece of the brand to keep from the
+							previous site since it is used in marketing and other assets.
+							While I kept the basic form, color, and serif font, I wanted to
+							make the detail bolder and less intricate so it could be more
+							legible on mobile and web screens.
 						</Body>
 					</div>
 					<Image className={classes.half} src={MHHLogo} size="full" />
@@ -304,7 +245,11 @@ export default () => {
 				<SubHeading>Creating new guidelines</SubHeading>
 				<Spacer />
 				<Body>
-					Beyond their logo, they were open to changing everything. I used some of the blues from their original branding and expanded the palette to include a more bold orange. I created icons set that would emphasize an optimistic approach and used a more clean and legible font to get their personality across.
+					Beyond their logo, they were open to changing everything. I used some
+					of the blues from their original branding and expanded the palette to
+					include a more bold orange. I created icons set that would emphasize
+					an optimistic approach and used a more clean and legible font to get
+					their personality across.
 				</Body>
 				<Image src={MHHBranding} size="full" />
 			</ContentBlock>
@@ -312,60 +257,27 @@ export default () => {
 				<Heading>Visual Designs</Heading>
 				<Spacer />
 				<Body>
-					The two pages that I focused the majority of my time on were the home page and a template for a service page. These pages contained the most specific components and these modules were reused on many other pages for easy scalability.
+					The two pages that I focused the majority of my time on were the home
+					page and a template for a service page. These pages contained the most
+					specific components and these modules were reused on many other pages
+					for easy scalability.
 				</Body>
 				<Spacer />
-				{orNull(
-					isAltHome,
-					(
-						<>
-							<SubHeading>
-								Home Page
-							</SubHeading>
-							<Spacer />
-							<Body>
-								The #1 goal with the home page was to paint a clear picture of the clinic&apos;s offerings. For this reason, I created the top section with icons for an expedited flow and used the majority of the real estate to explain the service benefits.
-							</Body>
-							<Spacer />
-							<Body>
-								In my research, participants mentioned that the doctor bios were one of the most important parts of choosing someone new so after the service, I decided to include our team on the home page.
-							</Body>
-							<Spacer />
-							<Body>
-								Based on the interviews with the Fit n Fifty Franks we also decided to keep the phone number in the nav on desktop for easy accesibility.
-							</Body>
-							<Spacer />
-							<SubHeading>
-								Service Page 
-							</SubHeading>
-							<Spacer />
-							<Body>
-								Similar to above, the goal here was to highlight the benefits and candidacy information for the services before diving deeper into additional resources and FAQs.
-							</Body>
-							<Spacer />
-							<Body>
-								In my interviews, reviews were an important factor in choosing a new doctor. So after the user scrolls past the basic service info, I used a video testimonial the client has recorded to meet that need.
-							</Body>
-						</>
-					),
-				)}
 				<ItemGrid startAligned stackedOnMobile>
 					<Image className={classes.half} size="full" src={HomeDesktop} />
 					<Image className={classes.half} size="full" src={GainsWaveDesktop} />
 				</ItemGrid>
 			</ContentBlock>
 			<a name={test} />
-			<div className={classes.sectionLabel}>
-				Test
-			</div>
-			<ContentBlock
-				className={classes.blueBlock}
-				blockId={test}
-			>
+			<div className={classes.sectionLabel}>Test</div>
+			<ContentBlock className={classes.blueBlock} blockId={test}>
 				<Heading>Usability Testing</Heading>
 				<Spacer />
 				<Body>
-					Our users placed an emphasis on the importance of an easy to use UI. In order to test our assumptions with men in the right demographic, I created a prototype to test with for usability and also to show the developer how I imagined the site working.
+					Our users placed an emphasis on the importance of an easy to use UI.
+					In order to test our assumptions with men in the right demographic, I
+					created a prototype to test with for usability and also to show the
+					developer how I imagined the site working.
 				</Body>
 				<VideoPlayer
 					src="https://player.vimeo.com/video/440119937?loop=1"
@@ -374,52 +286,69 @@ export default () => {
 				/>
 				<Spacer height={2} />
 				<Body>
-					I tested both the mobile and desktop prototypes with a handful of participants. I sent them a link to my Figma prototype and had them screen share and narrate their thought process as they moved through the wireframes.
+					I tested both the mobile and desktop prototypes with a handful of
+					participants. I sent them a link to my Figma prototype and had them
+					screen share and narrate their thought process as they moved through
+					the wireframes.
 				</Body>
 				<Spacer />
 				<ItemGrid startAligned>
 					<div className={classes.half}>
 						<Heading>100%</Heading>
-						<SubHeading>of participants were able to learn about a service and book an appointment with no problems</SubHeading>
+						<SubHeading>
+							of participants were able to learn about a service and book an
+							appointment with no problems
+						</SubHeading>
 					</div>
 					<div className={classes.half}>
 						<Heading>100%</Heading>
-						<SubHeading>of participants used the icon-based navigation on the home page validating that addition</SubHeading>
+						<SubHeading>
+							of participants used the icon-based navigation on the home page
+							validating that addition
+						</SubHeading>
 					</div>
 				</ItemGrid>
 				<Spacer />
 				<ItemGrid>
 					<div className={classes.half}>
-						<SubHeading>
-							Multiple CTAs
-						</SubHeading>
+						<SubHeading>Multiple CTAs</SubHeading>
 						<Body>
-							There were CTAs to schedule an appointment at multiple points throughout the page. Each participant used a different CTA to schedule their appointment which validates each individual placements.
+							There were CTAs to schedule an appointment at multiple points
+							throughout the page. Each participant used a different CTA to
+							schedule their appointment which validates each individual
+							placements.
 						</Body>
 					</div>
 					<Image className={classes.half} src={MapModal} size="full" />
 				</ItemGrid>
 			</ContentBlock>
 			<a name={develop} />
-			<div className={classes.sectionLabel}>
-				Develop
-			</div>
+			<div className={classes.sectionLabel}>Develop</div>
 			<ContentBlock className={classes.whiteBlock}>
 				<Heading>What did I learn from this project?</Heading>
 				<Spacer />
 				<SubHeading>Design leadership skills</SubHeading>
 				<Body>
-					My main role for this project was Product Designer but ended up wearing lots of hats. I hired the developer, created the timeline, redesigned the branding, and held weekly meetings to gather everyone together together to make decisions and gain approvals
+					My main role for this project was Product Designer but ended up
+					wearing lots of hats. I hired the developer, created the timeline,
+					redesigned the branding, and held weekly meetings to gather everyone
+					together together to make decisions and gain approvals
 				</Body>
 				<Spacer />
 				<SubHeading>Collaborating with a developer</SubHeading>
 				<Body>
-					Working closely with a developer on this project was a great experience. It helped me learn the difference between what a developer and a client need from a designer. We also collaborated to uncover responsive design sticking points that needed extra attention.
+					Working closely with a developer on this project was a great
+					experience. It helped me learn the difference between what a developer
+					and a client need from a designer. We also collaborated to uncover
+					responsive design sticking points that needed extra attention.
 				</Body>
 				<Spacer />
 				<SubHeading>Building for scale</SubHeading>
 				<Body>
-					The ideal outcome for this project was to arm the Men&apos;s Health Houston team with everything they would need to add new services and locations to their site on their own in the future. We kept this in mind at every step of the way.
+					The ideal outcome for this project was to arm the Men&apos;s Health
+					Houston team with everything they would need to add new services and
+					locations to their site on their own in the future. We kept this in
+					mind at every step of the way.
 				</Body>
 			</ContentBlock>
 			<NextProject link="/flatiron-school-marketing" />

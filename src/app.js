@@ -6,7 +6,7 @@ import clsx from 'clsx'
 
 import blobLinkData from 'constants/blobLinks'
 import { MD_MIN_VALUE, MD_MIN_STRING } from 'constants/styles/breakpoints'
-import { AltHomePath, HomePath } from 'constants/navigation'
+import { HomePath } from 'constants/navigation'
 import MenuContext from 'contexts/menu'
 import ScrollContext from 'contexts/scroll'
 
@@ -141,7 +141,6 @@ const App = ({ location }) => {
 					>
 						<Switch>
 							<Route path={HomePath} exact component={Home} />
-							<Route path={AltHomePath} component={HomeB} />
 							<Route
 								path={blobLinkData.FISMarketing.link}
 								component={FISMarketing}

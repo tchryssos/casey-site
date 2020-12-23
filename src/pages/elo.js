@@ -1,12 +1,7 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import { createUseStyles } from 'react-jss'
 
-import {
-	MD_MIN_STRING,
-} from 'constants/styles/breakpoints'
-
-import PageGatingContext from 'contexts/pageGating'
-import orNull from 'util/orNull'
+import { MD_MIN_STRING } from 'constants/styles/breakpoints'
 
 import PageWrapper from 'components/PageWrapper'
 import ContentBlock from 'components/ContentBlock'
@@ -38,7 +33,6 @@ import OGELO from 'static/images/ELO/Og-elo.png'
 import Roadmap from 'static/images/ELO/elo-roadmap.png'
 import Directions from 'static/images/ELO/elo-directions.png'
 import ELOWire from 'static/images/ELO/elo_wire.png'
-
 
 const useStyles = createUseStyles({
 	headerColor: {
@@ -109,7 +103,6 @@ const useStyles = createUseStyles({
 })
 
 export default () => {
-	const { isAltHome } = useContext(PageGatingContext)
 	const classes = useStyles()
 
 	const navLinks = [
@@ -132,13 +125,12 @@ export default () => {
 					<ItemGrid stackedOnMobile>
 						<div className={classes.half}>
 							<Heading>
-								Ladders allows people playing games together to track their ranking among the group
+								Ladders allows people playing games together to track their
+								ranking among the group
 							</Heading>
 							<Spacer />
 							<Spacer />
-							<SubHeading>
-								Role: Product Designer
-							</SubHeading>
+							<SubHeading>Role: Product Designer</SubHeading>
 						</div>
 						<Image className={classes.half} src={Hero} />
 					</ItemGrid>
@@ -147,9 +139,7 @@ export default () => {
 
 			{/* START - RESEARCH - START */}
 			<a name="discover">
-				<div className={classes.sectionLabel}>
-					DISCOVER
-				</div>
+				<div className={classes.sectionLabel}>DISCOVER</div>
 				<ContentBlock className={classes.whiteBlock}>
 					<Heading>Defining the problem</Heading>
 					<Spacer />
@@ -159,19 +149,24 @@ export default () => {
 							<SubHeading>What are players using to keep score now?</SubHeading>
 							<Spacer />
 							<Body>
-								One of the most fun parts of playing games in having a little bit of competitive fun with friends. The tools available to track your score now range from something as simple as pen and paper to complex tools used by professional gamers and organizations but there&apos;s not much in between the two.
+								One of the most fun parts of playing games in having a little
+								bit of competitive fun with friends. The tools available to
+								track your score now range from something as simple as pen and
+								paper to complex tools used by professional gamers and
+								organizations but there&apos;s not much in between the two.
 							</Body>
 						</div>
 					</ItemGrid>
 					<Spacer />
 					<ItemGrid>
 						<div className={classes.half}>
-							<SubHeading>
-								Iterating from a first draft
-							</SubHeading>
+							<SubHeading>Iterating from a first draft</SubHeading>
 							<Spacer />
 							<Body>
-								This is the first draft that the developers working on this project orginally built on their own. It only worked for one group of friends and one game. This prototype was the jumping off point for a more robust project.
+								This is the first draft that the developers working on this
+								project orginally built on their own. It only worked for one
+								group of friends and one game. This prototype was the jumping
+								off point for a more robust project.
 							</Body>
 						</div>
 						<Image src={OGELO} className={classes.half} />
@@ -181,27 +176,29 @@ export default () => {
 					<Spacer />
 					<ItemGrid>
 						<div className={classes.half}>
-							<SubHeading>
-								Building a product roadmap
-							</SubHeading>
+							<SubHeading>Building a product roadmap</SubHeading>
 							<Spacer />
 							<Body>
-								In order to take this project to the next level, I sat down with the developers to define a set of features we would need. We sketched out some flows on a whiteboard and created a list of Github Issues to keep track of tasks.
+								In order to take this project to the next level, I sat down with
+								the developers to define a set of features we would need. We
+								sketched out some flows on a whiteboard and created a list of
+								Github Issues to keep track of tasks.
 							</Body>
 						</div>
 						<Image src={Roadmap} className={classes.half} />
 					</ItemGrid>
 					<Spacer />
-					<SubHeading>
-						Putting the user at the center
-					</SubHeading>
+					<SubHeading>Putting the user at the center</SubHeading>
 					<Spacer />
 					<Body>
-						After making the long list of needs above, I decided it would be more helpful to understand what would be most valuable to the user to prioritize our efforts in more of an agile approach.
+						After making the long list of needs above, I decided it would be
+						more helpful to understand what would be most valuable to the user
+						to prioritize our efforts in more of an agile approach.
 					</Body>
 					<Spacer />
 					<Body>
-						I interviewed a handful of people who play games with freinds regularly and used their statements to create the following persona.
+						I interviewed a handful of people who play games with freinds
+						regularly and used their statements to create the following persona.
 					</Body>
 					<Spacer />
 					<div className={classes.persona}>
@@ -219,35 +216,22 @@ export default () => {
 								<SubHeading>Goals</SubHeading>
 								<ul>
 									<li>
-										Improve skills at playing certain games and gauge that improvement
+										Improve skills at playing certain games and gauge that
+										improvement
 									</li>
-									<li>
-										Have some competitive fun
-									</li>
+									<li>Have some competitive fun</li>
 								</ul>
 								<SubHeading>Frustrations</SubHeading>
 								<ul>
-									<li>
-										Entering info quickly and easily
-									</li>
-									<li>
-										Mobile experience
-									</li>
-									<li>
-										Seeing change in data over time
-									</li>
+									<li>Entering info quickly and easily</li>
+									<li>Mobile experience</li>
+									<li>Seeing change in data over time</li>
 								</ul>
 								<SubHeading>Motivations</SubHeading>
 								<ul>
-									<li>
-										Winning
-									</li>
-									<li>
-										Improving skills
-									</li>
-									<li>
-										Prizes and bets
-									</li>
+									<li>Winning</li>
+									<li>Improving skills</li>
+									<li>Prizes and bets</li>
 								</ul>
 							</div>
 						</ItemGrid>
@@ -258,22 +242,25 @@ export default () => {
 
 			{/* START - ARCH - START */}
 			<a name="define">
-				<div className={classes.sectionLabel}>
-					DEFINE
-				</div>
+				<div className={classes.sectionLabel}>DEFINE</div>
 				<ContentBlock className={classes.blueBackground}>
 					<Heading>Building with a user-centered approach</Heading>
 					<Spacer />
 					<ItemGrid>
 						<div className={classes.half}>
 							<Body>
-								In our original roadmap we focused on including things like account setting and log in screens. After auditing this list under a more user-centered lens, we decided to focus on the flows that were bringing value to the user before getting into the nitty gritty details.
+								In our original roadmap we focused on including things like
+								account setting and log in screens. After auditing this list
+								under a more user-centered lens, we decided to focus on the
+								flows that were bringing value to the user before getting into
+								the nitty gritty details.
 							</Body>
 						</div>
 						<div className={classes.half}>
 							<div className={classes.quote}>
 								<Heading>
-									&ldquo;No one ever says, Oh, I can&apos;t wait to set up this new tool&rdquo;
+									&ldquo;No one ever says, Oh, I can&apos;t wait to set up this
+									new tool&rdquo;
 								</Heading>
 							</div>
 						</div>
@@ -286,30 +273,28 @@ export default () => {
 						&nbsp;submit this match and see how it affects my ranking
 					</SubHeading>
 					<Spacer />
-					{orNull(
-						isAltHome,
-						(
-							<>
-								<SubHeading>
-									Sketching out our idea
-								</SubHeading>
-								<Spacer />
-								<Body>
-									The developers I was working with had a rough draft of something working as seen earlier on this page. Once we decided on the key features, I drew out the following screens as a gut check before working through wireframes.
-								</Body>
-								<Spacer />
-								<Image src={ELOWire} size="full" />
-							</>
-						),
-					)}
+					<>
+						<SubHeading>Sketching out our idea</SubHeading>
+						<Spacer />
+						<Body>
+							The developers I was working with had a rough draft of something
+							working as seen earlier on this page. Once we decided on the key
+							features, I drew out the following screens as a gut check before
+							working through wireframes.
+						</Body>
+						<Spacer />
+						<Image src={ELOWire} size="full" />
+					</>
 					<ItemGrid>
 						<div className={classes.half}>
-							<SubHeading>
-								Iterating on wireframes
-							</SubHeading>
+							<SubHeading>Iterating on wireframes</SubHeading>
 							<Spacer />
 							<Body>
-								Originally I wanted to lead new users to create a leaderboard before they could submit a match by disabling some CTAs and highlighting others. I quickly realized that I could let the user click where they wanted to if I could help navigate them to complete the necessary tasks in the back end.
+								Originally I wanted to lead new users to create a leaderboard
+								before they could submit a match by disabling some CTAs and
+								highlighting others. I quickly realized that I could let the
+								user click where they wanted to if I could help navigate them to
+								complete the necessary tasks in the back end.
 							</Body>
 						</div>
 						<Image src={WireDisabled} size="full" className={classes.half} />
@@ -317,13 +302,18 @@ export default () => {
 					<SubHeading>Ajdusting for a user-centered experience</SubHeading>
 					<Spacer />
 					<Body>
-						I adjusted this flow so that before filling out the form to submit a match, users had to select a game. If there were no games, I could populate the form to create a game instead of blocking pathways that a user would want to take.
+						I adjusted this flow so that before filling out the form to submit a
+						match, users had to select a game. If there were no games, I could
+						populate the form to create a game instead of blocking pathways that
+						a user would want to take.
 					</Body>
 					<Image src={finalflow} size="full" />
 					<SubHeading>Building functional prototypes</SubHeading>
 					<Spacer />
 					<Body>
-						Creating working forms in a prototype was a fun challenge with this project that involved a complex prototype full of overlays and hover states.
+						Creating working forms in a prototype was a fun challenge with this
+						project that involved a complex prototype full of overlays and hover
+						states.
 					</Body>
 					<Image src={complexWire} size="full" />
 				</ContentBlock>
@@ -331,27 +321,29 @@ export default () => {
 
 			{/* START - BRAND - START */}
 			<a name="design">
-				<div className={classes.sectionLabel}>
-					DESIGN
-				</div>
+				<div className={classes.sectionLabel}>DESIGN</div>
 				<ContentBlock>
 					<Heading>Creating a visual design system</Heading>
 					<Spacer />
 					<SubHeading>Exploring visual direction</SubHeading>
 					<Spacer />
 					<Body>
-						When designing branding for Ladders, I wanted to explore an option that used primarily dark mode because it is a hallmark of video game culture. I also wanted to explore a colorful option on the other end of the spectrum to emphasize the playfulness surrounding games. What I landed on was a combination of both - using dark mode for usability but with a bright yellow to add a bold playful pop.
+						When designing branding for Ladders, I wanted to explore an option
+						that used primarily dark mode because it is a hallmark of video game
+						culture. I also wanted to explore a colorful option on the other end
+						of the spectrum to emphasize the playfulness surrounding games. What
+						I landed on was a combination of both - using dark mode for
+						usability but with a bright yellow to add a bold playful pop.
 					</Body>
 					<Spacer />
-					<Body>
-						Previous visual directions
-					</Body>
+					<Body>Previous visual directions</Body>
 					<Image src={Directions} size="full" />
 					<Spacer />
 					<SubHeading>Creating a logo</SubHeading>
 					<Spacer />
 					<Body>
-						We developed a list of many names for for the platform and once we landed on Ladders we created multiple logo options below.
+						We developed a list of many names for for the platform and once we
+						landed on Ladders we created multiple logo options below.
 					</Body>
 					<Spacer />
 					<Body>Previous drafts of the logo</Body>
@@ -366,17 +358,27 @@ export default () => {
 					<SubHeading>Cohesive UI Kit</SubHeading>
 					<Spacer />
 					<Body>
-						Below are some examples of components that are repeated throughout the experience. I built my original wireframes out using components in Figma so that when it came time to add the branding it would be very quick and easy to change something once and have it reflected everywhere.
+						Below are some examples of components that are repeated throughout
+						the experience. I built my original wireframes out using components
+						in Figma so that when it came time to add the branding it would be
+						very quick and easy to change something once and have it reflected
+						everywhere.
 					</Body>
 					<Image src={UIKit} size="full" />
 				</ContentBlock>
 				<ContentBlock className={classes.whiteBlock}>
 					<Heading>Final UI Designs</Heading>
 					<Spacer />
-					<Body>These are some of the main screens designed in order to test our main user flow. I used the yellow brand color to highlight the most used CTAs and the user&apos;s ranking among their group.</Body>
+					<Body>
+						These are some of the main screens designed in order to test our
+						main user flow. I used the yellow brand color to highlight the most
+						used CTAs and the user&apos;s ranking among their group.
+					</Body>
 					<Spacer />
 					<Body>
-						I used a collapsed version of the logo to give more real estate to the valuable information and used a fun font for th eleaderboard titles to reflect teh playfulness of gaming.
+						I used a collapsed version of the logo to give more real estate to
+						the valuable information and used a fun font for th eleaderboard
+						titles to reflect teh playfulness of gaming.
 					</Body>
 					<Spacer />
 					<Image size="full" src={Visual1} />
@@ -387,18 +389,15 @@ export default () => {
 
 			{/* START - TEST - START */}
 			<a name="deploy">
-				<div className={classes.sectionLabel}>
-					DEPLOY
-				</div>
+				<div className={classes.sectionLabel}>DEPLOY</div>
 				<ContentBlock>
 					<Heading>Testing for Validation and Usability</Heading>
 					<Spacer />
-					<SubHeading>
-						Building functional prototypes
-					</SubHeading>
+					<SubHeading>Building functional prototypes</SubHeading>
 					<Spacer />
 					<Body>
-						To test these flows I built out two prototypes - one that mimicked the experience for a new user and one for a returning user.
+						To test these flows I built out two prototypes - one that mimicked
+						the experience for a new user and one for a returning user.
 					</Body>
 					<VideoPlayer
 						src="https://player.vimeo.com/video/448968438?loop=1"
@@ -411,12 +410,12 @@ export default () => {
 						aspectRatio="1:1"
 					/>
 					<Spacer />
-					<SubHeading>
-						Executing Tests
-					</SubHeading>
+					<SubHeading>Executing Tests</SubHeading>
 					<Spacer />
 					<Body>
-						I had each participant complete the tasks for both new and returning users. I observed them complete the tasks over Zoom using teh above prototypes.
+						I had each participant complete the tasks for both new and returning
+						users. I observed them complete the tasks over Zoom using teh above
+						prototypes.
 					</Body>
 					<Spacer />
 					<SubHeading>
@@ -425,45 +424,56 @@ export default () => {
 					<Spacer />
 					<ItemGrid>
 						<div className={classes.half}>
-							<SubHeading>
-								Offering multiple paths to completion
-							</SubHeading>
+							<SubHeading>Offering multiple paths to completion</SubHeading>
 							<Body>
-								I built the forms so that if a new user clicked the Submit a Match button and did not yet have any games set up they could be redirected to complete that form first. During testing, participants used both pathways to complete the task validating this choice.
+								I built the forms so that if a new user clicked the Submit a
+								Match button and did not yet have any games set up they could be
+								redirected to complete that form first. During testing,
+								participants used both pathways to complete the task validating
+								this choice.
 							</Body>
 						</div>
-						<Image src={testingScreenshot} className={classes.half} size="full" />
+						<Image
+							src={testingScreenshot}
+							className={classes.half}
+							size="full"
+						/>
 					</ItemGrid>
 					<Spacer />
-					<SubHeading>
-						Reducing complexity
-					</SubHeading>
+					<SubHeading>Reducing complexity</SubHeading>
 					<Body>
-						Initially I added a setting for volatility when users were setting up a ranking board. This setting was meant to affect how much each game changed the rankings. Most participants were a little confused about this setting so I ultimately decided to remove it or build it in to advanced settings later.
+						Initially I added a setting for volatility when users were setting
+						up a ranking board. This setting was meant to affect how much each
+						game changed the rankings. Most participants were a little confused
+						about this setting so I ultimately decided to remove it or build it
+						in to advanced settings later.
 					</Body>
 				</ContentBlock>
 			</a>
 
 			{/* START - LEARNINGS - START */}
 			<a name="learn">
-				<div className={classes.sectionLabel}>
-					LEARN
-				</div>
+				<div className={classes.sectionLabel}>LEARN</div>
 				<ContentBlock className={classes.lightYellow}>
 					<Heading>Key Learnings</Heading>
 					<Spacer />
-					<SubHeading>
-						User Centered Approach to a Roadmap
-					</SubHeading>
+					<SubHeading>User Centered Approach to a Roadmap</SubHeading>
 					<Body>
-						Working closely with developers on this project I had a tendency to lean into a developer or business mindset to planning the roadmap. I was creating priority between sign-up and login pages but shifted my mindset to think about the flows that were most necessary and valuable to the user.
+						Working closely with developers on this project I had a tendency to
+						lean into a developer or business mindset to planning the roadmap. I
+						was creating priority between sign-up and login pages but shifted my
+						mindset to think about the flows that were most necessary and
+						valuable to the user.
 					</Body>
 					<Spacer />
 					<ItemGrid>
 						<div className={classes.half}>
 							<SubHeading>Coding Skills</SubHeading>
 							<Body>
-								As a designer with some coding skills working with a small team of 2 developers to build an entire app, I also put my coding skills to the test, styling and building simple elements in our Storybook using React.
+								As a designer with some coding skills working with a small team
+								of 2 developers to build an entire app, I also put my coding
+								skills to the test, styling and building simple elements in our
+								Storybook using React.
 							</Body>
 						</div>
 						<Image src={ELOStorybook} className={classes.half} />
@@ -471,7 +481,10 @@ export default () => {
 					<Spacer />
 					<SubHeading>End to End App</SubHeading>
 					<Body>
-						Creating something from scratch can be overwhelming at times but always rewarding. I found that focusing on what would be the most valuable to the user and testing those interactions helped me reign myself in from taking on too much right out of the gate.
+						Creating something from scratch can be overwhelming at times but
+						always rewarding. I found that focusing on what would be the most
+						valuable to the user and testing those interactions helped me reign
+						myself in from taking on too much right out of the gate.
 					</Body>
 				</ContentBlock>
 				<NextProject link="/listen-jay" />
