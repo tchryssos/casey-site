@@ -15,7 +15,7 @@ const useStyles = createUseStyles({
 	},
 })
 
-export default ({ tag }) => {
+const Tag = ({ tag }) => {
 	const classes = useStyles()
 	let backgroundColor = ''
 	switch (tag) {
@@ -31,9 +31,9 @@ export default ({ tag }) => {
 	}
 	return (
 		<div style={{ backgroundColor }} className={classes.tagWrapper}>
-			<p>
-				{tag}
-			</p>
+			<p>{tag}</p>
 		</div>
 	)
 }
+
+export default Tag

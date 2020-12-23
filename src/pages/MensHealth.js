@@ -62,7 +62,7 @@ const useStyles = createUseStyles({
 	},
 })
 
-export default () => {
+const MensHealth = () => {
 	const brief = 'brief'
 	const discover = 'discover'
 	const define = 'define'
@@ -71,7 +71,6 @@ export default () => {
 	const develop = 'develop'
 
 	const classes = useStyles()
-	// const [currentBlock, setCurrentBlock] = useState(brief)
 
 	const navLinks = [
 		{ link: brief },
@@ -355,3 +354,5 @@ export default () => {
 		</PageWrapper>
 	)
 }
+
+export default MensHealth
