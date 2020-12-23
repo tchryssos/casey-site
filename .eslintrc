@@ -28,6 +28,7 @@
 		"no-mixed-spaces-and-tabs": "error",
 		"indent": ["error", "tab", { "SwitchCase": 1 }],
 		"semi": [2, "never"],
+		"object-curly-newline": 0,
 
 		"import/no-named-as-default": 0,
 		"import/extensions": 0,

@@ -1,7 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react'
-import {
-	Route, Switch, withRouter, BrowserRouter,
-} from 'react-router-dom'
+import { Route, Switch, withRouter, BrowserRouter } from 'react-router-dom'
 import { render } from 'react-dom'
 import { createUseStyles } from 'react-jss'
 import clsx from 'clsx'
@@ -11,7 +9,6 @@ import { MD_MIN_VALUE, MD_MIN_STRING } from 'constants/styles/breakpoints'
 import { AltHomePath, HomePath } from 'constants/navigation'
 import MenuContext from 'contexts/menu'
 import ScrollContext from 'contexts/scroll'
-import PageGatingContext from 'contexts/pageGating'
 
 import NavBar from 'components/NavBar'
 import Home from 'pages/Home'
@@ -45,9 +42,7 @@ const baseStyle = {
 
 const useStyles = createUseStyles({
 	// Start - Base Styles - Start
-	'@import': [
-		"url('https://use.typekit.net/fso6uhu.css')",
-	],
+	'@import': ["url('https://use.typekit.net/fso6uhu.css')"],
 	'@global': {
 		'*': {
 			fontFamily: '"Work Sans", sans-serif',
@@ -111,16 +106,12 @@ const App = ({ location }) => {
 	// Scroll ref is used to reset scroll position on route change
 	// and controll some scrolling effects on various pages
 	const scrollRef = useRef(document.documentElement)
-	const isAltHomeRef = useRef(location.pathname.toLowerCase() === AltHomePath)
 	const getScroll = () => scrollRef.current
 	const [isMenuOpen, setIsMenuOpen] = useState(false)
 	useEffect(() => {
 		setIsMenuOpen(false)
 		// On location change, scroll to page top
 		scrollRef.current.scrollTop = 0
-		if (location.pathname.toLowerCase() === AltHomePath) {
-			isAltHomeRef.current = true
-		}
 	}, [location.pathname])
 	// Stop body scroll behind small window menus
 	useEffect(() => {
@@ -131,82 +122,55 @@ const App = ({ location }) => {
 		}
 	}, [isMenuOpen])
 	return (
-		<PageGatingContext.Provider value={{ isAltHome: isAltHomeRef.current }}>
-			<MenuContext.Provider value={{ isMenuOpen, setIsMenuOpen }}>
-				<ScrollContext.Provider value={{ getScroll }}>
-					{/* eslint-disable */}
-					<div
-						// iOS onClick hack
-						// https://stackoverflow.com/questions/24077725/mobile-safari-sometimes-does-not-trigger-the-click-event
-						onClick={void 0}
-						className={
-							clsx(
-								classes.app,
-								{ [classes.menuOpenApp]: isMenuOpen },
-							)
-						}
-						id="scrollApp"
-					>
+		<MenuContext.Provider value={{ isMenuOpen, setIsMenuOpen }}>
+			<ScrollContext.Provider value={{ getScroll }}>
+				{/* eslint-disable */}
+				<div
+					// iOS onClick hack
+					// https://stackoverflow.com/questions/24077725/mobile-safari-sometimes-does-not-trigger-the-click-event
+					onClick={void 0}
+					className={clsx(classes.app, { [classes.menuOpenApp]: isMenuOpen })}
+					id="scrollApp"
+				>
 					{/* eslint-enable */}
-						<NavBar />
-						<div
-							className={
-								clsx(
-									classes.switchWrapper,
-									{ [classes.menuSlide]: isMenuOpen },
-								)
-							}
-						>
-							<Switch>
-								<Route path={HomePath} exact component={Home} />
-								<Route path={AltHomePath} component={HomeB} />
-								<Route
-									path={blobLinkData.FISMarketing.link}
-									component={FISMarketing}
-								/>
-								<Route
-									path={blobLinkData.Portfolio.link}
-									component={Portfolio}
-								/>
-								<Route
-									path={blobLinkData.ListenJay.link}
-									component={ListenJayUXA}
-								/>
-								<Route
-									path={blobLinkData.About.link}
-									component={About}
-								/>
-								<Route
-									path={blobLinkData.ELO.link}
-									component={ELO}
-								/>
-								<Route
-									path="/mirror"
-									component={Mirror}
-								/>
-								<Route
-									path="/listenjay-og"
-									component={ListenJay}
-								/>
-								<Route
-									path={blobLinkData.MensHealth.link}
-									component={MensHealth}
-								/>
-								<Route
-									path={blobLinkData.Chase.link}
-									component={Chase}
-								/>
-								<Route component={FourOhFour} />
-							</Switch>
-						</div>
+					<NavBar />
+					<div
+						className={clsx(classes.switchWrapper, {
+							[classes.menuSlide]: isMenuOpen,
+						})}
+					>
+						<Switch>
+							<Route path={HomePath} exact component={Home} />
+							<Route path={AltHomePath} component={HomeB} />
+							<Route
+								path={blobLinkData.FISMarketing.link}
+								component={FISMarketing}
+							/>
+							<Route path={blobLinkData.Portfolio.link} component={Portfolio} />
+							<Route
+								path={blobLinkData.ListenJay.link}
+								component={ListenJayUXA}
+							/>
+							<Route path={blobLinkData.About.link} component={About} />
+							<Route path={blobLinkData.ELO.link} component={ELO} />
+							<Route path="/mirror" component={Mirror} />
+							<Route path="/listenjay-og" component={ListenJay} />
+							<Route
+								path={blobLinkData.MensHealth.link}
+								component={MensHealth}
+							/>
+							<Route path={blobLinkData.Chase.link} component={Chase} />
+							<Route component={FourOhFour} />
+						</Switch>
 					</div>
-				</ScrollContext.Provider>
-				{/* <NavBar /> */}
-			</MenuContext.Provider>
-		</PageGatingContext.Provider>
+				</div>
+			</ScrollContext.Provider>
+			{/* <NavBar /> */}
+		</MenuContext.Provider>
 	)
 }
 
+// eslint-disable-next-line react/jsx-props-no-spreading
 const RouterApp = withRouter((props) => <App {...props} />)
 
 render(
@@ -215,4 +179,3 @@ render(
 	</BrowserRouter>,
 	document.getElementById('app'),
 )
-
