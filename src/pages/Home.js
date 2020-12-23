@@ -76,24 +76,24 @@ const useStyles = createUseStyles({
 	},
 })
 
-export default () => {
+const Home = () => {
 	const classes = useStyles()
 
 	const blobLinks = Object.keys(blobLinkData).map((key) => {
 		const props = blobLinkData[key]
 		return (
+			// eslint-disable-next-line react/jsx-props-no-spreading
 			<BlobLink {...props} key={key} />
 		)
 	})
 	return (
 		<div className={classes.homeContainer}>
 			<ContentBlock className={classes.aboutMeHeader}>
-				<Heading>
-					Designer balancing personality and&nbsp;utility
-				</Heading>
+				<Heading>Designer balancing personality and&nbsp;utility</Heading>
 				<Spacer />
 				<Body className={classes.aboutBody}>
-					I am a designer focused on UX/UI, Brand and Design Leadership. Read more about me&nbsp;
+					I am a designer focused on UX/UI, Brand and Design Leadership. Read
+					more about me&nbsp;
 					<NavLink className={classes.aboutLink} to="/about" exact>
 						here
 					</NavLink>
@@ -104,9 +104,9 @@ export default () => {
 			<div className={classes.waveWrapper}>
 				<Image src={Wave} className={classes.waveImage} />
 			</div>
-			<div className={classes.homeWrapper}>
-				{blobLinks}
-			</div>
+			<div className={classes.homeWrapper}>{blobLinks}</div>
 		</div>
 	)
 }
+
+export default Home

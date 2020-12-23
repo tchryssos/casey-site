@@ -25,7 +25,6 @@ import MirrorDescription from 'static/images/Descriptions/Mirror-di.png'
 import PortfolioDescription from 'static/images/Descriptions/portfolio_di.png'
 import ChaseDescription from 'static/images/ChaseSapphire/Chase_Card.png'
 
-
 const blobLinkData = {
 	MensHealth: {
 		src: MensHealth,
@@ -35,7 +34,8 @@ const blobLinkData = {
 		altText: "Men's Health Houston Redesign",
 		width: 50, // Width in percentage
 		zIndex: 3,
-		descriptionText: "Updating the branding and website design for a men's health clinic",
+		descriptionText:
+			"Updating the branding and website design for a men's health clinic",
 		descriptionAlignment: 'left',
 		descriptionImage: MensHealthDesciption,
 		tags: [UX_TAG, BRAND_TAG],
@@ -48,7 +48,8 @@ const blobLinkData = {
 		altText: 'Flatiron School Marketing',
 		width: 50,
 		zIndex: 2,
-		descriptionText: 'Managing a creative team working on everything including out-of-home, video, organic and paid social',
+		descriptionText:
+			'Managing a creative team working on everything including out-of-home, video, organic and paid social',
 		descriptionImage: FISMDesciption,
 		tags: [BRAND_TAG, LEAD_TAG],
 	},
@@ -85,7 +86,8 @@ const blobLinkData = {
 		altText: 'Mirror Case Study',
 		width: 50,
 		zIndex: 4,
-		descriptionText: 'DesignLab case study project focused on a clothing ecommerce site',
+		descriptionText:
+			'DesignLab case study project focused on a clothing ecommerce site',
 		descriptionAlignment: 'left',
 		descriptionImage: MirrorDescription,
 		tags: [UX_TAG, BRAND_TAG],
@@ -99,7 +101,6 @@ const blobLinkData = {
 		width: 50,
 		zIndex: 3,
 		descriptionText: 'Social assets for the Chase Sapphire Reserve Card',
-		hideOnAltHome: true,
 		descriptionAlignment: 'left',
 		descriptionImage: ChaseDescription,
 		tags: [BRAND_TAG],
@@ -112,8 +113,7 @@ const blobLinkData = {
 		altText: 'Portfolio Design',
 		width: 50,
 		zIndex: 3,
-		descriptionText: 'Designing this website you\'re on right now',
-		hideOnAltHome: true,
+		descriptionText: "Designing this website you're on right now",
 		descriptionImage: PortfolioDescription,
 		tags: [UX_TAG],
 	},

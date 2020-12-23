@@ -8,7 +8,6 @@ import FIS from 'static/svg/misc/fis_logo.svg'
 import MHH from 'static/svg/misc/MHH_logo.svg'
 import Chase from 'static/svg/misc/chase.svg'
 
-
 const logos = [WeWork, FIS, MHH, Chase]
 
 const useStyles = createUseStyles({
@@ -24,13 +23,15 @@ const useStyles = createUseStyles({
 	},
 })
 
-export default ({ className }) => {
+const LogoCollection = () => {
 	const classes = useStyles()
 	return (
 		<div className={classes.logoWrapper}>
-			{logos.map(
-				(logo) => <Image className={classes.logo} src={logo} />,
-			)}
+			{logos.map((logo) => (
+				<Image className={classes.logo} src={logo} key={logo} />
+			))}
 		</div>
 	)
 }
+
+export default LogoCollection

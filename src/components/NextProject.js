@@ -1,11 +1,6 @@
-
-import React, { useContext } from 'react'
+import React from 'react'
 import { createUseStyles } from 'react-jss'
 import { NavLink } from 'react-router-dom'
-
-import PageGatingContext from 'contexts/pageGating'
-import orNull from 'util/orNull'
-
 
 import ContentBlock from 'components/ContentBlock'
 import Body from 'components/Typography/Body'
@@ -26,10 +21,8 @@ const useStyles = createUseStyles({
 })
 
 export default ({ link }) => {
-	const { isAltHome } = useContext(PageGatingContext)
 	const classes = useStyles()
-	return orNull(
-		!isAltHome,
+	return (
 		<ContentBlock className={classes.lastBlock}>
 			<Body className={classes.aboutBody}>
 				View the next project&nbsp;
@@ -37,6 +30,6 @@ export default ({ link }) => {
 					here
 				</NavLink>
 			</Body>
-		</ContentBlock>,
+		</ContentBlock>
 	)
 }
