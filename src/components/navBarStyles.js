@@ -1,35 +1,11 @@
 import { createUseStyles } from 'react-jss'
-import { white, gray } from 'constants/styles/colors'
-import {
-	MD_MIN_STRING,
-} from 'constants/styles/breakpoints'
+import { white, gray, lightGray } from 'constants/styles/colors'
+import { MD_MIN_STRING } from 'constants/styles/breakpoints'
 
 export const navContentHeight = 32
 export const navPaddingHeight = 24
 
 export default createUseStyles({
-	menuSlideContainer: {
-		position: 'fixed',
-		height: '100%',
-		width: '100%',
-	},
-	menu: {
-		width: '100%',
-		height: `calc(100vh - ${navContentHeight + (navPaddingHeight * 2)}px)`,
-		backgroundColor: '#346c63',
-		flexDirection: 'column',
-		justifyContent: 'space-around',
-		transition: 'transform 0.5s',
-		position: 'fixed',
-		paddingTop: '50px',
-		zIndex: -1,
-	},
-	menuCover: {
-		height: '100%',
-		backgroundColor: '#e8e8e8',
-		transition: 'transform 0.5s',
-		width: '100%',
-	},
 	menuButton: {
 		cursor: 'pointer',
 		border: 'none',
@@ -83,26 +59,8 @@ export default createUseStyles({
 		transform: 'translateX(768px)',
 	},
 	[MD_MIN_STRING]: {
-		menuSlide: {
-			transform: 'translateX(240px)',
-		},
 		logo: {
 			transition: 'transform 0.5s',
-		},
-		menu: {
-			backgroundColor: '#0f2b41',
-			width: 240,
-			height: '100%',
-			justifyContent: 'flex-start',
-			zIndex: 0,
-			paddingTop: 0,
-		},
-		menuCover: {
-			display: 'block',
-			position: 'absolute',
-			top: 0,
-			left: 0,
-			backgroundColor: '#e8e8e8',
 		},
 		menuButton: {
 			padding: 0,

@@ -6,6 +6,7 @@ import clsx from 'clsx'
 
 import blobLinkData from 'constants/blobLinks'
 import { MD_MIN_VALUE, MD_MIN_STRING } from 'constants/styles/breakpoints'
+import { lightGray } from 'constants/styles/colors'
 import { HomePath } from 'constants/navigation'
 import MenuContext from 'contexts/menu'
 import ScrollContext from 'contexts/scroll'
@@ -33,7 +34,7 @@ const marPadZero = {
 const baseStyle = {
 	height: '100%',
 	width: '100%',
-	backgroundColor: '#e8e8e8',
+	backgroundColor: lightGray,
 	...marPadZero,
 	// because main app doesn't scroll due to menu animation restrictions
 	// overscroll leads to undesirable "bounce" on any scroll
@@ -71,7 +72,7 @@ const useStyles = createUseStyles({
 
 	app: {
 		position: 'relative',
-		backgroundColor: '#e8e8e8',
+		backgroundColor: lightGray,
 		width: '100%',
 		height: '100%',
 		cursor: 'auto',
@@ -79,24 +80,9 @@ const useStyles = createUseStyles({
 	menuOpenApp: {
 		overflowX: 'hidden',
 	},
-	menuSlide: {
-		transform: 'translateX(768px)',
-	},
-	switchWrapper: {
-		backgroundColor: '#e8e8e8',
-		transition: 'transform 0.5s',
-		width: '100%',
-		position: 'absolute',
-		top: 0,
-		left: 0,
-		height: '100%',
-	},
 	[MD_MIN_STRING]: {
 		app: {
 			cursor: `url(${cursor}),auto`,
-		},
-		menuSlide: {
-			transform: 'translateX(240px)',
 		},
 	},
 })
@@ -134,38 +120,26 @@ const App = ({ location }) => {
 				>
 					{/* eslint-enable */}
 					<NavBar />
-					<div
-						className={clsx(classes.switchWrapper, {
-							[classes.menuSlide]: isMenuOpen,
-						})}
-					>
-						<Switch>
-							<Route path={HomePath} exact component={Home} />
-							<Route
-								path={blobLinkData.FISMarketing.link}
-								component={FISMarketing}
-							/>
-							<Route path={blobLinkData.Portfolio.link} component={Portfolio} />
-							<Route
-								path={blobLinkData.ListenJay.link}
-								component={ListenJayUXA}
-							/>
-							<Route path={blobLinkData.About.link} component={About} />
-							<Route path={blobLinkData.ELO.link} component={ELO} />
-							<Route path="/mirror" component={Mirror} />
-							<Route path="/listenjay-og" component={ListenJay} />
-							<Route
-								path={blobLinkData.MensHealth.link}
-								component={MensHealth}
-							/>
-							<Route path={blobLinkData.Chase.link} component={Chase} />
-							<Route
-								path="/ellipsis"
-								component={Ellipsis}
-							/>
-							<Route component={FourOhFour} />
-						</Switch>
-					</div>
+					<Switch>
+						<Route path={HomePath} exact component={Home} />
+						<Route
+							path={blobLinkData.FISMarketing.link}
+							component={FISMarketing}
+						/>
+						<Route path={blobLinkData.Portfolio.link} component={Portfolio} />
+						<Route
+							path={blobLinkData.ListenJay.link}
+							component={ListenJayUXA}
+						/>
+						<Route path={blobLinkData.About.link} component={About} />
+						<Route path={blobLinkData.ELO.link} component={ELO} />
+						<Route path="/mirror" component={Mirror} />
+						<Route path="/listenjay-og" component={ListenJay} />
+						<Route path={blobLinkData.MensHealth.link} component={MensHealth} />
+						<Route path={blobLinkData.Chase.link} component={Chase} />
+						<Route path="/ellipsis" component={Ellipsis} />
+						<Route component={FourOhFour} />
+					</Switch>
 				</div>
 			</ScrollContext.Provider>
 			{/* <NavBar /> */}

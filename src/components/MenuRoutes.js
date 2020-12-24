@@ -48,7 +48,7 @@ const MenuLinks = ({ classes }) =>
 		)
 	})
 
-export default () => {
+const MenuRoutes = () => {
 	const classes = useStyles()
 	return (
 		<div className={classes.menuLinkWrapper}>
@@ -56,3 +56,5 @@ export default () => {
 		</div>
 	)
 }
+
+export default MenuRoutes
