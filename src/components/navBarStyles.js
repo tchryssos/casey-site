@@ -6,17 +6,6 @@ export const navContentHeight = 32
 export const navPaddingHeight = 24
 
 export default createUseStyles({
-	menuButton: {
-		cursor: 'pointer',
-		border: 'none',
-		backgroundColor: 'transparent',
-		display: 'flex',
-		alignItems: 'center',
-		padding: 0,
-		'&:focus': {
-			outline: 'none',
-		},
-	},
 	navWrapper: {
 		position: 'fixed',
 		bottom: 0,
@@ -43,9 +32,6 @@ export default createUseStyles({
 		transition: '',
 		display: 'block !important',
 	},
-	openMenuIcon: {
-		height: navContentHeight,
-	},
 	openMenuText: {
 		textAlign: 'left',
 	},
@@ -55,13 +41,20 @@ export default createUseStyles({
 	navTextSpace: {
 		width: '8px',
 	},
-	menuSlide: {
-		transform: 'translateX(768px)',
+	navLeft: {
+		width: '40%',
+		display: 'flex',
+		flexDirection: 'row-reverse',
+	},
+	navLeftLink: {
+		textDecoration: 'none',
+		marginLeft: 40,
+		padding: '8px 0',
+		'&:hover': {
+			borderBottom: '2px solid #2b2b2b',
+		},
 	},
 	[MD_MIN_STRING]: {
-		logo: {
-			transition: 'transform 0.5s',
-		},
 		menuButton: {
 			padding: 0,
 			margin: 0,
@@ -70,10 +63,12 @@ export default createUseStyles({
 			color: 'white',
 		},
 		navWrapper: {
-			backgroundColor: 'transparent',
+			// backgroundColor: lightGray,
+			background:
+				'linear-gradient(to bottom, rgba(232,232,232,1) 80%, rgba(232,232,232,0) 100%)',
 			top: 0,
 			bottom: 'initial',
-			padding: '16px 0 0 0',
+			padding: '16px 0 16px 0',
 			alignItems: 'flex-start',
 			borderTop: 'none',
 		},
