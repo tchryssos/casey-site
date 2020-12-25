@@ -139,7 +139,6 @@ const App = ({ location }) => {
 							[classes.menuSlide]: isMenuOpen,
 						})}
 					>
-<<<<<<< HEAD
 						<Switch>
 							<Route path={HomePath} exact component={Home} />
 							<Route
@@ -166,64 +165,6 @@ const App = ({ location }) => {
 							/>
 							<Route component={FourOhFour} />
 						</Switch>
-=======
-					{/* eslint-enable */}
-						<NavBar />
-						<div
-							className={
-								clsx(
-									classes.switchWrapper,
-									{ [classes.menuSlide]: isMenuOpen },
-								)
-							}
-						>
-							<Switch>
-								<Route path={HomePath} exact component={Home} />
-								<Route path={AltHomePath} component={HomeB} />
-								<Route
-									path={blobLinkData.FISMarketing.link}
-									component={FISMarketing}
-								/>
-								<Route
-									path={blobLinkData.Portfolio.link}
-									component={Portfolio}
-								/>
-								<Route
-									path={blobLinkData.ListenJay.link}
-									component={ListenJayUXA}
-								/>
-								<Route
-									path={blobLinkData.About.link}
-									component={About}
-								/>
-								<Route
-									path={blobLinkData.ELO.link}
-									component={ELO}
-								/>
-								<Route
-									path="/mirror"
-									component={Mirror}
-								/>
-								<Route
-									path="/listenjay-og"
-									component={ListenJay}
-								/>
-								<Route
-									path={blobLinkData.MensHealth.link}
-									component={MensHealth}
-								/>
-								<Route
-									path={blobLinkData.Chase.link}
-									component={Chase}
-								/>
-								<Route
-									path="/ellipsis"
-									component={Ellipsis}
-								/>
-								<Route component={FourOhFour} />
-							</Switch>
-						</div>
->>>>>>> ellipsis app page started
 					</div>
 				</div>
 			</ScrollContext.Provider>
