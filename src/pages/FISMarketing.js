@@ -157,7 +157,7 @@ export default () => {
 				</Body>
 				<Spacer />
 				<Body>
-					As a brand, Flatiron strives to be authentic and transparent. Some of its key differentiators are its amazing community of students and teachers and its access to beautiful WeWork spaces. I wanted to capture photography that showed real students working together in these comfortable and inspiring spaces. 
+					As a brand, Flatiron strives to be authentic and transparent. Some of its key differentiators are its amazing community of students and teachers and its access to beautiful WeWork spaces. I wanted to capture photography that showed real students working together in these comfortable and inspiring spaces.
 				</Body>
 				<Spacer />
 				<Body>
