@@ -1,6 +1,7 @@
 import React from 'react'
 import { createUseStyles } from 'react-jss'
 import { NavLink } from 'react-router-dom'
+import { MD_MIN_STRING } from 'constants/styles/breakpoints'
 
 
 import SubHeading from 'components/Typography/SubHeading'
@@ -11,7 +12,7 @@ import Image from 'components/Image'
 const useStyles = createUseStyles({
 	projectPreviewContainer: {
 		paddingTop: 20,
-		width: '45%',
+		width: '100%',
 		textDecoration: 'none',
 		color: '#2b2b2b',
 		'&:hover $absolute': {
@@ -19,6 +20,9 @@ const useStyles = createUseStyles({
 		},
 		'&:hover $projectTitle': {
 			textDecoration: 'underline',
+		},
+		[MD_MIN_STRING]: {
+			width: '45%',
 		},
 	},
 	projectTitle: {
