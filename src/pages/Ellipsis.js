@@ -21,10 +21,8 @@ import EllipsisSketch from 'static/images/Ellipsis/EH_Hero-03.png'
 import AboveFold from 'static/images/Ellipsis/site_abovefold.png'
 import Copy from 'static/images/Ellipsis/copy.png'
 import NavGif from 'static/images/Ellipsis/navgif.gif'
-import Press from 'static/images/Ellipsis/Press.png'
-import Solutions from 'static/images/Ellipsis/Solutions.png'
+import Solutions from 'static/images/Ellipsis/Solutions-05.png'
 import Hero from 'static/images/Ellipsis/EllipsisHero.png'
-import Home from 'static/images/Ellipsis/Home.png'
 
 
 const useStyles = createUseStyles({
@@ -48,11 +46,14 @@ export default () => {
 					Ellipsis Health wants to update their site to be modern and professional
 				</Heading>
 				<Spacer />
+				<SubHeading>
+					THE TASK
+				</SubHeading>
+				<Spacer />
 				<Body>
 					In one week, we need to design, build and launch a website that is easily manageable by the Ellipsis team moving forward. The site needs to align with their new branding and speak to the Ellipsis audience.
 				</Body>
 				<Image src={Hero} size="full" />
-
 			</ContentBlock>
 			<ContentBlock>
 				<SubHeading>
@@ -143,10 +144,8 @@ export default () => {
 				</SubHeading>
 				<Spacer />
 				<Body>
-					To enhance our professionalism and credibilty we included our key press pieces and also included a snapshot of our leadership team on out about page.
+					To enhance our professionalism and credibilty we included our key press pieces and included a snapshot of our leadership team on the about page.
 				</Body>
-				<Image src={Press} size="full" />
-
 			</ContentBlock>
 			<ContentBlock>
 				<SubHeading>
@@ -156,7 +155,26 @@ export default () => {
 					Key Learnings
 				</Heading>
 				<Spacer />
-
+				<SubHeading>
+					Iterating quickly
+				</SubHeading>
+				<Body>
+					With a one week timeline, this project would not have come together without constant communication, feedback and iteration.
+				</Body>
+				<Spacer />
+				<SubHeading>
+					Using design to enhance content
+				</SubHeading>
+				<Body>
+					I worked closely with the internal team who gathered the best content and resources. My job was to make that information shine in a digestible and engaging format.
+				</Body>
+				<Spacer />
+				<SubHeading>
+					Working with templating platforms
+				</SubHeading>
+				<Body>
+					We used Wix to create a site that the internal team could edit easily moving forward. Using Wix also allowed us to get this project done quickly by designing and building in tandem.
+				</Body>
 			</ContentBlock>
 		</PageWrapper>
 	)
