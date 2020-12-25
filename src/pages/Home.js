@@ -22,7 +22,6 @@ import MensHealthDesciption from 'static/images/Descriptions/mhh_di-01.png'
 import FISMDesciption from 'static/images/Descriptions/FIS_di.png'
 import ELODesciption from 'static/images/Descriptions/ELO_di.png'
 
-
 const useStyles = createUseStyles({
 	homeWrapper: {
 		display: 'flex',
@@ -115,9 +114,7 @@ const Home = () => {
 			</ContentBlock>
 			<ContentBlock>
 				<div className={classes.bottomBorderTitle}>
-					<SubHeading>
-						Featured Projects
-					</SubHeading>
+					<SubHeading>Featured Projects</SubHeading>
 					<NavLink className={classes.Button} to="/all-projects">
 						<Body>All Projects</Body>
 					</NavLink>
@@ -125,7 +122,7 @@ const Home = () => {
 				<div className={classes.flexContainer}>
 					<ProjectPreview
 						tags="UXUI, Brand, leadership"
-						title="Me&apos;s Health Memorial Website Redesign"
+						title="Me's Health Memorial Website Redesign"
 						bgImage={Preview1}
 						hoverImage={MensHealthDesciption}
 						link="/mens-health"
@@ -158,7 +155,8 @@ const Home = () => {
 					<Image className={classes.animalcrossing} src={AnimalCrossing} />
 					<div>
 						<Heading>
-							“Her creative talent is equally matched by her well-organized way of operating.”
+							“Her creative talent is equally matched by her well-organized way
+							of operating.”
 						</Heading>
 						<Spacer />
 						<Body>KIM MILLER, CMO</Body>
