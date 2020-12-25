@@ -4,29 +4,19 @@ import { NavLink } from 'react-router-dom'
 import MenuContext from 'contexts/menu'
 import { HomePath } from 'constants/navigation'
 import MenuText from 'components/Typography/MenuText'
-import MenuRoutes from 'components/MenuRoutes'
+// import MenuRoutes from 'components/MenuRoutes'
 import useStyles from './navBarStyles'
 
-export default () => {
+const NavBar = () => {
 	const classes = useStyles()
 	return (
 		<MenuContext.Consumer>
 			{({ isMenuOpen, setIsMenuOpen }) => (
 				<>
-					<div className={classes.menuSlideContainer}>
-						<div className={classes.menu}>
-							<MenuRoutes />
-						</div>
-						<div
-							className={clsx(classes.menuCover, {
-								[classes.menuSlide]: isMenuOpen,
-							})}
-						/>
-					</div>
 					<div className={classes.navWrapper}>
 						<div className={classes.navContainer}>
 							<button
-								onClick={() => setIsMenuOpen(!isMenuOpen)}
+								// onClick={() => setIsMenuOpen(!isMenuOpen)}
 								className={classes.menuButton}
 								type="button"
 							>
@@ -55,3 +45,5 @@ export default () => {
 		</MenuContext.Consumer>
 	)
 }
+
+export default NavBar

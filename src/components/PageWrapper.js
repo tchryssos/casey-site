@@ -1,8 +1,7 @@
 import React from 'react'
 import { createUseStyles } from 'react-jss'
-import {
-	MD_MIN_STRING,
-} from 'constants/styles/breakpoints'
+import { MD_MIN_STRING } from 'constants/styles/breakpoints'
+import { lightGray } from 'constants/styles/colors'
 
 const useStyles = createUseStyles({
 	pageWrapper: {
@@ -10,7 +9,7 @@ const useStyles = createUseStyles({
 		flexDirection: 'column',
 		justifyContent: 'center',
 		paddingBottom: '71px',
-		backgroundColor: '#e8e8e8',
+		backgroundColor: lightGray,
 	},
 	[MD_MIN_STRING]: {
 		pageWrapper: {
@@ -22,11 +21,9 @@ const useStyles = createUseStyles({
 	},
 })
 
-export default ({ children }) => {
+const PageWrapper = ({ children }) => {
 	const classes = useStyles()
-	return (
-		<div className={classes.pageWrapper}>
-			{children}
-		</div>
-	)
+	return <div className={classes.pageWrapper}>{children}</div>
 }
+
+export default PageWrapper
