@@ -18,6 +18,7 @@ const NavBar = () => {
 							<NavLink className={classes.logo} to={HomePath} exact>
 								<Heading>Casey</Heading>
 							</NavLink>
+							<Heading className={classes.mobileMenuButton}>Menu</Heading>
 							<div className={classes.navLeft}>
 								<NavLink className={classes.navLeftLink} to="/about">
 									<MenuText>About</MenuText>

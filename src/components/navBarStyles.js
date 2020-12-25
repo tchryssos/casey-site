@@ -1,5 +1,5 @@
 import { createUseStyles } from 'react-jss'
-import { white, gray, lightGray } from 'constants/styles/colors'
+import { white, gray, darkGray } from 'constants/styles/colors'
 import { MD_MIN_STRING } from 'constants/styles/breakpoints'
 
 export const navContentHeight = 32
@@ -16,7 +16,7 @@ export default createUseStyles({
 		alignContent: 'center',
 		justifyContent: 'center',
 		borderTop: `solid 1px ${gray}`,
-		backgroundColor: white,
+		backgroundColor: darkGray,
 		zIndex: 200,
 	},
 	navContainer: {
@@ -26,10 +26,20 @@ export default createUseStyles({
 		width: '100%',
 		padding: '0 24px',
 	},
+	navLeft: {
+		display: 'none',
+	},
+	navLeftLink: {
+		textDecoration: 'none',
+		marginLeft: 40,
+		padding: '8px 0',
+		'&:hover': {
+			borderBottom: '2px solid #2b2b2b',
+		},
+	},
 	logo: {
 		textDecoration: 'none',
-		color: 'black',
-		transition: '',
+		color: white,
 		display: 'block !important',
 	},
 	openMenuText: {
@@ -41,31 +51,28 @@ export default createUseStyles({
 	navTextSpace: {
 		width: '8px',
 	},
-	navLeft: {
-		width: '40%',
-		display: 'flex',
-		flexDirection: 'row-reverse',
-	},
-	navLeftLink: {
-		textDecoration: 'none',
-		marginLeft: 40,
-		padding: '8px 0',
-		'&:hover': {
-			borderBottom: '2px solid #2b2b2b',
-		},
+	mobileMenuButton: {
+		display: 'block',
+		color: white,
+		cursor: 'pointer',
 	},
 	[MD_MIN_STRING]: {
 		menuButton: {
 			padding: 0,
 			margin: 0,
 		},
+		mobileMenuButton: {
+			display: 'none',
+		},
 		menuVisibleText: {
 			color: 'white',
 		},
+		logo: {
+			color: darkGray,
+		},
 		navWrapper: {
-			// backgroundColor: lightGray,
 			background:
-				'linear-gradient(to bottom, rgba(232,232,232,1) 80%, rgba(232,232,232,0) 100%)',
+				'linear-gradient(to bottom, rgba(232,232,232,1) 85%, rgba(232,232,232,0) 100%)',
 			top: 0,
 			bottom: 'initial',
 			padding: '16px 0 16px 0',
@@ -73,14 +80,24 @@ export default createUseStyles({
 			borderTop: 'none',
 		},
 		navContainer: {
+			display: 'flex',
+			justifyContent: 'space-between',
+			alignContent: 'center',
+			width: '100%',
 			padding: '0 16px',
 		},
-		openMenuIcon: {
-			display: 'none',
+		navLeft: {
+			width: '60%',
+			display: 'flex',
+			flexDirection: 'row-reverse',
 		},
-		openMenuText: {
-			display: 'block',
-			letterSpacing: 1,
+		navLeftLink: {
+			textDecoration: 'none',
+			marginLeft: 40,
+			padding: '8px 0',
+			'&:hover': {
+				borderBottom: '2px solid #2b2b2b',
+			},
 		},
 	},
 })
