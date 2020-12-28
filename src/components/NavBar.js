@@ -33,10 +33,15 @@ const NavBar = () => {
 	const { isMenuOpen, setIsMenuOpen } = useContext(MenuContext)
 	return (
 		<>
+			<div
+				className={clsx(classes.menuDarken, {
+					[classes.isVisible]: isMenuOpen,
+				})}
+			/>
 			<div className={classes.navWrapper}>
 				<div
 					className={clsx(classes.mobileMenuOpen, {
-						[classes.menuVisible]: isMenuOpen,
+						[classes.isVisible]: isMenuOpen,
 					})}
 				>
 					<MenuLinks />
@@ -48,8 +53,12 @@ const NavBar = () => {
 					<NavLink className={classes.logo} to={HomePath} exact>
 						<Heading>Casey</Heading>
 					</NavLink>
-					<button type="button" onClick={() => setIsMenuOpen(true)}>
-						<Heading className={classes.mobileMenuButton}>Menu</Heading>
+					<button
+						className={classes.mobileMenuButton}
+						type="button"
+						onClick={() => setIsMenuOpen(true)}
+					>
+						<Heading>Menu</Heading>
 					</button>
 					<div className={classes.navLeft}>
 						<MenuLinks />

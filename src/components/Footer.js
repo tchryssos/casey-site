@@ -26,17 +26,18 @@ const useStyles = createUseStyles({
 	footerLinkContainer: {
 		width: '80%',
 		margin: '0 10%',
-		textAlign: 'center',
+		alignItems: 'center',
 		display: 'flex',
 		flexDirection: 'column',
 		[MD_MIN_STRING]: {
 			width: '33%',
 			margin: '0',
-			textAlign: 'left',
+			alignItems: 'flex-start',
 		},
 	},
 	footerLink: {
 		color: 'white',
+		width: 'fit-content',
 		fontSize: 16,
 		marginBottom: 8,
 		display: 'inline-block',
@@ -54,15 +55,19 @@ const useStyles = createUseStyles({
 	},
 })
 
-export default () => {
+const Footer = () => {
 	const classes = useStyles()
 	return (
 		<div className={classes.footerWrapper}>
 			<img src={BigCasey} alt="Casey" />
 			<div className={classes.footerFlexWrapper}>
 				<div className={classes.footerLinkContainer}>
-					<NavLink className={classes.footerLink} to="/about" exact>About Me</NavLink>
-					<NavLink className={classes.footerLink} to="/all-projects" exact>All Projects</NavLink>
+					<NavLink className={classes.footerLink} to="/about" exact>
+						About Me
+					</NavLink>
+					<NavLink className={classes.footerLink} to="/all-projects" exact>
+						All Projects
+					</NavLink>
 				</div>
 				<div className={classes.footerLinkContainer}>
 					<a
@@ -96,3 +101,5 @@ export default () => {
 		</div>
 	)
 }
+
+export default Footer

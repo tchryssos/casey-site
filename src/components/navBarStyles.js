@@ -1,5 +1,5 @@
 import { createUseStyles } from 'react-jss'
-import { white, gray, darkGray } from 'constants/styles/colors'
+import { white, gray, darkGray, darken } from 'constants/styles/colors'
 import { MD_MIN_STRING } from 'constants/styles/breakpoints'
 
 export const navContentHeight = 32
@@ -25,6 +25,7 @@ export default createUseStyles({
 		alignContent: 'center',
 		width: '100%',
 		backgroundColor: darkGray,
+		boxSizing: 'border-box',
 	},
 	navLeft: {
 		display: 'none',
@@ -60,7 +61,18 @@ export default createUseStyles({
 		borderRadius: '250px 250px 0 0',
 		bottom: 0,
 	},
-	menuVisible: {
+	menuDarken: {
+		display: 'none',
+		position: 'absolute',
+		top: 0,
+		left: 0,
+		bottom: 0,
+		right: 0,
+		width: '100%',
+		height: '100%',
+		backgroundColor: darken,
+	},
+	isVisible: {
 		display: 'flex',
 	},
 	closeX: {
@@ -71,6 +83,9 @@ export default createUseStyles({
 	[MD_MIN_STRING]: {
 		mobileMenuOpen: {
 			display: 'none',
+		},
+		whiteText: {
+			color: 'black',
 		},
 		menuButton: {
 			padding: 0,

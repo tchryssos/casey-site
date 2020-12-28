@@ -6,3 +6,6 @@ export const sectionBlue = '#4e7fff'
 export const black = '#000'
 export const lightGray = '#e8e8e8'
 export const darkGray = '#2b2b2b'
+
+// TRANSPARENT
+export const darken = 'rgba(0, 0, 0, 0.5)'
