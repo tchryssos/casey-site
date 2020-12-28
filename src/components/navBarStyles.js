@@ -6,6 +6,10 @@ export const navContentHeight = 32
 export const navPaddingHeight = 24
 
 export default createUseStyles({
+	'@keyframes menuSlide': {
+		'0%': { transform: 'translate(0, 250px)' },
+		'100%': { transform: 'translate(0, 0)' },
+	},
 	navWrapper: {
 		position: 'fixed',
 		bottom: 0,
@@ -59,6 +63,8 @@ export default createUseStyles({
 		backgroundColor: darkGray,
 		borderRadius: '250px 250px 0 0',
 		bottom: 0,
+		height: 250,
+		animation: '$menuSlide 1s',
 	},
 	menuDarken: {
 		display: 'none',
