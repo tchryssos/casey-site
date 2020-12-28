@@ -1,7 +1,6 @@
 import { createUseStyles } from 'react-jss'
 import { white, gray, darkGray } from 'constants/styles/colors'
 import { MD_MIN_STRING } from 'constants/styles/breakpoints'
-import { lightGray } from '../constants/styles/colors'
 
 export const navContentHeight = 32
 export const navPaddingHeight = 24
@@ -32,11 +31,11 @@ export default createUseStyles({
 	},
 	navLeftLink: {
 		textDecoration: 'none',
-		marginLeft: 40,
-		padding: '8px 0',
-		'&:hover': {
-			borderBottom: '2px solid #2b2b2b',
-		},
+		marginLeft: 0,
+		padding: '16px 0',
+	},
+	whiteText: {
+		color: 'white',
 	},
 	logo: {
 		textDecoration: 'none',
@@ -49,11 +48,25 @@ export default createUseStyles({
 		cursor: 'pointer',
 	},
 	mobileMenuOpen: {
-		display: 'flex',
-		background: darkGray,
-		borderRadius: '50px 50px 0 0',
+		display: 'none',
+		position: 'absolute',
+		width: '100%',
+		paddingTop: 50,
+		paddingBottom: 8,
 		flexDirection: 'column',
-		marginBottom: 100,
+		alignItems: 'center',
+		justifyContent: 'center',
+		backgroundColor: darkGray,
+		borderRadius: '250px 250px 0 0',
+		bottom: 0,
+	},
+	menuVisible: {
+		display: 'flex',
+	},
+	closeX: {
+		width: 60,
+		cursor: 'pointer',
+		marginTop: 25,
 	},
 	[MD_MIN_STRING]: {
 		mobileMenuOpen: {
@@ -70,10 +83,10 @@ export default createUseStyles({
 			color: 'white',
 		},
 		logo: {
-			color: darkGray,
+			color: '#000000',
 		},
 		navWrapper: {
-			background: lightGray,
+			background: 'transparent',
 			top: 0,
 			bottom: 'initial',
 			padding: '16px 0 16px 0',
@@ -81,7 +94,7 @@ export default createUseStyles({
 			flexDirection: 'row',
 		},
 		navContainer: {
-			background: lightGray,
+			background: 'transparent',
 			display: 'flex',
 			justifyContent: 'space-between',
 			alignContent: 'center',
@@ -98,7 +111,7 @@ export default createUseStyles({
 			textDecoration: 'none',
 			marginLeft: 40,
 			padding: '8px 0',
-			color: darkGray,
+			color: '#000000',
 			'&:hover': {
 				borderBottom: '2px solid #2b2b2b',
 			},

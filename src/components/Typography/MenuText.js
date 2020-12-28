@@ -13,7 +13,9 @@ const useStyles = createUseStyles({
 	},
 })
 
-export default ({ children, className }) => {
+const MenuText = ({ children, className }) => {
 	const classes = useStyles()
 	return <p className={clsx(classes.headlineFont, className)}>{children}</p>
 }
+
+export default MenuText

@@ -1,8 +1,6 @@
 import React from 'react'
 import { createUseStyles } from 'react-jss'
-import {
-	MD_MIN_STRING,
-} from 'constants/styles/breakpoints'
+import { MD_MIN_STRING } from 'constants/styles/breakpoints'
 
 import PageWrapper from 'components/PageWrapper'
 import ContentBlock from 'components/ContentBlock'
@@ -23,9 +21,6 @@ const useStyles = createUseStyles({
 		right: 0,
 		bottom: 0,
 		overflowX: 'hidden',
-	},
-	reviewBlock: {
-		backgroundColor: '#fad793',
 	},
 	half: {
 		width: '100%',
@@ -64,7 +59,9 @@ export default () => {
 					<Body>(click anywhere)</Body>
 					<Spacer />
 					<Body>
-						I am an adaptable designer with experience building creative teams from the ground up at WeWork’s Flatiron School. Currently working on freelance projects in product design.
+						I am an adaptable designer with experience building creative teams
+						from the ground up at WeWork’s Flatiron School. Currently working on
+						freelance projects in product design.
 					</Body>
 					<Spacer height={2} />
 					<SubHeading>Email</SubHeading>
@@ -100,28 +97,25 @@ export default () => {
 					</ItemGrid>
 				</ContentBlock>
 				<ContentBlock className={classes.reviewBlock}>
-					<Heading>
-						What my colleagues are saying
-					</Heading>
+					<Heading>What my colleagues are saying</Heading>
 					<Spacer height={2} />
 					<SubHeading>
-						&quot;Her creative talent is equally matched by her well-organized way of operating.&quot;
+						&quot;Her creative talent is equally matched by her well-organized
+						way of operating.&quot;
 					</SubHeading>
 					<Spacer />
-					<Body>
-						Kim Miller, CMO
-					</Body>
+					<Body>Kim Miller, CMO</Body>
 					<Spacer height={2} />
 					<SubHeading>
-						&quot;Casey is not only a talented creative, but also business savvy and has the ability to anticipate needs before they come up.&quot;
+						&quot;Casey is not only a talented creative, but also business savvy
+						and has the ability to anticipate needs before they come up.&quot;
 					</SubHeading>
 					<Spacer />
-					<Body>
-						Nicole Kroese, Director of Marketing
-					</Body>
+					<Body>Nicole Kroese, Director of Marketing</Body>
 					<Spacer height={2} />
 					<SubHeading>
-						&quot;Her ability to juggle multiple high priority projects puts the rest of her team at ease.&quot;
+						&quot;Her ability to juggle multiple high priority projects puts the
+						rest of her team at ease.&quot;
 					</SubHeading>
 					<Spacer />
 					<Body>Katharine Lucic, Marketing Events Manager</Body>
