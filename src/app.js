@@ -10,6 +10,7 @@ import { lightGray } from 'constants/styles/colors'
 import { HomePath } from 'constants/navigation'
 import MenuContext from 'contexts/menu'
 import ScrollContext from 'contexts/scroll'
+import orNull from 'util/orNull'
 
 import NavBar from 'components/NavBar'
 import Home from 'pages/Home'
@@ -143,7 +144,8 @@ const App = ({ location }) => {
 						<Route path="/all-projects" component={AllProjects} />
 						<Route component={FourOhFour} />
 					</Switch>
-					<Footer />
+					{/* About page sticker board prevents normal footer display so it is imported directly there */}
+					{orNull(location.pathname !== blobLinkData.About.link, <Footer />)}
 				</div>
 			</ScrollContext.Provider>
 			{/* <NavBar /> */}

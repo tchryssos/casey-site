@@ -32,7 +32,6 @@ export default createUseStyles({
 	},
 	navLeftLink: {
 		textDecoration: 'none',
-		marginLeft: 0,
 		padding: '16px 0',
 	},
 	whiteText: {
@@ -80,6 +79,11 @@ export default createUseStyles({
 		cursor: 'pointer',
 		marginTop: 25,
 	},
+	buttonStyleReset: {
+		background: 'transparent',
+		border: 'none',
+		outline: 'none',
+	},
 	[MD_MIN_STRING]: {
 		mobileMenuOpen: {
 			display: 'none',
@@ -118,15 +122,16 @@ export default createUseStyles({
 			borderTop: 'none',
 		},
 		navLeft: {
-			width: '60%',
 			display: 'flex',
-			flexDirection: 'row-reverse',
+			alignItems: 'flex-end',
+			flexDirection: 'column',
 		},
 		navLeftLink: {
 			textDecoration: 'none',
-			marginLeft: 40,
+			width: 'fit-content',
 			padding: '8px 0',
 			color: '#000000',
+			borderBottom: '2px solid transparent',
 			'&:hover': {
 				borderBottom: '2px solid #2b2b2b',
 			},
