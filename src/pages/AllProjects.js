@@ -60,7 +60,7 @@ export default () => {
 				<Spacer />
 				<Body>
 					Look through all of my work below or&nbsp;
-					<NavLink className={classes.inlineLink} to="/all-projects">
+					<NavLink className={classes.inlineLink} to="/">
 						return home
 					</NavLink>
 					&nbsp;to see a curated list of projects

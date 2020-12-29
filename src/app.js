@@ -26,6 +26,7 @@ import FourOhFour from 'pages/404'
 import ListenJayUXA from 'pages/ListenJayUXA'
 import Chase from 'pages/Chase'
 import Ellipsis from 'pages/Ellipsis'
+import Irth from 'pages/Irth'
 import AllProjects from 'pages/AllProjects'
 
 import cursor from 'static/images/Misc/cursor.png'
@@ -142,6 +143,7 @@ const App = ({ location }) => {
 						<Route path={blobLinkData.Chase.link} component={Chase} />
 						<Route path="/ellipsis" component={Ellipsis} />
 						<Route path="/all-projects" component={AllProjects} />
+						<Route path="/irth" component={Irth} />
 						<Route component={FourOhFour} />
 					</Switch>
 					{/* About page sticker board prevents normal footer display so it is imported directly there */}
