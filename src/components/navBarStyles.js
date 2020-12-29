@@ -1,5 +1,5 @@
 import { createUseStyles } from 'react-jss'
-import { white, gray, darkGray, darken } from 'constants/styles/colors'
+import { white, darkGray, darken } from 'constants/styles/colors'
 import { MD_MIN_STRING } from 'constants/styles/breakpoints'
 
 export const navContentHeight = 32
@@ -22,7 +22,6 @@ export default createUseStyles({
 		zIndex: 200,
 	},
 	navContainer: {
-		borderTop: `solid 1px ${gray}`,
 		padding: '16px 24px',
 		display: 'flex',
 		justifyContent: 'space-between',

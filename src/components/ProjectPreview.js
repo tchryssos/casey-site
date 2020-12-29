@@ -3,7 +3,6 @@ import { createUseStyles } from 'react-jss'
 import { NavLink } from 'react-router-dom'
 import { MD_MIN_STRING } from 'constants/styles/breakpoints'
 
-
 import SubHeading from 'components/Typography/SubHeading'
 import Body from 'components/Typography/Body'
 import Spacer from 'components/Spacer'
@@ -16,7 +15,7 @@ const useStyles = createUseStyles({
 		textDecoration: 'none',
 		color: '#2b2b2b',
 		'&:hover $absolute': {
-			display: 'flex',
+			transform: 'rotate(30deg)',
 		},
 		'&:hover $projectTitle': {
 			textDecoration: 'underline',
@@ -25,9 +24,7 @@ const useStyles = createUseStyles({
 			width: '45%',
 		},
 	},
-	projectTitle: {
-
-	},
+	projectTitle: {},
 	relative: {
 		position: 'relative',
 	},
@@ -35,21 +32,20 @@ const useStyles = createUseStyles({
 		position: 'absolute',
 		width: '100%',
 		height: '100%',
-		display: 'none',
+		display: 'flex',
 		justifyContent: 'center',
 		alignItems: 'center',
+		transition: 'transform 1s',
 	},
 	hoverImage: {
-		width: '100%',
+		width: 200,
 	},
 	uppercase: {
 		textTransform: 'uppercase',
 	},
 })
 
-export default ({
-	tags, title, bgImage, hoverImage, link,
-}) => {
+const ProjectPreview = ({ tags, title, bgImage, hoverImage, link }) => {
 	const classes = useStyles()
 	return (
 		<NavLink className={classes.projectPreviewContainer} to={link}>
@@ -60,13 +56,11 @@ export default ({
 				<Image src={bgImage} size="full" />
 			</div>
 			<Spacer />
-			<SubHeading className={classes.projectTitle}>
-				{title}
-			</SubHeading>
+			<SubHeading className={classes.projectTitle}>{title}</SubHeading>
 			<Spacer height={0.5} />
-			<Body className={classes.uppercase}>
-				{tags}
-			</Body>
+			<Body className={classes.uppercase}>{tags}</Body>
 		</NavLink>
 	)
 }
+
+export default ProjectPreview
