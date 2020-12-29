@@ -10,13 +10,13 @@ import Body from 'components/Typography/Body'
 import Spacer from 'components/Spacer'
 import Image from 'components/Image'
 import ItemGrid from 'components/ItemGrid'
+import VideoPlayer from 'components/VideoPlayer'
 
 import ColorScheme from 'static/images/Irth/BeforeAfterIrth.png'
 import Founder from 'static/images/Irth/Founder.png'
-import Encouragement from 'static/images/Irth/encouragement.gif'
-import Sections from 'static/images/Irth/sections.gif'
 import LongForm from 'static/images/Irth/LongForm.png'
 import ReviewStates from 'static/images/Irth/ReviewStates.png'
+import IrthHero from 'static/images/Irth/IrthHero.gif'
 
 const useStyles = createUseStyles({
 	half: {
@@ -27,24 +27,35 @@ const useStyles = createUseStyles({
 			marginBottom: 0,
 		},
 	},
+	IrthHero: {
+		backgroundColor: '#fff4e9',
+	},
+	white: {
+		backgroundColor: 'white',
+	},
 })
 
 const Irth = () => {
 	const classes = useStyles()
 	return (
 		<PageWrapper>
-			<ContentBlock>
-				<Heading>
-					Irth is an app for brown and black women to review doctors and
-					hospitals involved in their birthing experiences
-				</Heading>
-				<Spacer />
-				<Body>
-					I was brought on to this project to make a few key design changes
-					necessary to take the app to its first round of beta testing.
-				</Body>
+			<ContentBlock className={classes.IrthHero}>
+				<ItemGrid stackedOnMobile>
+					<div className={classes.half}>
+						<Heading>
+							Irth is an app for brown and black women to review doctors and
+							hospitals involved in their birthing experiences
+						</Heading>
+						<Spacer />
+						<Body>
+							I was brought on to this project to make a few key design changes
+							necessary to take the app to its first round of beta testing.
+						</Body>
+					</div>
+					<Image src={IrthHero} size="full" className={classes.half} />
+				</ItemGrid>
 			</ContentBlock>
-			<ContentBlock>
+			<ContentBlock className={classes.white}>
 				<SubHeading>Goal #1</SubHeading>
 				<Heading>Bring more warmth and joy to the app experience</Heading>
 				<Spacer />
@@ -91,14 +102,14 @@ const Irth = () => {
 					speak directly to her audience.
 				</Body>
 				<Spacer />
-				<ItemGrid>
-					<Image src={Encouragement} size="half" />
-					<Image src={Sections} size="half" />
-				</ItemGrid>
+				<VideoPlayer
+					src="https://player.vimeo.com/video/495562227?autoplay=1?loop=1"
+					title="Animated Scrrens"
+				/>
 			</ContentBlock>
 			<ContentBlock>
 				<SubHeading>Goal #2</SubHeading>
-				<Heading>Address issues with responsiveness</Heading>
+				<Heading>Increase responsiveness</Heading>
 				<Spacer />
 				<Body>
 					As I took over the product design portion of this project one of my
@@ -124,8 +135,27 @@ const Irth = () => {
 				</Body>
 				<Image src={ReviewStates} size="full" />
 			</ContentBlock>
-			<ContentBlock>
+			<ContentBlock className={classes.IrthHero}>
 				<Heading>Key Learnings</Heading>
+				<Spacer />
+				<SubHeading>Working within someone elses files</SubHeading>
+				<Spacer />
+				<Body>
+					I picked up this project from another designer who had too much on her
+					plate. This meanth that I had to dive into her files and design system
+					without a lot of context. I think that having a fresh perspective can
+					be helpful but is also hard at times when you don&apos;t know why
+					certain assumptions were made.
+				</Body>
+				<Spacer height={2} />
+				<SubHeading>Testflight and Firebase</SubHeading>
+				<Spacer />
+				<Body>
+					I worked closely with an iOS and Android developer to build a product
+					to be beta tested before launch. This helped me learn some of the
+					nuances that go into each build from a design perspective.
+				</Body>
+				<Spacer height={2} />
 			</ContentBlock>
 		</PageWrapper>
 	)
