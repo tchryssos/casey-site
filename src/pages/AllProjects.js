@@ -46,7 +46,7 @@ const useStyles = createUseStyles({
 	},
 })
 
-export default () => {
+const AllProjects = () => {
 	const classes = useStyles()
 
 	const blobLinks = Object.keys(blobLinkData).map((key) => {
@@ -67,11 +67,8 @@ export default () => {
 				</Body>
 			</ContentBlock>
 			<div className={classes.homeWrapper}>{blobLinks}</div>
-			{/* <ContentBlock>
-				<SubHeading>
-					DesignLab Case Studies
-				</SubHeading>
-			</ContentBlock> */}
 		</div>
 	)
 }
+
+export default AllProjects
