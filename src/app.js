@@ -10,6 +10,7 @@ import { lightGray } from 'constants/styles/colors'
 import { HomePath } from 'constants/navigation'
 import MenuContext from 'contexts/menu'
 import ScrollContext from 'contexts/scroll'
+import PasswordContext from 'contexts/password'
 import orNull from 'util/orNull'
 
 import NavBar from 'components/NavBar'
@@ -28,6 +29,7 @@ import Chase from 'pages/Chase'
 import Ellipsis from 'pages/Ellipsis'
 import Irth from 'pages/Irth'
 import AllProjects from 'pages/AllProjects'
+import Password from 'pages/Password'
 
 import cursor from 'static/images/Misc/cursor.png'
 
@@ -68,6 +70,14 @@ const useStyles = createUseStyles({
 		},
 		h2: marPadZero,
 		h3: marPadZero,
+		button: {
+			...marPadZero,
+			boxSizing: 'border-box',
+		},
+		input: {
+			...marPadZero,
+			boxSizing: 'border-box',
+		},
 		iframe: {
 			width: '100%',
 		},
@@ -97,12 +107,16 @@ const App = ({ location }) => {
 	// and controll some scrolling effects on various pages
 	const scrollRef = useRef(document.documentElement)
 	const getScroll = () => scrollRef.current
+
 	const [isMenuOpen, setIsMenuOpen] = useState(false)
+	const [password, setPassword] = useState('')
+
 	useEffect(() => {
 		setIsMenuOpen(false)
 		// On location change, scroll to page top
 		scrollRef.current.scrollTop = 0
 	}, [location.pathname])
+
 	// Stop body scroll behind small window menus
 	useEffect(() => {
 		if (isMenuOpen && window.outerWidth < MD_MIN_VALUE) {
@@ -111,44 +125,51 @@ const App = ({ location }) => {
 			document.body.style.overflowY = 'initial'
 		}
 	}, [isMenuOpen])
+
 	return (
 		<MenuContext.Provider value={{ isMenuOpen, setIsMenuOpen }}>
 			<ScrollContext.Provider value={{ getScroll }}>
-				{/* eslint-disable */}
-				<div
-					// iOS onClick hack
-					// https://stackoverflow.com/questions/24077725/mobile-safari-sometimes-does-not-trigger-the-click-event
-					onClick={void 0}
-					className={clsx(classes.app, { [classes.menuOpenApp]: isMenuOpen })}
-					id="scrollApp"
-				>
-					{/* eslint-enable */}
-					<NavBar />
-					<Switch>
-						<Route path={HomePath} exact component={Home} />
-						<Route
-							path={blobLinkData.FISMarketing.link}
-							component={FISMarketing}
-						/>
-						<Route path={blobLinkData.Portfolio.link} component={Portfolio} />
-						<Route
-							path={blobLinkData.ListenJay.link}
-							component={ListenJayUXA}
-						/>
-						<Route path={blobLinkData.About.link} component={About} />
-						<Route path={blobLinkData.ELO.link} component={ELO} />
-						<Route path="/mirror" component={Mirror} />
-						<Route path="/listenjay-og" component={ListenJay} />
-						<Route path={blobLinkData.MensHealth.link} component={MensHealth} />
-						<Route path={blobLinkData.Chase.link} component={Chase} />
-						<Route path="/ellipsis" component={Ellipsis} />
-						<Route path="/all-projects" component={AllProjects} />
-						<Route path="/irth" component={Irth} />
-						<Route component={FourOhFour} />
-					</Switch>
-					{/* About page sticker board prevents normal footer display so it is imported directly there */}
-					{orNull(location.pathname !== blobLinkData.About.link, <Footer />)}
-				</div>
+				<PasswordContext.Provider value={{ password, setPassword }}>
+					{/* eslint-disable */}
+					<div
+						// iOS onClick hack
+						// https://stackoverflow.com/questions/24077725/mobile-safari-sometimes-does-not-trigger-the-click-event
+						onClick={void 0}
+						className={clsx(classes.app, { [classes.menuOpenApp]: isMenuOpen })}
+						id="scrollApp"
+					>
+						{/* eslint-enable */}
+						<NavBar />
+						<Switch>
+							<Route path={HomePath} exact component={Home} />
+							<Route
+								path={blobLinkData.FISMarketing.link}
+								component={FISMarketing}
+							/>
+							<Route path={blobLinkData.Portfolio.link} component={Portfolio} />
+							<Route
+								path={blobLinkData.ListenJay.link}
+								component={ListenJayUXA}
+							/>
+							<Route path={blobLinkData.About.link} component={About} />
+							<Route path={blobLinkData.ELO.link} component={ELO} />
+							<Route path="/mirror" component={Mirror} />
+							<Route path="/listenjay-og" component={ListenJay} />
+							<Route
+								path={blobLinkData.MensHealth.link}
+								component={MensHealth}
+							/>
+							<Route path={blobLinkData.Chase.link} component={Chase} />
+							<Route path="/ellipsis" component={Ellipsis} />
+							<Route path="/all-projects" component={AllProjects} />
+							<Route path="/irth" component={Irth} />
+							<Route path="/password" component={Password} />
+							<Route component={FourOhFour} />
+						</Switch>
+						{/* About page sticker board prevents normal footer display so it is imported directly there */}
+						{orNull(location.pathname !== blobLinkData.About.link, <Footer />)}
+					</div>
+				</PasswordContext.Provider>
 			</ScrollContext.Provider>
 			{/* <NavBar /> */}
 		</MenuContext.Provider>
