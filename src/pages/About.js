@@ -47,7 +47,7 @@ const useStyles = createUseStyles({
 	},
 })
 
-export default () => {
+const About = () => {
 	const classes = useStyles()
 	useStickers()
 	return (
@@ -137,3 +137,5 @@ export default () => {
 		</div>
 	)
 }
+
+export default About

@@ -1,8 +1,10 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useContext } from 'react'
 import { createUseStyles } from 'react-jss'
+import clsx from 'clsx'
 import { useLocation } from 'react-router-dom'
 
 import ternary from 'util/ternary'
+import MenuConext from 'contexts/menu'
 
 import { MD_MIN_STRING } from 'constants/styles/breakpoints'
 import { lightGray } from 'constants/styles/colors'
@@ -17,6 +19,9 @@ const useStyles = createUseStyles({
 		justifyContent: 'center',
 		backgroundColor: lightGray,
 	},
+	menuOpen: {
+		position: 'fixed',
+	},
 	[MD_MIN_STRING]: {
 		pageWrapper: {
 			zIndex: 2,
@@ -30,6 +35,7 @@ const useStyles = createUseStyles({
 const PageWrapper = ({ children }) => {
 	const classes = useStyles()
 	const { pathname } = useLocation()
+	const { isMenuOpen } = useContext(MenuConext)
 	const password = window.sessionStorage.getItem('p')
 	const [isAuthorized, setIsAuthorized] = useState(false)
 
@@ -39,8 +45,15 @@ const PageWrapper = ({ children }) => {
 		}
 	}, [])
 
+	useEffect(() => {
+		if (isMenuOpen) {
+		}
+	}, [isMenuOpen])
+
 	return (
-		<div className={classes.pageWrapper}>
+		<div
+			className={clsx(classes.pageWrapper, { [classes.menuOpen]: isMenuOpen })}
+		>
 			{ternary(
 				!lockedRoutes[pathname] || isAuthorized,
 				children,

@@ -5,7 +5,7 @@ import { createUseStyles } from 'react-jss'
 import clsx from 'clsx'
 
 import blobLinkData from 'constants/blobLinks'
-import { MD_MIN_VALUE, MD_MIN_STRING } from 'constants/styles/breakpoints'
+import { MD_MIN_STRING } from 'constants/styles/breakpoints'
 import { lightGray } from 'constants/styles/colors'
 import {
 	homePath,
@@ -95,9 +95,6 @@ const useStyles = createUseStyles({
 		height: '100%',
 		cursor: 'auto',
 	},
-	menuOpenApp: {
-		overflowX: 'hidden',
-	},
 	[MD_MIN_STRING]: {
 		app: {
 			cursor: `url(${cursor}),auto`,
@@ -122,15 +119,6 @@ const App = () => {
 		scrollRef.current.scrollTop = 0
 	}, [location.pathname])
 
-	// Stop body scroll behind small window menus
-	useEffect(() => {
-		if (isMenuOpen && window.outerWidth < MD_MIN_VALUE) {
-			document.body.style.overflowY = 'hidden'
-		} else {
-			document.body.style.overflowY = 'initial'
-		}
-	}, [isMenuOpen])
-
 	return (
 		<MenuContext.Provider value={{ isMenuOpen, setIsMenuOpen }}>
 			<ScrollContext.Provider value={{ getScroll }}>
@@ -139,7 +127,7 @@ const App = () => {
 					// iOS onClick hack
 					// https://stackoverflow.com/questions/24077725/mobile-safari-sometimes-does-not-trigger-the-click-event
 					onClick={void 0}
-					className={clsx(classes.app, { [classes.menuOpenApp]: isMenuOpen })}
+					className={clsx(classes.app)}
 					id="scrollApp"
 				>
 					{/* eslint-enable */}
