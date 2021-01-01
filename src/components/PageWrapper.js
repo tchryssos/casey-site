@@ -1,10 +1,17 @@
-import React, { useState, useEffect, useContext } from 'react'
+import React, {
+	useState,
+	useEffect,
+	useContext,
+	useRef,
+	useLayoutEffect,
+} from 'react'
 import { createUseStyles } from 'react-jss'
 import clsx from 'clsx'
 import { useLocation } from 'react-router-dom'
 
 import ternary from 'util/ternary'
 import MenuConext from 'contexts/menu'
+import ScrollContext from 'contexts/scroll'
 
 import { MD_MIN_STRING } from 'constants/styles/breakpoints'
 import { lightGray } from 'constants/styles/colors'
@@ -14,6 +21,7 @@ import PasswordPage from 'pages/Password'
 
 const useStyles = createUseStyles({
 	pageWrapper: {
+		position: 'relative',
 		display: 'flex',
 		flexDirection: 'column',
 		justifyContent: 'center',
@@ -33,9 +41,11 @@ const useStyles = createUseStyles({
 })
 
 const PageWrapper = ({ children }) => {
+	const pageRef = useRef()
 	const classes = useStyles()
 	const { pathname } = useLocation()
-	const { isMenuOpen } = useContext(MenuConext)
+	const { isMenuOpen, scrollY } = useContext(MenuConext)
+	const { getScroll } = useContext(ScrollContext)
 	const password = window.sessionStorage.getItem('p')
 	const [isAuthorized, setIsAuthorized] = useState(false)
 
@@ -45,14 +55,21 @@ const PageWrapper = ({ children }) => {
 		}
 	}, [])
 
-	useEffect(() => {
+	// Prevent scrolling while menu is open
+	useLayoutEffect(() => {
 		if (isMenuOpen) {
+			pageRef.current.style.top = `-${scrollY}px`
+		} else {
+			pageRef.current.style.top = ''
+			const scrollEl = getScroll()
+			scrollEl.scroll(0, scrollY)
 		}
 	}, [isMenuOpen])
 
 	return (
 		<div
 			className={clsx(classes.pageWrapper, { [classes.menuOpen]: isMenuOpen })}
+			ref={pageRef}
 		>
 			{ternary(
 				!lockedRoutes[pathname] || isAuthorized,

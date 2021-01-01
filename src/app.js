@@ -112,6 +112,14 @@ const App = () => {
 	const getScroll = () => scrollRef.current
 
 	const [isMenuOpen, setIsMenuOpen] = useState(false)
+	const [scrollY, setScrollY] = useState(0)
+
+	const onMenuToggle = (menuStateBool) => {
+		if (menuStateBool) {
+			setScrollY(window.scrollY)
+		}
+		setIsMenuOpen(menuStateBool)
+	}
 
 	useEffect(() => {
 		setIsMenuOpen(false)
@@ -120,7 +128,9 @@ const App = () => {
 	}, [location.pathname])
 
 	return (
-		<MenuContext.Provider value={{ isMenuOpen, setIsMenuOpen }}>
+		<MenuContext.Provider
+			value={{ isMenuOpen, setIsMenuOpen: onMenuToggle, scrollY }}
+		>
 			<ScrollContext.Provider value={{ getScroll }}>
 				{/* eslint-disable */}
 				<div
