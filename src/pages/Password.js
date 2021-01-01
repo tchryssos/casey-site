@@ -1,7 +1,5 @@
-import React, { useContext, useState } from 'react'
+import React, { useState } from 'react'
 import { createUseStyles } from 'react-jss'
-
-import PasswordContext from 'contexts/password'
 
 import PageWrapper from 'components/PageWrapper'
 import ContentBlock from 'components/ContentBlock'
@@ -18,6 +16,8 @@ const useStyles = createUseStyles({
 		height: 40,
 		width: '100%',
 		marginTop: 8,
+		padding: 8,
+		fontSize: '1rem',
 	},
 	submit: {
 		marginTop: 8,
@@ -26,16 +26,19 @@ const useStyles = createUseStyles({
 
 const PasswordPage = () => {
 	const classes = useStyles()
-	const { password, setPassword } = useContext(PasswordContext)
 
 	const [value, setValue] = useState('')
+	const p = window.sessionStorage.getItem('p')
 
-	if (password === process.env.PAGE_PASSWORD) {
+	if (p === process.env.PAGE_PASSWORD) {
 		return <div>you got the password right</div>
 	}
 
 	const onChange = (e) => setValue(e.target.value)
-	const onSubmit = () => setPassword(value)
+	const onSubmit = (e) => {
+		e.preventDefault()
+		window.sessionStorage.setItem('p', value)
+	}
 
 	return (
 		<PageWrapper>

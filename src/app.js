@@ -10,7 +10,6 @@ import { lightGray } from 'constants/styles/colors'
 import { HomePath } from 'constants/navigation'
 import MenuContext from 'contexts/menu'
 import ScrollContext from 'contexts/scroll'
-import PasswordContext from 'contexts/password'
 import orNull from 'util/orNull'
 
 import NavBar from 'components/NavBar'
@@ -109,7 +108,6 @@ const App = ({ location }) => {
 	const getScroll = () => scrollRef.current
 
 	const [isMenuOpen, setIsMenuOpen] = useState(false)
-	const [password, setPassword] = useState('')
 
 	useEffect(() => {
 		setIsMenuOpen(false)
@@ -129,47 +127,42 @@ const App = ({ location }) => {
 	return (
 		<MenuContext.Provider value={{ isMenuOpen, setIsMenuOpen }}>
 			<ScrollContext.Provider value={{ getScroll }}>
-				<PasswordContext.Provider value={{ password, setPassword }}>
-					{/* eslint-disable */}
-					<div
-						// iOS onClick hack
-						// https://stackoverflow.com/questions/24077725/mobile-safari-sometimes-does-not-trigger-the-click-event
-						onClick={void 0}
-						className={clsx(classes.app, { [classes.menuOpenApp]: isMenuOpen })}
-						id="scrollApp"
-					>
-						{/* eslint-enable */}
-						<NavBar />
-						<Switch>
-							<Route path={HomePath} exact component={Home} />
-							<Route
-								path={blobLinkData.FISMarketing.link}
-								component={FISMarketing}
-							/>
-							<Route path={blobLinkData.Portfolio.link} component={Portfolio} />
-							<Route
-								path={blobLinkData.ListenJay.link}
-								component={ListenJayUXA}
-							/>
-							<Route path={blobLinkData.About.link} component={About} />
-							<Route path={blobLinkData.ELO.link} component={ELO} />
-							<Route path="/mirror" component={Mirror} />
-							<Route path="/listenjay-og" component={ListenJay} />
-							<Route
-								path={blobLinkData.MensHealth.link}
-								component={MensHealth}
-							/>
-							<Route path={blobLinkData.Chase.link} component={Chase} />
-							<Route path="/ellipsis" component={Ellipsis} />
-							<Route path="/all-projects" component={AllProjects} />
-							<Route path="/irth" component={Irth} />
-							<Route path="/password" component={Password} />
-							<Route component={FourOhFour} />
-						</Switch>
-						{/* About page sticker board prevents normal footer display so it is imported directly there */}
-						{orNull(location.pathname !== blobLinkData.About.link, <Footer />)}
-					</div>
-				</PasswordContext.Provider>
+				{/* eslint-disable */}
+				<div
+					// iOS onClick hack
+					// https://stackoverflow.com/questions/24077725/mobile-safari-sometimes-does-not-trigger-the-click-event
+					onClick={void 0}
+					className={clsx(classes.app, { [classes.menuOpenApp]: isMenuOpen })}
+					id="scrollApp"
+				>
+					{/* eslint-enable */}
+					<NavBar />
+					<Switch>
+						<Route path={HomePath} exact component={Home} />
+						<Route
+							path={blobLinkData.FISMarketing.link}
+							component={FISMarketing}
+						/>
+						<Route path={blobLinkData.Portfolio.link} component={Portfolio} />
+						<Route
+							path={blobLinkData.ListenJay.link}
+							component={ListenJayUXA}
+						/>
+						<Route path={blobLinkData.About.link} component={About} />
+						<Route path={blobLinkData.ELO.link} component={ELO} />
+						<Route path="/mirror" component={Mirror} />
+						<Route path="/listenjay-og" component={ListenJay} />
+						<Route path={blobLinkData.MensHealth.link} component={MensHealth} />
+						<Route path={blobLinkData.Chase.link} component={Chase} />
+						<Route path="/ellipsis" component={Ellipsis} />
+						<Route path="/all-projects" component={AllProjects} />
+						<Route path="/irth" component={Irth} />
+						<Route path="/password" component={Password} />
+						<Route component={FourOhFour} />
+					</Switch>
+					{/* About page sticker board prevents normal footer display so it is imported directly there */}
+					{orNull(location.pathname !== blobLinkData.About.link, <Footer />)}
+				</div>
 			</ScrollContext.Provider>
 			{/* <NavBar /> */}
 		</MenuContext.Provider>
