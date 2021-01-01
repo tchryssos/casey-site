@@ -38,6 +38,7 @@ const PasswordPage = () => {
 	const onSubmit = (e) => {
 		e.preventDefault()
 		window.sessionStorage.setItem('p', value)
+		setValue('')
 	}
 
 	return (
