@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react'
-import { Route, Switch, withRouter, BrowserRouter } from 'react-router-dom'
+import { Route, Switch, useLocation, BrowserRouter } from 'react-router-dom'
 import { render } from 'react-dom'
 import { createUseStyles } from 'react-jss'
 import clsx from 'clsx'
@@ -107,8 +107,10 @@ const useStyles = createUseStyles({
 	},
 })
 
-const App = ({ location }) => {
+const App = () => {
 	const classes = useStyles()
+	const location = useLocation()
+
 	// Scroll ref is used to reset scroll position on route change
 	// and controll some scrolling effects on various pages
 	const scrollRef = useRef(document.documentElement)
@@ -171,17 +173,13 @@ const App = ({ location }) => {
 					{orNull(location.pathname !== blobLinkData.About.link, <Footer />)}
 				</div>
 			</ScrollContext.Provider>
-			{/* <NavBar /> */}
 		</MenuContext.Provider>
 	)
 }
 
-// eslint-disable-next-line react/jsx-props-no-spreading
-const RouterApp = withRouter((props) => <App {...props} />)
-
 render(
 	<BrowserRouter>
-		<RouterApp />
+		<App />
 	</BrowserRouter>,
 	document.getElementById('app'),
 )

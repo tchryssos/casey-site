@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import { createUseStyles } from 'react-jss'
 import clsx from 'clsx'
 
-import PageWrapper from 'components/PageWrapper'
 import ContentBlock from 'components/ContentBlock'
 import Heading from 'components/Typography/Heading'
 import Body from 'components/Typography/Body'
@@ -36,50 +35,47 @@ const useStyles = createUseStyles({
 	},
 })
 
-const PasswordPage = () => {
+const PasswordPage = ({ setIsAuthorized, password }) => {
 	const classes = useStyles()
 
 	const [value, setValue] = useState('')
-	const p = window.sessionStorage.getItem('p')
-
-	if (p === process.env.PAGE_PASSWORD) {
-		return <div>you got the password right</div>
-	}
 
 	const onChange = (e) => setValue(e.target.value)
 	const onSubmit = (e) => {
 		e.preventDefault()
 		window.sessionStorage.setItem('p', value)
+		if (value === process.env.PAGE_PASSWORD) {
+			setIsAuthorized(true)
+		}
 		setValue('')
 	}
 
 	return (
-		<PageWrapper>
-			<ContentBlock>
-				<Heading>You need a password to see this page</Heading>
-				<form className={classes.form}>
-					<label htmlFor="pagePassword">
-						<Body>If you have the password, enter it below to proceed</Body>
-						<input
-							name="pagePassword"
-							id="pagePassword"
-							type="text"
-							value={value}
-							onChange={onChange}
-							className={clsx(classes.input, {
-								[classes.error]: !!p && p !== process.env.PAGE_PASSWORD,
-							})}
-						/>
-					</label>
-					<Button
-						className={classes.submit}
-						label="Submit"
-						onClick={onSubmit}
-						type="submit"
+		<ContentBlock>
+			<Heading>You need a password to see this page</Heading>
+			<form className={classes.form}>
+				<label htmlFor="pagePassword">
+					<Body>If you have the password, enter it below to proceed</Body>
+					<input
+						placeholder="Enter password"
+						name="pagePassword"
+						id="pagePassword"
+						type="text"
+						value={value}
+						onChange={onChange}
+						className={clsx(classes.input, {
+							[classes.error]: Boolean(password),
+						})}
 					/>
-				</form>
-			</ContentBlock>
-		</PageWrapper>
+				</label>
+				<Button
+					className={classes.submit}
+					label="Submit"
+					onClick={onSubmit}
+					type="submit"
+				/>
+			</form>
+		</ContentBlock>
 	)
 }
 
