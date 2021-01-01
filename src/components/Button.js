@@ -34,7 +34,7 @@ const Button = ({ label, onClick, type = 'button', children, className }) => {
 			className={clsx(classes.button, className)}
 			onClick={onClick}
 		>
-			{ternary(!!label, <Body>{label}</Body>, children)}
+			{ternary(Boolean(label), <Body>{label}</Body>, children)}
 		</button>
 	)
 }

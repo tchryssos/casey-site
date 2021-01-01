@@ -9,7 +9,6 @@ import { MD_MIN_VALUE, MD_MIN_STRING } from 'constants/styles/breakpoints'
 import { lightGray } from 'constants/styles/colors'
 import {
 	homePath,
-	passwordPath,
 	allProjectsPath,
 	ellipsisPath,
 	irthPath,
@@ -35,7 +34,6 @@ import Chase from 'pages/Chase'
 import Ellipsis from 'pages/Ellipsis'
 import Irth from 'pages/Irth'
 import AllProjects from 'pages/AllProjects'
-import Password from 'pages/Password'
 
 import cursor from 'static/images/Misc/cursor.png'
 
@@ -166,7 +164,6 @@ const App = () => {
 						<Route path={ellipsisPath} component={Ellipsis} />
 						<Route path={allProjectsPath} component={AllProjects} />
 						<Route path={irthPath} component={Irth} />
-						<Route path={passwordPath} component={Password} />
 						<Route component={FourOhFour} />
 					</Switch>
 					{/* About page sticker board prevents normal footer display so it is imported directly there */}
