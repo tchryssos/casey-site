@@ -2,7 +2,7 @@ import React, { useContext } from 'react'
 import clsx from 'clsx'
 import { NavLink } from 'react-router-dom'
 import MenuContext from 'contexts/menu'
-import { HomePath } from 'constants/navigation'
+import { homePath } from 'constants/navigation'
 
 import Heading from 'components/Typography/Heading'
 import MenuText from 'components/Typography/MenuText'
@@ -15,7 +15,7 @@ const MenuLinks = () => {
 	const classes = useStyles()
 	return (
 		<>
-			<NavLink className={classes.navLeftLink} to={HomePath}>
+			<NavLink className={classes.navLeftLink} to={homePath}>
 				<MenuText className={classes.whiteText}>Home</MenuText>
 			</NavLink>
 			<NavLink className={classes.navLeftLink} to="/all-projects">
@@ -54,7 +54,7 @@ const NavBar = () => {
 					</button>
 				</div>
 				<div className={classes.navContainer}>
-					<NavLink className={classes.logo} to={HomePath} exact>
+					<NavLink className={classes.logo} to={homePath} exact>
 						<Heading>Casey</Heading>
 					</NavLink>
 					<button

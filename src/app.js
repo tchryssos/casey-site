@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react'
-import { Route, Switch, withRouter, BrowserRouter } from 'react-router-dom'
+import { Route, Switch, useLocation, BrowserRouter } from 'react-router-dom'
 import { render } from 'react-dom'
 import { createUseStyles } from 'react-jss'
 import clsx from 'clsx'
@@ -7,7 +7,13 @@ import clsx from 'clsx'
 import blobLinkData from 'constants/blobLinks'
 import { MD_MIN_VALUE, MD_MIN_STRING } from 'constants/styles/breakpoints'
 import { lightGray } from 'constants/styles/colors'
-import { HomePath } from 'constants/navigation'
+import {
+	homePath,
+	allProjectsPath,
+	ellipsisPath,
+	irthPath,
+	mirrorPath,
+} from 'constants/navigation'
 import MenuContext from 'contexts/menu'
 import ScrollContext from 'contexts/scroll'
 import orNull from 'util/orNull'
@@ -68,6 +74,14 @@ const useStyles = createUseStyles({
 		},
 		h2: marPadZero,
 		h3: marPadZero,
+		button: {
+			...marPadZero,
+			boxSizing: 'border-box',
+		},
+		input: {
+			...marPadZero,
+			boxSizing: 'border-box',
+		},
 		iframe: {
 			width: '100%',
 		},
@@ -91,18 +105,23 @@ const useStyles = createUseStyles({
 	},
 })
 
-const App = ({ location }) => {
+const App = () => {
 	const classes = useStyles()
+	const location = useLocation()
+
 	// Scroll ref is used to reset scroll position on route change
 	// and controll some scrolling effects on various pages
 	const scrollRef = useRef(document.documentElement)
 	const getScroll = () => scrollRef.current
+
 	const [isMenuOpen, setIsMenuOpen] = useState(false)
+
 	useEffect(() => {
 		setIsMenuOpen(false)
 		// On location change, scroll to page top
 		scrollRef.current.scrollTop = 0
 	}, [location.pathname])
+
 	// Stop body scroll behind small window menus
 	useEffect(() => {
 		if (isMenuOpen && window.outerWidth < MD_MIN_VALUE) {
@@ -111,6 +130,7 @@ const App = ({ location }) => {
 			document.body.style.overflowY = 'initial'
 		}
 	}, [isMenuOpen])
+
 	return (
 		<MenuContext.Provider value={{ isMenuOpen, setIsMenuOpen }}>
 			<ScrollContext.Provider value={{ getScroll }}>
@@ -125,7 +145,7 @@ const App = ({ location }) => {
 					{/* eslint-enable */}
 					<NavBar />
 					<Switch>
-						<Route path={HomePath} exact component={Home} />
+						<Route path={homePath} exact component={Home} />
 						<Route
 							path={blobLinkData.FISMarketing.link}
 							component={FISMarketing}
@@ -137,30 +157,26 @@ const App = ({ location }) => {
 						/>
 						<Route path={blobLinkData.About.link} component={About} />
 						<Route path={blobLinkData.ELO.link} component={ELO} />
-						<Route path="/mirror" component={Mirror} />
+						<Route path={mirrorPath} component={Mirror} />
 						<Route path="/listenjay-og" component={ListenJay} />
 						<Route path={blobLinkData.MensHealth.link} component={MensHealth} />
 						<Route path={blobLinkData.Chase.link} component={Chase} />
-						<Route path="/ellipsis" component={Ellipsis} />
-						<Route path="/all-projects" component={AllProjects} />
-						<Route path="/irth" component={Irth} />
+						<Route path={ellipsisPath} component={Ellipsis} />
+						<Route path={allProjectsPath} component={AllProjects} />
+						<Route path={irthPath} component={Irth} />
 						<Route component={FourOhFour} />
 					</Switch>
 					{/* About page sticker board prevents normal footer display so it is imported directly there */}
 					{orNull(location.pathname !== blobLinkData.About.link, <Footer />)}
 				</div>
 			</ScrollContext.Provider>
-			{/* <NavBar /> */}
 		</MenuContext.Provider>
 	)
 }
 
-// eslint-disable-next-line react/jsx-props-no-spreading
-const RouterApp = withRouter((props) => <App {...props} />)
-
 render(
 	<BrowserRouter>
-		<RouterApp />
+		<App />
 	</BrowserRouter>,
 	document.getElementById('app'),
 )

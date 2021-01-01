@@ -52,9 +52,10 @@
     "webpack-merge": "^4.2.2"
   },
   "devDependencies": {
-    "prettier": "^2.2.1",
+    "dotenv": "^8.2.0",
+    "husky": "^4.3.6",
     "lint-staged": "^10.5.3",
-    "husky": "^4.3.6"
+    "prettier": "^2.2.1"
   },
   "husky": {
     "hooks": {
