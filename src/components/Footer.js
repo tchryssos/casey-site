@@ -1,6 +1,9 @@
 import React from 'react'
 import { createUseStyles } from 'react-jss'
+
 import { MD_MIN_STRING } from 'constants/styles/breakpoints'
+import blobLinkData from 'constants/blobLinks'
+import { allProjectsPath } from 'constants/navigation'
 
 import { NavLink } from 'react-router-dom'
 
@@ -62,10 +65,14 @@ const Footer = () => {
 			<img src={BigCasey} alt="Casey" />
 			<div className={classes.footerFlexWrapper}>
 				<div className={classes.footerLinkContainer}>
-					<NavLink className={classes.footerLink} to="/about" exact>
+					<NavLink
+						className={classes.footerLink}
+						to={blobLinkData.About.link}
+						exact
+					>
 						About Me
 					</NavLink>
-					<NavLink className={classes.footerLink} to="/all-projects" exact>
+					<NavLink className={classes.footerLink} to={allProjectsPath} exact>
 						All Projects
 					</NavLink>
 				</div>

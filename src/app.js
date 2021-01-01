@@ -7,7 +7,14 @@ import clsx from 'clsx'
 import blobLinkData from 'constants/blobLinks'
 import { MD_MIN_VALUE, MD_MIN_STRING } from 'constants/styles/breakpoints'
 import { lightGray } from 'constants/styles/colors'
-import { HomePath } from 'constants/navigation'
+import {
+	homePath,
+	passwordPath,
+	allProjectsPath,
+	ellipsisPath,
+	irthPath,
+	mirrorPath,
+} from 'constants/navigation'
 import MenuContext from 'contexts/menu'
 import ScrollContext from 'contexts/scroll'
 import orNull from 'util/orNull'
@@ -138,7 +145,7 @@ const App = ({ location }) => {
 					{/* eslint-enable */}
 					<NavBar />
 					<Switch>
-						<Route path={HomePath} exact component={Home} />
+						<Route path={homePath} exact component={Home} />
 						<Route
 							path={blobLinkData.FISMarketing.link}
 							component={FISMarketing}
@@ -150,14 +157,14 @@ const App = ({ location }) => {
 						/>
 						<Route path={blobLinkData.About.link} component={About} />
 						<Route path={blobLinkData.ELO.link} component={ELO} />
-						<Route path="/mirror" component={Mirror} />
+						<Route path={mirrorPath} component={Mirror} />
 						<Route path="/listenjay-og" component={ListenJay} />
 						<Route path={blobLinkData.MensHealth.link} component={MensHealth} />
 						<Route path={blobLinkData.Chase.link} component={Chase} />
-						<Route path="/ellipsis" component={Ellipsis} />
-						<Route path="/all-projects" component={AllProjects} />
-						<Route path="/irth" component={Irth} />
-						<Route path="/password" component={Password} />
+						<Route path={ellipsisPath} component={Ellipsis} />
+						<Route path={allProjectsPath} component={AllProjects} />
+						<Route path={irthPath} component={Irth} />
+						<Route path={passwordPath} component={Password} />
 						<Route component={FourOhFour} />
 					</Switch>
 					{/* About page sticker board prevents normal footer display so it is imported directly there */}
