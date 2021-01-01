@@ -3,9 +3,10 @@ import { Route, Switch, useLocation, BrowserRouter } from 'react-router-dom'
 import { render } from 'react-dom'
 import { createUseStyles } from 'react-jss'
 import clsx from 'clsx'
+import debounce from 'lodash.debounce'
 
 import blobLinkData from 'constants/blobLinks'
-import { MD_MIN_STRING } from 'constants/styles/breakpoints'
+import { MD_MIN_STRING, MD_MIN_VALUE } from 'constants/styles/breakpoints'
 import { lightGray } from 'constants/styles/colors'
 import {
 	homePath,
@@ -116,6 +117,8 @@ const App = () => {
 
 	const onMenuToggle = (menuStateBool) => {
 		if (menuStateBool) {
+			// Used to properly position pages while menu is open and scrolling
+			// is prevented
 			setScrollY(window.scrollY)
 		}
 		setIsMenuOpen(menuStateBool)
@@ -126,6 +129,17 @@ const App = () => {
 		// On location change, scroll to page top
 		scrollRef.current.scrollTop = 0
 	}, [location.pathname])
+
+	const onResize = debounce(() => {
+		if (window.innerWidth >= MD_MIN_VALUE) {
+			onMenuToggle(false)
+		}
+	}, 50)
+
+	useEffect(() => {
+		window.addEventListener('resize', onResize)
+		return () => window.removeEventListener('resize', onResize)
+	}, [])
 
 	return (
 		<MenuContext.Provider
