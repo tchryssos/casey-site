@@ -6,9 +6,22 @@ import ternary from 'util/ternary'
 
 import Body from 'components/Typography/Body'
 
+import { offWhite, lightGray, darkGray } from 'constants/styles/colors'
+
 const useStyles = createUseStyles({
 	button: {
+		appearance: 'none',
+		'-webkit-appearance': 'none',
+		'-mos-appearance': 'none',
+		'-ms-appearance': 'none',
+		backgroundColor: offWhite,
+		border: [[2, 'solid', darkGray]],
+		borderRadius: 4,
 		height: 40,
+		cursor: 'pointer',
+		'&:hover': {
+			backgroundColor: lightGray,
+		},
 	},
 })
 
