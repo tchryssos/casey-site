@@ -78,7 +78,7 @@ const PasswordPage = ({ setIsAuthorized, password }) => {
 						value={value}
 						onChange={onChange}
 						className={clsx(classes.input, {
-							[classes.error]: Boolean(password),
+							[classes.error]: Boolean(window.sessionStorage.getItem('p')),
 						})}
 					/>
 				</label>

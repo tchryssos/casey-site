@@ -30,11 +30,10 @@ const useStyles = createUseStyles({
 const PageWrapper = ({ children }) => {
 	const classes = useStyles()
 	const { pathname } = useLocation()
-	const password = window.sessionStorage.getItem('p')
 	const [isAuthorized, setIsAuthorized] = useState(false)
 
 	useEffect(() => {
-		if (password === process.env.PAGE_PASSWORD) {
+		if (window.sessionStorage.getItem('p') === process.env.PAGE_PASSWORD) {
 			setIsAuthorized(true)
 		}
 	}, [])
@@ -44,7 +43,7 @@ const PageWrapper = ({ children }) => {
 			{ternary(
 				!lockedRoutes[pathname] || isAuthorized,
 				children,
-				<PasswordPage setIsAuthorized={setIsAuthorized} password={password} />,
+				<PasswordPage setIsAuthorized={setIsAuthorized} />,
 			)}
 		</div>
 	)
