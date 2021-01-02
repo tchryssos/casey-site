@@ -75,6 +75,7 @@ export default createUseStyles({
 		width: '100%',
 		height: '100%',
 		backgroundColor: darken,
+		zIndex: 9,
 	},
 	isVisible: {
 		display: 'flex',

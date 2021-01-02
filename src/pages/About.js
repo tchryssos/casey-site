@@ -1,5 +1,7 @@
-import React from 'react'
+import React, { useRef, useEffect, useState } from 'react'
 import { createUseStyles } from 'react-jss'
+import debounce from 'lodash.debounce'
+
 import { MD_MIN_STRING } from 'constants/styles/breakpoints'
 
 import PageWrapper from 'components/PageWrapper'
@@ -47,12 +49,44 @@ const useStyles = createUseStyles({
 	},
 })
 
-export default () => {
-	const classes = useStyles()
+const About = () => {
 	useStickers()
+	const classes = useStyles()
+	const stickerBoardRef = useRef()
+	const [aboutScroll, setAboutScroll] = useState(0)
+	const aboutScrollLastRef = useRef(0)
+
+	const onScroll = debounce(() => {
+		setAboutScroll(stickerBoardRef.current.scrollTop)
+	}, 100)
+
+	useEffect(() => {
+		if (stickerBoardRef) {
+			stickerBoardRef.current.addEventListener('scroll', onScroll)
+		}
+		return () =>
+			stickerBoardRef?.current?.removeEventListener('scroll', onScroll)
+	}, [stickerBoardRef])
+
+	const menuOpenOverride = (isMenuOpen, pageWrapperRef) => {
+		if (isMenuOpen) {
+			// eslint-disable-next-line no-param-reassign
+			pageWrapperRef.current.style.top = `-${aboutScroll}px`
+			aboutScrollLastRef.current = aboutScroll
+		} else if (stickerBoardRef.current) {
+			// eslint-disable-next-line no-param-reassign
+			pageWrapperRef.current.style.top = ''
+			stickerBoardRef.current.scroll(0, aboutScrollLastRef.current)
+		}
+	}
+
 	return (
-		<div className={classes.stickerBoard} id="stickerBoard">
-			<PageWrapper>
+		<div
+			className={classes.stickerBoard}
+			id="stickerBoard"
+			ref={stickerBoardRef}
+		>
+			<PageWrapper menuOpenOverride={menuOpenOverride}>
 				<ContentBlock>
 					<ResumeButton />
 					<Spacer height={4} />
@@ -137,3 +171,5 @@ export default () => {
 		</div>
 	)
 }
+
+export default About
