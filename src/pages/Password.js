@@ -3,35 +3,49 @@ import { createUseStyles } from 'react-jss'
 import clsx from 'clsx'
 
 import ContentBlock from 'components/ContentBlock'
-import Heading from 'components/Typography/Heading'
-import Body from 'components/Typography/Body'
+import SubHeading from 'components/Typography/SubHeading'
+import Spacer from 'components/Spacer'
 import Button from 'components/Button'
 
-import { darkGray, red } from 'constants/styles/colors'
+import { darkGray, red, orange } from 'constants/styles/colors'
 
 const useStyles = createUseStyles({
 	form: {
 		display: 'flex',
 		flexDirection: 'column',
+		textAlign: 'center',
+		alignItems: 'center',
 	},
 	input: {
 		appearance: 'none',
 		'-webkit-appearance': 'none',
 		'-mos-appearance': 'none',
 		'-ms-appearance': 'none',
-		borderRadius: 4,
+		borderRadius: 100,
 		border: [[2, 'solid', darkGray]],
-		height: 40,
+		height: 200,
 		width: '100%',
 		marginTop: 8,
-		padding: 8,
-		fontSize: '1rem',
+		padding: [[25, 50]],
+		fontSize: 100,
+		textAlign: 'center',
+		outline: 'none',
 	},
 	error: {
 		borderColor: red,
 	},
 	submit: {
-		marginTop: 8,
+		backgroundColor: '#2b2b2b',
+		padding: 8,
+		color: 'white',
+		textTransform: 'uppercase',
+		textDecoration: 'none',
+		border: 'none',
+		marginTop: 10,
+		width: 150,
+		'&:hover': {
+			backgroundColor: '#4e7fff',
+		},
 	},
 })
 
@@ -51,16 +65,16 @@ const PasswordPage = ({ setIsAuthorized, password }) => {
 	}
 
 	return (
-		<ContentBlock>
-			<Heading>You need a password to see this page</Heading>
+		<ContentBlock className={classes.passwordBlock}>
 			<form className={classes.form}>
 				<label htmlFor="pagePassword">
-					<Body>If you have the password, enter it below to proceed</Body>
+					<SubHeading>Please enter a password to view this page</SubHeading>
+					<Spacer height={2} />
 					<input
-						placeholder="Enter password"
+						placeholder="Password"
 						name="pagePassword"
 						id="pagePassword"
-						type="text"
+						type="password"
 						value={value}
 						onChange={onChange}
 						className={clsx(classes.input, {

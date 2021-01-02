@@ -16,7 +16,7 @@ const useStyles = createUseStyles({
 		'-ms-appearance': 'none',
 		backgroundColor: offWhite,
 		border: [[2, 'solid', darkGray]],
-		borderRadius: 4,
+		borderRadius: 0,
 		height: 40,
 		cursor: 'pointer',
 		'&:hover': {

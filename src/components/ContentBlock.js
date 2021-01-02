@@ -12,6 +12,9 @@ const useStyles = createUseStyles({
 		contentBlock: {
 			margin: '0',
 			padding: '100px 20%',
+			'&:first-child': {
+				paddingTop: 150,
+			},
 		},
 	},
 })
