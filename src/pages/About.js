@@ -86,10 +86,7 @@ const About = () => {
 			id="stickerBoard"
 			ref={stickerBoardRef}
 		>
-			<PageWrapper
-				scrollYOverride={aboutScroll}
-				menuOpenOverride={menuOpenOverride}
-			>
+			<PageWrapper menuOpenOverride={menuOpenOverride}>
 				<ContentBlock>
 					<ResumeButton />
 					<Spacer height={4} />
