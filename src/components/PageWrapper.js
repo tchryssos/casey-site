@@ -40,7 +40,7 @@ const useStyles = createUseStyles({
 	},
 })
 
-const PageWrapper = ({ children }) => {
+const PageWrapper = ({ children, menuOpenOverride }) => {
 	const pageRef = useRef()
 	const classes = useStyles()
 	const { pathname } = useLocation()
@@ -57,7 +57,9 @@ const PageWrapper = ({ children }) => {
 
 	// Prevent scrolling while menu is open
 	useLayoutEffect(() => {
-		if (isMenuOpen) {
+		if (menuOpenOverride) {
+			menuOpenOverride(isMenuOpen, pageRef)
+		} else if (isMenuOpen) {
 			pageRef.current.style.top = `-${scrollY}px`
 		} else {
 			pageRef.current.style.top = ''
