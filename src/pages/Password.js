@@ -7,7 +7,7 @@ import SubHeading from 'components/Typography/SubHeading'
 import Spacer from 'components/Spacer'
 import Button from 'components/Button'
 
-import { darkGray, red, sectionBlue } from 'constants/styles/colors'
+import { red, sectionBlue } from 'constants/styles/colors'
 import { white } from '../constants/styles/colors'
 
 const useStyles = createUseStyles({
