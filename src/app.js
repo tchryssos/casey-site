@@ -3,9 +3,10 @@ import { Route, Switch, useLocation, BrowserRouter } from 'react-router-dom'
 import { render } from 'react-dom'
 import { createUseStyles } from 'react-jss'
 import clsx from 'clsx'
+import debounce from 'lodash.debounce'
 
 import blobLinkData from 'constants/blobLinks'
-import { MD_MIN_VALUE, MD_MIN_STRING } from 'constants/styles/breakpoints'
+import { MD_MIN_STRING, MD_MIN_VALUE } from 'constants/styles/breakpoints'
 import { lightGray } from 'constants/styles/colors'
 import {
 	homePath,
@@ -95,9 +96,6 @@ const useStyles = createUseStyles({
 		height: '100%',
 		cursor: 'auto',
 	},
-	menuOpenApp: {
-		overflowX: 'hidden',
-	},
 	[MD_MIN_STRING]: {
 		app: {
 			cursor: `url(${cursor}),auto`,
@@ -115,6 +113,16 @@ const App = () => {
 	const getScroll = () => scrollRef.current
 
 	const [isMenuOpen, setIsMenuOpen] = useState(false)
+	const [scrollY, setScrollY] = useState(0)
+
+	const onMenuToggle = (menuStateBool) => {
+		if (menuStateBool) {
+			// Used to properly position pages while menu is open and scrolling
+			// is prevented
+			setScrollY(window.scrollY)
+		}
+		setIsMenuOpen(menuStateBool)
+	}
 
 	useEffect(() => {
 		setIsMenuOpen(false)
@@ -122,24 +130,28 @@ const App = () => {
 		scrollRef.current.scrollTop = 0
 	}, [location.pathname])
 
-	// Stop body scroll behind small window menus
-	useEffect(() => {
-		if (isMenuOpen && window.outerWidth < MD_MIN_VALUE) {
-			document.body.style.overflowY = 'hidden'
-		} else {
-			document.body.style.overflowY = 'initial'
+	const onResize = debounce(() => {
+		if (window.innerWidth >= MD_MIN_VALUE) {
+			onMenuToggle(false)
 		}
-	}, [isMenuOpen])
+	}, 50)
+
+	useEffect(() => {
+		window.addEventListener('resize', onResize)
+		return () => window.removeEventListener('resize', onResize)
+	}, [])
 
 	return (
-		<MenuContext.Provider value={{ isMenuOpen, setIsMenuOpen }}>
+		<MenuContext.Provider
+			value={{ isMenuOpen, setIsMenuOpen: onMenuToggle, scrollY }}
+		>
 			<ScrollContext.Provider value={{ getScroll }}>
 				{/* eslint-disable */}
 				<div
 					// iOS onClick hack
 					// https://stackoverflow.com/questions/24077725/mobile-safari-sometimes-does-not-trigger-the-click-event
 					onClick={void 0}
-					className={clsx(classes.app, { [classes.menuOpenApp]: isMenuOpen })}
+					className={clsx(classes.app)}
 					id="scrollApp"
 				>
 					{/* eslint-enable */}

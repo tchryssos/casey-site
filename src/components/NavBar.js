@@ -1,8 +1,9 @@
 import React, { useContext } from 'react'
 import clsx from 'clsx'
-import { NavLink } from 'react-router-dom'
+import { NavLink, useLocation } from 'react-router-dom'
+
 import MenuContext from 'contexts/menu'
-import { homePath } from 'constants/navigation'
+import { homePath, allProjectsPath } from 'constants/navigation'
 
 import Heading from 'components/Typography/Heading'
 import MenuText from 'components/Typography/MenuText'
@@ -30,12 +31,14 @@ const MenuLinks = () => {
 
 const NavBar = () => {
 	const classes = useStyles()
+	const { pathname } = useLocation()
 	const { isMenuOpen, setIsMenuOpen } = useContext(MenuContext)
 	return (
 		<>
 			<div
 				className={clsx(classes.menuDarken, {
-					[classes.isVisible]: isMenuOpen,
+					// AllProjects handles its own menu darkening
+					[classes.isVisible]: isMenuOpen && pathname !== allProjectsPath,
 				})}
 			/>
 			<div className={classes.navWrapper}>

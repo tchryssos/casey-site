@@ -49,7 +49,7 @@ const useStyles = createUseStyles({
 	},
 })
 
-const PasswordPage = ({ setIsAuthorized, password }) => {
+const PasswordPage = ({ setIsAuthorized }) => {
 	const classes = useStyles()
 
 	const [value, setValue] = useState('')
