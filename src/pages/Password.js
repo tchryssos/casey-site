@@ -7,7 +7,8 @@ import SubHeading from 'components/Typography/SubHeading'
 import Spacer from 'components/Spacer'
 import Button from 'components/Button'
 
-import { darkGray, red, orange } from 'constants/styles/colors'
+import { darkGray, red, sectionBlue } from 'constants/styles/colors'
+import { white } from '../constants/styles/colors'
 
 const useStyles = createUseStyles({
 	form: {
@@ -17,12 +18,18 @@ const useStyles = createUseStyles({
 		alignItems: 'center',
 	},
 	input: {
+		'&::placeholder': {
+			color: white,
+			opacity: 0.5,
+		},
 		appearance: 'none',
 		'-webkit-appearance': 'none',
 		'-mos-appearance': 'none',
 		'-ms-appearance': 'none',
 		borderRadius: 100,
-		border: [[2, 'solid', darkGray]],
+		backgroundColor: sectionBlue,
+		color: white,
+		border: [[2, 'solid', sectionBlue]],
 		height: 200,
 		width: '100%',
 		marginTop: 8,
@@ -32,7 +39,8 @@ const useStyles = createUseStyles({
 		outline: 'none',
 	},
 	error: {
-		borderColor: red,
+		backgroundColor: red,
+		border: [[2, 'solid', red]],
 	},
 	submit: {
 		backgroundColor: '#2b2b2b',
