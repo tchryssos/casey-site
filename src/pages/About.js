@@ -120,7 +120,7 @@ const About = () => {
 							<Heading>Education</Heading>
 							<Spacer height={2} />
 							<SubHeading>Design Lab</SubHeading>
-							<Body>UX Academy, May 2020 - current</Body>
+							<Body>UX Academy, May - August 2020</Body>
 							<Spacer height={2} />
 							<SubHeading>Flatiron School</SubHeading>
 							<Body>Intro to Front End Web Development, 2019</Body>
