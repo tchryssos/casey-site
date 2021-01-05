@@ -90,7 +90,29 @@ export default createUseStyles({
 		border: 'none',
 		outline: 'none',
 	},
+	navLeftDesktop: {
+		display: 'none',
+	},
+	logoDesktop: {
+		display: 'none',
+	},
 	[MD_MIN_STRING]: {
+		navLeftDesktop: {
+			display: 'flex',
+			alignItems: 'flex-end',
+			flexDirection: 'column',
+			position: 'fixed',
+			top: 10,
+			right: 10,
+		},
+		logoDesktop: {
+			position: 'fixed',
+			display: 'flex',
+			top: 10,
+			left: 10,
+			textDecoration: 'none',
+			color: darkGray,
+		},
 		mobileMenuOpen: {
 			display: 'none',
 		},
@@ -120,7 +142,7 @@ export default createUseStyles({
 		},
 		navContainer: {
 			background: 'transparent',
-			display: 'flex',
+			display: 'none',
 			justifyContent: 'space-between',
 			alignContent: 'center',
 			width: '100%',

@@ -71,6 +71,12 @@ const NavBar = () => {
 						<MenuLinks />
 					</div>
 				</div>
+				<NavLink className={classes.logoDesktop} to={homePath} exact>
+					<Heading>Casey</Heading>
+				</NavLink>
+				<div className={classes.navLeftDesktop}>
+					<MenuLinks />
+				</div>
 			</div>
 		</>
 	)
