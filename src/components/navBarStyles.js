@@ -63,7 +63,7 @@ export default createUseStyles({
 		borderRadius: '250px 250px 0 0',
 		bottom: 0,
 		height: 250,
-		animation: '$menuSlide 1s',
+		// animation: '$menuSlide 1s',
 	},
 	menuDarken: {
 		display: 'none',
