@@ -1,22 +1,28 @@
 import React from 'react'
 import { createUseStyles } from 'react-jss'
-import { MD_MIN_STRING } from 'constants/styles/breakpoints'
 
 import PageWrapper from 'components/PageWrapper'
 import ContentBlock from 'components/ContentBlock'
 import Heading from 'components/Typography/Heading'
 import SubHeading from 'components/Typography/SubHeading'
 import Body from 'components/Typography/Body'
+import Image from 'components/Image'
 import Spacer from 'components/Spacer'
 
+import Home from 'static/images/Philz/HomeScreens.png'
+import Nav from 'static/images/Philz/Nav_BeforeAfter.png'
+import NavSketch from 'static/images/Philz/Nav_Sketch.png'
+import Reorder from 'static/images/Philz/Reorder.png'
+import Reset from 'static/images/Philz/RecipeReset.png'
+import ResetBG from 'static/images/Philz/Reset_bg.png'
+import Hero from 'static/images/Philz/PhilzHero.png'
+
 const useStyles = createUseStyles({
-	half: {
-		width: '100%',
-		marginBottom: 64,
-		[MD_MIN_STRING]: {
-			width: 'calc(50% - 8px)',
-			marginBottom: 0,
-		},
+	beige: {
+		backgroundColor: '#D9AF80',
+	},
+	centered: {
+		textAlign: 'center',
 	},
 })
 
@@ -24,20 +30,21 @@ const Philz = () => {
 	const classes = useStyles()
 	return (
 		<PageWrapper>
-			<ContentBlock>
+			<ContentBlock className={classes.centered}>
 				<Heading>Philz Coffee Mobile App Analysis</Heading>
 				<Spacer />
-				<SubHeading>How would we do it differently?</SubHeading>
+				<SubHeading>Design Thinking: How would I do it differently?</SubHeading>
+				<Image src={Hero} size="full" />
 			</ContentBlock>
-			<ContentBlock>
+			<ContentBlock className={classes.beige}>
 				<SubHeading>About the project</SubHeading>
 				<Spacer />
 				<Body>
-					This is not a project I was hired for. It is merely an exercise in
-					product design thinking based on an app I found myself using
-					regularly. I am often obsessed with the balance of personality and
-					utility in online experiences and the Philz app is one place where I
-					think function could be prioritized more than inventive visuals.
+					This is not a project I was hired for. It is an exercise in design
+					thinking based on an app I found myself using regularly. I am often
+					obsessed with the balance of personality and utility in online
+					experiences and the Philz app is one place where I think function
+					could be prioritized more than inventive visuals.
 				</Body>
 				<Spacer height={2} />
 				<SubHeading>Who is this app for?</SubHeading>
@@ -77,6 +84,8 @@ const Philz = () => {
 					decisions and this CTA does not make it clear what action you are
 					taking by trying it.
 				</Body>
+				<Spacer />
+				<Image src={Home} size="full" />
 				<Spacer height={2} />
 				<SubHeading>
 					Show the cart, even if its empty or Making the navigation clear
@@ -94,6 +103,9 @@ const Philz = () => {
 					to denote their menu of drinks and sweets. Many competitors call this
 					tab &quot;order&quot; or use a different icon to represent drinks.
 				</Body>
+				<Spacer />
+				<Image src={Nav} size="full" />
+				<Image src={NavSketch} size="full" />
 			</ContentBlock>
 			<ContentBlock>
 				<SubHeading>Goal #2</SubHeading>
@@ -101,7 +113,7 @@ const Philz = () => {
 					Focus on ultility over personality in the easy reorder component
 				</Heading>
 				<Spacer height={2} />
-				<SubHeading>Things we like</SubHeading>
+				<SubHeading>Things I like</SubHeading>
 				<Spacer />
 				<Body>
 					Allowing users to easily reorder a previous order is a great feature
@@ -110,7 +122,7 @@ const Philz = () => {
 					unconciously and creates a consitency for them.
 				</Body>
 				<Spacer height={2} />
-				<SubHeading>Things we would change</SubHeading>
+				<SubHeading>Things I would change</SubHeading>
 				<Spacer />
 				<Body>
 					Users are highly influenced by the first piece of information they
@@ -120,6 +132,7 @@ const Philz = () => {
 					and another drink. To make this more user friendly, we can show them
 					their entire order and the price to create clarity and trust.
 				</Body>
+				<Image src={Reorder} size="full" />
 			</ContentBlock>
 			<ContentBlock>
 				<SubHeading>Bonus</SubHeading>
@@ -135,6 +148,9 @@ const Philz = () => {
 					take guess work away from users and allow them to build trust in the
 					Philz brand personality.
 				</Body>
+				<Spacer />
+				<Image src={ResetBG} size="full" />
+				<Image src={Reset} size="full" />
 			</ContentBlock>
 		</PageWrapper>
 	)
