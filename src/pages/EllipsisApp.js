@@ -6,6 +6,11 @@ import Heading from 'components/Typography/Heading'
 import SubHeading from 'components/Typography/SubHeading'
 import Body from 'components/Typography/Body'
 import Spacer from 'components/Spacer'
+import Image from 'components/Image'
+
+import Flow from 'static/images/EllipsisApp/EH_userflow-03.png'
+import Wires from 'static/images/EllipsisApp/wires.png'
+import Tests from 'static/images/EllipsisApp/Tests.png'
 
 const EllipsisApp = () => {
 	return (
@@ -46,11 +51,14 @@ const EllipsisApp = () => {
 				<Spacer />
 				<SubHeading>Design Process</SubHeading>
 				<Body>
-					I started by skletching out the main user flow for completing the
+					I started by sketching out the main user flow for completing the
 					assessment. Pen and paper sketch became a rough sketch in Figma, and
 					then became a more robust wireframe and prototype before we tackled
 					visual designs.
 				</Body>
+				<Spacer />
+				<Image src={Flow} size="full" />
+				<Image src={Wires} size="full" />
 			</ContentBlock>
 			<ContentBlock>
 				<SubHeading>Bringing the app to life</SubHeading>
@@ -70,17 +78,11 @@ const EllipsisApp = () => {
 				<Heading>Informing decisions with data</Heading>
 				<Spacer />
 				<Body>
-					There were a few parts of the experience that we wanted to know more
-					about.
+					We created prototypes from both of the visual directiosn to get user
+					feedback on. In each there were some variations to the experience we
+					wanted to test. You can see the variations and winners below
 				</Body>
-				<Spacer />
-				<SubHeading>Color Palette</SubHeading>
-				<Spacer />
-				<SubHeading>Recording State</SubHeading>
-				<Spacer />
-				<SubHeading>Instructions?</SubHeading>
-				<Spacer />
-				<SubHeading>Question Format</SubHeading>
+				<Image src={Tests} size="full" />
 			</ContentBlock>
 			<ContentBlock>
 				<SubHeading>Iterating based on Feedback</SubHeading>
