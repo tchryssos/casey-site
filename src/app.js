@@ -15,6 +15,7 @@ import {
 	irthPath,
 	mirrorPath,
 	philzPath,
+	EllipsisAppPath,
 } from 'constants/navigation'
 import MenuContext from 'contexts/menu'
 import ScrollContext from 'contexts/scroll'
@@ -36,6 +37,7 @@ import Chase from 'pages/Chase'
 import Ellipsis from 'pages/Ellipsis'
 import Irth from 'pages/Irth'
 import Philz from 'pages/Philz'
+import EllipsisApp from 'pages/EllipsisApp'
 import AllProjects from 'pages/AllProjects'
 
 import cursor from 'static/images/Misc/cursor.png'
@@ -179,6 +181,7 @@ const App = () => {
 						<Route path={allProjectsPath} component={AllProjects} />
 						<Route path={irthPath} component={Irth} />
 						<Route path={philzPath} component={Philz} />
+						<Route path={EllipsisAppPath} component={EllipsisApp} />
 						<Route component={FourOhFour} />
 					</Switch>
 					{/* About page sticker board prevents normal footer display so it is imported directly there */}

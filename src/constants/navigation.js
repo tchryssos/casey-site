@@ -5,6 +5,7 @@ export const ellipsisPath = '/ellipsis'
 export const irthPath = '/irth'
 export const philzPath = '/philz'
 export const mirrorPath = '/mirror'
+export const EllipsisAppPath = '/ellipsis-app'
 
 export const lockedRoutesArray = [irthPath]
 
