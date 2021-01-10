@@ -104,7 +104,7 @@ const Irth = () => {
 				<Spacer />
 				<VideoPlayer
 					src="https://player.vimeo.com/video/495562227?autoplay=1?loop=1"
-					title="Animated Scrrens"
+					title="Animated Screens"
 				/>
 			</ContentBlock>
 			<ContentBlock>
