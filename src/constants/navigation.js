@@ -7,7 +7,7 @@ export const philzPath = '/philz'
 export const mirrorPath = '/mirror'
 export const EllipsisAppPath = '/ellipsis-app'
 
-export const lockedRoutesArray = [irthPath]
+export const lockedRoutesArray = [irthPath, EllipsisAppPath]
 
 export const lockedRoutes = lockedRoutesArray.reduce((acc, route) => {
 	acc[route] = route
