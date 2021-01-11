@@ -143,6 +143,10 @@ const AllProjects = () => {
 					&nbsp;Building a new feature to a podcast discovery platform
 				</NavLink>
 				<NavLink className={classes.caseStudyLink} to="/elo-tracker">
+					<b>Mirror:</b>
+					&nbsp;Ecommerce Case Study
+				</NavLink>
+				<NavLink className={classes.caseStudyLink} to="/elo-tracker">
 					<b>Philz Coffee App Analysis:</b>
 					&nbsp;How would I do it differently?
 				</NavLink>

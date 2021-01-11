@@ -11,6 +11,9 @@ import { lightGray } from 'constants/styles/colors'
 import {
 	homePath,
 	allProjectsPath,
+	aboutPath,
+	ELOPath,
+	listenJayPath,
 	ellipsisPath,
 	irthPath,
 	mirrorPath,
@@ -167,12 +170,9 @@ const App = () => {
 							component={FISMarketing}
 						/>
 						<Route path={blobLinkData.Portfolio.link} component={Portfolio} />
-						<Route
-							path={blobLinkData.ListenJay.link}
-							component={ListenJayUXA}
-						/>
-						<Route path={blobLinkData.About.link} component={About} />
-						<Route path={blobLinkData.ELO.link} component={ELO} />
+						<Route path={listenJayPath} component={ListenJayUXA} />
+						<Route path={aboutPath} component={About} />
+						<Route path={ELOPath} component={ELO} />
 						<Route path={mirrorPath} component={Mirror} />
 						<Route path="/listenjay-og" component={ListenJay} />
 						<Route path={blobLinkData.MensHealth.link} component={MensHealth} />
@@ -185,7 +185,7 @@ const App = () => {
 						<Route component={FourOhFour} />
 					</Switch>
 					{/* About page sticker board prevents normal footer display so it is imported directly there */}
-					{orNull(location.pathname !== blobLinkData.About.link, <Footer />)}
+					{orNull(location.pathname !== aboutPath, <Footer />)}
 				</div>
 			</ScrollContext.Provider>
 		</MenuContext.Provider>
