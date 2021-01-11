@@ -10,11 +10,12 @@ import MenuContext from 'contexts/menu'
 import ContentBlock from 'components/ContentBlock'
 import Spacer from 'components/Spacer'
 import Body from 'components/Typography/Body'
+import SubHeading from 'components/Typography/SubHeading'
 import Heading from 'components/Typography/Heading'
 import BlobLink from 'components/BlobLink'
 
 import blobLinkData from 'constants/blobLinks'
-import { darken } from 'constants/styles/colors'
+import { darken, darkGray } from 'constants/styles/colors'
 
 const useStyles = createUseStyles({
 	homeContainer: {
@@ -56,6 +57,24 @@ const useStyles = createUseStyles({
 		textDecoration: 'none',
 		borderBottom: '2px solid blue',
 		color: 'blue',
+	},
+	bottomBorderTitle: {
+		width: '100%',
+		borderBottom: '2px solid #2b2b2b',
+		display: 'flex',
+		paddingBottom: 8,
+	},
+	caseStudyLink: {
+		display: 'inline-block',
+		marginTop: 16,
+		color: darkGray,
+		textDecoration: 'none',
+		fontSize: 18,
+		borderBottom: '2px solid transparent',
+		'&:hover': {
+			borderBottom: '2px solid blue',
+			color: 'blue',
+		},
 	},
 	[MD_MIN_STRING]: {
 		homeWrapper: {
@@ -111,6 +130,23 @@ const AllProjects = () => {
 				</Body>
 			</ContentBlock>
 			<div className={classes.homeWrapper}>{blobLinks}</div>
+			<ContentBlock>
+				<div className={classes.bottomBorderTitle}>
+					<SubHeading>Design Lab Case Studies</SubHeading>
+				</div>
+				<NavLink className={classes.caseStudyLink} to="/elo-tracker">
+					<b>Ladders:</b>
+					&nbsp;End to end app design for a gaming leaderboard
+				</NavLink>
+				<NavLink className={classes.caseStudyLink} to="/elo-tracker">
+					<b>ListenJay:</b>
+					&nbsp;Building a new feature to a podcast discovery platform
+				</NavLink>
+				<NavLink className={classes.caseStudyLink} to="/elo-tracker">
+					<b>Philz Coffee App Analysis:</b>
+					&nbsp;How would I do it differently?
+				</NavLink>
+			</ContentBlock>
 		</div>
 	)
 }
