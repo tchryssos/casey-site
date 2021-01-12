@@ -11,6 +11,7 @@ import Spacer from 'components/Spacer'
 import Image from 'components/Image'
 import VideoPlayer from 'components/VideoPlayer'
 import ItemGrid from 'components/ItemGrid'
+import NextProject from 'components/NextProject'
 
 import Flow from 'static/images/EllipsisApp/EH_userflow-03.png'
 import Wires from 'static/images/EllipsisApp/wires2.png'
@@ -177,6 +178,7 @@ const EllipsisApp = () => {
 					consumer wellness app.
 				</Body>
 			</ContentBlock>
+			<NextProject link="/flatiron-school-marketing" />
 		</PageWrapper>
 	)
 }

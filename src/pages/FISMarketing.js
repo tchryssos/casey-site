@@ -2,9 +2,7 @@ import React from 'react'
 import { createUseStyles } from 'react-jss'
 import clsx from 'clsx'
 
-import {
-	MD_MIN_STRING,
-} from 'constants/styles/breakpoints'
+import { MD_MIN_STRING } from 'constants/styles/breakpoints'
 
 import PageWrapper from 'components/PageWrapper'
 import ContentBlock from 'components/ContentBlock'
@@ -29,7 +27,6 @@ import IG4 from 'static/images/FISMarketing/ig-4.png'
 import IG5 from 'static/images/FISMarketing/ig-5.png'
 import IG8 from 'static/images/FISMarketing/ig-8.png'
 import Scrum from 'static/images/FISMarketing/FIS-Scrum.png'
-
 
 const useStyles = createUseStyles({
 	'@keyframes spin': {
@@ -76,47 +73,36 @@ export default () => {
 					<div className={classes.half}>
 						<Heading>Managing the creative team at Flatiron School</Heading>
 					</div>
-					<div
-						className={clsx(
-							classes.half,
-							classes.cardAnimationWrapper,
-						)}
-					>
+					<div className={clsx(classes.half, classes.cardAnimationWrapper)}>
 						<Image className={classes.cardImage} size="full" src={FISorg} />
 						<Image className={classes.cardBG} size="full" src={Spinner} />
 					</div>
 				</ItemGrid>
 			</ContentBlock>
 			<ContentBlock>
-				<Heading>
-					Working with a lean internal team
-				</Heading>
+				<Heading>Working with a lean internal team</Heading>
 				<Spacer />
 				<Body>
-					In order to amplify the impact of our 4-person creative team, we engaged freelancers and agencies to help us execute across video, photo, and illustration.
+					In order to amplify the impact of our 4-person creative team, we
+					engaged freelancers and agencies to help us execute across video,
+					photo, and illustration.
 				</Body>
 				<Spacer height={4} />
-				<SubHeading>
-					Storytelling through video
-				</SubHeading>
+				<SubHeading>Storytelling through video</SubHeading>
+				<Spacer />
+				<Body>Video by Humanaut</Body>
 				<Spacer />
 				<Body>
-					Video by Humanaut
-				</Body>
-				<Spacer />
-				<Body>
-					Flatiron engaged the Humanaut agency to create a brand campaign video and subsequent cuts that could be used across our paid and earned channels.
+					Flatiron engaged the Humanaut agency to create a brand campaign video
+					and subsequent cuts that could be used across our paid and earned
+					channels.
 				</Body>
 				<Spacer />
 				<Body>
 					Between June 2019 and June 2020,&nbsp;
-					<span className={classes.callOutText}>
-						1.6 million people
-					</span>
+					<span className={classes.callOutText}>1.6 million people</span>
 					&nbsp;were served this ad on YouTube alone and it had a&nbsp;
-					<span className={classes.callOutText}>
-						15% view rate
-					</span>
+					<span className={classes.callOutText}>15% view rate</span>
 					&nbsp;during that time. When we launched this video, the&nbsp;
 					<span className={classes.callOutText}>
 						cost per application was half of the average price.
@@ -137,33 +123,40 @@ export default () => {
 							Differentiating products while building a brand
 						</SubHeading>
 						<Spacer />
-						<Body>
-							Graphics by Sepehr Mokhtarzadeh
-						</Body>
+						<Body>Graphics by Sepehr Mokhtarzadeh</Body>
 						<Spacer />
 						<Body>
-							One of Flatiron's strategic goals was to differentiate the products while continuing to build the master brand. I vetted freelance illustrators and ultimately brought on Sepehr Mokhtarzadeh to create the graphics for us. This gave our internal team more bandwith to work on business-as-usual projects, but still had a large impact on our creative. The graphics were used on our website and our across paid advertising.
+							One of Flatiron's strategic goals was to differentiate the
+							products while continuing to build the master brand. I vetted
+							freelance illustrators and ultimately brought on Sepehr
+							Mokhtarzadeh to create the graphics for us. This gave our internal
+							team more bandwith to work on business-as-usual projects, but
+							still had a large impact on our creative. The graphics were used
+							on our website and our across paid advertising.
 						</Body>
 					</div>
 					<Image src={CourseGraphic} className={classes.half} />
 				</ItemGrid>
 				<Spacer height={4} />
-				<SubHeading>
-					Storytelling through photography
-				</SubHeading>
+				<SubHeading>Storytelling through photography</SubHeading>
+				<Spacer />
+				<Body>Photography by Lauren Kallen</Body>
 				<Spacer />
 				<Body>
-					Photography by Lauren Kallen
+					As a brand, Flatiron strives to be authentic and transparent. Some of
+					its key differentiators are its amazing community of students and
+					teachers and its access to beautiful WeWork spaces. I wanted to
+					capture photography that showed real students working together in
+					these comfortable and inspiring spaces.
 				</Body>
 				<Spacer />
 				<Body>
-					As a brand, Flatiron strives to be authentic and transparent. Some of its key differentiators are its amazing community of students and teachers and its access to beautiful WeWork spaces. I wanted to capture photography that showed real students working together in these comfortable and inspiring spaces.
-				</Body>
-				<Spacer />
-				<Body>
-					Photography was a very important part of the brand that needed to serve many parts of the team including paid advertising, organic social, the website and landing pages.&nbsp;
+					Photography was a very important part of the brand that needed to
+					serve many parts of the team including paid advertising, organic
+					social, the website and landing pages.&nbsp;
 					<span className={classes.callOutText}>
-						These photos supported paid campaigns with a monthly budget of over 1 million dollars.
+						These photos supported paid campaigns with a monthly budget of over
+						1 million dollars.
 					</span>
 				</Body>
 				<ItemGrid>
@@ -178,24 +171,22 @@ export default () => {
 				</ItemGrid>
 			</ContentBlock>
 			<ContentBlock>
-				<Heading>
-					Always be launching
-				</Heading>
+				<Heading>Always be launching</Heading>
 				<Spacer />
-				<SubHeading>
-					Entering New Markets
-				</SubHeading>
+				<SubHeading>Entering New Markets</SubHeading>
 				<Spacer />
 				<Body>
 					In my time at Flatiron School, we launched&nbsp;
 					<span className={classes.callOutText}>
 						10 new locations and 3 new curriculums.
 					</span>
-					&nbsp;A big part of our regional marketing spend went to out of home buys in various markets both new and established.
+					&nbsp;A big part of our regional marketing spend went to out of home
+					buys in various markets both new and established.
 				</Body>
 				<Spacer />
 				<Body>
-					In London we had the most success with out of home advertising and, with our first campaign,&nbsp;
+					In London we had the most success with out of home advertising and,
+					with our first campaign,&nbsp;
 					<span className={classes.callOutText}>
 						saw a 60% increase in organic traffic to the site.
 					</span>
@@ -205,19 +196,20 @@ export default () => {
 				<Spacer height={4} />
 				<ItemGrid stackedOnMobile>
 					<div className={classes.half}>
-						<SubHeading>
-							Creating impactful scholarships
-						</SubHeading>
+						<SubHeading>Creating impactful scholarships</SubHeading>
 						<Spacer />
 						<Body>
-							One of the most successful scholarships we executed was an initiative to get more women into tech with the ticketing platform, SeatGeek.
+							One of the most successful scholarships we executed was an
+							initiative to get more women into tech with the ticketing
+							platform, SeatGeek.
 						</Body>
 						<Spacer />
 						<Body>
 							<span className={classes.callOutText}>
 								665 people applied&nbsp;
 							</span>
-							for this scholarship over the 3 week period that it was live for and 60 of those applicants&nbsp;
+							for this scholarship over the 3 week period that it was live for
+							and 60 of those applicants&nbsp;
 							<span className={classes.callOutText}>
 								enrolled, mostly on first conversion.
 							</span>
@@ -229,38 +221,34 @@ export default () => {
 			<ContentBlock className={classes.HowWeWorkBlock}>
 				<ItemGrid>
 					<div className={classes.half}>
-						<Heading>
-							How we work
-						</Heading>
+						<Heading>How we work</Heading>
 						<Spacer />
-						<SubHeading>
-							Two Week Sprint Cycles
-						</SubHeading>
+						<SubHeading>Two Week Sprint Cycles</SubHeading>
 						<Spacer />
 						<Body>
-							Keep us on track with the rest of the organization and give the brand team room to think creatively. Help us ruthlessly prioritize tasks.
+							Keep us on track with the rest of the organization and give the
+							brand team room to think creatively. Help us ruthlessly prioritize
+							tasks.
 						</Body>
 						<Spacer />
-						<SubHeading>
-							Weekly Creative Reviews
-						</SubHeading>
+						<SubHeading>Weekly Creative Reviews</SubHeading>
 						<Spacer />
 						<Body>
-							Give the team a chance to talk through their work and to take feedback from key stakeholders.
+							Give the team a chance to talk through their work and to take
+							feedback from key stakeholders.
 						</Body>
 						<Spacer />
-						<SubHeading>
-							Constant Sharing
-						</SubHeading>
+						<SubHeading>Constant Sharing</SubHeading>
 						<Spacer />
 						<Body>
-							We use a slack channel, #marketing-inspo, to share things with the entire team and keep everyone thinking innovatively.
+							We use a slack channel, #marketing-inspo, to share things with the
+							entire team and keep everyone thinking innovatively.
 						</Body>
 					</div>
 					<Image src={Scrum} className={classes.half} />
 				</ItemGrid>
 			</ContentBlock>
-			<NextProject link="/elo-tracker" />
+			<NextProject link="/chase" />
 		</PageWrapper>
 	)
 }

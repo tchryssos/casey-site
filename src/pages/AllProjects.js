@@ -138,15 +138,15 @@ const AllProjects = () => {
 					<b>Ladders:</b>
 					&nbsp;End to end app design for a gaming leaderboard
 				</NavLink>
-				<NavLink className={classes.caseStudyLink} to="/elo-tracker">
+				<NavLink className={classes.caseStudyLink} to="/listen-jay">
 					<b>ListenJay:</b>
 					&nbsp;Building a new feature to a podcast discovery platform
 				</NavLink>
-				<NavLink className={classes.caseStudyLink} to="/elo-tracker">
+				<NavLink className={classes.caseStudyLink} to="/mirror">
 					<b>Mirror:</b>
 					&nbsp;Ecommerce Case Study
 				</NavLink>
-				<NavLink className={classes.caseStudyLink} to="/elo-tracker">
+				<NavLink className={classes.caseStudyLink} to="/philz">
 					<b>Philz Coffee App Analysis:</b>
 					&nbsp;How would I do it differently?
 				</NavLink>

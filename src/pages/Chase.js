@@ -1,8 +1,6 @@
 import React from 'react'
 import { createUseStyles } from 'react-jss'
-import {
-	MD_MIN_STRING,
-} from 'constants/styles/breakpoints'
+import { MD_MIN_STRING } from 'constants/styles/breakpoints'
 import clsx from 'clsx'
 
 import PageWrapper from 'components/PageWrapper'
@@ -67,7 +65,6 @@ const useStyles = createUseStyles({
 	},
 })
 
-
 export default () => {
 	const classes = useStyles()
 	return (
@@ -79,12 +76,7 @@ export default () => {
 							Art directing ad campaigns for the Chase Sapphire Reserve card
 						</Heading>
 					</div>
-					<div
-						className={clsx(
-							classes.half,
-							classes.cardAnimationWrapper,
-						)}
-					>
+					<div className={clsx(classes.half, classes.cardAnimationWrapper)}>
 						<Image className={classes.cardImage} size="full" src={ChaseCard} />
 						<Image className={classes.cardBG} size="full" src={CardBG} />
 					</div>
@@ -95,7 +87,11 @@ export default () => {
 				<Heading>Summer at the Seaport</Heading>
 				<Spacer />
 				<Body>
-					Chase Sapphire was the primary launch partner for the 2017 reopening of the South Street Seaport in New York City. Their sponsorship provided cardmembers with access to an exclusive lounge and bar as well as VIP musical and dining experiences. We created original social content driving members to take advantage of these perks.
+					Chase Sapphire was the primary launch partner for the 2017 reopening
+					of the South Street Seaport in New York City. Their sponsorship
+					provided cardmembers with access to an exclusive lounge and bar as
+					well as VIP musical and dining experiences. We created original social
+					content driving members to take advantage of these perks.
 				</Body>
 				<Spacer />
 				<Body>Role: Art Direction</Body>
@@ -114,20 +110,17 @@ export default () => {
 				<Heading>Reserve What&apos;s Next</Heading>
 				<Spacer />
 				<Body>
-					Chase Sapphire worked with the Droga5 agency to create a 3 part video series highlighting the future of travel and dining starring James Corden. At VaynerMedia, we leveraged Droga5&apos;s assets to create an accompanying social media campaign consisting of 200+ assets.
+					Chase Sapphire worked with the Droga5 agency to create a 3 part video
+					series highlighting the future of travel and dining starring James
+					Corden. At VaynerMedia, we leveraged Droga5&apos;s assets to create an
+					accompanying social media campaign consisting of 200+ assets.
 				</Body>
 				<Spacer />
-				<Body>
-					Role: Junior Art Director, repurposing assets from Droga5
-				</Body>
+				<Body>Role: Junior Art Director, repurposing assets from Droga5</Body>
 				<Spacer />
-				<Body>
-					Copywriter: Chris Kerr
-				</Body>
+				<Body>Copywriter: Chris Kerr</Body>
 				<Spacer />
-				<Body>
-					Creative Director: Etan Bednarsh
-				</Body>
+				<Body>Creative Director: Etan Bednarsh</Body>
 				<VideoPlayer
 					src="https://player.vimeo.com/video/338773040"
 					title="Reserve What's Next: Clip 4"
@@ -148,7 +141,10 @@ export default () => {
 				<Heading>Sapphire Six Cities</Heading>
 				<Spacer />
 				<Body>
-					Chase Sapphire pinpointed some of the top restaurants that their cardmembers were dining at in six major cities across the US. We created original social content around the top 6 restaurants in each of the 6 cities.
+					Chase Sapphire pinpointed some of the top restaurants that their
+					cardmembers were dining at in six major cities across the US. We
+					created original social content around the top 6 restaurants in each
+					of the 6 cities.
 				</Body>
 				<Spacer />
 				<Body>Role: Junior Art Director, Graphic Designer</Body>
@@ -165,7 +161,7 @@ export default () => {
 				/>
 				<Image scrollable src={CitiesCarousel} size="full" />
 			</ContentBlock>
-			<NextProject link="/mirror" />
+			<NextProject link="/ellipsis" />
 		</PageWrapper>
 	)
 }

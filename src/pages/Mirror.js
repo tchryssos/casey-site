@@ -476,7 +476,7 @@ export default () => {
 					flexible.
 				</Body>
 			</ContentBlock>
-			<NextProject link="/portfolio" />
+			<NextProject link="/philz" />
 		</PageWrapper>
 	)
 }

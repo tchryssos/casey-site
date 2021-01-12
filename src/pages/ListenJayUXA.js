@@ -15,7 +15,6 @@ import VideoPlayer from 'components/VideoPlayer'
 import PageNav from 'components/PageNav'
 import NextProject from 'components/NextProject'
 
-
 import Interviews from 'static/images/ListenJayUXA/userInterviews-01.png'
 import Persona from 'static/images/ListenJayUXA/podcastpete_circle.png'
 import UserFlow from 'static/images/ListenJayUXA/userflow-01.png'
@@ -110,18 +109,14 @@ export default () => {
 	]
 	return (
 		<PageWrapper>
-			<PageNav
-				navLinkObjects={navLinks}
-			/>
+			<PageNav navLinkObjects={navLinks} />
 			{/* eslint-disable jsx-a11y/anchor-is-valid */}
 			{/* eslint-disable jsx-a11y/anchor-has-content */}
 			<a name="brief" />
 			<ContentBlock className={classes.brandColorBlock}>
 				<ItemGrid stackedOnMobile>
 					<div className={classes.half}>
-						<Heading>
-							ListenJay helps people discover new podcasts
-						</Heading>
+						<Heading>ListenJay helps people discover new podcasts</Heading>
 						<Spacer />
 						<SubHeading>Role: Product Designer</SubHeading>
 					</div>
@@ -135,23 +130,28 @@ export default () => {
 				</ItemGrid>
 				<Spacer />
 				<Body>
-					ListenJay lets users share a link to a specific quote from any podcast. They have gotten a lot of engagement from sharing these quotes on their own social channels. Now they want to create a tool that will allow podcasters to take quotes straight from their transcript and turn them into sharable graphics.
+					ListenJay lets users share a link to a specific quote from any
+					podcast. They have gotten a lot of engagement from sharing these
+					quotes on their own social channels. Now they want to create a tool
+					that will allow podcasters to take quotes straight from their
+					transcript and turn them into sharable graphics.
 				</Body>
 			</ContentBlock>
 			<a name="discover" />
-			<div className={classes.sectionLabel}>
-				Discover
-			</div>
+			<div className={classes.sectionLabel}>Discover</div>
 			<ContentBlock>
-				<Heading>
-					Understanding the podcaster&apos;s needs
-				</Heading>
+				<Heading>Understanding the podcaster&apos;s needs</Heading>
 				<Spacer />
-				<SubHeading>
-					Conducting User Interviews
-				</SubHeading>
+				<SubHeading>Conducting User Interviews</SubHeading>
 				<Spacer />
-				<Body> I interviewed a few podcasters with relatively new or small podcasts about how they were getting their shows off the ground. Since no one in my immediate network has a podcast I did a lot of cold outreach to podcast hosts and online podcasting communities to recruit participants.</Body>
+				<Body>
+					{' '}
+					I interviewed a few podcasters with relatively new or small podcasts
+					about how they were getting their shows off the ground. Since no one
+					in my immediate network has a podcast I did a lot of cold outreach to
+					podcast hosts and online podcasting communities to recruit
+					participants.
+				</Body>
 				<ItemGrid>
 					<div className={classes.third}>
 						<Image src={Interviews} size="full" />
@@ -162,40 +162,47 @@ export default () => {
 						<div>
 							<div className={classes.ballName}>
 								<div className={classes.blueBall} />
-								<SubHeading>Transcribing is useful to people who want to share quotes and have increased accessibility but it can be costly</SubHeading>
+								<SubHeading>
+									Transcribing is useful to people who want to share quotes and
+									have increased accessibility but it can be costly
+								</SubHeading>
 							</div>
 						</div>
 						<Spacer height={2} />
 						<div>
 							<div className={classes.ballName}>
 								<div className={classes.yellowBall} />
-								<SubHeading>Many podcasters depend on their own social channels and distribution platforms to promote their shows</SubHeading>
+								<SubHeading>
+									Many podcasters depend on their own social channels and
+									distribution platforms to promote their shows
+								</SubHeading>
 							</div>
 						</div>
 						<Spacer height={2} />
 						<div>
 							<div className={classes.ballName}>
 								<div className={classes.darkBlueBall} />
-								<SubHeading>Podcasters are wearing many hats so tools need to be easy to learn</SubHeading>
+								<SubHeading>
+									Podcasters are wearing many hats so tools need to be easy to
+									learn
+								</SubHeading>
 							</div>
 						</div>
 					</div>
 				</ItemGrid>
 				<Spacer height={4} />
-				<SubHeading>
-					Defining the persona for this feature
-				</SubHeading>
+				<SubHeading>Defining the persona for this feature</SubHeading>
 				<Spacer />
 				<Body>
-					ListenJay has features that serve both podcast listeners and podcast hosts. When I was collaborating with the ListenJay team to create this feature, I learned that they did not know much about what podcasters actually needed or used currently so I decided to create a persona for their tools aimed at the podcast hosts and producers themselves. This persona is based on the key takeaways from my user interviews above.
+					ListenJay has features that serve both podcast listeners and podcast
+					hosts. When I was collaborating with the ListenJay team to create this
+					feature, I learned that they did not know much about what podcasters
+					actually needed or used currently so I decided to create a persona for
+					their tools aimed at the podcast hosts and producers themselves. This
+					persona is based on the key takeaways from my user interviews above.
 				</Body>
 				<ItemGrid stackedOnMobile>
-					<div
-						className={clsx(
-							classes.half,
-							classes.centered,
-						)}
-					>
+					<div className={clsx(classes.half, classes.centered)}>
 						<Image src={Persona} size="full" />
 						<Heading>Podcast Pete</Heading>
 						<Body>THE INDEPENDENT PODCASTER</Body>
@@ -223,57 +230,58 @@ export default () => {
 				</ItemGrid>
 			</ContentBlock>
 			<a name="define" />
-			<div className={classes.sectionLabel}>
-				Define
-			</div>
+			<div className={classes.sectionLabel}>Define</div>
 			<ContentBlock className={classes.wiresBlock}>
-				<Heading>
-					Building the feature
-				</Heading>
+				<Heading>Building the feature</Heading>
 				<Spacer />
-				<SubHeading>
-					Creating a user flow
-				</SubHeading>
+				<SubHeading>Creating a user flow</SubHeading>
 				<Body>
-					Many of the users I interviewed described a process where they would edit a transcript or listen back to a show in order to find quotes to share on social. They would then go into Canva or a similar tool to create graphics from these quotes. My goal with this feature was to allow all of that process to happen in one place.
+					Many of the users I interviewed described a process where they would
+					edit a transcript or listen back to a show in order to find quotes to
+					share on social. They would then go into Canva or a similar tool to
+					create graphics from these quotes. My goal with this feature was to
+					allow all of that process to happen in one place.
 				</Body>
 				<Image src={UserFlow} size="full" />
-				<SubHeading>
-					Wireframes
-				</SubHeading>
+				<SubHeading>Wireframes</SubHeading>
 				<Body>
-					I used Figma to bring pen and paper sketched to life. I built out the wire frames using components that would be easy to adjust when adding visual design.
+					I used Figma to bring pen and paper sketched to life. I built out the
+					wire frames using components that would be easy to adjust when adding
+					visual design.
 				</Body>
 				<Image src={WireSketch} size="full" />
-				<SubHeading>
-					Initial Wireframes
-				</SubHeading>
+				<SubHeading>Initial Wireframes</SubHeading>
 				<Spacer />
-				<SubHeading>
-					The Transcript Editor
-				</SubHeading>
+				<SubHeading>The Transcript Editor</SubHeading>
 				<Body>
-					My goal with this page was to create a way for users to easily highlight quotes and bring them into the design editor. I looked at many other transcript services to identify design patterns that would be successful here including Sonix which used a similar highlight functionality.
+					My goal with this page was to create a way for users to easily
+					highlight quotes and bring them into the design editor. I looked at
+					many other transcript services to identify design patterns that would
+					be successful here including Sonix which used a similar highlight
+					functionality.
 				</Body>
 				<Image src={Wireframe00} size="full" />
-				<SubHeading>
-					The Quote Editor
-				</SubHeading>
+				<SubHeading>The Quote Editor</SubHeading>
 				<Body>
-					During my user interviews I found that many podcasters are wearing a lot of hats to support their show. Most of them are not designers and need quick and easy ways to produce promotional graphics. I wanted this editor to allow customization but be relatively simple in nature for my initial testing where I could identify additional editing needs.
+					During my user interviews I found that many podcasters are wearing a
+					lot of hats to support their show. Most of them are not designers and
+					need quick and easy ways to produce promotional graphics. I wanted
+					this editor to allow customization but be relatively simple in nature
+					for my initial testing where I could identify additional editing
+					needs.
 				</Body>
 				<Image src={Wireframe01} size="full" />
 			</ContentBlock>
 			<a name="design" />
-			<div className={classes.sectionLabel}>
-				DESIGN
-			</div>
+			<div className={classes.sectionLabel}>DESIGN</div>
 			<ContentBlock className={classes.brandColorBlock}>
-				<Heading>
-					Visual Designs
-				</Heading>
+				<Heading>Visual Designs</Heading>
 				<Spacer />
-				<Body>I updated the branding for ListenJay as part of another project for them and used that new design system to build out the final pages. The following video shows the prototype that I built to test this flow.</Body>
+				<Body>
+					I updated the branding for ListenJay as part of another project for
+					them and used that new design system to build out the final pages. The
+					following video shows the prototype that I built to test this flow.
+				</Body>
 				<VideoPlayer
 					src="https://player.vimeo.com/video/444319554?loop=1"
 					title="Prototype Animation"
@@ -282,30 +290,38 @@ export default () => {
 				<Spacer height={2} />
 				<SubHeading>Adding design</SubHeading>
 				<Body>
-					The ListenJay brand is bold and fun. They want to stand out from the stark and techy design of tools like Apple or Spotify and create a more friendly vibe.
+					The ListenJay brand is bold and fun. They want to stand out from the
+					stark and techy design of tools like Apple or Spotify and create a
+					more friendly vibe.
 				</Body>
 				<Spacer />
 				<Image src={HifiTranscript} size="full" />
 				<Image src={HifiDesign} size="full" />
 			</ContentBlock>
 			<a name="test" />
-			<div className={classes.sectionLabel}>
-				Test
-			</div>
+			<div className={classes.sectionLabel}>Test</div>
 			<ContentBlock>
-				<Heading>
-					Validation Testing
-				</Heading>
+				<Heading>Validation Testing</Heading>
 				<Spacer />
-				<Body>I tested this prototype with a handful of partcicpants to gague the usabilty and also test the proof of concept.</Body>
+				<Body>
+					I tested this prototype with a handful of partcicpants to gague the
+					usabilty and also test the proof of concept.
+				</Body>
 				<Spacer />
 				<SubHeading>Validation</SubHeading>
 				<Body>
-					All of the participants understood the product and were excited to use it.
+					All of the participants understood the product and were excited to use
+					it.
 				</Body>
 				<Spacer />
 				<SubHeading>Separating Tasks</SubHeading>
-				<Body>For some participants, thinking about editing a transcript and creating graphics at the same time was too much. Some participants understood that they could highlight something in order to come back later but in order to make these tasks more separate, I adjusted the flow below.</Body>
+				<Body>
+					For some participants, thinking about editing a transcript and
+					creating graphics at the same time was too much. Some participants
+					understood that they could highlight something in order to come back
+					later but in order to make these tasks more separate, I adjusted the
+					flow below.
+				</Body>
 				<VideoPlayer
 					src="https://player.vimeo.com/video/444317718?loop=1"
 					title="Prototype Animation"
@@ -313,28 +329,35 @@ export default () => {
 				/>
 			</ContentBlock>
 			<a name="learnings" />
-			<div className={classes.sectionLabel}>
-				Learnings
-			</div>
+			<div className={classes.sectionLabel}>Learnings</div>
 			<ContentBlock className={classes.brandColorBlock}>
 				<Heading>What I learned from this project</Heading>
 				<Spacer />
 				<SubHeading>Finding participants can be a challenge</SubHeading>
 				<Body>
-					Finding people to interview for niche products, like something built only for people who have podcasts, can be hard! For this project I reached out to multiple networks and a lot of strangers. Some were happy to help me!
+					Finding people to interview for niche products, like something built
+					only for people who have podcasts, can be hard! For this project I
+					reached out to multiple networks and a lot of strangers. Some were
+					happy to help me!
 				</Body>
 				<Spacer />
-				<SubHeading>User research can lead to great competitive research</SubHeading>
+				<SubHeading>
+					User research can lead to great competitive research
+				</SubHeading>
 				<Body>
-					I found that doing user research before/in tandem with competitive analysis allowed me to ask participants what tools they are using day to day and then take a closer look at those
+					I found that doing user research before/in tandem with competitive
+					analysis allowed me to ask participants what tools they are using day
+					to day and then take a closer look at those
 				</Body>
 				<Spacer />
 				<SubHeading>Building for prototypes</SubHeading>
 				<Body>
-					The controls for the design editor on this project were complex to prototype for testing. I learned a lot about using overlays and hover states in Figma to create something that feels realistic.
+					The controls for the design editor on this project were complex to
+					prototype for testing. I learned a lot about using overlays and hover
+					states in Figma to create something that feels realistic.
 				</Body>
 			</ContentBlock>
-			<NextProject link="/chase" />
+			<NextProject link="/mirror" />
 		</PageWrapper>
 	)
 }

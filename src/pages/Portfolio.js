@@ -3,9 +3,7 @@ import { createUseStyles } from 'react-jss'
 import clsx from 'clsx'
 import { NavLink } from 'react-router-dom'
 
-import {
-	MD_MIN_STRING,
-} from 'constants/styles/breakpoints'
+import { MD_MIN_STRING } from 'constants/styles/breakpoints'
 
 import PageWrapper from 'components/PageWrapper'
 import ContentBlock from 'components/ContentBlock'
@@ -16,6 +14,7 @@ import Image from 'components/Image'
 import VideoPlayer from 'components/VideoPlayer'
 import SubHeading from 'components/Typography/SubHeading'
 import ItemGrid from 'components/ItemGrid'
+import NextProject from 'components/NextProject'
 
 import Filter from 'static/images/Portfolio/portfolio-filter.png'
 import OldProjectPage from 'static/images/Portfolio/old-project-page.png'
@@ -127,27 +126,13 @@ export default () => {
 		<PageWrapper>
 			<ContentBlock className={classes.headerBackgroundColor}>
 				<ItemGrid stackedOnMobile>
-					<div
-						className={clsx(
-							classes.half,
-							classes.imageContainer,
-						)}
-					>
+					<div className={clsx(classes.half, classes.imageContainer)}>
 						<Heading>Building this website!</Heading>
 					</div>
 					<div className={classes.half}>
-						<Image
-							src={HeaderSite}
-							className={classes.headerSite}
-						/>
-						<Image
-							src={HeaderCode}
-							className={classes.headerCode}
-						/>
-						<Image
-							src={HeaderTerm}
-							className={classes.headerTerm}
-						/>
+						<Image src={HeaderSite} className={classes.headerSite} />
+						<Image src={HeaderCode} className={classes.headerCode} />
+						<Image src={HeaderTerm} className={classes.headerTerm} />
 					</div>
 				</ItemGrid>
 			</ContentBlock>
@@ -161,20 +146,28 @@ export default () => {
 				/>
 				<Spacer />
 				<Body>
-					After hiring graphic designers for my team, I was shocked at how similar all of the portfolios I was looking at were. To lower the bounce rate of hiring managers looking at my website, I wanted to create a home page that was more interesting and interactive than the sea of squarespaces.
+					After hiring graphic designers for my team, I was shocked at how
+					similar all of the portfolios I was looking at were. To lower the
+					bounce rate of hiring managers looking at my website, I wanted to
+					create a home page that was more interesting and interactive than the
+					sea of squarespaces.
 				</Body>
 			</ContentBlock>
 			<ContentBlock>
 				<SubHeading>GOAL #2</SubHeading>
 				<Spacer />
-				<Heading>Embed personality and tell a hiring manager more about myself</Heading>
+				<Heading>
+					Embed personality and tell a hiring manager more about myself
+				</Heading>
 				<VideoPlayer
 					src="https://player.vimeo.com/video/380927068?autoplay=1&loop=1"
 					title="About Me Page Demo"
 				/>
 				<Spacer />
 				<Body>
-					Since humans are visual learners, I decided not to write a bio about myself. Instead I included a CTA to click anywhere and created stickers that could tell a user more about me.
+					Since humans are visual learners, I decided not to write a bio about
+					myself. Instead I included a CTA to click anywhere and created
+					stickers that could tell a user more about me.
 				</Body>
 			</ContentBlock>
 			<ContentBlock className={classes.filterBlock}>
@@ -184,7 +177,10 @@ export default () => {
 				<Spacer />
 				<Image src={Filter} size="full" />
 				<Body>
-					While navigating the transition from Graphic Design to Product Design, I was accepting both kind of jobs. In order to make it easier for hiring managers and mentors to find the appropriate work more quickly, I added a filter to the homepage.
+					While navigating the transition from Graphic Design to Product Design,
+					I was accepting both kind of jobs. In order to make it easier for
+					hiring managers and mentors to find the appropriate work more quickly,
+					I added a filter to the homepage.
 				</Body>
 			</ContentBlock>
 			<ContentBlock className={classes.contentStrategyBlock}>
@@ -193,17 +189,23 @@ export default () => {
 				<Heading>Create a clear content strategy for each page</Heading>
 				<Spacer />
 				<Body>
-					In the first iteration of the site, I focused on templatizing the project pages to reduce the amount of developer resources I would need. After learning more React myself, I wanted to tailor the pages more to the projects and make them easier to read for hiring managers.
+					In the first iteration of the site, I focused on templatizing the
+					project pages to reduce the amount of developer resources I would
+					need. After learning more React myself, I wanted to tailor the pages
+					more to the projects and make them easier to read for hiring managers.
 				</Body>
 				<Spacer />
 				<Body>
-					In the first iteration of the site every page had two components - a description on the left and a scrolling content area witha stream of text and images.
+					In the first iteration of the site every page had two components - a
+					description on the left and a scrolling content area witha stream of
+					text and images.
 				</Body>
 				<Spacer />
 				<Image src={OldProjectPage} size="full" bordered />
 				<Spacer />
 				<Body>
-					In version 2, I created components that would help differentiate the pages and make them more digestible to a user.
+					In version 2, I created components that would help differentiate the
+					pages and make them more digestible to a user.
 				</Body>
 				<ItemGrid>
 					<Image size="half" src={LaddersPage} />
@@ -217,6 +219,7 @@ export default () => {
 					</NavLink>
 				</Body>
 			</ContentBlock>
+			<NextProject link="/elo-tracker" />
 		</PageWrapper>
 	)
 }

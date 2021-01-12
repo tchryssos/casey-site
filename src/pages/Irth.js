@@ -10,6 +10,7 @@ import Body from 'components/Typography/Body'
 import Spacer from 'components/Spacer'
 import Image from 'components/Image'
 import ItemGrid from 'components/ItemGrid'
+import NextProject from 'components/NextProject'
 import VideoPlayer from 'components/VideoPlayer'
 
 import ColorScheme from 'static/images/Irth/BeforeAfterIrth.png'
@@ -157,6 +158,7 @@ const Irth = () => {
 				</Body>
 				<Spacer height={2} />
 			</ContentBlock>
+			<NextProject link="/ellipsis-app" />
 		</PageWrapper>
 	)
 }
