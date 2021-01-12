@@ -17,6 +17,12 @@ import Preview1 from 'static/svg/home/ProjectPreview_1.svg'
 import Preview2 from 'static/svg/home/ProjectPreview_2.svg'
 import Preview3 from 'static/svg/home/ProjectPreview_3.svg'
 import Preview4 from 'static/svg/home/ProjectPreview_4.svg'
+
+import BlobGrey from 'static/svg/home/PreviewBlob_Grey.svg'
+import BlobGreen from 'static/svg/home/PreviewBlob_Green.svg'
+import BlobYellow from 'static/svg/home/PreviewBlob_Yellow.svg'
+import BlobNavy from 'static/svg/home/PreviewBlob_Navy.svg'
+
 import AnimalCrossing from 'static/images/About/animalcrossing.png'
 import MensHealthDesciption from 'static/images/Descriptions/mhh_di-01.png'
 import FISMDesciption from 'static/images/Descriptions/FIS_di.png'
@@ -122,24 +128,18 @@ const Home = () => {
 				<div className={classes.flexContainer}>
 					<ProjectPreview
 						tags="UXUI, Brand, leadership"
-						title="Me's Health Memorial Website Redesign"
+						title="Men's Health Memorial Responsive Website Redesign"
 						bgImage={Preview1}
 						hoverImage={MensHealthDesciption}
+						blobImage={BlobGrey}
 						link="/mens-health"
 					/>
 					<ProjectPreview
-						tags="Brand, leadership"
-						title="Managing Design at Flatiron School"
-						bgImage={Preview4}
-						hoverImage={FISMDesciption}
-						link="/flatiron-school-marketing"
-					/>
-					<ProjectPreview
 						tags="Brand, UXUI"
-						title="Ellipsis Health Wix Website Build"
+						title="Voice powered mental health assessment"
 						bgImage={Preview3}
 						hoverImage={MensHealthDesciption}
-						link="/all-projectsß"
+						link="/ellipsis-app"
 					/>
 					<ProjectPreview
 						tags="Brand, UXUI"
@@ -147,6 +147,13 @@ const Home = () => {
 						bgImage={Preview2}
 						hoverImage={ELODesciption}
 						link="/elo-tracker"
+					/>
+					<ProjectPreview
+						tags="Brand, leadership"
+						title="Managing Design at Flatiron School"
+						bgImage={Preview4}
+						hoverImage={FISMDesciption}
+						link="/flatiron-school-marketing"
 					/>
 				</div>
 			</ContentBlock>
