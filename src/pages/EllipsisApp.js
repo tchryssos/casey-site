@@ -112,7 +112,7 @@ const EllipsisApp = () => {
 					uplifting experience.
 				</Body>
 				<VideoPlayer
-					src="https://player.vimeo.com/498482895"
+					src="https://player.vimeo.com/video/498482895"
 					title="Two Visual Directions"
 				/>
 			</ContentBlock>
@@ -166,7 +166,7 @@ const EllipsisApp = () => {
 					Ellipsis team.
 				</Body>
 				<VideoPlayer
-					src="https://player.vimeo.com/498984190"
+					src="https://player.vimeo.com/video/498984190"
 					title="Prototype"
 				/>
 				<Spacer />

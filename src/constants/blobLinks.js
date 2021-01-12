@@ -20,6 +20,8 @@ import MensHealthDesciption from 'static/images/Descriptions/mhh_di-01.png'
 import FISMDesciption from 'static/images/Descriptions/FIS_di.png'
 import PortfolioDescription from 'static/images/Descriptions/portfolio_di.png'
 import ChaseDescription from 'static/images/ChaseSapphire/Chase_Card.png'
+import WixDescription from 'static/images/Descriptions/wix_description.png'
+import EHAppDescription from 'static/images/Descriptions/EHApp_description.png'
 
 const blobLinkData = {
 	MensHealth: {
@@ -44,7 +46,7 @@ const blobLinkData = {
 		altText: 'Healthcare Mobile app',
 		width: 50,
 		zIndex: 2,
-		descriptionText: 'xyz',
+		descriptionText: 'Bringing warmth and comfort to a sensitive subject',
 		tags: [UX_TAG, BRAND_TAG],
 	},
 	EHApp: {
@@ -55,7 +57,8 @@ const blobLinkData = {
 		altText: 'Designing for Voice Input',
 		width: 40,
 		zIndex: 5,
-		descriptionText: 'xyz',
+		descriptionImage: EHAppDescription,
+		descriptionText: 'Creating a mental health assessment using voice',
 		descriptionAlignment: 'left',
 		tags: [UX_TAG, BRAND_TAG],
 	},
@@ -106,7 +109,8 @@ const blobLinkData = {
 		altText: 'Wix Website Design',
 		width: 50,
 		zIndex: 3,
-		descriptionText: 'xyz',
+		descriptionImage: WixDescription,
+		descriptionText: 'Designing and building a sustainable website in 1 week',
 		tags: [BRAND_TAG, UX_TAG],
 	},
 }
