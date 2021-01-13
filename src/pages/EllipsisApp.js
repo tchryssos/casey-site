@@ -1,6 +1,7 @@
 import React from 'react'
 import { createUseStyles } from 'react-jss'
 import { MD_MIN_STRING } from 'constants/styles/breakpoints'
+import { NavLink } from 'react-router-dom'
 
 import PageWrapper from 'components/PageWrapper'
 import ContentBlock from 'components/ContentBlock'
@@ -30,6 +31,11 @@ const useStyles = createUseStyles({
 			width: 'calc(50% - 8px)',
 			marginBottom: 0,
 		},
+	},
+	aboutLink: {
+		textDecoration: 'none',
+		borderBottom: '2px solid blue',
+		color: 'blue',
 	},
 	blue: {
 		backgroundColor: '#e0eeffff',
@@ -107,10 +113,13 @@ const EllipsisApp = () => {
 				<Body>
 					I created two visual design directions for feedback from the team and
 					users. The first was a blue direction that was more inline with the
-					Eliipsis Health brand guidelines and very cohesive with their website
-					which I designed. For the second I wanted to test a warmer palette to
-					be more inline with other wellness apps out there and create a more
-					uplifting experience.
+					Eliipsis Health brand guidelines and very cohesive with their&nbsp;
+					<NavLink className={classes.aboutLink} to="/ellipsis">
+						website
+					</NavLink>
+					&nbsp;which I designed. For the second I wanted to test a warmer
+					palette to be more inline with other wellness apps out there and
+					create a more uplifting experience.
 				</Body>
 				<VideoPlayer
 					src="https://player.vimeo.com/video/498482895"

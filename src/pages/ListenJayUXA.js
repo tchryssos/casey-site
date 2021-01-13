@@ -109,7 +109,7 @@ export default () => {
 	]
 	return (
 		<PageWrapper>
-			<PageNav navLinkObjects={navLinks} />
+			{/* <PageNav navLinkObjects={navLinks} /> */}
 			{/* eslint-disable jsx-a11y/anchor-is-valid */}
 			{/* eslint-disable jsx-a11y/anchor-has-content */}
 			<a name="brief" />

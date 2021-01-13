@@ -28,7 +28,6 @@ import AnimalCrossing from 'static/images/About/animalcrossing.png'
 import EHAppDescription from 'static/images/Descriptions/EHApp_description.png'
 import FISIcon from 'static/images/FISMarketing/CourseGraphic.svg'
 import MensHealthDesciption from 'static/images/Descriptions/mhh_di-01.png'
-import FISMDesciption from 'static/images/Descriptions/FIS_di.png'
 import ELODesciption from 'static/images/Descriptions/ELO_di.png'
 
 const useStyles = createUseStyles({
