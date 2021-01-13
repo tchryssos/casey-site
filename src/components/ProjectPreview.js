@@ -39,18 +39,19 @@ const useStyles = createUseStyles({
 		display: 'flex',
 		justifyContent: 'center',
 		alignItems: 'center',
-		transition: 'transform 1s',
 	},
 	hoverImage: {
 		width: 200,
 		zIndex: 3,
 		top: 0,
 		left: 0,
+		transition: 'transform 1s',
 	},
 	blobImage: {
 		position: 'absolute',
 		width: '100%',
 		zIndex: 2,
+		transition: 'transform 1s',
 	},
 	uppercase: {
 		textTransform: 'uppercase',
@@ -60,7 +61,10 @@ const useStyles = createUseStyles({
 		width: '100%',
 		// This vw height is estimated based on screen size / the resulting value of the projectPreviewContainer's 45% width.
 		// In other words, I opened the inspector, saw how big this container ended up being, and divided that by the screen size to get the ratio I am using below
-		height: '27vw',
+		height: '80vw',
+		[MD_MIN_STRING]: {
+			height: '27vw',
+		},
 	},
 })
 

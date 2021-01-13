@@ -24,6 +24,9 @@ import BlobYellow from 'static/svg/home/PreviewBlob_Yellow.svg'
 import BlobNavy from 'static/svg/home/PreviewBlob_Navy.svg'
 
 import AnimalCrossing from 'static/images/About/animalcrossing.png'
+
+import EHAppDescription from 'static/images/Descriptions/EHApp_description.png'
+import FISIcon from 'static/images/FISMarketing/CourseGraphic.svg'
 import MensHealthDesciption from 'static/images/Descriptions/mhh_di-01.png'
 import FISMDesciption from 'static/images/Descriptions/FIS_di.png'
 import ELODesciption from 'static/images/Descriptions/ELO_di.png'
@@ -92,6 +95,18 @@ const useStyles = createUseStyles({
 			display: 'block',
 		},
 	},
+	red: {
+		backgroundColor: '#bf271b',
+	},
+	navy: {
+		backgroundColor: '#374550',
+	},
+	yellow: {
+		backgroundColor: '#ea9b41',
+	},
+	blue: {
+		backgroundColor: '#4e7fff',
+	},
 	[MD_MIN_STRING]: {
 		homeWrapper: {
 			width: '50%',
@@ -131,14 +146,17 @@ const Home = () => {
 						title="Men's Health Memorial Responsive Website Redesign"
 						bgImage={Preview1}
 						hoverImage={MensHealthDesciption}
-						blobImage={BlobGrey}
+						blobImage={BlobGreen}
+						backgroundColorClass={classes.navy}
 						link="/mens-health"
 					/>
 					<ProjectPreview
 						tags="Brand, UXUI"
 						title="Voice powered mental health assessment"
 						bgImage={Preview3}
-						hoverImage={MensHealthDesciption}
+						hoverImage={EHAppDescription}
+						blobImage={BlobYellow}
+						backgroundColorClass={classes.red}
 						link="/ellipsis-app"
 					/>
 					<ProjectPreview
@@ -146,13 +164,17 @@ const Home = () => {
 						title="End to End Gaming App Design"
 						bgImage={Preview2}
 						hoverImage={ELODesciption}
+						blobImage={BlobNavy}
+						backgroundColorClass={classes.blue}
 						link="/elo-tracker"
 					/>
 					<ProjectPreview
 						tags="Brand, leadership"
 						title="Managing Design at Flatiron School"
 						bgImage={Preview4}
-						hoverImage={FISMDesciption}
+						hoverImage={FISIcon}
+						blobImage={BlobGrey}
+						backgroundColorClass={classes.yellow}
 						link="/flatiron-school-marketing"
 					/>
 				</div>
