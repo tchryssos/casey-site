@@ -25,10 +25,10 @@ import BlobNavy from 'static/svg/home/PreviewBlob_Navy.svg'
 
 import AnimalCrossing from 'static/images/About/animalcrossing.png'
 
-import EHAppDescription from 'static/images/Descriptions/EHApp_description.png'
+import EHAppDescription from 'static/images/Descriptions/EllipsisApp_description.png'
 import FISIcon from 'static/images/FISMarketing/CourseGraphic.svg'
-import MensHealthDesciption from 'static/images/Descriptions/mhh_di-01.png'
-import ELODesciption from 'static/images/Descriptions/ELO_di.png'
+import MensHealthDesciption from 'static/images/Descriptions/MHH_description_v3.png'
+import ELODesciption from 'static/images/Descriptions/ELO_description.png'
 
 const useStyles = createUseStyles({
 	homeWrapper: {

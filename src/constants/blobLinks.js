@@ -16,12 +16,12 @@ import IrthMobile from 'static/svg/mobile/Irth-Mobile-8.svg'
 
 import { UX_TAG, BRAND_TAG, LEAD_TAG } from 'constants/tags'
 
-import MensHealthDesciption from 'static/images/Descriptions/mhh_di-01.png'
+import MensHealthDesciption from 'static/images/Descriptions/MMH_Description_v2.png'
 import FISMDesciption from 'static/images/Descriptions/FIS_di.png'
 import PortfolioDescription from 'static/images/Descriptions/portfolio_di.png'
 import ChaseDescription from 'static/images/ChaseSapphire/Chase_Card.png'
 import WixDescription from 'static/images/Descriptions/wix_description.png'
-import EHAppDescription from 'static/images/Descriptions/EHApp_description.png'
+import EHAppDescription from 'static/images/Descriptions/EllipsisApp_description.png'
 
 const blobLinkData = {
 	MensHealth: {

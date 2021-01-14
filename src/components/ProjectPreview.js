@@ -41,7 +41,7 @@ const useStyles = createUseStyles({
 		alignItems: 'center',
 	},
 	hoverImage: {
-		width: 200,
+		width: '65%',
 		zIndex: 3,
 		top: 0,
 		left: 0,
