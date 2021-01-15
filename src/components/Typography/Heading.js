@@ -4,8 +4,8 @@ import clsx from 'clsx'
 
 const useStyles = createUseStyles({
 	headlineFont: {
-		fontFamily: '"buena-park-jf", serif',
-		fontWeight: 400,
+		// fontFamily: '"buena-park-jf", serif',
+		fontWeight: 700,
 	},
 })
 

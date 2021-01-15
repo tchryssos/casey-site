@@ -1,8 +1,8 @@
-import React from 'react'
+import React, { useRef, useEffect, useState } from 'react'
 import { createUseStyles } from 'react-jss'
-import {
-	MD_MIN_STRING,
-} from 'constants/styles/breakpoints'
+import debounce from 'lodash.debounce'
+
+import { MD_MIN_STRING } from 'constants/styles/breakpoints'
 
 import PageWrapper from 'components/PageWrapper'
 import ContentBlock from 'components/ContentBlock'
@@ -12,6 +12,7 @@ import Spacer from 'components/Spacer'
 import Body from 'components/Typography/Body'
 import ResumeButton from 'components/ResumeButton'
 import ItemGrid from 'components/ItemGrid'
+import Footer from 'components/Footer'
 
 import useStickers from 'effects/useStickers'
 
@@ -24,9 +25,6 @@ const useStyles = createUseStyles({
 		bottom: 0,
 		overflowX: 'hidden',
 	},
-	reviewBlock: {
-		backgroundColor: '#fad793',
-	},
 	half: {
 		width: '100%',
 		marginBottom: 64,
@@ -35,14 +33,15 @@ const useStyles = createUseStyles({
 			marginBottom: 0,
 		},
 	},
-	linkedInButton: {
-		backgroundColor: '#346c63',
+	Button: {
+		backgroundColor: '#2b2b2b',
 		padding: 8,
 		color: 'white',
 		display: 'inline-flex',
+		textTransform: 'uppercase',
+		textDecoration: 'none',
 		'&:hover': {
 			backgroundColor: '#4e7fff',
-			transform: 'translate(5px, -5px)',
 		},
 	},
 	link: {
@@ -50,12 +49,44 @@ const useStyles = createUseStyles({
 	},
 })
 
-export default () => {
-	const classes = useStyles()
+const About = () => {
 	useStickers()
+	const classes = useStyles()
+	const stickerBoardRef = useRef()
+	const [aboutScroll, setAboutScroll] = useState(0)
+	const aboutScrollLastRef = useRef(0)
+
+	const onScroll = debounce(() => {
+		setAboutScroll(stickerBoardRef.current.scrollTop)
+	}, 100)
+
+	useEffect(() => {
+		if (stickerBoardRef) {
+			stickerBoardRef.current.addEventListener('scroll', onScroll)
+		}
+		return () =>
+			stickerBoardRef?.current?.removeEventListener('scroll', onScroll)
+	}, [stickerBoardRef])
+
+	const menuOpenOverride = (isMenuOpen, pageWrapperRef) => {
+		if (isMenuOpen) {
+			// eslint-disable-next-line no-param-reassign
+			pageWrapperRef.current.style.top = `-${aboutScroll}px`
+			aboutScrollLastRef.current = aboutScroll
+		} else if (stickerBoardRef.current) {
+			// eslint-disable-next-line no-param-reassign
+			pageWrapperRef.current.style.top = ''
+			stickerBoardRef.current.scroll(0, aboutScrollLastRef.current)
+		}
+	}
+
 	return (
-		<div className={classes.stickerBoard} id="stickerBoard">
-			<PageWrapper>
+		<div
+			className={classes.stickerBoard}
+			id="stickerBoard"
+			ref={stickerBoardRef}
+		>
+			<PageWrapper menuOpenOverride={menuOpenOverride}>
 				<ContentBlock>
 					<ResumeButton />
 					<Spacer height={4} />
@@ -63,7 +94,9 @@ export default () => {
 					<Body>(click anywhere)</Body>
 					<Spacer />
 					<Body>
-						I am an adaptable designer with experience building creative teams from the ground up at WeWork’s Flatiron School. Currently working on freelance projects in product design.
+						I am an adaptable designer with experience building creative teams
+						from the ground up at WeWork’s Flatiron School. Currently working on
+						freelance projects in product design.
 					</Body>
 					<Spacer height={2} />
 					<SubHeading>Email</SubHeading>
@@ -87,7 +120,7 @@ export default () => {
 							<Heading>Education</Heading>
 							<Spacer height={2} />
 							<SubHeading>Design Lab</SubHeading>
-							<Body>UX Academy, May 2020 - current</Body>
+							<Body>UX Academy, May - August 2020</Body>
 							<Spacer height={2} />
 							<SubHeading>Flatiron School</SubHeading>
 							<Body>Intro to Front End Web Development, 2019</Body>
@@ -99,28 +132,25 @@ export default () => {
 					</ItemGrid>
 				</ContentBlock>
 				<ContentBlock className={classes.reviewBlock}>
-					<Heading>
-						What my colleagues are saying
-					</Heading>
+					<Heading>What my colleagues are saying</Heading>
 					<Spacer height={2} />
 					<SubHeading>
-						&quot;Her creative talent is equally matched by her well-organized way of operating.&quot;
+						&quot;Her creative talent is equally matched by her well-organized
+						way of operating.&quot;
 					</SubHeading>
 					<Spacer />
-					<Body>
-						Kim Miller, CMO
-					</Body>
+					<Body>Kim Miller, CMO</Body>
 					<Spacer height={2} />
 					<SubHeading>
-						&quot;Casey is not only a talented creative, but also business savvy and has the ability to anticipate needs before they come up.&quot;
+						&quot;Casey is not only a talented creative, but also business savvy
+						and has the ability to anticipate needs before they come up.&quot;
 					</SubHeading>
 					<Spacer />
-					<Body>
-						Nicole Kroese, Director of Marketing
-					</Body>
+					<Body>Nicole Kroese, Director of Marketing</Body>
 					<Spacer height={2} />
 					<SubHeading>
-						&quot;Her ability to juggle multiple high priority projects puts the rest of her team at ease.&quot;
+						&quot;Her ability to juggle multiple high priority projects puts the
+						rest of her team at ease.&quot;
 					</SubHeading>
 					<Spacer />
 					<Body>Katharine Lucic, Marketing Events Manager</Body>
@@ -131,12 +161,15 @@ export default () => {
 						target="_blank"
 						rel="noreferrer"
 					>
-						<div className={classes.linkedInButton}>
-							<Body><b>Read more on my LinkedIn Profile</b></Body>
+						<div className={classes.Button}>
+							<Body>Read more on my LinkedIn Profile</Body>
 						</div>
 					</a>
 				</ContentBlock>
+				<Footer />
 			</PageWrapper>
 		</div>
 	)
 }
+
+export default About

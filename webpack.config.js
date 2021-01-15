@@ -1,10 +1,20 @@
+const webpack = require('webpack')
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+// const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
 const CompressionPlugin = require('compression-webpack-plugin')
+const dotenv = require('dotenv')
 
 module.exports = (env, argv) => {
 	process.env.NODE_ENV = argv.mode
+
+	// From https://trekinbami.medium.com/using-environment-variables-in-react-6b0a99d83cf5
+	const parsedEnv = dotenv.config().parsed
+	const envKeys = Object.keys(parsedEnv).reduce((acc, key) => {
+		acc[`process.env.${key}`] = JSON.stringify(parsedEnv[key])
+		return acc
+	}, {})
+
 	const isProd = argv.mode === 'production'
 
 	return {
@@ -14,9 +24,7 @@ module.exports = (env, argv) => {
 			compress: true,
 		},
 		devtool: isProd ? '' : 'inline-source-map',
-		entry: [
-			'./app.js',
-		],
+		entry: ['./app.js'],
 		module: {
 			rules: [
 				{
@@ -26,10 +34,7 @@ module.exports = (env, argv) => {
 						{
 							loader: 'babel-loader',
 							options: {
-								presets: [
-									'@babel/react',
-									'@babel/preset-env',
-								],
+								presets: ['@babel/react', '@babel/preset-env'],
 							},
 						},
 					],
@@ -80,12 +85,11 @@ module.exports = (env, argv) => {
 				test: /\.(js|png|css|jpg|jpeg|gif|svg|ico|xml|woff|woff2|ttf|otf|eot)$/,
 				deleteOriginalAssets: false,
 			}),
+			new webpack.DefinePlugin(envKeys),
 			// new BundleAnalyzerPlugin(),
 		],
 		resolve: {
-			modules: [
-				'node_modules',
-			],
+			modules: ['node_modules'],
 			alias: {
 				components: path.join(__dirname, 'src/components'),
 				static: path.join(__dirname, 'src/static'),

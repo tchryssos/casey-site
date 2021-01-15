@@ -12,7 +12,6 @@ import Image from 'components/Image'
 import ItemGrid from 'components/ItemGrid'
 import ImageLightBox from 'components/ImageLightBox'
 import VideoPlayer from 'components/VideoPlayer'
-import PageNav from 'components/PageNav'
 import NextProject from 'components/NextProject'
 
 import Frank from 'static/images/MensHealth/personaFrank.png'
@@ -82,7 +81,7 @@ const MensHealth = () => {
 	]
 	return (
 		<PageWrapper>
-			<PageNav navLinkObjects={navLinks} />
+			{/* <PageNav navLinkObjects={navLinks} /> */}
 			{/* eslint-disable jsx-a11y/anchor-is-valid */}
 			{/* eslint-disable jsx-a11y/anchor-has-content */}
 			<a name={brief} />
@@ -350,7 +349,7 @@ const MensHealth = () => {
 					mind at every step of the way.
 				</Body>
 			</ContentBlock>
-			<NextProject link="/flatiron-school-marketing" />
+			<NextProject link="/irth" />
 		</PageWrapper>
 	)
 }

@@ -6,9 +6,9 @@ import Image from 'components/Image'
 import WeWork from 'static/svg/misc/wework.svg'
 import FIS from 'static/svg/misc/fis_logo.svg'
 import MHH from 'static/svg/misc/MHH_logo.svg'
-import Chase from 'static/svg/misc/chase.svg'
+import Ellipsis from 'static/svg/misc/EllipsisLogo.svg'
 
-const logos = [WeWork, FIS, MHH, Chase]
+const logos = [WeWork, FIS, MHH, Ellipsis]
 
 const useStyles = createUseStyles({
 	logoWrapper: {

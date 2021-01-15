@@ -1,24 +1,21 @@
 import React from 'react'
 import { createUseStyles } from 'react-jss'
-
-import {
-	MD_MIN_STRING,
-} from 'constants/styles/breakpoints'
+import clsx from 'clsx'
+import { darkGray } from 'constants/styles/colors'
 
 const useStyles = createUseStyles({
 	headlineFont: {
-		fontFamily: '"buena-park-jf", serif',
 		fontWeight: 400,
-		fontSize: 28,
-		[MD_MIN_STRING]: {
-			fontSize: 36,
-		},
+		fontSize: 18,
+		color: darkGray,
+		padding: 0,
+		margin: 0,
 	},
 })
 
-export default ({ children }) => {
+const MenuText = ({ children, className }) => {
 	const classes = useStyles()
-	return (
-		<p className={classes.headlineFont}>{children}</p>
-	)
+	return <p className={clsx(classes.headlineFont, className)}>{children}</p>
 }
+
+export default MenuText

@@ -1,33 +1,36 @@
 import React from 'react'
 import { createUseStyles } from 'react-jss'
-import BlobLink from 'components/BlobLink'
-import blobLinkData from 'constants/blobLinks'
 import { MD_MIN_STRING } from 'constants/styles/breakpoints'
 import { NavLink } from 'react-router-dom'
 
 import Heading from 'components/Typography/Heading'
+import SubHeading from 'components/Typography/SubHeading'
 import ContentBlock from 'components/ContentBlock'
 import Body from 'components/Typography/Body'
 import Spacer from 'components/Spacer'
 import LogoCollection from 'components/LogoCollection'
+import PageWrapper from 'components/PageWrapper'
 import Image from 'components/Image'
+import ProjectPreview from 'components/ProjectPreview'
 
-import Wave from 'static/svg/misc/wave_2.svg'
+import Preview1 from 'static/svg/home/ProjectPreview_1.svg'
+import Preview2 from 'static/svg/home/ProjectPreview_2.svg'
+import Preview3 from 'static/svg/home/ProjectPreview_3.svg'
+import Preview4 from 'static/svg/home/ProjectPreview_4.svg'
+
+import BlobGrey from 'static/svg/home/PreviewBlob_Grey.svg'
+import BlobGreen from 'static/svg/home/PreviewBlob_Green.svg'
+import BlobYellow from 'static/svg/home/PreviewBlob_Yellow.svg'
+import BlobNavy from 'static/svg/home/PreviewBlob_Navy.svg'
+
+import AnimalCrossing from 'static/images/About/animalcrossing.png'
+
+import EHAppDescription from 'static/images/Descriptions/EllipsisApp_description.png'
+import FISIcon from 'static/images/FISMarketing/CourseGraphic.svg'
+import MensHealthDesciption from 'static/images/Descriptions/MHH_description_v3.png'
+import ELODesciption from 'static/images/Descriptions/ELO_description.png'
 
 const useStyles = createUseStyles({
-	'@keyframes wave': {
-		'0%': { transform: 'translateX(0px)' },
-		'50%': { transform: 'translateX(-50%)' },
-		'100%': { transform: 'translateX(0px)' },
-	},
-	homeContainer: {
-		display: 'flex',
-		flexDirection: 'column',
-		justifyContent: 'center',
-		alignItems: 'center',
-		width: '100%',
-		backgroundColor: '#e5E5E5',
-	},
 	homeWrapper: {
 		display: 'flex',
 		flexWrap: 'wrap',
@@ -40,7 +43,6 @@ const useStyles = createUseStyles({
 	},
 	aboutMeHeader: {
 		textAlign: 'center',
-		backgroundColor: '#f7f7f7',
 	},
 	aboutLink: {
 		textDecoration: 'none',
@@ -50,23 +52,59 @@ const useStyles = createUseStyles({
 	aboutBody: {
 		lineHeight: 1.75,
 	},
-	waveWrapper: {
+	bottomBorderTitle: {
 		width: '100%',
-		backgroundColor: '#f7f7f7',
-		padding: 0,
-		margin: 0,
-		overflow: 'hidden',
-		display: 'block',
-		marginBottom: 48,
+		borderBottom: '2px solid #2b2b2b',
+		display: 'flex',
+		justifyContent: 'space-between',
+		paddingBottom: 8,
+		alignItems: 'center',
 	},
-	waveImage: {
-		width: '200%',
-		animation: '$wave 30s infinite',
-		margin: 0,
-		padding: 0,
-		display: 'block',
-		transform: 'translateY(1px)',
-		// @TODO figure out why theres a 1 pixel line below image
+	Button: {
+		backgroundColor: '#2b2b2b',
+		padding: 8,
+		color: 'white',
+		display: 'inline-flex',
+		textTransform: 'uppercase',
+		textDecoration: 'none',
+		'&:hover': {
+			backgroundColor: '#4e7fff',
+		},
+	},
+	flexContainer: {
+		display: 'flex',
+		flexWrap: 'wrap',
+		flexDirection: 'row',
+		justifyContent: 'space-between',
+	},
+	quoteWrapper: {
+		display: 'flex',
+		alignItems: 'center',
+	},
+	quoteBlock: {
+		backgroundColor: '#f7f7f7',
+		padding: '100px 10%',
+		display: 'flex',
+		flexDirection: 'column',
+		alignItems: 'center',
+	},
+	animalcrossing: {
+		display: 'none',
+		[MD_MIN_STRING]: {
+			display: 'block',
+		},
+	},
+	red: {
+		backgroundColor: '#bf271b',
+	},
+	navy: {
+		backgroundColor: '#374550',
+	},
+	yellow: {
+		backgroundColor: '#ea9b41',
+	},
+	blue: {
+		backgroundColor: '#4e7fff',
 	},
 	[MD_MIN_STRING]: {
 		homeWrapper: {
@@ -79,15 +117,8 @@ const useStyles = createUseStyles({
 const Home = () => {
 	const classes = useStyles()
 
-	const blobLinks = Object.keys(blobLinkData).map((key) => {
-		const props = blobLinkData[key]
-		return (
-			// eslint-disable-next-line react/jsx-props-no-spreading
-			<BlobLink {...props} key={key} />
-		)
-	})
 	return (
-		<div className={classes.homeContainer}>
+		<PageWrapper>
 			<ContentBlock className={classes.aboutMeHeader}>
 				<Heading>Designer balancing personality and&nbsp;utility</Heading>
 				<Spacer />
@@ -101,11 +132,70 @@ const Home = () => {
 				</Body>
 				<LogoCollection />
 			</ContentBlock>
-			<div className={classes.waveWrapper}>
-				<Image src={Wave} className={classes.waveImage} />
-			</div>
-			<div className={classes.homeWrapper}>{blobLinks}</div>
-		</div>
+			<ContentBlock>
+				<div className={classes.bottomBorderTitle}>
+					<SubHeading>Featured Projects</SubHeading>
+					<NavLink className={classes.Button} to="/all-projects">
+						<Body>All Projects</Body>
+					</NavLink>
+				</div>
+				<div className={classes.flexContainer}>
+					<ProjectPreview
+						tags="UXUI, Brand, leadership"
+						title="Men's Health Memorial Responsive Website Redesign"
+						bgImage={Preview1}
+						hoverImage={MensHealthDesciption}
+						blobImage={BlobGreen}
+						backgroundColorClass={classes.navy}
+						link="/mens-health"
+					/>
+					<ProjectPreview
+						tags="Brand, UXUI"
+						title="Voice powered mental health assessment"
+						bgImage={Preview3}
+						hoverImage={EHAppDescription}
+						blobImage={BlobYellow}
+						backgroundColorClass={classes.red}
+						link="/ellipsis-app"
+					/>
+					<ProjectPreview
+						tags="Brand, UXUI"
+						title="End to End Gaming App Design"
+						bgImage={Preview2}
+						hoverImage={ELODesciption}
+						blobImage={BlobNavy}
+						backgroundColorClass={classes.blue}
+						link="/elo-tracker"
+					/>
+					<ProjectPreview
+						tags="Brand, leadership"
+						title="Managing Design at Flatiron School"
+						bgImage={Preview4}
+						hoverImage={FISIcon}
+						blobImage={BlobGrey}
+						backgroundColorClass={classes.yellow}
+						link="/flatiron-school-marketing"
+					/>
+				</div>
+			</ContentBlock>
+			<ContentBlock className={classes.quoteBlock}>
+				<div className={classes.quoteWrapper}>
+					<Image className={classes.animalcrossing} src={AnimalCrossing} />
+					<div>
+						<Heading>
+							“Her creative talent is equally matched by her well-organized way
+							of operating.”
+						</Heading>
+						<Spacer />
+						<Body>KIM MILLER, CMO</Body>
+						<Spacer />
+					</div>
+				</div>
+				<NavLink className={classes.Button} to="/about">
+					<Body>About Me</Body>
+				</NavLink>
+			</ContentBlock>
+		</PageWrapper>
 	)
 }
 
