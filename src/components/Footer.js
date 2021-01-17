@@ -3,7 +3,7 @@ import { createUseStyles } from 'react-jss'
 import { NavLink } from 'react-router-dom'
 import clsx from 'clsx'
 
-import { MD_MIN_STRING, SM_MAX_STRING } from 'constants/styles/breakpoints'
+import { MD_MIN_STRING } from 'constants/styles/breakpoints'
 import { allProjectsPath, aboutPath } from 'constants/navigation'
 
 import resumePdf from 'static/files/resume.pdf'
@@ -17,14 +17,6 @@ const useStyles = createUseStyles({
 		margin: 0,
 		[MD_MIN_STRING]: {
 			paddingBottom: 60,
-		},
-	},
-	mobileMenuOpen: {
-		[SM_MAX_STRING]: {
-			position: 'fixed',
-			bottom: 0,
-			left: 0,
-			right: 0,
 		},
 	},
 	bigCasey: {
