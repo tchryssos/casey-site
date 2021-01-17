@@ -19,6 +19,8 @@ import { lockedRoutes } from 'constants/navigation'
 
 import PasswordPage from 'pages/Password'
 
+import Footer from 'components/Footer'
+
 const useStyles = createUseStyles({
 	pageWrapper: {
 		position: 'relative',
@@ -77,6 +79,7 @@ const PageWrapper = ({ children, menuOpenOverride }) => {
 				children,
 				<PasswordPage setIsAuthorized={setIsAuthorized} />,
 			)}
+			<Footer />
 		</div>
 	)
 }

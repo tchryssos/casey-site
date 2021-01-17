@@ -22,11 +22,9 @@ import {
 } from 'constants/navigation'
 import MenuContext from 'contexts/menu'
 import ScrollContext from 'contexts/scroll'
-import orNull from 'util/orNull'
 
 import NavBar from 'components/NavBar'
 import Home from 'pages/Home'
-import Footer from 'components/Footer'
 import FISMarketing from 'pages/FISMarketing'
 import Portfolio from 'pages/Portfolio'
 import ListenJay from 'pages/ListenJay'
@@ -64,7 +62,7 @@ const useStyles = createUseStyles({
 	'@import': ["url('https://use.typekit.net/fso6uhu.css')"],
 	'@global': {
 		'*': {
-			fontFamily: '"Work Sans", sans-serif',
+			fontFamily: '"work-sans", sans-serif',
 		},
 		html: baseStyle,
 		body: {
@@ -184,8 +182,10 @@ const App = () => {
 						<Route path={EllipsisAppPath} component={EllipsisApp} />
 						<Route component={FourOhFour} />
 					</Switch>
-					{/* About page sticker board prevents normal footer display so it is imported directly there */}
-					{orNull(location.pathname !== aboutPath, <Footer />)}
+					{/*
+						Footer is being handled by the PageWrapper component. Any page not wrapped in
+						PageWrapper handles its own Footer
+					*/}
 				</div>
 			</ScrollContext.Provider>
 		</MenuContext.Provider>

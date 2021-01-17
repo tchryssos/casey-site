@@ -26,7 +26,7 @@ const useStyles = createUseStyles({
 	},
 })
 
-export default ({ link }) => {
+const NextProject = ({ link }) => {
 	const classes = useStyles()
 	return (
 		<ContentBlock className={classes.lastBlock}>
@@ -39,3 +39,5 @@ export default ({ link }) => {
 		</ContentBlock>
 	)
 }
+
+export default NextProject

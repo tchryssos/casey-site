@@ -13,6 +13,7 @@ import Body from 'components/Typography/Body'
 import SubHeading from 'components/Typography/SubHeading'
 import Heading from 'components/Typography/Heading'
 import BlobLink from 'components/BlobLink'
+import Footer from 'components/Footer'
 
 import blobLinkData from 'constants/blobLinks'
 import { darken, darkGray } from 'constants/styles/colors'
@@ -75,6 +76,10 @@ const useStyles = createUseStyles({
 			borderBottom: '2px solid blue',
 			color: 'blue',
 		},
+	},
+	apFooter: {
+		boxSizing: 'border-box',
+		width: '100%',
 	},
 	[MD_MIN_STRING]: {
 		homeWrapper: {
@@ -151,6 +156,7 @@ const AllProjects = () => {
 					&nbsp;How would I do it differently?
 				</NavLink>
 			</ContentBlock>
+			<Footer className={classes.apFooter} />
 		</div>
 	)
 }
