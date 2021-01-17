@@ -64,7 +64,7 @@ const useStyles = createUseStyles({
 	'@import': ["url('https://use.typekit.net/fso6uhu.css')"],
 	'@global': {
 		'*': {
-			fontFamily: '"Work Sans", sans-serif',
+			fontFamily: '"work-sans", sans-serif',
 		},
 		html: baseStyle,
 		body: {
