@@ -8,6 +8,7 @@ import SubHeading from 'components/Typography/SubHeading'
 import Body from 'components/Typography/Body'
 import Image from 'components/Image'
 import Spacer from 'components/Spacer'
+import NextProject from 'components/NextProject'
 
 import Home from 'static/images/Philz/HomeScreens.png'
 import Nav from 'static/images/Philz/Nav_BeforeAfter.png'
@@ -152,6 +153,7 @@ const Philz = () => {
 				<Image src={ResetBG} size="full" />
 				<Image src={Reset} size="full" />
 			</ContentBlock>
+			<NextProject link="/mens-health" />
 		</PageWrapper>
 	)
 }
