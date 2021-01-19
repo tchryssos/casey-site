@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { createUseStyles } from 'react-jss'
 import clsx from 'clsx'
+import { MD_MIN_STRING } from 'constants/styles/breakpoints'
 
 import ContentBlock from 'components/ContentBlock'
 import SubHeading from 'components/Typography/SubHeading'
@@ -26,17 +27,23 @@ const useStyles = createUseStyles({
 		'-webkit-appearance': 'none',
 		'-mos-appearance': 'none',
 		'-ms-appearance': 'none',
-		borderRadius: 100,
 		backgroundColor: sectionBlue,
 		color: white,
 		border: [[2, 'solid', sectionBlue]],
-		height: 200,
 		width: '100%',
 		marginTop: 8,
-		padding: [[25, 50]],
-		fontSize: 100,
 		textAlign: 'center',
 		outline: 'none',
+		padding: [[25, 50]],
+		fontSize: 50,
+		height: 100,
+		borderRadius: 100,
+		[MD_MIN_STRING]: {
+			padding: [[25, 50]],
+			fontSize: 100,
+			height: 200,
+			borderRadius: 100,
+		},
 	},
 	error: {
 		backgroundColor: red,

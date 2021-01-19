@@ -29,6 +29,7 @@ export default createUseStyles({
 		width: '100%',
 		backgroundColor: darkGray,
 		boxSizing: 'border-box',
+		borderTop: '1px solid white',
 	},
 	navLeft: {
 		display: 'none',

@@ -1,10 +1,10 @@
 import React from 'react'
 import { createUseStyles } from 'react-jss'
+import { NavLink } from 'react-router-dom'
+import clsx from 'clsx'
 
 import { MD_MIN_STRING } from 'constants/styles/breakpoints'
 import { allProjectsPath, aboutPath } from 'constants/navigation'
-
-import { NavLink } from 'react-router-dom'
 
 import resumePdf from 'static/files/resume.pdf'
 import BigCasey from 'static/svg/misc/FOOTERNAME.svg'
@@ -57,10 +57,10 @@ const useStyles = createUseStyles({
 	},
 })
 
-const Footer = () => {
+const Footer = ({ className }) => {
 	const classes = useStyles()
 	return (
-		<div className={classes.footerWrapper}>
+		<div className={clsx(classes.footerWrapper, className)}>
 			<img src={BigCasey} alt="Casey" />
 			<div className={classes.footerFlexWrapper}>
 				<div className={classes.footerLinkContainer}>

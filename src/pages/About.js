@@ -12,7 +12,6 @@ import Spacer from 'components/Spacer'
 import Body from 'components/Typography/Body'
 import ResumeButton from 'components/ResumeButton'
 import ItemGrid from 'components/ItemGrid'
-import Footer from 'components/Footer'
 
 import useStickers from 'effects/useStickers'
 
@@ -166,7 +165,6 @@ const About = () => {
 						</div>
 					</a>
 				</ContentBlock>
-				<Footer />
 			</PageWrapper>
 		</div>
 	)
