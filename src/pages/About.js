@@ -91,12 +91,6 @@ const About = () => {
 					<Spacer height={4} />
 					<Heading>About Me</Heading>
 					<Body>(click anywhere)</Body>
-					<Spacer />
-					<Body>
-						I am an adaptable designer with experience building creative teams
-						from the ground up at WeWork’s Flatiron School. Currently working on
-						freelance projects in product design.
-					</Body>
 					<Spacer height={2} />
 					<SubHeading>Email</SubHeading>
 					<Body>caseyebradford@gmail.com</Body>
@@ -106,13 +100,13 @@ const About = () => {
 							<Heading>Experience</Heading>
 							<Spacer height={2} />
 							<SubHeading>Product Designer</SubHeading>
-							<Body>Freelance, May 2020 - current</Body>
+							<Body>Core, Feb 2021 - current</Body>
+							<Spacer height={2} />
+							<SubHeading>Product Designer</SubHeading>
+							<Body>Freelance, May 2020 - Feb 2021</Body>
 							<Spacer height={2} />
 							<SubHeading>Design Manager</SubHeading>
 							<Body>WeWork (Flatiron School), Jan 2018 - April 2020</Body>
-							<Spacer height={2} />
-							<SubHeading>Art Director</SubHeading>
-							<Body>Vayner Media, Aug 2017 - Aug 2018</Body>
 							<Spacer height={2} />
 						</div>
 						<div className={classes.half}>

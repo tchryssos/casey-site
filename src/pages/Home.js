@@ -123,12 +123,11 @@ const Home = () => {
 				<Heading>Designer balancing personality and&nbsp;utility</Heading>
 				<Spacer />
 				<Body className={classes.aboutBody}>
-					I am a designer focused on UX/UI, Brand and Design Leadership. Read
-					more about me&nbsp;
-					<NavLink className={classes.aboutLink} to="/about" exact>
-						here
-					</NavLink>
-					&nbsp;and view my most recent work below.
+					I am a designer focused on UX/UI, Brand and Design Leadership.
+					Currently desiging at&nbsp;
+					<a className={classes.aboutLink} href="https://www.core.fitness/">
+						core.fitness
+					</a>
 				</Body>
 				<LogoCollection />
 			</ContentBlock>
